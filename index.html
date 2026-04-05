@@ -494,6 +494,8 @@ const LINH_VUC_LUAT = [
   { id:'doanh-nghiep', ten:'Doanh nghiệp', icon:'🏗️', bg:'linear-gradient(135deg, #6200ea 0%, #311b92 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
 ];
 
+const ORIGINAL_LINH_VUC = JSON.parse(JSON.stringify(LINH_VUC_LUAT));
+
 let CASES_DATA = {};
 
 let RECENT_UPDATES = [];
@@ -524,19 +526,25 @@ window.updateCasesFromDB = function(docs) {
     dbCases.sort((a, b) => {
         const timeA = a.createdAt ? a.createdAt.toMillis() : new Date(a.ngay || 0).getTime();
         const timeB = b.createdAt ? b.createdAt.toMillis() : new Date(b.ngay || 0).getTime();
-        return timeB - timeA;
+        return timeA - timeB;
     });
 
     CASES_DATA = JSON.parse(JSON.stringify(ORIGINAL_CASES_DATA));
     RECENT_UPDATES.length = 0; RECENT_UPDATES.push(...ORIGINAL_RECENT);
+    
+    LINH_VUC_LUAT.length = 0;
+    LINH_VUC_LUAT.push(...JSON.parse(JSON.stringify(ORIGINAL_LINH_VUC)));
 
     dbCases.forEach(c => {
         if(!c.lvId || !c.sfId) return;
         let lv = getLVById(c.lvId);
-        if(lv) {
-           let sf = lv.subfields.find(s => s.id === c.sfId);
-           if(!sf) { lv.subfields.push({id: c.sfId, ten: c.sfName || 'Chủ đề mới', soLuong: 0}); }
+        if(!lv) {
+           lv = { id: c.lvId, ten: c.lvName || 'Lĩnh vực mới', icon: '📁', bg: 'linear-gradient(135deg, #607d8b 0%, #455a64 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))], totalCases: 0 };
+           LINH_VUC_LUAT.push(lv);
         }
+        let sf = lv.subfields.find(s => s.id === c.sfId);
+        if(!sf) { lv.subfields.push({id: c.sfId, ten: c.sfName || 'Chủ đề mới', soLuong: 0}); }
+        
         if(!CASES_DATA[c.sfId]) CASES_DATA[c.sfId] = [];
         CASES_DATA[c.sfId].unshift(c); 
         RECENT_UPDATES.unshift({ id: c.id, ten: c.ten, lvId: c.lvId, sfId: c.sfId });
@@ -820,7 +828,7 @@ function goDetail(lvId, sfId, caseId){
         cas.timeline.forEach(t => {
           let dateText = "●"; let descText = t;
           if (typeof t === 'object') { dateText = t.date; descText = t.desc; }
-          tlHtml += `<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date" style="background:transparent; padding:0; font-size:1.2rem; color:var(--gold); margin-right:8px; display:inline-block; vertical-align:top;">${dateText}</div><div class="timeline-desc" style="display:inline-block; width:calc(100% - 30px);">${descText}</div></div>`;
+          tlHtml += `<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date" style="background:transparent; padding:0; font-size:1.2rem; color:var(--gold); margin-right:8px; display:inline-block; vertical-align:top;">${dateText}</div><div class="timeline-desc" style="display:inline-block; width:calc(100% - 30px);">${autoLinkLaws(descText)}</div></div>`;
         });
         tlHtml += `</div>`;
         dienBienEl.innerHTML = tlHtml;
@@ -953,37 +961,79 @@ function closeAdmin() { document.getElementById('admin-modal').classList.remove(
 
 function submitAdmin() {
   const ten = document.getElementById('ad-ten').value; let lvId = document.getElementById('ad-lv').value; let sfId = document.getElementById('ad-sf').value;
-  const mota = document.getElementById('ad-mota').value; const tomluoc = document.getElementById('ad-tomluoc').innerHTML;
-  const apdung = document.getElementById('ad-apdung').innerHTML; const chitiet = document.getElementById('ad-chitiet').innerHTML;
+  const mota = document.getElementById('ad-mota').value; 
+  
+  // Tự động phân tích và lấy văn bản thuần tùy chỉnh
+  const tomluocText = document.getElementById('ad-tomluoc').innerText || "";
+  const apdungText = document.getElementById('ad-apdung').innerText || ""; 
+  const chitietText = document.getElementById('ad-chitiet').innerText || "";
+
+  // Thuật toán tự động tạo Bố cục Tiêu đề và Đoạn văn
+  function formatContent(text) {
+      if (!text) return '';
+      return text.split(/\r?\n/).map(line => {
+          line = line.trim();
+          if (!line) return '';
+          const upper = line.toUpperCase();
+          // Nhận diện dòng IN HOA để làm Tiêu đề
+          const hasLetter = /[A-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠƯẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪỬỮỰỲỴÝỶỸ]/.test(upper);
+          if (line === upper && hasLetter && line.length < 200) {
+              return `<div class="detail-section-title">${line}</div>`;
+          }
+          return `<p>${line}</p>`;
+      }).join('');
+  }
+
+  // Tự động bóc tách từng lần xuống dòng thành 1 mốc timeline
+  const timelineArr = tomluocText.split(/\r?\n/).map(t => t.trim()).filter(t => t.length > 0);
+  const tomluocHtml = formatContent(tomluocText);
+  const apdungHtml = formatContent(apdungText);
+  const chitietHtml = formatContent(chitietText);
+
   const newLvName = document.getElementById('ad-new-lv').value.trim(); const newSfName = document.getElementById('ad-new-sf').value.trim();
   
   let sao = 0;
   if (sfId === 'an-le') sao = 3; else if (sfId === 'tb-rut-kinh-nghiem') sao = 2; else if (sfId === 'van-ban-phap-luat' || sfId === 'giai-dap-nghiep-vu') sao = 0;
   else sao = parseInt(document.getElementById('ad-tinhchat').value) || 0;
 
+  let finalLvName = getLVById(lvId) ? getLVById(lvId).ten : '';
   if (lvId === 'NEW') {
       if (!newLvName) { showAlert('Vui lòng nhập tên Lĩnh vực mới!'); return; }
       lvId = createSlug(newLvName);
-      if (!getLVById(lvId)) LINH_VUC_LUAT.push({ id: lvId, ten: newLvName, icon: '📁', bg: 'linear-gradient(135deg, #607d8b 0%, #455a64 100%)', subfields: [...baseSubfields.map(s=>({...s}))], totalCases: 0 });
+      finalLvName = newLvName;
   }
 
+  let finalSfName = getSFById(lvId, sfId) ? getSFById(lvId, sfId).ten : '';
   if (sfId === 'NEW' || document.getElementById('ad-lv').value === 'NEW') {
       if (!newSfName) { showAlert('Vui lòng nhập tên Chủ đề mới!'); return; }
       sfId = createSlug(newSfName);
-      const lvObj = getLVById(lvId); if (lvObj && !lvObj.subfields.find(s => s.id === sfId)) lvObj.subfields.push({ id: sfId, ten: newSfName, soLuong: 0 });
+      finalSfName = newSfName;
   }
 
   if(!ten || !lvId || !sfId) { showAlert('Vui lòng điền đủ Tiêu đề, Lĩnh vực và Chủ đề cụ thể.'); return; }
 
   const caseData = {
-      id: 'test_' + Date.now(), ten: ten, mo_ta: mota, lvId: lvId, sfId: sfId, sfName: newSfName || '',
+      id: 'case_' + Date.now(), ten: ten, mo_ta: mota, 
+      lvId: lvId, lvName: finalLvName,
+      sfId: sfId, sfName: finalSfName,
       sao: sao, ngay: new Date().toISOString(), tag: ['Mới thêm'],
-      tom_luoc: tomluoc, ap_dung: apdung, chi_tiet: chitiet, timeline: [tomluoc] // Admin offline test map tomluoc to timeline temporary     
+      tom_luoc: tomluocHtml, 
+      ap_dung: apdungHtml, 
+      chi_tiet: chitietHtml, 
+      timeline: timelineArr    
   };
 
   const btn = document.getElementById('ad-submit-btn'); btn.textContent = 'Đang xử lý...'; btn.disabled = true;
 
+  if(window.saveCaseToDB) {
+      window.saveCaseToDB(caseData);
+      return;
+  }
+
   if(!window.saveCaseToDB) {
+      if (!getLVById(lvId)) LINH_VUC_LUAT.push({ id: lvId, ten: finalLvName, icon: '📁', bg: 'linear-gradient(135deg, #607d8b 0%, #455a64 100%)', subfields: [...baseSubfields.map(s=>({...s}))], totalCases: 0 });
+      const lvObj = getLVById(lvId); if (lvObj && !lvObj.subfields.find(s => s.id === sfId)) lvObj.subfields.push({ id: sfId, ten: finalSfName, soLuong: 0 });
+
       if(!CASES_DATA[sfId]) CASES_DATA[sfId] = []; CASES_DATA[sfId].unshift(caseData);
       RECENT_UPDATES.unshift({id: caseData.id, ten: caseData.ten, lvId: caseData.lvId, sfId: caseData.sfId});
       document.getElementById('ad-ten').value = ''; document.getElementById('ad-mota').value = '';
@@ -1039,6 +1089,78 @@ if (document.readyState === 'loading') { document.addEventListener('DOMContentLo
   for(let i=0;i<40;i++) particles.push(new Particle());
   function loop(){ ctx.clearRect(0,0,W,H); particles.forEach(p=>{p.update();p.draw();}); requestAnimationFrame(loop); } loop();
 })();
+
+// ==========================================
+// CƠ CHẾ LƯU TRỮ ĐÁM MÂY (FIREBASE FIRESTORE)
+// ==========================================
+let db, auth, user = null;
+let appId = typeof __app_id !== 'undefined' ? __app_id : 'dau-chien-thang-luat';
+
+async function initFirebase() {
+    if (typeof __firebase_config === 'undefined') {
+        console.warn("Không tìm thấy cấu hình Máy chủ đám mây, chạy chế độ nội bộ.");
+        return;
+    }
+    try {
+        const { initializeApp } = await import("https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js");
+        const { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } = await import("https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js");
+        const { getFirestore, collection, addDoc, onSnapshot } = await import("https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js");
+        
+        const firebaseConfig = JSON.parse(__firebase_config);
+        const app = initializeApp(firebaseConfig);
+        auth = getAuth(app);
+        db = getFirestore(app);
+        
+        if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+            await signInWithCustomToken(auth, __initial_auth_token);
+        } else {
+            await signInAnonymously(auth);
+        }
+        
+        onAuthStateChanged(auth, (u) => {
+            user = u;
+            if (user) listenToCases(collection, onSnapshot);
+        });
+        
+        window.saveCaseToDB = async function(caseData) {
+            if (!user) { showAlert("Chưa xác thực, không thể lưu lên Máy chủ!"); return; }
+            try {
+                const casesRef = collection(db, 'artifacts', appId, 'public', 'data', 'cases');
+                await addDoc(casesRef, caseData);
+                document.getElementById('ad-submit-btn').textContent = 'Lưu Database';
+                document.getElementById('ad-submit-btn').disabled = false;
+                closeAdmin();
+                showAlert("✅ Đã lưu tài liệu VĨNH VIỄN lên Máy chủ Đám mây!");
+                // Xóa nội dung form
+                document.getElementById('ad-ten').value = ''; document.getElementById('ad-mota').value = '';
+                document.getElementById('ad-tomluoc').innerHTML = ''; document.getElementById('ad-apdung').innerHTML = ''; document.getElementById('ad-chitiet').innerHTML = '';
+                document.getElementById('ad-new-lv').value = ''; document.getElementById('ad-new-sf').value = '';
+            } catch (e) {
+                showAlert("❌ Lỗi khi lưu: " + e.message);
+                document.getElementById('ad-submit-btn').textContent = 'Lưu Database';
+                document.getElementById('ad-submit-btn').disabled = false;
+            }
+        };
+
+    } catch (e) {
+        console.error("Lỗi kết nối Firebase", e);
+    }
+}
+
+function listenToCases(collection, onSnapshot) {
+    const casesRef = collection(db, 'artifacts', appId, 'public', 'data', 'cases');
+    onSnapshot(casesRef, (snapshot) => {
+        const docs = [];
+        snapshot.forEach(doc => docs.push({ _dbId: doc.id, ...doc.data() }));
+        if(window.updateCasesFromDB) window.updateCasesFromDB(docs);
+    }, (err) => {
+        console.error("Lỗi tải dữ liệu:", err);
+    });
+}
+
+// Khởi tạo Firebase sau khi DOM sẵn sàng
+setTimeout(initFirebase, 100);
+
 </script>
 </body>
 </html>
