@@ -411,10 +411,34 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
       <select id="ad-tinhchat" class="admin-input"><option value="0">Sơ thẩm / Phúc thẩm (Không có sao)</option><option value="1">⭐ Giám đốc thẩm / Tái thẩm</option></select>
       <small style="color:var(--text-muted);font-size:0.75rem;display:block;margin-top:4px;">*Lưu vào Án Lệ tự động ⭐⭐⭐. Lưu Rút kinh nghiệm tự động ⭐⭐.</small>
     </div>
-    <div class="admin-form-group"><label class="admin-label">Tóm tắt ngắn (Dùng cho danh sách):</label><textarea id="ad-mota" class="admin-input" style="height: 60px;"></textarea></div>
-    <div class="admin-form-group"><label class="admin-label">Phần 1 (Dòng thời gian / Câu hỏi):</label><div id="ad-tomluoc" class="admin-editor" contenteditable="true" style="min-height: 100px;"></div></div>
-    <div class="admin-form-group"><label class="admin-label">Phần 2 (Áp dụng tương tự):</label><div id="ad-apdung" class="admin-editor" contenteditable="true" style="min-height: 100px;"></div></div>
-    <div class="admin-form-group"><label class="admin-label">Phần 3 (Bản chi tiết / Nội dung):</label><div id="ad-chitiet" class="admin-editor" contenteditable="true" style="min-height: 150px;"></div></div>
+    <div class="admin-form-group">
+      <label class="admin-label" style="display:flex; justify-content:space-between;">
+        <span>Tóm tắt ngắn (Dùng cho danh sách):</span>
+        <span style="cursor:pointer; color:var(--gold); font-size:0.75rem; font-weight:600;" onclick="cleanEditorText('ad-mota')" title="Sửa lỗi tự động xuống dòng khi copy từ Word/PDF">🧹 Nối dòng</span>
+      </label>
+      <textarea id="ad-mota" class="admin-input" style="height: 60px;"></textarea>
+    </div>
+    <div class="admin-form-group">
+      <label class="admin-label" style="display:flex; justify-content:space-between;">
+        <span>Phần 1 (Dòng thời gian / Câu hỏi):</span>
+        <span style="cursor:pointer; color:var(--gold); font-size:0.75rem; font-weight:600;" onclick="cleanEditorText('ad-tomluoc')" title="Sửa lỗi tự động xuống dòng khi copy từ Word/PDF">🧹 Nối dòng</span>
+      </label>
+      <div id="ad-tomluoc" class="admin-editor" contenteditable="true" style="min-height: 100px;" onpaste="handlePasteAsPlainText(event)"></div>
+    </div>
+    <div class="admin-form-group">
+      <label class="admin-label" style="display:flex; justify-content:space-between;">
+        <span>Phần 2 (Áp dụng tương tự):</span>
+        <span style="cursor:pointer; color:var(--gold); font-size:0.75rem; font-weight:600;" onclick="cleanEditorText('ad-apdung')" title="Sửa lỗi tự động xuống dòng khi copy từ Word/PDF">🧹 Nối dòng</span>
+      </label>
+      <div id="ad-apdung" class="admin-editor" contenteditable="true" style="min-height: 100px;" onpaste="handlePasteAsPlainText(event)"></div>
+    </div>
+    <div class="admin-form-group">
+      <label class="admin-label" style="display:flex; justify-content:space-between;">
+        <span>Phần 3 (Bản chi tiết / Nội dung):</span>
+        <span style="cursor:pointer; color:var(--gold); font-size:0.75rem; font-weight:600;" onclick="cleanEditorText('ad-chitiet')" title="Sửa lỗi tự động xuống dòng khi copy từ Word/PDF">🧹 Nối dòng</span>
+      </label>
+      <div id="ad-chitiet" class="admin-editor" contenteditable="true" style="min-height: 150px;" onpaste="handlePasteAsPlainText(event)"></div>
+    </div>
     <div class="admin-actions"><button class="admin-btn admin-btn-secondary" onclick="closeAdmin()">Hủy</button><button class="admin-btn admin-btn-primary" id="ad-submit-btn" onclick="submitAdmin()">Lưu Database</button></div>
   </div>
 </div>
@@ -958,6 +982,38 @@ function updateAdminSF() {
 
 function checkNewSF() { const sfId = document.getElementById('ad-sf').value; document.getElementById('ad-new-sf').style.display = (sfId === 'NEW') ? 'block' : 'none'; }
 function closeAdmin() { document.getElementById('admin-modal').classList.remove('open'); }
+
+window.handlePasteAsPlainText = function(e) {
+    e.preventDefault();
+    let text = (e.originalEvent || e).clipboardData.getData('text/plain');
+    document.execCommand('insertText', false, text);
+};
+
+window.cleanEditorText = function(editorId) {
+    const el = document.getElementById(editorId);
+    if(!el) return;
+    let text = el.tagName === 'TEXTAREA' || el.tagName === 'INPUT' ? el.value : el.innerText;
+    if(!text.trim()) return;
+    
+    // Đưa mọi loại xuống dòng về chuẩn chung
+    text = text.replace(/\r\n/g, '\n');
+    // Đánh dấu các đoạn văn thực sự (cách nhau từ 2 dấu xuống dòng trở lên)
+    text = text.replace(/\n{2,}/g, '___PARA___'); 
+    // Biến các dấu ngắt dòng đơn (lỗi đứt câu của Word/PDF) thành khoảng trắng
+    text = text.replace(/\n/g, ' '); 
+    // Trả lại các đoạn văn thực sự
+    text = text.replace(/___PARA___/g, '\n\n');
+    // Xóa các khoảng trắng thừa do nối dòng sinh ra
+    text = text.replace(/\s+,/g, ',');
+    text = text.replace(/\s+\./g, '.');
+    text = text.replace(/ +/g, ' ');
+
+    if (el.tagName === 'TEXTAREA' || el.tagName === 'INPUT') {
+        el.value = text.trim();
+    } else {
+        el.innerText = text.trim();
+    }
+};
 
 function submitAdmin() {
   const ten = document.getElementById('ad-ten').value; let lvId = document.getElementById('ad-lv').value; let sfId = document.getElementById('ad-sf').value;
