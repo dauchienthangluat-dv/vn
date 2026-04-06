@@ -774,6 +774,37 @@ function goSubfields(lvId){
   showPage('page-subfields');
 }
 
+function goCasesList(sfId) {
+  // Tìm lĩnh vực và chủ đề từ sfId
+  let foundLV = null, foundSF = null;
+  for(const lv of LINH_VUC_LUAT) {
+    const sf = lv.subfields.find(s => s.id === sfId);
+    if(sf) {
+      foundLV = lv;
+      foundSF = sf;
+      break;
+    }
+  }
+  
+  if(!foundLV || !foundSF) return;
+  
+  state.curLV = foundLV;
+  state.curSF = foundSF;
+  state.curPage = 1;
+  state.searchQuery = '';
+  
+  document.getElementById('cases-bc-lv').style.display = 'inline';
+  document.getElementById('cases-sep-1').style.display = 'inline';
+  document.getElementById('cases-sep-2').style.display = 'inline';
+  document.getElementById('cases-bc-lv').textContent = foundLV.ten;
+  document.getElementById('cases-bc-sf').textContent = foundSF.ten;
+  document.getElementById('cases-title').textContent = foundSF.ten;
+  
+  renderCasesList();
+  showPage('page-cases');
+  document.getElementById('pagination-bar').classList.add('visible');
+}
+
 function removeAccents(str) { return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
 
 // ======================== TÌM KIẾM THÔNG MINH (THUẬT TOÁN ĐIỂM SỐ) ======================== //
