@@ -557,10 +557,9 @@ function autoLinkLaws(htmlText) {
   // 1. Chắc chắn rằng HTML sẽ giữ được các dấu thụt lề
   let res = preserveIndentation(htmlText);
 
-  // 2. Nhận diện các điều luật bằng biểu thức chính quy (Regex AI - Rất Mạnh)
-  // Bắt các cấu trúc: [Khoản/Điểm x] Điều y [của Bộ luật/Luật z năm w]
-  // Ký hiệu negative lookahead (?![^<]*>) giúp an toàn tuyệt đối với các thẻ HTML.
-  const regexStr = /(?![^<]*>)(?:(?:[Kk]hoản|[Đđ]iểm)\s+[0-9a-zA-Z]+\s+)?[Đđ]iều\s+\d+[a-zA-Z]?(?:\s+(?:của\s+)?(?:[Bb]ộ\s+luật|[Ll]uật)\s+[\s\wÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪỬỮỰỲỴÝỶỸ]+?(?:\s+năm\s+\d{4})?)?/g;
+  // 2. Regex đơn giản: chỉ match "[Khoản/Điểm X] Điều XXX[a-zA-Z]?" mà KHÔNG match "của Bộ luật..."
+  // Điều này giúp khớp tốt hơn với dữ liệu admin đã lưu
+  const regexStr = /(?![^<]*>)(?:(?:[Kk]hoản|[Đđ]iểm)\s+[0-9a-zA-Z]+\s+)?[Đđ]iều\s+\d+[a-zA-Z]?/g;
   
   res = res.replace(regexStr, match => {
       // Bảo vệ tránh thay thế đúp nếu đã có thẻ law-link
@@ -572,13 +571,22 @@ function autoLinkLaws(htmlText) {
 }
 
 function showLawDynamic(lawName) {
+  // Trích xuất chữ số điều (ví dụ: "256" từ "Điều 256")
+  const lawNumMatch = lawName.match(/\d+/);
+  const lawNum = lawNumMatch ? lawNumMatch[0] : null;
+  
   // Tìm kiếm ưu tiên trong luật gắn với vụ án hiện tại trước.
   let found = null;
   if(state.curCase && Array.isArray(state.curCase.laws)) {
     found = state.curCase.laws.find(l => {
       const name = (l.name || '').toLowerCase();
       const target = lawName.toLowerCase();
-      return name && (target.includes(name) || name.includes(target) || name === target);
+      // Khớp chính xác hoặc contains
+      if(name === target) return true;
+      if(target.includes(name) || name.includes(target)) return true;
+      // Nếu có số điều, kiểm tra xem tên có chứa số đó không
+      if(lawNum && (name.includes('điều ' + lawNum) || name.includes('Điều ' + lawNum))) return true;
+      return false;
     });
   }
 
@@ -586,6 +594,10 @@ function showLawDynamic(lawName) {
     found = Object.values(LAW_DB).find(l => {
       const title = (l.title || '').toLowerCase().replace(/ \(.+\)/,'');
       const target = lawName.toLowerCase();
+      // Nếu có số điều, tìm kiếm theo số trước
+      if(lawNum) {
+        return title.includes('điều ' + lawNum) || title.includes('Điều ' + lawNum);
+      }
       return target.includes(title) || title.includes(target);
     });
   }
