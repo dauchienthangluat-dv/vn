@@ -852,7 +852,10 @@ function renderCasesList(){
       <div class="case-item led-item" id="ci-${c.id}">
         <div class="case-item-header">
           <div class="case-item-left">${starHtml}<div class="case-name" onclick="goDetail(null,null,'${c.id}')">${c.ten}</div></div>
-          <button class="case-expand-btn" onclick="toggleCase('${c.id}',this)" title="Xem mô tả">▼</button>
+          <div style="display:flex; gap:6px;">
+            <button class="case-expand-btn" onclick="editCase('${c.id}')" title="Chỉnh sửa vụ án" style="background:#D4A574; color:#fff; border-color:#D4A574;">✎</button>
+            <button class="case-expand-btn" onclick="toggleCase('${c.id}',this)" title="Xem mô tả">▼</button>
+          </div>
         </div>
         <div class="case-desc" id="cd-${c.id}">
           <p>${c.mo_ta}</p>
@@ -1044,12 +1047,28 @@ function createSlug(str) {
 }
 
 function openAdmin() {
-  closeSidebar(); const lvSel = document.getElementById('ad-lv');
-  lvSel.innerHTML = '<option value="">-- Chọn lĩnh vực --</option>' + LINH_VUC_LUAT.map(lv => `<option value="${lv.id}">${lv.ten}</option>`).join('') + '<option value="NEW" style="font-weight:bold;color:var(--gold-rich);">+ Thêm lĩnh vực mới...</option>';
-  document.getElementById('ad-new-lv').style.display = 'none'; document.getElementById('ad-new-sf').style.display = 'none'; document.getElementById('ad-sf').innerHTML = ''; document.getElementById('admin-modal').classList.add('open');
-  adminFormLaws = [];
-  renderLawsList();
-  restoreAdminDataFromStorage();
+  closeSidebar(); 
+  
+  // Nếu không phải edit, thì reset form
+  if(!editingCaseId) {
+    const lvSel = document.getElementById('ad-lv');
+    lvSel.innerHTML = '<option value="">-- Chọn lĩnh vực --</option>' + LINH_VUC_LUAT.map(lv => `<option value="${lv.id}">${lv.ten}</option>`).join('') + '<option value="NEW" style="font-weight:bold;color:var(--gold-rich);">+ Thêm lĩnh vực mới...</option>';
+    document.getElementById('ad-new-lv').style.display = 'none'; 
+    document.getElementById('ad-new-sf').style.display = 'none'; 
+    document.getElementById('ad-sf').innerHTML = '';
+    document.getElementById('ad-submit-btn').textContent = 'Lưu Database';
+    adminFormLaws = [];
+    renderLawsList();
+    document.querySelector('.info-modal-title').textContent = '⚙️ Thêm Mới (Database)';
+    restoreAdminDataFromStorage();
+  } else {
+    // Edit mode - cập nhật select options
+    const lvSel = document.getElementById('ad-lv');
+    lvSel.innerHTML = '<option value="">-- Chọn lĩnh vực --</option>' + LINH_VUC_LUAT.map(lv => `<option value="${lv.id}">${lv.ten}</option>`).join('') + '<option value="NEW" style="font-weight:bold;color:var(--gold-rich);">+ Thêm lĩnh vực mới...</option>';
+    document.getElementById('ad-submit-btn').textContent = 'Cập Nhật Vụ Án';
+  }
+  
+  document.getElementById('admin-modal').classList.add('open');
 }
 
 function updateAdminSF() {
@@ -1064,7 +1083,10 @@ function updateAdminSF() {
 }
 
 function checkNewSF() { const sfId = document.getElementById('ad-sf').value; document.getElementById('ad-new-sf').style.display = (sfId === 'NEW') ? 'block' : 'none'; }
-function closeAdmin() { document.getElementById('admin-modal').classList.remove('open'); }
+function closeAdmin() { 
+  editingCaseId = null;
+  document.getElementById('admin-modal').classList.remove('open'); 
+}
 
 window.handlePasteAsPlainText = function(e) {
     e.preventDefault();
@@ -1075,6 +1097,37 @@ window.handlePasteAsPlainText = function(e) {
 // ==================== QUẢN LÝ ĐIỀU LUẬT TRONG ADMIN FORM ====================
 let adminFormLaws = []; // Danh sách các Điều luật trong form admin hiện tại
 let editingLawIndex = -1; // Index của Điều luật đang edit
+let editingCaseId = null; // ID của vụ án đang edit (null = thêm mới)
+
+function editCase(caseId) {
+  const found = findCaseById(caseId);
+  if(!found) { showAlert('❌ Không tìm thấy vụ án!'); return; }
+  
+  const c = found.cas;
+  editingCaseId = caseId;
+  
+  // Điền dữ liệu vào form
+  document.getElementById('ad-ten').value = c.ten || '';
+  document.getElementById('ad-mota').value = c.mo_ta || '';
+  document.getElementById('ad-lv').value = c.lvId || '';
+  document.getElementById('ad-sf').value = c.sfId || '';
+  document.getElementById('ad-tinhchat').value = c.sao || '0';
+  
+  // Điền nội dung (nếu là HTML thì xóa tags)
+  document.getElementById('ad-tomluoc').innerHTML = (c.tom_luoc || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
+  document.getElementById('ad-apdung').innerHTML = (c.ap_dung || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
+  document.getElementById('ad-chitiet').innerHTML = (c.chi_tiet || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
+  
+  // Điền danh sách Điều luật
+  adminFormLaws = c.laws ? [...c.laws] : [];
+  renderLawsList();
+  
+  // Cập nhật modal title
+  document.querySelector('.info-modal-title').textContent = '✎ Chỉnh Sửa Vụ Án';
+  document.getElementById('ad-submit-btn').textContent = 'Cập Nhật Vụ Án';
+  
+  openAdmin();
+}
 
 function detectLawsFromContent() {
   const tomluocText = document.getElementById('ad-tomluoc').innerText || "";
@@ -1381,16 +1434,26 @@ function finishSubmitAdmin() {
   }
 
   const caseData = {
-      id: 'case_' + Date.now(), ten: ten, mo_ta: mota, 
+      id: editingCaseId || 'case_' + Date.now(), 
+      ten: ten, mo_ta: mota, 
       lvId: lvId, lvName: finalLvName,
       sfId: sfId, sfName: finalSfName,
-      sao: sao, ngay: new Date().toISOString(), tag: ['Mới thêm'],
+      sao: sao, ngay: editingCaseId ? null : new Date().toISOString(), tag: editingCaseId ? undefined : ['Mới thêm'],
       tom_luoc: tomluocHtml, 
       ap_dung: apdungHtml, 
       chi_tiet: chitietHtml, 
       timeline: timelineArr,
       laws: adminFormLaws // Lưu danh sách Điều luật
   };
+  
+  // Nếu edit, giữ lại ngày cũ
+  if(editingCaseId) {
+    const oldCase = findCaseById(editingCaseId);
+    if(oldCase) {
+      caseData.ngay = oldCase.cas.ngay;
+      caseData.tag = oldCase.cas.tag;
+    }
+  }
 
   const btn = document.getElementById('ad-submit-btn'); btn.textContent = 'Đang xử lý...'; btn.disabled = true;
 
@@ -1400,19 +1463,45 @@ function finishSubmitAdmin() {
   }
 
   if(!window.saveCaseToDB) {
+      const isEdit = !!editingCaseId; // Lưu trạng thái trước khi reset
+      
       if (!getLVById(lvId)) LINH_VUC_LUAT.push({ id: lvId, ten: finalLvName, icon: '📁', bg: 'linear-gradient(135deg, #607d8b 0%, #455a64 100%)', subfields: [...baseSubfields.map(s=>({...s}))], totalCases: 0 });
       const lvObj = getLVById(lvId); if (lvObj && !lvObj.subfields.find(s => s.id === sfId)) lvObj.subfields.push({ id: sfId, ten: finalSfName, soLuong: 0 });
 
-      if(!CASES_DATA[sfId]) CASES_DATA[sfId] = []; CASES_DATA[sfId].unshift(caseData);
-      RECENT_UPDATES.unshift({id: caseData.id, ten: caseData.ten, lvId: caseData.lvId, sfId: caseData.sfId});
+      if(editingCaseId) {
+        // ==================== UPDATE CASE ==================== 
+        const found = findCaseById(editingCaseId);
+        if(found) {
+          const sfId_old = found.sfId;
+          const index = CASES_DATA[sfId_old].findIndex(c => c.id === editingCaseId);
+          if(index >= 0) {
+            CASES_DATA[sfId_old][index] = caseData;
+          }
+          
+          // Nếu sfId thay đổi, di chuyển case đến lĩnh vực mới
+          if(sfId_old !== sfId) {
+            CASES_DATA[sfId_old] = CASES_DATA[sfId_old].filter(c => c.id !== editingCaseId);
+            if(!CASES_DATA[sfId]) CASES_DATA[sfId] = [];
+            CASES_DATA[sfId].unshift(caseData);
+          }
+        }
+      } else {
+        // ==================== ADD NEW CASE ====================  
+        if(!CASES_DATA[sfId]) CASES_DATA[sfId] = []; 
+        CASES_DATA[sfId].unshift(caseData);
+        RECENT_UPDATES.unshift({id: caseData.id, ten: caseData.ten, lvId: caseData.lvId, sfId: caseData.sfId});
+      }
+
       saveCasesDataToStorage();
       document.getElementById('ad-ten').value = ''; document.getElementById('ad-mota').value = '';
       document.getElementById('ad-tomluoc').innerHTML = ''; document.getElementById('ad-apdung').innerHTML = ''; document.getElementById('ad-chitiet').innerHTML = '';
       document.getElementById('ad-new-lv').value = ''; document.getElementById('ad-new-sf').value = ''; document.getElementById('ad-tinhchat').value = '0';
       localStorage.removeItem('dcsl_admin_form');
+      editingCaseId = null;
       renderHome(); if(state.curSF) renderCasesList();
       btn.textContent = 'Lưu Database'; btn.disabled = false; closeAdmin();
-      showAlert('✅ Đã lưu thành công (Sẽ không mất khi tải lại trang)!'); return;
+      const msgType = isEdit ? 'cập nhật' : 'lưu';
+      showAlert(`✅ Đã ${msgType} thành công (Sẽ không mất khi tải lại trang)!`); return;
   }
 }
 
