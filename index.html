@@ -481,11 +481,13 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
 
 <script>
 let secretCode = "";
+let isAdminMode = false; // Flag để biết chế độ admin đã mở khóa hay chưa
 document.addEventListener('keydown', function(e) {
     if (e.key.length > 1) return; 
     secretCode += e.key;
     if (secretCode.length > 10) secretCode = secretCode.substring(secretCode.length - 10);
     if (secretCode.toLowerCase() === "ducvu12345") {
+        isAdminMode = true;
         document.getElementById('admin-btn-top').style.display = 'block';
         document.getElementById('admin-sidebar-item').style.display = 'flex';
         showAlert('🔓 Chế độ Admin đã được mở khóa!'); secretCode = ""; 
@@ -884,7 +886,7 @@ function renderCasesList(){
         <div class="case-item-header">
           <div class="case-item-left">${starHtml}<div class="case-name" onclick="goDetail(null,null,'${c.id}')">${c.ten}</div></div>
           <div style="display:flex; gap:6px;">
-            <button class="case-expand-btn" onclick="editCase('${c.id}')" title="Chỉnh sửa vụ án" style="background:#D4A574; color:#fff; border-color:#D4A574;">✎</button>
+            ${isAdminMode ? `<button class="case-expand-btn" onclick="editCase('${c.id}')" title="Chỉnh sửa vụ án" style="background:#D4A574; color:#fff; border-color:#D4A574;">✎</button>` : ''}
             <button class="case-expand-btn" onclick="toggleCase('${c.id}',this)" title="Xem mô tả">▼</button>
           </div>
         </div>
@@ -1131,6 +1133,11 @@ let editingLawIndex = -1; // Index của Điều luật đang edit
 let editingCaseId = null; // ID của vụ án đang edit (null = thêm mới)
 
 function editCase(caseId) {
+  if(!isAdminMode) {
+    showAlert('❌ Chỉ Admin mới có thể chỉnh sửa vụ án! Bấm `ducvu12345` để mở khóa chế độ Admin.');
+    return;
+  }
+  
   const found = findCaseById(caseId);
   if(!found) { showAlert('❌ Không tìm thấy vụ án!'); return; }
   
