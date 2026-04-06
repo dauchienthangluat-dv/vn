@@ -514,6 +514,18 @@ function preserveIndentation(html) {
     });
 }
 
+function textToHtmlParagraphs(text) {
+    if (!text) return '';
+    const normalized = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+    const lines = normalized.split(/\n+/).map(line => line.trim()).filter(line => line.length > 0);
+    return lines.map(line => {
+        if (/^[A-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠƯẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪỬỮỰỲỴÝỶỸ][^\n]{0,180}$/.test(line)) {
+            return `<div class="detail-section-title">${line}</div>`;
+        }
+        return `<p>${line}</p>`;
+    }).join('');
+}
+
 // ==================== TRÍCH XUẤT VÀ NHẬN DIỆN ĐIỀU LUẬT ====================
 function extractAllLawsFromText(text) {
   if(!text) return [];
@@ -862,46 +874,36 @@ function renderCasesList(){
   // Smart Search Core
   if(state.searchQuery) {
     const qStr = removeAccents(state.searchQuery).toLowerCase().trim();
-    // Tách thành các từ khóa, bỏ qua các từ chỉ có 1 ký tự để tránh nhiễu
     const searchTerms = qStr.split(/\s+/).filter(w => w.length > 1);
 
     let scoredCases = [];
-    for(const sfId in CASES_DATA) {
-      CASES_DATA[sfId].forEach(c => {
-        // Gộp toàn bộ text của case (bỏ thẻ html)
-        const fullContent = (c.ten + ' ' + (c.mo_ta||'') + ' ' + (c.tag?c.tag.join(' '):'') + ' ' + (c.tom_luoc||'') + ' ' + (c.chi_tiet||'') + ' ' + (c.ap_dung||'')).replace(/<[^>]*>?/gm, ' ');
+    for(const bucketKey in CASES_DATA) {
+      CASES_DATA[bucketKey].forEach(c => {
+        const fullContent = (c.ten + ' ' + (c.mo_ta||'') + ' ' + (c.tom_luoc||'') + ' ' + (c.chi_tiet||'') + ' ' + (c.ap_dung||'')).replace(/<[^>]*>?/gm, ' ');
         const cTextStr = removeAccents(fullContent).toLowerCase();
         const cTitleStr = removeAccents(c.ten).toLowerCase();
         
         let score = 0;
-        
-        // 1. Nếu nội dung chứa chính xác chuỗi tìm kiếm -> Điểm rất cao
-        if (cTextStr.includes(qStr)) score += 1000;
-        
-        // 2. Nếu tiêu đề chứa chính xác chuỗi tìm kiếm -> Điểm tuyệt đối
-        if (cTitleStr.includes(qStr)) score += 2000;
-
-        // 3. Chấm điểm theo từng từ khóa rời rạc
         let matchedTerms = 0;
         searchTerms.forEach(term => {
           if (cTextStr.includes(term)) {
-             score += 10;
              matchedTerms++;
-             // Nếu từ khóa nằm ngay trên tiêu đề thì cộng thêm điểm
+             score += 20;
              if (cTitleStr.includes(term)) score += 50;
           }
         });
 
-        // Chỉ đưa vào danh sách hiển thị nếu đáp ứng đủ độ tin cậy:
-        // - Hoặc là khớp ít nhất một nửa số từ khóa (đối với câu hỏi dài)
-        // - Hoặc là khớp chính xác cụm từ (score > 100)
-        if (matchedTerms > 0 && (matchedTerms >= Math.ceil(searchTerms.length / 2) || score >= 100)) {
-           scoredCases.push({ cas: c, score: score });
+        const exactPhrase = cTextStr.includes(qStr) || cTitleStr.includes(qStr);
+        if (exactPhrase) score += 2000;
+        if (cTitleStr.includes(qStr)) score += 1000;
+
+        const threshold = searchTerms.length >= 4 ? Math.ceil(searchTerms.length * 0.75) : Math.min(2, searchTerms.length);
+        if ((exactPhrase || matchedTerms >= threshold) && matchedTerms > 0) {
+          scoredCases.push({ cas: c, score: score + matchedTerms * 10 });
         }
       });
     }
     
-    // Sắp xếp các case theo điểm giảm dần để đưa kết quả chính xác nhất lên đầu
     scoredCases.sort((a,b) => b.score - a.score);
     cases = scoredCases.map(item => item.cas);
 
@@ -930,7 +932,7 @@ function renderCasesList(){
         </div>
         <div class="case-desc" id="cd-${c.id}">
           <p>${c.mo_ta}</p>
-          <div class="case-desc-meta"><span class="case-meta-tag">📅 ${formatDate(c.ngay)}</span><span class="case-meta-tag">${typeLabel}</span>${c.tag ? c.tag.map(t=>`<span class="case-meta-tag">${t}</span>`).join('') : ''}</div>
+          <div class="case-desc-meta"><span class="case-meta-tag">📅 ${formatDate(c.ngay)}</span><span class="case-meta-tag">${typeLabel}</span></div>
           <div style="margin-top:12px"><button onclick="goDetail(null,null,'${c.id}')" style="padding:8px 18px;border:1px solid var(--gold);background:var(--gold-dim);color:var(--gold);border-radius:8px;cursor:pointer;font-size:0.82rem;font-family:'Be Vietnam Pro',sans-serif;transition:all 0.2s" onmouseover="this.style.background='var(--gold)';this.style.color='var(--bg)'" onmouseout="this.style.background='var(--gold-dim)';this.style.color='var(--gold)'">Xem chi tiết →</button></div>
         </div>
       </div>
@@ -984,10 +986,9 @@ function goDetail(lvId, sfId, caseId){
   if (isDoc) {
       document.getElementById('case-detail-stars').innerHTML = `<span class="case-detail-type">${typeLabel}</span>`;
       document.getElementById('tab-row-container').innerHTML = `
-        <button class="tab-btn active" id="tab-tom-luoc" onclick="switchTab('tom-luoc')">${cas.sfId === 'van-ban-phap-luat' ? '📋 Trích yếu' : '📋 Câu hỏi / Vấn đề'}</button>
-        <button class="tab-btn" id="tab-chi-tiet" onclick="switchTab('chi-tiet')">${cas.sfId === 'van-ban-phap-luat' ? '📄 Nội dung' : '📄 Trả lời / Giải đáp'}</button>
+        <button class="tab-btn active" id="tab-chi-tiet" onclick="switchTab('chi-tiet')">📄 Nội dung chi tiết</button>
       `;
-      document.getElementById('tab-row-container').className = 'tab-row two-tabs';
+      document.getElementById('tab-row-container').className = 'tab-row';
   } else {
       document.getElementById('case-detail-stars').innerHTML = cas.sao > 0 ? `<span>${'⭐'.repeat(cas.sao)}</span><span class="case-detail-type">${typeLabel}</span>` : `<span class="case-detail-type">${typeLabel}</span>`;
       document.getElementById('tab-row-container').innerHTML = `
@@ -1019,18 +1020,17 @@ function goDetail(lvId, sfId, caseId){
   }
 
   const chiTietEl = document.getElementById('tc-chi-tiet');
-  if(cas.chi_tiet){
-    chiTietEl.innerHTML = `<div class="case-desc-meta" style="margin-bottom:16px"><span class="case-meta-tag">📅 ${formatDate(cas.ngay)}</span><span class="case-meta-tag">${typeLabel}</span>${cas.tag?cas.tag.map(t=>`<span class="case-meta-tag">${t}</span>`).join(''):''}</div>${autoLinkLaws(cas.chi_tiet)}`;
+  const detailContent = cas.chi_tiet || cas.tom_luoc || '';
+  if(detailContent){
+    chiTietEl.innerHTML = `<div class="case-desc-meta" style="margin-bottom:16px"><span class="case-meta-tag">📅 ${formatDate(cas.ngay)}</span><span class="case-meta-tag">${typeLabel}</span></div>${autoLinkLaws(detailContent)}`;
   } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><span class="tc-icon">📄</span><p>Nội dung chi tiết sẽ được cập nhật sau.</p></div>`; }
 
   const tomLuocEl = document.getElementById('tc-tom-luoc');
   if(isDoc) {
-      if(cas.tom_luoc){
-        tomLuocEl.innerHTML = `<div class="case-desc-meta" style="margin-bottom:16px"><span class="case-meta-tag">📅 ${formatDate(cas.ngay)}</span><span class="case-meta-tag">${typeLabel}</span>${cas.tag?cas.tag.map(t=>`<span class="case-meta-tag">${t}</span>`).join(''):''}</div>${autoLinkLaws(cas.tom_luoc)}`;
-      } else { tomLuocEl.innerHTML = `<div class="tc-placeholder"><span class="tc-icon">📋</span><p>Nội dung sẽ được cập nhật sau.</p></div>`; }
+      tomLuocEl.innerHTML = '';
   }
 
-  if (isDoc) switchTab('tom-luoc'); else switchTab('dien-bien');
+  if (isDoc) switchTab('chi-tiet'); else switchTab('dien-bien');
   document.getElementById('pagination-bar').classList.remove('visible');
   showPage('page-detail');
 }
