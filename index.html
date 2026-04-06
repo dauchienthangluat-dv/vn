@@ -8,13 +8,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #FAF6EF; --bg2: #F2EBE0; --surface: #FFFFFF; --surface2: #FDF9F4; --surface3: #F5EDE2;
-  --navy: #1A2B5E; --navy2: #243570; --gold: #B8893A; --gold-light: #D4A554; --gold-rich: #9A7230;
-  --gold-dim: rgba(184,137,58,0.10); --gold-border: rgba(184,137,58,0.28);
-  --text: #12193A; --text-sec: #3A4468; --text-muted: #7A82A0;
-  --shadow-sm: 0 2px 8px rgba(26,43,94,0.07); --shadow-md: 0 6px 24px rgba(26,43,94,0.11);
-  --shadow-lg: 0 16px 48px rgba(26,43,94,0.16); --shadow-gold: 0 8px 32px rgba(184,137,58,0.25);
-  --radius: 14px; --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+  --bg: #F8F5F0; --bg2: #EFE8DC; --surface: #FFFBF7; --surface2: #FEF8F2; --surface3: #F5EDE2;
+  --navy: #0D1F47; --navy2: #1A3D5C; --gold: #D4A574; --gold-light: #E8C48E; --gold-rich: #A67C52;
+  --gold-dim: rgba(212,165,116,0.12); --gold-border: rgba(212,165,116,0.32);
+  --text: #0A1628; --text-sec: #2D3E52; --text-muted: #6B7A95;
+  --shadow-sm: 0 4px 12px rgba(13,31,71,0.08); --shadow-md: 0 8px 32px rgba(13,31,71,0.14);
+  --shadow-lg: 0 20px 60px rgba(13,31,71,0.2); --shadow-gold: 0 12px 40px rgba(212,165,116,0.3);
+  --radius: 16px; --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{ font-size: 16.5px; background:linear-gradient(135deg,#E8D9C0 0%,#F0E4CC 40%,#E4D4B8 100%); background-attachment:fixed; min-height:100%; }
@@ -72,7 +72,8 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
 .filter-search-box{width:100%;padding:12px 16px;background:var(--bg2);border:1.5px solid rgba(26,36,64,0.1);border-radius:var(--radius);color:var(--text);font-size:0.88rem;font-family:'Be Vietnam Pro',sans-serif;outline:none;transition:all 0.2s;margin-top:8px;resize:vertical;min-height:88px;}
 .filter-search-box:focus{border-color:var(--gold);background:var(--surface);box-shadow:0 0 0 3px rgba(184,137,58,0.1);}
 .filter-next-btn{margin-top: auto; padding-top: 20px;}
-.filter-next-btn button{width:100%;padding:14px;border:none;border-radius:var(--radius);background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;font-size:0.95rem;font-weight:700;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;box-shadow:var(--shadow-md);transition:all 0.25s;letter-spacing:0.3px;}
+.filter-next-btn button{width:100%;padding:14px;border:none;border-radius:var(--radius);background:linear-gradient(135deg, #0D1F47 0%, #1A3D5C 100%);color:#fff;font-size:0.95rem;font-weight:700;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;box-shadow:var(--shadow-md);transition:all 0.25s;letter-spacing:0.3px; border: 1px solid rgba(212,165,116,0.15);}
+.filter-next-btn button:hover { box-shadow: 0 12px 32px rgba(13,31,71,0.3), 0 0 20px rgba(212,165,116,0.2); transform: translateY(-3px); }
 .filter-next-btn button:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(26,36,64,0.3);}
 .right-recent-wrapper {background: var(--surface); border-radius: 16px;border: 1px solid var(--gold-border); box-shadow: var(--shadow-sm); overflow: hidden;}
 .side-panel-title {font-family:'Playfair Display',serif; font-size:1.05rem; font-weight:700; color:var(--navy);padding:16px 18px 12px; border-bottom:1px solid rgba(26,43,94,0.07);display:flex; align-items:center; gap:8px; line-height: 1.3;}
@@ -103,7 +104,7 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
 .ripple-host{position:relative;overflow:hidden;}
 .ripple{ position:absolute;border-radius:50%; background:rgba(184,137,58,0.25); transform:scale(0);animation:ripple-anim 0.55s ease-out forwards; pointer-events:none; z-index: 0; }
 @keyframes ripple-anim{to{transform:scale(4);opacity:0;}}
-#global-header { position:fixed;top:0;left:50%;transform:translateX(-50%); width:100%;max-width:560px; z-index:100; height:62px; background:rgba(238,242,249,0.94); backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--gold-border); display:flex;align-items:center;justify-content:space-between; padding:0 20px; box-shadow:var(--shadow-sm); transition:box-shadow 0.3s; }
+#global-header { position:fixed;top:0;left:50%;transform:translateX(-50%); width:100%;max-width:560px; z-index:100; height:62px; background:rgba(248,245,240,0.97); backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--gold-border); display:flex;align-items:center;justify-content:space-between; padding:0 20px; box-shadow:var(--shadow-sm); transition:box-shadow 0.3s; }
 #global-header.scrolled{box-shadow:var(--shadow-md);}
 #hamburger-btn { width:42px;height:42px;cursor:pointer; display:flex;flex-direction:column;justify-content:center;gap:5px; border:none;background:none;padding:6px;border-radius:10px; transition:background var(--transition); }
 #hamburger-btn:hover{background:var(--gold-dim);}
@@ -182,8 +183,8 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
 .recent-card-type{font-size:0.63rem;color:var(--text-muted);margin-top:4px;font-weight:500;}
 
 .read-history-list{padding:0 16px 16px;}
-.rh-item{ display:flex;align-items:center;gap:12px;padding:11px 14px; background:var(--surface);border-radius:var(--radius);margin-bottom:8px; box-shadow:var(--shadow-sm);cursor:pointer; transition:all 0.25s ease; }
-.rh-item:hover{background:var(--surface2);transform:translateX(4px);box-shadow:var(--shadow-md);}
+.rh-item{ display:flex;align-items:center;gap:12px;padding:11px 14px; background:var(--surface);border-radius:var(--radius);margin-bottom:8px; box-shadow:var(--shadow-sm);cursor:pointer; transition:all 0.25s ease; border: 1px solid rgba(212,165,116,0.08); }
+.rh-item:hover{background:var(--surface2);transform:translateX(4px);box-shadow:var(--shadow-md), 0 0 12px rgba(212,165,116,0.1); border-color:rgba(212,165,116,0.15);}
 .rh-item-icon{ font-size:1.5rem;flex-shrink:0;width:42px;height:42px; display:flex;align-items:center;justify-content:center; background:var(--gold-dim);border-radius:10px; }
 .rh-item-name{font-size:0.82rem;font-weight:600;color:var(--text);}
 .rh-item-meta{font-size:0.69rem;color:var(--text-muted);margin-top:2px;}
@@ -243,8 +244,8 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
 .case-detail-type{ font-size:0.75rem;color:var(--text-muted);background:var(--bg2); padding:3px 10px;border-radius:10px;font-weight:500; }
 .tab-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:0 16px 16px;}
 .tab-row.two-tabs { grid-template-columns: 1fr 1fr; }
-.tab-btn{ padding:10px 4px;border-radius:var(--radius); border:1.5px solid rgba(26,36,64,0.1); background:var(--surface);color:var(--text-sec); font-size:0.78rem;font-weight:600;cursor:pointer;text-align:center; transition:all 0.25s cubic-bezier(0.34,1.2,0.64,1); font-family:'Be Vietnam Pro',sans-serif;box-shadow:var(--shadow-sm); }
-.tab-btn.active{ background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%); color:#fff;border-color:var(--navy);box-shadow:var(--shadow-md); transform:translateY(-2px); }
+.tab-btn{ padding:10px 4px;border-radius:var(--radius); border:1.5px solid rgba(212,165,116,0.15); background:var(--surface);color:var(--text-sec); font-size:0.78rem;font-weight:600;cursor:pointer;text-align:center; transition:all 0.25s cubic-bezier(0.34,1.2,0.64,1); font-family:'Be Vietnam Pro',sans-serif;box-shadow:var(--shadow-sm); }
+.tab-btn.active{ background:linear-gradient(135deg, #0D1F47 0%, #1A3D5C 100%); color:#fff;border-color:#D4A574;box-shadow:var(--shadow-md), 0 0 15px rgba(212,165,116,0.2); transform:translateY(-2px); }
 .tab-btn:hover:not(.active){background:var(--surface2);color:var(--navy);border-color:var(--gold-border);}
 .tab-content{ padding:18px;background:var(--surface);margin:0 16px 80px; border-radius:var(--radius);border:1px solid rgba(26,36,64,0.07); font-size:0.88rem;line-height:1.85;color:var(--text-sec); box-shadow:var(--shadow-sm);display:none; }
 .tab-content.active{display:block;animation:pageIn 0.25s ease;}
@@ -257,12 +258,13 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
 .timeline-dot { position: absolute; left: -25px; top: 4px; width: 14px; height: 14px; border-radius: 50%; background: var(--gold); border: 3px solid var(--surface); box-shadow: 0 0 0 1px var(--gold-border); }
 .timeline-desc { font-size: 0.88rem; color: var(--text-sec); line-height: 1.7; }
 
-.law-link { color: #1565c0; text-decoration: underline; text-decoration-style: dashed; cursor: pointer; font-weight: 600; transition: all 0.2s ease; padding: 0 3px; border-radius: 4px; }
-.law-link:hover { color: var(--gold-rich); background: var(--gold-dim); }
+.law-link { color: #0D47A1; text-decoration: underline; text-decoration-color: #D4A574; text-decoration-thickness: 2px; cursor: pointer; font-weight: 600; transition: all 0.25s ease; padding: 2px 6px; border-radius: 4px; border-bottom: 2px solid transparent; background: rgba(212,165,116,0.08); }
+.law-link:hover { color: #A67C52; background: rgba(212,165,116,0.15); border-bottom-color: #D4A574; text-decoration-color: #A67C52; font-weight: 700; }
+.law-link:active { transform: scale(0.98); }
 
 .overlay-modal{ position:fixed;inset:0;z-index:300;background:rgba(26,36,64,0.5); display:none;align-items:center;justify-content:center;padding:20px; backdrop-filter:blur(6px); }
 .overlay-modal.open{display:flex;}
-.info-modal-box{ background:var(--surface);border:1px solid rgba(26,36,64,0.1); border-radius:20px;max-width:580px;width:100%;padding:28px; max-height:85vh;overflow-y:auto; animation:modalIn 0.3s cubic-bezier(0.34,1.56,0.64,1); box-shadow:0 30px 80px rgba(26,36,64,0.25); }
+.info-modal-box{ background:var(--surface);border:1px solid rgba(212,165,116,0.3); border-radius:20px;max-width:580px;width:100%;padding:28px; max-height:85vh;overflow-y:auto; animation:modalIn 0.3s cubic-bezier(0.34,1.56,0.64,1); box-shadow:0 30px 80px rgba(13,31,71,0.35), 0 0 50px rgba(212,165,116,0.25); }
 @keyframes modalIn{from{opacity:0;transform:scale(0.88) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
 .info-modal-title{ font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy); margin-bottom:16px;display:flex;align-items:center;gap:10px;font-weight:700; }
 .info-modal-body{font-size:0.86rem;color:var(--text-sec);line-height:1.85;}
@@ -274,7 +276,8 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
 .admin-input { width: 100%; padding: 12px 14px; border: 1.5px solid rgba(26,36,64,0.1); border-radius: var(--radius); font-family: 'Be Vietnam Pro', sans-serif; font-size: 0.88rem; outline: none; background: var(--bg2); transition: all 0.2s; }
 .admin-actions { display: flex; gap: 10px; margin-top: 24px; }
 .admin-btn { flex: 1; padding: 12px; border-radius: var(--radius); border: none; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Be Vietnam Pro', sans-serif; text-align: center; }
-.admin-btn-primary { background: linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%); color: #fff; box-shadow: var(--shadow-sm); }
+.admin-btn-primary { background: linear-gradient(135deg, #0D1F47 0%, #1A3D5C 100%); color: #fff; box-shadow: var(--shadow-sm); transition: all 0.3s ease; border: 1px solid rgba(212,165,116,0.2); }
+.admin-btn-primary:hover { box-shadow: 0 8px 25px rgba(13,31,71,0.3), 0 0 15px rgba(212,165,116,0.2); transform: translateY(-2px); }
 .admin-btn-secondary { background: var(--bg2); color: var(--navy); border: 1.5px solid rgba(26,36,64,0.1); }
 .admin-editor { width: 100%; padding: 12px 14px; border: 1.5px solid rgba(26,36,64,0.1); border-radius: var(--radius); font-family: 'Be Vietnam Pro', sans-serif; font-size: 0.88rem; outline: none; background: var(--surface); transition: all 0.2s; overflow-y: auto; line-height: 1.6; }
 .admin-editor:empty:before { content: attr(data-placeholder); color: var(--text-muted); pointer-events: none; }
@@ -443,6 +446,18 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
   </div>
 </div>
 
+<div id="law-detect-modal" class="overlay-modal">
+  <div class="info-modal-box" style="max-width: 700px;">
+    <div class="info-modal-title">🏛️ Phát Hiện Các Điều Luật Mới</div>
+    <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:16px;">Hệ thống tự động detect ra <strong id="law-detect-count">0</strong> điều luật mới từ nội dung. Bạn có muốn thêm chúng vào Database không?</p>
+    <div id="law-detect-list" style="max-height:300px; overflow-y:auto; margin-bottom:16px; border:1px solid rgba(212,165,116,0.15); border-radius:12px; padding:12px;"></div>
+    <div class="admin-actions">
+      <button class="admin-btn admin-btn-secondary" onclick="skipNewLaws()">Bỏ Qua</button>
+      <button class="admin-btn admin-btn-primary" onclick="proceedWithNewLaws()">Tiếp Tục Thêm →</button>
+    </div>
+  </div>
+</div>
+
 <script>
 let secretCode = "";
 document.addEventListener('keydown', function(e) {
@@ -457,8 +472,13 @@ document.addEventListener('keydown', function(e) {
 });
 
 const LAW_DB = {
-  'blds-423': { title: 'Điều 423. Hủy bỏ hợp đồng (BLDS 2015)', content: '<p>Quy định về hủy bỏ hợp đồng và bồi thường thiệt hại...</p>' },
-  'ldd-167': { title: 'Điều 167 Luật Đất đai 2013', content: '<p>Quyền chuyển đổi, chuyển nhượng, cho thuê...</p>' }
+  'blds-423': { title: 'Điều 423. Hủy bỏ hợp đồng (BLDS 2015)', content: '<p><strong>Điều 423</strong> quy định về hủy bỏ hợp đồng và bồi thường thiệt hại trong các trường hợp hợp đồng không còn giá trị hoặc có khiếu nại hợp lệ từ một trong các bên. Điều luật này là một phần quan trọng của Bộ Luật Dân sự 2015.</p>' },
+  'ldd-167': { title: 'Điều 167 Luật Đất đai 2013', content: '<p><strong>Điều 167</strong> của Luật Đất đai năm 2013 quy định các quyền chuyển đổi, chuyển nhượng, cho thuê quyền sử dụng đất và các hình thức giao dịch liên quan đến đất đai khác.</p>' },
+  'blhs-86': { title: 'Điều 86. Phạt tù (BLHS 2015)', content: '<p><strong>Điều 86</strong> quy định về các hình phạt tù từ 1 tháng đến 3 năm, phạt tù từ 3 năm đến 10 năm, phạt tù từ 10 năm đến 20 năm, và phạt tù chung thân trong các vụ án hình sự.</p>' },
+  'blhs-101': { title: 'Điều 101. Thời hiệu truy cứu trách nhiệm hình sự (BLHS 2015)', content: '<p><strong>Điều 101</strong> quy định thời hiệu truy cứu trách nhiệm hình sự tùy thuộc vào mức độ nghiêm trọng của tội phạm, từ 6 tháng cho tội phạm có hình phạt cao nhất không quá 1 tháng tới 30 năm cho các tội phạm đặc biệt nghiêm trọng.</p>' },
+  'blhs-65': { title: 'Điều 65. Các hình phạt (BLHS 2015)', content: '<p><strong>Điều 65</strong> liệt kê các hình phạt chính bao gồm: 1) Phạt tiền; 2) Phạt tù; 3) Cấm cử hành chức vụ, nghề nghiệp hoặc hoạt động nhất định; 4) Trục xuất khỏi lãnh thổ Việt Nam.</p>' },
+  'lld-10': { title: 'Điều 10. Quyền và nghĩa vụ của người lao động (Luật Lao động)', content: '<p><strong>Điều 10</strong> quy định rõ các quyền cơ bản của người lao động bao gồm: bình đẳng trong tuyển dụng, được hưởng mức lương tối thiểu, an toàn lao động, và các quyền khác theo quy định của pháp luật.</p>' },
+  'lld-95': { title: 'Điều 95. Thế chấp lao động (Luật Lao động)', content: '<p><strong>Điều 95</strong> cấm mọi hình thức thế chấp lao động. Những hợp đồng lao động có điều khoản thế chấp là vô hiệu.</p>' }
 };
 
 // ======================== AUTO LINK VÀ GIỮ KHOẢNG TRẮNG ======================== //
@@ -469,6 +489,44 @@ function preserveIndentation(html) {
     return html.replace(/(<p[^>]*>|<div[^>]*>|<br\s*\/?>|\n|^)( +)/gi, function(match, p1, p2) {
         return (p1 || '') + '&nbsp;'.repeat(p2.length);
     });
+}
+
+// ==================== TRÍCH XUẤT VÀ NHẬN DIỆN ĐIỀU LUẬT ====================
+function extractAllLawsFromText(text) {
+  if(!text) return [];
+  // Regex để trích xuất tất cả các điều luật có dạng "Điều X" hoặc "Điều X của Luật..."
+  const regexStr = /(?:(?:[Kk]hoản|[Đđ]iểm)\s+[0-9a-zA-Z]+\s+)?[Đđ]iều\s+\d+[a-zA-Z]?(?:\s+(?:của\s+)?(?:[Bb]ộ\s+luật|[Ll]uật)\s+[\s\wÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪỬỮỰỲỴÝỶỸ]+?(?:\s+năm\s+\d{4})?)?/g;
+  const matches = text.match(regexStr) || [];
+  return [...new Set(matches)]; // Loại bỏ duplicates
+}
+
+function getLawKeyFromText(lawText) {
+  // Tạo key từ text ("Điều 423" => "blhs-423" hoặc "ldd-167")
+  const match = lawText.match(/[Đđ]iều\s+(\d+[a-zA-Z]?)/);
+  if(!match) return null;
+  const num = match[1];
+  
+  // Cố gắng xác định loại luật từ text
+  let prefix = 'law-';
+  if(lawText.toLowerCase().includes('bộ luật dân sự') || lawText.toLowerCase().includes('blds')) prefix = 'blds-';
+  else if(lawText.toLowerCase().includes('đất đai')) prefix = 'ldd-';
+  else if(lawText.toLowerCase().includes('hình sự') || lawText.toLowerCase().includes('blhs')) prefix = 'blhs-';
+  else if(lawText.toLowerCase().includes('lao động') || lawText.toLowerCase().includes('lld')) prefix = 'lld-';
+  
+  return prefix + num;
+}
+
+function detectNewLaws(contentText) {
+  const extractedLaws = extractAllLawsFromText(contentText);
+  const newLaws = [];
+  
+  extractedLaws.forEach(lawText => {
+    const key = getLawKeyFromText(lawText);
+    if(!key || LAW_DB[key]) return; // Bỏ qua nếu đã tồn tại
+    newLaws.push({ text: lawText, key: key });
+  });
+  
+  return newLaws;
 }
 
 function autoLinkLaws(htmlText) {
@@ -575,6 +633,7 @@ window.updateCasesFromDB = function(docs) {
     });
 
     if(RECENT_UPDATES.length > 15) RECENT_UPDATES.length = 15;
+    saveCasesDataToStorage();
     renderHome(); if(state.curSF || state.searchQuery) renderCasesList();
 };
 
@@ -967,6 +1026,7 @@ function openAdmin() {
   closeSidebar(); const lvSel = document.getElementById('ad-lv');
   lvSel.innerHTML = '<option value="">-- Chọn lĩnh vực --</option>' + LINH_VUC_LUAT.map(lv => `<option value="${lv.id}">${lv.ten}</option>`).join('') + '<option value="NEW" style="font-weight:bold;color:var(--gold-rich);">+ Thêm lĩnh vực mới...</option>';
   document.getElementById('ad-new-lv').style.display = 'none'; document.getElementById('ad-new-sf').style.display = 'none'; document.getElementById('ad-sf').innerHTML = ''; document.getElementById('admin-modal').classList.add('open');
+  restoreAdminDataFromStorage();
 }
 
 function updateAdminSF() {
@@ -988,6 +1048,61 @@ window.handlePasteAsPlainText = function(e) {
     let text = (e.originalEvent || e).clipboardData.getData('text/plain');
     document.execCommand('insertText', false, text);
 };
+
+// ==================== LƯU TRỮ DỮ LIỆU VỚI LOCALSTORAGE ====================
+function saveAdminDataToStorage() {
+    const formData = {
+        ten: document.getElementById('ad-ten').value,
+        mota: document.getElementById('ad-mota').value,
+        lvId: document.getElementById('ad-lv').value,
+        sfId: document.getElementById('ad-sf').value,
+        tomluoc: document.getElementById('ad-tomluoc').innerHTML,
+        apdung: document.getElementById('ad-apdung').innerHTML,
+        chitiet: document.getElementById('ad-chitiet').innerHTML,
+        tinhchat: document.getElementById('ad-tinhchat').value,
+        newLv: document.getElementById('ad-new-lv').value,
+        newSf: document.getElementById('ad-new-sf').value
+    };
+    localStorage.setItem('dcsl_admin_form', JSON.stringify(formData));
+}
+
+function restoreAdminDataFromStorage() {
+    const stored = localStorage.getItem('dcsl_admin_form');
+    if (!stored) return;
+    try {
+        const formData = JSON.parse(stored);
+        if (formData.ten) document.getElementById('ad-ten').value = formData.ten;
+        if (formData.mota) document.getElementById('ad-mota').value = formData.mota;
+        if (formData.lvId) document.getElementById('ad-lv').value = formData.lvId;
+        if (formData.sfId) document.getElementById('ad-sf').value = formData.sfId;
+        if (formData.tomluoc) document.getElementById('ad-tomluoc').innerHTML = formData.tomluoc;
+        if (formData.apdung) document.getElementById('ad-apdung').innerHTML = formData.apdung;
+        if (formData.chitiet) document.getElementById('ad-chitiet').innerHTML = formData.chitiet;
+        if (formData.tinhchat) document.getElementById('ad-tinhchat').value = formData.tinhchat;
+        if (formData.newLv) document.getElementById('ad-new-lv').value = formData.newLv;
+        if (formData.newSf) document.getElementById('ad-new-sf').value = formData.newSf;
+    } catch(e) { console.error('Lỗi khôi phục dữ liệu:', e); }
+}
+
+function saveCasesDataToStorage() {
+    const storageData = {
+        cases: CASES_DATA,
+        recent: RECENT_UPDATES,
+        linhvuc: LINH_VUC_LUAT
+    };
+    localStorage.setItem('dcsl_cases_data', JSON.stringify(storageData));
+}
+
+function restoreCasesDataFromStorage() {
+    const stored = localStorage.getItem('dcsl_cases_data');
+    if (!stored) return;
+    try {
+        const storageData = JSON.parse(stored);
+        if (storageData.cases) Object.assign(CASES_DATA, storageData.cases);
+        if (storageData.recent) RECENT_UPDATES.length = 0, RECENT_UPDATES.push(...storageData.recent);
+        if (storageData.linhvuc) LINH_VUC_LUAT.length = 0, LINH_VUC_LUAT.push(...storageData.linhvuc);
+    } catch(e) { console.error('Lỗi khôi phục dữ liệu đơn hàng:', e); }
+}
 
 window.cleanEditorText = function(editorId) {
     const el = document.getElementById(editorId);
@@ -1016,22 +1131,97 @@ window.cleanEditorText = function(editorId) {
 };
 
 function submitAdmin() {
+  saveAdminDataToStorage();
   const ten = document.getElementById('ad-ten').value; let lvId = document.getElementById('ad-lv').value; let sfId = document.getElementById('ad-sf').value;
   const mota = document.getElementById('ad-mota').value; 
   
-  // Tự động phân tích và lấy văn bản thuần tùy chỉnh
   const tomluocText = document.getElementById('ad-tomluoc').innerText || "";
   const apdungText = document.getElementById('ad-apdung').innerText || ""; 
   const chitietText = document.getElementById('ad-chitiet').innerText || "";
 
-  // Thuật toán tự động tạo Bố cục Tiêu đề và Đoạn văn
+  if(!ten || !lvId || !sfId) { showAlert('Vui lòng điền đủ Tiêu đề, Lĩnh vực và Chủ đề cụ thể.'); return; }
+
+  // ===================== DETECT CÁC ĐIỀU LUẬT MỚI =====================
+  const fullContent = ten + ' ' + mota + ' ' + tomluocText + ' ' + apdungText + ' ' + chitietText;
+  const newLaws = detectNewLaws(fullContent);
+  
+  if(newLaws.length > 0) {
+    window.pendingCaseData = {
+      ten: ten, lvId: lvId, sfId: sfId, mota: mota,
+      tomluoc: tomluocText, apdung: apdungText, chitiet: chitietText
+    };
+    
+    document.getElementById('law-detect-count').textContent = newLaws.length;
+    const lawList = document.getElementById('law-detect-list');
+    lawList.innerHTML = newLaws.map(law => `
+      <div style="padding:10px; background:rgba(212,165,116,0.08); border-radius:8px; margin-bottom:8px; border-left:3px solid #D4A574;">
+        <strong>${law.text}</strong><br>
+        <small style="color:var(--text-muted);">ID: ${law.key}</small>
+      </div>
+    `).join('');
+    
+    document.getElementById('law-detect-modal').classList.add('open');
+    return;
+  }
+  
+  finishSubmitAdmin();
+}
+
+function skipNewLaws() {
+  document.getElementById('law-detect-modal').classList.remove('open');
+  finishSubmitAdmin();
+}
+
+function proceedWithNewLaws() {
+  const fullContent = window.pendingCaseData.ten + ' ' + window.pendingCaseData.mota + ' ' + 
+                      window.pendingCaseData.tomluoc + ' ' + window.pendingCaseData.apdung + ' ' + 
+                      window.pendingCaseData.chitiet;
+  const newLaws = detectNewLaws(fullContent);
+  
+  newLaws.forEach(law => {
+    const tempContent = `<p><strong>${law.text}</strong> (Được tự động detect từ: <em>${window.pendingCaseData.ten}</em>)</p>
+      <p style="color:var(--text-muted); font-size:0.85rem;">Nội dung chi tiết sẽ được cập nhật từ dữ liệu pháp lý đầy đủ sau. Hiện tại hệ thống đang nhận diện các tài liệu liên quan.</p>`;
+    
+    LAW_DB[law.key] = {
+      title: law.text,
+      content: tempContent,
+      autoDetected: true,
+      detectedFrom: window.pendingCaseData.ten
+    };
+  });
+  
+  document.getElementById('law-detect-modal').classList.remove('open');
+  saveLawDBToStorage();
+  showAlert(`✅ Đã tự động thêm ${newLaws.length} điều luật mới!`);
+  finishSubmitAdmin();
+}
+
+function saveLawDBToStorage() {
+  localStorage.setItem('dcsl_law_db', JSON.stringify(LAW_DB));
+}
+
+function restoreLawDBFromStorage() {
+  const stored = localStorage.getItem('dcsl_law_db');
+  if(!stored) return;
+  try {
+    Object.assign(LAW_DB, JSON.parse(stored));
+  } catch(e) { console.error('Lỗi khôi phục LAW_DB:', e); }
+}
+
+function finishSubmitAdmin() {
+  const ten = document.getElementById('ad-ten').value; let lvId = document.getElementById('ad-lv').value; let sfId = document.getElementById('ad-sf').value;
+  const mota = document.getElementById('ad-mota').value; 
+  
+  const tomluocText = document.getElementById('ad-tomluoc').innerText || "";
+  const apdungText = document.getElementById('ad-apdung').innerText || ""; 
+  const chitietText = document.getElementById('ad-chitiet').innerText || "";
+
   function formatContent(text) {
       if (!text) return '';
       return text.split(/\r?\n/).map(line => {
           line = line.trim();
           if (!line) return '';
           const upper = line.toUpperCase();
-          // Nhận diện dòng IN HOA để làm Tiêu đề
           const hasLetter = /[A-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠƯẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪỬỮỰỲỴÝỶỸ]/.test(upper);
           if (line === upper && hasLetter && line.length < 200) {
               return `<div class="detail-section-title">${line}</div>`;
@@ -1040,7 +1230,6 @@ function submitAdmin() {
       }).join('');
   }
 
-  // Tự động bóc tách từng lần xuống dòng thành 1 mốc timeline
   const timelineArr = tomluocText.split(/\r?\n/).map(t => t.trim()).filter(t => t.length > 0);
   const tomluocHtml = formatContent(tomluocText);
   const apdungHtml = formatContent(apdungText);
@@ -1066,8 +1255,6 @@ function submitAdmin() {
       finalSfName = newSfName;
   }
 
-  if(!ten || !lvId || !sfId) { showAlert('Vui lòng điền đủ Tiêu đề, Lĩnh vực và Chủ đề cụ thể.'); return; }
-
   const caseData = {
       id: 'case_' + Date.now(), ten: ten, mo_ta: mota, 
       lvId: lvId, lvName: finalLvName,
@@ -1092,12 +1279,14 @@ function submitAdmin() {
 
       if(!CASES_DATA[sfId]) CASES_DATA[sfId] = []; CASES_DATA[sfId].unshift(caseData);
       RECENT_UPDATES.unshift({id: caseData.id, ten: caseData.ten, lvId: caseData.lvId, sfId: caseData.sfId});
+      saveCasesDataToStorage();
       document.getElementById('ad-ten').value = ''; document.getElementById('ad-mota').value = '';
       document.getElementById('ad-tomluoc').innerHTML = ''; document.getElementById('ad-apdung').innerHTML = ''; document.getElementById('ad-chitiet').innerHTML = '';
       document.getElementById('ad-new-lv').value = ''; document.getElementById('ad-new-sf').value = ''; document.getElementById('ad-tinhchat').value = '0';
+      localStorage.removeItem('dcsl_admin_form');
       renderHome(); if(state.curSF) renderCasesList();
       btn.textContent = 'Lưu Database'; btn.disabled = false; closeAdmin();
-      showAlert('✅ Đã lưu giả lập thành công!'); return;
+      showAlert('✅ Đã lưu thành công (Sẽ không mất khi tải lại trang)!'); return;
   }
 }
 
@@ -1130,7 +1319,7 @@ function initReveal(){
 const _origShowPage = showPage;
 window.showPage = function(id){ _origShowPage(id); setTimeout(initReveal, 50); };
 
-function safeInit() { renderHome(); buildFilterF1(); setTimeout(()=>{ initReveal(); }, 100); }
+function safeInit() { restoreCasesDataFromStorage(); restoreLawDBFromStorage(); renderHome(); buildFilterF1(); setTimeout(()=>{ initReveal(); }, 100); }
 if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', safeInit); } else { safeInit(); }
 
 (function(){
@@ -1214,8 +1403,11 @@ function listenToCases(collection, onSnapshot) {
     });
 }
 
-// Khởi tạo Firebase sau khi DOM sẵn sàng
-setTimeout(initFirebase, 100);
+// Khởi tạo Firebase sau khi DOM sẵn sàng (với localStorage fallback)
+setTimeout(()=>{ initFirebase(); }, 100);
+
+// Tự động lưu dữ liệu khi trang đóng
+window.addEventListener('beforeunload', ()=>{ saveCasesDataToStorage(); saveLawDBToStorage(); });
 
 </script>
 </body>
