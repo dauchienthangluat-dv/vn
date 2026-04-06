@@ -442,18 +442,39 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
       </label>
       <div id="ad-chitiet" class="admin-editor" contenteditable="true" style="min-height: 150px;" onpaste="handlePasteAsPlainText(event)"></div>
     </div>
+    <div class="admin-form-group">
+      <label class="admin-label" style="display:flex; justify-content:space-between;">
+        <span>🏛️ Các Điều luật liên quan:</span>
+        <span style="cursor:pointer; color:var(--gold); font-size:0.75rem; font-weight:600;" onclick="detectLawsFromContent()" title="Tự động trích xuất từ 3 phần nội dung">🔍 Detect</span>
+      </label>
+      <div id="ad-laws-container" style="min-height: 100px; padding:12px; border:1px solid rgba(212,165,116,0.15); border-radius:var(--radius); background:rgba(212,165,116,0.05); margin-bottom:8px;">
+        <div id="ad-laws-list" style="display:none;">
+          <!-- Danh sách các Điều luật sẽ hiển thị ở đây -->
+        </div>
+        <div id="ad-laws-empty" style="color:var(--text-muted); font-size:0.9rem; text-align:center; padding:20px;">
+          📭 Chưa có Điều luật. Click "Detect" hoặc "➕ Thêm Điều luật" để bắt đầu.
+        </div>
+      </div>
+      <button type="button" class="admin-btn admin-btn-secondary" onclick="addNewLawManual()" style="width:100%; border:1.5px solid rgba(212,165,116,0.3); background:transparent; color:var(--navy); margin-bottom:0;">➕ Thêm Điều luật thủ công</button>
+    </div>
     <div class="admin-actions"><button class="admin-btn admin-btn-secondary" onclick="closeAdmin()">Hủy</button><button class="admin-btn admin-btn-primary" id="ad-submit-btn" onclick="submitAdmin()">Lưu Database</button></div>
   </div>
 </div>
 
-<div id="law-detect-modal" class="overlay-modal">
-  <div class="info-modal-box" style="max-width: 700px;">
-    <div class="info-modal-title">🏛️ Phát Hiện Các Điều Luật Mới</div>
-    <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:16px;">Hệ thống tự động detect ra <strong id="law-detect-count">0</strong> điều luật mới từ nội dung. Bạn có muốn thêm chúng vào Database không?</p>
-    <div id="law-detect-list" style="max-height:300px; overflow-y:auto; margin-bottom:16px; border:1px solid rgba(212,165,116,0.15); border-radius:12px; padding:12px;"></div>
+<div id="law-edit-modal" class="overlay-modal">
+  <div class="info-modal-box" style="max-width: 650px;">
+    <div class="info-modal-title" id="law-edit-title">🏛️ Nhập Nội Dung Điều Luật</div>
+    <div class="admin-form-group">
+      <label class="admin-label">Tiêu đề Điều luật:</label>
+      <input type="text" id="law-edit-name" class="admin-input" placeholder="VD: Điều 291 Bộ Luật Dân Sự 2015" />
+    </div>
+    <div class="admin-form-group">
+      <label class="admin-label">Nội dung Điều luật:</label>
+      <textarea id="law-edit-content" class="admin-input" style="height: 120px; resize: vertical;" placeholder="Nhập nội dung chi tiết của Điều luật..."></textarea>
+    </div>
     <div class="admin-actions">
-      <button class="admin-btn admin-btn-secondary" onclick="skipNewLaws()">Bỏ Qua</button>
-      <button class="admin-btn admin-btn-primary" onclick="proceedWithNewLaws()">Tiếp Tục Thêm →</button>
+      <button class="admin-btn admin-btn-secondary" onclick="closeLawEdit()">Hủy</button>
+      <button class="admin-btn admin-btn-primary" onclick="saveLawEdit()">Lưu Điều Luật</button>
     </div>
   </div>
 </div>
@@ -1026,6 +1047,8 @@ function openAdmin() {
   closeSidebar(); const lvSel = document.getElementById('ad-lv');
   lvSel.innerHTML = '<option value="">-- Chọn lĩnh vực --</option>' + LINH_VUC_LUAT.map(lv => `<option value="${lv.id}">${lv.ten}</option>`).join('') + '<option value="NEW" style="font-weight:bold;color:var(--gold-rich);">+ Thêm lĩnh vực mới...</option>';
   document.getElementById('ad-new-lv').style.display = 'none'; document.getElementById('ad-new-sf').style.display = 'none'; document.getElementById('ad-sf').innerHTML = ''; document.getElementById('admin-modal').classList.add('open');
+  adminFormLaws = [];
+  renderLawsList();
   restoreAdminDataFromStorage();
 }
 
@@ -1049,7 +1072,109 @@ window.handlePasteAsPlainText = function(e) {
     document.execCommand('insertText', false, text);
 };
 
-// ==================== LƯU TRỮ DỮ LIỆU VỚI LOCALSTORAGE ====================
+// ==================== QUẢN LÝ ĐIỀU LUẬT TRONG ADMIN FORM ====================
+let adminFormLaws = []; // Danh sách các Điều luật trong form admin hiện tại
+let editingLawIndex = -1; // Index của Điều luật đang edit
+
+function detectLawsFromContent() {
+  const tomluocText = document.getElementById('ad-tomluoc').innerText || "";
+  const apdungText = document.getElementById('ad-apdung').innerText || "";
+  const chitietText = document.getElementById('ad-chitiet').innerText || "";
+  
+  const fullContent = tomluocText + ' ' + apdungText + ' ' + chitietText;
+  const detectedLaws = extractAllLawsFromText(fullContent);
+  
+  if(detectedLaws.length === 0) {
+    showAlert('❌ Không tìm thấy Điều luật nào trong nội dung. Bạn có thể thêm thủ công bằng nút "➕ Thêm Điều luật".');
+    return;
+  }
+  
+  // Thêm các Điều luật detected vào danh sách (tránh trùng lặp)
+  detectedLaws.forEach(lawText => {
+    const existing = adminFormLaws.find(l => l.name === lawText);
+    if(!existing) {
+      // Tìm trong LAW_DB xem có nội dung sẵn không
+      const lawKey = getLawKeyFromText(lawText);
+      const lawContent = LAW_DB[lawKey] ? LAW_DB[lawKey].content.replace(/<[^>]*>/g, '') : ''; // Xóa HTML tags
+      adminFormLaws.push({ name: lawText, content: lawContent });
+    }
+  });
+  
+  renderLawsList();
+  const autoFilled = adminFormLaws.filter(l => l.content).length;
+  showAlert(`✅ Tìm thấy ${detectedLaws.length} Điều luật! (${autoFilled} cái được tự động hoàn thành)`);
+}
+
+function addNewLawManual() {
+  adminFormLaws.push({ name: '', content: '' });
+  editingLawIndex = adminFormLaws.length - 1;
+  document.getElementById('law-edit-title').textContent = '🏛️ Thêm Điều Luật Mới';
+  document.getElementById('law-edit-name').value = '';
+  document.getElementById('law-edit-content').value = '';
+  document.getElementById('law-edit-modal').classList.add('open');
+}
+
+function showLawEditModal(index) {
+  editingLawIndex = index;
+  const law = adminFormLaws[index];
+  document.getElementById('law-edit-title').textContent = '🏛️ Chỉnh Sửa Điều Luật';
+  document.getElementById('law-edit-name').value = law.name || '';
+  document.getElementById('law-edit-content').value = law.content || '';
+  document.getElementById('law-edit-modal').classList.add('open');
+}
+
+function saveLawEdit() {
+  const name = document.getElementById('law-edit-name').value.trim();
+  const content = document.getElementById('law-edit-content').value.trim();
+  
+  if(!name) {
+    showAlert('❌ Vui lòng nhập tiêu đề Điều luật!');
+    return;
+  }
+  
+  if(editingLawIndex >= 0 && editingLawIndex < adminFormLaws.length) {
+    adminFormLaws[editingLawIndex] = { name: name, content: content };
+  }
+  
+  renderLawsList();
+  closeLawEdit();
+}
+
+function closeLawEdit() {
+  editingLawIndex = -1;
+  document.getElementById('law-edit-modal').classList.remove('open');
+}
+
+function removeLaw(index) {
+  adminFormLaws.splice(index, 1);
+  renderLawsList();
+}
+
+function renderLawsList() {
+  const container = document.getElementById('ad-laws-container');
+  const lawsList = document.getElementById('ad-laws-list');
+  const lawsEmpty = document.getElementById('ad-laws-empty');
+  
+  if(adminFormLaws.length === 0) {
+    lawsList.style.display = 'none';
+    lawsEmpty.style.display = 'block';
+    return;
+  }
+  
+  lawsList.style.display = 'block';
+  lawsEmpty.style.display = 'none';
+  
+  lawsList.innerHTML = adminFormLaws.map((law, index) => `
+    <div style="display:flex; gap:8px; margin-bottom:8px; padding:10px; background:var(--surface); border:1px solid rgba(212,165,116,0.15); border-radius:8px; align-items:center;">
+      <div style="flex:1;">
+        <div style="font-weight:600; color:var(--navy); font-size:0.92rem;">${law.name}</div>
+        <div style="font-size:0.8rem; color:var(--text-muted); max-height:40px; overflow:hidden; text-overflow:ellipsis;">${law.content || '(Chưa có nội dung)'}</div>
+      </div>
+      <button type="button" class="admin-btn admin-btn-secondary" onclick="showLawEditModal(${index})" style="flex-shrink:0; padding:6px 12px; font-size:0.8rem;">✎ Sửa</button>
+      <button type="button" class="admin-btn admin-btn-secondary" onclick="removeLaw(${index})" style="flex-shrink:0; padding:6px 12px; font-size:0.8rem; background:#FFF3CD; color:#856404;">🗑️ Xóa</button>
+    </div>
+  `).join('');
+}
 function saveAdminDataToStorage() {
     const formData = {
         ten: document.getElementById('ad-ten').value,
@@ -1263,7 +1388,8 @@ function finishSubmitAdmin() {
       tom_luoc: tomluocHtml, 
       ap_dung: apdungHtml, 
       chi_tiet: chitietHtml, 
-      timeline: timelineArr    
+      timeline: timelineArr,
+      laws: adminFormLaws // Lưu danh sách Điều luật
   };
 
   const btn = document.getElementById('ad-submit-btn'); btn.textContent = 'Đang xử lý...'; btn.disabled = true;
