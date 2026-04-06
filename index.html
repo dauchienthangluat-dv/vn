@@ -572,8 +572,23 @@ function autoLinkLaws(htmlText) {
 }
 
 function showLawDynamic(lawName) {
-  // Tìm kiếm thông minh trong Database
-  let found = Object.values(LAW_DB).find(l => lawName.toLowerCase().includes(l.title.toLowerCase().replace(/ \(.+\)/,'')) || l.title.toLowerCase().includes(lawName.toLowerCase()));
+  // Tìm kiếm ưu tiên trong luật gắn với vụ án hiện tại trước.
+  let found = null;
+  if(state.curCase && Array.isArray(state.curCase.laws)) {
+    found = state.curCase.laws.find(l => {
+      const name = (l.name || '').toLowerCase();
+      const target = lawName.toLowerCase();
+      return name && (target.includes(name) || name.includes(target) || name === target);
+    });
+  }
+
+  if(!found) {
+    found = Object.values(LAW_DB).find(l => {
+      const title = (l.title || '').toLowerCase().replace(/ \(.+\)/,'');
+      const target = lawName.toLowerCase();
+      return target.includes(title) || title.includes(target);
+    });
+  }
   
   document.getElementById('modal-title').innerHTML = `🏛️ ${found ? found.title : lawName}`;
   document.getElementById('modal-body').innerHTML = found ? found.content : `
@@ -1357,6 +1372,9 @@ function submitAdmin() {
 
   if(!ten || !lvId || !sfId) { showAlert('Vui lòng điền đủ Tiêu đề, Lĩnh vực và Chủ đề cụ thể.'); return; }
 
+  // Nếu Admin đã thêm thủ công các Điều luật, đồng bộ chúng vào LAW_DB trước khi kiểm tra và lưu.
+  syncAdminLawsToLawDB(adminFormLaws, ten);
+
   // ===================== DETECT CÁC ĐIỀU LUẬT MỚI =====================
   const fullContent = ten + ' ' + mota + ' ' + tomluocText + ' ' + apdungText + ' ' + chitietText;
   const newLaws = detectNewLaws(fullContent);
@@ -1414,6 +1432,31 @@ function proceedWithNewLaws() {
 
 function saveLawDBToStorage() {
   localStorage.setItem('dcsl_law_db', JSON.stringify(LAW_DB));
+}
+
+function syncAdminLawsToLawDB(laws, sourceReference) {
+  if(!Array.isArray(laws) || laws.length === 0) return;
+  laws.forEach(law => {
+    if(!law || !law.name) return;
+    const normalizedName = law.name.trim();
+    const keyFromText = getLawKeyFromText(normalizedName);
+    const key = keyFromText || `law-${createSlug(normalizedName)}`;
+    const existing = LAW_DB[key];
+    const content = law.content && law.content.trim() ? law.content.trim() : '<p>(Nội dung điều luật sẽ được cập nhật sau.)</p>';
+    if(existing) {
+      existing.title = normalizedName;
+      if(content) existing.content = content;
+      if(!existing.source) existing.source = sourceReference || 'admin';
+    } else {
+      LAW_DB[key] = {
+        title: normalizedName,
+        content: content,
+        autoDetected: false,
+        source: sourceReference || 'admin'
+      };
+    }
+  });
+  saveLawDBToStorage();
 }
 
 function restoreLawDBFromStorage() {
