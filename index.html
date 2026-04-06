@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Đấu Chiến Thắng Luật - Kho tra cứu bản án, án lệ và tranh chấp pháp lý hàng đầu Việt Nam.">
 <title>Đấu Chiến Thắng Luật.com</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #F8F5F0; --bg2: #EFE8DC; --surface: #FFFBF7; --surface2: #FEF8F2; --surface3: #F5EDE2;
@@ -291,6 +291,834 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
 .detail-section-title{ font-family:'Playfair Display',serif; font-size:0.95rem;font-weight:700;color:var(--navy); padding:8px 12px;margin-bottom:12px; background:linear-gradient(90deg,var(--gold-dim),transparent); border-left:3px solid var(--gold);border-radius:0 8px 8px 0; text-transform: uppercase; letter-spacing: 0.5px; }
 .reveal{ opacity:0;transform:translateY(20px); transition:opacity 0.5s ease,transform 0.5s ease; }
 .reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ===== Editorial Override ===== */
+:root {
+  --bg: #f4efe8;
+  --bg2: #e9e1d6;
+  --surface: #fbf8f3;
+  --surface2: #f0e9df;
+  --surface3: #e6ddd1;
+  --navy: #1f2833;
+  --navy2: #3a4753;
+  --gold: #9b6a3c;
+  --gold-light: #c4976b;
+  --gold-rich: #7f532f;
+  --gold-dim: rgba(155, 106, 60, 0.09);
+  --gold-border: rgba(123, 84, 47, 0.18);
+  --text: #1b1d21;
+  --text-sec: #46505a;
+  --text-muted: #6a7380;
+  --shadow-sm: 0 10px 28px rgba(22, 30, 38, 0.07);
+  --shadow-md: 0 20px 42px rgba(22, 30, 38, 0.11);
+  --shadow-lg: 0 28px 60px rgba(22, 30, 38, 0.14);
+  --radius: 18px;
+}
+
+html {
+  font-size: 16px;
+  background:
+    radial-gradient(circle at top left, rgba(196, 151, 107, 0.18), transparent 28%),
+    linear-gradient(135deg, #e8dfd4 0%, #f2ebe4 34%, #e6ddd2 100%);
+}
+
+body {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.2), transparent 220px),
+    linear-gradient(180deg, #f4efe8 0%, #f7f3ee 100%);
+  color: var(--text);
+  font-family: 'Manrope', sans-serif;
+}
+
+#particles-canvas,
+.hero-logo-box,
+.shimmer-host::before,
+.ripple {
+  display: none !important;
+}
+
+.led-item.led-active::after {
+  display: none;
+}
+
+#desktop-wrapper {
+  background: transparent;
+  box-shadow: none;
+}
+
+#main-col {
+  background: color-mix(in srgb, var(--surface) 84%, white 16%);
+  box-shadow: 0 14px 48px rgba(29, 35, 43, 0.08), inset 0 1px 0 rgba(255,255,255,0.7);
+}
+
+#global-header {
+  height: 70px;
+  background: rgba(251, 248, 243, 0.92);
+  border-bottom: 1px solid rgba(31, 40, 51, 0.08);
+  box-shadow: 0 6px 24px rgba(18, 22, 29, 0.05);
+}
+
+#site-logo {
+  font-family: 'Literata', serif;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+#site-logo em {
+  color: var(--navy);
+}
+
+#site-logo span {
+  color: var(--gold-rich);
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: 0.28em;
+  margin-top: 4px;
+}
+
+#header-right {
+  width: auto;
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background: rgba(31, 40, 51, 0.05);
+  border: 1px solid rgba(31, 40, 51, 0.08);
+  border-radius: 999px;
+}
+
+.lang-toggle.compact {
+  margin-right: 4px;
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.lang-btn.active {
+  background: var(--navy);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(31, 40, 51, 0.16);
+}
+
+.lang-btn:hover:not(.active) {
+  color: var(--navy);
+  background: rgba(31, 40, 51, 0.06);
+}
+
+#page-home .hero-band {
+  margin: 18px 18px 0;
+  padding: 30px 28px 26px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.18), transparent 38%),
+    linear-gradient(135deg, #242c35 0%, #394857 58%, #1e2832 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 26px;
+  position: relative;
+  overflow: hidden;
+}
+
+#page-home .hero-band::before {
+  content: '';
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  pointer-events: none;
+}
+
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.78);
+  margin-bottom: 14px;
+}
+
+.hero-kicker::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: rgba(255,255,255,0.46);
+}
+
+#page-home .hero-band h2 {
+  font-family: 'Literata', serif;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+
+#page-home .hero-band h2 em {
+  color: #d1b38f;
+}
+
+#page-home .hero-band p {
+  font-size: 0.95rem;
+  line-height: 1.76;
+  max-width: 640px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.hero-primary-btn {
+  border: none;
+  background: linear-gradient(135deg, #d7b58f 0%, #b77a46 100%);
+  color: #151920;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 13px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(183, 122, 70, 0.22);
+}
+
+.hero-note {
+  max-width: 420px;
+  font-size: 0.83rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+}
+
+.hero-stats {
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.hero-stat {
+  min-width: 88px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.hero-stat-num {
+  font-family: 'Literata', serif;
+  font-size: 1.35rem;
+}
+
+.hero-stat-lbl {
+  margin-top: 5px;
+}
+
+.hero-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  max-width: 720px;
+}
+
+.hero-panel-title {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.72);
+}
+
+.hero-panel-item {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.84);
+  padding-left: 16px;
+  position: relative;
+}
+
+.hero-panel-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d1b38f;
+}
+
+.home-section-title,
+.page-title,
+.side-panel-title,
+.info-modal-title,
+.filter-title,
+.detail-section-title,
+.case-detail-title,
+.page-header .page-title {
+  font-family: 'Literata', serif !important;
+}
+
+.home-section-title {
+  font-size: 1.32rem;
+  padding: 28px 18px 14px;
+}
+
+.section-title {
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 24px 18px 10px;
+}
+
+.section-title::before,
+.side-panel-title::before,
+.filter-title::before {
+  background: linear-gradient(180deg, #c4976b 0%, #8d5f37 100%);
+}
+
+.linh-vuc-grid {
+  gap: 14px;
+  padding: 0 18px 8px;
+}
+
+.lv-card {
+  border: 1px solid rgba(31, 40, 51, 0.08);
+  box-shadow: 0 14px 28px rgba(24, 28, 34, 0.08);
+}
+
+.lv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 32px rgba(24, 28, 34, 0.12);
+}
+
+.lv-card-inner {
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 18px;
+}
+
+.lv-card-content {
+  width: 100%;
+  text-align: left;
+  padding-top: 28px;
+}
+
+.lv-card-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  margin-bottom: 36px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.92);
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.12);
+  filter: none;
+}
+
+.lv-card-title {
+  font-family: 'Literata', serif;
+  font-size: 1.14rem;
+  text-shadow: none;
+  line-height: 1.25;
+}
+
+.lv-card-count {
+  margin-top: 7px;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.18);
+}
+
+.recent-grid,
+.read-history-list,
+.subfield-list,
+.cases-list {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.recent-card,
+.rh-item,
+.subfield-item,
+.case-item,
+.right-recent-wrapper,
+#filter-panel,
+.tab-content,
+.info-modal-box,
+.smart-search-lab,
+.cases-context {
+  border: 1px solid rgba(31, 40, 51, 0.08);
+  box-shadow: 0 12px 30px rgba(24, 28, 34, 0.07);
+}
+
+.recent-card:hover,
+.rh-item:hover,
+.subfield-item:hover {
+  transform: translateY(-2px);
+}
+
+.recent-card-body,
+.page-header,
+.case-detail-header-info {
+  background: transparent;
+}
+
+.page-header {
+  margin: 0 18px 12px;
+  padding: 22px 20px 16px;
+  border: 1px solid rgba(31, 40, 51, 0.08);
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.56), rgba(255,255,255,0.16)),
+    linear-gradient(180deg, var(--surface2) 0%, var(--surface) 100%);
+}
+
+.page-title {
+  font-size: 1.46rem;
+}
+
+.smart-search-stage {
+  padding: 0 18px 22px;
+}
+
+.smart-search-lab {
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.18));
+  border-radius: 22px;
+}
+
+.smart-search-intro {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.smart-search-intro h3 {
+  font-family: 'Literata', serif;
+  font-size: 1.28rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.smart-search-intro p,
+.search-lab-note,
+.detail-meta-lead,
+.detail-translation-note,
+.translation-helper-note {
+  color: var(--text-sec);
+  line-height: 1.72;
+}
+
+.search-lab-note {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(31, 40, 51, 0.04);
+  border: 1px solid rgba(31, 40, 51, 0.06);
+  font-size: 0.86rem;
+}
+
+.smart-search-wrapper-stage {
+  margin-top: 4px;
+  margin-bottom: 0;
+  max-width: none;
+  padding: 7px;
+  background: var(--surface);
+  box-shadow: none;
+}
+
+.smart-search-wrapper {
+  background: rgba(255,255,255,0.74);
+  border-radius: 18px;
+  border: 1px solid rgba(31, 40, 51, 0.09);
+}
+
+.smart-search-wrapper input {
+  font-size: 0.92rem;
+  padding-left: 12px;
+}
+
+.smart-search-wrapper button {
+  border-radius: 14px;
+  background: var(--navy);
+  padding: 11px 16px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.smart-search-wrapper button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(31, 40, 51, 0.16);
+}
+
+.prompt-chip-row,
+.analysis-chip-row,
+.case-match-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.prompt-chip {
+  border: 1px solid rgba(31, 40, 51, 0.08);
+  background: rgba(31, 40, 51, 0.03);
+  color: var(--navy);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.prompt-chip:hover {
+  background: rgba(31, 40, 51, 0.08);
+  transform: translateY(-1px);
+}
+
+.smart-search-analysis,
+.cases-context {
+  margin-top: 16px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.2));
+  display: none;
+}
+
+.smart-search-analysis.visible,
+.cases-context.visible {
+  display: block;
+}
+
+.cases-context-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cases-context-head h3 {
+  font-family: 'Literata', serif;
+  font-size: 1.14rem;
+  color: var(--navy);
+}
+
+.cases-context-note {
+  max-width: 360px;
+  font-size: 0.84rem;
+  color: var(--text-sec);
+  line-height: 1.7;
+}
+
+.analysis-chip,
+.match-chip,
+.case-meta-pill,
+.match-score {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.analysis-chip,
+.match-chip,
+.case-meta-pill {
+  background: rgba(31, 40, 51, 0.05);
+  color: var(--navy2);
+  border: 1px solid rgba(31, 40, 51, 0.08);
+}
+
+.match-score {
+  background: rgba(155, 106, 60, 0.09);
+  color: var(--gold-rich);
+  border: 1px solid rgba(155, 106, 60, 0.18);
+}
+
+.case-item {
+  padding: 16px 16px 6px;
+  overflow: hidden;
+}
+
+.case-item-header {
+  padding: 0;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.case-item-left {
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.case-name {
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.case-item-summary {
+  margin-top: 10px;
+  font-size: 0.84rem;
+  line-height: 1.76;
+  color: var(--text-sec);
+}
+
+.case-item-topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.case-desc {
+  margin-top: 16px;
+  padding: 16px 0 8px;
+  background: transparent;
+  border-top: 1px solid rgba(31, 40, 51, 0.08);
+}
+
+.case-detail-title {
+  font-size: 1.5rem;
+  line-height: 1.38;
+}
+
+.detail-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.detail-meta-lead {
+  max-width: 520px;
+  font-size: 0.84rem;
+}
+
+.detail-translation-note {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(31, 40, 51, 0.04);
+  border: 1px solid rgba(31, 40, 51, 0.06);
+  font-size: 0.81rem;
+}
+
+.case-hero {
+  height: 168px;
+  margin: 0 18px;
+  border-radius: 22px;
+}
+
+.case-hero-overlay {
+  background: linear-gradient(180deg, rgba(0,0,0,0.04) 0%, rgba(244,239,232,0.95) 100%);
+}
+
+.tab-row {
+  gap: 10px;
+  padding: 0 18px 16px;
+}
+
+.tab-btn {
+  border-radius: 999px;
+  padding: 12px 10px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.tab-btn.active {
+  background: var(--navy);
+  box-shadow: 0 12px 26px rgba(31, 40, 51, 0.16);
+  transform: none;
+}
+
+.tab-content {
+  margin: 0 18px 80px;
+  padding: 22px;
+  border-radius: 22px;
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+.timeline-container {
+  padding-left: 20px;
+  border-left: 1px solid rgba(155, 106, 60, 0.24);
+}
+
+.timeline-dot {
+  left: -28px;
+  width: 15px;
+  height: 15px;
+  background: var(--gold);
+  box-shadow: 0 0 0 4px var(--surface);
+}
+
+.overlay-modal {
+  background: rgba(16, 20, 27, 0.45);
+}
+
+.info-modal-box {
+  border-radius: 24px;
+  padding: 26px;
+}
+
+.admin-input,
+.admin-editor {
+  font-family: 'Manrope', sans-serif;
+}
+
+.translation-config-card {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(31, 40, 51, 0.03);
+  border: 1px solid rgba(31, 40, 51, 0.06);
+}
+
+.translation-config-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.translation-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.translation-checkbox input {
+  width: 16px;
+  height: 16px;
+}
+
+.translation-helper-note {
+  font-size: 0.77rem;
+}
+
+@media (min-width: 1100px) {
+  #desktop-wrapper {
+    padding-top: 76px;
+    grid-template-columns: 290px 1fr 320px;
+  }
+
+  #main-col {
+    border-radius: 22px 22px 0 0;
+  }
+
+  #side-left,
+  #side-right {
+    top: 92px;
+    max-height: calc(100vh - 92px);
+  }
+
+  .smart-search-intro {
+    grid-template-columns: minmax(0, 1.5fr) minmax(240px, 1fr);
+    align-items: start;
+  }
+}
+
+@media (max-width: 768px) {
+  #global-header {
+    padding: 0 14px;
+  }
+
+  #site-logo {
+    font-size: 0.86rem;
+  }
+
+  #site-logo span {
+    letter-spacing: 0.18em;
+  }
+
+  .header-tools {
+    gap: 6px;
+  }
+
+  .lang-toggle.compact {
+    display: none;
+  }
+
+  #page-home .hero-band {
+    margin: 14px 14px 0;
+    padding: 24px 20px 22px;
+  }
+
+  .hero-actions,
+  .detail-toolbar {
+    align-items: stretch;
+  }
+
+  .hero-primary-btn,
+  .lang-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .smart-search-stage,
+  .linh-vuc-grid,
+  .recent-grid,
+  .cases-list,
+  .subfield-list,
+  .read-history-list {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .page-header,
+  .case-hero,
+  .tab-content {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+}
 </style>
 </head>
 <body>
@@ -301,7 +1129,13 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
   <button id="hamburger-btn" onclick="openSidebar()" title="Menu"><span></span><span></span><span></span></button>
   <div id="site-logo" onclick="goHome()"><em>Đấu Chiến Thắng Luật</em><span>.com</span></div>
   <div id="header-right">
-    <button id="admin-btn-top" onclick="openAdmin()" style="display:none; background:var(--gold);color:#fff;border:none;padding:7px 14px;border-radius:8px;cursor:pointer;font-weight:600;font-size:0.8rem;box-shadow:var(--shadow-sm);">⚙️ Admin</button>
+    <div class="header-tools">
+      <div class="lang-toggle compact" id="global-lang-toggle" aria-label="Chuyển ngôn ngữ">
+        <button type="button" class="lang-btn active" data-lang="vi" onclick="setCaseLanguage('vi')">VI</button>
+        <button type="button" class="lang-btn" data-lang="en" onclick="setCaseLanguage('en')">EN</button>
+      </div>
+      <button id="admin-btn-top" onclick="openAdmin()" style="display:none; background:var(--gold);color:#fff;border:none;padding:7px 14px;border-radius:8px;cursor:pointer;font-weight:700;font-size:0.78rem;box-shadow:var(--shadow-sm);">Admin</button>
+    </div>
   </div>
 </header>
 
@@ -330,14 +1164,23 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
   <div id="main-col">
     <div id="page-home" class="page active">
       <div class="hero-band">
-        <h2>Thư viện <em>Bản án</em></h2>
-        <p>Tra cứu bản án, án lệ một cách nhanh chóng.</p>
+        <div class="hero-kicker">Kho tư liệu pháp lý chọn lọc</div>
+        <h2>Thư viện <em>bản án</em> được dàn lại theo nhịp đọc của người làm nghề</h2>
+        <p>Giữ độ sắc nét khi tra cứu, nhưng bớt cảm giác “template AI”: bố cục chặt, nhấn đúng dữ kiện, đọc dài vẫn thoáng mắt.</p>
+        <div class="hero-actions">
+          <button class="hero-primary-btn" onclick="showPage('page-smart-search')">Mở tra cứu tình huống</button>
+          <div class="hero-note">Mô tả vụ việc bằng ngôn ngữ đời thường, hệ thống sẽ tự bóc tách nhóm tranh chấp, dữ kiện và hướng áp dụng.</div>
+        </div>
         <div class="hero-stats">
           <div class="hero-stat"><span class="hero-stat-num" id="stat-cases">0</span><span class="hero-stat-lbl">Tài liệu</span></div>
           <div class="hero-stat"><span class="hero-stat-num" id="stat-fields">0</span><span class="hero-stat-lbl">Lĩnh vực</span></div>
           <div class="hero-stat"><span class="hero-stat-num" id="stat-subfields">0</span><span class="hero-stat-lbl">Chủ đề</span></div>
         </div>
-        <div class="hero-logo-box"><div class="hero-logo-icon">⚖</div></div>
+        <div class="hero-panel">
+          <div class="hero-panel-title">Cách nhập hiệu quả</div>
+          <div class="hero-panel-item">Nêu tình huống, chủ thể, giấy tờ, hành vi, yêu cầu xử lý.</div>
+          <div class="hero-panel-item">Có thể tìm bằng tiếng Việt hoặc tiếng Anh trên cùng một kho dữ liệu.</div>
+        </div>
       </div>
       <div class="home-section-title">Bạn đang quan tâm gì?</div>
       <div class="linh-vuc-grid" id="linh-vuc-grid"></div>
@@ -352,10 +1195,29 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
         <div class="page-breadcrumb"><span class="bc-link" onclick="goHome()">Trang chủ</span><span class="bc-sep">›</span><span>Tra cứu theo tình huống</span></div>
         <div class="page-title">Tra cứu tình huống</div>
       </div>
-      <div style="padding: 16px 24px;">
-        <div class="smart-search-wrapper" style="margin-bottom: 24px; max-width: 600px; padding: 6px; box-shadow: var(--shadow-md);">
-          <input type="text" id="smart-search-input-page" placeholder="VD: Tranh chấp ranh giới đất đai..." onkeypress="if(event.key === 'Enter') executeSmartSearchPage()">
+      <div class="smart-search-stage">
+        <div class="smart-search-lab">
+          <div class="smart-search-intro">
+            <div>
+              <div class="hero-kicker">Situation Engine</div>
+              <h3>Cho hệ thống một bối cảnh, không chỉ một từ khóa</h3>
+              <p>Tra cứu mạnh nhất khi bạn kể ngắn gọn hoàn cảnh tranh chấp, giấy tờ đang có, hành vi xảy ra và mục tiêu muốn xử lý.</p>
+            </div>
+            <div class="search-lab-note">
+              <strong>Máy chấm điểm theo 5 lớp:</strong> tiêu đề, dữ kiện, phần áp dụng tương tự, điều luật liên quan và nhóm lĩnh vực.
+            </div>
+          </div>
+          <div class="smart-search-wrapper smart-search-wrapper-stage">
+            <input type="text" id="smart-search-input-page" placeholder="VD: Tranh chấp ranh giới đất đai, hai bên có sổ đỏ nhưng mốc cũ bị xê dịch..." onkeypress="if(event.key === 'Enter') executeSmartSearchPage()">
           <button onclick="executeSmartSearchPage()">Tìm kiếm</button>
+          </div>
+          <div class="prompt-chip-row">
+            <button type="button" class="prompt-chip" onclick="useSmartPrompt('Người lao động bị cho nghỉ việc đột ngột, công ty chưa trả lương và bảo hiểm.')">Lao động</button>
+            <button type="button" class="prompt-chip" onclick="useSmartPrompt('Tranh chấp ranh giới đất, hai hộ sử dụng ổn định lâu năm nhưng bản đồ địa chính thể hiện khác nhau.')">Đất đai</button>
+            <button type="button" class="prompt-chip" onclick="useSmartPrompt('Hợp đồng mua bán bị hủy vì một bên chậm giao hàng và phát sinh yêu cầu bồi thường.')">Hợp đồng</button>
+            <button type="button" class="prompt-chip" onclick="useSmartPrompt('Shareholder dispute over capital contribution, governance rights and company charter compliance.')">English query</button>
+          </div>
+          <div id="smart-search-analysis" class="smart-search-analysis"></div>
         </div>
       </div>
     </div>
@@ -370,6 +1232,7 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
         <div class="page-breadcrumb"><span class="bc-link" onclick="goHome()">Trang chủ</span><span class="bc-sep" id="cases-sep-1">›</span><span class="bc-link" id="cases-bc-lv" onclick="goSubfields()"></span><span class="bc-sep" id="cases-sep-2">›</span><span id="cases-bc-sf"></span></div>
         <div class="page-title" id="cases-title"></div>
       </div>
+      <div id="cases-context" class="cases-context"></div>
       <div class="cases-list" id="cases-list"></div>
     </div>
 
@@ -381,6 +1244,14 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
       <div class="case-detail-header-info">
         <div id="case-detail-stars" class="case-detail-stars"></div>
         <div id="case-detail-title" class="case-detail-title"></div>
+        <div class="detail-toolbar">
+          <div id="detail-meta-lead" class="detail-meta-lead"></div>
+          <div class="lang-toggle" id="detail-lang-toggle" aria-label="Chuyển ngôn ngữ bản án">
+            <button type="button" class="lang-btn active" data-lang="vi" onclick="setCaseLanguage('vi')">Tiếng Việt</button>
+            <button type="button" class="lang-btn" data-lang="en" onclick="setCaseLanguage('en')">English</button>
+          </div>
+        </div>
+        <div id="detail-translation-note" class="detail-translation-note"></div>
       </div>
       <div class="tab-row" id="tab-row-container"></div>
       <div class="tab-content active" id="tc-dien-bien"></div>
@@ -457,6 +1328,16 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
       </div>
       <button type="button" class="admin-btn admin-btn-secondary" onclick="addNewLawManual()" style="width:100%; border:1.5px solid rgba(212,165,116,0.3); background:transparent; color:var(--navy); margin-bottom:0;">➕ Thêm Điều luật thủ công</button>
     </div>
+    <div class="admin-form-group translation-config-card">
+      <label class="admin-label">Song ngữ Việt - Anh tự động</label>
+      <div class="translation-config-grid">
+        <label class="translation-checkbox"><input type="checkbox" id="ad-translate-en" checked> Tự tạo bản English khi lưu vụ án</label>
+        <input type="url" id="ad-translation-endpoint" class="admin-input" placeholder="Proxy dịch (khuyên dùng, có thể để trống nếu dùng API key cục bộ)" />
+        <input type="password" id="ad-openai-key" class="admin-input" placeholder="OpenAI API key cho máy admin này (tùy chọn)" />
+        <input type="text" id="ad-translation-model" class="admin-input" placeholder="Model dịch, ví dụ: gpt-4.1-mini" />
+        <div class="translation-helper-note">API key chỉ lưu trong trình duyệt của máy admin này. An toàn hơn là dùng `proxy dịch` riêng để key không nằm ở frontend.</div>
+      </div>
+    </div>
     <div class="admin-actions"><button class="admin-btn admin-btn-secondary" onclick="closeAdmin()">Hủy</button><button class="admin-btn admin-btn-primary" id="ad-submit-btn" onclick="submitAdmin()">Lưu Database</button></div>
   </div>
 </div>
@@ -475,6 +1356,20 @@ body{ min-height:100vh; background:var(--bg); color:var(--text); font-family:'Be
     <div class="admin-actions">
       <button class="admin-btn admin-btn-secondary" onclick="closeLawEdit()">Hủy</button>
       <button class="admin-btn admin-btn-primary" onclick="saveLawEdit()">Lưu Điều Luật</button>
+    </div>
+  </div>
+</div>
+
+<div id="law-detect-modal" class="overlay-modal">
+  <div class="info-modal-box" style="max-width: 620px;">
+    <div class="info-modal-title">Nhận diện điều luật mới</div>
+    <div class="info-modal-body">
+      <p>Hệ thống vừa phát hiện thêm <strong id="law-detect-count">0</strong> điều luật chưa có trong kho nội dung. Bạn có thể tạo bản ghi tạm để tra cứu không bị đứt mạch.</p>
+      <div id="law-detect-list" style="margin-top:14px;"></div>
+    </div>
+    <div class="admin-actions">
+      <button class="admin-btn admin-btn-secondary" onclick="skipNewLaws()">Bỏ qua</button>
+      <button class="admin-btn admin-btn-primary" onclick="proceedWithNewLaws()">Tạo bản ghi tạm</button>
     </div>
   </div>
 </div>
@@ -530,23 +1425,24 @@ function textToHtmlParagraphs(text) {
 function extractAllLawsFromText(text) {
   if(!text) return [];
   // Regex để trích xuất tất cả các điều luật có dạng "Điều X" hoặc "Điều X của Luật..."
-  const regexStr = /(?:(?:[Kk]hoản|[Đđ]iểm)\s+[0-9a-zA-Z]+\s+)?[Đđ]iều\s+\d+[a-zA-Z]?(?:\s+(?:của\s+)?(?:[Bb]ộ\s+luật|[Ll]uật)\s+[\s\wÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪỬỮỰỲỴÝỶỸ]+?(?:\s+năm\s+\d{4})?)?/g;
+  const regexStr = /(?:(?:[Kk]hoản|[Đđ]iểm|[Cc]lause|[Pp]oint)\s+[0-9a-zA-Z]+\s+)?(?:[Đđ]iều|Article)\s+\d+[a-zA-Z]?(?:\s+(?:của\s+)?(?:[Bb]ộ\s+luật|[Ll]uật|[Cc]ode|[Ll]aw)\s+[\s\wÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪỬỮỰỲỴÝỶỸ]+?(?:\s+(?:năm|year)\s+\d{4})?)?/g;
   const matches = text.match(regexStr) || [];
   return [...new Set(matches)]; // Loại bỏ duplicates
 }
 
 function getLawKeyFromText(lawText) {
   // Tạo key từ text ("Điều 423" => "blhs-423" hoặc "ldd-167")
-  const match = lawText.match(/[Đđ]iều\s+(\d+[a-zA-Z]?)/);
+  const match = lawText.match(/(?:[Đđ]iều|Article)\s+(\d+[a-zA-Z]?)/i);
   if(!match) return null;
   const num = match[1];
   
   // Cố gắng xác định loại luật từ text
   let prefix = 'law-';
-  if(lawText.toLowerCase().includes('bộ luật dân sự') || lawText.toLowerCase().includes('blds')) prefix = 'blds-';
-  else if(lawText.toLowerCase().includes('đất đai')) prefix = 'ldd-';
-  else if(lawText.toLowerCase().includes('hình sự') || lawText.toLowerCase().includes('blhs')) prefix = 'blhs-';
-  else if(lawText.toLowerCase().includes('lao động') || lawText.toLowerCase().includes('lld')) prefix = 'lld-';
+  const lower = lawText.toLowerCase();
+  if(lower.includes('bộ luật dân sự') || lower.includes('civil code') || lower.includes('blds')) prefix = 'blds-';
+  else if(lower.includes('đất đai') || lower.includes('land law')) prefix = 'ldd-';
+  else if(lower.includes('hình sự') || lower.includes('criminal code') || lower.includes('blhs')) prefix = 'blhs-';
+  else if(lower.includes('lao động') || lower.includes('labor code') || lower.includes('lld')) prefix = 'lld-';
   
   return prefix + num;
 }
@@ -571,7 +1467,7 @@ function autoLinkLaws(htmlText) {
 
   // 2. Regex đơn giản: chỉ match "[Khoản/Điểm X] Điều XXX[a-zA-Z]?" mà KHÔNG match "của Bộ luật..."
   // Điều này giúp khớp tốt hơn với dữ liệu admin đã lưu
-  const regexStr = /(?![^<]*>)(?:(?:[Kk]hoản|[Đđ]iểm)\s+[0-9a-zA-Z]+\s+)?[Đđ]iều\s+\d+[a-zA-Z]?/g;
+  const regexStr = /(?![^<]*>)(?:(?:[Kk]hoản|[Đđ]iểm|[Cc]lause|[Pp]oint)\s+[0-9a-zA-Z]+\s+)?(?:[Đđ]iều|Article)\s+\d+[a-zA-Z]?/g;
   
   res = res.replace(regexStr, match => {
       // Bảo vệ tránh thay thế đúp nếu đã có thẻ law-link
@@ -582,6 +1478,17 @@ function autoLinkLaws(htmlText) {
   return res;
 }
 
+function getCaseLawsForLang(caseObj, lang = 'vi') {
+  if(!caseObj) return [];
+  if(lang === 'en') {
+    const enLaws = caseObj.translations && caseObj.translations.en && Array.isArray(caseObj.translations.en.laws)
+      ? caseObj.translations.en.laws
+      : [];
+    if(enLaws.length) return enLaws;
+  }
+  return Array.isArray(caseObj.laws) ? caseObj.laws : [];
+}
+
 function showLawDynamic(lawName) {
   // Trích xuất chữ số điều (ví dụ: "256" từ "Điều 256")
   const lawNumMatch = lawName.match(/\d+/);
@@ -589,15 +1496,20 @@ function showLawDynamic(lawName) {
   
   // Tìm kiếm ưu tiên trong luật gắn với vụ án hiện tại trước.
   let found = null;
-  if(state.curCase && Array.isArray(state.curCase.laws)) {
-    found = state.curCase.laws.find(l => {
-      const name = (l.name || '').toLowerCase();
+  const activeLang = state && state.uiLang ? state.uiLang : 'vi';
+  const activeCaseLaws = getCaseLawsForLang(state.curCase, activeLang);
+  const fallbackCaseLaws = activeLang === 'en' ? getCaseLawsForLang(state.curCase, 'vi') : [];
+  const combinedCaseLaws = [...activeCaseLaws, ...fallbackCaseLaws];
+
+  if(state.curCase && combinedCaseLaws.length > 0) {
+    found = combinedCaseLaws.find(l => {
+      const name = ((l.name || '') + ' ' + (l.name_en || '')).toLowerCase();
       const target = lawName.toLowerCase();
       // Khớp chính xác hoặc contains
       if(name === target) return true;
       if(target.includes(name) || name.includes(target)) return true;
       // Nếu có số điều, kiểm tra xem tên có chứa số đó không
-      if(lawNum && (name.includes('điều ' + lawNum) || name.includes('Điều ' + lawNum))) return true;
+      if(lawNum && (name.includes('điều ' + lawNum) || name.includes('article ' + lawNum))) return true;
       return false;
     });
   }
@@ -614,10 +1526,12 @@ function showLawDynamic(lawName) {
     });
   }
 
-  const modalTitle = found ? (found.title || found.name || lawName) : lawName;
+  const modalTitle = found ? (found.title || found.name || found.name_en || lawName) : lawName;
   let modalBody = '';
   if(found) {
-    const content = found.content || '';
+    const content = activeLang === 'en'
+      ? (found.content_en || found.content || '')
+      : (found.content || found.content_en || '');
     modalBody = content.trim() ? content : `<p>(Nội dung điều luật sẽ được cập nhật sau.)</p>`;
   } else {
     modalBody = `
@@ -638,13 +1552,13 @@ const baseSubfields = [
 ];
 
 const LINH_VUC_LUAT = [
-  { id:'hinh-su', ten:'Hình sự', icon:'⚖️', bg:'linear-gradient(135deg, #e60000 0%, #c20000 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
-  { id:'dan-su', ten:'Dân sự', icon:'🏛️', bg:'linear-gradient(135deg, #5c85ff 0%, #3d5afe 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
-  { id:'kinh-doanh-thuong-mai', ten:'Kinh doanh - Thương mại', icon:'📊', bg:'linear-gradient(135deg, #ff9800 0%, #f57c00 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
-  { id:'lao-dong', ten:'Lao động', icon:'👷', bg:'linear-gradient(135deg, #00c853 0%, #009624 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
-  { id:'hanh-chinh', ten:'Hành chính', icon:'🏢', bg:'linear-gradient(135deg, #aa00ff 0%, #7b1fa2 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
-  { id:'dat-dai', ten:'Đất đai', icon:'🗺️', bg:'linear-gradient(135deg, #00bfa5 0%, #00897b 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
-  { id:'doanh-nghiep', ten:'Doanh nghiệp', icon:'🏗️', bg:'linear-gradient(135deg, #6200ea 0%, #311b92 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
+  { id:'hinh-su', ten:'Hình sự', icon:'HS', bg:'linear-gradient(160deg, #6e312b 0%, #3b1917 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
+  { id:'dan-su', ten:'Dân sự', icon:'DS', bg:'linear-gradient(160deg, #35526b 0%, #1d3142 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
+  { id:'kinh-doanh-thuong-mai', ten:'Kinh doanh - Thương mại', icon:'TM', bg:'linear-gradient(160deg, #8b6235 0%, #4f371d 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
+  { id:'lao-dong', ten:'Lao động', icon:'LD', bg:'linear-gradient(160deg, #3d6956 0%, #20382e 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
+  { id:'hanh-chinh', ten:'Hành chính', icon:'HC', bg:'linear-gradient(160deg, #5b566f 0%, #312f3d 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
+  { id:'dat-dai', ten:'Đất đai', icon:'ĐĐ', bg:'linear-gradient(160deg, #586a43 0%, #2d3623 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
+  { id:'doanh-nghiep', ten:'Doanh nghiệp', icon:'DN', bg:'linear-gradient(160deg, #3f4d67 0%, #232b3b 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))] },
 ];
 
 const ORIGINAL_LINH_VUC = JSON.parse(JSON.stringify(LINH_VUC_LUAT));
@@ -668,17 +1582,172 @@ const RECENT_THUMBS = [
   'https://images.unsplash.com/photo-1618044733300-9472054094ee?w=600&h=400&fit=crop&q=80'
 ];
 
-let state = { curLV: null, curSF: null, curCase: null, curPage: 1, readHistory: [], filter: { f1:null, f2:null, f4:'' }, searchQuery: '' };
+let state = {
+  curLV: null,
+  curSF: null,
+  curCase: null,
+  curPage: 1,
+  readHistory: [],
+  filter: { f1:null, f2:null, f4:'' },
+  searchQuery: '',
+  uiLang: 'vi',
+  searchInsights: null
+};
 const ITEMS_PER_PAGE = 10;
+const TRANSLATION_CONFIG_KEY = 'dcsl_translation_config';
 
 function showAlert(msg) { document.getElementById('modal-title').innerHTML = '🔔 Thông báo'; document.getElementById('modal-body').innerHTML = `<p>${msg}</p>`; document.getElementById('info-modal').classList.add('open'); }
 
+function stripHtml(html) {
+  return (html || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function escapeHtml(str) {
+  return String(str || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function dedupeList(arr) {
+  return [...new Set((arr || []).filter(Boolean))];
+}
+
+function truncateText(text, max = 180) {
+  const clean = String(text || '').trim();
+  if (clean.length <= max) return clean;
+  return clean.slice(0, max).replace(/\s+\S*$/, '').trim() + '...';
+}
+
+function formatStructuredContent(text) {
+  if (!text) return '';
+  return String(text).split(/\r?\n/).map(line => {
+    line = line.trim();
+    if (!line) return '';
+    const upper = line.toUpperCase();
+    const hasLetter = /[A-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠƯẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪỬỮỰỲỴÝỶỸ]/.test(upper);
+    if (line === upper && hasLetter && line.length < 200) {
+      return `<div class="detail-section-title">${line}</div>`;
+    }
+    return `<p>${line}</p>`;
+  }).join('');
+}
+
+function normalizeSearchText(str) {
+  return removeAccents(stripHtml(str || ''))
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function getFieldMonogram(value) {
+  const label = typeof value === 'string' ? value : (value && value.ten) || '';
+  const words = label.split(/[\s-]+/).filter(Boolean);
+  if (!words.length) return 'LV';
+  return words.slice(0, 2).map(word => removeAccents(word).charAt(0)).join('').toUpperCase();
+}
+
+function getCaseTranslation(caseObj, lang = 'en') {
+  if(!caseObj || !caseObj.translations || !caseObj.translations[lang]) return null;
+  return caseObj.translations[lang];
+}
+
+function getCaseFieldText(caseObj, field, lang = state.uiLang) {
+  const translated = lang === 'en' ? getCaseTranslation(caseObj, 'en') : null;
+  const translatedValue = translated && translated[field];
+  if (translatedValue) return translatedValue;
+  return caseObj && caseObj[field] ? caseObj[field] : '';
+}
+
+function getCaseTimeline(caseObj, lang = state.uiLang) {
+  const translated = lang === 'en' ? getCaseTranslation(caseObj, 'en') : null;
+  if (translated && Array.isArray(translated.timeline) && translated.timeline.length) return translated.timeline;
+  return Array.isArray(caseObj && caseObj.timeline) ? caseObj.timeline : [];
+}
+
+function hasEnglishTranslation(caseObj) {
+  const translated = getCaseTranslation(caseObj, 'en');
+  return !!(translated && (translated.ten || translated.mo_ta || translated.chi_tiet || translated.ap_dung));
+}
+
+function getCaseDisplayTitle(caseId, fallbackTitle = '') {
+  const found = findCaseById(caseId);
+  return found ? getCaseFieldText(found.cas, 'ten') : fallbackTitle;
+}
+
+function syncLanguageToggleButtons() {
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === state.uiLang);
+  });
+}
+
+function setCaseLanguage(lang) {
+  state.uiLang = lang === 'en' ? 'en' : 'vi';
+  localStorage.setItem('dcsl_ui_lang', state.uiLang);
+  syncLanguageToggleButtons();
+  renderHome();
+  if (state.curSF || state.searchQuery) renderCasesList();
+  if (state.curCase) renderCaseDetail();
+}
+
+function getStoredTranslationConfig() {
+  try {
+    return JSON.parse(localStorage.getItem(TRANSLATION_CONFIG_KEY) || '{}');
+  } catch (e) {
+    return {};
+  }
+}
+
+function restoreTranslationConfigToForm() {
+  const config = getStoredTranslationConfig();
+  const translateCheckbox = document.getElementById('ad-translate-en');
+  const endpointEl = document.getElementById('ad-translation-endpoint');
+  const keyEl = document.getElementById('ad-openai-key');
+  const modelEl = document.getElementById('ad-translation-model');
+  if (translateCheckbox) translateCheckbox.checked = config.autoTranslate !== false;
+  if (endpointEl) endpointEl.value = config.endpoint || '';
+  if (keyEl) keyEl.value = config.openaiKey || '';
+  if (modelEl) modelEl.value = config.model || 'gpt-4.1-mini';
+}
+
+function saveTranslationConfigFromForm() {
+  const config = {
+    autoTranslate: document.getElementById('ad-translate-en') ? document.getElementById('ad-translate-en').checked : true,
+    endpoint: document.getElementById('ad-translation-endpoint') ? document.getElementById('ad-translation-endpoint').value.trim() : '',
+    openaiKey: document.getElementById('ad-openai-key') ? document.getElementById('ad-openai-key').value.trim() : '',
+    model: document.getElementById('ad-translation-model') ? document.getElementById('ad-translation-model').value.trim() : 'gpt-4.1-mini'
+  };
+  localStorage.setItem(TRANSLATION_CONFIG_KEY, JSON.stringify(config));
+  return config;
+}
+
+function getTranslationRuntimeConfig() {
+  const stored = getStoredTranslationConfig();
+  const injectedEndpoint = (typeof __translation_endpoint !== 'undefined' && __translation_endpoint) ? __translation_endpoint : '';
+  return {
+    autoTranslate: stored.autoTranslate !== false,
+    endpoint: (stored.endpoint || injectedEndpoint || '').trim(),
+    openaiKey: (stored.openaiKey || '').trim(),
+    model: (stored.model || 'gpt-4.1-mini').trim()
+  };
+}
+
 let dbCases = []; 
 window.updateCasesFromDB = function(docs) {
-    dbCases = docs;
+    const dedupedCases = new Map();
+    docs.forEach(c => {
+        if(!c || !c.id) return;
+        const currentStamp = new Date(c.updatedAt || c.ngay || 0).getTime();
+        const existing = dedupedCases.get(c.id);
+        const existingStamp = existing ? new Date(existing.updatedAt || existing.ngay || 0).getTime() : -1;
+        if(!existing || currentStamp >= existingStamp) dedupedCases.set(c.id, c);
+    });
+    dbCases = [...dedupedCases.values()];
     dbCases.sort((a, b) => {
-        const timeA = a.createdAt ? a.createdAt.toMillis() : new Date(a.ngay || 0).getTime();
-        const timeB = b.createdAt ? b.createdAt.toMillis() : new Date(b.ngay || 0).getTime();
+        const timeA = a.createdAt ? a.createdAt.toMillis() : new Date(a.updatedAt || a.ngay || 0).getTime();
+        const timeB = b.createdAt ? b.createdAt.toMillis() : new Date(b.updatedAt || b.ngay || 0).getTime();
         return timeA - timeB;
     });
 
@@ -692,7 +1761,7 @@ window.updateCasesFromDB = function(docs) {
         if(!c.lvId || !c.sfId) return;
         let lv = getLVById(c.lvId);
         if(!lv) {
-           lv = { id: c.lvId, ten: c.lvName || 'Lĩnh vực mới', icon: '📁', bg: 'linear-gradient(135deg, #607d8b 0%, #455a64 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))], totalCases: 0 };
+           lv = { id: c.lvId, ten: c.lvName || 'Lĩnh vực mới', icon: getFieldMonogram(c.lvName || 'Lĩnh vực mới'), bg: 'linear-gradient(135deg, #61707f 0%, #39424a 100%)', subfields:[ ...baseSubfields.map(s=>({...s}))], totalCases: 0 };
            LINH_VUC_LUAT.push(lv);
         }
         let sf = lv.subfields.find(s => s.id === c.sfId);
@@ -753,11 +1822,11 @@ function renderHome(){
   if(grid) {
     const searchCard = `
       <div class="lv-card" onclick="showPage('page-smart-search')">
-        <div class="lv-card-inner" style="background:linear-gradient(135deg, #4A5CBB 0%, #2A388F 100%)">
+        <div class="lv-card-inner" style="background:linear-gradient(160deg, #24344a 0%, #141d27 100%)">
           <div class="lv-card-overlay"></div>
           <div class="lv-card-shine" style="--delay: 0s"></div>
           <div class="lv-card-content">
-            <span class="lv-card-icon">🔍</span><div class="lv-card-title">Tra cứu tình huống</div><div class="lv-card-count" style="background:rgba(255,255,255,0.2);color:#fff">Tìm kiếm thông minh</div>
+            <span class="lv-card-icon">SC</span><div class="lv-card-title">Tra cứu tình huống</div><div class="lv-card-count" style="background:rgba(255,255,255,0.2);color:#fff">Situation Engine</div>
           </div>
         </div>
       </div>
@@ -766,7 +1835,7 @@ function renderHome(){
       <div class="lv-card" onclick="goSubfields('${lv.id}')">
         <div class="lv-card-inner" style="background:${lv.bg}">
           <div class="lv-card-overlay"></div><div class="lv-card-shine" style="--delay: ${(i + 1) * 0.15}s"></div>
-          <div class="lv-card-content"><span class="lv-card-icon">${lv.icon}</span><div class="lv-card-title">${lv.ten}</div><div class="lv-card-count">${lv.totalCases} tài liệu</div></div>
+          <div class="lv-card-content"><span class="lv-card-icon">${getFieldMonogram(lv)}</span><div class="lv-card-title">${lv.ten}</div><div class="lv-card-count">${lv.totalCases} tài liệu</div></div>
         </div>
       </div>
     `).join('');
@@ -776,10 +1845,11 @@ function renderHome(){
   if(recGrid) {
     recGrid.innerHTML = RECENT_UPDATES.slice(0, 6).map((r,i)=>{
       const lv = getLVById(r.lvId); const imgUrl = RECENT_THUMBS[i % RECENT_THUMBS.length]; const isNew = i === 0 || i === 1;
+      const caseTitle = getCaseDisplayTitle(r.id, r.ten);
       return `
         <div class="recent-card led-item shimmer-host tilt" onclick="goDetail('${r.lvId}','${r.sfId}','${r.id}')">
-          <div class="recent-card-img"><img src="${imgUrl}" alt="${lv?lv.ten:''}" loading="lazy" onerror="this.parentElement.innerHTML='<span style=font-size:2rem>⚖️</span>'"></div>
-          <div class="recent-card-body"><div class="recent-card-name">${r.ten}${isNew?'<span class="new-badge">MỚI</span>':''}</div><div class="recent-card-type">${lv?lv.ten:''}</div></div>
+          <div class="recent-card-img"><img src="${imgUrl}" alt="${lv?lv.ten:''}" loading="lazy" onerror="this.parentElement.innerHTML='<span style=&quot;font-size:1rem;font-weight:800;letter-spacing:0.08em;color:#fff&quot;>${getFieldMonogram(lv)}</span>'"></div>
+          <div class="recent-card-body"><div class="recent-card-name">${escapeHtml(caseTitle)}${isNew?'<span class="new-badge">MỚI</span>':''}</div><div class="recent-card-type">${lv?lv.ten:''}</div></div>
         </div>
       `;
     }).join('');
@@ -791,10 +1861,11 @@ function renderDesktopRecent(){
   const container = document.getElementById('desktop-recent-list'); if(!container) return;
   container.innerHTML = RECENT_UPDATES.slice(0, 8).map((r,i)=>{
     const lv = getLVById(r.lvId); const isNew = i === 0 || i === 1;
+    const caseTitle = getCaseDisplayTitle(r.id, r.ten);
     return `
       <div class="dt-recent-item led-item" onclick="goDetail('${r.lvId}','${r.sfId}','${r.id}')">
-        <div class="dt-recent-lv"><span style="font-size:1.1rem">⚖️</span> ${lv?lv.ten:''} ${isNew?'<span class="new-badge" style="margin-left:auto">MỚI</span>':''}</div>
-        <div class="dt-recent-name">${r.ten}</div>
+        <div class="dt-recent-lv"><span style="font-size:0.72rem;font-weight:800;letter-spacing:0.08em;">${getFieldMonogram(lv || r.lvId)}</span> ${lv?lv.ten:''} ${isNew?'<span class="new-badge" style="margin-left:auto">MỚI</span>':''}</div>
+        <div class="dt-recent-name">${escapeHtml(caseTitle)}</div>
       </div>
     `;
   }).join('');
@@ -805,9 +1876,10 @@ function renderReadHistory(){
   if(state.readHistory.length===0){ container.innerHTML = `<div class="empty-history">📭 Bạn chưa xem tài liệu nào.<br><span style="font-size:0.78rem;margin-top:6px;display:block;">Hãy khám phá các lĩnh vực luật phía trên!</span></div>`; return; }
   const html = state.readHistory.slice().reverse().slice(0,10).map(h=>{
     const lv = getLVById(h.lvId);
+    const title = getCaseDisplayTitle(h.id, h.ten);
     return `
       <div class="rh-item led-item shimmer-host" onclick="goDetail('${h.lvId}','${h.sfId}','${h.id}')">
-        <div class="rh-item-icon">${lv?lv.icon:'⚖️'}</div><div class="rh-item-info"><div class="rh-item-name">${h.ten}</div><div class="rh-item-meta">${lv?lv.ten:''} · ${getTypeLabel(h.sao)}</div></div>
+        <div class="rh-item-icon">${getFieldMonogram(lv || h.lvId)}</div><div class="rh-item-info"><div class="rh-item-name">${escapeHtml(title)}</div><div class="rh-item-meta">${lv?lv.ten:''} · ${getTypeLabel(h.sao)}</div></div>
       </div>
     `;
   }).join('');
@@ -857,89 +1929,368 @@ function goCasesList(lvId, sfId) {
   document.getElementById('pagination-bar').classList.add('visible');
 }
 
-function removeAccents(str) { return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+function removeAccents(str) { return String(str || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
 
-// ======================== TÌM KIẾM THÔNG MINH (THUẬT TOÁN ĐIỂM SỐ) ======================== //
+const SEARCH_STOP_WORDS = new Set([
+  'va','và','la','là','cua','của','cho','voi','với','trong','khi','sau','truoc','trước','nhung','những','the','and','for','with','from','into',
+  'bi','bị','duoc','được','mot','một','cac','các','nhu','như','toi','tôi','ben','bên','nguoi','người','co','có','khong','không','da','đã'
+]);
+const SEARCH_DOMAIN_HINTS = [
+  { id:'dat-dai', label:'Đất đai', keywords:['dat dai','quyen su dung dat','so do','giay chung nhan','ranh gioi','land','land title','boundary','parcel'] },
+  { id:'dan-su', label:'Dân sự', keywords:['dan su','hop dong','boi thuong','thua ke','nghia vu','civil','contract','damages','inheritance'] },
+  { id:'kinh-doanh-thuong-mai', label:'Kinh doanh - Thương mại', keywords:['thuong mai','mua ban','doi tac','cong ty giao dich','commercial','sale','business dispute'] },
+  { id:'lao-dong', label:'Lao động', keywords:['lao dong','sa thai','luong','bao hiem','hop dong lao dong','employment','salary','dismissal','insurance'] },
+  { id:'hinh-su', label:'Hình sự', keywords:['hinh su','toi pham','truom cap','lua dao','tham o','criminal','offence','sentencing','investigation'] },
+  { id:'hanh-chinh', label:'Hành chính', keywords:['hanh chinh','quyet dinh hanh chinh','xu phat','thu hoi','administrative','penalty','state decision'] },
+  { id:'doanh-nghiep', label:'Doanh nghiệp', keywords:['doanh nghiep','co dong','gop von','dieu le','shareholder','capital contribution','charter'] }
+];
+const SEARCH_INTENT_HINTS = [
+  { label:'Tranh chấp ranh giới / quyền sử dụng', keywords:['ranh gioi','so do','quyen su dung dat','boundary','land title'] },
+  { label:'Chấm dứt hoặc vi phạm hợp đồng', keywords:['vi pham hop dong','huy hop dong','cham giao hang','contract breach','terminate contract'] },
+  { label:'Sa thải / quyền lợi người lao động', keywords:['sa thai','cham dut hop dong lao dong','khong tra luong','dismissal','salary','employment'] },
+  { label:'Quản trị doanh nghiệp / cổ đông', keywords:['co dong','hoi dong thanh vien','gop von','shareholder','board','capital contribution'] }
+];
+const SEARCH_SYNONYMS = {
+  sodo: ['giay chung nhan', 'land title'],
+  tranhchap: ['khieu kien', 'dispute'],
+  saithai: ['cho nghi viec', 'dismissal'],
+  hopdong: ['thoa thuan', 'contract'],
+  boithuong: ['thiet hai', 'damages']
+};
+
+function tokenizeScenarioQuery(query) {
+  const normalized = normalizeSearchText(query);
+  const tokens = normalized.split(' ').filter(token => token && token.length > 1 && !SEARCH_STOP_WORDS.has(token));
+  return dedupeList(tokens);
+}
+
+function getQueryPhrases(tokens) {
+  const phrases = [];
+  for (let size = 2; size <= Math.min(3, tokens.length); size++) {
+    for (let i = 0; i <= tokens.length - size; i++) {
+      phrases.push(tokens.slice(i, i + size).join(' '));
+    }
+  }
+  return dedupeList(phrases);
+}
+
+function expandScenarioTerms(tokens, normalizedQuery) {
+  const expanded = new Set(tokens);
+  tokens.forEach(token => {
+    const joined = token.replace(/\s+/g, '');
+    (SEARCH_SYNONYMS[joined] || []).forEach(term => tokenizeScenarioQuery(term).forEach(item => expanded.add(item)));
+  });
+  SEARCH_DOMAIN_HINTS.forEach(domain => {
+    const hit = domain.keywords.some(keyword => normalizedQuery.includes(normalizeSearchText(keyword)));
+    if (hit) tokenizeScenarioQuery(domain.label).forEach(item => expanded.add(item));
+  });
+  return [...expanded];
+}
+
+function analyzeScenarioQuery(query) {
+  const normalized = normalizeSearchText(query);
+  let tokens = tokenizeScenarioQuery(query);
+  if (!tokens.length) tokens = dedupeList(normalized.split(' ').filter(Boolean));
+  const phrases = getQueryPhrases(tokens);
+  const domains = SEARCH_DOMAIN_HINTS
+    .filter(domain => domain.keywords.some(keyword => normalized.includes(normalizeSearchText(keyword))))
+    .map(domain => ({ id: domain.id, label: domain.label }));
+  const intents = SEARCH_INTENT_HINTS
+    .filter(intent => intent.keywords.some(keyword => normalized.includes(normalizeSearchText(keyword))))
+    .map(intent => intent.label);
+  const expandedTerms = expandScenarioTerms(tokens, normalized);
+  return {
+    raw: query,
+    normalized,
+    tokens,
+    phrases,
+    domains,
+    intents,
+    expandedTerms,
+    isEnglishQuery: /\b(the|land|title|boundary|contract|salary|employment|criminal|shareholder|company|judgment|article)\b/i.test(query)
+  };
+}
+
+function collectCaseSearchCorpus(c) {
+  const en = getCaseTranslation(c, 'en') || {};
+  const timelineVi = Array.isArray(c.timeline) ? c.timeline.map(item => typeof item === 'object' ? `${item.date || ''} ${item.desc || ''}` : item).join(' ') : '';
+  const timelineEn = Array.isArray(en.timeline) ? en.timeline.map(item => typeof item === 'object' ? `${item.date || ''} ${item.desc || ''}` : item).join(' ') : '';
+  const lawsVi = Array.isArray(c.laws) ? c.laws.map(law => `${law.name || ''} ${stripHtml(law.content || '')}`).join(' ') : '';
+  const lawsEn = Array.isArray(en.laws) ? en.laws.map(law => `${law.name || ''} ${stripHtml(law.content || '')}`).join(' ') : '';
+  return {
+    titleVi: normalizeSearchText(c.ten),
+    titleEn: normalizeSearchText(en.ten || ''),
+    summaryVi: normalizeSearchText(`${c.mo_ta || ''} ${stripHtml(c.tom_luoc || '')} ${timelineVi}`),
+    summaryEn: normalizeSearchText(`${en.mo_ta || ''} ${stripHtml(en.tom_luoc || '')} ${timelineEn}`),
+    applyVi: normalizeSearchText(stripHtml(c.ap_dung || '')),
+    applyEn: normalizeSearchText(stripHtml(en.ap_dung || '')),
+    detailVi: normalizeSearchText(stripHtml(c.chi_tiet || '')),
+    detailEn: normalizeSearchText(stripHtml(en.chi_tiet || '')),
+    laws: normalizeSearchText(`${lawsVi} ${lawsEn}`),
+    meta: normalizeSearchText(`${c.lvName || ''} ${c.sfName || ''} ${getTypeLabel(c.sao || 0)}`),
+    all: normalizeSearchText([
+      c.ten, c.mo_ta, c.tom_luoc, c.ap_dung, c.chi_tiet,
+      en.ten, en.mo_ta, en.tom_luoc, en.ap_dung, en.chi_tiet,
+      timelineVi, timelineEn, lawsVi, lawsEn, c.lvName, c.sfName
+    ].join(' '))
+  };
+}
+
+function buildCaseSearchSnippet(c, analysis) {
+  const lang = analysis.isEnglishQuery ? 'en' : state.uiLang;
+  const source = getCaseFieldText(c, 'mo_ta', lang) || stripHtml(getCaseFieldText(c, 'tom_luoc', lang)) || stripHtml(getCaseFieldText(c, 'ap_dung', lang));
+  return truncateText(stripHtml(source || getCaseFieldText(c, 'mo_ta', 'vi')), 210);
+}
+
+function scoreCaseForScenario(c, analysis) {
+  if (!analysis || !analysis.normalized) return null;
+  const corpus = collectCaseSearchCorpus(c);
+  let score = 0;
+  const reasons = [];
+  const matchedTerms = new Set();
+
+  const award = (condition, points, reason, term) => {
+    if (!condition) return;
+    score += points;
+    if (reason) reasons.push(reason);
+    if (term) matchedTerms.add(term);
+  };
+
+  analysis.phrases.forEach(phrase => {
+    award(corpus.titleVi.includes(phrase) || corpus.titleEn.includes(phrase), 220, 'Khớp cụm từ ở tiêu đề', phrase);
+    award(corpus.summaryVi.includes(phrase) || corpus.summaryEn.includes(phrase), 150, 'Khớp cụm mô tả vụ việc', phrase);
+    award(corpus.detailVi.includes(phrase) || corpus.detailEn.includes(phrase) || corpus.applyVi.includes(phrase) || corpus.applyEn.includes(phrase), 90, 'Khớp trong phần lập luận', phrase);
+  });
+
+  analysis.tokens.forEach(token => {
+    if (corpus.titleVi.includes(token) || corpus.titleEn.includes(token)) {
+      award(true, 95, 'Tiêu đề trùng ý chính', token);
+      return;
+    }
+    if (corpus.summaryVi.includes(token) || corpus.summaryEn.includes(token)) {
+      award(true, 48, 'Tóm tắt có dữ kiện tương ứng', token);
+      return;
+    }
+    if (corpus.applyVi.includes(token) || corpus.applyEn.includes(token)) {
+      award(true, 44, 'Phần áp dụng tương tự liên quan', token);
+      return;
+    }
+    if (corpus.detailVi.includes(token) || corpus.detailEn.includes(token) || corpus.laws.includes(token)) {
+      award(true, 24, 'Nội dung chi tiết hoặc điều luật có nhắc tới', token);
+    }
+  });
+
+  analysis.expandedTerms.forEach(term => {
+    if (!analysis.tokens.includes(term) && (corpus.all.includes(term) || corpus.laws.includes(term))) {
+      award(true, 12, 'Khớp mở rộng theo ngữ nghĩa', term);
+    }
+  });
+
+  analysis.domains.forEach(domain => {
+    if (c.lvId === domain.id || corpus.meta.includes(normalizeSearchText(domain.label))) {
+      award(true, 140, `Đúng nhóm ${domain.label}`);
+    }
+  });
+
+  analysis.intents.forEach(intent => {
+    if (corpus.all.includes(normalizeSearchText(intent))) {
+      award(true, 65, 'Đúng dạng tình huống');
+    }
+  });
+
+  const overlap = analysis.tokens.filter(token => corpus.all.includes(token)).length;
+  const exactQueryHit = analysis.normalized
+    ? (corpus.all.includes(analysis.normalized) || corpus.titleVi.includes(analysis.normalized) || corpus.titleEn.includes(analysis.normalized))
+    : false;
+  if (exactQueryHit) score += 260;
+  score += overlap * 18;
+  if (analysis.isEnglishQuery && corpus.titleEn) score += 28;
+
+  const minimumOverlap = Math.max(1, Math.ceil(analysis.tokens.length * 0.35));
+  if (!exactQueryHit && overlap < minimumOverlap && !analysis.domains.some(domain => domain.id === c.lvId)) return null;
+
+  return {
+    cas: c,
+    score,
+    reasons: dedupeList(reasons).slice(0, 3),
+    matchedTerms: [...matchedTerms].slice(0, 5),
+    snippet: buildCaseSearchSnippet(c, analysis)
+  };
+}
+
+function searchCasesByScenario(query) {
+  const analysis = analyzeScenarioQuery(query);
+  const results = [];
+  for (const bucketKey in CASES_DATA) {
+    CASES_DATA[bucketKey].forEach(c => {
+      const ranked = scoreCaseForScenario(c, analysis);
+      if (ranked) results.push(ranked);
+    });
+  }
+  results.sort((a, b) => b.score - a.score);
+  return { analysis, results };
+}
+
+function renderSearchInsights(searchPack) {
+  const container = document.getElementById('smart-search-analysis');
+  if (!container) return;
+  if (!searchPack) {
+    container.classList.remove('visible');
+    container.innerHTML = '';
+    return;
+  }
+  const { analysis } = searchPack;
+  const domainChips = analysis.domains.length
+    ? analysis.domains.map(domain => `<span class="analysis-chip">${domain.label}</span>`).join('')
+    : `<span class="analysis-chip">Quét toàn kho</span>`;
+  const intentChips = analysis.intents.length
+    ? analysis.intents.map(intent => `<span class="analysis-chip">${intent}</span>`).join('')
+    : `<span class="analysis-chip">Chưa khóa đúng dạng tranh chấp</span>`;
+  const tokenChips = analysis.tokens.slice(0, 6).map(token => `<span class="analysis-chip">${token}</span>`).join('');
+  container.innerHTML = `
+    <div class="cases-context-head">
+      <div>
+        <div class="hero-kicker" style="color:var(--text-muted); margin-bottom:8px;">Query Breakdown</div>
+        <h3>Hệ thống đang hiểu truy vấn theo các tín hiệu sau</h3>
+      </div>
+      <div class="cases-context-note">Nếu kết quả chưa đúng, hãy bổ sung: chủ thể, giấy tờ, mốc thời gian hoặc yêu cầu xử lý.</div>
+    </div>
+    <div class="analysis-chip-row">${domainChips}${intentChips}${tokenChips}</div>
+  `;
+  container.classList.add('visible');
+}
+
+function renderCasesContext(searchPack) {
+  const container = document.getElementById('cases-context');
+  if (!container) return;
+  if (!searchPack) {
+    container.classList.remove('visible');
+    container.innerHTML = '';
+    return;
+  }
+  const { analysis, results } = searchPack;
+  const domainChips = analysis.domains.length
+    ? analysis.domains.map(domain => `<span class="analysis-chip">${domain.label}</span>`).join('')
+    : `<span class="analysis-chip">Đang quét toàn bộ lĩnh vực</span>`;
+  const matchChips = analysis.intents.length
+    ? analysis.intents.map(intent => `<span class="analysis-chip">${intent}</span>`).join('')
+    : `<span class="analysis-chip">${analysis.isEnglishQuery ? 'English query mode' : 'Tự suy luận từ dữ kiện tự do'}</span>`;
+  container.innerHTML = `
+    <div class="cases-context-head">
+      <div>
+        <div class="hero-kicker" style="color:var(--text-muted); margin-bottom:8px;">Scenario Engine</div>
+        <h3>${results.length} kết quả phù hợp cho truy vấn của bạn</h3>
+      </div>
+      <div class="cases-context-note">Xếp hạng theo tiêu đề, tóm tắt, điều luật, phần áp dụng tương tự và mức khớp với nhóm tranh chấp.</div>
+    </div>
+    <div class="analysis-chip-row">${domainChips}${matchChips}</div>
+  `;
+  container.classList.add('visible');
+}
+
+function useSmartPrompt(prompt) {
+  const input = document.getElementById('smart-search-input-page');
+  if (!input) return;
+  input.value = prompt;
+  input.focus();
+}
+
+// ======================== TÌM KIẾM THÔNG MINH (THUẬT TOÁN TÌNH HUỐNG) ======================== //
 function executeSmartSearchPage() {
-  const query = document.getElementById('smart-search-input-page').value.trim(); if(!query) return;
-  closeFilter(); state.searchQuery = query; state.curSF = null; state.curPage = 1;
-  document.getElementById('cases-bc-lv').style.display = 'none'; document.getElementById('cases-sep-1').style.display = 'none'; document.getElementById('cases-sep-2').style.display = 'none';
-  document.getElementById('cases-bc-sf').textContent = `Kết quả tìm kiếm cho: "${query}"`; document.getElementById('cases-title').textContent = `Tìm kiếm: "${query}"`;
-  renderCasesList(); showPage('page-cases'); document.getElementById('pagination-bar').classList.add('visible');
+  const query = document.getElementById('smart-search-input-page').value.trim();
+  if(!query) return;
+  closeFilter();
+  state.searchQuery = query;
+  state.curSF = null;
+  state.curPage = 1;
+  state.searchInsights = analyzeScenarioQuery(query);
+  document.getElementById('cases-bc-lv').style.display = 'none';
+  document.getElementById('cases-sep-1').style.display = 'none';
+  document.getElementById('cases-sep-2').style.display = 'none';
+  document.getElementById('cases-bc-sf').textContent = `Kết quả tìm kiếm cho: "${query}"`;
+  document.getElementById('cases-title').textContent = `Tìm kiếm: "${query}"`;
+  renderCasesList();
+  showPage('page-cases');
+  document.getElementById('pagination-bar').classList.add('visible');
 }
 
 function renderCasesList(){
   let cases = [];
-  
-  // Smart Search Core
+  let searchPack = null;
+
   if(state.searchQuery) {
-    const qStr = removeAccents(state.searchQuery).toLowerCase().trim();
-    const searchTerms = qStr.split(/\s+/).filter(w => w.length > 1);
-
-    let scoredCases = [];
-    for(const bucketKey in CASES_DATA) {
-      CASES_DATA[bucketKey].forEach(c => {
-        const fullContent = (c.ten + ' ' + (c.mo_ta||'') + ' ' + (c.tom_luoc||'') + ' ' + (c.chi_tiet||'') + ' ' + (c.ap_dung||'')).replace(/<[^>]*>?/gm, ' ');
-        const cTextStr = removeAccents(fullContent).toLowerCase();
-        const cTitleStr = removeAccents(c.ten).toLowerCase();
-        
-        let score = 0;
-        let matchedTerms = 0;
-        searchTerms.forEach(term => {
-          if (cTextStr.includes(term)) {
-             matchedTerms++;
-             score += 20;
-             if (cTitleStr.includes(term)) score += 50;
-          }
-        });
-
-        const exactPhrase = cTextStr.includes(qStr) || cTitleStr.includes(qStr);
-        if (exactPhrase) score += 2000;
-        if (cTitleStr.includes(qStr)) score += 1000;
-
-        const threshold = searchTerms.length >= 4 ? Math.ceil(searchTerms.length * 0.75) : Math.min(2, searchTerms.length);
-        if ((exactPhrase || matchedTerms >= threshold) && matchedTerms > 0) {
-          scoredCases.push({ cas: c, score: score + matchedTerms * 10 });
-        }
-      });
+    searchPack = searchCasesByScenario(state.searchQuery);
+    state.searchInsights = searchPack.analysis;
+    cases = searchPack.results;
+    renderSearchInsights(searchPack);
+  } else {
+    if (!state.curLV || !state.curSF) {
+      renderSearchInsights(null);
+      renderCasesContext(null);
+      document.getElementById('cases-list').innerHTML = `<div class="empty-history">📭 Chưa có nhóm tài liệu nào được chọn.</div>`;
+      document.getElementById('pg-text').textContent = 'Trang 1/1';
+      document.getElementById('pg-prev').disabled = true;
+      document.getElementById('pg-next').disabled = true;
+      return;
     }
-    
-    scoredCases.sort((a,b) => b.score - a.score);
-    cases = scoredCases.map(item => item.cas);
+    cases = getCasesForSF(state.curLV.id, state.curSF.id);
+    renderSearchInsights(null);
+  }
 
-  } else { cases = getCasesForSF(state.curLV.id, state.curSF.id); }
-  
-  const total = cases.length; const totalPages = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
+  renderCasesContext(searchPack);
+
+  const total = cases.length;
+  const totalPages = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
   if(state.curPage > totalPages) state.curPage = totalPages;
-  const start = (state.curPage-1)*ITEMS_PER_PAGE; const pageCases = cases.slice(start, start+ITEMS_PER_PAGE);
+  const start = (state.curPage-1)*ITEMS_PER_PAGE;
+  const pageCases = cases.slice(start, start+ITEMS_PER_PAGE);
 
   const list = document.getElementById('cases-list');
   if(pageCases.length===0){
-    list.innerHTML = `<div class="empty-history">📭 Không tìm thấy tài liệu nào phù hợp với câu hỏi của bạn.</div>`;
+    list.innerHTML = `<div class="empty-history">📭 Không tìm thấy tài liệu nào đủ khớp với bối cảnh bạn nhập. Hãy thêm chủ thể, giấy tờ hoặc yêu cầu xử lý để hệ thống khóa đúng hơn.</div>`;
   } else {
-    list.innerHTML = pageCases.map(c=>{
+    list.innerHTML = pageCases.map(item=>{
+      const c = item.cas || item;
+      const matchMeta = item.cas ? item : null;
       const isDoc = c.sfId === 'van-ban-phap-luat' || c.sfId === 'giai-dap-nghiep-vu';
       const typeLabel = isDoc ? (c.sfId === 'van-ban-phap-luat' ? 'Văn bản pháp luật' : 'Giải đáp nghiệp vụ') : getTypeLabel(c.sao || 0);
       const starHtml = isDoc ? '' : `<div class="case-stars">${'⭐'.repeat(c.sao || 0)}</div>`;
+      const displayTitle = escapeHtml(getCaseFieldText(c, 'ten'));
+      const displaySummary = escapeHtml(matchMeta ? matchMeta.snippet : truncateText(getCaseFieldText(c, 'mo_ta'), 180));
+      const matchReasonHtml = matchMeta
+        ? `<div class="case-match-row">${matchMeta.reasons.map(reason => `<span class="match-chip">${reason}</span>`).join('')}${matchMeta.score ? `<span class="match-score">Match ${Math.min(99, Math.max(56, Math.round(matchMeta.score / 16)))}</span>` : ''}</div>`
+        : '';
       return `
       <div class="case-item led-item" id="ci-${c.id}">
         <div class="case-item-header">
-          <div class="case-item-left">${starHtml}<div class="case-name" onclick="goDetail(null,null,'${c.id}')">${c.ten}</div></div>
+          <div class="case-item-left">
+            ${starHtml}
+            <div style="flex:1;">
+              <div class="case-item-topline">
+                <span class="case-meta-pill">${typeLabel}</span>
+                ${matchMeta && c.lvName ? `<span class="case-meta-pill">${c.lvName}</span>` : ''}
+              </div>
+              <div class="case-name" onclick="goDetail(null,null,'${c.id}')">${displayTitle}</div>
+              <div class="case-item-summary">${displaySummary}</div>
+              ${matchReasonHtml}
+            </div>
+          </div>
           <div style="display:flex; gap:6px;">
             ${isAdminMode ? `<button class="case-expand-btn" onclick="editCase('${c.id}')" title="Chỉnh sửa vụ án" style="background:#D4A574; color:#fff; border-color:#D4A574;">✎</button>` : ''}
             <button class="case-expand-btn" onclick="toggleCase('${c.id}',this)" title="Xem mô tả">▼</button>
           </div>
         </div>
         <div class="case-desc" id="cd-${c.id}">
-          <p>${c.mo_ta}</p>
+          <p>${escapeHtml(getCaseFieldText(c, 'mo_ta'))}</p>
           <div class="case-desc-meta"><span class="case-meta-tag">📅 ${formatDate(c.ngay)}</span><span class="case-meta-tag">${typeLabel}</span></div>
-          <div style="margin-top:12px"><button onclick="goDetail(null,null,'${c.id}')" style="padding:8px 18px;border:1px solid var(--gold);background:var(--gold-dim);color:var(--gold);border-radius:8px;cursor:pointer;font-size:0.82rem;font-family:'Be Vietnam Pro',sans-serif;transition:all 0.2s" onmouseover="this.style.background='var(--gold)';this.style.color='var(--bg)'" onmouseout="this.style.background='var(--gold-dim)';this.style.color='var(--gold)'">Xem chi tiết →</button></div>
+          <div style="margin-top:12px"><button onclick="goDetail(null,null,'${c.id}')" style="padding:8px 18px;border:1px solid var(--gold);background:var(--gold-dim);color:var(--gold);border-radius:8px;cursor:pointer;font-size:0.82rem;font-family:'Manrope',sans-serif;transition:all 0.2s" onmouseover="this.style.background='var(--gold)';this.style.color='var(--bg)'" onmouseout="this.style.background='var(--gold-dim)';this.style.color='var(--gold)'">Xem chi tiết →</button></div>
         </div>
       </div>
     `}).join('');
   }
   document.getElementById('pg-text').textContent = `Trang ${state.curPage}/${totalPages}`;
-  document.getElementById('pg-prev').disabled = state.curPage<=1; document.getElementById('pg-next').disabled = state.curPage>=totalPages;
+  document.getElementById('pg-prev').disabled = state.curPage<=1;
+  document.getElementById('pg-next').disabled = state.curPage>=totalPages;
 }
 
 function toggleCase(id, btn){ const desc = document.getElementById('cd-'+id); if(!desc) return; const open = desc.classList.toggle('open'); btn.classList.toggle('expanded', open); }
@@ -966,22 +2317,53 @@ function goDetail(lvId, sfId, caseId){
     state.curLV = getLVById(found.lvId);
     state.curSF = getSFById(found.lvId, found.sfId);
   }
-  if(!cas) return; state.curCase = cas;
+  if(!cas) return;
+  state.curCase = cas;
 
   const existing = state.readHistory.find(h=>h.id===cas.id);
   if(!existing){ state.readHistory.push({ id:cas.id, ten:cas.ten, sao:cas.sao||0, lvId:state.curLV?state.curLV.id:'', sfId:actualSfId }); }
 
   document.getElementById('det-bc-lv').textContent = state.curLV ? state.curLV.ten : '';
   document.getElementById('det-bc-sf').textContent = state.curSF ? state.curSF.ten : '';
+  renderCaseDetail();
+  document.getElementById('pagination-bar').classList.remove('visible');
+  showPage('page-detail');
+}
+
+function renderCaseDetail() {
+  const cas = state.curCase;
+  if (!cas) return;
 
   const hero = document.getElementById('case-hero');
   const bg = state.curLV ? state.curLV.bg : 'var(--surface)';
   const heroImg = RECENT_THUMBS[Math.floor(Math.random() * RECENT_THUMBS.length)];
-  hero.innerHTML = `<img class="case-hero-img" src="${heroImg}" alt="Ảnh minh họa" onerror="this.outerHTML='<div style=position:absolute;inset:0;background:${bg}></div><span style=position:relative;z-index:1;font-size:4rem>⚖️</span>'"><div class="case-hero-overlay" style="background:linear-gradient(180deg,rgba(0,0,0,0.08) 0%,var(--bg) 100%)"></div>`;
-  document.getElementById('case-detail-title').textContent = cas.ten;
+  hero.innerHTML = `<img class="case-hero-img" src="${heroImg}" alt="Ảnh minh họa" onerror="this.outerHTML='<div style=&quot;position:absolute;inset:0;background:${bg}&quot;></div><span style=&quot;position:relative;z-index:1;font-size:1rem;font-weight:800;letter-spacing:0.08em;color:#fff&quot;>${getFieldMonogram(state.curLV || cas.lvName)}</span>'"><div class="case-hero-overlay"></div>`;
+  document.getElementById('case-detail-title').textContent = stripHtml(getCaseFieldText(cas, 'ten'));
 
   const isDoc = cas.sfId === 'van-ban-phap-luat' || cas.sfId === 'giai-dap-nghiep-vu';
   const typeLabel = isDoc ? (cas.sfId === 'van-ban-phap-luat' ? 'Văn bản pháp luật' : 'Giải đáp nghiệp vụ') : getTypeLabel(cas.sao||0);
+  const englishReady = hasEnglishTranslation(cas);
+  const detailMetaLead = document.getElementById('detail-meta-lead');
+  const detailTranslationNote = document.getElementById('detail-translation-note');
+
+  if (detailMetaLead) {
+    const languageLead = state.uiLang === 'en'
+      ? (englishReady ? 'Đang hiển thị bản English được tạo tự động từ dữ liệu admin.' : 'Chưa có bản English hoàn chỉnh, hệ thống đang dùng bản gốc tiếng Việt làm nguồn tham chiếu.')
+      : 'Đang hiển thị bản gốc tiếng Việt, có thể chuyển sang English ở góc phải.';
+    detailMetaLead.textContent = `${state.curLV ? state.curLV.ten : ''} · ${typeLabel} · ${languageLead}`;
+  }
+
+  if (detailTranslationNote) {
+    detailTranslationNote.textContent = state.uiLang === 'en'
+      ? (englishReady
+        ? 'English version is generated automatically for quick reading. Khi sử dụng thực tế, vẫn nên đối chiếu lại bản gốc tiếng Việt.'
+        : 'Bản English chưa được tạo cho vụ án này. Bạn vẫn có thể đọc bản gốc tiếng Việt hoặc bật auto-translate trong phần admin cho các vụ án mới.')
+      : (englishReady
+        ? 'Vụ án này đã có thêm bản English để phục vụ người đọc quốc tế hoặc truy vấn tiếng Anh.'
+        : 'Vụ án này hiện chỉ có bản gốc tiếng Việt.');
+  }
+
+  syncLanguageToggleButtons();
   
   if (isDoc) {
       document.getElementById('case-detail-stars').innerHTML = `<span class="case-detail-type">${typeLabel}</span>`;
@@ -1000,10 +2382,11 @@ function goDetail(lvId, sfId, caseId){
   }
 
   const dienBienEl = document.getElementById('tc-dien-bien');
+  const displayTimeline = getCaseTimeline(cas);
   if(!isDoc) {
-      if(cas.timeline && cas.timeline.length > 0){
+      if(displayTimeline && displayTimeline.length > 0){
         let tlHtml = `<div class="timeline-container">`;
-        cas.timeline.forEach(t => {
+        displayTimeline.forEach(t => {
           let dateText = "●"; let descText = t;
           if (typeof t === 'object') { dateText = t.date; descText = t.desc; }
           tlHtml += `<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date" style="background:transparent; padding:0; font-size:1.2rem; color:var(--gold); margin-right:8px; display:inline-block; vertical-align:top;">${dateText}</div><div class="timeline-desc" style="display:inline-block; width:calc(100% - 30px);">${autoLinkLaws(descText)}</div></div>`;
@@ -1014,13 +2397,14 @@ function goDetail(lvId, sfId, caseId){
   }
 
   const apDungEl = document.getElementById('tc-ap-dung');
+  const displayApply = getCaseFieldText(cas, 'ap_dung');
   if(!isDoc) {
-      if(cas.ap_dung){ apDungEl.innerHTML = `<div class="detail-section"><p style="line-height:1.85">${autoLinkLaws(cas.ap_dung)}</p></div>`; }
+      if(displayApply){ apDungEl.innerHTML = `<div class="detail-section">${autoLinkLaws(displayApply)}</div>`; }
       else { apDungEl.innerHTML = `<div class="tc-placeholder"><span class="tc-icon">💡</span><p>Chưa có nội dung áp dụng tương tự.</p></div>`; }
   }
 
   const chiTietEl = document.getElementById('tc-chi-tiet');
-  const detailContent = cas.chi_tiet || cas.tom_luoc || '';
+  const detailContent = getCaseFieldText(cas, 'chi_tiet') || getCaseFieldText(cas, 'tom_luoc') || '';
   if(detailContent){
     chiTietEl.innerHTML = `<div class="case-desc-meta" style="margin-bottom:16px"><span class="case-meta-tag">📅 ${formatDate(cas.ngay)}</span><span class="case-meta-tag">${typeLabel}</span></div>${autoLinkLaws(detailContent)}`;
   } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><span class="tc-icon">📄</span><p>Nội dung chi tiết sẽ được cập nhật sau.</p></div>`; }
@@ -1031,14 +2415,13 @@ function goDetail(lvId, sfId, caseId){
   }
 
   if (isDoc) switchTab('chi-tiet'); else switchTab('dien-bien');
-  document.getElementById('pagination-bar').classList.remove('visible');
-  showPage('page-detail');
 }
 
 function switchTab(tabId){
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
-  document.getElementById('tab-'+tabId).classList.add('active');
+  const tabButton = document.getElementById('tab-'+tabId);
+  if(tabButton) tabButton.classList.add('active');
   const targetContent = document.getElementById('tc-'+tabId);
   if(targetContent) targetContent.classList.add('active');
 }
@@ -1047,8 +2430,11 @@ function goHome(){
   const searchInput = document.getElementById('smart-search-input-page');
   if(searchInput) searchInput.value = '';
   state.searchQuery = '';
+  state.searchInsights = null;
+  renderSearchInsights(null);
+  renderCasesContext(null);
   document.getElementById('pagination-bar').classList.remove('visible'); 
-  renderReadHistory(); showPage('page-home'); 
+  renderHome(); showPage('page-home'); 
 }
 
 function openSidebar(){ document.getElementById('sidebar').classList.add('open'); document.getElementById('sidebar-overlay').classList.add('open'); }
@@ -1060,7 +2446,7 @@ function closeFilter(){ document.getElementById('side-left').classList.remove('o
 function handleFilterOverlayClick(e){ if(e.target===document.getElementById('side-left')) closeFilter(); }
 function buildFilterF1(){
   const list = document.getElementById('f1-list'); if (!list) return;
-  list.innerHTML = LINH_VUC_LUAT.map(lv=>`<div class="filter-option ${filterState.f1===lv.id?'selected':''}" onclick="selectFilter('f1','${lv.id}','${lv.ten}')">${lv.icon} ${lv.ten}</div>`).join('');
+  list.innerHTML = LINH_VUC_LUAT.map(lv=>`<div class="filter-option ${filterState.f1===lv.id?'selected':''}" onclick="selectFilter('f1','${lv.id}','${lv.ten}')">${getFieldMonogram(lv)} ${lv.ten}</div>`).join('');
 }
 function selectFilter(fnum, val, label){
   if(fnum==='f1'){
@@ -1129,7 +2515,7 @@ function openAdmin() {
     document.getElementById('ad-submit-btn').textContent = 'Lưu Database';
     adminFormLaws = [];
     renderLawsList();
-    document.querySelector('.info-modal-title').textContent = '⚙️ Thêm Mới (Database)';
+    document.querySelector('#admin-modal .info-modal-title').textContent = '⚙️ Thêm Mới (Database)';
     restoreAdminDataFromStorage();
   } else {
     // Edit mode - cập nhật select options
@@ -1137,7 +2523,7 @@ function openAdmin() {
     lvSel.innerHTML = '<option value="">-- Chọn lĩnh vực --</option>' + LINH_VUC_LUAT.map(lv => `<option value="${lv.id}">${lv.ten}</option>`).join('') + '<option value="NEW" style="font-weight:bold;color:var(--gold-rich);">+ Thêm lĩnh vực mới...</option>';
     document.getElementById('ad-submit-btn').textContent = 'Cập Nhật Vụ Án';
   }
-  
+  restoreTranslationConfigToForm();
   document.getElementById('admin-modal').classList.add('open');
 }
 
@@ -1155,6 +2541,8 @@ function updateAdminSF() {
 function checkNewSF() { const sfId = document.getElementById('ad-sf').value; document.getElementById('ad-new-sf').style.display = (sfId === 'NEW') ? 'block' : 'none'; }
 function closeAdmin() { 
   editingCaseId = null;
+  const btn = document.getElementById('ad-submit-btn');
+  if (btn) { btn.disabled = false; btn.textContent = 'Lưu Database'; }
   document.getElementById('admin-modal').classList.remove('open'); 
 }
 
@@ -1180,28 +2568,22 @@ function editCase(caseId) {
   
   const c = found.cas;
   editingCaseId = caseId;
-  
-  // Điền dữ liệu vào form
+  openAdmin();
+
   document.getElementById('ad-ten').value = c.ten || '';
   document.getElementById('ad-mota').value = c.mo_ta || '';
   document.getElementById('ad-lv').value = c.lvId || '';
+  updateAdminSF();
   document.getElementById('ad-sf').value = c.sfId || '';
   document.getElementById('ad-tinhchat').value = c.sao || '0';
-  
-  // Điền nội dung (nếu là HTML thì xóa tags)
-  document.getElementById('ad-tomluoc').innerHTML = (c.tom_luoc || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
-  document.getElementById('ad-apdung').innerHTML = (c.ap_dung || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
-  document.getElementById('ad-chitiet').innerHTML = (c.chi_tiet || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
-  
-  // Điền danh sách Điều luật
+  document.getElementById('ad-tomluoc').innerText = stripHtml(c.tom_luoc || '');
+  document.getElementById('ad-apdung').innerText = stripHtml(c.ap_dung || '');
+  document.getElementById('ad-chitiet').innerText = stripHtml(c.chi_tiet || '');
+
   adminFormLaws = c.laws ? [...c.laws] : [];
   renderLawsList();
-  
-  // Cập nhật modal title
-  document.querySelector('.info-modal-title').textContent = '✎ Chỉnh Sửa Vụ Án';
+  document.querySelector('#admin-modal .info-modal-title').textContent = '✎ Chỉnh Sửa Vụ Án';
   document.getElementById('ad-submit-btn').textContent = 'Cập Nhật Vụ Án';
-  
-  openAdmin();
 }
 
 function detectLawsFromContent() {
@@ -1326,7 +2708,10 @@ function restoreAdminDataFromStorage() {
         const formData = JSON.parse(stored);
         if (formData.ten) document.getElementById('ad-ten').value = formData.ten;
         if (formData.mota) document.getElementById('ad-mota').value = formData.mota;
-        if (formData.lvId) document.getElementById('ad-lv').value = formData.lvId;
+        if (formData.lvId) {
+            document.getElementById('ad-lv').value = formData.lvId;
+            updateAdminSF();
+        }
         if (formData.sfId) document.getElementById('ad-sf').value = formData.sfId;
         if (formData.tomluoc) document.getElementById('ad-tomluoc').innerHTML = formData.tomluoc;
         if (formData.apdung) document.getElementById('ad-apdung').innerHTML = formData.apdung;
@@ -1396,8 +2781,9 @@ window.cleanEditorText = function(editorId) {
     }
 };
 
-function submitAdmin() {
+async function submitAdmin() {
   saveAdminDataToStorage();
+  saveTranslationConfigFromForm();
   const ten = document.getElementById('ad-ten').value; let lvId = document.getElementById('ad-lv').value; let sfId = document.getElementById('ad-sf').value;
   const mota = document.getElementById('ad-mota').value; 
   
@@ -1433,15 +2819,15 @@ function submitAdmin() {
     return;
   }
   
-  finishSubmitAdmin();
+  await finishSubmitAdmin();
 }
 
-function skipNewLaws() {
+async function skipNewLaws() {
   document.getElementById('law-detect-modal').classList.remove('open');
-  finishSubmitAdmin();
+  await finishSubmitAdmin();
 }
 
-function proceedWithNewLaws() {
+async function proceedWithNewLaws() {
   const fullContent = window.pendingCaseData.ten + ' ' + window.pendingCaseData.mota + ' ' + 
                       window.pendingCaseData.tomluoc + ' ' + window.pendingCaseData.apdung + ' ' + 
                       window.pendingCaseData.chitiet;
@@ -1462,7 +2848,7 @@ function proceedWithNewLaws() {
   document.getElementById('law-detect-modal').classList.remove('open');
   saveLawDBToStorage();
   showAlert(`✅ Đã tự động thêm ${newLaws.length} điều luật mới!`);
-  finishSubmitAdmin();
+  await finishSubmitAdmin();
 }
 
 function saveLawDBToStorage() {
@@ -1502,7 +2888,119 @@ function restoreLawDBFromStorage() {
   } catch(e) { console.error('Lỗi khôi phục LAW_DB:', e); }
 }
 
-function finishSubmitAdmin() {
+function buildTranslationPrompt(sourceCase) {
+  return [
+    'Bạn là biên tập viên pháp lý song ngữ.',
+    'Hãy dịch trung thực hồ sơ vụ án tiếng Việt sang tiếng Anh để phục vụ tra cứu.',
+    'Bảo toàn cấu trúc pháp lý, số điều luật, tên cơ quan, cấp xét xử, tên viết tắt và mốc thời gian nếu có.',
+    'Không bình luận thêm. Chỉ trả về JSON hợp lệ với đúng các khóa:',
+    'ten, mo_ta, tom_luoc, ap_dung, chi_tiet, timeline, laws.',
+    'timeline phải là mảng string hoặc object {date, desc}.',
+    'laws phải là mảng object {name, content}.',
+    'Dữ liệu nguồn:',
+    JSON.stringify(sourceCase)
+  ].join('\n');
+}
+
+function extractJsonObject(text) {
+  try {
+    return JSON.parse(text);
+  } catch (e) {
+    const match = String(text || '').match(/\{[\s\S]*\}/);
+    if (!match) throw e;
+    return JSON.parse(match[0]);
+  }
+}
+
+function extractOpenAIResponseText(data) {
+  if (typeof data.output_text === 'string' && data.output_text.trim()) return data.output_text.trim();
+  const chunks = [];
+  (data.output || []).forEach(item => {
+    (item.content || []).forEach(part => {
+      if (typeof part.text === 'string') chunks.push(part.text);
+      if (typeof part.output_text === 'string') chunks.push(part.output_text);
+    });
+  });
+  return chunks.join('\n').trim();
+}
+
+function normalizeTranslatedCase(raw, sourceCase, provider) {
+  const fallbackLaws = Array.isArray(sourceCase.laws) ? sourceCase.laws : [];
+  return {
+    ten: raw.ten || sourceCase.ten,
+    mo_ta: raw.mo_ta || sourceCase.mo_ta,
+    tom_luoc: formatStructuredContent(raw.tom_luoc || sourceCase.tomluocText),
+    ap_dung: formatStructuredContent(raw.ap_dung || sourceCase.apdungText),
+    chi_tiet: formatStructuredContent(raw.chi_tiet || sourceCase.chitietText),
+    timeline: Array.isArray(raw.timeline) && raw.timeline.length ? raw.timeline : sourceCase.timeline,
+    laws: Array.isArray(raw.laws) && raw.laws.length
+      ? raw.laws.map(law => ({ name: law.name || '', content: formatStructuredContent(law.content || '') }))
+      : fallbackLaws.map(law => ({ name: law.name || '', content: formatStructuredContent(stripHtml(law.content || '')) })),
+    translatedAt: new Date().toISOString(),
+    provider: provider
+  };
+}
+
+async function requestTranslationViaProxy(endpoint, sourceCase) {
+  const res = await fetch(endpoint, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      sourceLang: 'vi',
+      targetLang: 'en',
+      sourceCase
+    })
+  });
+  if (!res.ok) throw new Error(`Proxy dịch phản hồi ${res.status}`);
+  return res.json();
+}
+
+async function requestTranslationViaOpenAI(config, sourceCase) {
+  const res = await fetch('https://api.openai.com/v1/responses', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${config.openaiKey}`
+    },
+    body: JSON.stringify({
+      model: config.model || 'gpt-4.1-mini',
+      temperature: 0.2,
+      input: [
+        {
+          role: 'user',
+          content: [
+            { type: 'input_text', text: buildTranslationPrompt(sourceCase) }
+          ]
+        }
+      ]
+    })
+  });
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(`OpenAI dịch lỗi ${res.status}: ${errorText.slice(0, 160)}`);
+  }
+  const data = await res.json();
+  return extractJsonObject(extractOpenAIResponseText(data));
+}
+
+async function translateCasePayload(sourceCase) {
+  const config = getTranslationRuntimeConfig();
+  if (!config.autoTranslate) return { status: 'disabled', translated: null };
+  if (!config.endpoint && !config.openaiKey) return { status: 'pending-config', translated: null };
+
+  try {
+    if (config.endpoint) {
+      const raw = await requestTranslationViaProxy(config.endpoint, sourceCase);
+      return { status: 'translated', translated: normalizeTranslatedCase(raw, sourceCase, 'proxy') };
+    }
+    const raw = await requestTranslationViaOpenAI(config, sourceCase);
+    return { status: 'translated', translated: normalizeTranslatedCase(raw, sourceCase, 'openai') };
+  } catch (error) {
+    return { status: 'failed', translated: null, error };
+  }
+}
+
+async function finishSubmitAdmin() {
   const ten = document.getElementById('ad-ten').value; let lvId = document.getElementById('ad-lv').value; let sfId = document.getElementById('ad-sf').value;
   const mota = document.getElementById('ad-mota').value; 
   
@@ -1510,24 +3008,11 @@ function finishSubmitAdmin() {
   const apdungText = document.getElementById('ad-apdung').innerText || ""; 
   const chitietText = document.getElementById('ad-chitiet').innerText || "";
 
-  function formatContent(text) {
-      if (!text) return '';
-      return text.split(/\r?\n/).map(line => {
-          line = line.trim();
-          if (!line) return '';
-          const upper = line.toUpperCase();
-          const hasLetter = /[A-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠƯẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪỬỮỰỲỴÝỶỸ]/.test(upper);
-          if (line === upper && hasLetter && line.length < 200) {
-              return `<div class="detail-section-title">${line}</div>`;
-          }
-          return `<p>${line}</p>`;
-      }).join('');
-  }
-
   const timelineArr = tomluocText.split(/\r?\n/).map(t => t.trim()).filter(t => t.length > 0);
-  const tomluocHtml = formatContent(tomluocText);
-  const apdungHtml = formatContent(apdungText);
-  const chitietHtml = formatContent(chitietText);
+  const tomluocHtml = formatStructuredContent(tomluocText);
+  const apdungHtml = formatStructuredContent(apdungText);
+  const chitietHtml = formatStructuredContent(chitietText);
+  const translationConfig = saveTranslationConfigFromForm();
 
   const newLvName = document.getElementById('ad-new-lv').value.trim(); const newSfName = document.getElementById('ad-new-sf').value.trim();
   
@@ -1555,6 +3040,7 @@ function finishSubmitAdmin() {
       lvId: lvId, lvName: finalLvName,
       sfId: sfId, sfName: finalSfName,
       sao: sao, ngay: editingCaseId ? null : new Date().toISOString(), tag: editingCaseId ? undefined : ['Mới thêm'],
+      updatedAt: new Date().toISOString(),
       tom_luoc: tomluocHtml, 
       ap_dung: apdungHtml, 
       chi_tiet: chitietHtml, 
@@ -1563,25 +3049,66 @@ function finishSubmitAdmin() {
   };
   
   // Nếu edit, giữ lại ngày cũ
+  const oldCase = editingCaseId ? findCaseById(editingCaseId) : null;
   if(editingCaseId) {
-    const oldCase = findCaseById(editingCaseId);
     if(oldCase) {
       caseData.ngay = oldCase.cas.ngay;
       caseData.tag = oldCase.cas.tag;
+      if (oldCase.cas._dbId) caseData._dbId = oldCase.cas._dbId;
+      if (oldCase.cas.translations) caseData.translations = JSON.parse(JSON.stringify(oldCase.cas.translations));
+      if (oldCase.cas.translationMeta) caseData.translationMeta = JSON.parse(JSON.stringify(oldCase.cas.translationMeta));
     }
   }
 
   const btn = document.getElementById('ad-submit-btn'); btn.textContent = 'Đang xử lý...'; btn.disabled = true;
+  let translationMessage = '';
+
+  if (translationConfig.autoTranslate) {
+      btn.textContent = 'Đang tạo bản English...';
+      const translationSource = {
+          ten: ten,
+          mo_ta: mota,
+          tomluocText: tomluocText,
+          apdungText: apdungText,
+          chitietText: chitietText,
+          timeline: timelineArr,
+          laws: adminFormLaws
+      };
+      const translationResult = await translateCasePayload(translationSource);
+      if (translationResult.translated) {
+          caseData.translations = { ...(caseData.translations || {}), en: translationResult.translated };
+          caseData.translationMeta = {
+              ...(caseData.translationMeta || {}),
+              en: {
+                  status: 'ready',
+                  translatedAt: translationResult.translated.translatedAt,
+                  provider: translationResult.translated.provider
+              }
+          };
+      } else if (translationResult.status === 'pending-config') {
+          caseData.translationMeta = {
+              ...(caseData.translationMeta || {}),
+              en: { status: 'pending-config' }
+          };
+          translationMessage = ' Bản English chưa được tạo vì chưa cấu hình proxy hoặc API key.';
+      } else if (translationResult.status === 'failed') {
+          caseData.translationMeta = {
+              ...(caseData.translationMeta || {}),
+              en: { status: 'error', message: translationResult.error ? translationResult.error.message : 'unknown' }
+          };
+          translationMessage = ` Bản English chưa tạo được: ${(translationResult.error && translationResult.error.message) || 'lỗi không xác định'}.`;
+      }
+  }
 
   if(window.saveCaseToDB) {
-      window.saveCaseToDB(caseData);
+      await window.saveCaseToDB(caseData, translationMessage);
       return;
   }
 
   if(!window.saveCaseToDB) {
       const isEdit = !!editingCaseId; // Lưu trạng thái trước khi reset
       
-      if (!getLVById(lvId)) LINH_VUC_LUAT.push({ id: lvId, ten: finalLvName, icon: '📁', bg: 'linear-gradient(135deg, #607d8b 0%, #455a64 100%)', subfields: [...baseSubfields.map(s=>({...s}))], totalCases: 0 });
+      if (!getLVById(lvId)) LINH_VUC_LUAT.push({ id: lvId, ten: finalLvName, icon: getFieldMonogram(finalLvName), bg: 'linear-gradient(135deg, #61707f 0%, #39424a 100%)', subfields: [...baseSubfields.map(s=>({...s}))], totalCases: 0 });
       const lvObj = getLVById(lvId); if (lvObj && !lvObj.subfields.find(s => s.id === sfId)) lvObj.subfields.push({ id: sfId, ten: finalSfName, soLuong: 0 });
 
       if(editingCaseId) {
@@ -1602,6 +3129,11 @@ function finishSubmitAdmin() {
             CASES_DATA[newBucket].unshift(caseData);
           }
         }
+        RECENT_UPDATES.forEach((item, index) => {
+          if (item.id === caseData.id) {
+            RECENT_UPDATES[index] = { ...item, ten: caseData.ten, lvId: caseData.lvId, sfId: caseData.sfId };
+          }
+        });
       } else {
         // ==================== ADD NEW CASE ====================  
         const newBucket = getCaseBucketKey(lvId, sfId);
@@ -1616,10 +3148,10 @@ function finishSubmitAdmin() {
       document.getElementById('ad-new-lv').value = ''; document.getElementById('ad-new-sf').value = ''; document.getElementById('ad-tinhchat').value = '0';
       localStorage.removeItem('dcsl_admin_form');
       editingCaseId = null;
-      renderHome(); if(state.curSF) renderCasesList();
+      renderHome(); if(state.curSF || state.searchQuery) renderCasesList();
       btn.textContent = 'Lưu Database'; btn.disabled = false; closeAdmin();
       const msgType = isEdit ? 'cập nhật' : 'lưu';
-      showAlert(`✅ Đã ${msgType} thành công (Sẽ không mất khi tải lại trang)!`); return;
+      showAlert(`✅ Đã ${msgType} thành công (Sẽ không mất khi tải lại trang)!${translationMessage}`); return;
   }
 }
 
@@ -1652,11 +3184,22 @@ function initReveal(){
 const _origShowPage = showPage;
 window.showPage = function(id){ _origShowPage(id); setTimeout(initReveal, 50); };
 
-function safeInit() { restoreCasesDataFromStorage(); restoreLawDBFromStorage(); renderHome(); buildFilterF1(); setTimeout(()=>{ initReveal(); }, 100); }
+function safeInit() {
+  restoreCasesDataFromStorage();
+  restoreLawDBFromStorage();
+  const savedLang = localStorage.getItem('dcsl_ui_lang');
+  if (savedLang === 'en' || savedLang === 'vi') state.uiLang = savedLang;
+  renderHome();
+  buildFilterF1();
+  syncLanguageToggleButtons();
+  setTimeout(()=>{ initReveal(); }, 100);
+}
 if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', safeInit); } else { safeInit(); }
 
 (function(){
-  const canvas = document.getElementById('particles-canvas'); const ctx = canvas.getContext('2d'); let W, H, particles = [];
+  const canvas = document.getElementById('particles-canvas');
+  if (!canvas || getComputedStyle(canvas).display === 'none') return;
+  const ctx = canvas.getContext('2d'); let W, H, particles = [];
   function resize(){ W=canvas.width=window.innerWidth; H=canvas.height=window.innerHeight; } resize(); window.addEventListener('resize', resize);
   class Particle {
     constructor(){this.reset();}
@@ -1682,7 +3225,7 @@ async function initFirebase() {
     try {
         const { initializeApp } = await import("https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js");
         const { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } = await import("https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js");
-        const { getFirestore, collection, addDoc, onSnapshot } = await import("https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js");
+        const { getFirestore, collection, addDoc, onSnapshot, doc, setDoc } = await import("https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js");
         
         const firebaseConfig = JSON.parse(__firebase_config);
         const app = initializeApp(firebaseConfig);
@@ -1700,15 +3243,24 @@ async function initFirebase() {
             if (user) listenToCases(collection, onSnapshot);
         });
         
-        window.saveCaseToDB = async function(caseData) {
+        window.saveCaseToDB = async function(caseData, translationMessage = '') {
             if (!user) { showAlert("Chưa xác thực, không thể lưu lên Máy chủ!"); return; }
             try {
                 const casesRef = collection(db, 'artifacts', appId, 'public', 'data', 'cases');
-                await addDoc(casesRef, caseData);
+                const payload = { ...caseData };
+                const dbId = payload._dbId;
+                delete payload._dbId;
+                if (dbId) {
+                    const targetRef = doc(casesRef, dbId);
+                    await setDoc(targetRef, payload, { merge: true });
+                } else {
+                    await addDoc(casesRef, payload);
+                }
                 document.getElementById('ad-submit-btn').textContent = 'Lưu Database';
                 document.getElementById('ad-submit-btn').disabled = false;
                 closeAdmin();
-                showAlert("✅ Đã lưu tài liệu VĨNH VIỄN lên Máy chủ Đám mây!");
+                localStorage.removeItem('dcsl_admin_form');
+                showAlert(`✅ Đã lưu tài liệu VĨNH VIỄN lên Máy chủ Đám mây!${translationMessage}`);
                 // Xóa nội dung form
                 document.getElementById('ad-ten').value = ''; document.getElementById('ad-mota').value = '';
                 document.getElementById('ad-tomluoc').innerHTML = ''; document.getElementById('ad-apdung').innerHTML = ''; document.getElementById('ad-chitiet').innerHTML = '';
