@@ -674,8 +674,9 @@ window.updateCasesFromDB = function(docs) {
         let sf = lv.subfields.find(s => s.id === c.sfId);
         if(!sf) { lv.subfields.push({id: c.sfId, ten: c.sfName || 'Chủ đề mới', soLuong: 0}); }
         
-        if(!CASES_DATA[c.sfId]) CASES_DATA[c.sfId] = [];
-        CASES_DATA[c.sfId].unshift(c); 
+        const bucketKey = getCaseBucketKey(c.lvId, c.sfId);
+        if(!CASES_DATA[bucketKey]) CASES_DATA[bucketKey] = [];
+        CASES_DATA[bucketKey].unshift(c);
         RECENT_UPDATES.unshift({ id: c.id, ten: c.ten, lvId: c.lvId, sfId: c.sfId });
     });
 
@@ -686,7 +687,8 @@ window.updateCasesFromDB = function(docs) {
 
 function getLVById(id){ return LINH_VUC_LUAT.find(lv=>lv.id===id); }
 function getSFById(lvId, sfId){ const lv = getLVById(lvId); return lv ? lv.subfields.find(sf=>sf.id===sfId) : null; }
-function getCasesForSF(sfId){ return CASES_DATA[sfId] || []; }
+function getCaseBucketKey(lvId, sfId){ return `${lvId}::${sfId}`; }
+function getCasesForSF(lvId, sfId){ return CASES_DATA[getCaseBucketKey(lvId, sfId)] || []; }
 function getTypeLabel(sao){
   if(sao===1) return 'Giám đốc thẩm / Tái thẩm';
   if(sao===2) return 'Thông báo rút kinh nghiệm VKS';
@@ -703,7 +705,7 @@ function updateStatsUI() {
   LINH_VUC_LUAT.forEach(lv => {
     let lvCases = 0;
     lv.subfields.forEach(sf => {
-      const count = (CASES_DATA[sf.id] || []).length;
+      const count = getCasesForSF(lv.id, sf.id).length;
       sf.soLuong = count; lvCases += count; totalCases += count; totalSubfields++;
     });
     lv.totalCases = lvCases;
@@ -793,39 +795,39 @@ function goSubfields(lvId){
   document.getElementById('sf-breadcrumb-cur').textContent = state.curLV.ten; document.getElementById('sf-title').textContent = state.curLV.ten;
   const list = document.getElementById('subfield-list');
   list.innerHTML = state.curLV.subfields.map(sf=>`
-    <div class="subfield-item led-item shimmer-host" onclick="goCasesList('${sf.id}')">
+    <div class="subfield-item led-item shimmer-host" onclick="goCasesList('${state.curLV.id}','${sf.id}')">
       <div class="subfield-item-left"><div class="subfield-item-dot"></div><div><div class="subfield-item-name">${sf.ten}</div><div class="subfield-item-count">${sf.soLuong} tài liệu</div></div></div><div class="subfield-item-arrow">›</div>
     </div>
   `).join('');
   showPage('page-subfields');
 }
 
-function goCasesList(sfId) {
-  // Tìm lĩnh vực và chủ đề từ sfId
-  let foundLV = null, foundSF = null;
-  for(const lv of LINH_VUC_LUAT) {
-    const sf = lv.subfields.find(s => s.id === sfId);
-    if(sf) {
-      foundLV = lv;
-      foundSF = sf;
-      break;
+function goCasesList(lvId, sfId) {
+  if(!lvId || !sfId) {
+    if(state.curLV && state.curSF) {
+      lvId = state.curLV.id;
+      sfId = state.curSF.id;
+    } else {
+      return;
     }
   }
-  
+
+  const foundLV = getLVById(lvId);
+  const foundSF = getSFById(lvId, sfId);
   if(!foundLV || !foundSF) return;
-  
+
   state.curLV = foundLV;
   state.curSF = foundSF;
   state.curPage = 1;
   state.searchQuery = '';
-  
+
   document.getElementById('cases-bc-lv').style.display = 'inline';
   document.getElementById('cases-sep-1').style.display = 'inline';
   document.getElementById('cases-sep-2').style.display = 'inline';
   document.getElementById('cases-bc-lv').textContent = foundLV.ten;
   document.getElementById('cases-bc-sf').textContent = foundSF.ten;
   document.getElementById('cases-title').textContent = foundSF.ten;
-  
+
   renderCasesList();
   showPage('page-cases');
   document.getElementById('pagination-bar').classList.add('visible');
@@ -891,7 +893,7 @@ function renderCasesList(){
     scoredCases.sort((a,b) => b.score - a.score);
     cases = scoredCases.map(item => item.cas);
 
-  } else { cases = getCasesForSF(state.curSF.id); }
+  } else { cases = getCasesForSF(state.curLV.id, state.curSF.id); }
   
   const total = cases.length; const totalPages = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
   if(state.curPage > totalPages) state.curPage = totalPages;
@@ -930,26 +932,25 @@ function toggleCase(id, btn){ const desc = document.getElementById('cd-'+id); if
 function changePage(dir){ state.curPage += dir; renderCasesList(); window.scrollTo(0,58); }
 
 function findCaseById(id){
-  for(const sfId in CASES_DATA){
-    const c = CASES_DATA[sfId].find(x=>x.id===id); if(c) return {cas:c, sfId};
-  } return null;
+  for(const bucketKey in CASES_DATA){
+    const c = CASES_DATA[bucketKey].find(x=>x.id===id);
+    if(c) {
+      return { cas:c, sfId:c.sfId, lvId:c.lvId };
+    }
+  }
+  return null;
 }
 
 function goDetail(lvId, sfId, caseId){
   let cas, actualSfId;
   if(lvId && sfId){
     state.curLV = getLVById(lvId); state.curSF = state.curLV ? state.curLV.subfields.find(s=>s.id===sfId) : null;
-    const cases = getCasesForSF(sfId); cas = cases.find(c=>c.id===caseId); actualSfId = sfId;
+    const cases = getCasesForSF(lvId, sfId); cas = cases.find(c=>c.id===caseId); actualSfId = sfId;
   } else {
     const found = findCaseById(caseId); if(!found) return;
     cas = found.cas; actualSfId = found.sfId;
-    if(!state.curLV || state.curLV.subfields.findIndex(s=>s.id===actualSfId) === -1){
-      for(const lv of LINH_VUC_LUAT){
-        if(lv.subfields.find(s=>s.id===actualSfId)){
-          state.curLV = lv; state.curSF = lv.subfields.find(s=>s.id===actualSfId); break;
-        }
-      }
-    }
+    state.curLV = getLVById(found.lvId);
+    state.curSF = getSFById(found.lvId, found.sfId);
   }
   if(!cas) return; state.curCase = cas;
 
@@ -1338,9 +1339,22 @@ function restoreCasesDataFromStorage() {
     if (!stored) return;
     try {
         const storageData = JSON.parse(stored);
-        if (storageData.cases) Object.assign(CASES_DATA, storageData.cases);
-        if (storageData.recent) RECENT_UPDATES.length = 0, RECENT_UPDATES.push(...storageData.recent);
-        if (storageData.linhvuc) LINH_VUC_LUAT.length = 0, LINH_VUC_LUAT.push(...storageData.linhvuc);
+        if (storageData.cases) {
+            const normalized = {};
+            Object.keys(storageData.cases).forEach(bucketKey => {
+                const list = storageData.cases[bucketKey] || [];
+                list.forEach(c => {
+                    if(!c.lvId || !c.sfId) return;
+                    const normalizedKey = getCaseBucketKey(c.lvId, c.sfId);
+                    if(!normalized[normalizedKey]) normalized[normalizedKey] = [];
+                    normalized[normalizedKey].push(c);
+                });
+            });
+            Object.keys(CASES_DATA).forEach(k => delete CASES_DATA[k]);
+            Object.assign(CASES_DATA, normalized);
+        }
+        if (storageData.recent) { RECENT_UPDATES.length = 0; RECENT_UPDATES.push(...storageData.recent); }
+        if (storageData.linhvuc) { LINH_VUC_LUAT.length = 0; LINH_VUC_LUAT.push(...storageData.linhvuc); }
     } catch(e) { console.error('Lỗi khôi phục dữ liệu đơn hàng:', e); }
 }
 
@@ -1562,23 +1576,25 @@ function finishSubmitAdmin() {
         // ==================== UPDATE CASE ==================== 
         const found = findCaseById(editingCaseId);
         if(found) {
-          const sfId_old = found.sfId;
-          const index = CASES_DATA[sfId_old].findIndex(c => c.id === editingCaseId);
+          const oldBucket = getCaseBucketKey(found.lvId, found.sfId);
+          const index = CASES_DATA[oldBucket].findIndex(c => c.id === editingCaseId);
           if(index >= 0) {
-            CASES_DATA[sfId_old][index] = caseData;
+            CASES_DATA[oldBucket][index] = caseData;
           }
           
-          // Nếu sfId thay đổi, di chuyển case đến lĩnh vực mới
-          if(sfId_old !== sfId) {
-            CASES_DATA[sfId_old] = CASES_DATA[sfId_old].filter(c => c.id !== editingCaseId);
-            if(!CASES_DATA[sfId]) CASES_DATA[sfId] = [];
-            CASES_DATA[sfId].unshift(caseData);
+          // Nếu sfId hoặc lvId thay đổi, di chuyển case đến bucket mới
+          const newBucket = getCaseBucketKey(lvId, sfId);
+          if(oldBucket !== newBucket) {
+            CASES_DATA[oldBucket] = CASES_DATA[oldBucket].filter(c => c.id !== editingCaseId);
+            if(!CASES_DATA[newBucket]) CASES_DATA[newBucket] = [];
+            CASES_DATA[newBucket].unshift(caseData);
           }
         }
       } else {
         // ==================== ADD NEW CASE ====================  
-        if(!CASES_DATA[sfId]) CASES_DATA[sfId] = []; 
-        CASES_DATA[sfId].unshift(caseData);
+        const newBucket = getCaseBucketKey(lvId, sfId);
+        if(!CASES_DATA[newBucket]) CASES_DATA[newBucket] = []; 
+        CASES_DATA[newBucket].unshift(caseData);
         RECENT_UPDATES.unshift({id: caseData.id, ten: caseData.ten, lvId: caseData.lvId, sfId: caseData.sfId});
       }
 
