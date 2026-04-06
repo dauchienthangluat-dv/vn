@@ -589,12 +589,21 @@ function showLawDynamic(lawName) {
       return target.includes(title) || title.includes(target);
     });
   }
-  
-  document.getElementById('modal-title').innerHTML = `🏛️ ${found ? found.title : lawName}`;
-  document.getElementById('modal-body').innerHTML = found ? found.content : `
-    <p>Hệ thống đang tự động trích xuất dữ liệu cho điều khoản: <br><strong style="color:var(--navy);font-size:1.05rem;">${lawName}</strong></p>
-    <p style="color:var(--text-muted);font-size:0.85rem;margin-top:14px;line-height:1.6;">(Hệ thống AI của chúng tôi đã ghi nhận truy vấn này. Nội dung chi tiết của điều luật sẽ tự động được cập nhật và hiển thị trong lần tra cứu tiếp theo của bạn).</p>
-  `; 
+
+  const modalTitle = found ? (found.title || found.name || lawName) : lawName;
+  let modalBody = '';
+  if(found) {
+    const content = found.content || '';
+    modalBody = content.trim() ? content : `<p>(Nội dung điều luật sẽ được cập nhật sau.)</p>`;
+  } else {
+    modalBody = `
+      <p>Hệ thống đang tự động trích xuất dữ liệu cho điều khoản: <br><strong style="color:var(--navy);font-size:1.05rem;">${lawName}</strong></p>
+      <p style="color:var(--text-muted);font-size:0.85rem;margin-top:14px;line-height:1.6;">(Hệ thống AI của chúng tôi đã ghi nhận truy vấn này. Nội dung chi tiết của điều luật sẽ tự động được cập nhật và hiển thị trong lần tra cứu tiếp theo của bạn).</p>
+    `;
+  }
+
+  document.getElementById('modal-title').innerHTML = `🏛️ ${modalTitle}`;
+  document.getElementById('modal-body').innerHTML = modalBody;
   document.getElementById('info-modal').classList.add('open');
 }
 // ================================================================================= //
