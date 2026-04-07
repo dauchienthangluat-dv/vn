@@ -250,6 +250,13 @@ body { top: 0 !important; }
 .case-expand-btn{ width:28px;height:28px;flex-shrink:0;border:none;cursor:pointer; background:var(--bg2);border-radius:6px;color:var(--navy); display:flex;align-items:center;justify-content:center;font-size:0.9rem; transition:all 0.2s;}
 .case-expand-btn:hover{background:var(--gold-dim);color:var(--gold-rich);}
 .case-expand-btn.expanded{transform:rotate(180deg);}
+.cases-admin-toolbar{display:none;align-items:center;justify-content:space-between;gap:10px;margin-top:12px;padding:10px 12px;background:var(--bg2);border:1px solid var(--gold-border);border-radius:8px;font-size:0.78rem;color:var(--text-sec);}
+.cases-admin-toolbar.visible{display:flex;}
+.case-reorder-controls{display:flex;gap:6px;}
+.case-reorder-btn{width:28px;height:28px;border:none;border-radius:6px;background:var(--navy);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.85rem;transition:all 0.2s;}
+.case-reorder-btn:hover{background:var(--gold-rich);}
+.case-reorder-btn:disabled{opacity:0.35;cursor:not-allowed;}
+.case-item.reorder-active{border-color:var(--navy);box-shadow:var(--shadow-sm);}
 
 .case-desc{ border-top:1px dashed var(--gold-border); padding:16px; font-size:0.85rem;color:var(--text-sec);line-height:1.6; display:none; background: var(--surface); border-radius: 0 0 8px 8px; }
 .case-desc p, .tab-content p, .detail-section p, .admin-editor, .timeline-desc { white-space: pre-wrap; margin-bottom: 12px; }
@@ -394,11 +401,11 @@ body { top: 0 !important; }
         </div>
         
         <div style="margin-top: 20px; padding: 16px; background: var(--bg2); border-radius: 8px; border: 1px solid var(--gold-border); font-size: 0.85rem; color: var(--text-sec); line-height: 1.6;">
-          <h4 style="color: var(--navy); margin-bottom: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 6px;"><i class="ph ph-info"></i> Hướng dẫn tra cứu</h4>
+          <h4 id="smart-guide-title" style="color: var(--navy); margin-bottom: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 6px;"><i class="ph ph-info"></i> Hướng dẫn tra cứu</h4>
           <ul style="padding-left: 20px; display: flex; flex-direction: column; gap: 6px;">
-            <li>Nhập <strong>từ khóa</strong> hoặc <strong>tình huống pháp lý</strong> cụ thể (VD: <em>"chia di sản thừa kế không có di chúc"</em>).</li>
-            <li>Hệ thống sẽ tự động quét và trả về kết quả chứa chính xác các cụm từ này, đảm bảo độ chính xác cao nhất.</li>
-            <li>Có thể kết hợp nhiều tình tiết để AI của hệ thống tự động tìm kiếm các án lệ, bản án tương đồng.</li>
+            <li id="smart-guide-1">Nhập <strong>từ khóa</strong> hoặc <strong>tình huống pháp lý</strong> cụ thể (VD: <em>"chia di sản thừa kế không có di chúc"</em>).</li>
+            <li id="smart-guide-2">Hệ thống sẽ tự động quét và trả về kết quả chứa chính xác các cụm từ này, đảm bảo độ chính xác cao nhất.</li>
+            <li id="smart-guide-3">Có thể kết hợp nhiều tình tiết để hệ thống tự động tìm kiếm các án lệ, bản án tương đồng.</li>
           </ul>
         </div>
       </div>
@@ -413,6 +420,7 @@ body { top: 0 !important; }
       <div class="page-header">
         <div class="page-breadcrumb"><span class="bc-link" onclick="goHome()">Trang chủ</span><span class="bc-sep" id="cases-sep-1">/</span><span class="bc-link" id="cases-bc-lv" onclick="goSubfields()"></span><span class="bc-sep" id="cases-sep-2">/</span><span id="cases-bc-sf"></span></div>
         <div class="page-title" id="cases-title"></div>
+        <div id="cases-admin-toolbar" class="cases-admin-toolbar"></div>
       </div>
       <div class="cases-list" id="cases-list"></div>
     </div>
@@ -534,7 +542,7 @@ body { top: 0 !important; }
   </div>
 </div>
 
-<!-- Script tích hợp Google Translate -->
+<!-- Script chuyển đổi ngôn ngữ nội bộ -->
 <script type="text/javascript">
 document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 document.cookie = "googtrans=/vi/en; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
@@ -561,32 +569,6 @@ function switchLanguage(lang) {
   document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   document.cookie = "googtrans=/vi/en; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   document.cookie = "googtrans=/vi/vi; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-  return;
-
-  if (lang === 'vi') {
-      // Khôi phục bản Tiếng Việt: Xóa bộ nhớ và bắt buộc tải lại
-      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-      document.cookie = "googtrans=/vi/en; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-      document.cookie = "googtrans=/vi/vi; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-      if (window.updateCaseLanguageState) window.updateCaseLanguageState('vi');
-      return;
-  }
-
-  // Chọn Tiếng Anh
-  document.cookie = "googtrans=/vi/" + lang + "; path=/";
-  
-  // Liên tục quét tìm và kích hoạt Dropdown của Google Dịch (Tránh lỗi reload trang)
-  var attempts = 0;
-  var checkCombo = setInterval(function() {
-      var combo = document.querySelector(".goog-te-combo");
-      if (combo) {
-          combo.value = lang;
-          combo.dispatchEvent(new Event('change'));
-          clearInterval(checkCombo);
-      }
-      attempts++;
-      if(attempts > 10) clearInterval(checkCombo); // Dừng lại sau 5 giây nếu hệ thống Google bị nghẽn
-  }, 500);
 }
 
 // Tự động khôi phục trạng thái nút ngôn ngữ dựa trên Cookie hiện tại khi tải trang
@@ -750,6 +732,8 @@ const RECENT_THUMBS = [
 let state = { curLV: null, curSF: null, curCase: null, curPage: 1, readHistory: [], filter: { f1:null, f2:null, f4:'' }, searchQuery: '', uiLang: 'vi' };
 const ITEMS_PER_PAGE = 10;
 const LANGUAGE_STORAGE_KEY = 'dcsl_ui_lang';
+const CASE_ORDER_STORAGE_KEY = 'dcsl_case_order';
+let isReorderMode = false;
 const UI_TEXT = {
   vi: {
     filterTitle: 'Lọc Tìm Kiếm',
@@ -792,7 +776,16 @@ const UI_TEXT = {
     detailLater: 'Nội dung chi tiết sẽ được cập nhật sau.',
     timelineLater: 'Diễn biến vụ án chưa được cập nhật.',
     applyLater: 'Chưa có nội dung áp dụng.',
-    newBadge: 'MỚI'
+    newBadge: 'MỚI',
+    sortCases: 'Sắp xếp thứ tự',
+    doneSorting: 'Xong',
+    sortHint: 'Dùng nút lên/xuống để đổi thứ tự vụ án trong danh mục này.',
+    searchSortDisabled: 'Sắp xếp chỉ dùng trong từng danh mục, không áp dụng cho trang kết quả tìm kiếm.',
+    guideTitle: 'Hướng dẫn tra cứu',
+    smartPlaceholder: 'VD: Chia di sản thừa kế không có di chúc...',
+    guide1: 'Nhập <strong>từ khóa</strong> hoặc <strong>tình huống pháp lý</strong> cụ thể (VD: <em>"chia di sản thừa kế không có di chúc"</em>).',
+    guide2: 'Hệ thống sẽ tự động quét và trả về kết quả chứa chính xác các cụm từ này, đảm bảo độ chính xác cao nhất.',
+    guide3: 'Có thể kết hợp nhiều tình tiết để hệ thống tự động tìm kiếm các án lệ, bản án tương đồng.'
   },
   en: {
     filterTitle: 'Search Filter',
@@ -835,7 +828,16 @@ const UI_TEXT = {
     detailLater: 'Detailed content will be added later.',
     timelineLater: 'Timeline data has not been added for this case yet.',
     applyLater: 'No analogous-use guidance has been added yet.',
-    newBadge: 'NEW'
+    newBadge: 'NEW',
+    sortCases: 'Reorder cases',
+    doneSorting: 'Done',
+    sortHint: 'Use the up/down buttons to reorder cases in this category.',
+    searchSortDisabled: 'Reordering works inside a category, not on search results.',
+    guideTitle: 'Search guide',
+    smartPlaceholder: 'Example: inheritance division without a will...',
+    guide1: 'Enter specific <strong>keywords</strong> or a <strong>legal situation</strong> (for example: <em>"inheritance division without a will"</em>).',
+    guide2: 'The system scans the library and returns closely matching results with higher precision.',
+    guide3: 'You can combine multiple facts so the system can automatically find similar precedents and judgments.'
   }
 };
 const FIELD_LABELS_EN = {
@@ -907,6 +909,11 @@ function applyStaticTranslations() {
   const smartTitle = document.querySelector('#page-smart-search .page-title');
   const smartBreadcrumb = document.querySelector('#page-smart-search .page-breadcrumb span:last-child');
   const smartButton = document.querySelector('#page-smart-search .smart-search-wrapper button');
+  const smartInput = document.getElementById('smart-search-input-page');
+  const smartGuideTitle = document.getElementById('smart-guide-title');
+  const smartGuide1 = document.getElementById('smart-guide-1');
+  const smartGuide2 = document.getElementById('smart-guide-2');
+  const smartGuide3 = document.getElementById('smart-guide-3');
   if(heroTitle) heroTitle.innerHTML = t('heroTitle');
   if(heroDesc) heroDesc.textContent = t('heroDesc');
   const statLabels = document.querySelectorAll('.hero-stat-lbl');
@@ -934,6 +941,11 @@ function applyStaticTranslations() {
   if(smartTitle) smartTitle.textContent = t('smartSearch');
   if(smartBreadcrumb) smartBreadcrumb.textContent = t('smartSearch');
   if(smartButton) smartButton.textContent = t('searchTitle');
+  if(smartInput) smartInput.placeholder = t('smartPlaceholder');
+  if(smartGuideTitle) smartGuideTitle.innerHTML = `<i class="ph ph-info"></i> ${t('guideTitle')}`;
+  if(smartGuide1) smartGuide1.innerHTML = t('guide1');
+  if(smartGuide2) smartGuide2.innerHTML = t('guide2');
+  if(smartGuide3) smartGuide3.innerHTML = t('guide3');
 }
 
 function getActiveLanguage() {
@@ -1079,20 +1091,50 @@ window.updateCasesFromDB = function(docs) {
         let sf = lv.subfields.find(s => s.id === c.sfId);
         if(!sf) { lv.subfields.push({id: c.sfId, ten: c.sfName || 'Chủ đề mới', soLuong: 0}); }
         
-        const bucketKey = `${c.lvId}::${c.sfId}`;
+        const bucketKey = getCaseBucketKey(c.lvId, c.sfId);
         if(!CASES_DATA[bucketKey]) CASES_DATA[bucketKey] = [];
         CASES_DATA[bucketKey].unshift(c);
         RECENT_UPDATES.unshift({ id: c.id, ten: c.ten, lvId: c.lvId, sfId: c.sfId });
     });
 
     if(RECENT_UPDATES.length > 15) RECENT_UPDATES.length = 15;
+    applyStoredCaseOrder();
     saveCasesDataToStorage();
     renderHome(); if(state.curSF || state.searchQuery) renderCasesList();
 };
 
 function getLVById(id){ return LINH_VUC_LUAT.find(lv=>lv.id===id); }
 function getSFById(lvId, sfId){ const lv = getLVById(lvId); return lv ? lv.subfields.find(sf=>sf.id===sfId) : null; }
-function getCasesForSF(lvId, sfId){ return CASES_DATA[`${lvId}::${sfId}`] || []; }
+function getCaseBucketKey(lvId, sfId){ return `${lvId}::${sfId}`; }
+function getCasesForSF(lvId, sfId){ return CASES_DATA[getCaseBucketKey(lvId, sfId)] || []; }
+
+function getStoredCaseOrderMap() {
+  try { return JSON.parse(localStorage.getItem(CASE_ORDER_STORAGE_KEY) || '{}'); }
+  catch(e) { return {}; }
+}
+
+function saveCaseOrderForBucket(bucketKey) {
+  if(!bucketKey || !CASES_DATA[bucketKey]) return;
+  const orderMap = getStoredCaseOrderMap();
+  orderMap[bucketKey] = CASES_DATA[bucketKey].map(c => c.id);
+  localStorage.setItem(CASE_ORDER_STORAGE_KEY, JSON.stringify(orderMap));
+  saveCasesDataToStorage();
+}
+
+function applyStoredCaseOrder() {
+  const orderMap = getStoredCaseOrderMap();
+  Object.keys(CASES_DATA).forEach(bucketKey => {
+    const savedOrder = orderMap[bucketKey];
+    if(!Array.isArray(savedOrder) || !savedOrder.length) return;
+    const rank = new Map(savedOrder.map((id, idx) => [id, idx]));
+    CASES_DATA[bucketKey].sort((a, b) => {
+      const rankA = rank.has(a.id) ? rank.get(a.id) : Number.MAX_SAFE_INTEGER;
+      const rankB = rank.has(b.id) ? rank.get(b.id) : Number.MAX_SAFE_INTEGER;
+      if(rankA !== rankB) return rankA - rankB;
+      return new Date(b.ngay || 0).getTime() - new Date(a.ngay || 0).getTime();
+    });
+  });
+}
 
 function getTypeLabel(sao){
   if(sao===1) return 'Giám đốc thẩm / Tái thẩm';
@@ -1225,6 +1267,71 @@ function goCasesList(lvId, sfId) {
 
 function removeAccents(str) { return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
 
+const SEARCH_STOPWORDS = new Set('toi muon can tim ve va la cua cho trong khi voi neu thi co bi da duoc cac nhung mot nhieu nay do theo tai den tu hoac the an ban vu viec phan noi dung he thong phap ly tinh huong tuong dong case cases the a an and or of to in for with by on from about into without under'.split(' '));
+const SEARCH_SYNONYMS = {
+  'thua ke': ['di san', 'di chuc', 'nguoi thua ke', 'chia di san', 'inheritance', 'estate', 'will'],
+  'di san': ['thua ke', 'di chuc', 'chia di san', 'estate', 'inheritance'],
+  'dat': ['dat dai', 'quyen su dung dat', 'so do', 'giay chung nhan', 'land', 'land use right'],
+  'dat dai': ['quyen su dung dat', 'so do', 'giay chung nhan', 'land', 'land use right'],
+  'hop dong': ['giao dich', 'thoa thuan', 'chuyen nhuong', 'contract', 'agreement'],
+  'chuyen nhuong': ['mua ban', 'sang nhuong', 'transfer', 'assignment'],
+  'lao dong': ['tien luong', 'sa thai', 'hop dong lao dong', 'labor', 'employment', 'salary'],
+  'hon nhan': ['ly hon', 'tai san chung', 'nuoi con', 'marriage', 'divorce'],
+  'hinh su': ['toi pham', 'bi cao', 'hinh phat', 'criminal'],
+  'doanh nghiep': ['cong ty', 'co dong', 'gop von', 'enterprise', 'company', 'shareholder'],
+  'an le': ['precedent', 'case law'],
+  'ban an': ['judgment', 'case']
+};
+
+function normalizeSearchText(text) {
+  return removeAccents(String(text || '').replace(/<[^>]*>?/gm, ' ')).replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function getSearchTerms(query) {
+  const normalized = normalizeSearchText(query);
+  const words = normalized.split(/\s+/).filter(w => w.length > 1 && !SEARCH_STOPWORDS.has(w));
+  const terms = new Set(words);
+  Object.keys(SEARCH_SYNONYMS).forEach(key => {
+    const normalizedKey = normalizeSearchText(key);
+    if(normalized.includes(normalizedKey)) {
+      terms.add(normalizedKey);
+      SEARCH_SYNONYMS[key].forEach(item => terms.add(normalizeSearchText(item)));
+    }
+  });
+  return { normalized, words, terms: [...terms].filter(Boolean) };
+}
+
+function scoreCaseForQuery(caseObj, queryInfo) {
+  const en = caseObj.translations && caseObj.translations.en ? caseObj.translations.en : {};
+  const titleText = normalizeSearchText([caseObj.ten, en.ten].join(' '));
+  const summaryText = normalizeSearchText([caseObj.mo_ta, en.mo_ta].join(' '));
+  const bodyText = normalizeSearchText([caseObj.tom_luoc, caseObj.chi_tiet, caseObj.ap_dung, en.tom_luoc, en.chi_tiet, en.ap_dung, caseObj.lvName, caseObj.sfName].join(' '));
+  const allText = `${titleText} ${summaryText} ${bodyText}`;
+  let score = 0;
+  let matched = 0;
+
+  if(queryInfo.normalized && titleText.includes(queryInfo.normalized)) score += 5000;
+  else if(queryInfo.normalized && summaryText.includes(queryInfo.normalized)) score += 2800;
+  else if(queryInfo.normalized && bodyText.includes(queryInfo.normalized)) score += 1800;
+
+  queryInfo.terms.forEach(term => {
+    if(!term) return;
+    if(titleText.includes(term)) { matched++; score += term.includes(' ') ? 320 : 160; }
+    else if(summaryText.includes(term)) { matched++; score += term.includes(' ') ? 220 : 90; }
+    else if(bodyText.includes(term)) { matched++; score += term.includes(' ') ? 90 : 30; }
+  });
+
+  for(let i = 0; i < queryInfo.words.length - 1; i++) {
+    const phrase = `${queryInfo.words[i]} ${queryInfo.words[i + 1]}`;
+    if(allText.includes(phrase)) score += titleText.includes(phrase) ? 180 : 70;
+  }
+
+  const coreCount = queryInfo.words.length || 1;
+  const matchRatio = Math.min(1, matched / Math.max(1, Math.min(coreCount, queryInfo.terms.length || coreCount)));
+  const isValid = score >= 1800 || matchRatio >= (coreCount <= 3 ? 0.65 : 0.45) || (score >= 180 && matched >= 2);
+  return isValid ? { caseObj, score: score + Math.round(matchRatio * 1000), matched } : null;
+}
+
 function executeSmartSearchPage() {
   const query = document.getElementById('smart-search-input-page').value.trim(); if(!query) return;
   closeFilter(); state.searchQuery = query; state.curSF = null; state.curPage = 1;
@@ -1233,8 +1340,53 @@ function executeSmartSearchPage() {
   renderCasesList(); showPage('page-cases'); document.getElementById('pagination-bar').classList.add('visible');
 }
 
+function canReorderCurrentCases() {
+  return isAdminMode && !!(state.curLV && state.curSF && !state.searchQuery);
+}
+
+function renderCasesAdminToolbar() {
+  const toolbar = document.getElementById('cases-admin-toolbar');
+  if(!toolbar) return;
+  if(!isAdminMode) {
+    toolbar.classList.remove('visible');
+    toolbar.innerHTML = '';
+    isReorderMode = false;
+    return;
+  }
+  toolbar.classList.add('visible');
+  if(!canReorderCurrentCases()) {
+    toolbar.innerHTML = `<span>${t('searchSortDisabled')}</span>`;
+    return;
+  }
+  toolbar.innerHTML = `
+    <span>${isReorderMode ? t('sortHint') : t('sortCases')}</span>
+    <button class="admin-btn admin-btn-secondary" onclick="toggleReorderMode()" style="flex:0 0 auto; padding:8px 12px;">${isReorderMode ? t('doneSorting') : t('sortCases')}</button>
+  `;
+}
+
+function toggleReorderMode() {
+  if(!canReorderCurrentCases()) return;
+  isReorderMode = !isReorderMode;
+  renderCasesList();
+}
+
+function moveCaseInCurrentList(caseId, dir) {
+  if(!canReorderCurrentCases()) return;
+  const bucketKey = getCaseBucketKey(state.curLV.id, state.curSF.id);
+  const list = CASES_DATA[bucketKey] || [];
+  const idx = list.findIndex(c => c.id === caseId);
+  const nextIdx = idx + dir;
+  if(idx < 0 || nextIdx < 0 || nextIdx >= list.length) return;
+  const temp = list[idx];
+  list[idx] = list[nextIdx];
+  list[nextIdx] = temp;
+  saveCaseOrderForBucket(bucketKey);
+  renderCasesList();
+}
+
 function renderCasesList(){
   let cases = [];
+  renderCasesAdminToolbar();
   if(state.searchQuery) {
     const queryLabel = state.searchQuery;
     const bcSf = document.getElementById('cases-bc-sf');
@@ -1251,43 +1403,12 @@ function renderCasesList(){
   }
   
   if(state.searchQuery) {
-    const rawQuery = state.searchQuery.trim().toLowerCase();
-    const qStr = removeAccents(rawQuery);
-    const searchTerms = qStr.split(/\s+/).filter(w => w.length > 0);
-
+    const queryInfo = getSearchTerms(state.searchQuery);
     let scoredCases = [];
     for(const bucketKey in CASES_DATA) {
       CASES_DATA[bucketKey].forEach(c => {
-        const en = c.translations && c.translations.en ? c.translations.en : {};
-        const fullContent = ([c.ten, c.mo_ta, c.tom_luoc, c.chi_tiet, c.ap_dung, en.ten, en.mo_ta, en.tom_luoc, en.chi_tiet, en.ap_dung].join(' ')).replace(/<[^>]*>?/gm, ' ');
-        const cTextStr = removeAccents(fullContent).toLowerCase();
-        const cTitleStr = removeAccents([c.ten, en.ten].join(' ')).toLowerCase();
-        
-        let score = 0;
-        let exactPhrase = false;
-        
-        if (cTitleStr.includes(qStr)) { score += 5000; exactPhrase = true; } 
-        else if (cTextStr.includes(qStr)) { score += 2000; exactPhrase = true; }
-        
-        let matchedTerms = 0;
-        searchTerms.forEach(term => {
-          const regex = new RegExp(`\\b${term}\\b`);
-          if (regex.test(cTitleStr)) { matchedTerms++; score += 100; } 
-          else if (regex.test(cTextStr)) { matchedTerms++; score += 20; }
-        });
-
-        let isValid = false;
-        if (exactPhrase) {
-            isValid = true;
-        } else {
-            const matchRatio = matchedTerms / searchTerms.length;
-            if (searchTerms.length <= 2 && matchRatio === 1) isValid = true;
-            else if (searchTerms.length > 2 && matchRatio >= 0.8) isValid = true;
-        }
-
-        if (isValid && score > 0) {
-          scoredCases.push({ cas: c, score: score });
-        }
+        const scored = scoreCaseForQuery(c, queryInfo);
+        if (scored) scoredCases.push({ cas: scored.caseObj, score: scored.score });
       });
     }
     
@@ -1304,16 +1425,24 @@ function renderCasesList(){
   if(pageCases.length===0){
     list.innerHTML = `<div class="empty-history"><i class="ph ph-warning-circle" style="font-size:2rem; margin-bottom:10px;"></i><br>${t('noResults')}</div>`;
   } else {
-    list.innerHTML = pageCases.map(c=>{
+    list.innerHTML = pageCases.map((c, idx)=>{
       const isDoc = c.sfId === 'van-ban-phap-luat' || c.sfId === 'giai-dap-nghiep-vu';
       const starHtml = isDoc ? '' : `<div class="case-stars">${'⭐'.repeat(c.sao || 0)}</div>`;
       const displayTitle = getCaseFieldText(c, 'ten');
       const displayDesc = getCaseFieldText(c, 'mo_ta');
+      const fullIndex = start + idx;
+      const reorderControls = isReorderMode && canReorderCurrentCases() ? `
+        <div class="case-reorder-controls">
+          <button class="case-reorder-btn" onclick="moveCaseInCurrentList('${c.id}',-1)" title="Đưa lên" ${fullIndex <= 0 ? 'disabled' : ''}><i class="ph ph-arrow-up"></i></button>
+          <button class="case-reorder-btn" onclick="moveCaseInCurrentList('${c.id}',1)" title="Đưa xuống" ${fullIndex >= total - 1 ? 'disabled' : ''}><i class="ph ph-arrow-down"></i></button>
+        </div>
+      ` : '';
       return `
-      <div class="case-item" id="ci-${c.id}">
+      <div class="case-item ${isReorderMode && canReorderCurrentCases() ? 'reorder-active' : ''}" id="ci-${c.id}">
         <div class="case-item-header">
           <div class="case-item-left">${starHtml}<div class="case-name" onclick="goDetail(null,null,'${c.id}')">${displayTitle}</div></div>
           <div style="display:flex; gap:6px;">
+            ${reorderControls}
             ${isAdminMode ? `<button class="case-expand-btn" onclick="editCase('${c.id}')" title="Chỉnh sửa"><i class="ph ph-pencil-simple"></i></button>` : ''}
             <button class="case-expand-btn" onclick="toggleCase('${c.id}',this)" title="Xem mô tả"><i class="ph ph-caret-down"></i></button>
           </div>
@@ -1689,6 +1818,7 @@ function restoreCasesDataFromStorage() {
                 LINH_VUC_LUAT.push(lv);
             });
         }
+        applyStoredCaseOrder();
     } catch(e) {}
 }
 
