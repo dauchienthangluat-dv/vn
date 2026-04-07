@@ -325,8 +325,8 @@ body { top: 0 !important; }
   <div id="site-logo" onclick="goHome()"><em>Đấu Chiến Thắng Luật</em><span>.com</span></div>
   <div id="header-right">
     <div class="lang-switch">
-        <button class="lang-btn active" id="lang-vi" onclick="switchLanguage('vi')">VN</button>
-        <button class="lang-btn" id="lang-en" onclick="switchLanguage('en')">EN</button>
+        <button class="lang-btn active" id="lang-vi" data-lang="vi" onclick="switchLanguage('vi')">VN</button>
+        <button class="lang-btn" id="lang-en" data-lang="en" onclick="switchLanguage('en')">EN</button>
     </div>
     <button id="admin-btn-top" onclick="openAdmin()" style="display:none; background:var(--bg2);color:var(--navy);border:none;padding:6px 10px;border-radius:6px;cursor:pointer;font-weight:600;font-size:0.8rem; align-items:center; gap:4px;"><i class="ph ph-gear"></i> Admin</button>
   </div>
@@ -463,16 +463,16 @@ body { top: 0 !important; }
       </label>
       <textarea id="ad-mota" class="admin-input" style="height: 60px;"></textarea>
     </div>
-    <div class="admin-form-group">
+    <div class="admin-form-group" id="admin-part-1-vi">
       <label class="admin-label" style="display:flex; justify-content:space-between;">
-        <span>Phần 1: Dòng thời gian (Chỉ dùng cho án lệ):</span>
+        <span>Phần 1: Dòng thời gian (dùng cho mọi vụ án, trừ Văn bản pháp luật và Giải đáp nghiệp vụ tư pháp):</span>
         <span style="cursor:pointer; color:var(--navy); font-size:0.75rem; font-weight:600;" onclick="cleanEditorText('ad-tomluoc')"><i class="ph ph-broom"></i> Nối dòng</span>
       </label>
       <div id="ad-tomluoc" class="admin-editor" contenteditable="true" style="min-height: 80px;" onpaste="handlePasteAsPlainText(event)"></div>
     </div>
-    <div class="admin-form-group">
+    <div class="admin-form-group" id="admin-part-2-vi">
       <label class="admin-label" style="display:flex; justify-content:space-between;">
-        <span>Phần 2: Áp dụng tương tự (Chỉ dùng cho án lệ):</span>
+        <span>Phần 2: Áp dụng tương tự (dùng cho mọi vụ án, trừ Văn bản pháp luật và Giải đáp nghiệp vụ tư pháp):</span>
         <span style="cursor:pointer; color:var(--navy); font-size:0.75rem; font-weight:600;" onclick="cleanEditorText('ad-apdung')"><i class="ph ph-broom"></i> Nối dòng</span>
       </label>
       <div id="ad-apdung" class="admin-editor" contenteditable="true" style="min-height: 80px;" onpaste="handlePasteAsPlainText(event)"></div>
@@ -484,10 +484,27 @@ body { top: 0 !important; }
       </label>
       <div id="ad-chitiet" class="admin-editor" contenteditable="true" style="min-height: 120px;" onpaste="handlePasteAsPlainText(event)"></div>
     </div>
+    <div class="admin-form-group" style="padding:14px; border:1px solid var(--gold-border); border-radius:8px; background:var(--surface2);">
+      <label class="admin-label" style="display:flex; justify-content:space-between;">
+        <span>English version (optional):</span>
+        <span style="color:var(--text-muted); font-size:0.75rem; font-weight:500;">Leave blank to use Vietnamese fallback</span>
+      </label>
+      <input type="text" id="ad-ten-en" class="admin-input" placeholder="English case/document title..." style="margin-bottom:8px;" />
+      <textarea id="ad-mota-en" class="admin-input" placeholder="Short English summary for the case list..." style="height: 60px; margin-bottom:8px;"></textarea>
+      <label class="admin-label" id="admin-part-1-en-label">Part 1: Case timeline (English, used for all cases except Legal Documents and Judicial Professional Guidance)</label>
+      <div id="ad-tomluoc-en" class="admin-editor" contenteditable="true" style="min-height: 80px; margin-bottom:8px;" onpaste="handlePasteAsPlainText(event)"></div>
+      <label class="admin-label" id="admin-part-2-en-label">Part 2: Analogous application (English, used for all cases except Legal Documents and Judicial Professional Guidance)</label>
+      <div id="ad-apdung-en" class="admin-editor" contenteditable="true" style="min-height: 80px; margin-bottom:8px;" onpaste="handlePasteAsPlainText(event)"></div>
+      <label class="admin-label">Part 3: Detailed content (English)</label>
+      <div id="ad-chitiet-en" class="admin-editor" contenteditable="true" style="min-height: 120px;" onpaste="handlePasteAsPlainText(event)"></div>
+    </div>
     <div class="admin-form-group">
       <label class="admin-label" style="display:flex; justify-content:space-between;">
         <span>Các Điều luật liên quan:</span>
-        <span style="cursor:pointer; color:var(--navy); font-size:0.75rem; font-weight:600;" onclick="detectLawsFromContent()"><i class="ph ph-magnifying-glass"></i> Detect tự động</span>
+        <span style="display:flex; gap:10px;">
+          <span style="cursor:pointer; color:var(--navy); font-size:0.75rem; font-weight:600;" onclick="detectLawsFromContent()"><i class="ph ph-magnifying-glass"></i> Detect VI</span>
+          <span style="cursor:pointer; color:var(--navy); font-size:0.75rem; font-weight:600;" onclick="detectEnglishLawsFromContent()"><i class="ph ph-translate"></i> Detect EN</span>
+        </span>
       </label>
       <div id="ad-laws-container" style="min-height: 60px; padding:12px; border:1px solid var(--gold-border); border-radius:6px; background:var(--bg2); margin-bottom:8px;">
         <div id="ad-laws-list" style="display:none;"></div>
@@ -519,7 +536,11 @@ body { top: 0 !important; }
 
 <!-- Script tích hợp Google Translate -->
 <script type="text/javascript">
+document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+document.cookie = "googtrans=/vi/en; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+document.cookie = "googtrans=/vi/vi; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 function googleTranslateElementInit() {
+  if(!window.google || !google.translate) return;
   new google.translate.TranslateElement({
     pageLanguage: 'vi', 
     includedLanguages: 'en,vi', 
@@ -536,13 +557,18 @@ function switchLanguage(lang) {
   if (btnEn) btnEn.classList.remove('active');
   var activeBtn = document.getElementById('lang-' + lang);
   if (activeBtn) activeBtn.classList.add('active');
+  if (window.updateCaseLanguageState) window.updateCaseLanguageState(lang);
+  document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "googtrans=/vi/en; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "googtrans=/vi/vi; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  return;
 
   if (lang === 'vi') {
       // Khôi phục bản Tiếng Việt: Xóa bộ nhớ và bắt buộc tải lại
       document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       document.cookie = "googtrans=/vi/en; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       document.cookie = "googtrans=/vi/vi; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-      window.location.reload();
+      if (window.updateCaseLanguageState) window.updateCaseLanguageState('vi');
       return;
   }
 
@@ -570,11 +596,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
         var btnEn = document.getElementById('lang-en');
         if (btnVi) btnVi.classList.remove('active');
         if (btnEn) btnEn.classList.add('active');
+        if (window.updateCaseLanguageState) window.updateCaseLanguageState('en');
     }
 });
 </script>
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <script>
 let secretCode = "";
 let isAdminMode = false;
@@ -609,14 +634,22 @@ function extractAllLawsFromText(text) {
   return [...new Set(matches)];
 }
 
+function extractEnglishLawsFromText(text) {
+  if(!text) return [];
+  const regexStr = /(?:(?:Clause|Point)\s+[0-9a-zA-Z]+(?:\s*,)?\s+)?Article\s+\d+[a-zA-Z]?(?:\s+(?:of\s+)?(?:the\s+)?(?:(?:Civil|Criminal|Labor|Land|Enterprise|Commercial|Administrative)\s+(?:Code|Law)|Law\s+on\s+[A-Z][A-Za-z\s-]+)(?:\s+\d{4})?)?/gi;
+  const matches = text.match(regexStr) || [];
+  return [...new Set(matches.map(item => item.replace(/\s+/g, ' ').trim()))];
+}
+
 function getLawKeyFromText(lawText) {
-  const match = lawText.match(/[Đđ]iều\s+(\d+[a-zA-Z]?)/);
+  const match = lawText.match(/[Đđ]iều\s+(\d+[a-zA-Z]?)/) || lawText.match(/\bArticle\s+(\d+[a-zA-Z]?)/i);
   if(!match) return null;
   const num = match[1];
   let prefix = 'law-';
-  if(lawText.toLowerCase().includes('bộ luật dân sự') || lawText.toLowerCase().includes('blds')) prefix = 'blds-';
-  else if(lawText.toLowerCase().includes('đất đai')) prefix = 'ldd-';
-  else if(lawText.toLowerCase().includes('hình sự') || lawText.toLowerCase().includes('blhs')) prefix = 'blhs-';
+  const normalizedLawText = lawText.toLowerCase();
+  if(normalizedLawText.includes('bộ luật dân sự') || normalizedLawText.includes('blds') || normalizedLawText.includes('civil code')) prefix = 'blds-';
+  else if(normalizedLawText.includes('đất đai') || normalizedLawText.includes('land law')) prefix = 'ldd-';
+  else if(normalizedLawText.includes('hình sự') || normalizedLawText.includes('blhs') || normalizedLawText.includes('criminal code')) prefix = 'blhs-';
   return prefix + num;
 }
 
@@ -626,6 +659,11 @@ function autoLinkLaws(htmlText) {
   const regexStr = /(?![^<]*>)(?:(?:[Kk]hoản|[Đđ]iểm)\s+[0-9a-zA-Z]+\s+)?[Đđ]iều\s+\d+[a-zA-Z]?/g;
   res = res.replace(regexStr, match => {
       if(match.includes('<span')) return match; 
+      return `<span class="law-link" onclick="showLawDynamic(this.innerText)">${match}</span>`;
+  });
+  const englishRegexStr = /(?![^<]*>)(?:(?:Clause|Point)\s+[0-9a-zA-Z]+(?:\s*,)?\s+)?Article\s+\d+[a-zA-Z]?/gi;
+  res = res.replace(englishRegexStr, match => {
+      if(match.includes('<span')) return match;
       return `<span class="law-link" onclick="showLawDynamic(this.innerText)">${match}</span>`;
   });
   return res;
@@ -641,7 +679,7 @@ function showLawDynamic(lawName) {
       const name = (l.name || '').toLowerCase();
       const target = lawName.toLowerCase();
       if(name === target || target.includes(name) || name.includes(target)) return true;
-      if(lawNum && (name.includes('điều ' + lawNum) || name.includes('Điều ' + lawNum))) return true;
+      if(lawNum && (name.includes('điều ' + lawNum) || name.includes('Điều ' + lawNum) || name.includes('article ' + lawNum))) return true;
       return false;
     });
   }
@@ -650,7 +688,7 @@ function showLawDynamic(lawName) {
     found = Object.values(LAW_DB).find(l => {
       const title = (l.title || '').toLowerCase().replace(/ \(.+\)/,'');
       const target = lawName.toLowerCase();
-      if(lawNum) return title.includes('điều ' + lawNum) || title.includes('Điều ' + lawNum);
+      if(lawNum) return title.includes('điều ' + lawNum) || title.includes('Điều ' + lawNum) || title.includes('article ' + lawNum);
       return target.includes(title) || title.includes(target);
     });
   }
@@ -709,8 +747,312 @@ const RECENT_THUMBS = [
   'https://images.unsplash.com/photo-1618044733300-9472054094ee?w=600&h=400&fit=crop&q=80'
 ];
 
-let state = { curLV: null, curSF: null, curCase: null, curPage: 1, readHistory: [], filter: { f1:null, f2:null, f4:'' }, searchQuery: '' };
+let state = { curLV: null, curSF: null, curCase: null, curPage: 1, readHistory: [], filter: { f1:null, f2:null, f4:'' }, searchQuery: '', uiLang: 'vi' };
 const ITEMS_PER_PAGE = 10;
+const LANGUAGE_STORAGE_KEY = 'dcsl_ui_lang';
+const UI_TEXT = {
+  vi: {
+    filterTitle: 'Lọc Tìm Kiếm',
+    filterFieldType: 'Loại lĩnh vực luật',
+    filterSpecificField: 'Lĩnh vực cụ thể',
+    filterQuery: 'Nhập nội dung cần tìm',
+    selectField: '— Chọn lĩnh vực luật —',
+    selectAfterStep1: '— Chọn sau bước 1 —',
+    selectSpecificField: '— Chọn lĩnh vực cụ thể —',
+    filterPlaceholder: 'Nhập từ khóa hoặc tình huống...',
+    applyFilter: 'Áp dụng bộ lọc',
+    sidebarHome: 'Trang chủ',
+    sidebarFilter: 'Lọc tìm kiếm',
+    sidebarAdmin: 'Thêm mới (Admin)',
+    sidebarGuide: 'Hướng dẫn sử dụng',
+    sidebarAbout: 'Giới thiệu',
+    heroTitle: 'Thư viện <em>Bản án</em>',
+    heroDesc: 'Tra cứu bản án, án lệ một cách nhanh chóng.',
+    docs: 'Tài liệu',
+    fields: 'Lĩnh vực',
+    topics: 'Chủ đề',
+    interest: 'Bạn đang quan tâm gì?',
+    latest: 'Cập nhật mới nhất',
+    viewed: 'Tài liệu bạn đã xem',
+    smartSearch: 'Tra cứu tình huống',
+    smartSearchShort: 'Tìm kiếm thông minh',
+    documents: 'tài liệu',
+    noHistory: 'Bạn chưa xem tài liệu nào.<br><span style="font-size:0.8rem;margin-top:6px;display:block;">Hãy khám phá các lĩnh vực luật phía trên!</span>',
+    searchResult: 'Kết quả',
+    searchTitle: 'Tìm kiếm',
+    noResults: 'Không tìm thấy tài liệu nào khớp chính xác với từ khóa của bạn.',
+    noShortDesc: '(Chưa có mô tả ngắn)',
+    readMore: 'Xem chi tiết tài liệu',
+    page: 'Trang',
+    detail: 'Chi tiết',
+    detailedContent: 'Nội dung chi tiết',
+    timeline: 'Dòng thời gian',
+    analogousUse: 'Áp dụng tương tự',
+    fullText: 'Bản chi tiết',
+    detailLater: 'Nội dung chi tiết sẽ được cập nhật sau.',
+    timelineLater: 'Diễn biến vụ án chưa được cập nhật.',
+    applyLater: 'Chưa có nội dung áp dụng.',
+    newBadge: 'MỚI'
+  },
+  en: {
+    filterTitle: 'Search Filter',
+    filterFieldType: 'Legal field',
+    filterSpecificField: 'Specific topic',
+    filterQuery: 'Search content',
+    selectField: '— Select legal field —',
+    selectAfterStep1: '— Select after step 1 —',
+    selectSpecificField: '— Select specific topic —',
+    filterPlaceholder: 'Enter keywords or factual situation...',
+    applyFilter: 'Apply filter',
+    sidebarHome: 'Home',
+    sidebarFilter: 'Search filter',
+    sidebarAdmin: 'Add new (Admin)',
+    sidebarGuide: 'User guide',
+    sidebarAbout: 'About',
+    heroTitle: 'Case <em>Library</em>',
+    heroDesc: 'Search judgments and precedents quickly.',
+    docs: 'Documents',
+    fields: 'Fields',
+    topics: 'Topics',
+    interest: 'What are you interested in?',
+    latest: 'Latest updates',
+    viewed: 'Documents you viewed',
+    smartSearch: 'Situation Search',
+    smartSearchShort: 'Smart search',
+    documents: 'documents',
+    noHistory: 'You have not viewed any documents yet.<br><span style="font-size:0.8rem;margin-top:6px;display:block;">Explore the legal fields above.</span>',
+    searchResult: 'Results',
+    searchTitle: 'Search',
+    noResults: 'No documents matched your keyword exactly.',
+    noShortDesc: '(No short summary yet)',
+    readMore: 'View document details',
+    page: 'Page',
+    detail: 'Detail',
+    detailedContent: 'Detailed content',
+    timeline: 'Case timeline',
+    analogousUse: 'Analogous application',
+    fullText: 'Detailed text',
+    detailLater: 'Detailed content will be added later.',
+    timelineLater: 'Timeline data has not been added for this case yet.',
+    applyLater: 'No analogous-use guidance has been added yet.',
+    newBadge: 'NEW'
+  }
+};
+const FIELD_LABELS_EN = {
+  'hinh-su': 'Criminal Law',
+  'dan-su': 'Civil Law',
+  'kinh-doanh-thuong-mai': 'Commercial Law',
+  'lao-dong': 'Labor Law',
+  'hanh-chinh': 'Administrative Law',
+  'dat-dai': 'Land Law',
+  'doanh-nghiep': 'Enterprise Law'
+};
+const SUBFIELD_LABELS_EN = {
+  'van-ban-phap-luat': 'Legal Documents',
+  'an-le': 'Precedents',
+  'tb-rut-kinh-nghiem': 'Experience Notices',
+  'giai-dap-nghiep-vu': 'Judicial Professional Guidance'
+};
+
+function t(key) {
+  const lang = getActiveLanguage();
+  return (UI_TEXT[lang] && UI_TEXT[lang][key]) || UI_TEXT.vi[key] || key;
+}
+
+function getLVDisplayName(lvOrId) {
+  const lv = typeof lvOrId === 'string' ? getLVById(lvOrId) : lvOrId;
+  if(!lv) return '';
+  return getActiveLanguage() === 'en' ? (FIELD_LABELS_EN[lv.id] || lv.ten) : lv.ten;
+}
+
+function getSFDisplayName(lvId, sfOrId) {
+  const sf = typeof sfOrId === 'string' ? getSFById(lvId, sfOrId) : sfOrId;
+  if(!sf) return '';
+  return getActiveLanguage() === 'en' ? (SUBFIELD_LABELS_EN[sf.id] || sf.ten) : sf.ten;
+}
+
+function isDetailOnlySubfield(sfId) {
+  return sfId === 'van-ban-phap-luat' || sfId === 'giai-dap-nghiep-vu';
+}
+
+function syncAdminContentPartVisibility() {
+  const sfEl = document.getElementById('ad-sf');
+  const sfId = sfEl ? sfEl.value : '';
+  const hideExtraParts = isDetailOnlySubfield(sfId);
+  ['admin-part-1-vi', 'admin-part-2-vi'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.style.display = hideExtraParts ? 'none' : 'block';
+  });
+  ['admin-part-1-en-label', 'ad-tomluoc-en', 'admin-part-2-en-label', 'ad-apdung-en'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.style.display = hideExtraParts ? 'none' : '';
+  });
+}
+
+function applyStaticTranslations() {
+  const heroTitle = document.querySelector('#page-home .hero-band h2');
+  const heroDesc = document.querySelector('#page-home .hero-band p');
+  const homeTitle = document.querySelector('#page-home .home-section-title');
+  const sections = document.querySelectorAll('#page-home .section-title');
+  const sidebarItems = document.querySelectorAll('#sidebar .sidebar-item');
+  const filterTitle = document.querySelector('.filter-title');
+  const filterLabels = document.querySelectorAll('.filter-label');
+  const f1Selected = document.getElementById('f1-selected');
+  const f2Selected = document.getElementById('f2-selected');
+  const filterBox = document.getElementById('f4-text');
+  const filterBtn = document.querySelector('.filter-next-btn button');
+  const sidePanelTitle = document.querySelector('.side-panel-title');
+  const detailBreadcrumb = document.querySelector('#page-detail .page-breadcrumb span:last-child');
+  document.querySelectorAll('.bc-link[onclick="goHome()"]').forEach(el => { el.textContent = t('sidebarHome'); });
+  const smartTitle = document.querySelector('#page-smart-search .page-title');
+  const smartBreadcrumb = document.querySelector('#page-smart-search .page-breadcrumb span:last-child');
+  const smartButton = document.querySelector('#page-smart-search .smart-search-wrapper button');
+  if(heroTitle) heroTitle.innerHTML = t('heroTitle');
+  if(heroDesc) heroDesc.textContent = t('heroDesc');
+  const statLabels = document.querySelectorAll('.hero-stat-lbl');
+  if(statLabels[0]) statLabels[0].textContent = t('docs');
+  if(statLabels[1]) statLabels[1].textContent = t('fields');
+  if(statLabels[2]) statLabels[2].textContent = t('topics');
+  if(homeTitle) homeTitle.textContent = t('interest');
+  if(sections[0]) sections[0].textContent = t('latest');
+  if(sections[1]) sections[1].textContent = t('viewed');
+  if(sidebarItems[0]) sidebarItems[0].innerHTML = `<i class="ph ph-house si-icon"></i> ${t('sidebarHome')}`;
+  if(sidebarItems[1]) sidebarItems[1].innerHTML = `<i class="ph ph-funnel si-icon"></i> ${t('sidebarFilter')}`;
+  if(sidebarItems[2]) sidebarItems[2].innerHTML = `<i class="ph ph-plus-circle si-icon"></i> ${t('sidebarAdmin')}`;
+  if(sidebarItems[3]) sidebarItems[3].innerHTML = `<i class="ph ph-book-open-text si-icon"></i> ${t('sidebarGuide')}`;
+  if(sidebarItems[4]) sidebarItems[4].innerHTML = `<i class="ph ph-info si-icon"></i> ${t('sidebarAbout')}`;
+  if(filterTitle) filterTitle.innerHTML = `<i class="ph ph-funnel"></i> ${t('filterTitle')}`;
+  if(filterLabels[0]) filterLabels[0].innerHTML = `<span class="filter-step-num">1</span> ${t('filterFieldType')}`;
+  if(filterLabels[1]) filterLabels[1].innerHTML = `<span class="filter-step-num">2</span> ${t('filterSpecificField')}`;
+  if(filterLabels[2]) filterLabels[2].innerHTML = `<span class="filter-step-num">3</span> ${t('filterQuery')}`;
+  if(f1Selected) f1Selected.textContent = filterState.f1 ? getLVDisplayName(filterState.f1) : t('selectField');
+  if(f2Selected) f2Selected.textContent = filterState.f2 ? getSFDisplayName(filterState.f1, filterState.f2) : (filterState.f1 ? t('selectSpecificField') : t('selectAfterStep1'));
+  if(filterBox) filterBox.placeholder = t('filterPlaceholder');
+  if(filterBtn) filterBtn.textContent = t('applyFilter');
+  if(sidePanelTitle) sidePanelTitle.innerHTML = `<i class="ph ph-clock-counter-clockwise"></i> ${t('latest')}`;
+  if(detailBreadcrumb) detailBreadcrumb.textContent = t('detail');
+  if(smartTitle) smartTitle.textContent = t('smartSearch');
+  if(smartBreadcrumb) smartBreadcrumb.textContent = t('smartSearch');
+  if(smartButton) smartButton.textContent = t('searchTitle');
+}
+
+function getActiveLanguage() {
+  return state && state.uiLang === 'en' ? 'en' : 'vi';
+}
+
+function syncLanguageButtons() {
+  const activeLang = getActiveLanguage();
+  document.documentElement.lang = activeLang;
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    const btnLang = btn.dataset.lang || (btn.id === 'lang-en' ? 'en' : 'vi');
+    btn.classList.toggle('active', btnLang === activeLang);
+  });
+  if(typeof applyStaticTranslations === 'function') applyStaticTranslations();
+}
+
+window.updateCaseLanguageState = function(lang) {
+  state.uiLang = lang === 'en' ? 'en' : 'vi';
+  localStorage.setItem(LANGUAGE_STORAGE_KEY, state.uiLang);
+  syncLanguageButtons();
+  if(typeof renderHome === 'function') renderHome();
+  if(typeof buildFilterF1 === 'function') buildFilterF1();
+  const casesPage = document.getElementById('page-cases');
+  const detailPage = document.getElementById('page-detail');
+  const subfieldsPage = document.getElementById('page-subfields');
+  if(subfieldsPage && subfieldsPage.classList.contains('active') && state.curLV && typeof goSubfields === 'function') goSubfields();
+  if(casesPage && casesPage.classList.contains('active') && typeof renderCasesList === 'function') renderCasesList();
+  if(detailPage && detailPage.classList.contains('active') && state.curCase && typeof goDetail === 'function') goDetail(null, null, state.curCase.id);
+};
+
+function getCaseTranslation(caseObj, lang) {
+  const activeLang = lang || getActiveLanguage();
+  if(activeLang !== 'en' || !caseObj || !caseObj.translations || !caseObj.translations.en) return null;
+  return caseObj.translations.en;
+}
+
+function getCaseFieldText(caseObj, field, lang) {
+  const translated = getCaseTranslation(caseObj, lang);
+  if(translated && translated[field]) return translated[field];
+  return caseObj && caseObj[field] ? caseObj[field] : '';
+}
+
+function getCaseTimeline(caseObj, lang) {
+  const translated = getCaseTranslation(caseObj, lang);
+  if(translated && Array.isArray(translated.timeline) && translated.timeline.length) return translated.timeline;
+  return Array.isArray(caseObj && caseObj.timeline) ? caseObj.timeline : [];
+}
+
+function getDisplayTypeLabel(caseObj) {
+  const isDoc = caseObj && (caseObj.sfId === 'van-ban-phap-luat' || caseObj.sfId === 'giai-dap-nghiep-vu');
+  const star = parseInt(caseObj && caseObj.sao, 10) || 0;
+  if(getActiveLanguage() === 'en') {
+    if(isDoc) return caseObj.sfId === 'van-ban-phap-luat' ? 'Legal document' : 'Judicial professional guidance';
+    if(star === 1) return 'Cassation / reopening';
+    if(star === 2) return 'Experience notice';
+    if(star === 3) return 'Precedent';
+    return 'Trial judgment';
+  }
+  if(isDoc) return caseObj.sfId === 'van-ban-phap-luat' ? 'Văn bản pháp luật' : 'Giải đáp nghiệp vụ';
+  return getTypeLabel(star);
+}
+
+function editorTextFromHtml(html) {
+  const temp = document.createElement('div');
+  temp.innerHTML = String(html || '')
+    .replace(/<div class="detail-section-title">/g, '\n')
+    .replace(/<\/div>/g, '\n')
+    .replace(/<\/p>/g, '\n')
+    .replace(/<br\s*\/?>/gi, '\n');
+  return (temp.textContent || temp.innerText || '').trim();
+}
+
+function setEditorPlainText(id, value) {
+  const el = document.getElementById(id);
+  if(el) el.innerText = editorTextFromHtml(value);
+}
+
+function clearEnglishAdminFields() {
+  ['ad-ten-en','ad-mota-en'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.value = '';
+  });
+  ['ad-tomluoc-en','ad-apdung-en','ad-chitiet-en'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.innerHTML = '';
+  });
+}
+
+function fillEnglishAdminFields(caseObj) {
+  const en = caseObj && caseObj.translations && caseObj.translations.en ? caseObj.translations.en : {};
+  const tenEl = document.getElementById('ad-ten-en');
+  const motaEl = document.getElementById('ad-mota-en');
+  if(tenEl) tenEl.value = en.ten || '';
+  if(motaEl) motaEl.value = en.mo_ta || '';
+  setEditorPlainText('ad-tomluoc-en', en.tom_luoc || '');
+  setEditorPlainText('ad-apdung-en', en.ap_dung || '');
+  setEditorPlainText('ad-chitiet-en', en.chi_tiet || '');
+}
+
+function getEnglishAdminPayload(formatContent) {
+  const ten = (document.getElementById('ad-ten-en') || {}).value || '';
+  const mota = (document.getElementById('ad-mota-en') || {}).value || '';
+  const tomluocText = (document.getElementById('ad-tomluoc-en') || {}).innerText || '';
+  const apdungText = (document.getElementById('ad-apdung-en') || {}).innerText || '';
+  const chitietText = (document.getElementById('ad-chitiet-en') || {}).innerText || '';
+  const payload = {};
+  if(ten.trim()) payload.ten = ten.trim();
+  if(mota.trim()) payload.mo_ta = mota.trim();
+  if(tomluocText.trim()) {
+    payload.tom_luoc = formatContent(tomluocText);
+    payload.timeline = tomluocText.split(/\r?\n/).map(t => t.trim()).filter(Boolean);
+  }
+  if(apdungText.trim()) payload.ap_dung = formatContent(apdungText);
+  if(chitietText.trim()) payload.chi_tiet = formatContent(chitietText);
+  if(Object.keys(payload).length === 0) return null;
+  payload.provider = 'manual-admin';
+  payload.translatedAt = new Date().toISOString();
+  return payload;
+}
 
 function showAlert(msg) { document.getElementById('modal-title').innerHTML = '<i class="ph ph-bell"></i> Thông báo'; document.getElementById('modal-body').innerHTML = `<p>${msg}</p>`; document.getElementById('info-modal').classList.add('open'); }
 
@@ -787,15 +1129,15 @@ function renderHome(){
     const searchCard = `
       <div class="lv-card" onclick="showPage('page-smart-search')" style="border-color: var(--navy); background: var(--surface2);">
         <div class="lv-card-icon"><i class="ph ph-magnifying-glass"></i></div>
-        <div class="lv-card-title">Tra cứu tình huống</div>
-        <div class="lv-card-count">Tìm kiếm thông minh</div>
+        <div class="lv-card-title">${t('smartSearch')}</div>
+        <div class="lv-card-count">${t('smartSearchShort')}</div>
       </div>
     `;
     grid.innerHTML = searchCard + LINH_VUC_LUAT.map(lv=>`
       <div class="lv-card" onclick="goSubfields('${lv.id}')">
         <div class="lv-card-icon">${lv.icon}</div>
-        <div class="lv-card-title">${lv.ten}</div>
-        <div class="lv-card-count">${lv.totalCases} tài liệu</div>
+        <div class="lv-card-title">${getLVDisplayName(lv)}</div>
+        <div class="lv-card-count">${lv.totalCases} ${t('documents')}</div>
       </div>
     `).join('');
   }
@@ -804,26 +1146,28 @@ function renderHome(){
   if(recGrid) {
     recGrid.innerHTML = RECENT_UPDATES.slice(0, 6).map((r,i)=>{
       const lv = getLVById(r.lvId); const imgUrl = RECENT_THUMBS[i % RECENT_THUMBS.length]; const isNew = i === 0 || i === 1;
+      const found = findCaseById(r.id); const displayTitle = found ? getCaseFieldText(found.cas, 'ten') : r.ten;
       return `
         <div class="recent-card" onclick="goDetail('${r.lvId}','${r.sfId}','${r.id}')">
-          <div class="recent-card-img"><img src="${imgUrl}" alt="${lv?lv.ten:''}" loading="lazy"></div>
-          <div class="recent-card-body"><div class="recent-card-name">${r.ten}${isNew?' <span class="new-badge">MỚI</span>':''}</div><div class="recent-card-type">${lv?lv.ten:''}</div></div>
+          <div class="recent-card-img"><img src="${imgUrl}" alt="${lv?getLVDisplayName(lv):''}" loading="lazy"></div>
+          <div class="recent-card-body"><div class="recent-card-name">${displayTitle}${isNew?` <span class="new-badge">${t('newBadge')}</span>`:''}</div><div class="recent-card-type">${lv?getLVDisplayName(lv):''}</div></div>
         </div>
       `;
     }).join('');
   }
 
-  renderReadHistory(); renderDesktopRecent();
+  renderReadHistory(); renderDesktopRecent(); applyStaticTranslations();
 }
 
 function renderDesktopRecent(){
   const container = document.getElementById('desktop-recent-list'); if(!container) return;
   container.innerHTML = RECENT_UPDATES.slice(0, 8).map((r,i)=>{
     const lv = getLVById(r.lvId); const isNew = i === 0 || i === 1;
+    const found = findCaseById(r.id); const displayTitle = found ? getCaseFieldText(found.cas, 'ten') : r.ten;
     return `
       <div class="dt-recent-item" onclick="goDetail('${r.lvId}','${r.sfId}','${r.id}')">
-        <div class="dt-recent-lv">${lv?lv.icon:''} ${lv?lv.ten:''} ${isNew?'<span class="new-badge" style="margin-left:auto">MỚI</span>':''}</div>
-        <div class="dt-recent-name">${r.ten}</div>
+        <div class="dt-recent-lv">${lv?lv.icon:''} ${lv?getLVDisplayName(lv):''} ${isNew?`<span class="new-badge" style="margin-left:auto">${t('newBadge')}</span>`:''}</div>
+        <div class="dt-recent-name">${displayTitle}</div>
       </div>
     `;
   }).join('');
@@ -831,13 +1175,15 @@ function renderDesktopRecent(){
 
 function renderReadHistory(){
   const container = document.getElementById('read-history-container');
-  if(state.readHistory.length===0){ container.innerHTML = `<div class="empty-history">Bạn chưa xem tài liệu nào.<br><span style="font-size:0.8rem;margin-top:6px;display:block;">Hãy khám phá các lĩnh vực luật phía trên!</span></div>`; return; }
+  if(state.readHistory.length===0){ container.innerHTML = `<div class="empty-history">${t('noHistory')}</div>`; return; }
   const html = state.readHistory.slice().reverse().slice(0,10).map(h=>{
     const lv = getLVById(h.lvId);
+    const found = findCaseById(h.id);
+    const displayTitle = found ? getCaseFieldText(found.cas, 'ten') : h.ten;
     return `
       <div class="rh-item" onclick="goDetail('${h.lvId}','${h.sfId}','${h.id}')">
         <div class="rh-item-icon">${lv?lv.icon:''}</div>
-        <div class="rh-item-info"><div class="rh-item-name">${h.ten}</div><div class="rh-item-meta">${lv?lv.ten:''} · ${getTypeLabel(h.sao)}</div></div>
+        <div class="rh-item-info"><div class="rh-item-name">${displayTitle}</div><div class="rh-item-meta">${lv?getLVDisplayName(lv):''} · ${found ? getDisplayTypeLabel(found.cas) : getTypeLabel(h.sao)}</div></div>
       </div>
     `;
   }).join('');
@@ -846,11 +1192,11 @@ function renderReadHistory(){
 
 function goSubfields(lvId){
   if(lvId) state.curLV = getLVById(lvId); if(!state.curLV) return;
-  document.getElementById('sf-breadcrumb-cur').textContent = state.curLV.ten; document.getElementById('sf-title').textContent = state.curLV.ten;
+  document.getElementById('sf-breadcrumb-cur').textContent = getLVDisplayName(state.curLV); document.getElementById('sf-title').textContent = getLVDisplayName(state.curLV);
   const list = document.getElementById('subfield-list');
   list.innerHTML = state.curLV.subfields.map(sf=>`
     <div class="subfield-item" onclick="goCasesList('${state.curLV.id}','${sf.id}')">
-      <div class="subfield-item-left"><div class="subfield-item-icon"><i class="ph ph-folder-open"></i></div><div><div class="subfield-item-name">${sf.ten}</div><div class="subfield-item-count">${sf.soLuong} tài liệu</div></div></div><div class="subfield-item-arrow"><i class="ph ph-caret-right"></i></div>
+      <div class="subfield-item-left"><div class="subfield-item-icon"><i class="ph ph-folder-open"></i></div><div><div class="subfield-item-name">${getSFDisplayName(state.curLV.id, sf)}</div><div class="subfield-item-count">${sf.soLuong} ${t('documents')}</div></div></div><div class="subfield-item-arrow"><i class="ph ph-caret-right"></i></div>
     </div>
   `).join('');
   showPage('page-subfields');
@@ -868,9 +1214,9 @@ function goCasesList(lvId, sfId) {
   document.getElementById('cases-bc-lv').style.display = 'inline';
   document.getElementById('cases-sep-1').style.display = 'inline';
   document.getElementById('cases-sep-2').style.display = 'inline';
-  document.getElementById('cases-bc-lv').textContent = foundLV.ten;
-  document.getElementById('cases-bc-sf').textContent = foundSF.ten;
-  document.getElementById('cases-title').textContent = foundSF.ten;
+  document.getElementById('cases-bc-lv').textContent = getLVDisplayName(foundLV);
+  document.getElementById('cases-bc-sf').textContent = getSFDisplayName(foundLV.id, foundSF);
+  document.getElementById('cases-title').textContent = getSFDisplayName(foundLV.id, foundSF);
 
   renderCasesList();
   showPage('page-cases');
@@ -883,12 +1229,26 @@ function executeSmartSearchPage() {
   const query = document.getElementById('smart-search-input-page').value.trim(); if(!query) return;
   closeFilter(); state.searchQuery = query; state.curSF = null; state.curPage = 1;
   document.getElementById('cases-bc-lv').style.display = 'none'; document.getElementById('cases-sep-1').style.display = 'none'; document.getElementById('cases-sep-2').style.display = 'none';
-  document.getElementById('cases-bc-sf').textContent = `Kết quả: "${query}"`; document.getElementById('cases-title').textContent = `Tìm kiếm: "${query}"`;
+  document.getElementById('cases-bc-sf').textContent = `${t('searchResult')}: "${query}"`; document.getElementById('cases-title').textContent = `${t('searchTitle')}: "${query}"`;
   renderCasesList(); showPage('page-cases'); document.getElementById('pagination-bar').classList.add('visible');
 }
 
 function renderCasesList(){
   let cases = [];
+  if(state.searchQuery) {
+    const queryLabel = state.searchQuery;
+    const bcSf = document.getElementById('cases-bc-sf');
+    const titleEl = document.getElementById('cases-title');
+    if(bcSf) bcSf.textContent = `${t('searchResult')}: "${queryLabel}"`;
+    if(titleEl) titleEl.textContent = `${t('searchTitle')}: "${queryLabel}"`;
+  } else if(state.curLV && state.curSF) {
+    const bcLv = document.getElementById('cases-bc-lv');
+    const bcSf = document.getElementById('cases-bc-sf');
+    const titleEl = document.getElementById('cases-title');
+    if(bcLv) bcLv.textContent = getLVDisplayName(state.curLV);
+    if(bcSf) bcSf.textContent = getSFDisplayName(state.curLV.id, state.curSF);
+    if(titleEl) titleEl.textContent = getSFDisplayName(state.curLV.id, state.curSF);
+  }
   
   if(state.searchQuery) {
     const rawQuery = state.searchQuery.trim().toLowerCase();
@@ -898,9 +1258,10 @@ function renderCasesList(){
     let scoredCases = [];
     for(const bucketKey in CASES_DATA) {
       CASES_DATA[bucketKey].forEach(c => {
-        const fullContent = (c.ten + ' ' + (c.mo_ta||'') + ' ' + (c.tom_luoc||'') + ' ' + (c.chi_tiet||'') + ' ' + (c.ap_dung||'')).replace(/<[^>]*>?/gm, ' ');
+        const en = c.translations && c.translations.en ? c.translations.en : {};
+        const fullContent = ([c.ten, c.mo_ta, c.tom_luoc, c.chi_tiet, c.ap_dung, en.ten, en.mo_ta, en.tom_luoc, en.chi_tiet, en.ap_dung].join(' ')).replace(/<[^>]*>?/gm, ' ');
         const cTextStr = removeAccents(fullContent).toLowerCase();
-        const cTitleStr = removeAccents(c.ten).toLowerCase();
+        const cTitleStr = removeAccents([c.ten, en.ten].join(' ')).toLowerCase();
         
         let score = 0;
         let exactPhrase = false;
@@ -941,28 +1302,30 @@ function renderCasesList(){
 
   const list = document.getElementById('cases-list');
   if(pageCases.length===0){
-    list.innerHTML = `<div class="empty-history"><i class="ph ph-warning-circle" style="font-size:2rem; margin-bottom:10px;"></i><br>Không tìm thấy tài liệu nào khớp chính xác với từ khóa của bạn.</div>`;
+    list.innerHTML = `<div class="empty-history"><i class="ph ph-warning-circle" style="font-size:2rem; margin-bottom:10px;"></i><br>${t('noResults')}</div>`;
   } else {
     list.innerHTML = pageCases.map(c=>{
       const isDoc = c.sfId === 'van-ban-phap-luat' || c.sfId === 'giai-dap-nghiep-vu';
       const starHtml = isDoc ? '' : `<div class="case-stars">${'⭐'.repeat(c.sao || 0)}</div>`;
+      const displayTitle = getCaseFieldText(c, 'ten');
+      const displayDesc = getCaseFieldText(c, 'mo_ta');
       return `
       <div class="case-item" id="ci-${c.id}">
         <div class="case-item-header">
-          <div class="case-item-left">${starHtml}<div class="case-name" onclick="goDetail(null,null,'${c.id}')">${c.ten}</div></div>
+          <div class="case-item-left">${starHtml}<div class="case-name" onclick="goDetail(null,null,'${c.id}')">${displayTitle}</div></div>
           <div style="display:flex; gap:6px;">
             ${isAdminMode ? `<button class="case-expand-btn" onclick="editCase('${c.id}')" title="Chỉnh sửa"><i class="ph ph-pencil-simple"></i></button>` : ''}
             <button class="case-expand-btn" onclick="toggleCase('${c.id}',this)" title="Xem mô tả"><i class="ph ph-caret-down"></i></button>
           </div>
         </div>
         <div class="case-desc" id="cd-${c.id}">
-          <p style="white-space: pre-wrap; margin:0;">${c.mo_ta || '(Chưa có mô tả ngắn)'}</p>
-          <button class="read-more-btn" onclick="goDetail(null,null,'${c.id}')">Xem chi tiết tài liệu <i class="ph ph-arrow-right"></i></button>
+          <p style="white-space: pre-wrap; margin:0;">${displayDesc || (getActiveLanguage() === 'en' ? '(No short summary yet)' : '(Chưa có mô tả ngắn)')}</p>
+          <button class="read-more-btn" onclick="goDetail(null,null,'${c.id}')">${t('readMore')} <i class="ph ph-arrow-right"></i></button>
         </div>
       </div>
     `}).join('');
   }
-  document.getElementById('pg-text').textContent = `Trang ${state.curPage}/${totalPages}`;
+  document.getElementById('pg-text').textContent = `${t('page')} ${state.curPage}/${totalPages}`;
   document.getElementById('pg-prev').disabled = state.curPage<=1; document.getElementById('pg-next').disabled = state.curPage>=totalPages;
 }
 
@@ -993,9 +1356,9 @@ function goDetail(lvId, sfId, caseId){
   const existing = state.readHistory.find(h=>h.id===cas.id);
   if(!existing){ state.readHistory.push({ id:cas.id, ten:cas.ten, sao:cas.sao||0, lvId:state.curLV?state.curLV.id:'', sfId:actualSfId }); }
 
-  document.getElementById('det-bc-lv').textContent = state.curLV ? state.curLV.ten : '';
-  document.getElementById('det-bc-sf').textContent = state.curSF ? state.curSF.ten : '';
-  document.getElementById('case-detail-title').textContent = cas.ten;
+  document.getElementById('det-bc-lv').textContent = state.curLV ? getLVDisplayName(state.curLV) : '';
+  document.getElementById('det-bc-sf').textContent = state.curSF ? getSFDisplayName(state.curLV ? state.curLV.id : '', state.curSF) : '';
+  document.getElementById('case-detail-title').textContent = getCaseFieldText(cas, 'ten');
   
   // KIỂM TRA VÀ GẮN ẢNH NỀN (HERO IMAGE) CHO TRANG CHI TIẾT
   const hero = document.getElementById('case-hero');
@@ -1005,7 +1368,7 @@ function goDetail(lvId, sfId, caseId){
   }
 
   const isDoc = cas.sfId === 'van-ban-phap-luat' || cas.sfId === 'giai-dap-nghiep-vu';
-  const typeLabel = isDoc ? (cas.sfId === 'van-ban-phap-luat' ? 'Văn bản pháp luật' : 'Giải đáp nghiệp vụ') : getTypeLabel(cas.sao||0);
+  const typeLabel = getDisplayTypeLabel(cas);
   
   const dienBienEl = document.getElementById('tc-dien-bien');
   const apDungEl = document.getElementById('tc-ap-dung');
@@ -1014,45 +1377,47 @@ function goDetail(lvId, sfId, caseId){
   if (isDoc) {
       document.getElementById('case-detail-stars').innerHTML = `<span class="case-detail-type"><i class="ph ph-file-text"></i> ${typeLabel}</span>`;
       document.getElementById('tab-row-container').innerHTML = `
-        <button class="tab-btn active" id="tab-chi-tiet" onclick="switchTab('chi-tiet')"><i class="ph ph-text-align-left"></i> Nội dung chi tiết</button>
+        <button class="tab-btn active" id="tab-chi-tiet" onclick="switchTab('chi-tiet')"><i class="ph ph-text-align-left"></i> ${t('detailedContent')}</button>
       `;
       document.getElementById('tab-row-container').className = 'tab-row one-tab'; 
       
       dienBienEl.innerHTML = ''; apDungEl.innerHTML = '';
       
-      const detailContent = cas.chi_tiet || cas.tom_luoc || cas.ap_dung || '';
+      const detailContent = getCaseFieldText(cas, 'chi_tiet') || getCaseFieldText(cas, 'tom_luoc') || getCaseFieldText(cas, 'ap_dung') || '';
       if(detailContent){
         chiTietEl.innerHTML = autoLinkLaws(detailContent);
-      } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>Nội dung chi tiết sẽ được cập nhật sau.</p></div>`; }
+      } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>${t('detailLater')}</p></div>`; }
 
       switchTab('chi-tiet');
   } else {
       document.getElementById('case-detail-stars').innerHTML = cas.sao > 0 ? `<span>${'⭐'.repeat(cas.sao)}</span><span class="case-detail-type">${typeLabel}</span>` : `<span class="case-detail-type">${typeLabel}</span>`;
       document.getElementById('tab-row-container').innerHTML = `
-        <button class="tab-btn active" id="tab-dien-bien" onclick="switchTab('dien-bien')"><i class="ph ph-clock"></i> Dòng thời gian</button>
-        <button class="tab-btn" id="tab-ap-dung" onclick="switchTab('ap-dung')"><i class="ph ph-lightbulb"></i> Áp dụng tương tự</button>
-        <button class="tab-btn" id="tab-chi-tiet" onclick="switchTab('chi-tiet')"><i class="ph ph-file-text"></i> Bản chi tiết</button>
+        <button class="tab-btn active" id="tab-dien-bien" onclick="switchTab('dien-bien')"><i class="ph ph-clock"></i> ${t('timeline')}</button>
+        <button class="tab-btn" id="tab-ap-dung" onclick="switchTab('ap-dung')"><i class="ph ph-lightbulb"></i> ${t('analogousUse')}</button>
+        <button class="tab-btn" id="tab-chi-tiet" onclick="switchTab('chi-tiet')"><i class="ph ph-file-text"></i> ${t('fullText')}</button>
       `;
       document.getElementById('tab-row-container').className = 'tab-row';
 
-      if(cas.timeline && cas.timeline.length > 0){
+      const displayTimeline = getCaseTimeline(cas);
+      if(displayTimeline && displayTimeline.length > 0){
         let tlHtml = `<div class="timeline-container">`;
-        cas.timeline.forEach(t => {
+        displayTimeline.forEach(t => {
           let dateText = "●"; let descText = t;
           if (typeof t === 'object') { dateText = t.date; descText = t.desc; }
           tlHtml += `<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">${dateText}</div><div class="timeline-desc">${autoLinkLaws(descText)}</div></div>`;
         });
         tlHtml += `</div>`;
         dienBienEl.innerHTML = tlHtml;
-      } else { dienBienEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-clock"></i><p>Diễn biến vụ án chưa được cập nhật.</p></div>`; }
+      } else { dienBienEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-clock"></i><p>${t('timelineLater')}</p></div>`; }
 
-      if(cas.ap_dung){ apDungEl.innerHTML = `<div class="detail-section">${autoLinkLaws(cas.ap_dung)}</div>`; }
-      else { apDungEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-lightbulb"></i><p>Chưa có nội dung áp dụng.</p></div>`; }
+      const displayApply = getCaseFieldText(cas, 'ap_dung');
+      if(displayApply){ apDungEl.innerHTML = `<div class="detail-section">${autoLinkLaws(displayApply)}</div>`; }
+      else { apDungEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-lightbulb"></i><p>${t('applyLater')}</p></div>`; }
 
-      const detailContent = cas.chi_tiet || cas.tom_luoc || '';
+      const detailContent = getCaseFieldText(cas, 'chi_tiet') || getCaseFieldText(cas, 'tom_luoc') || '';
       if(detailContent){
         chiTietEl.innerHTML = autoLinkLaws(detailContent);
-      } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-file-text"></i><p>Nội dung chi tiết sẽ được cập nhật sau.</p></div>`; }
+      } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-file-text"></i><p>${t('detailLater')}</p></div>`; }
 
       switchTab('dien-bien');
   }
@@ -1086,14 +1451,14 @@ function closeFilter(){ document.getElementById('side-left').classList.remove('o
 function handleFilterOverlayClick(e){ if(e.target===document.getElementById('side-left')) closeFilter(); }
 function buildFilterF1(){
   const list = document.getElementById('f1-list'); if (!list) return;
-  list.innerHTML = LINH_VUC_LUAT.map(lv=>`<div class="filter-option ${filterState.f1===lv.id?'selected':''}" onclick="selectFilter('f1','${lv.id}','${lv.ten}')">${lv.icon} ${lv.ten}</div>`).join('');
+  list.innerHTML = LINH_VUC_LUAT.map(lv=>`<div class="filter-option ${filterState.f1===lv.id?'selected':''}" onclick="selectFilter('f1','${lv.id}','${getLVDisplayName(lv)}')">${lv.icon} ${getLVDisplayName(lv)}</div>`).join('');
 }
 function selectFilter(fnum, val, label){
   if(fnum==='f1'){
     filterState.f1 = val; filterState.f2 = null;
     document.getElementById('f1-selected').textContent = label; document.getElementById('f1-list').classList.remove('open'); document.querySelector('[onclick="toggleFilter(\'f1\')"]').classList.remove('expanded');
-    const f2dd = document.getElementById('f2-dropdown'); f2dd.classList.remove('filter-disabled'); document.getElementById('f2-selected').textContent = '— Chọn lĩnh vực cụ thể —';
-    const lv = getLVById(val); const f2list = document.getElementById('f2-list'); f2list.innerHTML = lv ? lv.subfields.map(sf=>`<div class="filter-option ${filterState.f2===sf.id?'selected':''}" onclick="selectFilter('f2','${sf.id}','${sf.ten}')">${sf.ten}</div>`).join('') : '';
+    const f2dd = document.getElementById('f2-dropdown'); f2dd.classList.remove('filter-disabled'); document.getElementById('f2-selected').textContent = t('selectSpecificField');
+    const lv = getLVById(val); const f2list = document.getElementById('f2-list'); f2list.innerHTML = lv ? lv.subfields.map(sf=>`<div class="filter-option ${filterState.f2===sf.id?'selected':''}" onclick="selectFilter('f2','${sf.id}','${getSFDisplayName(lv.id, sf)}')">${getSFDisplayName(lv.id, sf)}</div>`).join('') : '';
   } else if(fnum==='f2'){
     filterState.f2 = val;
     document.getElementById('f2-selected').textContent = label; document.getElementById('f2-list').classList.remove('open'); document.querySelector('[onclick="toggleFilter(\'f2\')"]').classList.remove('expanded');
@@ -1108,11 +1473,21 @@ function applyFilter(){
   state.searchQuery = ''; 
   const searchInput = document.getElementById('smart-search-input-page'); if(searchInput) searchInput.value = '';
   document.getElementById('cases-bc-lv').style.display = 'inline'; document.getElementById('cases-sep-1').style.display = 'inline'; document.getElementById('cases-sep-2').style.display = 'inline';
-  document.getElementById('cases-bc-lv').textContent = state.curLV.ten; document.getElementById('cases-bc-sf').textContent = state.curSF.ten; document.getElementById('cases-title').textContent = state.curSF.ten;
+  document.getElementById('cases-bc-lv').textContent = getLVDisplayName(state.curLV); document.getElementById('cases-bc-sf').textContent = getSFDisplayName(state.curLV.id, state.curSF); document.getElementById('cases-title').textContent = getSFDisplayName(state.curLV.id, state.curSF);
   renderCasesList(); showPage('page-cases'); document.getElementById('pagination-bar').classList.add('visible');
 }
 
 function openHuongDan(){
+  if(getActiveLanguage() === 'en') {
+    closeSidebar(); document.getElementById('modal-title').innerHTML = '<i class="ph ph-book-open-text"></i> User guide';
+    document.getElementById('modal-body').innerHTML = `
+      <div style="margin-bottom: 16px;"><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">Search</h4><p style="margin-bottom: 8px;">Enter keywords or a legal situation to search matching documents.</p></div>
+      <div style="margin-bottom: 16px;"><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">Language</h4><p style="margin-bottom: 8px;">Use <strong>VN | EN</strong> in the top-right corner. The English view uses the admin-provided English content where available.</p></div>
+      <div><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">Document types</h4><p style="line-height: 1.8;">No star: Trial judgment<br>One star: Cassation / reopening<br>Two stars: Experience notice<br>Three stars: Precedent</p></div>
+    `;
+    document.getElementById('info-modal').classList.add('open');
+    return;
+  }
   closeSidebar(); document.getElementById('modal-title').innerHTML = '<i class="ph ph-book-open-text"></i> Hướng dẫn sử dụng';
   document.getElementById('modal-body').innerHTML = `
     <div style="margin-bottom: 16px;">
@@ -1132,6 +1507,15 @@ function openHuongDan(){
 }
 
 function openGioiThieu(){
+  if(getActiveLanguage() === 'en') {
+    closeSidebar(); document.getElementById('modal-title').innerHTML = '<i class="ph ph-info"></i> About';
+    document.getElementById('modal-body').innerHTML = `
+      <p style="margin-bottom: 12px;"><strong>Đấu Chiến Thắng Luật.com</strong> is a legal research platform for judgments, precedents and legal documents.</p>
+      <p style="margin-bottom: 12px;">The content is for reference. For a real case, compare against the Vietnamese source and seek legal advice where needed.</p>
+    `;
+    document.getElementById('info-modal').classList.add('open');
+    return;
+  }
   closeSidebar(); document.getElementById('modal-title').innerHTML = '<i class="ph ph-info"></i> Giới thiệu';
   document.getElementById('modal-body').innerHTML = `
     <p style="margin-bottom: 12px;"><strong>Đấu Chiến Thắng Luật.com</strong> là nền tảng thư viện bản án và tra cứu pháp lý thông minh hàng đầu Việt Nam.</p>
@@ -1161,12 +1545,14 @@ function openAdmin() {
     document.getElementById('ad-submit-btn').textContent = 'Lưu Dữ Liệu';
     adminFormLaws = []; renderLawsList();
     document.querySelector('.info-modal-title').innerHTML = '<i class="ph ph-gear"></i> Thêm Mới Dữ Liệu';
+    clearEnglishAdminFields();
     restoreAdminDataFromStorage();
   } else {
     const lvSel = document.getElementById('ad-lv');
     lvSel.innerHTML = '<option value="">-- Chọn lĩnh vực --</option>' + LINH_VUC_LUAT.map(lv => `<option value="${lv.id}">${lv.ten}</option>`).join('') + '<option value="NEW" style="font-weight:bold;color:var(--navy);">+ Thêm lĩnh vực mới...</option>';
     document.getElementById('ad-submit-btn').textContent = 'Cập Nhật';
   }
+  syncAdminContentPartVisibility();
   document.getElementById('admin-modal').classList.add('open');
 }
 
@@ -1179,8 +1565,9 @@ function updateAdminSF() {
       newLvInput.style.display = 'none'; sfSel.style.display = 'block'; newSfInput.style.display = 'none';
       const lv = getLVById(lvId); sfSel.innerHTML = lv ? lv.subfields.map(sf => `<option value="${sf.id}">${sf.ten}</option>`).join('') + '<option value="NEW" style="font-weight:bold;color:var(--navy);">+ Thêm chủ đề mới...</option>' : '';
   }
+  syncAdminContentPartVisibility();
 }
-function checkNewSF() { const sfId = document.getElementById('ad-sf').value; document.getElementById('ad-new-sf').style.display = (sfId === 'NEW') ? 'block' : 'none'; }
+function checkNewSF() { const sfId = document.getElementById('ad-sf').value; document.getElementById('ad-new-sf').style.display = (sfId === 'NEW') ? 'block' : 'none'; syncAdminContentPartVisibility(); }
 function closeAdmin() { editingCaseId = null; document.getElementById('admin-modal').classList.remove('open'); }
 
 window.handlePasteAsPlainText = function(e) {
@@ -1203,14 +1590,19 @@ function editCase(caseId) {
   document.getElementById('ad-tomluoc').innerHTML = (c.tom_luoc || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
   document.getElementById('ad-apdung').innerHTML = (c.ap_dung || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
   document.getElementById('ad-chitiet').innerHTML = (c.chi_tiet || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
+  fillEnglishAdminFields(c);
   
   adminFormLaws = c.laws ? [...c.laws] : []; renderLawsList();
   document.querySelector('.info-modal-title').innerHTML = '<i class="ph ph-pencil-simple"></i> Chỉnh Sửa Dữ Liệu';
   document.getElementById('ad-submit-btn').textContent = 'Cập Nhật'; openAdmin();
+  document.getElementById('ad-lv').value = c.lvId || '';
+  updateAdminSF();
+  document.getElementById('ad-sf').value = c.sfId || '';
+  checkNewSF();
 }
 
 function detectLawsFromContent() {
-  const fullContent = document.getElementById('ad-tomluoc').innerText + ' ' + document.getElementById('ad-apdung').innerText + ' ' + document.getElementById('ad-chitiet').innerText;
+  const fullContent = document.getElementById('ad-ten').value + ' ' + document.getElementById('ad-mota').value + ' ' + document.getElementById('ad-tomluoc').innerText + ' ' + document.getElementById('ad-apdung').innerText + ' ' + document.getElementById('ad-chitiet').innerText;
   const detectedLaws = extractAllLawsFromText(fullContent);
   if(detectedLaws.length === 0) { showAlert('Không tìm thấy Điều luật nào.'); return; }
   
@@ -1222,6 +1614,21 @@ function detectLawsFromContent() {
     }
   });
   renderLawsList(); showAlert(`Đã nhận diện ${detectedLaws.length} Điều luật!`);
+}
+
+function detectEnglishLawsFromContent() {
+  const fullContent = document.getElementById('ad-ten-en').value + ' ' + document.getElementById('ad-mota-en').value + ' ' + document.getElementById('ad-tomluoc-en').innerText + ' ' + document.getElementById('ad-apdung-en').innerText + ' ' + document.getElementById('ad-chitiet-en').innerText;
+  const detectedLaws = extractEnglishLawsFromText(fullContent);
+  if(detectedLaws.length === 0) { showAlert('Không tìm thấy Article/Clause tiếng Anh nào.'); return; }
+
+  detectedLaws.forEach(lawText => {
+    if(!adminFormLaws.find(l => (l.name || '').toLowerCase() === lawText.toLowerCase())) {
+      const lawKey = getLawKeyFromText(lawText);
+      const lawContent = LAW_DB[lawKey] ? LAW_DB[lawKey].content.replace(/<[^>]*>/g, '') : '';
+      adminFormLaws.push({ name: lawText, content: lawContent });
+    }
+  });
+  renderLawsList(); showAlert(`Đã nhận diện ${detectedLaws.length} điều luật tiếng Anh!`);
 }
 
 function addNewLawManual() {
@@ -1331,6 +1738,7 @@ function submitAdmin() {
       }).join('');
   }
 
+  let englishPayload = getEnglishAdminPayload(formatContent);
   const timelineArr = tomluocText.split(/\r?\n/).map(t => t.trim()).filter(t => t.length > 0);
   let sao = 0; if (sfId === 'an-le') sao = 3; else if (sfId === 'tb-rut-kinh-nghiem') sao = 2; else sao = parseInt(document.getElementById('ad-tinhchat').value) || 0;
 
@@ -1338,12 +1746,24 @@ function submitAdmin() {
   if(lvId === 'NEW') lvId = createSlug(finalLvName);
   let finalSfName = getSFById(lvId, sfId) ? getSFById(lvId, sfId).ten : document.getElementById('ad-new-sf').value;
   if(sfId === 'NEW' || document.getElementById('ad-lv').value === 'NEW') sfId = createSlug(finalSfName);
+  const detailOnly = isDetailOnlySubfield(sfId);
+  if(detailOnly && englishPayload) {
+      delete englishPayload.tom_luoc;
+      delete englishPayload.ap_dung;
+      delete englishPayload.timeline;
+      if(!englishPayload.ten && !englishPayload.mo_ta && !englishPayload.chi_tiet) englishPayload = null;
+  }
 
   const caseData = {
       id: editingCaseId || 'case_' + Date.now(), ten: ten, mo_ta: mota, lvId: lvId, lvName: finalLvName, sfId: sfId, sfName: finalSfName,
       sao: sao, ngay: editingCaseId ? findCaseById(editingCaseId).cas.ngay : new Date().toISOString(),
-      tom_luoc: formatContent(tomluocText), ap_dung: formatContent(apdungText), chi_tiet: formatContent(chitietText), timeline: timelineArr, laws: adminFormLaws
+      tom_luoc: detailOnly ? '' : formatContent(tomluocText), ap_dung: detailOnly ? '' : formatContent(apdungText), chi_tiet: formatContent(chitietText), timeline: detailOnly ? [] : timelineArr, laws: adminFormLaws
   };
+
+  if(englishPayload) {
+      caseData.translations = { en: englishPayload };
+      caseData.translationMeta = { en: { status: 'ready', provider: 'manual-admin', translatedAt: englishPayload.translatedAt } };
+  }
 
   const btn = document.getElementById('ad-submit-btn'); btn.textContent = 'Đang xử lý...'; btn.disabled = true;
 
@@ -1372,7 +1792,7 @@ function submitAdmin() {
   }
 
   saveCasesDataToStorage();
-  document.getElementById('ad-ten').value = ''; document.getElementById('ad-mota').value = ''; document.getElementById('ad-tomluoc').innerHTML = ''; document.getElementById('ad-apdung').innerHTML = ''; document.getElementById('ad-chitiet').innerHTML = '';
+  document.getElementById('ad-ten').value = ''; document.getElementById('ad-mota').value = ''; document.getElementById('ad-tomluoc').innerHTML = ''; document.getElementById('ad-apdung').innerHTML = ''; document.getElementById('ad-chitiet').innerHTML = ''; clearEnglishAdminFields();
   editingCaseId = null; renderHome(); if(state.curSF) renderCasesList();
   btn.textContent = 'Lưu Dữ Liệu'; btn.disabled = false; closeAdmin(); showAlert('Đã lưu thành công!');
 }
@@ -1381,8 +1801,10 @@ window.addEventListener('scroll',()=>{ document.getElementById('global-header').
 
 function safeInit() { 
     restoreCasesDataFromStorage(); 
+    const savedLang = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    if(savedLang === 'en' || savedLang === 'vi') state.uiLang = savedLang;
     try { Object.assign(LAW_DB, JSON.parse(localStorage.getItem('dcsl_law_db'))); } catch(e){}
-    renderHome(); buildFilterF1(); 
+    renderHome(); buildFilterF1(); syncLanguageButtons();
 }
 if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', safeInit); } else { safeInit(); }
 
