@@ -609,71 +609,154 @@ function preserveIndentation(html) {
     });
 }
 
+const LAW_NUMBER_PATTERN = '\\d+(?:\\.\\d+)*[a-zA-Z]?';
+const VI_LAW_PREFIX_PATTERN = '(?:(?:(?:ti\\u1ec3u\\s*m\\u1ee5c|m\\u1ee5c|kho\\u1ea3n|\\u0111i\\u1ec3m)\\s+[0-9a-zA-Z.]+)\\s+){0,3}';
+const VI_LAW_ARTICLE_PATTERN = `\\u0111i\\u1ec1u\\s+${LAW_NUMBER_PATTERN}`;
+const VI_LAW_SOURCE_PATTERN = '(?:\\s+(?:c\\u1ee7a\\s+)?(?:b\\u1ed9\\s+lu\\u1eadt|lu\\u1eadt)\\s+[^,.;:\\n<]{1,90}(?:\\s+n\\u0103m\\s+\\d{4})?)?';
+const VI_LAW_REF_PATTERN = `${VI_LAW_PREFIX_PATTERN}${VI_LAW_ARTICLE_PATTERN}`;
+const VI_LAW_FULL_PATTERN = `${VI_LAW_REF_PATTERN}${VI_LAW_SOURCE_PATTERN}`;
+const EN_LAW_PREFIX_PATTERN = '(?:(?:(?:Subsection|Section|Clause|Point)\\s+[0-9a-zA-Z.]+(?:\\s*,)?)\\s+){0,3}';
+const EN_LAW_ARTICLE_PATTERN = `Article\\s+${LAW_NUMBER_PATTERN}`;
+const EN_LAW_SOURCE_PATTERN = '(?:\\s+(?:of\\s+)?(?:the\\s+)?(?:(?:Civil|Criminal|Labor|Land|Enterprise|Commercial|Administrative)\\s+(?:Code|Law)|Law\\s+on\\s+[^,.;:\\n<]{1,90})(?:\\s+\\d{4})?)?';
+const EN_LAW_REF_PATTERN = `${EN_LAW_PREFIX_PATTERN}${EN_LAW_ARTICLE_PATTERN}`;
+const EN_LAW_FULL_PATTERN = `${EN_LAW_REF_PATTERN}${EN_LAW_SOURCE_PATTERN}`;
+
+function cleanInlineText(text) {
+  return (text || '').toString().replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function normalizeLawLookupText(text) {
+  return cleanInlineText(text).toLowerCase();
+}
+
+function escapeRegExp(text) {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function getLawArticleNumber(lawText) {
+  const cleanText = cleanInlineText(lawText);
+  const viMatch = cleanText.match(new RegExp(`\\u0111i\\u1ec1u\\s+(${LAW_NUMBER_PATTERN})`, 'i'));
+  if(viMatch) return viMatch[1].toLowerCase();
+  const enMatch = cleanText.match(new RegExp(`\\bArticle\\s+(${LAW_NUMBER_PATTERN})`, 'i'));
+  return enMatch ? enMatch[1].toLowerCase() : null;
+}
+
 function extractAllLawsFromText(text) {
   if(!text) return [];
-  const regexStr = /(?:(?:[Kk]hoản|[Đđ]iểm)\s+[0-9a-zA-Z]+\s+)?[Đđ]iều\s+\d+[a-zA-Z]?(?:\s+(?:của\s+)?(?:[Bb]ộ\s+luật|[Ll]uật)\s+[\s\wÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪỬỮỰỲỴÝỶỸ]+?(?:\s+năm\s+\d{4})?)?/g;
+  const regexStr = new RegExp(VI_LAW_FULL_PATTERN, 'gi');
   const matches = text.match(regexStr) || [];
-  return [...new Set(matches)];
+  return [...new Set(matches.map(cleanInlineText).filter(Boolean))];
 }
 
 function extractEnglishLawsFromText(text) {
   if(!text) return [];
-  const regexStr = /(?:(?:Clause|Point)\s+[0-9a-zA-Z]+(?:\s*,)?\s+)?Article\s+\d+[a-zA-Z]?(?:\s+(?:of\s+)?(?:the\s+)?(?:(?:Civil|Criminal|Labor|Land|Enterprise|Commercial|Administrative)\s+(?:Code|Law)|Law\s+on\s+[A-Z][A-Za-z\s-]+)(?:\s+\d{4})?)?/gi;
+  const regexStr = new RegExp(EN_LAW_FULL_PATTERN, 'gi');
   const matches = text.match(regexStr) || [];
-  return [...new Set(matches.map(item => item.replace(/\s+/g, ' ').trim()))];
+  return [...new Set(matches.map(cleanInlineText).filter(Boolean))];
 }
 
 function getLawKeyFromText(lawText) {
-  const match = lawText.match(/[Đđ]iều\s+(\d+[a-zA-Z]?)/) || lawText.match(/\bArticle\s+(\d+[a-zA-Z]?)/i);
-  if(!match) return null;
-  const num = match[1];
+  const num = getLawArticleNumber(lawText);
+  if(!num) return null;
   let prefix = 'law-';
-  const normalizedLawText = lawText.toLowerCase();
+  const normalizedLawText = normalizeLawLookupText(lawText);
   if(normalizedLawText.includes('bộ luật dân sự') || normalizedLawText.includes('blds') || normalizedLawText.includes('civil code')) prefix = 'blds-';
   else if(normalizedLawText.includes('đất đai') || normalizedLawText.includes('land law')) prefix = 'ldd-';
   else if(normalizedLawText.includes('hình sự') || normalizedLawText.includes('blhs') || normalizedLawText.includes('criminal code')) prefix = 'blhs-';
   return prefix + num;
 }
 
-function autoLinkLaws(htmlText) {
-  if(!htmlText) return '';
-  let res = preserveIndentation(htmlText);
-  const regexStr = /(?![^<]*>)(?:(?:[Kk]hoản|[Đđ]iểm)\s+[0-9a-zA-Z]+\s+)?[Đđ]iều\s+\d+[a-zA-Z]?/g;
-  res = res.replace(regexStr, match => {
-      if(match.includes('<span')) return match; 
-      return `<span class="law-link" onclick="showLawDynamic(this.innerText)">${match}</span>`;
-  });
-  const englishRegexStr = /(?![^<]*>)(?:(?:Clause|Point)\s+[0-9a-zA-Z]+(?:\s*,)?\s+)?Article\s+\d+[a-zA-Z]?/gi;
-  res = res.replace(englishRegexStr, match => {
-      if(match.includes('<span')) return match;
-      return `<span class="law-link" onclick="showLawDynamic(this.innerText)">${match}</span>`;
+function getLawReferenceVariants(lawName) {
+  const text = cleanInlineText(lawName);
+  if(!text) return [];
+  const variants = [text];
+  const viMatch = text.match(new RegExp(VI_LAW_REF_PATTERN, 'i'));
+  if(viMatch) {
+    variants.push(cleanInlineText(viMatch[0]));
+    const viArticle = viMatch[0].match(new RegExp(VI_LAW_ARTICLE_PATTERN, 'i'));
+    if(viArticle) variants.push(cleanInlineText(viArticle[0]));
+  }
+  const enMatch = text.match(new RegExp(EN_LAW_REF_PATTERN, 'i'));
+  if(enMatch) {
+    variants.push(cleanInlineText(enMatch[0]));
+    const enArticle = enMatch[0].match(new RegExp(EN_LAW_ARTICLE_PATTERN, 'i'));
+    if(enArticle) variants.push(cleanInlineText(enArticle[0]));
+  }
+  const num = getLawArticleNumber(text);
+  if(num) {
+    variants.push(`Điều ${num}`);
+    variants.push(`Article ${num}`);
+  }
+  return [...new Set(variants.filter(v => v && v.length >= 3))].sort((a, b) => b.length - a.length);
+}
+
+function replaceOutsideLawLinks(html, regex, replacer) {
+  return html.split(/(<span class="law-link"[\s\S]*?<\/span>)/gi).map(part => {
+    if(/^<span class="law-link"/i.test(part)) return part;
+    return part.replace(regex, replacer);
+  }).join('');
+}
+
+function wrapLawLink(match) {
+  return `<span class="law-link" onclick="showLawDynamic(this.innerText)">${match}</span>`;
+}
+
+function getActiveLawListForLinking() {
+  if(typeof editingCaseId !== 'undefined' && editingCaseId && state.curCase && state.curCase.id === editingCaseId && Array.isArray(adminFormLaws)) return adminFormLaws;
+  if(state.curCase && Array.isArray(state.curCase.laws)) return state.curCase.laws;
+  return [];
+}
+
+function linkManualLawReferences(htmlText, laws) {
+  if(!htmlText || !Array.isArray(laws) || laws.length === 0) return htmlText;
+  let res = htmlText;
+  laws.forEach(law => {
+    getLawReferenceVariants(law.name || law.title || '').forEach(ref => {
+      const source = escapeRegExp(ref).replace(/\s+/g, '\\s+');
+      if(!source) return;
+      const pattern = new RegExp(`(?![^<]*>)${source}(?![0-9A-Za-z.])`, 'gi');
+      res = replaceOutsideLawLinks(res, pattern, wrapLawLink);
+    });
   });
   return res;
 }
 
-function showLawDynamic(lawName) {
-  const lawNumMatch = lawName.match(/\d+/);
-  const lawNum = lawNumMatch ? lawNumMatch[0] : null;
-  
-  let found = null;
-  if(state.curCase && Array.isArray(state.curCase.laws)) {
-    found = state.curCase.laws.find(l => {
-      const name = (l.name || '').toLowerCase();
-      const target = lawName.toLowerCase();
-      if(name === target || target.includes(name) || name.includes(target)) return true;
-      if(lawNum && (name.includes('điều ' + lawNum) || name.includes('Điều ' + lawNum) || name.includes('article ' + lawNum))) return true;
-      return false;
-    });
-  }
+function autoLinkLaws(htmlText) {
+  if(!htmlText) return '';
+  let res = preserveIndentation(htmlText);
+  const regexStr = new RegExp(`(?![^<]*>)${VI_LAW_REF_PATTERN}`, 'gi');
+  res = replaceOutsideLawLinks(res, regexStr, wrapLawLink);
+  const englishRegexStr = new RegExp(`(?![^<]*>)${EN_LAW_REF_PATTERN}`, 'gi');
+  res = replaceOutsideLawLinks(res, englishRegexStr, wrapLawLink);
+  return linkManualLawReferences(res, getActiveLawListForLinking());
+}
 
-  if(!found) {
-    found = Object.values(LAW_DB).find(l => {
-      const title = (l.title || '').toLowerCase().replace(/ \(.+\)/,'');
-      const target = lawName.toLowerCase();
-      if(lawNum) return title.includes('điều ' + lawNum) || title.includes('Điều ' + lawNum) || title.includes('article ' + lawNum);
-      return target.includes(title) || title.includes(target);
-    });
-  }
+function findLawInList(laws, lawName) {
+  if(!Array.isArray(laws)) return null;
+  const target = normalizeLawLookupText(lawName);
+  const targetNum = getLawArticleNumber(lawName);
+  const targetKey = getLawKeyFromText(lawName);
+  const targetVariants = getLawReferenceVariants(lawName).map(normalizeLawLookupText);
+
+  return laws.find(law => {
+    const lawText = law.name || law.title || '';
+    const name = normalizeLawLookupText(lawText);
+    if(!name) return false;
+    const lawNum = getLawArticleNumber(lawText);
+    if(targetNum && lawNum && targetNum !== lawNum) return false;
+    if(name === target) return true;
+    if(name.length > 8 && target.length > 8 && (target.includes(name) || name.includes(target))) return true;
+    const lawKey = getLawKeyFromText(lawText);
+    if(targetKey && lawKey && targetKey === lawKey) return true;
+    const lawVariants = getLawReferenceVariants(lawText).map(normalizeLawLookupText);
+    return lawVariants.some(v => targetVariants.includes(v) || target.includes(v)) || targetVariants.some(v => name.includes(v));
+  }) || null;
+}
+
+function showLawDynamic(lawName) {
+  let found = findLawInList(getActiveLawListForLinking(), lawName);
+  if(!found && state.curCase && Array.isArray(state.curCase.laws)) found = findLawInList(state.curCase.laws, lawName);
+  if(!found) found = findLawInList(Object.values(LAW_DB).map(l => ({...l, name: l.title || ''})), lawName);
 
   const modalTitle = found ? (found.title || found.name || lawName) : lawName;
   let modalBody = '';
@@ -1736,13 +1819,13 @@ function detectLawsFromContent() {
   if(detectedLaws.length === 0) { showAlert('Không tìm thấy Điều luật nào.'); return; }
   
   detectedLaws.forEach(lawText => {
-    if(!adminFormLaws.find(l => l.name === lawText)) {
+    if(!findLawInList(adminFormLaws, lawText)) {
       const lawKey = getLawKeyFromText(lawText);
       const lawContent = LAW_DB[lawKey] ? LAW_DB[lawKey].content.replace(/<[^>]*>/g, '') : '';
       adminFormLaws.push({ name: lawText, content: lawContent });
     }
   });
-  renderLawsList(); showAlert(`Đã nhận diện ${detectedLaws.length} Điều luật!`);
+  renderLawsList(); syncCurrentCaseLawsFromAdmin(); showAlert(`Đã nhận diện ${detectedLaws.length} Điều luật!`);
 }
 
 function detectEnglishLawsFromContent() {
@@ -1751,13 +1834,13 @@ function detectEnglishLawsFromContent() {
   if(detectedLaws.length === 0) { showAlert('Không tìm thấy Article/Clause tiếng Anh nào.'); return; }
 
   detectedLaws.forEach(lawText => {
-    if(!adminFormLaws.find(l => (l.name || '').toLowerCase() === lawText.toLowerCase())) {
+    if(!findLawInList(adminFormLaws, lawText)) {
       const lawKey = getLawKeyFromText(lawText);
       const lawContent = LAW_DB[lawKey] ? LAW_DB[lawKey].content.replace(/<[^>]*>/g, '') : '';
       adminFormLaws.push({ name: lawText, content: lawContent });
     }
   });
-  renderLawsList(); showAlert(`Đã nhận diện ${detectedLaws.length} điều luật tiếng Anh!`);
+  renderLawsList(); syncCurrentCaseLawsFromAdmin(); showAlert(`Đã nhận diện ${detectedLaws.length} điều luật tiếng Anh!`);
 }
 
 function addNewLawManual() {
@@ -1774,15 +1857,27 @@ function showLawEditModal(index) {
   document.getElementById('law-edit-modal').classList.add('open');
 }
 
+function refreshCurrentCaseLawLinks() {
+  const detailPage = document.getElementById('page-detail');
+  if(!detailPage || !detailPage.classList.contains('active')) return;
+  if(!editingCaseId || !state.curCase || state.curCase.id !== editingCaseId) return;
+  goDetail(null, null, state.curCase.id);
+}
+
+function syncCurrentCaseLawsFromAdmin() {
+  syncAdminLawsToLawDB(adminFormLaws);
+  refreshCurrentCaseLawLinks();
+}
+
 function saveLawEdit() {
   const name = document.getElementById('law-edit-name').value.trim(); const content = document.getElementById('law-edit-content').value.trim();
   if(!name) { showAlert('Vui lòng nhập tên điều luật!'); return; }
   if(editingLawIndex >= 0) adminFormLaws[editingLawIndex] = { name: name, content: content };
-  renderLawsList(); closeLawEdit();
+  renderLawsList(); syncCurrentCaseLawsFromAdmin(); closeLawEdit();
 }
 
 function closeLawEdit() { document.getElementById('law-edit-modal').classList.remove('open'); }
-function removeLaw(index) { adminFormLaws.splice(index, 1); renderLawsList(); }
+function removeLaw(index) { adminFormLaws.splice(index, 1); renderLawsList(); syncCurrentCaseLawsFromAdmin(); }
 
 function renderLawsList() {
   const list = document.getElementById('ad-laws-list'); const empty = document.getElementById('ad-laws-empty');
@@ -1896,6 +1991,7 @@ function submitAdmin() {
   }
 
   const btn = document.getElementById('ad-submit-btn'); btn.textContent = 'Đang xử lý...'; btn.disabled = true;
+  const shouldRefreshDetail = document.getElementById('page-detail').classList.contains('active') && state.curCase && state.curCase.id === caseData.id;
 
   if(window.saveCaseToDB) { window.saveCaseToDB(caseData); return; }
 
@@ -1922,8 +2018,10 @@ function submitAdmin() {
   }
 
   saveCasesDataToStorage();
+  if(shouldRefreshDetail) state.curCase = caseData;
   document.getElementById('ad-ten').value = ''; document.getElementById('ad-mota').value = ''; document.getElementById('ad-tomluoc').innerHTML = ''; document.getElementById('ad-apdung').innerHTML = ''; document.getElementById('ad-chitiet').innerHTML = ''; clearEnglishAdminFields();
   editingCaseId = null; renderHome(); if(state.curSF) renderCasesList();
+  if(shouldRefreshDetail) goDetail(null, null, caseData.id);
   btn.textContent = 'Lưu Dữ Liệu'; btn.disabled = false; closeAdmin(); showAlert('Đã lưu thành công!');
 }
 
