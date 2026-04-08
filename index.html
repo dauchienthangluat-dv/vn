@@ -257,6 +257,8 @@ body { top: 0 !important; }
 .case-reorder-btn:hover{background:var(--gold-rich);}
 .case-reorder-btn:disabled{opacity:0.35;cursor:not-allowed;}
 .case-item.reorder-active{border-color:var(--navy);box-shadow:var(--shadow-sm);}
+.case-delete-btn{color:#C62828!important;}
+.case-delete-btn:hover{background:#FDECEC!important;color:#B71C1C!important;}
 
 .case-desc{ border-top:1px dashed var(--gold-border); padding:16px; font-size:0.85rem;color:var(--text-sec);line-height:1.6; display:none; background: var(--surface); border-radius: 0 0 8px 8px; }
 .case-desc p, .tab-content p, .detail-section p, .admin-editor, .timeline-desc { white-space: pre-wrap; margin-bottom: 12px; }
@@ -1492,6 +1494,51 @@ function moveCaseInCurrentList(caseId, dir) {
   renderCasesList();
 }
 
+function deleteCase(caseId) {
+  if(!isAdminMode) { showAlert('Cần quyền Admin để xóa vụ án.'); return; }
+  const found = findCaseById(caseId);
+  if(!found) { showAlert('Không tìm thấy vụ án cần xóa.'); return; }
+  const title = found.cas && found.cas.ten ? found.cas.ten : caseId;
+  const ok = window.confirm(`Bạn có chắc muốn xóa vụ án này không?\n\n${title}\n\nThao tác này chỉ xóa trong dữ liệu Admin của trình duyệt hiện tại. Muốn điện thoại/người xem khác cũng cập nhật, hãy bấm "Xuất dữ liệu web chung" rồi push lại GitHub.`);
+  if(!ok) return;
+
+  const bucketKey = getCaseBucketKey(found.lvId, found.sfId);
+  if(Array.isArray(CASES_DATA[bucketKey])) {
+    CASES_DATA[bucketKey] = CASES_DATA[bucketKey].filter(c => c.id !== caseId);
+    if(CASES_DATA[bucketKey].length === 0) delete CASES_DATA[bucketKey];
+  }
+
+  RECENT_UPDATES = RECENT_UPDATES.filter(item => item.id !== caseId);
+  state.readHistory = state.readHistory.filter(item => item.id !== caseId);
+
+  const orderMap = getStoredCaseOrderMap();
+  Object.keys(orderMap).forEach(key => {
+    if(Array.isArray(orderMap[key])) orderMap[key] = orderMap[key].filter(id => id !== caseId);
+    if(Array.isArray(orderMap[key]) && orderMap[key].length === 0) delete orderMap[key];
+  });
+  localStorage.setItem(CASE_ORDER_STORAGE_KEY, JSON.stringify(orderMap));
+
+  if(editingCaseId === caseId) {
+    editingCaseId = null;
+    closeAdmin();
+  }
+  if(state.curCase && state.curCase.id === caseId) {
+    state.curCase = null;
+    if(found.lvId && found.sfId) {
+      state.curLV = getLVById(found.lvId);
+      state.curSF = getSFById(found.lvId, found.sfId);
+    }
+    showPage('page-cases');
+  }
+
+  saveCasesDataToStorage();
+  renderHome();
+  buildFilterF1();
+  renderReadHistory();
+  if(document.getElementById('page-cases').classList.contains('active')) renderCasesList();
+  showAlert('Đã xóa vụ án. Nếu muốn điện thoại/người xem khác cũng thấy thay đổi, hãy bấm "Xuất dữ liệu web chung" rồi Commit/Push lại GitHub.');
+}
+
 function renderCasesList(){
   let cases = [];
   renderCasesAdminToolbar();
@@ -1551,7 +1598,7 @@ function renderCasesList(){
           <div class="case-item-left">${starHtml}<div class="case-name" onclick="goDetail(null,null,'${c.id}')">${displayTitle}</div></div>
           <div style="display:flex; gap:6px;">
             ${reorderControls}
-            ${isAdminMode ? `<button class="case-expand-btn" onclick="editCase('${c.id}')" title="Chỉnh sửa"><i class="ph ph-pencil-simple"></i></button>` : ''}
+            ${isAdminMode ? `<button class="case-expand-btn" onclick="editCase('${c.id}')" title="Chỉnh sửa"><i class="ph ph-pencil-simple"></i></button><button class="case-expand-btn case-delete-btn" onclick="deleteCase('${c.id}')" title="Xóa vụ án"><i class="ph ph-trash"></i></button>` : ''}
             <button class="case-expand-btn" onclick="toggleCase('${c.id}',this)" title="Xem mô tả"><i class="ph ph-caret-down"></i></button>
           </div>
         </div>
