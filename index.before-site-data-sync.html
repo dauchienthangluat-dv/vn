@@ -469,7 +469,6 @@ body { top: 0 !important; }
         <button type="button" class="admin-btn admin-btn-secondary" onclick="exportAdminBackup()"><i class="ph ph-download-simple"></i> Xuất dữ liệu</button>
         <button type="button" class="admin-btn admin-btn-secondary" onclick="triggerAdminBackupImport()"><i class="ph ph-upload-simple"></i> Nhập dữ liệu</button>
         <button type="button" class="admin-btn admin-btn-secondary" onclick="triggerBulkCasesImport()"><i class="ph ph-files"></i> Nhập hàng loạt vụ án</button>
-        <button type="button" class="admin-btn admin-btn-secondary" onclick="exportSiteDataFile()"><i class="ph ph-globe-hemisphere-east"></i> Xuất dữ liệu web chung</button>
       </div>
       <input type="file" id="admin-backup-file" accept=".json,application/json" style="display:none;" onchange="importAdminBackupFile(event)" />
       <input type="file" id="bulk-cases-file" accept=".json,application/json" style="display:none;" onchange="importBulkCasesFile(event)" />
@@ -833,9 +832,6 @@ let state = { curLV: null, curSF: null, curCase: null, curPage: 1, readHistory: 
 const ITEMS_PER_PAGE = 10;
 const LANGUAGE_STORAGE_KEY = 'dcsl_ui_lang';
 const CASE_ORDER_STORAGE_KEY = 'dcsl_case_order';
-const SITE_DATA_URL = 'data/site-data.json';
-const SITE_DATA_TYPE = 'dcsl-site-data';
-let SITE_CASE_ORDER = {};
 let isReorderMode = false;
 const UI_TEXT = {
   vi: {
@@ -1216,10 +1212,6 @@ function getStoredCaseOrderMap() {
   catch(e) { return {}; }
 }
 
-function getEffectiveCaseOrderMap() {
-  return { ...(SITE_CASE_ORDER || {}), ...getStoredCaseOrderMap() };
-}
-
 function saveCaseOrderForBucket(bucketKey) {
   if(!bucketKey || !CASES_DATA[bucketKey]) return;
   const orderMap = getStoredCaseOrderMap();
@@ -1229,7 +1221,7 @@ function saveCaseOrderForBucket(bucketKey) {
 }
 
 function applyStoredCaseOrder() {
-  const orderMap = getEffectiveCaseOrderMap();
+  const orderMap = getStoredCaseOrderMap();
   Object.keys(CASES_DATA).forEach(bucketKey => {
     const savedOrder = orderMap[bucketKey];
     if(!Array.isArray(savedOrder) || !savedOrder.length) return;
@@ -1923,100 +1915,22 @@ function renderLawsList() {
 function saveAdminDataToStorage() { /* Bỏ qua dài dòng */ }
 function restoreAdminDataFromStorage() { /* Bỏ qua dài dòng */ }
 
-function getCurrentCasesSnapshot() {
-    return { cases: cloneBackupValue(CASES_DATA), recent: cloneBackupValue(RECENT_UPDATES), linhvuc: cloneBackupValue(LINH_VUC_LUAT) };
-}
-
-function saveCasesDataToStorage() { localStorage.setItem('dcsl_cases_data', JSON.stringify(getCurrentCasesSnapshot())); }
-
-function restoreFieldIcon(lv) {
-    const restored = { ...lv };
-    const orig = ORIGINAL_LINH_VUC.find(o => o.id === restored.id);
-    if(orig) {
-        restored.icon = orig.icon;
-        restored.ten = orig.ten;
-    }
-    if(!Array.isArray(restored.subfields)) restored.subfields = [];
-    restored.subfields = restored.subfields.map(sf => {
-        const baseSf = baseSubfields.find(item => item.id === sf.id);
-        return baseSf ? { ...sf, ten: baseSf.ten } : sf;
-    });
-    return restored;
-}
-
-function resetCasesRuntimeData() {
-    Object.keys(CASES_DATA).forEach(key => delete CASES_DATA[key]);
-    RECENT_UPDATES.length = 0;
-    LINH_VUC_LUAT.length = 0;
-    LINH_VUC_LUAT.push(...JSON.parse(JSON.stringify(ORIGINAL_LINH_VUC)));
-}
-
-function applyCasesSnapshot(casesData) {
-    resetCasesRuntimeData();
-    if(!casesData || typeof casesData !== 'object') return;
-    if(casesData.cases && typeof casesData.cases === 'object') Object.assign(CASES_DATA, cloneBackupValue(casesData.cases));
-    if(Array.isArray(casesData.recent)) RECENT_UPDATES.push(...cloneBackupValue(casesData.recent));
-    if(Array.isArray(casesData.linhvuc)) {
-        LINH_VUC_LUAT.length = 0;
-        casesData.linhvuc.forEach(lv => LINH_VUC_LUAT.push(restoreFieldIcon(lv)));
-    }
-    applyStoredCaseOrder();
-}
-
-function mergeLinhVucSnapshot(linhvuc) {
-    if(!Array.isArray(linhvuc)) return;
-    linhvuc.forEach(rawLv => {
-        const incoming = restoreFieldIcon(rawLv);
-        let current = getLVById(incoming.id);
-        if(!current) {
-            LINH_VUC_LUAT.push(incoming);
-            return;
-        }
-        if(incoming.ten) current.ten = incoming.ten;
-        if(incoming.icon) current.icon = incoming.icon;
-        if(!Array.isArray(current.subfields)) current.subfields = [];
-        (incoming.subfields || []).forEach(sf => {
-            const existingSf = current.subfields.find(item => item.id === sf.id);
-            if(existingSf) Object.assign(existingSf, sf);
-            else current.subfields.push(sf);
-        });
-    });
-}
-
-function mergeCasesSnapshot(casesData) {
-    if(!casesData || typeof casesData !== 'object') return;
-    mergeLinhVucSnapshot(casesData.linhvuc);
-    if(casesData.cases && typeof casesData.cases === 'object') {
-        Object.keys(casesData.cases).forEach(bucketKey => {
-            if(!Array.isArray(casesData.cases[bucketKey])) return;
-            if(!CASES_DATA[bucketKey]) CASES_DATA[bucketKey] = [];
-            casesData.cases[bucketKey].forEach(incomingCase => {
-                const idx = CASES_DATA[bucketKey].findIndex(c => c.id && incomingCase.id && c.id === incomingCase.id);
-                if(idx >= 0) CASES_DATA[bucketKey][idx] = incomingCase;
-                else CASES_DATA[bucketKey].push(incomingCase);
-            });
-        });
-    }
-    if(Array.isArray(casesData.recent)) {
-        const mergedRecent = [];
-        const seen = new Set();
-        [...casesData.recent, ...RECENT_UPDATES].forEach(item => {
-            if(!item || !item.id || seen.has(item.id)) return;
-            seen.add(item.id);
-            mergedRecent.push(item);
-        });
-        RECENT_UPDATES.length = 0;
-        RECENT_UPDATES.push(...mergedRecent.slice(0, 50));
-    }
-    applyStoredCaseOrder();
-}
-
-function restoreCasesDataFromStorage(options = {}) {
+function saveCasesDataToStorage() { localStorage.setItem('dcsl_cases_data', JSON.stringify({cases: CASES_DATA, recent: RECENT_UPDATES, linhvuc: LINH_VUC_LUAT})); }
+function restoreCasesDataFromStorage() {
     const stored = localStorage.getItem('dcsl_cases_data'); if (!stored) return;
     try {
         const data = JSON.parse(stored);
-        if(options.merge) mergeCasesSnapshot(data);
-        else applyCasesSnapshot(data);
+        if (data.cases) Object.assign(CASES_DATA, data.cases);
+        if (data.recent) { RECENT_UPDATES.length = 0; RECENT_UPDATES.push(...data.recent); }
+        if (data.linhvuc) { 
+            LINH_VUC_LUAT.length = 0; 
+            data.linhvuc.forEach(lv => {
+                const orig = ORIGINAL_LINH_VUC.find(o => o.id === lv.id);
+                if(orig) lv.icon = orig.icon; 
+                LINH_VUC_LUAT.push(lv);
+            });
+        }
+        applyStoredCaseOrder();
     } catch(e) {}
 }
 
@@ -2035,36 +1949,6 @@ function cloneBackupValue(value) {
     return JSON.parse(JSON.stringify(value || {}));
 }
 
-function makeSiteDataPayload() {
-    saveCasesDataToStorage();
-    localStorage.setItem('dcsl_law_db', JSON.stringify(LAW_DB));
-    return {
-        type: SITE_DATA_TYPE,
-        version: 1,
-        exportedAt: new Date().toISOString(),
-        data: {
-            casesData: getStoredJsonValue('dcsl_cases_data', getCurrentCasesSnapshot()),
-            lawDb: getStoredJsonValue('dcsl_law_db', cloneBackupValue(LAW_DB)),
-            caseOrder: getStoredCaseOrderMap(),
-            language: localStorage.getItem(LANGUAGE_STORAGE_KEY) || state.uiLang || 'vi'
-        }
-    };
-}
-
-function exportSiteDataFile() {
-    const payload = makeSiteDataPayload();
-    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'site-data.json';
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-    showAlert('Đã xuất file site-data.json. Để điện thoại và người xem khác thấy dữ liệu, hãy đặt file này vào thư mục data của dự án rồi đưa cả thư mục data lên GitHub.');
-}
-
 function normalizeAdminBackupPayload(backup) {
     const data = backup && backup.data ? backup.data : backup;
     if(!data || typeof data !== 'object') throw new Error('Invalid backup file');
@@ -2076,30 +1960,6 @@ function normalizeAdminBackupPayload(backup) {
         caseOrder: data.caseOrder || {},
         language: data.language === 'en' ? 'en' : 'vi'
     };
-}
-
-function normalizeSiteDataPayload(payload) {
-    const data = payload && payload.data ? payload.data : payload;
-    if(!data || typeof data !== 'object') throw new Error('Invalid site data');
-    return normalizeAdminBackupPayload({ data });
-}
-
-async function loadSharedSiteData() {
-    if(window.location.protocol === 'file:') return false;
-    try {
-        const response = await fetch(SITE_DATA_URL, { cache: 'no-store' });
-        if(!response.ok) return false;
-        const parsed = await response.json();
-        const siteData = normalizeSiteDataPayload(parsed);
-        SITE_CASE_ORDER = siteData.caseOrder && typeof siteData.caseOrder === 'object' ? siteData.caseOrder : {};
-        applyCasesSnapshot(siteData.casesData);
-        if(siteData.lawDb && typeof siteData.lawDb === 'object') Object.assign(LAW_DB, siteData.lawDb);
-        applyStoredCaseOrder();
-        return true;
-    } catch(e) {
-        console.warn('Không thể tải dữ liệu web chung:', e);
-        return false;
-    }
 }
 
 function exportAdminBackup() {
@@ -2492,9 +2352,8 @@ function submitAdmin() {
 
 window.addEventListener('scroll',()=>{ document.getElementById('global-header').classList.toggle('scrolled', window.scrollY>10); });
 
-async function safeInit() { 
-    const hasSharedSiteData = await loadSharedSiteData();
-    restoreCasesDataFromStorage({ merge: hasSharedSiteData }); 
+function safeInit() { 
+    restoreCasesDataFromStorage(); 
     const savedLang = localStorage.getItem(LANGUAGE_STORAGE_KEY);
     if(savedLang === 'en' || savedLang === 'vi') state.uiLang = savedLang;
     try { Object.assign(LAW_DB, JSON.parse(localStorage.getItem('dcsl_law_db'))); } catch(e){}
