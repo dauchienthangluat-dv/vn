@@ -1,7 +1,7 @@
 {
   "type": "dcsl-site-data",
   "version": 1,
-  "exportedAt": "2026-04-08T12:47:18.641Z",
+  "exportedAt": "2026-04-08T14:28:33.089Z",
   "data": {
     "casesData": {
       "cases": {
@@ -427,9 +427,303 @@
               }
             ]
           }
+        ],
+        "hinh-su::giai-dap-nghiep-vu": [
+          {
+            "id": "case-cong-van-163-tandtc-pc-nam-2024-hinh-su-1",
+            "ten": "Công văn 163 TANDTC - PC năm 2024",
+            "mo_ta": "",
+            "lvId": "hinh-su",
+            "lvName": "Hình sự",
+            "sfId": "giai-dap-nghiep-vu",
+            "sfName": "Giải đáp nghiệp vụ",
+            "sao": 0,
+            "ngay": "2026-04-08T20:40:10.6320766+07:00",
+            "tom_luoc": "",
+            "ap_dung": "",
+            "chi_tiet": "<div class=\"detail-section-title\">HÌNH SỰ, TỐ TỤNG HÌNH SỰ</div><p>1. Điều 63 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017) quy định điều kiện được giảm mức hình phạt đã tuyên, trong đó phải có điều kiện “Bồi thường được một phần nghĩa vụ dân sự”. Trường hợp đối với người dưới 18 tuổi phạm tội, trong bản án có tuyên cha mẹ bị cáo phải bồi thường cho bị hại. Tuy nhiên, Điều 105 của Bô luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017) quy định điều kiện được giảm mức hình phạt đã tuyên đối với người dưới 18 tuổi không quy định về điều kiện phải bồi thường, nếu cha mẹ của phạm nhân không thực hiện việc bồi thường thì phạm nhân là người dưới 18 tuổi có được giảm mức hình phạt đã tuyên không (các điều kiện khác đều đảm bảo)?</p><p>=> Theo quy định tại Điều 105 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017) về giảm mức hình phạt đã tuyên đối với người dưới 18 tuổi thì không quy định điều kiện bồi thường là một trong các điều kiện được xét giảm. Do đó, việc cha mẹ của người dưới 18 tuổi không thực hiện việc bồi thường thì họ vẫn được giảm mức hình phạt đã tuyên.</p><p>2. Nguyễn Văn A có hành vi phá két sắt nhằm mục đích trộm cắp tài sản và đã lấy được số tiền 5.000.000 đồng; két sắt do Nguyễn Văn A hủy hoại có giá trị 10.000.000 đồng. Trường hợp này, Nguyễn Văn A chỉ phạm 01 tội là “Tội trộm cắp tài sản” hay phạm 02 tội là “Tội trộm cắp tài sản” và “Tội hủy hoại tài sản”.</p><p>=> Mặc dù Nguyễn Văn A chỉ có động cơ, mục đích là trộm cắp nhưng buộc Nguyễn Văn A phải nhận thức hành vi phá két sắt là hủy hoại tài sản của người khác. Vì vậy, hành vi của Nguyễn Văn A cấu thành 02 tội là “Tội trộm cắp tài sản” quy định tại Điều 173 và “Tội hủy hoại tài sản” quy định tại Điều 178 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017).</p><p>3. Quy định “Làm cho quan hệ hôn nhân của một hoặc hai bên dẫn đến ly hôn” tại điểm a khoản 1 Điều 182 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017) được hiểu như thế nào?</p><p>=> Quy định tại điểm a khoản 1 Điều 182 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017) được hiểu là người đang có vợ, có chồng mà kết hôn hoặc chung sống như vợ chồng với người khác hoặc người chưa có vợ, chưa có chồng mà kết hôn hoặc chung sống như vợ chồng với người mà mình biết rõ là đang có chồng, có vợ mà dẫn đến hậu quả quan hệ hôn nhân của một hoặc hai bên ly hôn.</p><p>Theo quy định tại khoản 14 Điều 3 của Luật Hôn nhân và gia đình năm 2014 thì “Ly hôn là việc chấm dứt quan hệ vợ chồng theo bản án, quyết định có hiệu lực pháp luật của Tòa án”. Theo đó, quan hệ vợ, chồng chỉ kết thúc khi có bản án, quyết định có hiệu lực của Tòa án.</p><p>4. Nguyễn Văn A là nhân viên của cửa hàng điện thoại di động MT do ông Trần Thanh B làm chủ, cửa hàng MT được đăng ký kinh doanh là hộ kinh doanh. Trong quá trình làm việc tại cửa hàng, Nguyễn Văn A được giao nhiệm vụ thu tiền bán thẻ điện thoại, máy điện thoại và có trách nhiệm trực tiếp quản lý tiền thu được và nộp lại cho chủ cửa hàng. Nguyễn Văn A đã lợi dụng nhiệm vụ được giao, sau khi thu tiền của khách hàng, Nguyễn Văn A không nộp về cho cửa hàng mà chiếm đoạt số tiền 20.000.000 đồng. Hành vi của Nguyễn Văn A bị truy cứu trách nhiệm hình sự về “Tội lạm dụng tín nhiệm chiếm đoạt tài sản” hay “Tội tham ô tài sản”?</p><p>=> Theo khoản 6 Điều 353 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017) thì người có chức vụ, quyền hạn trong các doanh nghiệp, tổ chức ngoài Nhà nước mà tham ô tài sản, thì bị truy cứu trách nhiệm hình sự theo quy định tại Điều này. Theo quy định tại khoản 1 Điều 79 của Nghị định số 01/2021/NĐ-CP ngày 04/01/2021 của Chính phủ về đăng ký doanh nghiệp thì “Hộ kinh doanh do một cá nhân hoặc các thành viên hộ gia đình đăng ký thành lập và chịu trách nhiệm bằng toàn bộ tài sản của mình đối với hoạt động kinh doanh của hộ...”. Theo quy định tại khoản 10 Điều 4 của Luật Doanh nghiệp năm 2020 thì “doanh nghiệp là tổ chức có tên riêng, có tài sản, có trụ sở giao dịch, được thành lập hoặc đăng ký thành lập theo quy định của pháp luật nhằm mục đích kinh doanh”. Như vậy, hộ kinh doanh không phải là doanh nghiệp theo quy định của Luật Doanh nghiệp năm 2020. Do đó, hành vi nêu trên của Nguyễn Văn A cấu thành “Tội lạm dụng tín nhiệm chiếm đoạt tài sản” theo quy định tại Điều 175 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017).</p><p>5. Nguyễn Văn A vi phạm quy định về tham gia giao thông đường bộ gây tai nạn chết người. Trong quá trình điều tra phát hiện, Nguyễn Văn A dùng giấy phép lái xe hạng B2 giả (Nguyễn Văn A cung cấp thông tin của mình cho đối tượng làm giả) để điều khiển phương tiện tham gia giao thông đường bộ.</p><p>Trường hợp này, Nguyễn Văn A bị truy cứu trách nhiệm hình sự về “Tội làm giả con dấu, tài liệu của cơ quan tổ chức” hay “Tội sử dụng con dấu hoặc tài liệu của cơ quan, tổ chức”?</p><p>=> Trường hợp này ngoài việc Nguyễn Văn A bị truy cứu trách nhiệm hình sự về “Tội vi phạm về quy định tham gia giao thông đường bộ” theo quy định tại Điều 260 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017), thì bị cáo còn bị truy cứu trách nhiệm hình sự về “Tội sử dụng con dấu hoặc tài liệu giả của cơ quan, tổ chức” theo quy định tại Điều 341 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017).</p><p>6. Nguyễn Văn A nhờ người làm giả căn cước công dân đứng tên người khác. Sau khi nhận được căn cước công dân giả thì Nguyễn Văn A dán ảnh của mình trên căn cước công dân đó để lừa đảo chiếm đoạt 1.800.000.000 đồng.</p><p>Trường hợp này, Nguyễn Văn A bị truy cứu trách nhiệm hình sự về “Tội lừa đảo chiếm đoạt tài sản” theo Điều 174 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017) hay bị truy cứu trách nhiệm hình sự về 02 tội là “Tội làm giả con dấu, tài liệu của cơ quan, tổ chức” theo Điều 341 và “Tội lừa đảo chiếm đoạt tài sản” theo Điều 174 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017)?</p><p>=> Nguyễn Văn A bị truy cứu trách nhiệm hình sự về “Tội lừa đảo chiếm đoạt tài sản” theo quy định tại điểm a khoản 4 Điều 174 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017) và “Tội làm giả con dấu, tài liệu của cơ quan, tổ chức” với tình tiết định khung “Sử dụng con dấu, tài liệu hoặc giấy tờ khác thực hiện tội phạm rất nghiêm trọng hoặc tội phạm đặc biệt nghiêm trọng” theo quy định tại điểm b khoản 3 Điều 341 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017).</p><p>7. Một người có một trong các hành vi quy định tại khoản 1 Điều 158 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017) trong thời gian bao lâu thì bị truy cứu trách nhiệm hình sự.</p><p>Trường hợp con ở cùng nhà với cha mẹ (nhà thuộc quyền sở hữu của cha mẹ) mà đuổi cha mẹ ra khỏi nhà thì có bị truy cứu trách nhiệm hình sự về “Tội xâm phạm chỗ ở của người khác” theo quy định tại Điều 158 của Bộ luật Hình sự không?</p><p>=> Điều 158 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017) không quy định xâm phạm chỗ ở của người khác trong thời gian bao lâu thì bị truy cứu trách nhiệm hình sự. Do đó, người nào thực hiện một trong các hành vi quy định tại khoản 1 Điều 158 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017) thì bị truy cứu trách nhiệm hình sự, nếu đủ yếu tố cấu thành tội phạm.</p><p>Trường hợp con ở chung với cha mẹ mà đuổi cha mẹ ra khỏi nhà, thì hành vi này bị truy cứu trách nhiệm hình sự về “Tội ngược đãi hoặc hành hạ cha mẹ” theo quy định tại Điều 185 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017), nếu có đủ yếu tố cấu thành tội phạm.</p><p>8. Đối với các tội phạm thực hiện hành vi vi phạm kéo dài thì thời hiệu truy cứu trách nhiệm hình sự được tính từ thời điểm nào, ngày tội phạm thực hiện hay ngày hành vi bị phát hiện?</p><p>=> Thời hiệu truy cứu trách nhiệm hình sự trong trường hợp nêu trên được xác định như sau: Trường hợp hành vi phạm tội kéo dài đã kết thúc thì thời hiệu truy cứu trách nhiệm hình sự được tính từ thời điểm tội phạm kết thúc; trường hợp hành vi phạm tội kéo dài chưa kết thúc thì thời hiệu truy cứu trách nhiệm hình sự được tính từ thời điểm hành vi tội phạm bị phát hiện.</p><p>9. Tại khoản 6 Điều 134 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017) quy định “Người nào chuẩn bị vũ khí, vật liệu nổ, hung khí nguy hiểm, a-xít nguy hiểm, hóa chất nguy hiểm hoặc thành lập hoặc tham gia nhóm tội phạm nhằm gây thương tích hoặc gây tổn hại cho sức khỏe của người khác, thì bị phạt cải tạo không giam giữ đến 02 năm hoặc phạt tù từ 03 tháng đến 02 năm”. Trường hợp này có phải xác định cụ thể đối tượng mà bị cáo nhằm gây thương tích hoặc gây tổn hại sức khỏe hay không?</p><p>=> Theo Công văn số 89/TANDTC-PC ngày 30/6/2020 của Tòa án nhân dân tối cao thì quy định nêu trên không bắt buộc người phạm tội phải hoàn thành hành vi khách quan là gây thương tích hoặc gây tổn hại cho sức khỏe của người khác và cũng không bắt buộc phải có hậu quả xảy ra. Tuy nhiên, trường hợp này, để truy cứu trách nhiệm hình sự theo quy định tại khoản 6 Điều 134 của Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017) thì phải xác định được người mà bị cáo nhằm gây thương tích hoặc gây tổn hại sức khỏe.</p><p>10. Theo quy định tại khoản 2 Điều 36 của Luật Xuất cảnh, nhập cảnh của công dân Việt Nam năm 2019 thì người được hoãn chấp hành án phạt tù, người được tạm đình chỉ chấp hành án phạt tù, người được tha tù trước thời hạn có điều kiện trong thời gian thử thách, người được hưởng án treo trong thời gian thử thách, người chấp hành án phạt cải tạo không giam giữ trong thời gian chấp hành án theo quy định của Luật Thi hành án hình sự năm 2019 thì bị tạm hoãn xuất cảnh. Vậy Tòa án có phải ra quyết định tạm hoãn xuất cảnh đối với các trường hợp trên hay không? Bộ luật Tố tụng hình sự năm 2015 (sửa đổi, bổ sung năm 2021), Luật Thi hành án hình sự năm 2019 không quy định nội dung này?</p><p>=> Theo quy định tại khoản 2 Điều 37 của Luật Xuất cảnh, nhập cảnh của công dân Việt Nam năm 2019 thì thẩm quyền quyết định tạm hoãn xuất cảnh, gia hạn, hủy bỏ tạm hoãn xuất cảnh là cơ quan, người có thẩm quyền ra quyết định hoãn chấp hành án phạt tù, tạm đình chỉ chấp hành án phạt tù, tha tù trước thời hạn có điều kiện, thi hành án treo, thi hành án phạt cải tạo không giam giữ.</p><p>Đây là quy định mới của Luật Xuất cảnh, nhập cảnh của công dân Việt Nam năm 2019. Mặc dù, Bộ luật Tố tụng hình sự năm 2015 (sửa đổi, bổ sung năm 2021), Luật Thi hành án hình sự năm 2019 chưa quy định thủ tục này. Tuy nhiên, để bảo đảm áp dụng quy định này kịp thời, góp phần ngăn chặn, phòng ngừa việc trốn tránh nghĩa vụ chấp hành án của người bị kết án, khi ra quyết định hoãn chấp hành án phạt tù, tạm đình chỉ chấp hành án phạt tù, tha tù trước thời hạn có điều kiện, thi hành án treo, thi hành án phạt cải tạo không giam giữ, Tòa án bổ sung nội dung tạm hoãn xuất cảnh trong quyết định.</p><p>11. Sau khi kết thúc phiên tòa sơ thẩm, Hội đồng xét xử ra quyết định tạm giam 45 ngày để đảm bảo thi hành án, bị cáo và những người tham gia tố tụng không kháng cáo. Tuy nhiên, chưa đến ngày ra quyết định thi hành án thì có tài liệu chứng minh bị cáo đang bị bệnh hiểm nghèo, suy tim độ III có thể dẫn đến tử vong, phải nhập viện điều trị, gia đình bị cáo xin bảo lĩnh để tiếp tục điều trị bệnh cho bị cáo. Vậy trường hợp này, thẩm quyền giải quyết như thế nào?</p><p>=> Trường hợp nêu trên, người bị tạm giam vẫn phải thi hành Quyết định tạm giam của Hội đồng xét xử. Nếu bị cáo đang bị bệnh hiểm nghèo, suy tim độ III có thể dẫn đến tử vong phải nhập viện thì gia đình phải liên hệ ngay với cơ quan quản lý thi hành tạm giữ, tạm giam để thực hiện thủ tục liên quan đến trích xuất đưa đi khám bệnh, chữa bệnh theo quy định tại Điều 20 của Luật Thi hành tạm giữ, tạm giam năm 2015.</p><p>12. Nguyễn Văn A gửi xe ô tô tại địa điểm do Nguyễn Văn B quản lý, được phép hoạt động, có thu tiền gửi xe. Nguyễn Văn C đã lấy trộm xe ô tô của Nguyễn Văn A. Trường hợp này xác định ai là bị hại?</p><p>=> Trường hợp này, Nguyễn Văn A là bị hại vì xe ô tô thuộc sở hữu của A, Nguyễn Văn B là người có quyền lợi, nghĩa vụ liên quan đến vụ án.</p><p>13. Bị cáo Nguyễn Văn A bị xét xử sơ thẩm và tuyên án ngày 01/3/2023. Ngày 07/3/2023, Nguyễn Văn A kháng cáo đối với bản án sơ thẩm. Ngày 10/3/2023, Nguyễn Văn A có đơn xin rút kháng cáo. Tuy nhiên, Tòa án cấp sơ thẩm chưa ra thông báo về việc kháng cáo. Trường hợp này, Tòa án cấp sơ thẩm xử lý như thế nào, có chuyển hồ sơ đến Tòa án cấp phúc thẩm không?</p><p>=> Trường hợp này, Tòa án cấp sơ thẩm vẫn phải chuyển hồ sơ vụ án đến Tòa án cấp phúc thẩm để giải quyết theo thẩm quyền.</p><div class=\"detail-section-title\">THI HÀNH ÁN HÌNH SỰ</div><p>1. Việc cho người bị kết án hưởng thời hiệu thi hành bản án thuộc thẩm quyền của Tòa án nào. Tòa án ra bản án hay Tòa án nơi người bị kết án đang chấp hành án?</p><p>=> Trường hợp trên, Tòa án đã ra bản án có thẩm quyền thông báo cho người bị kết án hưởng thời hiệu thi hành bản án.</p><p>2. Tòa án có phải ra quyết định thi hành án phạt tù đối với quyết định buộc chấp hành hình phạt tù của bản án đã cho hưởng án treo không?</p><p>=> Khi thi hành án treo, Tòa án căn cứ Điều 84 của Luật Thi hành án hình sự năm 2019 ra quyết định thi hành án treo. Theo đó, Ủy ban nhân dân cấp xã căn cứ vào quyết định này để tổ chức thi hành. Để thi hành quyết định buộc phải chấp hành hình phạt tù của bản án đã cho hưởng án treo thì Tòa án phải ra quyết định thi hành án phạt tù đối với quyết định này để cơ quan thi hành án hình sự tổ chức thi hành theo quy định.</p><p>3. Tòa án có phải ra quyết định thi hành án đối với quyết định tổng hợp hình phạt của nhiều bản án hay không?</p><p>=> Theo quy định tại khoản 1 Điều 364 của Bộ luật Tố tụng hình sự năm 2015 (sửa đổi, bổ sung năm 2021) thì Tòa án có thẩm quyền đã ra quyết định thi hành án đối với mỗi bản án có hiệu lực pháp luật. Do đó, Tòa án không ra quyết định thi hành án đối với quyết định tổng hợp hình phạt của nhiều bản án.</p><p>4. Trường hợp bị cáo chấp hành xong hình phạt tù của bản án đã tuyên trong thời hạn kháng cáo, kháng nghị phúc thẩm hoặc bị cáo đang tại ngoại nhưng trước đó đã bị tạm giữ, tạm giam mà thời hạn tạm giữ, tạm giam bằng thời hạn phạt tù của bản án đã tuyên thì Tòa án có ra quyết định thi hành án phạt tù không?</p><p>=> Trường hợp trên, Tòa án không ra quyết định thi hành án phạt tù. Khi bản án có hiệu lực pháp luật, Tòa án gửi bản án cho cơ quan thi hành án hình sự theo quy định.</p>",
+            "timeline": [],
+            "laws": [
+              {
+                "name": "Điều 63. Giảm mức hình phạt đã tuyên",
+                "content": "1. Người bị kết án cải tạo không giam giữ, phạt tù có thời hạn hoặc phạt tù chung thân, nếu đã chấp hành hình phạt được một thời gian nhất định, có nhiều tiến bộ và đã bồi thường được một phần nghĩa vụ dân sự, thì theo đề nghị của cơ quan thi hành án hình sự có thẩm quyền, Tòa án có thể quyết định giảm thời hạn chấp hành hình phạt.\n\nThời gian đã chấp hành hình phạt để được xét giảm lần đầu là một phần ba thời hạn đối với hình phạt cải tạo không giam giữ, hình phạt tù có thời hạn, 12 năm đối với tù chung thân.\n\n2. Một người có thể được giảm nhiều lần, nhưng phải bảo đảm chấp hành được một phần hai mức hình phạt đã tuyên.\n\nNgười bị kết án tù chung thân, lần đầu được giảm xuống 30 năm tù và dù được giảm nhiều lần cũng phải bảo đảm thời hạn thực tế chấp hành hình phạt là 20 năm.\n\n3. Trường hợp người bị kết án về nhiều tội trong đó có tội bị kết án phạt tù chung thân thì Tòa án chỉ xét giảm lần đầu xuống 30 năm tù sau khi đã chấp hành được 15 năm tù và dù được giảm nhiều lần nhưng vẫn phải bảo đảm thời gian thực tế chấp hành là 25 năm.\n\n4. Đối với người đã được giảm một phần hình phạt mà lại thực hiện hành vi phạm tội mới ít nghiêm trọng do cố ý, thì Tòa án chỉ xét giảm lần đầu sau khi người đó đã chấp hành được một phần hai mức hình phạt chung.\n\n5. Đối với người đã được giảm một phần hình phạt mà lại thực hiện hành vi phạm tội mới nghiêm trọng, rất nghiêm trọng hoặc đặc biệt nghiêm trọng, thì Tòa án chỉ xét giảm lần đầu sau khi người đó đã chấp hành được hai phần ba mức hình phạt chung hoặc trường hợp hình phạt chung là tù chung thân thì việc xét giảm án thực hiện theo quy định tại khoản 3 Điều này.\n\n6. Đối với người bị kết án tử hình được ân giảm hoặc người bị kết án tử hình thuộc trường hợp quy định tại điểm b hoặc điểm c khoản 3 Điều 40 của Bộ luật này thì thời gian đã chấp hành hình phạt để được xét giảm lần đầu là 25 năm và dù được giảm nhiều lần nhưng vẫn phải bảo đảm thời hạn thực tế chấp hành hình phạt là 30 năm."
+              },
+              {
+                "name": "Điều 105. Giảm mức hình phạt đã tuyên",
+                "content": "1. Người dưới 18 tuổi phạm tội bị phạt cải tạo không giam giữ hoặc phạt tù, nếu có tiến bộ và đã chấp hành được một phần tư thời hạn, thì được Tòa án xét giảm; riêng đối với hình phạt tù, mỗi lần có thể giảm đến 04 năm nhưng phải bảo đảm đã chấp hành ít nhất là hai phần năm mức hình phạt đã tuyên.\n\n2. Người dưới 18 tuổi phạm tội bị phạt cải tạo không giam giữ hoặc phạt tù, nếu lập công hoặc mắc bệnh hiểm nghèo, thì được xét giảm ngay và có thể được miễn chấp hành phần hình phạt còn lại.\n\n3. Người dưới 18 tuổi phạm tội bị phạt tiền nhưng bị lâm vào hoàn cảnh kinh tế đặc biệt khó khăn kéo dài do thiên tai, hoả hoạn, tai nạn hoặc ốm đau gây ra hoặc lập công lớn, thì theo đề nghị của Viện trưởng Viện kiểm sát, Tòa án có thể quyết định giảm hoặc miễn việc chấp hành phần tiền phạt còn lại."
+              },
+              {
+                "name": "Điều 173. Tội trộm cắp tài sản",
+                "content": "1. Người nào trộm cắp tài sản của người khác trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng hoặc dưới 2.000.000 đồng nhưng thuộc một trong các trường hợp sau đây, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm:\n\na) Đã bị xử phạt vi phạm hành chính về hành vi chiếm đoạt tài sản mà còn vi phạm;\n\nb) Đã bị kết án về tội này hoặc về một trong các tội quy định tại các điều 168, 169, 170, 171, 172, 174, 175 và 290 của Bộ luật này, chưa được xóa án tích mà còn vi phạm;\n\nc) Gây ảnh hưởng xấu đến an ninh, trật tự, an toàn xã hội;\n\nd) Tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ; tài sản là kỷ vật, di vật, đồ thờ cúng có giá trị đặc biệt về mặt tinh thần đối với người bị hại.\n\n2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 07 năm:\n\na) Có tổ chức;\n\nb) Có tính chất chuyên nghiệp;\n\nc) Chiếm đoạt tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng;\n\nd) Dùng thủ đoạn xảo quyệt, nguy hiểm;\n\nđ) Hành hung để tẩu thoát;\n\ne) Trộm cắp tài sản trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;\n\ng) Tái phạm nguy hiểm.\n\n3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 07 năm đến 15 năm:\n\na) Chiếm đoạt tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng;\n\nb) Trộm cắp tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;\n\nc) Lợi dụng thiên tai, dịch bệnh.\n\n4. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 12 năm đến 20 năm:\n\na) Chiếm đoạt tài sản trị giá 500.000.000 đồng trở lên;\n\nb) Trộm cắp tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;\n\nc) Lợi dụng hoàn cảnh chiến tranh, tình trạng khẩn cấp.\n\n5. Người phạm tội còn có thể bị phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng."
+              },
+              {
+                "name": "Điều 178. Tội hủy hoại hoặc cố ý làm hư hỏng tài sản",
+                "content": "1. Người nào hủy hoại hoặc cố ý làm hư hỏng tài sản của người khác trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng, tài sản là di vật, cổ hoặc vật có giá trị lịch sử, văn hóa hoặc tài sản trị giá dưới 2.000.000 đồng nhưng thuộc một trong những trường hợp sau đây, thì bị phạt tiền từ 10.000.000 đồng đến 50.000.000 đồng, phạt cải tạo không giam giữ đến 03 năm hoặc bị phạt tù từ 06 tháng đến 03 năm:\n\na) Đã bị xử phạt vi phạm hành chính về hành vi chiếm đoạt tài sản mà còn vi phạm;\n\nb) Đã bị kết án về tội này, chưa được xóa án tích mà còn vi phạm;\n\nc) Gây ảnh hưởng xấu đến an ninh, trật tự, an toàn xã hội;\n\nd) Tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ; tài sản là kỷ vật, di vật, đồ thờ cúng có giá trị đặc biệt về mặt tinh thần đối với người bị hại.\n\n2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 07 năm:\n\na) Có tổ chức;\n\nb) Gây thiệt hại cho tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng;\n\nc) Gây thiệt hại tài sản là bảo vật quốc gia;\n\nd) Dùng chất nguy hiểm về cháy, nổ hoặc thủ đoạn nguy hiểm khác;\n\nđ) Để che giấu tội phạm khác;\n\ne) Vì lý do công vụ của người bị hại;\n\ng) Gây thiệt hại cho tài sản trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;\n\nh) Tái phạm nguy hiểm.\n\n3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 05 năm đến 10 năm:\n\nNội dung này đã được sửa đổi/hướng dẫn... Bạn cần Đăng nhập tài khoản Tiêu chuẩn hoặc Nâng cao để xem chi tiết.\na) Gây thiệt hại cho tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng;\n\nb) Gây thiệt hại cho tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này.\n\n4. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 10 năm đến 20 năm:\n\na) Gây thiệt hại cho tài sản trị giá 500.000.000 đồng trở lên;\n\nb) Gây thiệt hại cho tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này.\n\n5. Người phạm tội còn có thể bị phạt tiền từ 10.000.000 đồng đến 100.000.000 đồng, cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định từ 01 năm đến 05 năm."
+              },
+              {
+                "name": "điểm a khoản 1 Điều 182. Tội vi phạm chế độ một vợ, một chồng",
+                "content": "1. Người nào đang có vợ, có chồng mà kết hôn hoặc chung sống như vợ chồng với người khác hoặc người chưa có vợ, chưa có chồng mà kết hôn hoặc chung sống như vợ chồng với người mà mình biết rõ là đang có chồng, có vợ thuộc một trong các trường hợp sau đây, thì bị phạt cảnh cáo, phạt cải tạo không giam giữ đến 01 năm hoặc phạt tù từ 03 tháng đến 01 năm:\n\na) Làm cho quan hệ hôn nhân của một hoặc hai bên dẫn đến ly hôn"
+              },
+              {
+                "name": "khoản 14 Điều 3. Giải thích từ ngữ",
+                "content": "14. Ly hôn là việc chấm đứt quan hệ vợ chồng theo bản án, quyết định có hiệu lực pháp luật của Tòa án."
+              },
+              {
+                "name": "khoản 6 Điều 353. Tội tham ô tài sản",
+                "content": "6. Người có chức vụ, quyền hạn trong các doanh nghiệp, tổ chức ngoài Nhà nước mà tham ô tài sản, thì bị xử lý theo quy định tại Điều này."
+              },
+              {
+                "name": "khoản 1 Điều 79. Hộ kinh doanh",
+                "content": "1. Hộ kinh doanh do một cá nhân hoặc các thành viên hộ gia đình đăng ký thành lập và chịu trách nhiệm bằng toàn bộ tài sản của mình đối với hoạt động kinh doanh của hộ. Trường hợp các thành viên hộ gia đình đăng ký hộ kinh doanh thì ủy quyền cho một thành viên làm đại diện hộ kinh doanh. Cá nhân đăng ký hộ kinh doanh, người được các thành viên hộ gia đình ủy quyền làm đại diện hộ kinh doanh là chủ hộ kinh doanh."
+              },
+              {
+                "name": "khoản 10 Điều 4. Giải thích từ ngữ",
+                "content": "Doanh nghiệp là tổ chức có tên riêng, có tài sản, có trụ sở giao dịch, được thành lập hoặc đăng ký thành lập theo quy định của pháp luật nhằm mục đích kinh doanh"
+              },
+              {
+                "name": "Điều 260. Tội vi phạm quy định về tham gia giao thông đường bộ",
+                "content": "1. Người nào tham gia giao thông đường bộ mà vi phạm quy định về an toàn giao thông đường bộ thuộc một trong các trường hợp sau đây, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng, phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 01 năm đến 05 năm:\n\na) Làm chết 01 người hoặc gây thương tích hoặc gây tổn hại cho sức khỏe của 01 người với tỷ lệ tổn thương cơ thể 61% trở lên;\n\nb) Gây thương tích hoặc gây tổn hại cho sức khỏe cho 02 người với tỷ lệ tổn thương cơ thể của mỗi người từ 31% đến 60%;\n\nc) Gây thương tích hoặc gây tổn hại cho sức khỏe cho 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 61% đến 121%;\n\nd) Gây thiệt hại về tài sản từ 100.000.000 đồng đến dưới 500.000.000 đồng.\n\n2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 03 năm đến 10 năm:\n\na) Không có giấy phép lái xe theo quy định;\n\nb) Trong tình trạng có sử dụng rượu, bia mà trong máu hoặc hơi thở có nồng độ cồn vượt quá mức quy định hoặc có sử dụng chất ma túy hoặc các chất kích thích mạnh khác mà pháp luật cấm sử dụng;\n\nc) Gây tai nạn rồi bỏ chạy để trốn tránh trách nhiệm hoặc cố ý không cứu giúp người bị nạn;\n\nd) Không chấp hành hiệu lệnh của người điều khiển hoặc hướng dẫn giao thông;\n\nđ) Làm chết 02 người;\n\ne) Gây thương tích hoặc gây tổn hại cho sức khỏe của 02 người với tỷ lệ tổn thương cơ thể của mỗi người 61% trở lên;\n\ng) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 122% đến 200%;\n\nh) Gây thiệt hại về tài sản từ 500.000.000 đồng đến dưới 1.500.000.000 đồng.\n\n3. Phạm tội thuộc một trong các trường sau đây, thì bị phạt tù từ 07 năm đến 15 năm:\n\na) Làm chết 03 người trở lên;\n\nb) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người với tỷ lệ tổn thương cơ thể của mỗi người 61% trở lên;\n\nc) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này 201% trở lên;\n\nd) Gây thiệt hại về tài sản 1.500.000.000 đồng trở lên.\n\n4. Người tham gia giao thông đường bộ mà vi phạm quy định về an toàn giao thông đường bộ gây thương tích hoặc gây tổn hại cho sức khỏe của 01 người với tỷ lệ tổn thương cơ thể từ 31% đến 60% hoặc gây thương tích hoặc gây tổn hại cho sức khỏe của 02 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 31% đến 60%, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng hoặc phạt cải tạo không giam giữ đến 03 năm.\n\n5. Vi phạm quy định về an toàn giao thông đường bộ mà có khả năng thực tế dẫn đến hậu quả gây thiệt hại cho tính mạng, sức khỏe hoặc tài sản của người khác nếu không được ngăn chặn kịp thời, thì bị phạt tiền từ 10.000.000 đồng đến 50.000.000 đồng, phạt cải tạo không giam giữ đến 01 năm hoặc phạt tù từ 03 tháng đến 01 năm.\n\n6. Người phạm tội còn có thể bị cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định từ 01 năm đến 05 năm."
+              },
+              {
+                "name": "Điều 341. Tội làm giả con dấu, tài liệu của cơ quan, tổ chức; tội sử dụng con dấu, tài liệu giả của cơ quan, tổ chức",
+                "content": "1. Người nào làm giả con dấu, tài liệu hoặc giấy tờ khác của cơ quan, tổ chức hoặc sử dụng con dấu, tài liệu, giấy tờ đó thực hiện hành vi trái pháp luật, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng, phạt cải tạo không giam giữ đến 03 năm hoặc bị phạt tù từ 06 tháng đến 03 năm.\n\n2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 05 năm:\n\na) Có tổ chức;\n\nb) Phạm tội 02 lần trở lên;\n\nc) Làm từ 02 đến 05 con dấu, tài liệu hoặc giấy tờ khác;\n\nd) Sử dụng con dấu, tài liệu hoặc giấy tờ khác thực hiện tội phạm;\n\nđ) Thu lợi bất chính 10.000.000 đồng đến dưới 50.000.000 đồng;\n\ne) Tái phạm nguy hiểm.\n\n3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 03 năm đến 07 năm:\n\na) Làm 06 con dấu, tài liệu hoặc giấy tờ khác trở lên;\n\nb) Sử dụng con dấu, tài liệu hoặc giấy tờ khác thực hiện tội phạm rất nghiêm trọng hoặc tội đặc biệt nghiêm trọng;\n\nc) Thu lợi bất chính 50.000.000 đồng trở lên.\n\n4. Người phạm tội còn có thể bị phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng."
+              },
+              {
+                "name": "Điều 174. Tội lừa đảo chiếm đoạt tài sản",
+                "content": "1. Người nào bằng thủ đoạn gian dối chiếm đoạt tài sản của người khác trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng hoặc dưới 2.000.000 đồng nhưng thuộc một trong các trường hợp sau đây, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm:\na) Đã bị xử phạt vi phạm hành chính về hành vi chiếm đoạt tài sản mà còn vi phạm;\n\nb) Đã bị kết án về tội này hoặc về một trong các tội quy định tại các điều\n168, 169, 170, 171, 172, 173, 175 và 290 của Bộ luật này, chưa được xóa án tích mà còn vi phạm;\n\nc) Gây ảnh hưởng xấu đến an ninh, trật tự, an toàn xã hội;\n\nd) Tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ\n\n2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm\nđến 07 năm:\na) Có tổ chức;\nb) Có tính chất chuyên nghiệp;\nc) Chiếm đoạt tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng;\nd) Tái phạm nguy hiểm;\nđ) Lợi dụng chức vụ, quyền hạn hoặc lợi dụng danh nghĩa cơ quan, tổ chức;\ne) Dùng thủ đoạn xảo quyệt;\ng) (được bãi bỏ)\n\n3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 07 năm đến 15 năm:\na) Chiếm đoạt tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng;\nb) (được bãi bỏ)\nc) Lợi dụng thiên tai, dịch bệnh.\n\n4. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 12 năm\nđến 20 năm hoặc tù chung thân:\na) Chiếm đoạt tài sản trị giá 500.000.000 đồng trở lên;\nb) (được bãi bỏ)\nc) Lợi dụng hoàn cảnh chiến tranh, tình trạng khẩn cấp.\n\n5. Người phạm tội còn có thể bị phạt tiền từ 10.000.000 đồng đến\n100.000.000 đồng, cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định từ 01 năm đến 05 năm hoặc tịch thu một phần hoặc toàn bộ tài sản."
+              },
+              {
+                "name": "khoản 1 Điều 158. Tội xâm phạm chỗ ở của người khác",
+                "content": "1. Người nào thực hiện một trong các hành vi sau đây xâm phạm chỗ ở của người khác, thì bị phạt cải tạo không giam giữ đến 02 năm hoặc phạt tù từ 03 tháng đến 02 năm:\na) Khám xét trái pháp luật chỗ ở của người khác;\n\nb) Đuổi trái pháp luật người khác ra khỏi chỗ ở của họ;\n\nc) Chiếm giữ chỗ ở hoặc cản trở trái pháp luật người đang ở hoặc người đang quản lý hợp pháp vào chỗ ở của họ;\n\nd) Xâm nhập trái pháp luật chỗ ở của người khác"
+              },
+              {
+                "name": "Điều 185. Tội ngược đãi hoặc hành hạ ông bà, cha mẹ, vợ chồng, con, cháu hoặc người có công nuôi dưỡng mình",
+                "content": "1. Người nào đối xử tồi tệ hoặc có hành vi bạo lực xâm phạm thân thể ông\nbà, cha mẹ, vợ chồng, con, cháu hoặc người có công nuôi dưỡng mình thuộc một trong những trường hợp sau đây, thì bị phạt cảnh cáo, phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm:\na) Thường xuyên làm cho nạn nhân bị đau đớn về thể xác, tinh thần;\n\nb) Đã bị xử phạt vi phạm hành chính về hành vi này mà còn vi phạm.\n\n2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 05 năm:\n\na) Đối với người dưới 16 tuổi, phụ nữ mà biết là có thai, người già yếu;\n\nb) Đối với người khuyết tật nặng, khuyết tật đặc biệt nặng hoặc người mắc bệnh hiểm nghèo."
+              },
+              {
+                "name": "khoản 6 Điều 134. Tội cố ý gây thương tích hoặc gây tổn hại cho sức khỏe của người khác",
+                "content": "6. Người nào chuẩn bị vũ khí, vật liệu nổ, hung khí nguy hiểm, a-xít nguy\nhiểm, hóa chất nguy hiểm hoặc thành lập hoặc tham gia nhóm tội phạm nhằm gây thương tích hoặc gây tổn hại cho sức khỏe của người khác, thì bị phạt cải tạo không giam giữ đến 02 năm hoặc phạt tù từ 03 tháng đến 02 năm."
+              },
+              {
+                "name": "khoản 2 Điều 36. Các trường hợp bị tạm hoãn xuất cảnh",
+                "content": "2. Người được hoãn chấp hành án phạt tù, người được tạm đình chỉ chấp hành án phạt tù, người được tha tù trước thời hạn có điều kiện trong thời gian thử thách, người được hưởng án treo trong thời gian thử thách, người chấp hành án phạt cải tạo không giam giữ trong thời gian chấp hành án theo quy định của Luật Thi hành án hình sự."
+              },
+              {
+                "name": "khoản 2 Điều 37. Thẩm quyền quyết định tạm hoãn xuất cảnh, gia hạn, hủy bỏ tạm hoãn xuất cảnh",
+                "content": "2. Cơ quan, người có thẩm quyền ra quyết định hoãn chấp hành án phạt tù, tạm đình chỉ chấp hành án phạt tù, tha tù trước thời hạn có điều kiện, thi hành án treo, thi hành án phạt cải tạo không giam giữ có thẩm quyền quyết định tạm hoãn xuất cảnh đối với trường hợp quy định tại khoản 2 Điều 36 của Luật này.\n\nKhoản 2 Điều 36: 2. Người được hoãn chấp hành án phạt tù, người được tạm đình chỉ chấp hành án phạt tù, người được tha tù trước thời hạn có điều kiện trong thời gian thử thách, người được hưởng án treo trong thời gian thử thách, người chấp hành án phạt cải tạo không giam giữ trong thời gian chấp hành án theo quy định của Luật Thi hành án hình sự."
+              },
+              {
+                "name": "Điều 20. Thực hiện trích xuất người bị tạm giữ, người bị tạm giam",
+                "content": "1. Việc trích xuất người bị tạm giữ, người bị tạm giam chỉ được thực hiện khi có lệnh trích xuất của người có thẩm quyền theo quy định của Bộ luật tố tụng hình sự, Luật thi hành án hình sự và Luật này, trong trường hợp sau đây:\n\na) Để phục vụ cho hoạt động điều tra, truy tố, xét xử, thi hành án;\n\nb) Đưa đi khám bệnh, chữa bệnh, giám định pháp y, giám định pháp y tâm thần;\n\nc) Gặp thân nhân, người bào chữa hoặc người đại diện hợp pháp để thực hiện một số quyền, nghĩa vụ do luật định;\n\nd) Người nước ngoài bị tạm giữ, tạm giam tiếp xúc lãnh sự hoặc tiếp xúc với các tổ chức nhân đạo theo quy định tại điều ước quốc tế mà Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên hoặc theo sự thỏa thuận giữa Cộng hòa xã hội chủ nghĩa Việt Nam với nước có người bị tạm giữ, người bị tạm giam hoặc vì lý do đối ngoại đối với từng trường hợp cụ thể.\n\n2. Trường hợp Giám thị trại tạm giam, Trưởng nhà tạm giữ, Trưởng buồng tạm giữ của đồn biên phòng trích xuất người bị tạm giữ, người bị tạm giam đi khám bệnh, chữa bệnh thì phải thông báo ngay cho cơ quan đang thụ lý vụ án và Viện kiểm sát có thẩm quyền.\n\n3. Lệnh trích xuất phải có các nội dung chủ yếu sau đây:\n\na) Cơ quan, họ tên, chức vụ, cấp bậc người ra lệnh;\n\nb) Họ tên, năm sinh, quốc tịch, nơi cư trú, hành vi vi phạm pháp luật, ngày bị tạm giữ, ngày bị tạm giam của người được trích xuất;\n\nc) Mục đích và thời hạn trích xuất;\n\nd) Họ tên, chức vụ, cấp bậc, cơ quan của người làm nhiệm vụ áp giải người được trích xuất hoặc cơ quan làm nhiệm vụ áp giải;\n\nđ) Họ tên, chức vụ, cấp bậc (nếu có) của người nhận trích xuất của cơ quan có thẩm quyền ra lệnh trích xuất;\n\ne) Ngày, tháng, năm ra lệnh; chữ ký của người ra lệnh và đóng dấu.\n\n4. Cơ sở giam giữ có trách nhiệm kiểm tra, bàn giao người bị tạm giữ, người bị tạm giam cho cơ quan, người có nhiệm vụ áp giải. Cơ quan, người có nhiệm vụ áp giải có trách nhiệm bàn giao người được trích xuất cho người có thẩm quyền ra lệnh trích xuất. Việc giao nhận phải được lập biên bản, có ghi rõ tình trạng sức khỏe của người đó và ghi sổ theo dõi.\n\nNgười có thẩm quyền ra lệnh trích xuất có trách nhiệm tiếp nhận người được trích xuất. Cơ quan, người có nhiệm vụ áp giải phối hợp với cơ sở giam giữ và người có thẩm quyền ra lệnh trích xuất quản lý và bảo đảm thực hiện chế độ ăn, ở, sinh hoạt đối với người được trích xuất theo quy định của Luật này. Việc áp giải, quản lý và kinh phí bảo đảm thực hiện chế độ ăn, ở, sinh hoạt đối với người được trích xuất do Chính phủ quy định.\n\nKhi chưa hết thời hạn trích xuất nhưng đã hoàn thành mục đích trích xuất hoặc hết thời hạn trích xuất, người có yêu cầu trích xuất bàn giao người được trích xuất cho cơ quan, người có nhiệm vụ áp giải để giao người được trích xuất cho cơ sở giam giữ, trừ trường hợp người bị tạm giữ, người bị tạm giam được trả tự do theo bản án, quyết định của cơ quan, người có thẩm quyền. Nếu có nhu cầu tiếp tục trích xuất thì phải có lệnh gia hạn trích xuất. Thời hạn trích xuất và gia hạn trích xuất không được dài hơn thời hạn tạm giữ, tạm giam còn lại.\n\n5. Trong trường hợp thực hiện hoạt động quy định tại khoản 1 Điều này bên trong khu vực cơ sở giam giữ thì thủ trưởng cơ sở giam giữ quyết định đưa người bị tạm giữ, người bị tạm giam ra khỏi buồng tạm giữ, buồng tạm giam mà không cần lệnh trích xuất."
+              },
+              {
+                "name": "Điều 84. Quyết định thi hành án treo",
+                "content": "1. Quyết định thi hành án treo phải ghi rõ họ, tên, chức vụ người ra quyết định; bản án, quyết định được thi hành; tên cơ quan có nhiệm vụ thi hành; họ, tên, ngày, tháng, năm sinh, nơi cư trú của người được hưởng án treo; mức hình phạt tù và thời gian thử thách của người được hưởng án treo; hình phạt bổ sung, trừ hình phạt bổ sung là hình phạt tiền; hậu quả của việc vi phạm nghĩa vụ trong thời gian thử thách theo quy định tại khoản 5 Điều 65 của Bộ luật Hình sự; Ủy ban nhân dân cấp xã, đơn vị quân đội được giao giám sát, giáo dục người được hưởng án treo.\n\n2. Trong thời hạn 03 ngày làm việc kể từ ngày ra quyết định thi hành án treo, Tòa án phải gửi quyết định đó cho cá nhân, cơ quan sau đây:\n\na) Người được hưởng án treo và người đại diện trong trường hợp người được hưởng án treo là người dưới 18 tuổi;\n\nb) Viện kiểm sát cùng cấp;\n\nc) Cơ quan thi hành án hình sự Công an cấp huyện nơi Ủy ban nhân dân cấp xã được giao giám sát, giáo dục người được hưởng án treo, cơ quan thi hành án hình sự cấp quân khu nơi người được hưởng án treo làm việc;\n\nd) Ủy ban nhân dân cấp xã, đơn vị quân đội được giao giám sát, giáo dục người được hưởng án treo;\n\nđ) Sở Tư pháp nơi Tòa án đã ra quyết định thi hành án có trụ sở."
+              },
+              {
+                "name": "khoản 1 Điều 364. Thẩm quyền và thủ tục ra quyết định thi hành án",
+                "content": "1. Chánh án Tòa án đã xét xử sơ thẩm có thẩm quyền ra quyết định thi hành án hoặc ủy thác cho Chánh án Tòa án khác cùng cấp ra quyết định thi hành án."
+              },
+              {
+                "name": "Điều 175 của Bộ luật Hì",
+                "content": "1. Người nào thực hiện một trong các hành vi sau đây chiếm đoạt tài sản của người khác trị giá từ 4.000.000 đồng đến dưới 50.000.000 đồng hoặc dưới 4.000.000 đồng nhưng đã bị xử phạt vi phạm hành chính về hành vi chiếm đoạt tài sản hoặc đã bị kết án về tội này hoặc về một trong các tội quy định tại các điều 168, 169, 170, 171, 172, 173, 174 và 290 của Bộ luật này, chưa được xóa án tích mà còn vi phạm hoặc tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm:\na) Vay, mượn, thuê tài sản của người khác hoặc nhận được tài sản của người khác bằng hình thức hợp đồng rồi dùng thủ đoạn gian dối hoặc bỏ trốn để chiếm đoạt tài sản đó hoặc đến thời hạn trả lại tài sản mặc dù có điều kiện, khả năng nhưng cố tình không trả;\n\nb) Vay, mượn, thuê tài sản của người khác hoặc nhận được tài sản của người khác bằng hình thức hợp đồng và đã sử dụng tài sản đó vào mục đích bất hợp pháp dẫn đến không có khả năng trả lại tài sản.\n\n2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 07 năm:\na) Có tổ chức;\nb) Có tính chất chuyên nghiệp;\nc) Chiếm đoạt tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng;\nd) Lợi dụng chức vụ, quyền hạn hoặc lợi dụng danh nghĩa cơ quan, tổ chức;\nđ) Dùng thủ đoạn xảo quyệt;\ne) Gây ảnh hưởng xấu đến an ninh, trật tự, an toàn xã hội;\ng) Tái phạm nguy hiểm.\n\n3. Phạm tội chiếm đoạt tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng, thì bị phạt tù từ 05 năm đến 12 năm.\n\n4. Phạm tội chiếm đoạt tài sản trị giá 500.000.000 đồng trở lên, thì bị phạt tù từ 12 năm đến 20 năm.\n\n5. Người phạm tội còn có thể bị phạt tiền từ 10.000.000 đồng đến\n100.000.000 đồng, cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định từ 01 năm đến 05 năm hoặc tịch thu một phần hoặc toàn bộ tài sản."
+              }
+            ]
+          }
+        ],
+        "dan-su::giai-dap-nghiep-vu": [
+          {
+            "id": "case-cong-van-163-tandtc-pc-nam-2024-dan-su-2",
+            "ten": "Công văn 163 TANDTC-PC năm 2024",
+            "mo_ta": "",
+            "lvId": "dan-su",
+            "lvName": "Dân sự",
+            "sfId": "giai-dap-nghiep-vu",
+            "sfName": "Giải đáp nghiệp vụ tư pháp",
+            "sao": 0,
+            "ngay": "2026-04-08T20:33:18.2825822+07:00",
+            "tom_luoc": "",
+            "ap_dung": "",
+            "chi_tiet": "<div class=\"detail-section-title\">D&#194;N SỰ, TỐ TỤNG D&#194;N SỰ</div><p>1. Đương sự ủy quyền cho người đại diện tham gia tố tụng. Trường hợp T&#242;a &#225;n kh&#244;ng thể tống đạt trực tiếp cho người đại diện theo ủy quyền th&#236; c&#243; thể tống đạt cho người ủy quyền v&#224; người ủy quyền c&#243; nghĩa vụ th&#244;ng b&#225;o lại cho người được ủy quyền hay kh&#244;ng?</p><p>Trường hợp đương sự đ&#227; ủy quyền cho người kh&#225;c đại diện cho m&#236;nh tham gia tố tụng th&#236; T&#242;a &#225;n chỉ tống đạt cho người đại diện của đương sự m&#224; kh&#244;ng phải tống đạt cho đương sự. Tuy nhi&#234;n, trường hợp T&#242;a &#225;n kh&#244;ng thể tống đạt trực tiếp cho người đại diện theo ủy quyền th&#236; T&#242;a &#225;n thực hiện thủ tục ni&#234;m yết c&#244;ng khai quy định tại&#160;Điều 179 của Bộ luật Tố tụng d&#226;n sự&#160;v&#224; tống đạt trực tiếp cho đương sự ủy quyền.</p><p>2. Hiện nay, việc tống đạt cho đương sự cư tr&#250; tại c&#225;c chung cư thường gặp kh&#243; khăn do bị cản trở hoặc kh&#244;ng hợp t&#225;c của bảo vệ, Ban quản l&#253; chung cư. Vậy, T&#242;a &#225;n c&#243; thể ni&#234;m yết tại khu vực bản tin chung, sảnh chung cư hay kh&#244;ng?</p><p>Khoản 1 Điều 179 của Bộ luật Tố tụng d&#226;n sự&#160;th&#236; việc ni&#234;m yết c&#244;ng khai văn bản tố tụng được thực hiện trong trường hợp kh&#244;ng thể cấp, tống đạt, th&#244;ng b&#225;o trực tiếp văn bản tố tụng theo quy định tại&#160;Điều 177 v&#224; Điều 178 của Bộ luật&#160;n&#224;y.</p><p>Khoản 2 Điều 179 của Bộ luật Tố tụng d&#226;n sự&#160;quy định:&#160;“Việc ni&#234;m yết c&#244;ng khai văn bản tố tụng do T&#242;a &#225;n trực tiếp thực hiện hoặc ủy quyền cho người c&#243; chức năng tống đạt hoặc Ủy ban nh&#226;n d&#226;n cấp x&#227; nơi đương sự cư tr&#250;, nơi cơ quan, tổ chức c&#243; trụ sở thực hiện theo thủ tục sau đ&#226;y:</p><p>a) Ni&#234;m yết bản ch&#237;nh tại trụ sở T&#242;a &#225;n, Ủy ban nh&#226;n d&#226;n cấp x&#227; nơi cư tr&#250; hoặc nơi cư tr&#250; cuối c&#249;ng của c&#225; nh&#226;n, nơi c&#243; trụ sở hoặc trụ sở cuối c&#249;ng của cơ quan, tổ chức được cấp, tống đạt, th&#244;ng b&#225;o;</p><div class=\"detail-section-title\">b) Ni&#234;m yết bản sao tại nơi cư tr&#250; hoặc nơi cư tr&#250; cuối c&#249;ng của c&#225; nh&#226;n, nơi c&#243; trụ sở hoặc trụ sở cuối c&#249;ng của cơ quan, tổ chức được cấp, tống đạt, th&#244;ng b&#225;o;</div><div class=\"detail-section-title\">c) Lập bi&#234;n bản về việc thực hiện thủ tục ni&#234;m yết c&#244;ng khai, trong đ&#243; ghi r&#245; ng&#224;y, th&#225;ng, năm ni&#234;m yết”.</div><div class=\"detail-section-title\">Như vậy, trong trường hợp n&#224;y th&#236; T&#242;a &#225;n phải thực hiện ni&#234;m yết tại địa chỉ căn hộ của chung cư nơi cư tr&#250; hoặc nơi cư tr&#250; cuối c&#249;ng của đương sự đ&#243;.</div><p>3. Bi&#234;n bản h&#242;a giải của T&#242;a &#225;n ghi nhận nội dung nguy&#234;n đơn r&#250;t to&#224;n bộ y&#234;u cầu khởi kiện. Sau đ&#243;, T&#242;a &#225;n hướng dẫn nhưng nguy&#234;n đơn kh&#244;ng l&#224;m đơn r&#250;t y&#234;u cầu khởi kiện. T&#242;a &#225;n c&#243; căn cứ v&#224;o bi&#234;n bản h&#242;a giải thể hiện nguy&#234;n đơn đ&#227; r&#250;t to&#224;n bộ y&#234;u cầu khởi kiện để ra quyết định đ&#236;nh chỉ giải quyết vụ &#225;n theo quy định tại&#160;Điều 217 của Bộ luật Tố tụng d&#226;n sự&#160;được kh&#244;ng?</p><p>Trường hợp n&#234;u tr&#234;n th&#236; T&#242;a &#225;n căn cứ&#160;điểm c khoản 1 Điều 217 của Bộ luật Tố tụng d&#226;n sự&#160;v&#224; bi&#234;n bản h&#242;a giải thể hiện nguy&#234;n đơn đ&#227; r&#250;t to&#224;n bộ y&#234;u cầu khởi kiện để ra quyết định đ&#236;nh chỉ giải quyết vụ &#225;n. Nếu trong vụ &#225;n đ&#243; c&#243; bị đơn c&#243; y&#234;u cầu phản tố, người c&#243; quyền lợi, nghĩa vụ li&#234;n quan c&#243; y&#234;u cầu độc lập th&#236; T&#242;a &#225;n căn cứ&#160;khoản 2 Điều 217 của Bộ luật Tố tụng d&#226;n sự&#160;để giải quyết như sau:</p><div class=\"detail-section-title\">(1) Bị đơn r&#250;t to&#224;n bộ y&#234;u cầu phản tố, người c&#243; quyền lợi, nghĩa vụ li&#234;n quan r&#250;t to&#224;n bộ y&#234;u cầu độc lập th&#236; T&#242;a &#225;n ra quyết định đ&#236;nh chỉ giải quyết vụ &#225;n;</div><p>(2) Bị đơn kh&#244;ng r&#250;t hoặc chỉ r&#250;t một phần y&#234;u cầu phản tố th&#236; T&#242;a &#225;n ra quyết định đ&#236;nh chỉ giải quyết đối với y&#234;u cầu khởi kiện của nguy&#234;n đơn; bị đơn trở th&#224;nh nguy&#234;n đơn, nguy&#234;n đơn trở th&#224;nh bị đơn;</p><p>(3) Bị đơn r&#250;t to&#224;n bộ y&#234;u cầu phản tố, người c&#243; quyền lợi v&#224; nghĩa vụ li&#234;n quan kh&#244;ng r&#250;t hoặc chỉ r&#250;t một phần y&#234;u cầu độc lập th&#236; T&#242;a &#225;n ra quyết định đ&#236;nh chỉ giải quyết đối với y&#234;u cầu khởi kiện của nguy&#234;n đơn, y&#234;u cầu phản tố của bị đơn; người c&#243; quyền lợi, nghĩa vụ li&#234;n quan trở th&#224;nh nguy&#234;n đơn, người n&#224;o bị khởi kiện theo y&#234;u cầu độc lập trở th&#224;nh bị đơn.</p><p>Đối với vụ &#225;n được x&#233;t xử lại theo thủ tục sơ thẩm sau khi c&#243; quyết định gi&#225;m đốc thẩm, t&#225;i thẩm th&#236; căn cứ&#160;khoản 4 Điều 217 của Bộ luật Tố tụng d&#226;n sự, T&#242;a &#225;n đ&#236;nh chỉ giải quyết vụ &#225;n khi c&#243; sự đồng &#253; của bị đơn, người c&#243; quyền lợi, nghĩa vụ li&#234;n quan v&#224; phải giải quyết hậu quả của việc thi h&#224;nh &#225;n, c&#225;c vấn đề kh&#225;c li&#234;n quan (nếu c&#243;).</p><p>4. Trong việc d&#226;n sự tuy&#234;n bố một người l&#224; đ&#227; chết hoặc mất t&#237;ch, T&#242;a &#225;n c&#243; đưa người bị y&#234;u cầu tuy&#234;n bố l&#224; đ&#227; chết hoặc mất t&#237;ch v&#224;o tham gia tố tụng với tư c&#225;ch l&#224; người c&#243; quyền lợi, nghĩa vụ li&#234;n quan hay kh&#244;ng?</p><p>Trường hợp n&#224;y, T&#242;a &#225;n x&#225;c định tư c&#225;ch tham gia tố tụng của người bị tuy&#234;n bố mất t&#237;ch hoặc tuy&#234;n bố l&#224; đ&#227; chết l&#224; người bị y&#234;u cầu theo quy định tại&#160;Chương XXVI&#160;về thủ tục giải quyết y&#234;u cầu tuy&#234;n bố một người mất t&#237;ch v&#224;&#160;Chương XXVII&#160;về thủ tục giải quyết y&#234;u cầu tuy&#234;n bố một người đ&#227; chết của Bộ luật Tố tụng d&#226;n sự.</p><p>5. Khi giải quyết y&#234;u cầu tuy&#234;n bố một người l&#224; đ&#227; chết, T&#242;a &#225;n x&#225;c định ng&#224;y chết của người bị y&#234;u cầu tuy&#234;n bố l&#224; đ&#227; chết trong trường hợp quy định tại&#160;điểm d khoản 1 Điều 71 của Bộ luật D&#226;n sự năm 2015&#160;như thế n&#224;o?</p><div class=\"detail-section-title\">Quan điểm thứ nhất cho rằng: Ng&#224;y chết l&#224; ng&#224;y quyết định của T&#242;a &#225;n tuy&#234;n bố một người l&#224; đ&#227; chết c&#243; hiệu lực ph&#225;p luật</div><div class=\"detail-section-title\">Quan điểm thứ hai cho rằng: Ng&#224;y chết l&#224; ng&#224;y đầu ti&#234;n kế tiếp của ng&#224;y kết th&#250;c thời hạn biệt t&#237;ch 5 năm liền.</div><div class=\"detail-section-title\">Quan điểm thứ ba cho rằng: Ng&#224;y chết l&#224; ng&#224;y c&#243; tin tức cuối c&#249;ng của người đ&#243;.</div><div class=\"detail-section-title\">Theo quy định tại&#160;điểm d khoản 1 Điều 71 của Bộ luật D&#226;n sự&#160;th&#236;: “Người c&#243; quyền, lợi &#237;ch li&#234;n quan c&#243; thể y&#234;u cầu T&#242;a &#225;n ra quyết định tuy&#234;n bố một người l&#224; đ&#227; chết trong trường hợp sau đ&#226;y:</div><div class=\"detail-section-title\">... d) Biệt t&#237;ch 05 năm liền trở l&#234;n v&#224; kh&#244;ng c&#243; tin tức x&#225;c thực l&#224; c&#242;n sống; thời hạn n&#224;y được t&#237;nh theo quy định tại&#160;khoản 1 Điều 68 của Bộ luật&#160;n&#224;y”.</div><div class=\"detail-section-title\">Khoản 2 Điều 71 của Bộ luật D&#226;n sự&#160;quy định:&#160;“Căn cứ v&#224;o c&#225;c trường hợp quy định tại&#160;khoản 1&#160;Điều n&#224;y, T&#242;a &#225;n x&#225;c định ng&#224;y chết của người bị tuy&#234;n bố l&#224; đ&#227; chết”.</div><p>Khi giải quyết y&#234;u cầu tuy&#234;n bố một người l&#224; đ&#227; chết quy định tại&#160;điểm d khoản 1 Điều 71 của Bộ luật D&#226;n sự&#160;th&#236; T&#242;a &#225;n x&#225;c định ng&#224;y chết theo quan điểm thứ hai. Theo đ&#243;, ng&#224;y chết của người bị y&#234;u cầu tuy&#234;n bố l&#224; đ&#227; chết được x&#225;c định l&#224; ng&#224;y đầu ti&#234;n kế tiếp của ng&#224;y kết th&#250;c thời hạn 05 năm liền kể từ ng&#224;y biết được tin tức cuối c&#249;ng về người đ&#243;; nếu kh&#244;ng x&#225;c định được ng&#224;y c&#243; tin tức cuối c&#249;ng th&#236; thời hạn n&#224;y được t&#237;nh từ ng&#224;y đầu ti&#234;n của th&#225;ng tiếp theo th&#225;ng c&#243; tin tức cuối c&#249;ng; nếu kh&#244;ng x&#225;c định được ng&#224;y, th&#225;ng c&#243; tin tức cuối c&#249;ng th&#236; thời hạn n&#224;y được t&#237;nh từ ng&#224;y đầu ti&#234;n của năm tiếp theo năm c&#243; tin tức cuối c&#249;ng. Việc x&#225;c định thời điểm kết th&#250;c thời hạn được thực hiện theo quy định tại&#160;Điều 148 của Bộ luật D&#226;n sự.</p><p>6.&#160;Khoản 4 Điều 388 của Bộ luật Tố tụng d&#226;n sự&#160;quy định về chuẩn bị x&#233;t đơn y&#234;u cầu tuy&#234;n bố một người mất t&#237;ch như sau: “Trong thời hạn 10 ng&#224;y kể từ ng&#224;y kết th&#250;c thời hạn th&#244;ng b&#225;o quy định tại&#160;khoản 2&#160;Điều n&#224;y th&#236; T&#242;a &#225;n phải mở phi&#234;n họp x&#233;t đơn y&#234;u cầu”. Vậy, quyết định mở phi&#234;n họp v&#224; c&#225;c văn bản tố tụng kh&#225;c c&#243; cần tiến h&#224;nh ni&#234;m yết tại địa phương đối với người bị y&#234;u cầu hay kh&#244;ng? Nếu c&#243; th&#236; thời hạn ni&#234;m yết l&#224; bao nhi&#234;u ng&#224;y?</p><p>Khoản 1 Điều 179 của Bộ luật Tố tụng d&#226;n sự&#160;quy định:&#160;“Việc ni&#234;m yết c&#244;ng khai văn bản tố tụng được thực hiện trong trường hợp kh&#244;ng thể cấp, tống đạt, th&#244;ng b&#225;o trực tiếp văn bản tố tụng theo quy định tại&#160;Điều 177 v&#224; Điều 178 của Bộ luật&#160;n&#224;y”.</p><p>Như vậy, trong trường hợp n&#224;y người bị y&#234;u cầu kh&#244;ng thể nhận văn bản tố tụng th&#244;ng qua việc tống đạt trực tiếp n&#234;n T&#242;a &#225;n phải tiến h&#224;nh ni&#234;m yết quyết định mở phi&#234;n họp giải quyết việc d&#226;n sự v&#224; c&#225;c văn bản tố tụng kh&#225;c đối với người bị y&#234;u cầu. Theo quy định tại&#160;khoản 3 Điều 179 của Bộ luật Tố tụng d&#226;n sự&#160;th&#236; thời hạn ni&#234;m yết c&#244;ng khai văn bản tố tụng l&#224; 15 ng&#224;y, kể từ ng&#224;y ni&#234;m yết.</p><p>7. Trong giai đoạn nhận v&#224; xử l&#253; đơn khởi kiện, người khởi kiện cung cấp th&#244;ng tin người bị kiện đ&#227; chết trước khi người khởi kiện l&#224;m đơn khởi kiện nhưng kh&#244;ng cung cấp được giấy chứng tử v&#224; người kế thừa quyền v&#224; nghĩa vụ tố tụng của người bị kiện theo y&#234;u cầu của T&#242;a &#225;n th&#236; c&#243; thuộc trường hợp chưa đủ điều kiện khởi kiện kh&#244;ng?</p><div class=\"detail-section-title\">Trường hợp T&#242;a &#225;n đ&#227; thụ l&#253; vụ &#225;n, sau đ&#243; x&#225;c minh l&#224; bị đơn chết trước thời điểm khởi kiện v&#224; nguy&#234;n đơn kh&#244;ng cung cấp được người kế thừa quyền v&#224; nghĩa vụ tố tụng th&#236; giải quyết như thế n&#224;o?</div><p>Trong giai đoạn nhận v&#224; xử l&#253; đơn khởi kiện, người khởi kiện cung cấp th&#244;ng tin người bị kiện đ&#227; chết trước khi người khởi kiện l&#224;m đơn khởi kiện nhưng kh&#244;ng cung cấp được giấy chứng tử v&#224; người kế thừa quyền v&#224; nghĩa vụ tố tụng của người bị kiện theo y&#234;u cầu sửa đổi, bổ sung đơn khởi kiện của T&#242;a &#225;n th&#236; T&#242;a &#225;n căn cứ&#160;điểm e khoản 1 Điều 192 của Bộ luật Tố tụng d&#226;n sự&#160;để trả lại đơn khởi kiện.</p><p>Trường hợp T&#242;a &#225;n đ&#227; thụ l&#253; vụ &#225;n, sau đ&#243; x&#225;c minh l&#224; bị đơn chết trước thời điểm khởi kiện v&#224; nguy&#234;n đơn kh&#244;ng cung cấp được người kế thừa quyền v&#224; nghĩa vụ tố tụng th&#236; T&#242;a &#225;n hướng dẫn nguy&#234;n đơn l&#224;m đơn r&#250;t y&#234;u cầu khởi kiện. Trường hợp T&#242;a &#225;n đ&#227; hướng dẫn nhưng nguy&#234;n đơn kh&#244;ng l&#224;m đơn r&#250;t y&#234;u cầu khởi kiện th&#236; T&#242;a &#225;n căn cứ&#160;điểm a khoản 1 Điều 217 của Bộ luật Tố tụng d&#226;n sự&#160;để ra quyết định đ&#236;nh chỉ giải quyết vụ &#225;n.</p><p>8. A kiện đ&#242;i nợ B v&#224; xuất tr&#236;nh giấy vay tiền c&#243; chữ k&#253; của B. B kh&#244;ng c&#244;ng nhận chữ k&#253; trong giấy vay tiền v&#224; y&#234;u cầu trưng cầu gi&#225;m định (B đ&#227; nộp tiền tạm ứng chi ph&#237; gi&#225;m định). Kết luận gi&#225;m định kh&#244;ng phải l&#224; chữ k&#253; của B. Sau đ&#243;, A r&#250;t to&#224;n bộ y&#234;u cầu khởi kiện. Trường hợp n&#224;y, T&#242;a &#225;n ra quyết định đ&#236;nh chỉ giải quyết vụ &#225;n, nguy&#234;n đơn phải chịu chi ph&#237; gi&#225;m định. Tuy nhi&#234;n, theo Mẫu số 45-DS Quyết định đ&#236;nh chỉ giải quyết vụ &#225;n d&#226;n sự th&#236; chỉ c&#243; mục hậu quả của việc đ&#236;nh chỉ quy định tại&#160;Điều 218 của Bộ luật Tố tụng d&#226;n sự&#160;(cụ thể l&#224; về &#225;n ph&#237;), kh&#244;ng c&#243; mục quy định về chi ph&#237; tố tụng. T&#242;a &#225;n c&#243; được giải quyết về chi ph&#237; tố tụng ngay trong quyết định đ&#236;nh chỉ kh&#244;ng?</p><p>Trường hợp n&#224;y, T&#242;a &#225;n căn cứ quy định tại&#160;khoản 3 Điều 161, khoản 1 Điều 162 của Bộ luật Tố tụng d&#226;n sự&#160;để xử l&#253; tiền tạm ứng chi ph&#237; gi&#225;m định đ&#227; nộp v&#224; quyết định nghĩa vụ chịu chi ph&#237; gi&#225;m định trong quyết định đ&#236;nh chỉ giải quyết vụ &#225;n, theo đ&#243; A phải chịu chi ph&#237; gi&#225;m định v&#224; B đ&#227; nộp tiền tạm ứng chi ph&#237; gi&#225;m định n&#234;n A phải ho&#224;n trả cho B.</p><p>9. Tranh chấp bất động sản được T&#242;a &#225;n nh&#226;n d&#226;n huyện A thụ l&#253;, giải quyết đ&#250;ng thẩm quyền theo nơi c&#243; bất động sản, tuy nhi&#234;n bản &#225;n đ&#227; bị T&#242;a &#225;n cấp tr&#234;n hủy để x&#233;t xử lại theo thủ tục chung. Trong qu&#225; tr&#236;nh thụ l&#253;, giải quyết lại vụ &#225;n, do c&#243; việc chia t&#225;ch, s&#225;p nhập địa giới h&#224;nh ch&#237;nh n&#234;n địa chỉ bất động sản đang c&#243; tranh chấp nay thuộc về địa giới của huyện B. Vậy, T&#242;a &#225;n đang thụ l&#253;, giải quyết vụ &#225;n c&#243; phải chuyển hồ sơ cho T&#242;a &#225;n nơi c&#243; bất động sản sau khi được chia t&#225;ch, s&#225;p nhập kh&#244;ng?</p><p>Điểm c khoản 1 Điều 39 của Bộ luật Tố tụng d&#226;n sự&#160;quy định: “Đối với tranh chấp l&#224; bất động sản th&#236; chỉ T&#242;a &#225;n nơi c&#243; bất động sản c&#243; thẩm quyền giải quyết”. Do đ&#243;, trường hợp sau khi chia t&#225;ch, s&#225;p nhập địa giới h&#224;nh ch&#237;nh, bất động sản thuộc về địa giới của huyện kh&#225;c th&#236; cần ph&#226;n biệt như sau:</p><div class=\"detail-section-title\">- Trường hợp T&#242;a &#225;n chưa ra Quyết định đưa vụ &#225;n ra x&#233;t xử th&#236; T&#242;a &#225;n phải chuyển hồ sơ vụ &#225;n đến T&#242;a &#225;n nơi c&#243; bất động sản sau khi được chia t&#225;ch, s&#225;p nhập để giải quyết theo thẩm quyền.</div><p>- Trường hợp T&#242;a &#225;n đ&#227; ra Quyết định đưa vụ &#225;n ra x&#233;t xử th&#236; T&#242;a &#225;n kh&#244;ng chuyển hồ sơ vụ &#225;n đến T&#242;a &#225;n nơi c&#243; bất động sản sau khi được chia t&#225;ch, s&#225;p nhập m&#224; tiếp tục giải quyết vụ &#225;n theo thủ tục chung.</p><p>10. Trong qu&#225; tr&#236;nh giải quyết vụ &#225;n theo thủ tục sơ thẩm, nguy&#234;n đơn r&#250;t một phần y&#234;u cầu khởi kiện, to&#224;n bộ nội dung tranh chấp c&#242;n lại được c&#225;c đương sự thỏa thuận v&#224; thống nhất trước khi c&#243; quyết định đưa vụ &#225;n ra x&#233;t xử. Vậy, trong trường hợp n&#224;y, T&#242;a &#225;n sẽ phải giải quyết như thế n&#224;o?</p><p>Trường hợp trong vụ &#225;n đương sự vừa r&#250;t một phần y&#234;u cầu khởi kiện vừa thỏa thuận được với nhau về giải quyết vụ &#225;n trước khi c&#243; quyết định đưa vụ &#225;n ra x&#233;t xử th&#236; T&#242;a &#225;n kh&#244;ng ra quyết định đ&#236;nh chỉ đối với phần y&#234;u cầu đ&#227; r&#250;t. Trong phần nhận định của quyết định c&#244;ng nhận sự thỏa thuận của c&#225;c đương sự phải ghi r&#245; nội dung đương sự đ&#227; r&#250;t một phần y&#234;u cầu n&#234;n T&#242;a &#225;n kh&#244;ng xem x&#233;t phần y&#234;u cầu m&#224; đương sự đ&#227; r&#250;t.</p><p>11. C&#225;c b&#234;n tranh chấp đ&#227; được Ủy ban nh&#226;n d&#226;n cấp x&#227; nơi c&#243; đất tranh chấp thực hiện việc h&#242;a giải tranh chấp đất đai theo quy định của Luật Đất đai. Người khởi kiện đ&#227; khởi kiện tranh chấp đất đai v&#224; được T&#242;a &#225;n c&#243; thẩm quyền thụ l&#253;, giải quyết vụ &#225;n d&#226;n sự. Sau đ&#243;, người khởi kiện r&#250;t đơn khởi kiện v&#224; T&#242;a &#225;n ra quyết định đ&#236;nh chỉ việc giải quyết vụ &#225;n. Khi khởi kiện lại vụ &#225;n n&#224;y th&#236; T&#242;a &#225;n c&#243; y&#234;u cầu c&#225;c b&#234;n h&#242;a giải lại tại Ủy ban nh&#226;n d&#226;n cấp x&#227; hay kh&#244;ng?</p><p>Theo quy định tại&#160;Điều 235 v&#224; Điều 236 của Luật Đất đai năm 2024&#160;th&#236; tranh chấp đất đai phải được h&#242;a giải tại Ủy ban nh&#226;n d&#226;n x&#227;, phường, thị trấn nơi c&#243; đất tranh chấp. Trường hợp khi khởi kiện lại nếu nguy&#234;n đơn, bị đơn, đối tượng tranh chấp, quan hệ tranh chấp kh&#244;ng thay đổi so với khi h&#242;a giải tại Ủy ban nh&#226;n d&#226;n cấp x&#227; th&#236; kh&#244;ng phải h&#242;a giải lại tại Ủy ban nh&#226;n d&#226;n cấp x&#227;.</p><p>12. Trong qu&#225; tr&#236;nh giải quyết vụ &#225;n d&#226;n sự, T&#242;a &#225;n x&#233;t thấy cần phải đưa người c&#243; quyền lợi, nghĩa vụ li&#234;n quan tham gia tố tụng để xem x&#233;t nghĩa vụ li&#234;n đới bồi thường cho nguy&#234;n đơn. Nguy&#234;n đơn kh&#244;ng c&#243; y&#234;u cầu người c&#243; quyền lợi, nghĩa vụ li&#234;n quan bồi thường. T&#242;a &#225;n quyết định người c&#243; quyền lợi, nghĩa vụ li&#234;n quan phải bồi thường cho nguy&#234;n đơn. Việc T&#242;a &#225;n quyết định như vậy c&#243; vượt qu&#225; y&#234;u cầu của nguy&#234;n đơn kh&#244;ng?</p><p>Khoản 1 Điều 5 của Bộ luật Tố tụng d&#226;n sự&#160;quy định: “Đương sự c&#243; quyền quyết định việc khởi kiện, y&#234;u cầu T&#242;a &#225;n c&#243; thẩm quyền giải quyết vụ việc d&#226;n sự. T&#242;a &#225;n chỉ thụ l&#253; giải quyết vụ việc d&#226;n sự khi c&#243; đơn khởi kiện, đơn y&#234;u cầu của đương sự v&#224; chỉ giải quyết trong phạm vi đơn khởi kiện, đơn y&#234;u cầu đ&#243;”.</p><p>Khoản 1 Điều 288 của Bộ luật D&#226;n sự&#160;quy định: “Nghĩa vụ li&#234;n đới l&#224; nghĩa vụ do nhiều người c&#249;ng phải thực hiện v&#224; b&#234;n c&#243; quyền c&#243; thể y&#234;u cầu bất cứ ai trong số những người c&#243; nghĩa vụ phải thực hiện to&#224;n bộ nghĩa vụ”.</p><div class=\"detail-section-title\">Như vậy, trong trường hợp n&#234;u tr&#234;n, T&#242;a &#225;n quyết định người c&#243; quyền lợi, nghĩa vụ li&#234;n quan phải bồi thường cho nguy&#234;n đơn l&#224; vượt qu&#225; y&#234;u cầu của nguy&#234;n đơn.</div><p>13. Trường hợp tại phi&#234;n t&#242;a Hội đồng x&#233;t xử căn cứ&#160;Điều 259 của Bộ luật Tố tụng d&#226;n sự&#160;ra quyết định tạm ngừng phi&#234;n t&#242;a. Hết thời hạn tạm ngừng phi&#234;n t&#242;a, T&#242;a &#225;n mở lại phi&#234;n t&#242;a th&#236; một trong c&#225;c đương sự vắng mặt tại phi&#234;n t&#242;a được mở lại. Vậy, Hội đồng x&#233;t xử c&#243; được x&#233;t xử vắng mặt đương sự kh&#244;ng, hay phải ho&#227;n phi&#234;n t&#242;a?</p><p>Khoản 1 Điều 233 của Bộ luật Tố tụng d&#226;n sự&#160;quy định: “Hội đồng x&#233;t xử quyết định ho&#227;n phi&#234;n t&#242;a trong c&#225;c trường hợp quy định tại&#160;khoản 2 Điều 56, khoản 2 Điều 62, khoản 2 Điều 84,&#160;Điều 227, khoản 2 Điều 229, khoản 2 Điều 230,&#160;khoản 2 Điều 231 v&#224; Điều 241 của Bộ luật&#160;n&#224;y”.</p><p>Như vậy, trường hợp n&#234;u tr&#234;n kh&#244;ng thuộc trường hợp ho&#227;n phi&#234;n t&#242;a. Tuy nhi&#234;n, nếu đương sự kh&#244;ng được th&#244;ng b&#225;o hợp lệ về thời gian tiếp tục phi&#234;n t&#242;a th&#236; Hội đồng x&#233;t xử phải ho&#227;n phi&#234;n t&#242;a. Nếu đương sự đ&#227; được th&#244;ng b&#225;o hợp lệ về thời gian tiếp tục phi&#234;n t&#242;a theo quy định tại&#160;khoản 2 Điều 259 của Bộ luật Tố tụng d&#226;n sự&#160;m&#224; vẫn vắng mặt th&#236; Hội đồng x&#233;t xử tiếp tục giải quyết vụ &#225;n.</p><p>14. Quyết định gi&#225;m đốc thẩm hủy to&#224;n bộ bản &#225;n d&#226;n sự sơ thẩm v&#224; ph&#250;c thẩm, giao T&#242;a &#225;n cấp sơ thẩm x&#233;t xử lại vụ &#225;n. Tuy nhi&#234;n, sau khi bản &#225;n ph&#250;c thẩm c&#243; hiệu lực, nguy&#234;n đơn đ&#227; được trả lại to&#224;n bộ tiền tạm ứng &#225;n ph&#237; đ&#227; nộp. Trong trường hợp n&#224;y, nếu nguy&#234;n đơn kh&#244;ng nộp lại tiền tạm ứng &#225;n ph&#237; th&#236; T&#242;a &#225;n cấp sơ thẩm c&#243; thụ l&#253; lại vụ &#225;n hay kh&#244;ng?</p><div class=\"detail-section-title\">Khoản 7 Điều 18 của Nghị quyết số 326/2016/NQ-UBTVQH14&#160;ng&#224;y 30/12/2016 của Ủy ban Thường vụ Quốc hội quy định về mức thu, miễn, giảm, thu, nộp, quản l&#253; v&#224; sử dụng &#225;n ph&#237; v&#224; lệ ph&#237; T&#242;a &#225;n quy định:</div><p>“Trường hợp bản &#225;n, quyết định sơ thẩm, ph&#250;c thẩm c&#243; hiệu lực ph&#225;p luật bị T&#242;a &#225;n x&#233;t xử gi&#225;m đốc thẩm, t&#225;i thẩm hủy bản &#225;n sơ thẩm, ph&#250;c thẩm m&#224; tiền tạm ứng &#225;n ph&#237;, &#225;n ph&#237; đ&#227; được trả lại cho người khởi kiện, người kh&#225;ng c&#225;o th&#236; khi T&#242;a &#225;n cấp sơ thẩm hoặc ph&#250;c thẩm thụ l&#253; lại vụ &#225;n phải y&#234;u cầu người khởi kiện, người kh&#225;ng c&#225;o nộp lại tiền tạm ứng &#225;n ph&#237;”.</p><p>Như vậy trong trường hợp n&#234;u tr&#234;n, T&#242;a &#225;n cấp sơ thẩm thụ l&#253; lại vụ &#225;n kể từ thời điểm nhận lại hồ sơ vụ &#225;n. Sau khi thụ l&#253; vụ &#225;n m&#224; nguy&#234;n đơn kh&#244;ng nộp lại tiền tạm ứng &#225;n ph&#237; th&#236; T&#242;a &#225;n ra quyết định đ&#236;nh chỉ giải quyết vụ &#225;n theo quy định tại&#160;điểm g khoản 1 Điều 217 của Bộ luật Tố tụng d&#226;n sự&#160;v&#224; giải quyết hậu quả của việc thi h&#224;nh &#225;n, c&#225;c vấn đề kh&#225;c c&#243; li&#234;n quan (nếu c&#243;) theo quy định tại&#160;khoản 4 Điều 217 của Bộ luật Tố tụng d&#226;n sự. Do nguy&#234;n đơn kh&#244;ng nộp lại tiền tạm ứng &#225;n ph&#237; n&#234;n T&#242;a &#225;n kh&#244;ng phải quyết định về &#225;n ph&#237; khi giải quyết hậu quả của việc đ&#236;nh chỉ giải quyết vụ &#225;n d&#226;n sự theo quy định tại&#160;khoản 3 Điều 218 của Bộ luật Tố tụng d&#226;n sự.</p><p>15. Hợp đồng chuyển nhượng quyền sử dụng đất kh&#244;ng được c&#244;ng chứng, chứng thực do vi phạm điều kiện t&#225;ch thửa. Tuy nhi&#234;n, b&#234;n nhận chuyển nhượng đ&#227; thực hiện hai phần ba nghĩa vụ hoặc đ&#227; trả hết tiền cho b&#234;n chuyển nhượng v&#224; đ&#227; x&#226;y dựng nh&#224; ở tr&#234;n đất nhận chuyển nhượng m&#224; kh&#244;ng bị ch&#237;nh quyền địa phương xử l&#253;. Vậy, trong những trường hợp n&#224;y T&#242;a &#225;n c&#243; c&#244;ng nhận hợp đồng chuyển nhượng quyền sử dụng đất kh&#244;ng?</p><p>Đối với trường hợp &#225;p dụng Luật Đất đai năm 2013,&#160;Điều 29 của Nghị định số 43/2014/NĐ-CP&#160;ng&#224;y 15/5/2014 của Ch&#237;nh phủ quy định chi tiết thi h&#224;nh một số điều của Luật Đất đai quy định về cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nh&#224; ở v&#224; t&#224;i sản kh&#225;c gắn liền với đất đối với trường hợp thửa đất c&#243; diện t&#237;ch nhỏ hơn diện t&#237;ch tối thiểu, như sau:</p><p>“1. Thửa đất đang sử dụng được h&#236;nh th&#224;nh từ trước ng&#224;y văn bản quy định của Ủy ban nh&#226;n d&#226;n cấp tỉnh về diện t&#237;ch tối thiểu được t&#225;ch thửa c&#243; hiệu lực thi h&#224;nh m&#224; diện t&#237;ch thửa đất nhỏ hơn diện t&#237;ch tối thiểu theo quy định của Ủy ban nh&#226;n d&#226;n cấp tỉnh nhưng c&#243; đủ điều kiện cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nh&#224; ở v&#224; t&#224;i sản kh&#225;c gắn liền với đất th&#236; người đang sử dụng đất được cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nh&#224; ở v&#224; t&#224;i sản kh&#225;c gắn liền với đất.</p><p>2. Kh&#244;ng được c&#244;ng chứng, chứng thực, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nh&#224; ở v&#224; t&#224;i sản kh&#225;c gắn liền với đất v&#224; kh&#244;ng được l&#224;m thủ tục thực hiện c&#225;c quyền của người sử dụng đất đối với trường hợp tự chia t&#225;ch thửa đất đ&#227; đăng k&#253;, đ&#227; được cấp Giấy chứng nhận th&#224;nh hai hoặc nhiều thửa đất m&#224; trong đ&#243; c&#243; &#237;t nhất một thửa đất c&#243; diện t&#237;ch nhỏ hơn diện t&#237;ch tối thiểu theo quy định của Ủy ban nh&#226;n d&#226;n cấp tỉnh.</p><p>3. Trường hợp người sử dụng đất xin t&#225;ch thửa đất th&#224;nh thửa đất c&#243; diện t&#237;ch nhỏ hơn diện t&#237;ch tối thiểu đồng thời với việc xin được hợp thửa đất đ&#243; với thửa đất kh&#225;c liền kề để tạo th&#224;nh thửa đất mới c&#243; diện t&#237;ch bằng hoặc lớn hơn diện t&#237;ch tối thiểu được t&#225;ch thửa th&#236; được ph&#233;p t&#225;ch thửa đồng thời với việc hợp thửa v&#224; cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nh&#224; ở v&#224; t&#224;i sản kh&#225;c gắn liền với đất cho thửa đất mới”.</p><div class=\"detail-section-title\">Đối với trường hợp &#225;p dụng Luật Đất đai năm 2024,&#160;Điều 146 của Luật&#160;n&#224;y quy định:</div><div class=\"detail-section-title\">“Điều 146. Cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu t&#224;i sản gắn liền với đất đối với trường hợp thửa đất c&#243; diện t&#237;ch nhỏ hơn diện t&#237;ch tối thiểu</div><p>1. Thửa đất đang sử dụng được h&#236;nh th&#224;nh trước ng&#224;y văn bản quy định của Ủy ban nh&#226;n d&#226;n cấp tỉnh về diện t&#237;ch tối thiểu được t&#225;ch thửa c&#243; hiệu lực thi h&#224;nh m&#224; diện t&#237;ch thửa đất nhỏ hơn diện t&#237;ch tối thiểu theo quy định của Ủy ban nh&#226;n d&#226;n cấp tỉnh nhưng c&#243; đủ điều kiện cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu t&#224;i sản gắn liền với đất th&#236; người đang sử dụng đất được cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu t&#224;i sản gắn liền với đất.</p><p>2. Kh&#244;ng cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu t&#224;i sản gắn liền với đất đối với trường hợp tự chia, t&#225;ch thửa đất đ&#227; đăng k&#253;, đ&#227; được cấp Giấy chứng nhận quyền sử dụng đất hoặc Giấy chứng nhận quyền sở hữu nh&#224; ở v&#224; quyền sử dụng đất ở hoặc Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nh&#224; ở v&#224; t&#224;i sản kh&#225;c gắn liền với đất hoặc Giấy chứng nhận quyền sử dụng đất, quyền sở hữu t&#224;i sản gắn liền với đất th&#224;nh 02 hoặc nhiều thửa đất m&#224; trong đ&#243; c&#243; &#237;t nhất 01 thửa đất c&#243; diện t&#237;ch nhỏ hơn diện t&#237;ch tối thiểu được t&#225;ch thửa theo quy định tại&#160;Điều 220 của Luật&#160;n&#224;y.</p><p>3. Trường hợp thửa đất đ&#227; được cấp Giấy chứng nhận quyền sử dụng đất hoặc Giấy chứng nhận quyền sở hữu nh&#224; ở v&#224; quyền sử dụng đất ở hoặc Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nh&#224; ở v&#224; t&#224;i sản kh&#225;c gắn liền với đất hoặc Giấy chứng nhận quyền sử dụng đất, quyền sở hữu t&#224;i sản gắn liền với đất m&#224; người sử dụng đất c&#243; nhu cầu t&#225;ch thửa, hợp thửa nếu đ&#225;p ứng đủ điều kiện theo quy định tại&#160;Điều 220 của Luật&#160;n&#224;y th&#236; được cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu t&#224;i sản gắn liền với đất cho từng thửa đất sau khi t&#225;ch thửa, hợp thửa.”</p><p>Như vậy, trong trường hợp n&#234;u tr&#234;n, T&#242;a &#225;n chỉ c&#244;ng nhận hiệu lực của giao dịch d&#226;n sự khi thửa đất đ&#225;p ứng được c&#225;c điều kiện quy định tại&#160;khoản 1 v&#224; khoản 3 Điều 29 của Nghị định số 43/2014/NĐ-CP&#160;hoặc&#160;khoản 1 v&#224; khoản 3 Điều 146 của Luật Đất đai năm 2024. Nếu thửa đất thuộc trường hợp quy định tại&#160;khoản 2 Điều 29 của Nghị định số 43/2014/NĐ-CP&#160;hoặc&#160;khoản 2 Điều 146 của Luật Đất đai năm 2024&#160;th&#236; T&#242;a &#225;n tuy&#234;n hợp đồng chuyển nhượng quyền sử dụng đất v&#244; hiệu.</p><p>16. Do vụ việc kh&#244;ng đủ căn cứ khởi tố vụ &#225;n h&#236;nh sự, Chi hội Người cao tuổi th&#244;n A thuộc x&#227; B, huyện C khởi kiện y&#234;u cầu b&#224; D l&#224; th&#224;nh vi&#234;n đồng thời l&#224; thủ quỹ của Chi hội Người cao tuổi th&#244;n kh&#243;a trước trả lại tiền quỹ c&#242;n dư của kh&#243;a trước th&#236; x&#225;c định tư c&#225;ch nguy&#234;n đơn trong vụ &#225;n như thế n&#224;o? Nguy&#234;n đơn l&#224; Hội Người cao tuổi x&#227; B (Hội Người cao tuổi cơ sở) hay Chi hội Người cao tuổi th&#244;n A (Chi hội c&#243; nhiệm vụ thu v&#224; quản l&#253; sử dụng hội ph&#237;, quỹ hội)?</p><p>Theo quy định tại&#160;khoản 4 Điều 12 Điều lệ (sửa đổi, bổ sung) Hội Người cao tuổi Việt Nam được ph&#234; duyệt theo Quyết định số&#160;288/QĐ-BNV&#160;ng&#224;y 06/4/2022 của Bộ Nội vụ th&#236;:&#160;“Chi hội, tổ hội người cao tuổi thuộc Hội Người cao tuổi cơ sở tại địa b&#224;n th&#244;n, ấp, bản, l&#224;ng, phum, s&#243;c, tổ d&#226;n phố, khu d&#226;n cư hoặc tương đương thuộc Hội Người cao tuổi cơ sở”.</p><p>Theo quy định tại&#160;khoản 1 Điều 22 Điều lệ (sửa đổi, bổ sung) Hội Người cao tuổi Việt Nam&#160;th&#236;: “Hội Người cao tuổi cơ sở l&#224; nền tảng của Hội. Hội cơ sở c&#243; con dấu, t&#224;i khoản, trụ sở, được hỗ trợ kinh ph&#237; hoạt động theo quy định của ph&#225;p luật”.</p><div class=\"detail-section-title\">Như vậy, do Chi hội Người cao tuổi th&#244;n A thuộc Hội Người cao tuổi cơ sở x&#227; B, n&#234;n nguy&#234;n đơn l&#224; Hội Người cao tuổi x&#227; B.</div><p>17.&#160;Điểm c khoản 1 Điều 217 của Bộ luật Tố tụng d&#226;n sự&#160;về đ&#236;nh chỉ giải quyết vụ &#225;n d&#226;n sự quy định: “Người khởi kiện r&#250;t to&#224;n bộ y&#234;u cầu khởi kiện hoặc nguy&#234;n đơn đ&#227; được triệu tập hợp lệ lần thứ hai m&#224; vẫn vắng mặt, trừ trường hợp họ đề nghị x&#233;t xử vắng mặt hoặc v&#236; sự kiện bất khả kh&#225;ng, trở ngại kh&#225;ch quan”. Vậy, trong giai đoạn chuẩn bị x&#233;t xử, nếu nguy&#234;n đơn đ&#227; được T&#242;a &#225;n triệu tập hợp lệ đến lần thứ hai m&#224; vẫn vắng mặt, kh&#244;ng đến T&#242;a &#225;n để lấy lời khai hoặc tham gia phi&#234;n họp kiểm tra việc giao nộp, tiếp cận, c&#244;ng khai chứng cứ v&#224; h&#242;a giải th&#236; T&#242;a &#225;n c&#243; thể ra quyết định đ&#236;nh chỉ giải quyết vụ &#225;n d&#226;n sự được kh&#244;ng?</p><p>Điểm c khoản 1 Điều 217 của Bộ luật Tố tụng d&#226;n sự&#160;quy định: “Người khởi kiện r&#250;t to&#224;n bộ y&#234;u cầu khởi kiện hoặc nguy&#234;n đơn đ&#227; được triệu tập hợp lệ lần thứ hai m&#224; vẫn vắng mặt, trừ trường hợp họ đề nghị x&#233;t xử vắng mặt hoặc v&#236; sự kiện bất khả kh&#225;ng, trở ngại kh&#225;ch quan”.</p><p>Khoản 3 Điều 210 của Bộ luật Tố tụng d&#226;n sự&#160;quy định: “Sau khi c&#225;c đương sự đ&#227; tr&#236;nh b&#224;y xong, Thẩm ph&#225;n xem x&#233;t c&#225;c &#253; kiến, giải quyết c&#225;c y&#234;u cầu của đương sự quy định tại&#160;khoản 2&#160;Điều n&#224;y. Trường hợp người được T&#242;a &#225;n triệu tập vắng mặt th&#236; T&#242;a &#225;n th&#244;ng b&#225;o kết quả phi&#234;n họp cho họ”.</p><div class=\"detail-section-title\">Như vậy, theo c&#225;c quy định n&#234;u tr&#234;n, trong giai đoạn chuẩn bị x&#233;t xử sơ thẩm vụ &#225;n, cần ph&#226;n biệt như sau:</div><p>- Trường hợp nguy&#234;n đơn đ&#227; được triệu tập hợp lệ lần thứ hai để lấy lời khai m&#224; vẫn vắng mặt th&#236; T&#242;a &#225;n quyết định đ&#236;nh chỉ giải quyết vụ &#225;n, trừ trường hợp họ đề nghị T&#242;a &#225;n x&#233;t xử văng mặt hoặc v&#236; sự kiện bất khả kh&#225;ng, trở ngại kh&#225;ch quan.</p><p>- Trường hợp nguy&#234;n đơn được triệu tập hợp lệ lần thứ hai để tham gia phi&#234;n họp kiểm tra việc giao nộp, tiếp cận, c&#244;ng khai chứng cứ v&#224; h&#242;a giải m&#224; vẫn vắng mặt th&#236; T&#242;a &#225;n th&#244;ng b&#225;o kết quả phi&#234;n họp cho đương sự vắng mặt. Do vậy, T&#242;a &#225;n vẫn tiến h&#224;nh c&#225;c thủ tục để giải quyết vụ &#225;n theo quy định.</p>",
+            "timeline": [],
+            "laws": [
+              {
+                "name": "Điều 179 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "Điều 177",
+                "content": ""
+              },
+              {
+                "name": "Điều 178",
+                "content": ""
+              },
+              {
+                "name": "Điều 217 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "điểm d khoản 1 Điều 71 của Bộ luật D&#226",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 68",
+                "content": ""
+              },
+              {
+                "name": "Điều 148 của Bộ luật D&#226",
+                "content": ""
+              },
+              {
+                "name": "Khoản 4 Điều 388 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "điểm e khoản 1 Điều 192 của Bộ luật Tố tụng d&#226",
+                "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+              },
+              {
+                "name": "Điều 218 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "khoản 3 Điều 161",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 162 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "Điểm c khoản 1 Điều 39 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "Điều 235",
+                "content": ""
+              },
+              {
+                "name": "Điều 236 của Luật Đất đai năm 2024&#160",
+                "content": ""
+              },
+              {
+                "name": "Khoản 1 Điều 5 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "Khoản 1 Điều 288 của Bộ luật D&#226",
+                "content": ""
+              },
+              {
+                "name": "Điều 259 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "Khoản 1 Điều 233 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 56",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 62",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 84",
+                "content": ""
+              },
+              {
+                "name": "Điều 227",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 229",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 230",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 231",
+                "content": ""
+              },
+              {
+                "name": "Điều 241",
+                "content": ""
+              },
+              {
+                "name": "Khoản 7 Điều 18",
+                "content": ""
+              },
+              {
+                "name": "Điều 29",
+                "content": ""
+              },
+              {
+                "name": "Điều 146",
+                "content": ""
+              },
+              {
+                "name": "Điều 220",
+                "content": ""
+              },
+              {
+                "name": "khoản 4 Điều 12",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 22",
+                "content": ""
+              },
+              {
+                "name": "Khoản 3 Điều 210 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              }
+            ]
+          }
+        ],
+        "hanh-chinh::giai-dap-nghiep-vu": [
+          {
+            "id": "case-cong-van-163-tandtc-pc-nam-2024-hanh-chinh-3",
+            "ten": "Công văn 163 TANDTC-PC năm 2024",
+            "mo_ta": "",
+            "lvId": "hanh-chinh",
+            "lvName": "Hành chính",
+            "sfId": "giai-dap-nghiep-vu",
+            "sfName": "Giải đáp nghiệp vụ tư pháp",
+            "sao": 0,
+            "ngay": "2026-04-08T20:41:16.0049094+07:00",
+            "tom_luoc": "",
+            "ap_dung": "",
+            "chi_tiet": "<div class=\"detail-section-title\">&#193;P DỤNG BIỆN PH&#193;P XỬ L&#221; H&#192;NH CH&#205;NH TẠI T&#210;A &#193;N NH&#194;N D&#194;N</div><p>Trường hợp người bị đề nghị đưa v&#224;o cơ sở cai nghiện bắt buộc đang bị đưa v&#224;o cơ sở cai nghiện để cắt cơn, giải độc chờ lập hồ sơ. Khi T&#242;a &#225;n mở phi&#234;n họp th&#236; cơ quan n&#224;o c&#243; thẩm quyền dẫn giải đối tượng n&#224;y đến phi&#234;n họp v&#224; thủ tục thực hiện như thế n&#224;o?</p><p>Hiện nay, Luật Xử l&#253; vi phạm h&#224;nh ch&#237;nh năm 2012 (sửa đổi, bổ sung năm 2020) kh&#244;ng quy định biện ph&#225;p dẫn giải. Đ&#226;y l&#224; biện ph&#225;p hạn chế quyền con người, kh&#244;ng được quy định bởi luật th&#236; kh&#244;ng được &#225;p dụng. Do đ&#243;, trường hợp n&#224;y kh&#244;ng được &#225;p dụng biện ph&#225;p dẫn giải.</p>",
+            "timeline": [],
+            "laws": []
+          }
         ]
       },
       "recent": [
+        {
+          "id": "case-cong-van-163-tandtc-pc-nam-2024-hinh-su-1",
+          "ten": "Công văn 163 TANDTC - PC năm 2024",
+          "lvId": "hinh-su",
+          "sfId": "giai-dap-nghiep-vu"
+        },
+        {
+          "id": "case-cong-van-163-tandtc-pc-nam-2024-dan-su-2",
+          "ten": "Công văn 163 TANDTC-PC năm 2024",
+          "lvId": "dan-su",
+          "sfId": "giai-dap-nghiep-vu"
+        },
+        {
+          "id": "case-cong-van-163-tandtc-pc-nam-2024-hanh-chinh-3",
+          "ten": "Công văn 163 TANDTC-PC năm 2024",
+          "lvId": "hanh-chinh",
+          "sfId": "giai-dap-nghiep-vu"
+        },
         {
           "id": "case-an-le-so-02-ve-vu-an-tranh-chap-doi-lai-tai-san-1",
           "ten": "Án lệ số 02 về vụ án Tranh chấp đòi lại tài sản",
@@ -509,10 +803,10 @@
             {
               "id": "giai-dap-nghiep-vu",
               "ten": "Giải đáp nghiệp vụ",
-              "soLuong": 0
+              "soLuong": 1
             }
           ],
-          "totalCases": 0
+          "totalCases": 1
         },
         {
           "id": "dan-su",
@@ -537,10 +831,10 @@
             {
               "id": "giai-dap-nghiep-vu",
               "ten": "Giải đáp nghiệp vụ",
-              "soLuong": 0
+              "soLuong": 1
             }
           ],
-          "totalCases": 9
+          "totalCases": 10
         },
         {
           "id": "kinh-doanh-thuong-mai",
@@ -621,10 +915,10 @@
             {
               "id": "giai-dap-nghiep-vu",
               "ten": "Giải đáp nghiệp vụ",
-              "soLuong": 0
+              "soLuong": 1
             }
           ],
-          "totalCases": 0
+          "totalCases": 1
         },
         {
           "id": "dat-dai",
@@ -718,7 +1012,7 @@
         "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
       },
       "law-192": {
-        "title": "khoản 2 Điều 192",
+        "title": "điểm e khoản 1 Điều 192 của Bộ luật Tố tụng d&#226",
         "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
       },
       "ldd-44": {
@@ -732,6 +1026,222 @@
       "law-tieu-muc-a-diem-24-muc-2-phan-i-nghi-quyet-so-02-2004-nq-hdtp-ngay-10-8-2004-cua-hoi-dong-tham-phan-toa-an-nhan-dan-toi-cao-huong-dan-ap-dung-phap-luat-trong-viec-giai-quyet-cac-vu-an-dan-su-hon-nhan-va-gia-dinh": {
         "title": "tiểu mục a điểm 2.4 mục 2 phần I Nghị quyết số 02/2004/NQ-HĐTP ngày 10-8-2004 của Hội đồng Thẩm phán Tòa án nhân dân tối cao hướng dẫn áp dụng pháp luật trong việc giải quyết các vụ án dân sự, hôn nhân và gia đình",
         "content": "2.4. Không áp dụng thời hiệu khởi kiện về quyền thừa kế<br>a) Trường hợp trong thời hạn mười năm, kể từ thời điểm mở thừa kế mà các đồng thừa kế không có tranh chấp về quyền thừa kế và có văn bản cùng xác nhận là đồng thừa kế hoặc sau khi kết thúc thời hạn mười năm mà các đồng thừa kế không có tranh chấp về hàng thừa kế và đều thừa nhận di sản do người chết để lại chưa chia thì di sản đó chuyển thành tài sản chung của các thừa kế. Khi có tranh chấp và yêu cầu Toà án giải quyết thì không áp dụng thời hiệu khởi kiện về quyền thừa kế, mà áp dụng các quy định của pháp luật về chia tài sản chung để giải quyết và cần phân biệt như sau:<br><br>a.1) Trường hợp có di chúc mà các đồng thừa kế không có tranh chấp và thoả thuận việc chia tài sản sẽ được thực hiện theo di chúc khi có nhu cầu chia tài sản, thì việc chia tài sản chung đó được thực hiện theo di chúc.<br><br>a.2) Trường hợp không có di chúc mà các đồng thừa kế thảo thuận về phần mỗi người được hưởng khi có nhu cầu chia tài sản, thì việc chia tài sản chung đó được thực hiện theo thoả thuận của họ.<br><br>a.3) Trường hợp không có di chúc và các đồng thừa kế không có thoả thuận về phần mỗi người được hưởng khi có nhu cầu chia tài sản, thì việc chia tài sản chung đó được thực hiện theo quy định của pháp luật về chia tài sản chung."
+      },
+      "law-63": {
+        "title": "Điều 63. Giảm mức hình phạt đã tuyên",
+        "content": "1. Người bị kết án cải tạo không giam giữ, phạt tù có thời hạn hoặc phạt tù chung thân, nếu đã chấp hành hình phạt được một thời gian nhất định, có nhiều tiến bộ và đã bồi thường được một phần nghĩa vụ dân sự, thì theo đề nghị của cơ quan thi hành án hình sự có thẩm quyền, Tòa án có thể quyết định giảm thời hạn chấp hành hình phạt.<br><br>Thời gian đã chấp hành hình phạt để được xét giảm lần đầu là một phần ba thời hạn đối với hình phạt cải tạo không giam giữ, hình phạt tù có thời hạn, 12 năm đối với tù chung thân.<br><br>2. Một người có thể được giảm nhiều lần, nhưng phải bảo đảm chấp hành được một phần hai mức hình phạt đã tuyên.<br><br>Người bị kết án tù chung thân, lần đầu được giảm xuống 30 năm tù và dù được giảm nhiều lần cũng phải bảo đảm thời hạn thực tế chấp hành hình phạt là 20 năm.<br><br>3. Trường hợp người bị kết án về nhiều tội trong đó có tội bị kết án phạt tù chung thân thì Tòa án chỉ xét giảm lần đầu xuống 30 năm tù sau khi đã chấp hành được 15 năm tù và dù được giảm nhiều lần nhưng vẫn phải bảo đảm thời gian thực tế chấp hành là 25 năm.<br><br>4. Đối với người đã được giảm một phần hình phạt mà lại thực hiện hành vi phạm tội mới ít nghiêm trọng do cố ý, thì Tòa án chỉ xét giảm lần đầu sau khi người đó đã chấp hành được một phần hai mức hình phạt chung.<br><br>5. Đối với người đã được giảm một phần hình phạt mà lại thực hiện hành vi phạm tội mới nghiêm trọng, rất nghiêm trọng hoặc đặc biệt nghiêm trọng, thì Tòa án chỉ xét giảm lần đầu sau khi người đó đã chấp hành được hai phần ba mức hình phạt chung hoặc trường hợp hình phạt chung là tù chung thân thì việc xét giảm án thực hiện theo quy định tại khoản 3 Điều này.<br><br>6. Đối với người bị kết án tử hình được ân giảm hoặc người bị kết án tử hình thuộc trường hợp quy định tại điểm b hoặc điểm c khoản 3 Điều 40 của Bộ luật này thì thời gian đã chấp hành hình phạt để được xét giảm lần đầu là 25 năm và dù được giảm nhiều lần nhưng vẫn phải bảo đảm thời hạn thực tế chấp hành hình phạt là 30 năm."
+      },
+      "law-105": {
+        "title": "Điều 105. Giảm mức hình phạt đã tuyên",
+        "content": "1. Người dưới 18 tuổi phạm tội bị phạt cải tạo không giam giữ hoặc phạt tù, nếu có tiến bộ và đã chấp hành được một phần tư thời hạn, thì được Tòa án xét giảm; riêng đối với hình phạt tù, mỗi lần có thể giảm đến 04 năm nhưng phải bảo đảm đã chấp hành ít nhất là hai phần năm mức hình phạt đã tuyên.<br><br>2. Người dưới 18 tuổi phạm tội bị phạt cải tạo không giam giữ hoặc phạt tù, nếu lập công hoặc mắc bệnh hiểm nghèo, thì được xét giảm ngay và có thể được miễn chấp hành phần hình phạt còn lại.<br><br>3. Người dưới 18 tuổi phạm tội bị phạt tiền nhưng bị lâm vào hoàn cảnh kinh tế đặc biệt khó khăn kéo dài do thiên tai, hoả hoạn, tai nạn hoặc ốm đau gây ra hoặc lập công lớn, thì theo đề nghị của Viện trưởng Viện kiểm sát, Tòa án có thể quyết định giảm hoặc miễn việc chấp hành phần tiền phạt còn lại."
+      },
+      "law-173": {
+        "title": "Điều 173. Tội trộm cắp tài sản",
+        "content": "1. Người nào trộm cắp tài sản của người khác trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng hoặc dưới 2.000.000 đồng nhưng thuộc một trong các trường hợp sau đây, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm:<br><br>a) Đã bị xử phạt vi phạm hành chính về hành vi chiếm đoạt tài sản mà còn vi phạm;<br><br>b) Đã bị kết án về tội này hoặc về một trong các tội quy định tại các điều 168, 169, 170, 171, 172, 174, 175 và 290 của Bộ luật này, chưa được xóa án tích mà còn vi phạm;<br><br>c) Gây ảnh hưởng xấu đến an ninh, trật tự, an toàn xã hội;<br><br>d) Tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ; tài sản là kỷ vật, di vật, đồ thờ cúng có giá trị đặc biệt về mặt tinh thần đối với người bị hại.<br><br>2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 07 năm:<br><br>a) Có tổ chức;<br><br>b) Có tính chất chuyên nghiệp;<br><br>c) Chiếm đoạt tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng;<br><br>d) Dùng thủ đoạn xảo quyệt, nguy hiểm;<br><br>đ) Hành hung để tẩu thoát;<br><br>e) Trộm cắp tài sản trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;<br><br>g) Tái phạm nguy hiểm.<br><br>3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 07 năm đến 15 năm:<br><br>a) Chiếm đoạt tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng;<br><br>b) Trộm cắp tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;<br><br>c) Lợi dụng thiên tai, dịch bệnh.<br><br>4. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 12 năm đến 20 năm:<br><br>a) Chiếm đoạt tài sản trị giá 500.000.000 đồng trở lên;<br><br>b) Trộm cắp tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;<br><br>c) Lợi dụng hoàn cảnh chiến tranh, tình trạng khẩn cấp.<br><br>5. Người phạm tội còn có thể bị phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng."
+      },
+      "law-178": {
+        "title": "Điều 178. Tội hủy hoại hoặc cố ý làm hư hỏng tài sản",
+        "content": "1. Người nào hủy hoại hoặc cố ý làm hư hỏng tài sản của người khác trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng, tài sản là di vật, cổ hoặc vật có giá trị lịch sử, văn hóa hoặc tài sản trị giá dưới 2.000.000 đồng nhưng thuộc một trong những trường hợp sau đây, thì bị phạt tiền từ 10.000.000 đồng đến 50.000.000 đồng, phạt cải tạo không giam giữ đến 03 năm hoặc bị phạt tù từ 06 tháng đến 03 năm:<br><br>a) Đã bị xử phạt vi phạm hành chính về hành vi chiếm đoạt tài sản mà còn vi phạm;<br><br>b) Đã bị kết án về tội này, chưa được xóa án tích mà còn vi phạm;<br><br>c) Gây ảnh hưởng xấu đến an ninh, trật tự, an toàn xã hội;<br><br>d) Tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ; tài sản là kỷ vật, di vật, đồ thờ cúng có giá trị đặc biệt về mặt tinh thần đối với người bị hại.<br><br>2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 07 năm:<br><br>a) Có tổ chức;<br><br>b) Gây thiệt hại cho tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng;<br><br>c) Gây thiệt hại tài sản là bảo vật quốc gia;<br><br>d) Dùng chất nguy hiểm về cháy, nổ hoặc thủ đoạn nguy hiểm khác;<br><br>đ) Để che giấu tội phạm khác;<br><br>e) Vì lý do công vụ của người bị hại;<br><br>g) Gây thiệt hại cho tài sản trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;<br><br>h) Tái phạm nguy hiểm.<br><br>3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 05 năm đến 10 năm:<br><br>Nội dung này đã được sửa đổi/hướng dẫn... Bạn cần Đăng nhập tài khoản Tiêu chuẩn hoặc Nâng cao để xem chi tiết.<br>a) Gây thiệt hại cho tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng;<br><br>b) Gây thiệt hại cho tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này.<br><br>4. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 10 năm đến 20 năm:<br><br>a) Gây thiệt hại cho tài sản trị giá 500.000.000 đồng trở lên;<br><br>b) Gây thiệt hại cho tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này.<br><br>5. Người phạm tội còn có thể bị phạt tiền từ 10.000.000 đồng đến 100.000.000 đồng, cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định từ 01 năm đến 05 năm."
+      },
+      "law-182": {
+        "title": "điểm a khoản 1 Điều 182. Tội vi phạm chế độ một vợ, một chồng",
+        "content": "1. Người nào đang có vợ, có chồng mà kết hôn hoặc chung sống như vợ chồng với người khác hoặc người chưa có vợ, chưa có chồng mà kết hôn hoặc chung sống như vợ chồng với người mà mình biết rõ là đang có chồng, có vợ thuộc một trong các trường hợp sau đây, thì bị phạt cảnh cáo, phạt cải tạo không giam giữ đến 01 năm hoặc phạt tù từ 03 tháng đến 01 năm:<br><br>a) Làm cho quan hệ hôn nhân của một hoặc hai bên dẫn đến ly hôn"
+      },
+      "law-3": {
+        "title": "khoản 14 Điều 3. Giải thích từ ngữ",
+        "content": "14. Ly hôn là việc chấm đứt quan hệ vợ chồng theo bản án, quyết định có hiệu lực pháp luật của Tòa án."
+      },
+      "law-353": {
+        "title": "khoản 6 Điều 353. Tội tham ô tài sản",
+        "content": "6. Người có chức vụ, quyền hạn trong các doanh nghiệp, tổ chức ngoài Nhà nước mà tham ô tài sản, thì bị xử lý theo quy định tại Điều này."
+      },
+      "law-79": {
+        "title": "khoản 1 Điều 79. Hộ kinh doanh",
+        "content": "1. Hộ kinh doanh do một cá nhân hoặc các thành viên hộ gia đình đăng ký thành lập và chịu trách nhiệm bằng toàn bộ tài sản của mình đối với hoạt động kinh doanh của hộ. Trường hợp các thành viên hộ gia đình đăng ký hộ kinh doanh thì ủy quyền cho một thành viên làm đại diện hộ kinh doanh. Cá nhân đăng ký hộ kinh doanh, người được các thành viên hộ gia đình ủy quyền làm đại diện hộ kinh doanh là chủ hộ kinh doanh."
+      },
+      "law-4": {
+        "title": "khoản 10 Điều 4. Giải thích từ ngữ",
+        "content": "Doanh nghiệp là tổ chức có tên riêng, có tài sản, có trụ sở giao dịch, được thành lập hoặc đăng ký thành lập theo quy định của pháp luật nhằm mục đích kinh doanh"
+      },
+      "law-175": {
+        "title": "Điều 175 của Bộ luật H&#236",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-260": {
+        "title": "Điều 260. Tội vi phạm quy định về tham gia giao thông đường bộ",
+        "content": "1. Người nào tham gia giao thông đường bộ mà vi phạm quy định về an toàn giao thông đường bộ thuộc một trong các trường hợp sau đây, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng, phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 01 năm đến 05 năm:<br><br>a) Làm chết 01 người hoặc gây thương tích hoặc gây tổn hại cho sức khỏe của 01 người với tỷ lệ tổn thương cơ thể 61% trở lên;<br><br>b) Gây thương tích hoặc gây tổn hại cho sức khỏe cho 02 người với tỷ lệ tổn thương cơ thể của mỗi người từ 31% đến 60%;<br><br>c) Gây thương tích hoặc gây tổn hại cho sức khỏe cho 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 61% đến 121%;<br><br>d) Gây thiệt hại về tài sản từ 100.000.000 đồng đến dưới 500.000.000 đồng.<br><br>2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 03 năm đến 10 năm:<br><br>a) Không có giấy phép lái xe theo quy định;<br><br>b) Trong tình trạng có sử dụng rượu, bia mà trong máu hoặc hơi thở có nồng độ cồn vượt quá mức quy định hoặc có sử dụng chất ma túy hoặc các chất kích thích mạnh khác mà pháp luật cấm sử dụng;<br><br>c) Gây tai nạn rồi bỏ chạy để trốn tránh trách nhiệm hoặc cố ý không cứu giúp người bị nạn;<br><br>d) Không chấp hành hiệu lệnh của người điều khiển hoặc hướng dẫn giao thông;<br><br>đ) Làm chết 02 người;<br><br>e) Gây thương tích hoặc gây tổn hại cho sức khỏe của 02 người với tỷ lệ tổn thương cơ thể của mỗi người 61% trở lên;<br><br>g) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 122% đến 200%;<br><br>h) Gây thiệt hại về tài sản từ 500.000.000 đồng đến dưới 1.500.000.000 đồng.<br><br>3. Phạm tội thuộc một trong các trường sau đây, thì bị phạt tù từ 07 năm đến 15 năm:<br><br>a) Làm chết 03 người trở lên;<br><br>b) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người với tỷ lệ tổn thương cơ thể của mỗi người 61% trở lên;<br><br>c) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này 201% trở lên;<br><br>d) Gây thiệt hại về tài sản 1.500.000.000 đồng trở lên.<br><br>4. Người tham gia giao thông đường bộ mà vi phạm quy định về an toàn giao thông đường bộ gây thương tích hoặc gây tổn hại cho sức khỏe của 01 người với tỷ lệ tổn thương cơ thể từ 31% đến 60% hoặc gây thương tích hoặc gây tổn hại cho sức khỏe của 02 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 31% đến 60%, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng hoặc phạt cải tạo không giam giữ đến 03 năm.<br><br>5. Vi phạm quy định về an toàn giao thông đường bộ mà có khả năng thực tế dẫn đến hậu quả gây thiệt hại cho tính mạng, sức khỏe hoặc tài sản của người khác nếu không được ngăn chặn kịp thời, thì bị phạt tiền từ 10.000.000 đồng đến 50.000.000 đồng, phạt cải tạo không giam giữ đến 01 năm hoặc phạt tù từ 03 tháng đến 01 năm.<br><br>6. Người phạm tội còn có thể bị cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định từ 01 năm đến 05 năm."
+      },
+      "law-341": {
+        "title": "Điều 341. Tội làm giả con dấu, tài liệu của cơ quan, tổ chức; tội sử dụng con dấu, tài liệu giả của cơ quan, tổ chức",
+        "content": "1. Người nào làm giả con dấu, tài liệu hoặc giấy tờ khác của cơ quan, tổ chức hoặc sử dụng con dấu, tài liệu, giấy tờ đó thực hiện hành vi trái pháp luật, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng, phạt cải tạo không giam giữ đến 03 năm hoặc bị phạt tù từ 06 tháng đến 03 năm.<br><br>2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 05 năm:<br><br>a) Có tổ chức;<br><br>b) Phạm tội 02 lần trở lên;<br><br>c) Làm từ 02 đến 05 con dấu, tài liệu hoặc giấy tờ khác;<br><br>d) Sử dụng con dấu, tài liệu hoặc giấy tờ khác thực hiện tội phạm;<br><br>đ) Thu lợi bất chính 10.000.000 đồng đến dưới 50.000.000 đồng;<br><br>e) Tái phạm nguy hiểm.<br><br>3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 03 năm đến 07 năm:<br><br>a) Làm 06 con dấu, tài liệu hoặc giấy tờ khác trở lên;<br><br>b) Sử dụng con dấu, tài liệu hoặc giấy tờ khác thực hiện tội phạm rất nghiêm trọng hoặc tội đặc biệt nghiêm trọng;<br><br>c) Thu lợi bất chính 50.000.000 đồng trở lên.<br><br>4. Người phạm tội còn có thể bị phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng."
+      },
+      "law-174": {
+        "title": "Điều 174. Tội lừa đảo chiếm đoạt tài sản",
+        "content": "1. Người nào bằng thủ đoạn gian dối chiếm đoạt tài sản của người khác trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng hoặc dưới 2.000.000 đồng nhưng thuộc một trong các trường hợp sau đây, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm:<br>a) Đã bị xử phạt vi phạm hành chính về hành vi chiếm đoạt tài sản mà còn vi phạm;<br><br>b) Đã bị kết án về tội này hoặc về một trong các tội quy định tại các điều<br>168, 169, 170, 171, 172, 173, 175 và 290 của Bộ luật này, chưa được xóa án tích mà còn vi phạm;<br><br>c) Gây ảnh hưởng xấu đến an ninh, trật tự, an toàn xã hội;<br><br>d) Tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ<br><br>2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm<br>đến 07 năm:<br>a) Có tổ chức;<br>b) Có tính chất chuyên nghiệp;<br>c) Chiếm đoạt tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng;<br>d) Tái phạm nguy hiểm;<br>đ) Lợi dụng chức vụ, quyền hạn hoặc lợi dụng danh nghĩa cơ quan, tổ chức;<br>e) Dùng thủ đoạn xảo quyệt;<br>g) (được bãi bỏ)<br><br>3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 07 năm đến 15 năm:<br>a) Chiếm đoạt tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng;<br>b) (được bãi bỏ)<br>c) Lợi dụng thiên tai, dịch bệnh.<br><br>4. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 12 năm<br>đến 20 năm hoặc tù chung thân:<br>a) Chiếm đoạt tài sản trị giá 500.000.000 đồng trở lên;<br>b) (được bãi bỏ)<br>c) Lợi dụng hoàn cảnh chiến tranh, tình trạng khẩn cấp.<br><br>5. Người phạm tội còn có thể bị phạt tiền từ 10.000.000 đồng đến<br>100.000.000 đồng, cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định từ 01 năm đến 05 năm hoặc tịch thu một phần hoặc toàn bộ tài sản."
+      },
+      "law-158": {
+        "title": "khoản 1 Điều 158. Tội xâm phạm chỗ ở của người khác",
+        "content": "1. Người nào thực hiện một trong các hành vi sau đây xâm phạm chỗ ở của người khác, thì bị phạt cải tạo không giam giữ đến 02 năm hoặc phạt tù từ 03 tháng đến 02 năm:<br>a) Khám xét trái pháp luật chỗ ở của người khác;<br><br>b) Đuổi trái pháp luật người khác ra khỏi chỗ ở của họ;<br><br>c) Chiếm giữ chỗ ở hoặc cản trở trái pháp luật người đang ở hoặc người đang quản lý hợp pháp vào chỗ ở của họ;<br><br>d) Xâm nhập trái pháp luật chỗ ở của người khác"
+      },
+      "law-185": {
+        "title": "Điều 185. Tội ngược đãi hoặc hành hạ ông bà, cha mẹ, vợ chồng, con, cháu hoặc người có công nuôi dưỡng mình",
+        "content": "1. Người nào đối xử tồi tệ hoặc có hành vi bạo lực xâm phạm thân thể ông<br>bà, cha mẹ, vợ chồng, con, cháu hoặc người có công nuôi dưỡng mình thuộc một trong những trường hợp sau đây, thì bị phạt cảnh cáo, phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm:<br>a) Thường xuyên làm cho nạn nhân bị đau đớn về thể xác, tinh thần;<br><br>b) Đã bị xử phạt vi phạm hành chính về hành vi này mà còn vi phạm.<br><br>2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 05 năm:<br><br>a) Đối với người dưới 16 tuổi, phụ nữ mà biết là có thai, người già yếu;<br><br>b) Đối với người khuyết tật nặng, khuyết tật đặc biệt nặng hoặc người mắc bệnh hiểm nghèo."
+      },
+      "law-134": {
+        "title": "khoản 6 Điều 134. Tội cố ý gây thương tích hoặc gây tổn hại cho sức khỏe của người khác",
+        "content": "6. Người nào chuẩn bị vũ khí, vật liệu nổ, hung khí nguy hiểm, a-xít nguy<br>hiểm, hóa chất nguy hiểm hoặc thành lập hoặc tham gia nhóm tội phạm nhằm gây thương tích hoặc gây tổn hại cho sức khỏe của người khác, thì bị phạt cải tạo không giam giữ đến 02 năm hoặc phạt tù từ 03 tháng đến 02 năm."
+      },
+      "law-36": {
+        "title": "khoản 2 Điều 36. Các trường hợp bị tạm hoãn xuất cảnh",
+        "content": "2. Người được hoãn chấp hành án phạt tù, người được tạm đình chỉ chấp hành án phạt tù, người được tha tù trước thời hạn có điều kiện trong thời gian thử thách, người được hưởng án treo trong thời gian thử thách, người chấp hành án phạt cải tạo không giam giữ trong thời gian chấp hành án theo quy định của Luật Thi hành án hình sự."
+      },
+      "law-37": {
+        "title": "khoản 2 Điều 37. Thẩm quyền quyết định tạm hoãn xuất cảnh, gia hạn, hủy bỏ tạm hoãn xuất cảnh",
+        "content": "2. Cơ quan, người có thẩm quyền ra quyết định hoãn chấp hành án phạt tù, tạm đình chỉ chấp hành án phạt tù, tha tù trước thời hạn có điều kiện, thi hành án treo, thi hành án phạt cải tạo không giam giữ có thẩm quyền quyết định tạm hoãn xuất cảnh đối với trường hợp quy định tại khoản 2 Điều 36 của Luật này.<br><br>Khoản 2 Điều 36: 2. Người được hoãn chấp hành án phạt tù, người được tạm đình chỉ chấp hành án phạt tù, người được tha tù trước thời hạn có điều kiện trong thời gian thử thách, người được hưởng án treo trong thời gian thử thách, người chấp hành án phạt cải tạo không giam giữ trong thời gian chấp hành án theo quy định của Luật Thi hành án hình sự."
+      },
+      "law-20": {
+        "title": "Điều 20. Thực hiện trích xuất người bị tạm giữ, người bị tạm giam",
+        "content": "1. Việc trích xuất người bị tạm giữ, người bị tạm giam chỉ được thực hiện khi có lệnh trích xuất của người có thẩm quyền theo quy định của Bộ luật tố tụng hình sự, Luật thi hành án hình sự và Luật này, trong trường hợp sau đây:<br><br>a) Để phục vụ cho hoạt động điều tra, truy tố, xét xử, thi hành án;<br><br>b) Đưa đi khám bệnh, chữa bệnh, giám định pháp y, giám định pháp y tâm thần;<br><br>c) Gặp thân nhân, người bào chữa hoặc người đại diện hợp pháp để thực hiện một số quyền, nghĩa vụ do luật định;<br><br>d) Người nước ngoài bị tạm giữ, tạm giam tiếp xúc lãnh sự hoặc tiếp xúc với các tổ chức nhân đạo theo quy định tại điều ước quốc tế mà Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên hoặc theo sự thỏa thuận giữa Cộng hòa xã hội chủ nghĩa Việt Nam với nước có người bị tạm giữ, người bị tạm giam hoặc vì lý do đối ngoại đối với từng trường hợp cụ thể.<br><br>2. Trường hợp Giám thị trại tạm giam, Trưởng nhà tạm giữ, Trưởng buồng tạm giữ của đồn biên phòng trích xuất người bị tạm giữ, người bị tạm giam đi khám bệnh, chữa bệnh thì phải thông báo ngay cho cơ quan đang thụ lý vụ án và Viện kiểm sát có thẩm quyền.<br><br>3. Lệnh trích xuất phải có các nội dung chủ yếu sau đây:<br><br>a) Cơ quan, họ tên, chức vụ, cấp bậc người ra lệnh;<br><br>b) Họ tên, năm sinh, quốc tịch, nơi cư trú, hành vi vi phạm pháp luật, ngày bị tạm giữ, ngày bị tạm giam của người được trích xuất;<br><br>c) Mục đích và thời hạn trích xuất;<br><br>d) Họ tên, chức vụ, cấp bậc, cơ quan của người làm nhiệm vụ áp giải người được trích xuất hoặc cơ quan làm nhiệm vụ áp giải;<br><br>đ) Họ tên, chức vụ, cấp bậc (nếu có) của người nhận trích xuất của cơ quan có thẩm quyền ra lệnh trích xuất;<br><br>e) Ngày, tháng, năm ra lệnh; chữ ký của người ra lệnh và đóng dấu.<br><br>4. Cơ sở giam giữ có trách nhiệm kiểm tra, bàn giao người bị tạm giữ, người bị tạm giam cho cơ quan, người có nhiệm vụ áp giải. Cơ quan, người có nhiệm vụ áp giải có trách nhiệm bàn giao người được trích xuất cho người có thẩm quyền ra lệnh trích xuất. Việc giao nhận phải được lập biên bản, có ghi rõ tình trạng sức khỏe của người đó và ghi sổ theo dõi.<br><br>Người có thẩm quyền ra lệnh trích xuất có trách nhiệm tiếp nhận người được trích xuất. Cơ quan, người có nhiệm vụ áp giải phối hợp với cơ sở giam giữ và người có thẩm quyền ra lệnh trích xuất quản lý và bảo đảm thực hiện chế độ ăn, ở, sinh hoạt đối với người được trích xuất theo quy định của Luật này. Việc áp giải, quản lý và kinh phí bảo đảm thực hiện chế độ ăn, ở, sinh hoạt đối với người được trích xuất do Chính phủ quy định.<br><br>Khi chưa hết thời hạn trích xuất nhưng đã hoàn thành mục đích trích xuất hoặc hết thời hạn trích xuất, người có yêu cầu trích xuất bàn giao người được trích xuất cho cơ quan, người có nhiệm vụ áp giải để giao người được trích xuất cho cơ sở giam giữ, trừ trường hợp người bị tạm giữ, người bị tạm giam được trả tự do theo bản án, quyết định của cơ quan, người có thẩm quyền. Nếu có nhu cầu tiếp tục trích xuất thì phải có lệnh gia hạn trích xuất. Thời hạn trích xuất và gia hạn trích xuất không được dài hơn thời hạn tạm giữ, tạm giam còn lại.<br><br>5. Trong trường hợp thực hiện hoạt động quy định tại khoản 1 Điều này bên trong khu vực cơ sở giam giữ thì thủ trưởng cơ sở giam giữ quyết định đưa người bị tạm giữ, người bị tạm giam ra khỏi buồng tạm giữ, buồng tạm giam mà không cần lệnh trích xuất."
+      },
+      "law-84": {
+        "title": "Điều 84. Quyết định thi hành án treo",
+        "content": "1. Quyết định thi hành án treo phải ghi rõ họ, tên, chức vụ người ra quyết định; bản án, quyết định được thi hành; tên cơ quan có nhiệm vụ thi hành; họ, tên, ngày, tháng, năm sinh, nơi cư trú của người được hưởng án treo; mức hình phạt tù và thời gian thử thách của người được hưởng án treo; hình phạt bổ sung, trừ hình phạt bổ sung là hình phạt tiền; hậu quả của việc vi phạm nghĩa vụ trong thời gian thử thách theo quy định tại khoản 5 Điều 65 của Bộ luật Hình sự; Ủy ban nhân dân cấp xã, đơn vị quân đội được giao giám sát, giáo dục người được hưởng án treo.<br><br>2. Trong thời hạn 03 ngày làm việc kể từ ngày ra quyết định thi hành án treo, Tòa án phải gửi quyết định đó cho cá nhân, cơ quan sau đây:<br><br>a) Người được hưởng án treo và người đại diện trong trường hợp người được hưởng án treo là người dưới 18 tuổi;<br><br>b) Viện kiểm sát cùng cấp;<br><br>c) Cơ quan thi hành án hình sự Công an cấp huyện nơi Ủy ban nhân dân cấp xã được giao giám sát, giáo dục người được hưởng án treo, cơ quan thi hành án hình sự cấp quân khu nơi người được hưởng án treo làm việc;<br><br>d) Ủy ban nhân dân cấp xã, đơn vị quân đội được giao giám sát, giáo dục người được hưởng án treo;<br><br>đ) Sở Tư pháp nơi Tòa án đã ra quyết định thi hành án có trụ sở."
+      },
+      "law-364": {
+        "title": "khoản 1 Điều 364. Thẩm quyền và thủ tục ra quyết định thi hành án",
+        "content": "1. Chánh án Tòa án đã xét xử sơ thẩm có thẩm quyền ra quyết định thi hành án hoặc ủy thác cho Chánh án Tòa án khác cùng cấp ra quyết định thi hành án."
+      },
+      "law-179": {
+        "title": "Điều 179 của Bộ luật Tố tụng d&#226",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-177": {
+        "title": "Điều 177",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-217": {
+        "title": "Điều 217 của Bộ luật Tố tụng d&#226",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-71": {
+        "title": "điểm d khoản 1 Điều 71 của Bộ luật D&#226",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-68": {
+        "title": "khoản 1 Điều 68",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-148": {
+        "title": "Điều 148 của Bộ luật D&#226",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-388": {
+        "title": "Khoản 4 Điều 388 của Bộ luật Tố tụng d&#226",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-218": {
+        "title": "Điều 218 của Bộ luật Tố tụng d&#226",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-161": {
+        "title": "khoản 3 Điều 161",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-162": {
+        "title": "khoản 1 Điều 162 của Bộ luật Tố tụng d&#226",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-39": {
+        "title": "Điểm c khoản 1 Điều 39 của Bộ luật Tố tụng d&#226",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-235": {
+        "title": "Điều 235",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "ldd-236": {
+        "title": "Điều 236 của Luật Đất đai năm 2024&#160",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-5": {
+        "title": "Khoản 1 Điều 5 của Bộ luật Tố tụng d&#226",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-288": {
+        "title": "Khoản 1 Điều 288 của Bộ luật D&#226",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-259": {
+        "title": "Điều 259 của Bộ luật Tố tụng d&#226",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-233": {
+        "title": "Khoản 1 Điều 233 của Bộ luật Tố tụng d&#226",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-56": {
+        "title": "khoản 2 Điều 56",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-62": {
+        "title": "khoản 2 Điều 62",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-227": {
+        "title": "Điều 227",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-229": {
+        "title": "khoản 2 Điều 229",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-230": {
+        "title": "khoản 2 Điều 230",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-231": {
+        "title": "khoản 2 Điều 231",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-241": {
+        "title": "Điều 241",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-18": {
+        "title": "Khoản 7 Điều 18",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-29": {
+        "title": "Điều 29",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-146": {
+        "title": "Điều 146",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-220": {
+        "title": "Điều 220",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-12": {
+        "title": "khoản 4 Điều 12",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-22": {
+        "title": "khoản 1 Điều 22",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-210": {
+        "title": "Khoản 3 Điều 210 của Bộ luật Tố tụng d&#226",
+        "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
+      },
+      "law-dieu-175-toi-lam-dung-tin-nhiem-chiem-doat-tai-san": {
+        "title": "Điều 175. Tội lạm dụng tín nhiệm chiếm đoạt tài sản",
+        "content": "1. Người nào thực hiện một trong các hành vi sau đây chiếm đoạt tài sản của người khác trị giá từ 4.000.000 đồng đến dưới 50.000.000 đồng hoặc dưới 4.000.000 đồng nhưng đã bị xử phạt vi phạm hành chính về hành vi chiếm đoạt tài sản hoặc đã bị kết án về tội này hoặc về một trong các tội quy định tại các điều 168, 169, 170, 171, 172, 173, 174 và 290 của Bộ luật này, chưa được xóa án tích mà còn vi phạm hoặc tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm:<br>a) Vay, mượn, thuê tài sản của người khác hoặc nhận được tài sản của người khác bằng hình thức hợp đồng rồi dùng thủ đoạn gian dối hoặc bỏ trốn để chiếm đoạt tài sản đó hoặc đến thời hạn trả lại tài sản mặc dù có điều kiện, khả năng nhưng cố tình không trả;<br><br>b) Vay, mượn, thuê tài sản của người khác hoặc nhận được tài sản của người khác bằng hình thức hợp đồng và đã sử dụng tài sản đó vào mục đích bất hợp pháp dẫn đến không có khả năng trả lại tài sản.<br><br>2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 07 năm:<br>a) Có tổ chức;<br>b) Có tính chất chuyên nghiệp;<br>c) Chiếm đoạt tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng;<br>d) Lợi dụng chức vụ, quyền hạn hoặc lợi dụng danh nghĩa cơ quan, tổ chức;<br>đ) Dùng thủ đoạn xảo quyệt;<br>e) Gây ảnh hưởng xấu đến an ninh, trật tự, an toàn xã hội;<br>g) Tái phạm nguy hiểm.<br><br>3. Phạm tội chiếm đoạt tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng, thì bị phạt tù từ 05 năm đến 12 năm.<br><br>4. Phạm tội chiếm đoạt tài sản trị giá 500.000.000 đồng trở lên, thì bị phạt tù từ 12 năm đến 20 năm.<br><br>5. Người phạm tội còn có thể bị phạt tiền từ 10.000.000 đồng đến<br>100.000.000 đồng, cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định từ 01 năm đến 05 năm hoặc tịch thu một phần hoặc toàn bộ tài sản."
+      },
+      "law-dieu-175-cua-bo-luat-hi": {
+        "title": "Điều 175 của Bộ luật Hì",
+        "content": "1. Người nào thực hiện một trong các hành vi sau đây chiếm đoạt tài sản của người khác trị giá từ 4.000.000 đồng đến dưới 50.000.000 đồng hoặc dưới 4.000.000 đồng nhưng đã bị xử phạt vi phạm hành chính về hành vi chiếm đoạt tài sản hoặc đã bị kết án về tội này hoặc về một trong các tội quy định tại các điều 168, 169, 170, 171, 172, 173, 174 và 290 của Bộ luật này, chưa được xóa án tích mà còn vi phạm hoặc tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm:<br>a) Vay, mượn, thuê tài sản của người khác hoặc nhận được tài sản của người khác bằng hình thức hợp đồng rồi dùng thủ đoạn gian dối hoặc bỏ trốn để chiếm đoạt tài sản đó hoặc đến thời hạn trả lại tài sản mặc dù có điều kiện, khả năng nhưng cố tình không trả;<br><br>b) Vay, mượn, thuê tài sản của người khác hoặc nhận được tài sản của người khác bằng hình thức hợp đồng và đã sử dụng tài sản đó vào mục đích bất hợp pháp dẫn đến không có khả năng trả lại tài sản.<br><br>2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 07 năm:<br>a) Có tổ chức;<br>b) Có tính chất chuyên nghiệp;<br>c) Chiếm đoạt tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng;<br>d) Lợi dụng chức vụ, quyền hạn hoặc lợi dụng danh nghĩa cơ quan, tổ chức;<br>đ) Dùng thủ đoạn xảo quyệt;<br>e) Gây ảnh hưởng xấu đến an ninh, trật tự, an toàn xã hội;<br>g) Tái phạm nguy hiểm.<br><br>3. Phạm tội chiếm đoạt tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng, thì bị phạt tù từ 05 năm đến 12 năm.<br><br>4. Phạm tội chiếm đoạt tài sản trị giá 500.000.000 đồng trở lên, thì bị phạt tù từ 12 năm đến 20 năm.<br><br>5. Người phạm tội còn có thể bị phạt tiền từ 10.000.000 đồng đến<br>100.000.000 đồng, cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định từ 01 năm đến 05 năm hoặc tịch thu một phần hoặc toàn bộ tài sản."
       }
     },
     "caseOrder": {
