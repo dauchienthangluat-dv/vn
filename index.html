@@ -179,9 +179,9 @@ body { top: 0 !important; }
   box-shadow:var(--shadow-sm); 
 }
 
-#page-home .hero-band h2{ font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--navy); font-weight:700;margin-bottom:8px;position:relative;z-index:1; letter-spacing: 0.5px;}
+#page-home .hero-band h2{ font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--navy); font-weight:700;margin-bottom:8px;position:relative;z-index:2; letter-spacing: 0.5px;}
 #page-home .hero-band h2 em{color:var(--gold-rich);font-style:normal;}
-#page-home .hero-band p{color:var(--text-sec);font-size:0.85rem;position:relative;z-index:1; font-weight: 500;}
+#page-home .hero-band p{color:var(--text-sec);font-size:0.85rem;position:relative;z-index:2; font-weight: 500;}
 
 .smart-search-wrapper { display: flex; align-items: center; background: var(--surface); border-radius: 8px; padding: 6px; border: 1px solid var(--gold-border); transition: all 0.2s; margin-top: 16px; box-shadow: var(--shadow-sm);}
 .smart-search-wrapper:focus-within { border-color: var(--gold-rich); box-shadow: 0 0 0 3px var(--gold-dim); }
@@ -190,7 +190,7 @@ body { top: 0 !important; }
 .smart-search-wrapper button { background: var(--navy); border: none; color: #fff; padding: 10px 16px; border-radius: 6px; font-family: 'Be Vietnam Pro', sans-serif; font-weight: 500; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; white-space: nowrap; display: flex; align-items: center; gap: 6px;}
 .smart-search-wrapper button:hover { background: var(--gold-rich); }
 
-.hero-stats{display:flex;gap:24px;margin-top:24px;position:relative;z-index:1; border-top: 1px solid rgba(21, 34, 56, 0.08); padding-top: 16px;}
+.hero-stats{display:flex;gap:24px;margin-top:24px;position:relative;z-index:2; border-top: 1px solid rgba(21, 34, 56, 0.08); padding-top: 16px;}
 .hero-stat-num{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--navy);font-weight:700;display:block;}
 .hero-stat-lbl{font-size:0.65rem;color:var(--text-sec);text-transform:uppercase;letter-spacing:1px;font-weight:600;}
 
@@ -270,7 +270,6 @@ body { top: 0 !important; }
 .pg-btn:hover:not(:disabled){background:var(--bg2); border-color:var(--navy);}
 .pg-btn:disabled{opacity:0.4;cursor:not-allowed;}
 #pg-text{ font-size:0.85rem;font-weight:500;color:var(--text); }
-
 /* Chi tiết vụ án */
 .case-hero{ width:100%;height:220px; display:flex;align-items:center;justify-content:center; position:relative;overflow:hidden; background: var(--navy); }
 .case-hero i { font-size: 4rem; color: rgba(255,255,255,0.1); }
@@ -321,6 +320,12 @@ body { top: 0 !important; }
 .admin-btn-primary:hover { background: var(--gold-rich); }
 .admin-btn-secondary { background: var(--bg2); color: var(--navy); }
 .admin-btn-secondary:hover { background: #E0DDD5; }
+.admin-backup-panel{padding:14px;border:1px solid var(--gold-border);border-radius:8px;background:var(--surface2);margin-bottom:16px;}
+.admin-backup-title{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--navy);font-size:0.92rem;margin-bottom:6px;}
+.admin-backup-help{font-size:0.78rem;color:var(--text-muted);line-height:1.5;margin-bottom:10px;}
+.admin-backup-actions{display:flex;gap:8px;flex-wrap:wrap;}
+.admin-backup-actions .admin-btn{min-width:150px;}
+@media(max-width:420px){.admin-backup-actions{flex-direction:column;}}
 
 .detail-section-title{ font-family:'Playfair Display',serif; font-size:1.05rem;font-weight:700;color:var(--navy); margin: 24px 0 12px 0; border-bottom: 1px solid var(--gold-border); padding-bottom: 8px;}
 </style>
@@ -457,6 +462,17 @@ body { top: 0 !important; }
 <div id="admin-modal" class="overlay-modal">
   <div class="info-modal-box" style="max-width: 600px;">
     <div class="info-modal-title"><i class="ph ph-gear"></i> Thêm Mới Dữ Liệu</div>
+    <div class="admin-backup-panel">
+      <div class="admin-backup-title"><i class="ph ph-database"></i> Sao lưu dữ liệu Admin</div>
+      <div class="admin-backup-help">Nếu vừa nhập/sửa vụ án, hãy bấm "Lưu Dữ Liệu" trước. Trước khi đổi file code mới, bấm "Xuất dữ liệu"; sau khi dùng file code mới, bấm "Nhập dữ liệu" để khôi phục vụ án, điều luật, bản English và thứ tự sắp xếp.</div>
+      <div class="admin-backup-actions">
+        <button type="button" class="admin-btn admin-btn-secondary" onclick="exportAdminBackup()"><i class="ph ph-download-simple"></i> Xuất dữ liệu</button>
+        <button type="button" class="admin-btn admin-btn-secondary" onclick="triggerAdminBackupImport()"><i class="ph ph-upload-simple"></i> Nhập dữ liệu</button>
+        <button type="button" class="admin-btn admin-btn-secondary" onclick="triggerBulkCasesImport()"><i class="ph ph-files"></i> Nhập hàng loạt vụ án</button>
+      </div>
+      <input type="file" id="admin-backup-file" accept=".json,application/json" style="display:none;" onchange="importAdminBackupFile(event)" />
+      <input type="file" id="bulk-cases-file" accept=".json,application/json" style="display:none;" onchange="importBulkCasesFile(event)" />
+    </div>
     <div class="admin-form-group"><label class="admin-label">Tiêu đề vụ án / văn bản:</label><input type="text" id="ad-ten" class="admin-input" placeholder="Nhập tiêu đề..." /></div>
     <div class="admin-form-group"><label class="admin-label">Lĩnh vực luật:</label><select id="ad-lv" class="admin-input" onchange="updateAdminSF()"></select><input type="text" id="ad-new-lv" class="admin-input" placeholder="Gõ tên lĩnh vực mới" style="display:none; margin-top:8px;" /></div>
     <div class="admin-form-group"><label class="admin-label">Chủ đề cụ thể:</label><select id="ad-sf" class="admin-input" onchange="checkNewSF()"></select><input type="text" id="ad-new-sf" class="admin-input" placeholder="Gõ tên chủ đề mới" style="display:none; margin-top:8px;" /></div>
@@ -1317,6 +1333,7 @@ function renderReadHistory(){
 
 function goSubfields(lvId){
   if(lvId) state.curLV = getLVById(lvId); if(!state.curLV) return;
+  document.getElementById('pagination-bar').classList.remove('visible');
   document.getElementById('sf-breadcrumb-cur').textContent = getLVDisplayName(state.curLV); document.getElementById('sf-title').textContent = getLVDisplayName(state.curLV);
   const list = document.getElementById('subfield-list');
   list.innerHTML = state.curLV.subfields.map(sf=>`
@@ -1915,6 +1932,314 @@ function restoreCasesDataFromStorage() {
         }
         applyStoredCaseOrder();
     } catch(e) {}
+}
+
+const ADMIN_BACKUP_TYPE = 'dcsl-admin-backup';
+
+function getStoredJsonValue(key, fallbackValue) {
+    try {
+        const raw = localStorage.getItem(key);
+        return raw ? JSON.parse(raw) : fallbackValue;
+    } catch(e) {
+        return fallbackValue;
+    }
+}
+
+function cloneBackupValue(value) {
+    return JSON.parse(JSON.stringify(value || {}));
+}
+
+function normalizeAdminBackupPayload(backup) {
+    const data = backup && backup.data ? backup.data : backup;
+    if(!data || typeof data !== 'object') throw new Error('Invalid backup file');
+    const casesData = data.casesData || (data.cases ? { cases: data.cases, recent: data.recent || [], linhvuc: data.linhvuc || [] } : null);
+    if(!casesData || !casesData.cases || typeof casesData.cases !== 'object') throw new Error('Missing cases data');
+    return {
+        casesData: casesData,
+        lawDb: data.lawDb || data.lawDB || {},
+        caseOrder: data.caseOrder || {},
+        language: data.language === 'en' ? 'en' : 'vi'
+    };
+}
+
+function exportAdminBackup() {
+    saveCasesDataToStorage();
+    localStorage.setItem('dcsl_law_db', JSON.stringify(LAW_DB));
+    const backup = {
+        backupType: ADMIN_BACKUP_TYPE,
+        version: 1,
+        exportedAt: new Date().toISOString(),
+        data: {
+            casesData: getStoredJsonValue('dcsl_cases_data', { cases: cloneBackupValue(CASES_DATA), recent: cloneBackupValue(RECENT_UPDATES), linhvuc: cloneBackupValue(LINH_VUC_LUAT) }),
+            lawDb: getStoredJsonValue('dcsl_law_db', cloneBackupValue(LAW_DB)),
+            caseOrder: getStoredCaseOrderMap(),
+            language: localStorage.getItem(LANGUAGE_STORAGE_KEY) || state.uiLang || 'vi'
+        }
+    };
+    const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');
+    link.href = url;
+    link.download = `du-lieu-admin-${stamp}.json`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    showAlert('Đã xuất file backup dữ liệu Admin. Hãy giữ file .json này để nhập lại sau khi bạn đổi sang file code mới. Lưu ý: nếu bạn vừa nhập/sửa vụ án nhưng chưa bấm "Lưu Dữ Liệu", phần chưa lưu sẽ chưa nằm trong backup.');
+}
+
+function triggerAdminBackupImport() {
+    const input = document.getElementById('admin-backup-file');
+    if(input) input.click();
+}
+
+function importAdminBackupFile(event) {
+    const input = event.target;
+    const file = input && input.files ? input.files[0] : null;
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = function(loadEvent) {
+        try {
+            const parsed = JSON.parse(loadEvent.target.result);
+            const backupData = normalizeAdminBackupPayload(parsed);
+            const ok = window.confirm('Nhập dữ liệu backup sẽ thay thế dữ liệu Admin đang lưu trong trình duyệt này. Bạn có chắc muốn tiếp tục không?');
+            if(!ok) return;
+            applyAdminBackupData(backupData);
+            showAlert('Đã nhập dữ liệu backup thành công. Dữ liệu vụ án, điều luật, bản English và thứ tự sắp xếp đã được khôi phục.');
+        } catch(e) {
+            showAlert('File backup không hợp lệ hoặc không đọc được. Vui lòng chọn đúng file .json đã xuất từ Admin.');
+        } finally {
+            input.value = '';
+        }
+    };
+    reader.onerror = function() {
+        input.value = '';
+        showAlert('Không đọc được file backup. Vui lòng thử lại.');
+    };
+    reader.readAsText(file, 'utf-8');
+}
+
+function applyAdminBackupData(backupData) {
+    const casesData = backupData.casesData || {};
+    Object.keys(CASES_DATA).forEach(key => delete CASES_DATA[key]);
+    Object.assign(CASES_DATA, casesData.cases || {});
+
+    RECENT_UPDATES.length = 0;
+    if(Array.isArray(casesData.recent)) RECENT_UPDATES.push(...casesData.recent);
+
+    if(Array.isArray(casesData.linhvuc)) {
+        LINH_VUC_LUAT.length = 0;
+        casesData.linhvuc.forEach(lv => {
+            const restored = {...lv};
+            const orig = ORIGINAL_LINH_VUC.find(o => o.id === restored.id);
+            if(orig) restored.icon = orig.icon;
+            LINH_VUC_LUAT.push(restored);
+        });
+    }
+
+    Object.keys(LAW_DB).forEach(key => delete LAW_DB[key]);
+    Object.assign(LAW_DB, backupData.lawDb || {});
+
+    if(backupData.caseOrder && typeof backupData.caseOrder === 'object') localStorage.setItem(CASE_ORDER_STORAGE_KEY, JSON.stringify(backupData.caseOrder));
+    else localStorage.removeItem(CASE_ORDER_STORAGE_KEY);
+
+    state.uiLang = backupData.language === 'en' ? 'en' : 'vi';
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, state.uiLang);
+    applyStoredCaseOrder();
+    saveCasesDataToStorage();
+    localStorage.setItem('dcsl_law_db', JSON.stringify(LAW_DB));
+
+    state.curLV = null; state.curSF = null; state.curCase = null; state.searchQuery = ''; state.curPage = 1;
+    adminFormLaws = []; renderLawsList();
+    renderHome(); buildFilterF1(); renderReadHistory(); syncLanguageButtons();
+    const pagination = document.getElementById('pagination-bar');
+    if(pagination) pagination.classList.remove('visible');
+    closeAdmin();
+    showPage('page-home');
+}
+
+function escapeHtmlText(value) {
+    return String(value || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+
+function formatImportedContent(value) {
+    if(!value) return '';
+    const text = String(value);
+    if(/<[a-z][\s\S]*>/i.test(text)) return text;
+    return text.split(/\r?\n/).map(line => {
+        const trimmed = line.trim();
+        if(!trimmed) return '';
+        const upper = trimmed.toUpperCase();
+        if(trimmed === upper && /[A-ZÀ-Ỹ]/.test(upper) && trimmed.length < 200) return `<div class="detail-section-title">${escapeHtmlText(trimmed)}</div>`;
+        return `<p>${escapeHtmlText(trimmed)}</p>`;
+    }).join('');
+}
+
+function normalizeImportedLawList(rawLaws, searchableText) {
+    const laws = [];
+    const addLaw = (name, content) => {
+        const lawName = cleanInlineText(name);
+        if(!lawName || findLawInList(laws, lawName)) return;
+        const lawKey = getLawKeyFromText(lawName);
+        const dbContent = lawKey && LAW_DB[lawKey] ? LAW_DB[lawKey].content.replace(/<[^>]*>/g, '') : '';
+        laws.push({ name: lawName, content: content || dbContent || '' });
+    };
+
+    if(Array.isArray(rawLaws)) {
+        rawLaws.forEach(law => {
+            if(typeof law === 'string') addLaw(law, '');
+            else if(law && typeof law === 'object') addLaw(law.name || law.title || '', law.content || '');
+        });
+    }
+
+    extractAllLawsFromText(searchableText || '').forEach(lawText => addLaw(lawText, ''));
+    extractEnglishLawsFromText(searchableText || '').forEach(lawText => addLaw(lawText, ''));
+    return laws;
+}
+
+function makeImportedCaseId(raw, index) {
+    const base = createSlug(raw.id || raw.ten || raw.title || raw.sourceFile || `case-import-${Date.now()}-${index}`) || `case-import-${Date.now()}-${index}`;
+    let candidate = base;
+    let suffix = 2;
+    while(findCaseById(candidate)) {
+        candidate = `${base}-${suffix}`;
+        suffix++;
+    }
+    return candidate;
+}
+
+function normalizeImportedCase(raw, index) {
+    if(!raw || typeof raw !== 'object') return null;
+    const ten = String(raw.ten || raw.title || raw.tieu_de || '').trim();
+    if(!ten) return null;
+
+    const lvName = String(raw.lvName || raw.linh_vuc || raw.field || 'Dân sự').trim();
+    const sfName = String(raw.sfName || raw.chu_de || raw.topic || 'Bản án').trim();
+    const lvId = raw.lvId || raw.linh_vuc_id || createSlug(lvName);
+    const sfId = raw.sfId || raw.chu_de_id || createSlug(sfName);
+    const detailOnly = isDetailOnlySubfield(sfId);
+
+    let sao = parseInt(raw.sao || raw.stars || raw.tinh_chat || 0, 10) || 0;
+    if(sfId === 'an-le') sao = 3;
+    else if(sfId === 'tb-rut-kinh-nghiem') sao = 2;
+
+    const tomLuoc = detailOnly ? '' : formatImportedContent(raw.tom_luoc || raw.timelineText || raw.timeline_text || '');
+    const apDung = detailOnly ? '' : formatImportedContent(raw.ap_dung || raw.analogousUse || raw.ap_dung_tuong_tu || '');
+    const chiTiet = formatImportedContent(raw.chi_tiet || raw.detail || raw.noi_dung_chi_tiet || '');
+    const moTa = String(raw.mo_ta || raw.summary || raw.tom_tat_ngan || '').trim();
+    const timeline = detailOnly ? [] : (Array.isArray(raw.timeline) ? raw.timeline : String(raw.timelineText || raw.timeline_text || '').split(/\r?\n/).map(t => t.trim()).filter(Boolean));
+    const searchableText = [ten, moTa, tomLuoc, apDung, chiTiet, raw.lawsText || ''].join(' ');
+    const laws = normalizeImportedLawList(raw.laws, searchableText);
+
+    const caseData = {
+        id: makeImportedCaseId(raw, index),
+        ten: ten,
+        mo_ta: moTa,
+        lvId: lvId,
+        lvName: lvName,
+        sfId: sfId,
+        sfName: sfName,
+        sao: sao,
+        ngay: raw.ngay || raw.date || new Date().toISOString(),
+        tom_luoc: tomLuoc,
+        ap_dung: apDung,
+        chi_tiet: chiTiet,
+        timeline: timeline,
+        laws: laws
+    };
+
+    const en = raw.translations && raw.translations.en ? raw.translations.en : (raw.en || {});
+    if(en && typeof en === 'object') {
+        const englishPayload = {};
+        if(en.ten || en.title) englishPayload.ten = String(en.ten || en.title).trim();
+        if(en.mo_ta || en.summary) englishPayload.mo_ta = String(en.mo_ta || en.summary).trim();
+        if(en.tom_luoc || en.timelineText) englishPayload.tom_luoc = formatImportedContent(en.tom_luoc || en.timelineText);
+        if(en.ap_dung || en.analogousUse) englishPayload.ap_dung = formatImportedContent(en.ap_dung || en.analogousUse);
+        if(en.chi_tiet || en.detail) englishPayload.chi_tiet = formatImportedContent(en.chi_tiet || en.detail);
+        if(Array.isArray(en.timeline)) englishPayload.timeline = en.timeline;
+        else if(en.timelineText) englishPayload.timeline = String(en.timelineText).split(/\r?\n/).map(t => t.trim()).filter(Boolean);
+        if(Object.keys(englishPayload).length) {
+            englishPayload.provider = 'bulk-import';
+            englishPayload.translatedAt = en.translatedAt || new Date().toISOString();
+            caseData.translations = { en: englishPayload };
+            caseData.translationMeta = { en: { status: 'ready', provider: 'bulk-import', translatedAt: englishPayload.translatedAt } };
+        }
+    }
+
+    return caseData;
+}
+
+function ensureImportedCaseTaxonomy(caseData) {
+    let lv = getLVById(caseData.lvId);
+    if(!lv) {
+        lv = { id: caseData.lvId, ten: caseData.lvName || caseData.lvId, icon: '<i class="ph ph-folder"></i>', subfields: [...baseSubfields.map(s=>({...s}))], totalCases: 0 };
+        LINH_VUC_LUAT.push(lv);
+    }
+    if(!lv.subfields.find(sf => sf.id === caseData.sfId)) {
+        lv.subfields.push({ id: caseData.sfId, ten: caseData.sfName || caseData.sfId, soLuong: 0 });
+    }
+}
+
+function normalizeBulkCasesPayload(payload) {
+    const data = payload && payload.data ? payload.data : payload;
+    const cases = Array.isArray(data) ? data : (Array.isArray(data && data.cases) ? data.cases : []);
+    if(!cases.length) throw new Error('Missing cases array');
+    return { cases: cases, lawDb: (data && (data.lawDb || data.lawDB)) || {} };
+}
+
+function triggerBulkCasesImport() {
+    const input = document.getElementById('bulk-cases-file');
+    if(input) input.click();
+}
+
+function importBulkCasesFile(event) {
+    const input = event.target;
+    const file = input && input.files ? input.files[0] : null;
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = function(loadEvent) {
+        try {
+            const parsed = JSON.parse(loadEvent.target.result);
+            const bulkData = normalizeBulkCasesPayload(parsed);
+            const normalizedCases = bulkData.cases.map((item, idx) => normalizeImportedCase(item, idx)).filter(Boolean);
+            if(!normalizedCases.length) throw new Error('No valid cases');
+            const ok = window.confirm(`Sẽ thêm ${normalizedCases.length} vụ án vào dữ liệu hiện tại. Dữ liệu cũ sẽ không bị xóa. Bạn có muốn tiếp tục không?`);
+            if(!ok) return;
+            applyBulkCasesImport(normalizedCases, bulkData.lawDb);
+        } catch(e) {
+            showAlert('File nhập hàng loạt không hợp lệ. Vui lòng chọn đúng file JSON được tạo từ script Word import.');
+        } finally {
+            input.value = '';
+        }
+    };
+    reader.onerror = function() {
+        input.value = '';
+        showAlert('Không đọc được file nhập hàng loạt. Vui lòng thử lại.');
+    };
+    reader.readAsText(file, 'utf-8');
+}
+
+function applyBulkCasesImport(importedCases, importedLawDb) {
+    if(importedLawDb && typeof importedLawDb === 'object') Object.assign(LAW_DB, importedLawDb);
+    const recentItems = [];
+
+    importedCases.forEach((caseData, index) => {
+        caseData.id = makeImportedCaseId(caseData, index);
+        ensureImportedCaseTaxonomy(caseData);
+        const bucketKey = getCaseBucketKey(caseData.lvId, caseData.sfId);
+        if(!CASES_DATA[bucketKey]) CASES_DATA[bucketKey] = [];
+        CASES_DATA[bucketKey].push(caseData);
+        if(Array.isArray(caseData.laws)) syncAdminLawsToLawDB(caseData.laws);
+        recentItems.push({ id: caseData.id, ten: caseData.ten, lvId: caseData.lvId, sfId: caseData.sfId });
+    });
+
+    RECENT_UPDATES.unshift(...recentItems);
+    saveCasesDataToStorage();
+    localStorage.setItem('dcsl_law_db', JSON.stringify(LAW_DB));
+    renderHome(); buildFilterF1(); renderReadHistory();
+    if(state.curSF || state.searchQuery) renderCasesList();
+    showAlert(`Đã nhập thành công ${importedCases.length} vụ án từ file hàng loạt.`);
 }
 
 window.cleanEditorText = function(editorId) {
