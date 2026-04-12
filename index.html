@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-build="public">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -610,13 +610,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 </script>
 <script>
+const IS_PUBLIC_BUILD = true;
+const ADMIN_PASSWORD = '';
 let secretCode = "";
 let isAdminMode = false;
 document.addEventListener('keydown', function(e) {
+    if (IS_PUBLIC_BUILD || !ADMIN_PASSWORD) return;
     if (e.key.length > 1) return; 
     secretCode += e.key;
     if (secretCode.length > 10) secretCode = secretCode.substring(secretCode.length - 10);
-    if (secretCode.toLowerCase() === "ducvu12345") {
+    if (secretCode.toLowerCase() === ADMIN_PASSWORD) {
         isAdminMode = true;
         document.getElementById('admin-btn-top').style.display = 'flex';
         document.getElementById('admin-sidebar-item').style.display = 'flex';
@@ -738,12 +741,13 @@ function linkManualLawReferences(htmlText, laws) {
   if(!htmlText || !Array.isArray(laws) || laws.length === 0) return htmlText;
   let res = htmlText;
   laws.forEach(law => {
-    getLawReferenceVariants(law.name || law.title || '').forEach(ref => {
+    const manualNames = [law.name, law.title, law.name_en, law.title_en, law.translations && law.translations.en && law.translations.en.title].filter(Boolean);
+    manualNames.forEach(manualName => getLawReferenceVariants(manualName).forEach(ref => {
       const source = escapeRegExp(ref).replace(/\s+/g, '\\s+');
       if(!source) return;
       const pattern = new RegExp(`(?![^<]*>)${source}(?![0-9A-Za-z.])`, 'gi');
       res = replaceOutsideLawLinks(res, pattern, wrapLawLink);
-    });
+    }));
   });
   return res;
 }
@@ -1909,6 +1913,10 @@ function createSlug(str) {
 }
 
 function openAdmin() {
+  if(IS_PUBLIC_BUILD) {
+    showAlert('Bản public chỉ dùng để tra cứu. Vui lòng mở bản Admin local để nhập hoặc sửa dữ liệu.');
+    return;
+  }
   closeSidebar(); 
   if(!editingCaseId) {
     const lvSel = document.getElementById('ad-lv');
@@ -1982,8 +1990,16 @@ function detectLawsFromContent() {
     if(!findLawInList(adminFormLaws, lawText)) {
       const lawKey = getLawKeyFromText(lawText);
       const dbLaw = LAW_DB[lawKey] || {};
-      const lawContentEn = dbLaw.content_en || (dbLaw.translations && dbLaw.translations.en && dbLaw.translations.en.content) || '';
-      adminFormLaws.push({ name: lawText, content: '', name_en: lawText, content_en: lawContentEn, translations: { en: { title: lawText, content: lawContentEn } } });
+      const dbEnglish = getLawEnglishData(dbLaw);
+      const lawTitleEn = dbEnglish.title || '';
+      const lawContentEn = dbEnglish.content || '';
+      const law = { name: lawText, content: '' };
+      if(lawTitleEn || lawContentEn) {
+        law.name_en = lawTitleEn;
+        law.content_en = lawContentEn;
+        law.translations = { en: { title: lawTitleEn, content: lawContentEn } };
+      }
+      adminFormLaws.push(law);
     }
   });
   renderLawsList(); syncCurrentCaseLawsFromAdmin(); showAlert(`Đã nhận diện ${detectedLaws.length} Điều luật!`);
@@ -1995,10 +2011,17 @@ function detectEnglishLawsFromContent() {
   if(detectedLaws.length === 0) { showAlert('Không tìm thấy Article/Clause tiếng Anh nào.'); return; }
 
   detectedLaws.forEach(lawText => {
-    if(!findLawInList(adminFormLaws, lawText)) {
-      const lawKey = getLawKeyFromText(lawText);
-      const lawContent = LAW_DB[lawKey] ? LAW_DB[lawKey].content.replace(/<[^>]*>/g, '') : '';
-      adminFormLaws.push({ name: lawText, content: lawContent });
+    const lawKey = getLawKeyFromText(lawText);
+    const dbLaw = lawKey && LAW_DB[lawKey] ? LAW_DB[lawKey] : {};
+    const dbEnglish = getLawEnglishData(dbLaw);
+    const existingLaw = findLawInList(adminFormLaws, lawText);
+    if(existingLaw) {
+      if(!existingLaw.name_en) existingLaw.name_en = lawText;
+      if(!existingLaw.content_en && dbEnglish.content) existingLaw.content_en = dbEnglish.content.replace(/<[^>]*>/g, '');
+      if(existingLaw.name_en || existingLaw.content_en) existingLaw.translations = { en: { title: existingLaw.name_en || lawText, content: existingLaw.content_en || '' } };
+    } else {
+      const lawContentEn = dbEnglish.content ? dbEnglish.content.replace(/<[^>]*>/g, '') : '';
+      adminFormLaws.push({ name: lawText, content: '', name_en: lawText, content_en: lawContentEn, translations: { en: { title: lawText, content: lawContentEn } } });
     }
   });
   renderLawsList(); syncCurrentCaseLawsFromAdmin(); showAlert(`Đã nhận diện ${detectedLaws.length} điều luật tiếng Anh!`);
@@ -2361,23 +2384,53 @@ function formatImportedContent(value) {
 
 function normalizeImportedLawList(rawLaws, searchableText) {
     const laws = [];
-    const addLaw = (name, content) => {
+    const addLaw = (name, content, nameEn, contentEn) => {
         const lawName = cleanInlineText(name);
-        if(!lawName || findLawInList(laws, lawName)) return;
-        const lawKey = getLawKeyFromText(lawName);
-        const dbContent = lawKey && LAW_DB[lawKey] ? LAW_DB[lawKey].content.replace(/<[^>]*>/g, '') : '';
-        laws.push({ name: lawName, content: content || dbContent || '' });
+        const englishTitle = cleanInlineText(nameEn);
+        const lookupName = lawName || englishTitle;
+        if(!lookupName) return;
+        const englishContent = (contentEn || '').toString().trim();
+        const existingLaw = findLawInList(laws, lookupName);
+        if(existingLaw) {
+            if(lawName && !existingLaw.name) existingLaw.name = lawName;
+            if(content && !existingLaw.content) existingLaw.content = content;
+            if(englishTitle && !existingLaw.name_en) existingLaw.name_en = englishTitle;
+            if(englishContent && !existingLaw.content_en) existingLaw.content_en = englishContent;
+            if(existingLaw.name_en || existingLaw.content_en) existingLaw.translations = { en: { title: existingLaw.name_en || '', content: existingLaw.content_en || '' } };
+            return;
+        }
+        const lawKey = getLawKeyFromText(lookupName);
+        const dbLaw = lawKey && LAW_DB[lawKey] ? LAW_DB[lawKey] : null;
+        const dbContent = dbLaw && dbLaw.content ? dbLaw.content.replace(/<[^>]*>/g, '') : '';
+        const dbEnglish = getLawEnglishData(dbLaw);
+        const savedNameEn = englishTitle || (/\bArticle\b|\bClause\b|\bPoint\b|\bSection\b/i.test(lawName) ? lawName : (dbEnglish.title || ''));
+        const savedContentEn = englishContent || (dbEnglish.content ? dbEnglish.content.replace(/<[^>]*>/g, '') : '');
+        const law = { name: lawName || lookupName, content: (content || '').toString().trim() || dbContent || '' };
+        if(savedNameEn || savedContentEn) {
+            law.name_en = savedNameEn;
+            law.content_en = savedContentEn;
+            law.translations = { en: { title: savedNameEn, content: savedContentEn } };
+        }
+        laws.push(law);
     };
 
     if(Array.isArray(rawLaws)) {
         rawLaws.forEach(law => {
             if(typeof law === 'string') addLaw(law, '');
-            else if(law && typeof law === 'object') addLaw(law.name || law.title || '', law.content || '');
+            else if(law && typeof law === 'object') {
+                const en = law.translations && law.translations.en ? law.translations.en : {};
+                addLaw(
+                    law.name || law.title || '',
+                    law.content || '',
+                    law.name_en || law.title_en || en.title || en.name || '',
+                    law.content_en || en.content || ''
+                );
+            }
         });
     }
 
     extractAllLawsFromText(searchableText || '').forEach(lawText => addLaw(lawText, ''));
-    extractEnglishLawsFromText(searchableText || '').forEach(lawText => addLaw(lawText, ''));
+    extractEnglishLawsFromText(searchableText || '').forEach(lawText => addLaw('', '', lawText, ''));
     return laws;
 }
 
@@ -2412,7 +2465,8 @@ function normalizeImportedCase(raw, index) {
     const chiTiet = formatImportedContent(raw.chi_tiet || raw.detail || raw.noi_dung_chi_tiet || '');
     const moTa = String(raw.mo_ta || raw.summary || raw.tom_tat_ngan || '').trim();
     const timeline = detailOnly ? [] : (Array.isArray(raw.timeline) ? raw.timeline : String(raw.timelineText || raw.timeline_text || '').split(/\r?\n/).map(t => t.trim()).filter(Boolean));
-    const searchableText = [ten, moTa, tomLuoc, apDung, chiTiet, raw.lawsText || ''].join(' ');
+    const rawEn = raw.translations && raw.translations.en ? raw.translations.en : {};
+    const searchableText = [ten, moTa, tomLuoc, apDung, chiTiet, rawEn.ten, rawEn.mo_ta, rawEn.tom_luoc, rawEn.ap_dung, rawEn.chi_tiet, raw.lawsText || ''].join(' ');
     const laws = normalizeImportedLawList(raw.laws, searchableText);
 
     const caseData = {
@@ -2650,10 +2704,12 @@ window.addEventListener('scroll',()=>{ document.getElementById('global-header').
 
 async function safeInit() { 
     const hasSharedSiteData = await loadSharedSiteData();
-    restoreCasesDataFromStorage({ merge: hasSharedSiteData }); 
+    if(!IS_PUBLIC_BUILD) restoreCasesDataFromStorage({ merge: hasSharedSiteData }); 
     const savedLang = localStorage.getItem(LANGUAGE_STORAGE_KEY);
     if(savedLang === 'en' || savedLang === 'vi') state.uiLang = savedLang;
-    try { Object.assign(LAW_DB, JSON.parse(localStorage.getItem('dcsl_law_db'))); } catch(e){}
+    if(!IS_PUBLIC_BUILD) {
+        try { Object.assign(LAW_DB, JSON.parse(localStorage.getItem('dcsl_law_db'))); } catch(e){}
+    }
     renderHome(); buildFilterF1(); syncLanguageButtons();
 }
 if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', safeInit); } else { safeInit(); }
