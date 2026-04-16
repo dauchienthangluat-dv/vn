@@ -999,16 +999,22 @@ function t(key) {
   return (UI_TEXT[lang] && UI_TEXT[lang][key]) || UI_TEXT.vi[key] || key;
 }
 
+function getEntityEnglishName(entity) {
+  if(!entity) return '';
+  const en = entity.translations && entity.translations.en ? entity.translations.en : {};
+  return entity.ten_en || entity.name_en || entity.title_en || en.ten || en.name || en.title || '';
+}
+
 function getLVDisplayName(lvOrId) {
   const lv = typeof lvOrId === 'string' ? getLVById(lvOrId) : lvOrId;
   if(!lv) return '';
-  return getActiveLanguage() === 'en' ? (FIELD_LABELS_EN[lv.id] || lv.ten) : lv.ten;
+  return getActiveLanguage() === 'en' ? (FIELD_LABELS_EN[lv.id] || getEntityEnglishName(lv) || lv.ten) : lv.ten;
 }
 
 function getSFDisplayName(lvId, sfOrId) {
   const sf = typeof sfOrId === 'string' ? getSFById(lvId, sfOrId) : sfOrId;
   if(!sf) return '';
-  return getActiveLanguage() === 'en' ? (SUBFIELD_LABELS_EN[sf.id] || sf.ten) : sf.ten;
+  return getActiveLanguage() === 'en' ? (SUBFIELD_LABELS_EN[sf.id] || getEntityEnglishName(sf) || sf.ten) : sf.ten;
 }
 
 function isDetailOnlySubfield(sfId) {
