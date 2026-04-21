@@ -212,7 +212,7 @@ body { top: 0 !important; }
 .recent-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);}
 .recent-card-img{ width:100%;aspect-ratio:16/9; position:relative;overflow:hidden; background: var(--bg2);}
 .recent-card-body{padding:12px;}
-.recent-card-name{font-size:0.8rem;font-weight:600;color:var(--text);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.recent-card-name{font-size:0.8rem;font-weight:600;color:var(--text);line-height:1.45;display:block;overflow:visible;word-break:break-word;}
 .recent-card-type{font-size:0.7rem;color:var(--gold-rich);margin-top:6px;font-weight:500;}
 
 .read-history-list{padding:0 16px 16px;}
@@ -640,12 +640,17 @@ function preserveIndentation(html) {
 }
 
 const LAW_NUMBER_PATTERN = '\\d+(?:\\.\\d+)*[a-zA-Z]?';
-const VI_LAW_PREFIX_PATTERN = '(?:(?:(?:ti\\u1ec3u\\s*m\\u1ee5c|m\\u1ee5c|kho\\u1ea3n|\\u0111i\\u1ec3m)\\s+[0-9a-zA-Z.]+)\\s+){0,3}';
+const LAW_TOKEN_LIST_PATTERN = '[0-9a-zA-Z.]+(?:\\s*,\\s*[0-9a-zA-Z.]+)*';
+const VI_LAW_POINT_PATTERN = `(?:ti\\u1ec3u\\s*m\\u1ee5c|m\\u1ee5c|\\u0111i\\u1ec3m)\\s+${LAW_TOKEN_LIST_PATTERN}`;
+const VI_LAW_CLAUSE_PATTERN = `kho\\u1ea3n\\s+${LAW_TOKEN_LIST_PATTERN}`;
+const VI_LAW_PREFIX_PATTERN = `(?:(?:${VI_LAW_POINT_PATTERN}\\s+)?(?:${VI_LAW_CLAUSE_PATTERN}\\s+)?)`;
 const VI_LAW_ARTICLE_PATTERN = `\\u0111i\\u1ec1u\\s+${LAW_NUMBER_PATTERN}`;
 const VI_LAW_SOURCE_PATTERN = '(?:\\s+(?:c\\u1ee7a\\s+)?(?:b\\u1ed9\\s+lu\\u1eadt|lu\\u1eadt)\\s+[^,.;:\\n<]{1,90}(?:\\s+n\\u0103m\\s+\\d{4})?)?';
 const VI_LAW_REF_PATTERN = `${VI_LAW_PREFIX_PATTERN}${VI_LAW_ARTICLE_PATTERN}`;
 const VI_LAW_FULL_PATTERN = `${VI_LAW_REF_PATTERN}${VI_LAW_SOURCE_PATTERN}`;
-const EN_LAW_PREFIX_PATTERN = '(?:(?:(?:Subsection|Section|Clause|Point)\\s+[0-9a-zA-Z.]+(?:\\s*,)?)\\s+){0,3}';
+const EN_LAW_POINT_PATTERN = `Point\\s+${LAW_TOKEN_LIST_PATTERN}`;
+const EN_LAW_CLAUSE_PATTERN = `(?:Subsection|Section|Clause)\\s+${LAW_TOKEN_LIST_PATTERN}`;
+const EN_LAW_PREFIX_PATTERN = `(?:(?:${EN_LAW_POINT_PATTERN}\\s+)?(?:${EN_LAW_CLAUSE_PATTERN}\\s+)?)`;
 const EN_LAW_ARTICLE_PATTERN = `Article\\s+${LAW_NUMBER_PATTERN}`;
 const EN_LAW_SOURCE_PATTERN = '(?:\\s+(?:of\\s+)?(?:the\\s+)?(?:(?:Civil|Criminal|Labor|Land|Enterprise|Commercial|Administrative)\\s+(?:Code|Law)|Law\\s+on\\s+[^,.;:\\n<]{1,90})(?:\\s+\\d{4})?)?';
 const EN_LAW_REF_PATTERN = `${EN_LAW_PREFIX_PATTERN}${EN_LAW_ARTICLE_PATTERN}`;
@@ -671,11 +676,43 @@ function getLawArticleNumber(lawText) {
   return enMatch ? enMatch[1].toLowerCase() : null;
 }
 
+function normalizeLawTokenList(text) {
+  return removeAccents(String(text || '')).replace(/[^a-z0-9.,]/g, ' ').replace(/\s*,\s*/g, ',').replace(/\s+/g, ' ').trim().replace(/\s/g, '');
+}
+
+function getLawReferenceDetails(lawText) {
+  const cleanText = cleanInlineText(lawText);
+  const normalizedText = normalizeLawLookupText(cleanText);
+  const asciiText = removeAccents(cleanText);
+  const articleNum = getLawArticleNumber(cleanText);
+  const viPointMatch = asciiText.match(/\b(?:tieu\s*muc|muc|diem)\s+([0-9a-z0-9.]+(?:\s*,\s*[0-9a-z0-9.]+)*)/i);
+  const viClauseMatch = asciiText.match(/\bkhoan\s+([0-9a-z0-9.]+(?:\s*,\s*[0-9a-z0-9.]+)*)/i);
+  const enPointMatch = cleanText.match(/\bPoint\s+([0-9a-zA-Z.]+(?:\s*,\s*[0-9a-zA-Z.]+)*)/i);
+  const enClauseMatch = cleanText.match(/\b(?:Clause|Section|Subsection)\s+([0-9a-zA-Z.]+(?:\s*,\s*[0-9a-zA-Z.]+)*)/i);
+
+  let prefix = 'law-';
+  if(normalizedText.includes('bộ luật dân sự') || normalizedText.includes('blds') || normalizedText.includes('civil code')) prefix = 'blds-';
+  else if(normalizedText.includes('đất đai') || normalizedText.includes('land law')) prefix = 'ldd-';
+  else if(normalizedText.includes('hình sự') || normalizedText.includes('blhs') || normalizedText.includes('criminal code')) prefix = 'blhs-';
+
+  return {
+    articleNum: articleNum,
+    pointToken: normalizeLawTokenList((viPointMatch && viPointMatch[1]) || (enPointMatch && enPointMatch[1]) || ''),
+    clauseToken: normalizeLawTokenList((viClauseMatch && viClauseMatch[1]) || (enClauseMatch && enClauseMatch[1]) || ''),
+    lawPrefix: prefix
+  };
+}
+
+function hasSpecificLawQualifier(lawText) {
+  const details = getLawReferenceDetails(lawText);
+  return !!(details.pointToken || details.clauseToken);
+}
+
 function extractAllLawsFromText(text) {
   if(!text) return [];
   const regexStr = new RegExp(VI_LAW_FULL_PATTERN, 'gi');
   const matches = text.match(regexStr) || [];
-  return [...new Set(matches.map(cleanInlineText).filter(Boolean))];
+  return [...new Set(matches.flatMap(expandVietnameseLawMatch).map(cleanInlineText).filter(Boolean))];
 }
 
 function extractEnglishLawsFromText(text) {
@@ -685,37 +722,54 @@ function extractEnglishLawsFromText(text) {
   return [...new Set(matches.map(cleanInlineText).filter(Boolean))];
 }
 
+function expandVietnameseLawMatch(matchText) {
+  const text = cleanInlineText(matchText);
+  if(!text) return [];
+  const details = getLawReferenceDetails(text);
+  const clauseTokens = details.clauseToken ? details.clauseToken.split(',').filter(Boolean) : [];
+  if(clauseTokens.length <= 1) return [text];
+  const articleMatch = text.match(new RegExp(`${VI_LAW_ARTICLE_PATTERN}${VI_LAW_SOURCE_PATTERN}`, 'i'));
+  const articleText = articleMatch ? cleanInlineText(articleMatch[0]) : text;
+  const pointMatch = text.match(new RegExp(VI_LAW_POINT_PATTERN, 'i'));
+  const pointText = pointMatch ? cleanInlineText(pointMatch[0]) : '';
+  const expanded = [];
+  expanded.push(pointText ? `${pointText} khoản ${clauseTokens[0]} ${articleText}` : `khoản ${clauseTokens[0]} ${articleText}`);
+  clauseTokens.slice(1).forEach(token => expanded.push(`khoản ${token} ${articleText}`));
+  return expanded;
+}
+
 function getLawKeyFromText(lawText) {
-  const num = getLawArticleNumber(lawText);
-  if(!num) return null;
-  let prefix = 'law-';
-  const normalizedLawText = normalizeLawLookupText(lawText);
-  if(normalizedLawText.includes('bộ luật dân sự') || normalizedLawText.includes('blds') || normalizedLawText.includes('civil code')) prefix = 'blds-';
-  else if(normalizedLawText.includes('đất đai') || normalizedLawText.includes('land law')) prefix = 'ldd-';
-  else if(normalizedLawText.includes('hình sự') || normalizedLawText.includes('blhs') || normalizedLawText.includes('criminal code')) prefix = 'blhs-';
-  return prefix + num;
+  const details = getLawReferenceDetails(lawText);
+  if(!details.articleNum) return null;
+  const baseKey = `${details.lawPrefix}${details.articleNum}`;
+  if(!details.pointToken && !details.clauseToken) return baseKey;
+  return [baseKey, details.clauseToken ? `clause-${details.clauseToken}` : '', details.pointToken ? `point-${details.pointToken}` : ''].filter(Boolean).join(':');
 }
 
 function getLawReferenceVariants(lawName) {
   const text = cleanInlineText(lawName);
   if(!text) return [];
+  const details = getLawReferenceDetails(text);
   const variants = [text];
   const viMatch = text.match(new RegExp(VI_LAW_REF_PATTERN, 'i'));
   if(viMatch) {
     variants.push(cleanInlineText(viMatch[0]));
-    const viArticle = viMatch[0].match(new RegExp(VI_LAW_ARTICLE_PATTERN, 'i'));
-    if(viArticle) variants.push(cleanInlineText(viArticle[0]));
+    if(!hasSpecificLawQualifier(viMatch[0])) {
+      const viArticle = viMatch[0].match(new RegExp(VI_LAW_ARTICLE_PATTERN, 'i'));
+      if(viArticle) variants.push(cleanInlineText(viArticle[0]));
+    }
   }
   const enMatch = text.match(new RegExp(EN_LAW_REF_PATTERN, 'i'));
   if(enMatch) {
     variants.push(cleanInlineText(enMatch[0]));
-    const enArticle = enMatch[0].match(new RegExp(EN_LAW_ARTICLE_PATTERN, 'i'));
-    if(enArticle) variants.push(cleanInlineText(enArticle[0]));
+    if(!hasSpecificLawQualifier(enMatch[0])) {
+      const enArticle = enMatch[0].match(new RegExp(EN_LAW_ARTICLE_PATTERN, 'i'));
+      if(enArticle) variants.push(cleanInlineText(enArticle[0]));
+    }
   }
-  const num = getLawArticleNumber(text);
-  if(num) {
-    variants.push(`Điều ${num}`);
-    variants.push(`Article ${num}`);
+  if(details.articleNum && !details.pointToken && !details.clauseToken) {
+    variants.push(`Điều ${details.articleNum}`);
+    variants.push(`Article ${details.articleNum}`);
   }
   return [...new Set(variants.filter(v => v && v.length >= 3))].sort((a, b) => b.length - a.length);
 }
@@ -765,7 +819,8 @@ function autoLinkLaws(htmlText) {
 function findLawInList(laws, lawName) {
   if(!Array.isArray(laws)) return null;
   const target = normalizeLawLookupText(lawName);
-  const targetNum = getLawArticleNumber(lawName);
+  const targetDetails = getLawReferenceDetails(lawName);
+  const targetNum = targetDetails.articleNum;
   const targetKey = getLawKeyFromText(lawName);
   const targetVariants = getLawReferenceVariants(lawName).map(normalizeLawLookupText);
 
@@ -774,12 +829,14 @@ function findLawInList(laws, lawName) {
     return lawTexts.some(lawText => {
       const name = normalizeLawLookupText(lawText);
       if(!name) return false;
-      const lawNum = getLawArticleNumber(lawText);
+      const lawDetails = getLawReferenceDetails(lawText);
+      const lawNum = lawDetails.articleNum;
       if(targetNum && lawNum && targetNum !== lawNum) return false;
-      if(name === target) return true;
-      if(name.length > 8 && target.length > 8 && (target.includes(name) || name.includes(target))) return true;
       const lawKey = getLawKeyFromText(lawText);
       if(targetKey && lawKey && targetKey === lawKey) return true;
+      if((targetDetails.pointToken || targetDetails.clauseToken || lawDetails.pointToken || lawDetails.clauseToken) && targetNum && lawNum) return false;
+      if(name === target) return true;
+      if(name.length > 8 && target.length > 8 && (target.includes(name) || name.includes(target))) return true;
       const lawVariants = getLawReferenceVariants(lawText).map(normalizeLawLookupText);
       return lawVariants.some(v => targetVariants.includes(v) || target.includes(v)) || targetVariants.some(v => name.includes(v));
     });
@@ -1340,9 +1397,10 @@ function renderHome(){
 
   const recGrid = document.getElementById('recent-grid');
   if(recGrid) {
-    recGrid.innerHTML = RECENT_UPDATES.slice(0, 6).map((r,i)=>{
-      const lv = getLVById(r.lvId); const imgUrl = RECENT_THUMBS[i % RECENT_THUMBS.length]; const isNew = i === 0 || i === 1;
-      const found = findCaseById(r.id); const displayTitle = found ? getCaseFieldText(found.cas, 'ten') : r.ten;
+    const recentItems = getRenderableRecentItems(5);
+    recGrid.innerHTML = recentItems.map((r,i)=>{
+      const lv = r.lv || getLVById(r.lvId); const imgUrl = RECENT_THUMBS[i % RECENT_THUMBS.length]; const isNew = i === 0 || i === 1;
+      const displayTitle = r.displayTitle;
       return `
         <div class="recent-card" onclick="goDetail('${r.lvId}','${r.sfId}','${r.id}')">
           <div class="recent-card-img"><img src="${imgUrl}" alt="${lv?getLVDisplayName(lv):''}" loading="lazy"></div>
@@ -1355,11 +1413,23 @@ function renderHome(){
   renderReadHistory(); renderDesktopRecent(); applyStaticTranslations();
 }
 
+function getRenderableRecentItems(limit = 5){
+  const seen = new Set();
+  return RECENT_UPDATES.map(item => {
+    if(!item || !item.id || seen.has(item.id)) return null;
+    const found = findCaseById(item.id);
+    const displayTitle = found ? getCaseFieldText(found.cas, 'ten') : cleanInlineText(item.ten || '');
+    if(!displayTitle) return null;
+    seen.add(item.id);
+    return { ...item, found, displayTitle, lv: getLVById(item.lvId) };
+  }).filter(Boolean).slice(0, limit);
+}
+
 function renderDesktopRecent(){
   const container = document.getElementById('desktop-recent-list'); if(!container) return;
-  container.innerHTML = RECENT_UPDATES.slice(0, 8).map((r,i)=>{
-    const lv = getLVById(r.lvId); const isNew = i === 0 || i === 1;
-    const found = findCaseById(r.id); const displayTitle = found ? getCaseFieldText(found.cas, 'ten') : r.ten;
+  container.innerHTML = getRenderableRecentItems(5).map((r,i)=>{
+    const lv = r.lv || getLVById(r.lvId); const isNew = i === 0 || i === 1;
+    const displayTitle = r.displayTitle;
     return `
       <div class="dt-recent-item" onclick="goDetail('${r.lvId}','${r.sfId}','${r.id}')">
         <div class="dt-recent-lv">${lv?lv.icon:''} ${lv?getLVDisplayName(lv):''} ${isNew?`<span class="new-badge" style="margin-left:auto">${t('newBadge')}</span>`:''}</div>
