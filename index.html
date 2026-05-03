@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Đấu Chiến Thắng Luật - Kho tra cứu bản án, án lệ và tranh chấp pháp lý hàng đầu Việt Nam.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta property="og:site_name" content="Đấu Chiến Thắng Luật.com">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Đấu Chiến Thắng Luật.com">
+<meta property="og:description" content="Đấu Chiến Thắng Luật - Kho tra cứu bản án, án lệ và tranh chấp pháp lý hàng đầu Việt Nam.">
+<meta name="twitter:card" content="summary_large_image">
 <title>Đấu Chiến Thắng Luật.com</title>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -226,6 +232,7 @@ body { top: 0 !important; }
 
 .page-header{ padding:16px 16px 20px; border-bottom:1px solid rgba(0,0,0,0.05);margin-bottom:16px; background: var(--surface); }
 .page-breadcrumb{ font-size:0.75rem;color:var(--text-muted);margin-bottom:10px; display:flex;align-items:center;gap:6px;flex-wrap:wrap; }
+a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-name, a.read-more-btn, a.bc-link{color:inherit;text-decoration:none;}
 .bc-link{cursor:pointer;color:var(--navy);font-weight:500;transition:color 0.2s;}
 .bc-link:hover{color:var(--gold-rich);}
 .bc-sep{color:#D1D1D1; font-size: 0.8rem;}
@@ -245,7 +252,7 @@ body { top: 0 !important; }
 .case-item:hover{border-color: var(--gold-rich); box-shadow: var(--shadow-sm);}
 .case-item-header{ display:flex;align-items:flex-start;justify-content:space-between; padding:16px;cursor:pointer; gap: 12px;}
 .case-item-left{flex:1;min-width:0;}
-.case-name{ font-size:0.9rem;font-weight:600;color:var(--navy);line-height:1.5; margin-bottom: 6px; transition: color 0.2s; overflow-wrap:anywhere;}
+.case-name{ display:block; font-size:0.9rem;font-weight:600;color:var(--navy);line-height:1.5; margin-bottom: 6px; transition: color 0.2s; overflow-wrap:anywhere;}
 .case-name:hover{color:var(--gold-rich);}
 .case-stars{display:flex;gap:2px; font-size: 0.8rem; color: #F5A623;}
 .case-expand-btn{ width:28px;height:28px;flex-shrink:0;border:none;cursor:pointer; background:var(--bg2);border-radius:6px;color:var(--navy); display:flex;align-items:center;justify-content:center;font-size:0.9rem; transition:all 0.2s;}
@@ -266,6 +273,12 @@ body { top: 0 !important; }
 .case-desc.open{display:block;}
 .read-more-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: transparent; border: 1px solid var(--navy); color: var(--navy); border-radius: 6px; font-size: 0.8rem; font-weight: 500; cursor: pointer; transition: all 0.2s; margin-top: 10px;}
 .read-more-btn:hover { background: var(--navy); color: #fff; }
+.seo-link-index{padding:0 16px 36px;font-size:0.78rem;color:var(--text-muted);}
+.seo-link-index details{border-top:1px solid var(--gold-border);padding-top:14px;}
+.seo-link-index summary{cursor:pointer;font-weight:700;color:var(--navy);}
+.seo-link-index-list{display:grid;gap:8px;margin-top:12px;}
+.seo-link-index a{color:var(--text-sec);text-decoration:none;line-height:1.45;}
+.seo-link-index a:hover{color:var(--gold-rich);}
 
 #pagination-bar{ position:fixed;bottom:0;left:50%;transform:translateX(-50%); width:100%;max-width:560px; background:linear-gradient(0deg,var(--surface) 70%,transparent 100%); padding:16px 16px 24px; display:none;justify-content:center;align-items:center;gap:16px;z-index:50; }
 #pagination-bar.visible{display:flex;}
@@ -394,11 +407,12 @@ body { top: 0 !important; }
       
       <div class="section-title">Tài liệu bạn đã xem</div>
       <div id="read-history-container"></div>
+      <div id="seo-link-index" class="seo-link-index"></div>
     </div>
 
     <div id="page-smart-search" class="page">
       <div class="page-header">
-        <div class="page-breadcrumb"><span class="bc-link" onclick="goHome()">Trang chủ</span><span class="bc-sep">/</span><span>Tra cứu thông minh</span></div>
+        <div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHome()">Trang chủ</a><span class="bc-sep">/</span><span>Tra cứu thông minh</span></div>
         <div class="page-title">Tra cứu theo tình huống</div>
       </div>
       <div style="padding: 0 24px 24px;">
@@ -420,13 +434,13 @@ body { top: 0 !important; }
     </div>
 
     <div id="page-subfields" class="page">
-      <div class="page-header"><div class="page-breadcrumb"><span class="bc-link" onclick="goHome()">Trang chủ</span><span class="bc-sep">/</span><span id="sf-breadcrumb-cur"></span></div><div class="page-title" id="sf-title"></div></div>
+      <div class="page-header"><div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHome()">Trang chủ</a><span class="bc-sep">/</span><span id="sf-breadcrumb-cur"></span></div><div class="page-title" id="sf-title"></div></div>
       <div class="subfield-list" id="subfield-list"></div>
     </div>
 
     <div id="page-cases" class="page">
       <div class="page-header">
-        <div class="page-breadcrumb"><span class="bc-link" onclick="goHome()">Trang chủ</span><span class="bc-sep" id="cases-sep-1">/</span><span class="bc-link" id="cases-bc-lv" onclick="goSubfields()"></span><span class="bc-sep" id="cases-sep-2">/</span><span id="cases-bc-sf"></span></div>
+        <div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHome()">Trang chủ</a><span class="bc-sep" id="cases-sep-1">/</span><a class="bc-link" id="cases-bc-lv" href="./" onclick="event.preventDefault(); goSubfields()"></a><span class="bc-sep" id="cases-sep-2">/</span><span id="cases-bc-sf"></span></div>
         <div class="page-title" id="cases-title"></div>
         <div id="cases-admin-toolbar" class="cases-admin-toolbar"></div>
       </div>
@@ -435,7 +449,7 @@ body { top: 0 !important; }
 
     <div id="page-detail" class="page">
       <div class="page-header" style="border-bottom: none; padding-bottom: 12px; margin-bottom: 0;">
-        <div class="page-breadcrumb"><span class="bc-link" onclick="goHome()">Trang chủ</span><span class="bc-sep">/</span><span class="bc-link" id="det-bc-lv" onclick="goSubfields()"></span><span class="bc-sep">/</span><span class="bc-link" id="det-bc-sf" onclick="goCasesList()"></span><span class="bc-sep">/</span><span>Chi tiết</span></div>
+        <div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHome()">Trang chủ</a><span class="bc-sep">/</span><a class="bc-link" id="det-bc-lv" href="./" onclick="event.preventDefault(); goSubfields()"></a><span class="bc-sep">/</span><a class="bc-link" id="det-bc-sf" href="./" onclick="event.preventDefault(); goCasesList()"></a><span class="bc-sep">/</span><span>Chi tiết</span></div>
       </div>
       <div id="case-hero" class="case-hero"></div>
       <div class="case-detail-header-info">
@@ -1156,7 +1170,7 @@ function applyStaticTranslations() {
   const filterBtn = document.querySelector('.filter-next-btn button');
   const sidePanelTitle = document.querySelector('.side-panel-title');
   const detailBreadcrumb = document.querySelector('#page-detail .page-breadcrumb span:last-child');
-  document.querySelectorAll('.bc-link[onclick="goHome()"]').forEach(el => { el.textContent = t('sidebarHome'); });
+  document.querySelectorAll('.bc-home-link').forEach(el => { el.textContent = t('sidebarHome'); });
   const smartTitle = document.querySelector('#page-smart-search .page-title');
   const smartBreadcrumb = document.querySelector('#page-smart-search .page-breadcrumb span:last-child');
   const smartButton = document.querySelector('#page-smart-search .smart-search-wrapper button');
@@ -1392,6 +1406,270 @@ function getSFById(lvId, sfId){ const lv = getLVById(lvId); return lv ? lv.subfi
 function getCaseBucketKey(lvId, sfId){ return `${lvId}::${sfId}`; }
 function getCasesForSF(lvId, sfId){ return CASES_DATA[getCaseBucketKey(lvId, sfId)] || []; }
 
+const DEFAULT_PAGE_TITLE = document.title || 'Đấu Chiến Thắng Luật.com';
+const DEFAULT_META_DESCRIPTION = (document.querySelector('meta[name="description"]') || {}).content || '';
+let isApplyingRouteFromUrl = false;
+
+function getRouteSearch(route = {}) {
+  const params = new URLSearchParams();
+  const view = route.view || 'home';
+  if(view && view !== 'home') params.set('view', view);
+  if(route.lv) params.set('lv', route.lv);
+  if(route.sf) params.set('sf', route.sf);
+  if(route.caseId) params.set('case', route.caseId);
+  if(route.q) params.set('q', route.q);
+  const page = parseInt(route.page, 10);
+  if(Number.isFinite(page) && page > 1) params.set('page', String(page));
+  return params.toString();
+}
+
+function routeHref(route = {}) {
+  const path = window.location.pathname || '/';
+  const search = getRouteSearch(route);
+  return search ? `${path}?${search}` : path;
+}
+
+function canonicalHref(route = {}) {
+  const url = new URL(window.location.href);
+  url.search = getRouteSearch(route);
+  url.hash = '';
+  return url.href;
+}
+
+function updateRoute(route = {}, options = {}) {
+  updateBreadcrumbHrefs();
+  updateSeoForRoute(route);
+  if(isApplyingRouteFromUrl) return;
+  const target = routeHref(route);
+  const current = `${window.location.pathname}${window.location.search}`;
+  if(target === current) return;
+  try {
+    window.history[options.replace ? 'replaceState' : 'pushState']({ route }, '', target);
+  } catch(e) {}
+}
+
+function parseRouteFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const route = {
+    view: params.get('view') || '',
+    lv: params.get('lv') || '',
+    sf: params.get('sf') || '',
+    caseId: params.get('case') || params.get('id') || '',
+    q: params.get('q') || params.get('query') || '',
+    page: Math.max(1, parseInt(params.get('page'), 10) || 1)
+  };
+  if(!route.view) {
+    if(route.caseId) route.view = 'detail';
+    else if(route.q) route.view = 'search';
+    else if(route.lv && route.sf) route.view = 'list';
+    else if(route.lv) route.view = 'field';
+    else route.view = 'home';
+  }
+  return route;
+}
+
+function updateBreadcrumbHrefs() {
+  document.querySelectorAll('.bc-home-link').forEach(el => el.setAttribute('href', routeHref({ view: 'home' })));
+  const casesLv = document.getElementById('cases-bc-lv');
+  const detailLv = document.getElementById('det-bc-lv');
+  const detailSf = document.getElementById('det-bc-sf');
+  if(state.curLV) {
+    const fieldUrl = routeHref({ view: 'field', lv: state.curLV.id });
+    if(casesLv) casesLv.setAttribute('href', fieldUrl);
+    if(detailLv) detailLv.setAttribute('href', fieldUrl);
+  }
+  if(state.curLV && state.curSF && detailSf) {
+    detailSf.setAttribute('href', routeHref({ view: 'list', lv: state.curLV.id, sf: state.curSF.id }));
+  }
+}
+
+function cleanSeoText(value, maxLength = 165) {
+  const text = cleanInlineText(value).replace(/\s+/g, ' ').trim();
+  if(text.length <= maxLength) return text;
+  return `${text.slice(0, maxLength - 3).replace(/\s+\S*$/, '').trim()}...`;
+}
+
+function ensureMeta(selector, createTag) {
+  let el = document.querySelector(selector);
+  if(!el) {
+    el = createTag();
+    document.head.appendChild(el);
+  }
+  return el;
+}
+
+function setMetaValue(selector, attrName, attrValue, content) {
+  const el = ensureMeta(selector, () => {
+    const meta = document.createElement('meta');
+    meta.setAttribute(attrName, attrValue);
+    return meta;
+  });
+  el.setAttribute('content', content || '');
+}
+
+function setStructuredData(payload) {
+  let script = document.getElementById('seo-structured-data');
+  if(!script) {
+    script = document.createElement('script');
+    script.id = 'seo-structured-data';
+    script.type = 'application/ld+json';
+    document.head.appendChild(script);
+  }
+  script.textContent = JSON.stringify(payload);
+}
+
+function makeBreadcrumbSchema(items) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: canonicalHref(item.route)
+    }))
+  };
+}
+
+function getBreadcrumbItemsForRoute(route) {
+  const items = [{ name: t('sidebarHome') || 'Trang chủ', route: { view: 'home' } }];
+  const lv = route.lv ? getLVById(route.lv) : (state.curLV || null);
+  const sf = lv && route.sf ? getSFById(lv.id, route.sf) : (state.curSF || null);
+  if(route.view === 'smart') items.push({ name: t('smartSearch'), route: { view: 'smart' } });
+  if(route.view === 'search') items.push({ name: t('searchTitle'), route: { view: 'search', q: route.q || '', page: route.page || 1 } });
+  if(lv && ['field', 'list', 'detail'].includes(route.view)) items.push({ name: getLVDisplayName(lv), route: { view: 'field', lv: lv.id } });
+  if(lv && sf && ['list', 'detail'].includes(route.view)) items.push({ name: getSFDisplayName(lv.id, sf), route: { view: 'list', lv: lv.id, sf: sf.id, page: route.page || 1 } });
+  if(route.view === 'detail' && route.caseId) {
+    const found = findCaseById(route.caseId);
+    if(found) items.push({ name: getCompactDisplayText(getCaseFieldText(found.cas, 'ten'), 90), route: { view: 'detail', lv: found.lvId, sf: found.sfId, caseId: found.cas.id } });
+  }
+  return items;
+}
+
+function updateSeoForRoute(route = { view: 'home' }) {
+  const normalizedRoute = { view: route.view || 'home', lv: route.lv || '', sf: route.sf || '', caseId: route.caseId || '', q: route.q || '', page: route.page || 1 };
+  let title = DEFAULT_PAGE_TITLE;
+  let description = DEFAULT_META_DESCRIPTION;
+  let ogType = 'website';
+  let robots = 'index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1';
+  const schemas = [{
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: DEFAULT_PAGE_TITLE,
+    url: canonicalHref({ view: 'home' }),
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${canonicalHref({ view: 'search' })}&q={search_term_string}`.replace('?&', '?'),
+      'query-input': 'required name=search_term_string'
+    }
+  }];
+
+  const lv = normalizedRoute.lv ? getLVById(normalizedRoute.lv) : state.curLV;
+  const sf = lv && normalizedRoute.sf ? getSFById(lv.id, normalizedRoute.sf) : state.curSF;
+
+  if(normalizedRoute.view === 'smart') {
+    title = `${t('smartSearch')} | ${DEFAULT_PAGE_TITLE}`;
+    description = cleanSeoText(t('guide1') || DEFAULT_META_DESCRIPTION);
+  } else if(normalizedRoute.view === 'search') {
+    title = `${t('searchTitle')}: ${normalizedRoute.q || ''} | ${DEFAULT_PAGE_TITLE}`;
+    description = cleanSeoText(`Kết quả tra cứu tình huống pháp lý: ${normalizedRoute.q || ''}`);
+    robots = 'noindex,follow';
+  } else if(normalizedRoute.view === 'field' && lv) {
+    title = `${getLVDisplayName(lv)} | ${DEFAULT_PAGE_TITLE}`;
+    description = cleanSeoText(`Tra cứu tài liệu, án lệ, bản án và tranh chấp pháp lý thuộc lĩnh vực ${getLVDisplayName(lv)}.`);
+  } else if(normalizedRoute.view === 'list' && lv && sf) {
+    title = `${getSFDisplayName(lv.id, sf)} - ${getLVDisplayName(lv)} | ${DEFAULT_PAGE_TITLE}`;
+    description = cleanSeoText(`Danh sách ${getSFDisplayName(lv.id, sf)} trong lĩnh vực ${getLVDisplayName(lv)}.`);
+  } else if(normalizedRoute.view === 'detail' && normalizedRoute.caseId) {
+    const found = findCaseById(normalizedRoute.caseId);
+    if(found) {
+      const cas = found.cas;
+      const caseTitle = getPrimaryTextLine(getCaseFieldText(cas, 'ten'));
+      title = `${caseTitle} | ${DEFAULT_PAGE_TITLE}`;
+      description = cleanSeoText(getCaseFieldText(cas, 'mo_ta') || getCaseFieldText(cas, 'ap_dung') || getCaseFieldText(cas, 'tom_luoc') || getCaseFieldText(cas, 'chi_tiet') || DEFAULT_META_DESCRIPTION);
+      ogType = 'article';
+      schemas.push({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: caseTitle,
+        description,
+        url: canonicalHref({ view: 'detail', lv: found.lvId, sf: found.sfId, caseId: cas.id }),
+        inLanguage: getActiveLanguage() === 'en' ? 'en' : 'vi',
+        datePublished: cas.ngay || cas.importedAt || undefined,
+        dateModified: cas.updatedAt || cas.importedAt || cas.ngay || undefined,
+        articleSection: [getLVDisplayName(found.lvId), getSFDisplayName(found.lvId, found.sfId)].filter(Boolean).join(' / '),
+        isPartOf: { '@type': 'WebSite', name: DEFAULT_PAGE_TITLE, url: canonicalHref({ view: 'home' }) }
+      });
+    }
+  }
+
+  const canonical = canonicalHref(normalizedRoute);
+  document.title = title;
+  setMetaValue('meta[name="description"]', 'name', 'description', description);
+  setMetaValue('meta[name="robots"]', 'name', 'robots', robots);
+  setMetaValue('meta[property="og:title"]', 'property', 'og:title', title);
+  setMetaValue('meta[property="og:description"]', 'property', 'og:description', description);
+  setMetaValue('meta[property="og:type"]', 'property', 'og:type', ogType);
+  setMetaValue('meta[property="og:url"]', 'property', 'og:url', canonical);
+  setMetaValue('meta[name="twitter:title"]', 'name', 'twitter:title', title);
+  setMetaValue('meta[name="twitter:description"]', 'name', 'twitter:description', description);
+  const canonicalEl = ensureMeta('link[rel="canonical"]', () => {
+    const link = document.createElement('link');
+    link.rel = 'canonical';
+    return link;
+  });
+  canonicalEl.href = canonical;
+
+  const breadcrumbs = getBreadcrumbItemsForRoute(normalizedRoute);
+  if(breadcrumbs.length > 1) schemas.push(makeBreadcrumbSchema(breadcrumbs));
+  setStructuredData(schemas.length === 1 ? schemas[0] : schemas);
+}
+
+function renderSeoLinkIndex() {
+  const container = document.getElementById('seo-link-index');
+  if(!container) return;
+  const links = [];
+  LINH_VUC_LUAT.forEach(lv => {
+    links.push(`<a href="${escapeHtmlText(routeHref({ view: 'field', lv: lv.id }))}">${escapeHtmlText(getLVDisplayName(lv))}</a>`);
+    (lv.subfields || []).forEach(sf => {
+      links.push(`<a href="${escapeHtmlText(routeHref({ view: 'list', lv: lv.id, sf: sf.id }))}">${escapeHtmlText(getSFDisplayName(lv.id, sf))} - ${escapeHtmlText(getLVDisplayName(lv))}</a>`);
+    });
+  });
+  Object.keys(CASES_DATA).forEach(bucketKey => {
+    (CASES_DATA[bucketKey] || []).forEach(cas => {
+      const title = getCompactDisplayText(getCaseFieldText(cas, 'ten'), 140);
+      links.push(`<a href="${escapeHtmlText(routeHref({ view: 'detail', lv: cas.lvId, sf: cas.sfId, caseId: cas.id }))}">${escapeHtmlText(title)}</a>`);
+    });
+  });
+  container.innerHTML = links.length ? `<details><summary>Danh mục tài liệu</summary><div class="seo-link-index-list">${links.join('')}</div></details>` : '';
+}
+
+function applyRouteFromUrl() {
+  const route = parseRouteFromUrl();
+  isApplyingRouteFromUrl = true;
+  try {
+    if(route.view === 'detail' && route.caseId && findCaseById(route.caseId)) {
+      goDetail(route.lv || null, route.sf || null, route.caseId);
+    } else if(route.view === 'list' && route.lv && route.sf && getSFById(route.lv, route.sf)) {
+      goCasesList(route.lv, route.sf);
+      state.curPage = route.page;
+      renderCasesList();
+    } else if(route.view === 'field' && route.lv && getLVById(route.lv)) {
+      goSubfields(route.lv);
+    } else if(route.view === 'smart') {
+      goSmartSearch();
+    } else if(route.view === 'search' && route.q) {
+      showSearchResultsPage(route.q, route.page);
+    } else {
+      goHome();
+    }
+  } finally {
+    isApplyingRouteFromUrl = false;
+    updateBreadcrumbHrefs();
+    updateSeoForRoute(route);
+  }
+}
+
 function getStoredCaseOrderMap() {
   try { return JSON.parse(localStorage.getItem(CASE_ORDER_STORAGE_KEY) || '{}'); }
   catch(e) { return {}; }
@@ -1469,18 +1747,18 @@ function renderHome(){
   const grid = document.getElementById('linh-vuc-grid');
   if(grid) {
     const searchCard = `
-      <div class="lv-card" onclick="showPage('page-smart-search')" style="border-color: var(--navy); background: var(--surface2);">
+      <a class="lv-card" href="${escapeHtmlText(routeHref({ view: 'smart' }))}" onclick="event.preventDefault(); goSmartSearch()" style="border-color: var(--navy); background: var(--surface2);">
         <div class="lv-card-icon"><i class="ph ph-magnifying-glass"></i></div>
         <div class="lv-card-title">${t('smartSearch')}</div>
         <div class="lv-card-count">${t('smartSearchShort')}</div>
-      </div>
+      </a>
     `;
     grid.innerHTML = searchCard + LINH_VUC_LUAT.map(lv=>`
-      <div class="lv-card" onclick="goSubfields('${lv.id}')">
+      <a class="lv-card" href="${escapeHtmlText(routeHref({ view: 'field', lv: lv.id }))}" onclick="event.preventDefault(); goSubfields('${lv.id}')">
         <div class="lv-card-icon">${lv.icon}</div>
         <div class="lv-card-title">${getLVDisplayName(lv)}</div>
         <div class="lv-card-count">${lv.totalCases} ${t('documents')}</div>
-      </div>
+      </a>
     `).join('');
   }
 
@@ -1491,15 +1769,15 @@ function renderHome(){
       const lv = r.lv || getLVById(r.lvId); const imgUrl = RECENT_THUMBS[i % RECENT_THUMBS.length]; const isNew = i === 0 || i === 1;
       const displayTitle = r.displayTitle;
       return `
-        <div class="recent-card" onclick="goDetail('${r.lvId}','${r.sfId}','${r.id}')">
+        <a class="recent-card" href="${escapeHtmlText(routeHref({ view: 'detail', lv: r.lvId, sf: r.sfId, caseId: r.id }))}" onclick="event.preventDefault(); goDetail('${r.lvId}','${r.sfId}','${r.id}')">
           <div class="recent-card-img"><img src="${imgUrl}" alt="${lv?getLVDisplayName(lv):''}" loading="lazy"></div>
           <div class="recent-card-body"><div class="recent-card-name">${displayTitle}${isNew?` <span class="new-badge">${t('newBadge')}</span>`:''}</div><div class="recent-card-type">${lv?getLVDisplayName(lv):''}</div></div>
-        </div>
+        </a>
       `;
     }).join('');
   }
 
-  renderReadHistory(); renderDesktopRecent(); applyStaticTranslations();
+  renderReadHistory(); renderDesktopRecent(); renderSeoLinkIndex(); applyStaticTranslations(); updateBreadcrumbHrefs();
 }
 
 function getRenderableRecentItems(limit = 5){
@@ -1521,10 +1799,10 @@ function renderDesktopRecent(){
     const lv = r.lv || getLVById(r.lvId); const isNew = i === 0 || i === 1;
     const displayTitle = r.displayTitle;
     return `
-      <div class="dt-recent-item" onclick="goDetail('${r.lvId}','${r.sfId}','${r.id}')">
+      <a class="dt-recent-item" href="${escapeHtmlText(routeHref({ view: 'detail', lv: r.lvId, sf: r.sfId, caseId: r.id }))}" onclick="event.preventDefault(); goDetail('${r.lvId}','${r.sfId}','${r.id}')">
         <div class="dt-recent-lv">${lv?lv.icon:''} ${lv?getLVDisplayName(lv):''} ${isNew?`<span class="new-badge" style="margin-left:auto">${t('newBadge')}</span>`:''}</div>
         <div class="dt-recent-name">${displayTitle}</div>
-      </div>
+      </a>
     `;
   }).join('');
 }
@@ -1537,10 +1815,10 @@ function renderReadHistory(){
     const found = findCaseById(h.id);
     const displayTitle = found ? getCaseFieldText(found.cas, 'ten') : h.ten;
     return `
-      <div class="rh-item" onclick="goDetail('${h.lvId}','${h.sfId}','${h.id}')">
+      <a class="rh-item" href="${escapeHtmlText(routeHref({ view: 'detail', lv: h.lvId, sf: h.sfId, caseId: h.id }))}" onclick="event.preventDefault(); goDetail('${h.lvId}','${h.sfId}','${h.id}')">
         <div class="rh-item-icon">${lv?lv.icon:''}</div>
         <div class="rh-item-info"><div class="rh-item-name">${displayTitle}</div><div class="rh-item-meta">${lv?getLVDisplayName(lv):''} · ${found ? getDisplayTypeLabel(found.cas) : getTypeLabel(h.sao)}</div></div>
-      </div>
+      </a>
     `;
   }).join('');
   container.innerHTML = `<div class="read-history-list">${html}</div>`;
@@ -1548,15 +1826,17 @@ function renderReadHistory(){
 
 function goSubfields(lvId){
   if(lvId) state.curLV = getLVById(lvId); if(!state.curLV) return;
+  state.curSF = null; state.curCase = null; state.searchQuery = '';
   document.getElementById('pagination-bar').classList.remove('visible');
   document.getElementById('sf-breadcrumb-cur').textContent = getLVDisplayName(state.curLV); document.getElementById('sf-title').textContent = getLVDisplayName(state.curLV);
   const list = document.getElementById('subfield-list');
   list.innerHTML = state.curLV.subfields.map(sf=>`
-    <div class="subfield-item" onclick="goCasesList('${state.curLV.id}','${sf.id}')">
+    <a class="subfield-item" href="${escapeHtmlText(routeHref({ view: 'list', lv: state.curLV.id, sf: sf.id }))}" onclick="event.preventDefault(); goCasesList('${state.curLV.id}','${sf.id}')">
       <div class="subfield-item-left"><div class="subfield-item-icon"><i class="ph ph-folder-open"></i></div><div><div class="subfield-item-name">${getSFDisplayName(state.curLV.id, sf)}</div><div class="subfield-item-count">${sf.soLuong} ${t('documents')}</div></div></div><div class="subfield-item-arrow"><i class="ph ph-caret-right"></i></div>
-    </div>
+    </a>
   `).join('');
   showPage('page-subfields');
+  updateRoute({ view: 'field', lv: state.curLV.id });
 }
 
 function goCasesList(lvId, sfId) {
@@ -1566,7 +1846,7 @@ function goCasesList(lvId, sfId) {
   const foundLV = getLVById(lvId); const foundSF = getSFById(lvId, sfId);
   if(!foundLV || !foundSF) return;
 
-  state.curLV = foundLV; state.curSF = foundSF; state.curPage = 1; state.searchQuery = '';
+  state.curLV = foundLV; state.curSF = foundSF; state.curCase = null; state.curPage = 1; state.searchQuery = '';
 
   document.getElementById('cases-bc-lv').style.display = 'inline';
   document.getElementById('cases-sep-1').style.display = 'inline';
@@ -1578,6 +1858,7 @@ function goCasesList(lvId, sfId) {
   renderCasesList();
   showPage('page-cases');
   document.getElementById('pagination-bar').classList.add('visible');
+  updateRoute({ view: 'list', lv: foundLV.id, sf: foundSF.id, page: state.curPage });
 }
 
 function removeAccents(str) { return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'd').toLowerCase(); }
@@ -1701,12 +1982,29 @@ function scoreCaseForQuery(caseObj, queryInfo) {
   return isValid ? { caseObj, score: score + Math.round(matchRatio * 1000) + conceptMatches * 350 + phraseMatches * 120, matched } : null;
 }
 
-function executeSmartSearchPage() {
-  const query = document.getElementById('smart-search-input-page').value.trim(); if(!query) return;
-  closeFilter(); state.searchQuery = query; state.curSF = null; state.curPage = 1;
+function goSmartSearch() {
+  state.curCase = null; state.searchQuery = '';
+  const searchInput = document.getElementById('smart-search-input-page');
+  if(searchInput) searchInput.value = '';
+  document.getElementById('pagination-bar').classList.remove('visible');
+  showPage('page-smart-search');
+  updateRoute({ view: 'smart' });
+}
+
+function showSearchResultsPage(query, page = 1) {
+  query = String(query || '').trim(); if(!query) return;
+  const searchInput = document.getElementById('smart-search-input-page');
+  if(searchInput) searchInput.value = query;
+  closeFilter(); state.searchQuery = query; state.curSF = null; state.curCase = null; state.curPage = Math.max(1, parseInt(page, 10) || 1);
   document.getElementById('cases-bc-lv').style.display = 'none'; document.getElementById('cases-sep-1').style.display = 'none'; document.getElementById('cases-sep-2').style.display = 'none';
   document.getElementById('cases-bc-sf').textContent = `${t('searchResult')}: "${query}"`; document.getElementById('cases-title').textContent = `${t('searchTitle')}: "${query}"`;
   renderCasesList(); showPage('page-cases'); document.getElementById('pagination-bar').classList.add('visible');
+  updateRoute({ view: 'search', q: query, page: state.curPage });
+}
+
+function executeSmartSearchPage() {
+  const query = document.getElementById('smart-search-input-page').value.trim(); if(!query) return;
+  showSearchResultsPage(query, 1);
 }
 
 function canReorderCurrentCases() {
@@ -1854,7 +2152,7 @@ function renderCasesList(){
       return `
       <div class="case-item ${isReorderMode && canReorderCurrentCases() ? 'reorder-active' : ''}" id="ci-${c.id}">
         <div class="case-item-header">
-          <div class="case-item-left">${starHtml}<div class="case-name" onclick="goDetail(null,null,'${c.id}')">${displayTitle}</div></div>
+          <div class="case-item-left">${starHtml}<a class="case-name" href="${escapeHtmlText(routeHref({ view: 'detail', lv: c.lvId, sf: c.sfId, caseId: c.id }))}" onclick="event.preventDefault(); goDetail(null,null,'${c.id}')">${displayTitle}</a></div>
           <div style="display:flex; gap:6px;">
             ${reorderControls}
             ${isAdminMode ? `<button class="case-expand-btn" onclick="editCase('${c.id}')" title="Chỉnh sửa"><i class="ph ph-pencil-simple"></i></button><button class="case-expand-btn case-delete-btn" onclick="deleteCase('${c.id}')" title="Xóa vụ án"><i class="ph ph-trash"></i></button>` : ''}
@@ -1863,7 +2161,7 @@ function renderCasesList(){
         </div>
         <div class="case-desc" id="cd-${c.id}">
           <p style="white-space: pre-wrap; margin:0;">${displayDesc || (getActiveLanguage() === 'en' ? '(No short summary yet)' : '(Chưa có mô tả ngắn)')}</p>
-          <button class="read-more-btn" onclick="goDetail(null,null,'${c.id}')">${t('readMore')} <i class="ph ph-arrow-right"></i></button>
+          <a class="read-more-btn" href="${escapeHtmlText(routeHref({ view: 'detail', lv: c.lvId, sf: c.sfId, caseId: c.id }))}" onclick="event.preventDefault(); goDetail(null,null,'${c.id}')">${t('readMore')} <i class="ph ph-arrow-right"></i></a>
         </div>
       </div>
     `}).join('');
@@ -1873,7 +2171,13 @@ function renderCasesList(){
 }
 
 function toggleCase(id, btn){ const desc = document.getElementById('cd-'+id); if(!desc) return; const open = desc.classList.toggle('open'); btn.classList.toggle('expanded', open); }
-function changePage(dir){ state.curPage += dir; renderCasesList(); window.scrollTo(0,0); }
+function changePage(dir){
+  state.curPage += dir;
+  renderCasesList();
+  window.scrollTo(0,0);
+  if(state.searchQuery) updateRoute({ view: 'search', q: state.searchQuery, page: state.curPage });
+  else if(state.curLV && state.curSF) updateRoute({ view: 'list', lv: state.curLV.id, sf: state.curSF.id, page: state.curPage });
+}
 
 function findCaseById(id){
   for(const bucketKey in CASES_DATA){
@@ -1901,6 +2205,7 @@ function goDetail(lvId, sfId, caseId){
 
   document.getElementById('det-bc-lv').textContent = state.curLV ? getLVDisplayName(state.curLV) : '';
   document.getElementById('det-bc-sf').textContent = state.curSF ? getSFDisplayName(state.curLV ? state.curLV.id : '', state.curSF) : '';
+  updateBreadcrumbHrefs();
   document.getElementById('case-detail-title').textContent = getPrimaryTextLine(getCaseFieldText(cas, 'ten'));
   
   // KIỂM TRA VÀ GẮN ẢNH NỀN (HERO IMAGE) CHO TRANG CHI TIẾT
@@ -1967,6 +2272,7 @@ function goDetail(lvId, sfId, caseId){
 
   document.getElementById('pagination-bar').classList.remove('visible');
   showPage('page-detail');
+  updateRoute({ view: 'detail', lv: state.curLV ? state.curLV.id : '', sf: actualSfId, caseId: cas.id });
 }
 
 function switchTab(tabId){
@@ -1980,9 +2286,10 @@ function switchTab(tabId){
 function goHome(){ 
   const searchInput = document.getElementById('smart-search-input-page');
   if(searchInput) searchInput.value = '';
-  state.searchQuery = '';
+  state.searchQuery = ''; state.curLV = null; state.curSF = null; state.curCase = null; state.curPage = 1;
   document.getElementById('pagination-bar').classList.remove('visible'); 
-  renderReadHistory(); showPage('page-home'); 
+  renderReadHistory(); renderSeoLinkIndex(); showPage('page-home'); 
+  updateRoute({ view: 'home' });
 }
 
 function openSidebar(){ document.getElementById('sidebar').classList.add('open'); document.getElementById('sidebar-overlay').classList.add('open'); }
@@ -2018,6 +2325,7 @@ function applyFilter(){
   document.getElementById('cases-bc-lv').style.display = 'inline'; document.getElementById('cases-sep-1').style.display = 'inline'; document.getElementById('cases-sep-2').style.display = 'inline';
   document.getElementById('cases-bc-lv').textContent = getLVDisplayName(state.curLV); document.getElementById('cases-bc-sf').textContent = getSFDisplayName(state.curLV.id, state.curSF); document.getElementById('cases-title').textContent = getSFDisplayName(state.curLV.id, state.curSF);
   renderCasesList(); showPage('page-cases'); document.getElementById('pagination-bar').classList.add('visible');
+  updateRoute({ view: 'list', lv: state.curLV.id, sf: state.curSF.id, page: state.curPage });
 }
 
 function openHuongDan(){
@@ -2919,9 +3227,10 @@ async function safeInit() {
     if(!IS_PUBLIC_BUILD) {
         try { Object.assign(LAW_DB, JSON.parse(localStorage.getItem('dcsl_law_db'))); } catch(e){}
     }
-    renderHome(); buildFilterF1(); syncLanguageButtons();
+    renderHome(); buildFilterF1(); syncLanguageButtons(); applyRouteFromUrl();
 }
 if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', safeInit); } else { safeInit(); }
+window.addEventListener('popstate', applyRouteFromUrl);
 
 // FIREBASE INIT
 let db, auth, user = null; let appId = typeof __app_id !== 'undefined' ? __app_id : 'dau-chien-thang-luat';
