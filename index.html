@@ -74,7 +74,7 @@ body { top: 0 !important; }
   
   #pagination-bar { position:absolute!important; bottom:0; left:0!important; right:0!important; max-width:100%!important; transform:none!important; background:linear-gradient(0deg, var(--surface) 65%, transparent 100%) !important; }
   .linh-vuc-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 16px; padding: 24px; }
-  .recent-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 16px; padding: 0 24px 24px; }
+  .recent-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 16px; padding: 0 24px 32px; }
   #page-home .hero-band { margin: 24px; border-radius: 12px; }
   .page-header { padding: 24px 24px 16px; }
   .cases-list, .subfield-list { padding: 16px 24px 130px; }
@@ -150,6 +150,7 @@ body { top: 0 !important; }
 #header-right{ display:flex; align-items:center; gap: 10px; }
 
 .page{display:none;padding-top:75px;min-height:100vh;}
+#page-home{padding-bottom:28px;padding-bottom:calc(28px + env(safe-area-inset-bottom));}
 .page.active{display:block;animation:fadeIn 0.3s ease;}
 @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 
@@ -207,13 +208,13 @@ body { top: 0 !important; }
 .section-title{ font-size:1rem;font-weight:700;color:var(--navy); padding:24px 16px 12px;letter-spacing:0.2px; font-family: 'Playfair Display', serif;}
 .home-section-title { font-size: 1.15rem; font-weight: 700; color: var(--navy); padding: 28px 16px 16px; font-family: 'Playfair Display', serif; }
 
-.recent-grid{ display:grid;grid-template-columns:repeat(2,1fr);gap:12px; padding:0 16px 16px; }
-.recent-card{ border-radius:8px;overflow:hidden;cursor:pointer; background:var(--surface); border: 1px solid rgba(0,0,0,0.04); box-shadow:var(--shadow-sm); transition:all 0.2s ease; display: flex; flex-direction: column;}
+.recent-grid{ display:grid;grid-template-columns:repeat(2,1fr);gap:12px; padding:0 16px 32px; align-items:start; }
+.recent-card{ border-radius:8px;overflow:hidden;cursor:pointer; background:var(--surface); border: 1px solid rgba(0,0,0,0.04); box-shadow:var(--shadow-sm); transition:all 0.2s ease; display: flex; flex-direction: column; height:100%;}
 .recent-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);}
 .recent-card-img{ width:100%;aspect-ratio:16/9; position:relative;overflow:hidden; background: var(--bg2);}
-.recent-card-body{padding:12px;}
+.recent-card-body{padding:12px;display:flex;flex-direction:column;gap:8px;min-height:108px;}
 .recent-card-name{font-size:0.8rem;font-weight:600;color:var(--text);line-height:1.45;display:block;overflow:visible;word-break:break-word;}
-.recent-card-type{font-size:0.7rem;color:var(--gold-rich);margin-top:6px;font-weight:500;}
+.recent-card-type{font-size:0.7rem;color:var(--gold-rich);margin-top:auto;font-weight:500;}
 
 .read-history-list{padding:0 16px 16px;}
 .rh-item{ display:flex;align-items:center;gap:14px;padding:12px 16px; background:var(--surface);border-radius:8px;margin-bottom:8px; border: 1px solid var(--gold-border); cursor:pointer; transition:all 0.2s ease; }
@@ -243,8 +244,8 @@ body { top: 0 !important; }
 .case-item{ margin-bottom:12px; background:var(--surface);border-radius:8px; border: 1px solid var(--gold-border); transition:all 0.2s ease; }
 .case-item:hover{border-color: var(--gold-rich); box-shadow: var(--shadow-sm);}
 .case-item-header{ display:flex;align-items:flex-start;justify-content:space-between; padding:16px;cursor:pointer; gap: 12px;}
-.case-item-left{flex:1;}
-.case-name{ font-size:0.9rem;font-weight:600;color:var(--navy);line-height:1.5; margin-bottom: 6px; transition: color 0.2s;}
+.case-item-left{flex:1;min-width:0;}
+.case-name{ font-size:0.9rem;font-weight:600;color:var(--navy);line-height:1.5; margin-bottom: 6px; transition: color 0.2s; overflow-wrap:anywhere;}
 .case-name:hover{color:var(--gold-rich);}
 .case-stars{display:flex;gap:2px; font-size: 0.8rem; color: #F5A623;}
 .case-expand-btn{ width:28px;height:28px;flex-shrink:0;border:none;cursor:pointer; background:var(--bg2);border-radius:6px;color:var(--navy); display:flex;align-items:center;justify-content:center;font-size:0.9rem; transition:all 0.2s;}
@@ -640,21 +641,28 @@ function preserveIndentation(html) {
 }
 
 const LAW_NUMBER_PATTERN = '\\d+(?:\\.\\d+)*[a-zA-Z]?';
-const LAW_TOKEN_LIST_PATTERN = '[0-9a-zA-Z.]+(?:\\s*,\\s*[0-9a-zA-Z.]+)*';
-const VI_LAW_POINT_PATTERN = `(?:ti\\u1ec3u\\s*m\\u1ee5c|m\\u1ee5c|\\u0111i\\u1ec3m)\\s+${LAW_TOKEN_LIST_PATTERN}`;
-const VI_LAW_CLAUSE_PATTERN = `kho\\u1ea3n\\s+${LAW_TOKEN_LIST_PATTERN}`;
-const VI_LAW_PREFIX_PATTERN = `(?:(?:${VI_LAW_POINT_PATTERN}\\s+)?(?:${VI_LAW_CLAUSE_PATTERN}\\s+)?)`;
+const LAW_TOKEN_PATTERN = '[0-9a-zA-Z]+(?:\\.[0-9a-zA-Z]+)*';
+const LAW_LIST_SEPARATOR_PATTERN = '(?:\\s*(?:,|;|/|&|va|và|and)\\s*)';
+const LAW_TOKEN_LIST_PATTERN = `${LAW_TOKEN_PATTERN}(?:${LAW_LIST_SEPARATOR_PATTERN}${LAW_TOKEN_PATTERN})*`;
+const ASCII_LAW_TOKEN_LIST_PATTERN = '[0-9a-zA-Z]+(?:\\.[0-9a-zA-Z]+)*(?:\\s*(?:,|;|/|&|va|and)\\s*[0-9a-zA-Z]+(?:\\.[0-9a-zA-Z]+)*)*';
+const VI_LAW_POINT_LABEL_PATTERN = '(?:ti\\u1ec3u\\s*m\\u1ee5c|m\\u1ee5c|\\u0111i\\u1ec3m)';
+const VI_LAW_POINT_PATTERN = `${VI_LAW_POINT_LABEL_PATTERN}\\s+${LAW_TOKEN_LIST_PATTERN}(?:${LAW_LIST_SEPARATOR_PATTERN}${VI_LAW_POINT_LABEL_PATTERN}\\s+${LAW_TOKEN_PATTERN})*`;
+const VI_LAW_CLAUSE_PATTERN = `kho\\u1ea3n\\s+${LAW_TOKEN_LIST_PATTERN}(?:${LAW_LIST_SEPARATOR_PATTERN}kho\\u1ea3n\\s+${LAW_TOKEN_PATTERN})*`;
+const VI_LAW_PREFIX_PATTERN = `(?:(?:${VI_LAW_POINT_PATTERN}(?:\\s*,?\\s*)?)?(?:${VI_LAW_CLAUSE_PATTERN}(?:\\s*,?\\s*)?)?)`;
 const VI_LAW_ARTICLE_PATTERN = `\\u0111i\\u1ec1u\\s+${LAW_NUMBER_PATTERN}`;
 const VI_LAW_SOURCE_PATTERN = '(?:\\s+(?:c\\u1ee7a\\s+)?(?:b\\u1ed9\\s+lu\\u1eadt|lu\\u1eadt)\\s+[^,.;:\\n<]{1,90}(?:\\s+n\\u0103m\\s+\\d{4})?)?';
 const VI_LAW_REF_PATTERN = `${VI_LAW_PREFIX_PATTERN}${VI_LAW_ARTICLE_PATTERN}`;
 const VI_LAW_FULL_PATTERN = `${VI_LAW_REF_PATTERN}${VI_LAW_SOURCE_PATTERN}`;
 const EN_LAW_POINT_PATTERN = `Point\\s+${LAW_TOKEN_LIST_PATTERN}`;
 const EN_LAW_CLAUSE_PATTERN = `(?:Subsection|Section|Clause)\\s+${LAW_TOKEN_LIST_PATTERN}`;
-const EN_LAW_PREFIX_PATTERN = `(?:(?:${EN_LAW_POINT_PATTERN}\\s+)?(?:${EN_LAW_CLAUSE_PATTERN}\\s+)?)`;
+const EN_LAW_PREFIX_PATTERN = `(?:(?:${EN_LAW_POINT_PATTERN}(?:\\s*,?\\s*)?)?(?:${EN_LAW_CLAUSE_PATTERN}(?:\\s*,?\\s*)?)?)`;
 const EN_LAW_ARTICLE_PATTERN = `Article\\s+${LAW_NUMBER_PATTERN}`;
 const EN_LAW_SOURCE_PATTERN = '(?:\\s+(?:of\\s+)?(?:the\\s+)?(?:(?:Civil|Criminal|Labor|Land|Enterprise|Commercial|Administrative)\\s+(?:Code|Law)|Law\\s+on\\s+[^,.;:\\n<]{1,90})(?:\\s+\\d{4})?)?';
 const EN_LAW_REF_PATTERN = `${EN_LAW_PREFIX_PATTERN}${EN_LAW_ARTICLE_PATTERN}`;
 const EN_LAW_FULL_PATTERN = `${EN_LAW_REF_PATTERN}${EN_LAW_SOURCE_PATTERN}`;
+const ASCII_VI_LAW_POINT_LABEL_PATTERN = '(?:tieu\\s*muc|muc|diem)';
+const ASCII_VI_LAW_POINT_CAPTURE_PATTERN = `${ASCII_VI_LAW_POINT_LABEL_PATTERN}\\s+(${ASCII_LAW_TOKEN_LIST_PATTERN}(?:\\s*(?:,|;|/|&|va|and)\\s*${ASCII_VI_LAW_POINT_LABEL_PATTERN}\\s+${LAW_TOKEN_PATTERN})*)`;
+const ASCII_VI_LAW_CLAUSE_CAPTURE_PATTERN = `khoan\\s+(${ASCII_LAW_TOKEN_LIST_PATTERN}(?:\\s*(?:,|;|/|&|va|and)\\s*khoan\\s+${LAW_TOKEN_PATTERN})*)`;
 
 function cleanInlineText(text) {
   return (text || '').toString().replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
@@ -677,7 +685,21 @@ function getLawArticleNumber(lawText) {
 }
 
 function normalizeLawTokenList(text) {
-  return removeAccents(String(text || '')).replace(/[^a-z0-9.,]/g, ' ').replace(/\s*,\s*/g, ',').replace(/\s+/g, ' ').trim().replace(/\s/g, '');
+  return removeAccents(String(text || ''))
+    .replace(/\b(?:va|and)\b/g, ',')
+    .replace(/\b(?:tieu\s*muc|muc|diem|khoan|point|clause|section|subsection)\b/g, ' ')
+    .replace(/[;\/&]/g, ',')
+    .replace(/[^a-z0-9.,]/g, ' ')
+    .replace(/\s*,\s*/g, ',')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/^,+|,+$/g, '')
+    .replace(/,+/g, ',')
+    .replace(/\s/g, '');
+}
+
+function splitLawTokenList(text) {
+  return normalizeLawTokenList(text).split(',').map(token => token.trim()).filter(Boolean);
 }
 
 function getLawReferenceDetails(lawText) {
@@ -685,10 +707,10 @@ function getLawReferenceDetails(lawText) {
   const normalizedText = normalizeLawLookupText(cleanText);
   const asciiText = removeAccents(cleanText);
   const articleNum = getLawArticleNumber(cleanText);
-  const viPointMatch = asciiText.match(/\b(?:tieu\s*muc|muc|diem)\s+([0-9a-z0-9.]+(?:\s*,\s*[0-9a-z0-9.]+)*)/i);
-  const viClauseMatch = asciiText.match(/\bkhoan\s+([0-9a-z0-9.]+(?:\s*,\s*[0-9a-z0-9.]+)*)/i);
-  const enPointMatch = cleanText.match(/\bPoint\s+([0-9a-zA-Z.]+(?:\s*,\s*[0-9a-zA-Z.]+)*)/i);
-  const enClauseMatch = cleanText.match(/\b(?:Clause|Section|Subsection)\s+([0-9a-zA-Z.]+(?:\s*,\s*[0-9a-zA-Z.]+)*)/i);
+  const viPointMatch = asciiText.match(new RegExp(ASCII_VI_LAW_POINT_CAPTURE_PATTERN, 'i'));
+  const viClauseMatch = asciiText.match(new RegExp(ASCII_VI_LAW_CLAUSE_CAPTURE_PATTERN, 'i'));
+  const enPointMatch = cleanText.match(new RegExp(`Point\\s+(${ASCII_LAW_TOKEN_LIST_PATTERN})`, 'i'));
+  const enClauseMatch = cleanText.match(new RegExp(`(?:Clause|Section|Subsection)\\s+(${ASCII_LAW_TOKEN_LIST_PATTERN})`, 'i'));
 
   let prefix = 'law-';
   if(normalizedText.includes('bộ luật dân sự') || normalizedText.includes('blds') || normalizedText.includes('civil code')) prefix = 'blds-';
@@ -727,9 +749,26 @@ function expandVietnameseLawMatch(matchText) {
   if(!text) return [];
   const details = getLawReferenceDetails(text);
   const clauseTokens = details.clauseToken ? details.clauseToken.split(',').filter(Boolean) : [];
-  if(clauseTokens.length <= 1) return [text];
+  if(clauseTokens.length <= 1 && !(details.pointToken && details.pointToken.includes(','))) return [text];
   const articleMatch = text.match(new RegExp(`${VI_LAW_ARTICLE_PATTERN}${VI_LAW_SOURCE_PATTERN}`, 'i'));
   const articleText = articleMatch ? cleanInlineText(articleMatch[0]) : text;
+  const asciiText = removeAccents(text);
+  const expandedPointMatch = asciiText.match(new RegExp(ASCII_VI_LAW_POINT_CAPTURE_PATTERN, 'i'));
+  const expandedClauseMatch = asciiText.match(new RegExp(ASCII_VI_LAW_CLAUSE_CAPTURE_PATTERN, 'i'));
+  const expandedPointTokens = splitLawTokenList(expandedPointMatch && expandedPointMatch[1]);
+  const expandedClauseTokens = splitLawTokenList(expandedClauseMatch && expandedClauseMatch[1]);
+  if(expandedPointTokens.length && expandedClauseTokens.length) {
+    const expandedRefs = [];
+    expandedPointTokens.forEach(token => expandedRefs.push(`điểm ${token} khoản ${expandedClauseTokens[0]} ${articleText}`));
+    expandedClauseTokens.slice(1).forEach(token => expandedRefs.push(`khoản ${token} ${articleText}`));
+    return [...new Set(expandedRefs.map(cleanInlineText).filter(Boolean))];
+  }
+  if(expandedPointTokens.length > 1) {
+    return [...new Set(expandedPointTokens.map(token => cleanInlineText(`điểm ${token} ${articleText}`)).filter(Boolean))];
+  }
+  if(expandedClauseTokens.length > 1) {
+    return [...new Set(expandedClauseTokens.map(token => cleanInlineText(`khoản ${token} ${articleText}`)).filter(Boolean))];
+  }
   const pointMatch = text.match(new RegExp(VI_LAW_POINT_PATTERN, 'i'));
   const pointText = pointMatch ? cleanInlineText(pointMatch[0]) : '';
   const expanded = [];
@@ -754,6 +793,12 @@ function getLawReferenceVariants(lawName) {
   const viMatch = text.match(new RegExp(VI_LAW_REF_PATTERN, 'i'));
   if(viMatch) {
     variants.push(cleanInlineText(viMatch[0]));
+    variants.push(...expandVietnameseLawMatch(viMatch[0]));
+    const viPoint = viMatch[0].match(new RegExp(VI_LAW_POINT_PATTERN, 'i'));
+    const viClause = viMatch[0].match(new RegExp(VI_LAW_CLAUSE_PATTERN, 'i'));
+    const viArticleOnly = viMatch[0].match(new RegExp(VI_LAW_ARTICLE_PATTERN, 'i'));
+    if(viPoint && viClause) variants.push(cleanInlineText(`${viPoint[0]} ${viClause[0]}`));
+    if(viClause && viArticleOnly) variants.push(cleanInlineText(`${viClause[0]} ${viArticleOnly[0]}`));
     if(!hasSpecificLawQualifier(viMatch[0])) {
       const viArticle = viMatch[0].match(new RegExp(VI_LAW_ARTICLE_PATTERN, 'i'));
       if(viArticle) variants.push(cleanInlineText(viArticle[0]));
@@ -762,6 +807,11 @@ function getLawReferenceVariants(lawName) {
   const enMatch = text.match(new RegExp(EN_LAW_REF_PATTERN, 'i'));
   if(enMatch) {
     variants.push(cleanInlineText(enMatch[0]));
+    const enPoint = enMatch[0].match(new RegExp(EN_LAW_POINT_PATTERN, 'i'));
+    const enClause = enMatch[0].match(new RegExp(EN_LAW_CLAUSE_PATTERN, 'i'));
+    const enArticleOnly = enMatch[0].match(new RegExp(EN_LAW_ARTICLE_PATTERN, 'i'));
+    if(enPoint && enClause) variants.push(cleanInlineText(`${enPoint[0]} ${enClause[0]}`));
+    if(enClause && enArticleOnly) variants.push(cleanInlineText(`${enClause[0]} ${enArticleOnly[0]}`));
     if(!hasSpecificLawQualifier(enMatch[0])) {
       const enArticle = enMatch[0].match(new RegExp(EN_LAW_ARTICLE_PATTERN, 'i'));
       if(enArticle) variants.push(cleanInlineText(enArticle[0]));
@@ -1189,6 +1239,18 @@ function getCaseFieldText(caseObj, field, lang) {
   return caseObj && caseObj[field] ? caseObj[field] : '';
 }
 
+function getPrimaryTextLine(text) {
+  const lines = String(text || '').replace(/\r/g, '').split('\n').map(line => cleanInlineText(line)).filter(Boolean);
+  if(lines.length) return lines[0];
+  return cleanInlineText(text);
+}
+
+function getCompactDisplayText(text, maxLength = 180) {
+  const singleLine = getPrimaryTextLine(text);
+  if(singleLine.length <= maxLength) return singleLine;
+  return `${singleLine.slice(0, maxLength).trim()}...`;
+}
+
 function getCaseTimeline(caseObj, lang) {
   const translated = getCaseTranslation(caseObj, lang);
   if(translated && Array.isArray(translated.timeline) && translated.timeline.length) return translated.timeline;
@@ -1217,6 +1279,27 @@ function editorTextFromHtml(html) {
     .replace(/<\/p>/g, '\n')
     .replace(/<br\s*\/?>/gi, '\n');
   return (temp.textContent || temp.innerText || '').trim();
+}
+
+const SECTION_HEADING_FALLBACK_PATTERN = /^(?:NOI DUNG|NHAN DINH|QUYET DINH|TOM TAT|BINH LUAN|DIEN BIEN|LAP LUAN|KET LUAN|PHAN TICH|CASE SUMMARY|SUMMARY OF THE CASE|CONTENT OF THE CASE|FINDINGS(?: OF .*)?|ASSESSMENT(?: OF .*)?|DECISION|ANALYSIS|REASONING|CONTENT OF THE PRECEDENT|CASE TIMELINE|ANALOGOUS APPLICATION)$/i;
+
+function isLikelySectionHeadingText(text) {
+  const trimmed = cleanInlineText(text);
+  if(!trimmed || trimmed.length > 220) return false;
+  const plain = removeAccents(trimmed);
+  const looksUpper = trimmed === trimmed.toUpperCase() || plain === plain.toUpperCase();
+  if(!looksUpper) return false;
+  return SECTION_HEADING_FALLBACK_PATTERN.test(plain.toUpperCase());
+}
+
+function upgradeContentHeadingMarkup(html) {
+  const text = String(html || '');
+  if(!text || !text.includes('<p')) return text;
+  return text.replace(/<p>([\s\S]*?)<\/p>/gi, (full, inner) => {
+    const headingText = cleanInlineText(inner);
+    if(!isLikelySectionHeadingText(headingText)) return full;
+    return `<div class="detail-section-title">${escapeHtmlText(headingText)}</div>`;
+  });
 }
 
 function setEditorPlainText(id, value) {
@@ -1272,9 +1355,9 @@ function showAlert(msg) { document.getElementById('modal-title').innerHTML = '<i
 window.updateCasesFromDB = function(docs) {
     let dbCases = docs;
     dbCases.sort((a, b) => {
-        const timeA = a.createdAt ? a.createdAt.toMillis() : new Date(a.ngay || 0).getTime();
-        const timeB = b.createdAt ? b.createdAt.toMillis() : new Date(b.ngay || 0).getTime();
-        return timeA - timeB;
+        const timeA = a.createdAt ? a.createdAt.toMillis() : getCaseSortTimestamp(a);
+        const timeB = b.createdAt ? b.createdAt.toMillis() : getCaseSortTimestamp(b);
+        return timeB - timeA;
     });
 
     CASES_DATA = {};
@@ -1337,7 +1420,7 @@ function applyStoredCaseOrder() {
       const rankA = rank.has(a.id) ? rank.get(a.id) : Number.MAX_SAFE_INTEGER;
       const rankB = rank.has(b.id) ? rank.get(b.id) : Number.MAX_SAFE_INTEGER;
       if(rankA !== rankB) return rankA - rankB;
-      return new Date(b.ngay || 0).getTime() - new Date(a.ngay || 0).getTime();
+      return getCaseSortTimestamp(b) - getCaseSortTimestamp(a);
     });
   });
 }
@@ -1350,6 +1433,12 @@ function getTypeLabel(sao){
 function formatDate(str){
   if(!str) return ''; const d = new Date(str);
   return `${d.getDate().toString().padStart(2,'0')}/${(d.getMonth()+1).toString().padStart(2,'0')}/${d.getFullYear()}`;
+}
+
+function getCaseSortTimestamp(caseObj){
+  const rawTime = caseObj && (caseObj.updatedAt || caseObj.importedAt || caseObj.ngay || 0);
+  const time = new Date(rawTime).getTime();
+  return Number.isFinite(time) ? time : 0;
 }
 function showPage(id){ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active')); document.getElementById(id).classList.add('active'); window.scrollTo(0,0); }
 
@@ -1418,7 +1507,8 @@ function getRenderableRecentItems(limit = 5){
   return RECENT_UPDATES.map(item => {
     if(!item || !item.id || seen.has(item.id)) return null;
     const found = findCaseById(item.id);
-    const displayTitle = found ? getCaseFieldText(found.cas, 'ten') : cleanInlineText(item.ten || '');
+    const rawTitle = found ? getCaseFieldText(found.cas, 'ten') : (item.ten || '');
+    const displayTitle = getCompactDisplayText(rawTitle, 180);
     if(!displayTitle) return null;
     seen.add(item.id);
     return { ...item, found, displayTitle, lv: getLVById(item.lvId) };
@@ -1752,7 +1842,7 @@ function renderCasesList(){
     list.innerHTML = pageCases.map((c, idx)=>{
       const isDoc = c.sfId === 'van-ban-phap-luat' || c.sfId === 'giai-dap-nghiep-vu';
       const starHtml = isDoc ? '' : `<div class="case-stars">${'⭐'.repeat(c.sao || 0)}</div>`;
-      const displayTitle = getCaseFieldText(c, 'ten');
+      const displayTitle = getPrimaryTextLine(getCaseFieldText(c, 'ten'));
       const displayDesc = getCaseFieldText(c, 'mo_ta');
       const fullIndex = start + idx;
       const reorderControls = isReorderMode && canReorderCurrentCases() ? `
@@ -1811,7 +1901,7 @@ function goDetail(lvId, sfId, caseId){
 
   document.getElementById('det-bc-lv').textContent = state.curLV ? getLVDisplayName(state.curLV) : '';
   document.getElementById('det-bc-sf').textContent = state.curSF ? getSFDisplayName(state.curLV ? state.curLV.id : '', state.curSF) : '';
-  document.getElementById('case-detail-title').textContent = getCaseFieldText(cas, 'ten');
+  document.getElementById('case-detail-title').textContent = getPrimaryTextLine(getCaseFieldText(cas, 'ten'));
   
   // KIỂM TRA VÀ GẮN ẢNH NỀN (HERO IMAGE) CHO TRANG CHI TIẾT
   const hero = document.getElementById('case-hero');
@@ -1836,7 +1926,7 @@ function goDetail(lvId, sfId, caseId){
       
       dienBienEl.innerHTML = ''; apDungEl.innerHTML = '';
       
-      const detailContent = getCaseFieldText(cas, 'chi_tiet') || getCaseFieldText(cas, 'tom_luoc') || getCaseFieldText(cas, 'ap_dung') || '';
+      const detailContent = upgradeContentHeadingMarkup(getCaseFieldText(cas, 'chi_tiet') || getCaseFieldText(cas, 'tom_luoc') || getCaseFieldText(cas, 'ap_dung') || '');
       if(detailContent){
         chiTietEl.innerHTML = autoLinkLaws(detailContent);
       } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>${t('detailLater')}</p></div>`; }
@@ -1863,11 +1953,11 @@ function goDetail(lvId, sfId, caseId){
         dienBienEl.innerHTML = tlHtml;
       } else { dienBienEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-clock"></i><p>${t('timelineLater')}</p></div>`; }
 
-      const displayApply = getCaseFieldText(cas, 'ap_dung');
+      const displayApply = upgradeContentHeadingMarkup(getCaseFieldText(cas, 'ap_dung'));
       if(displayApply){ apDungEl.innerHTML = `<div class="detail-section">${autoLinkLaws(displayApply)}</div>`; }
       else { apDungEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-lightbulb"></i><p>${t('applyLater')}</p></div>`; }
 
-      const detailContent = getCaseFieldText(cas, 'chi_tiet') || getCaseFieldText(cas, 'tom_luoc') || '';
+      const detailContent = upgradeContentHeadingMarkup(getCaseFieldText(cas, 'chi_tiet') || getCaseFieldText(cas, 'tom_luoc') || '');
       if(detailContent){
         chiTietEl.innerHTML = autoLinkLaws(detailContent);
       } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-file-text"></i><p>${t('detailLater')}</p></div>`; }
@@ -2155,7 +2245,6 @@ function renderLawsList() {
       <div style="flex:1;">
         <div style="font-weight:600; color:var(--navy); font-size:0.9rem;">${law.name}</div>
         <div style="font-size:0.8rem; color:var(--text-muted); max-height:40px; overflow:hidden;">${law.content || '(Chưa có nội dung)'}</div>
-        ${(law.name_en || law.content_en) ? `<div style="font-size:0.78rem; color:var(--gold-rich); margin-top:6px; max-height:42px; overflow:hidden;"><strong>EN:</strong> ${law.name_en || ''}${law.content_en ? ' - ' + law.content_en : ''}</div>` : ''}
       </div>
       <button class="admin-btn admin-btn-secondary" onclick="showLawEditModal(${idx})" style="padding:6px; flex-shrink:0;"><i class="ph ph-pencil-simple"></i></button>
       <button class="admin-btn admin-btn-secondary" onclick="removeLaw(${idx})" style="padding:6px; flex-shrink:0; color:#E53935;"><i class="ph ph-trash"></i></button>
@@ -2522,16 +2611,34 @@ function makeImportedCaseId(raw, index) {
     return candidate;
 }
 
+function getImportedSingleLineText(value) {
+    return getPrimaryTextLine(value || '');
+}
+
+function normalizeImportedTaxonomyId(rawId, fallbackName, fallbackValue) {
+    const fallbackId = createSlug(getImportedSingleLineText(fallbackName || fallbackValue || ''));
+    const candidate = createSlug(getImportedSingleLineText(rawId || ''));
+    if(fallbackId && (!candidate || candidate.length > 80 || candidate.startsWith(`${fallbackId}-phan-`))) return fallbackId;
+    return candidate || fallbackId || fallbackValue;
+}
+
 function normalizeImportedCase(raw, index) {
     if(!raw || typeof raw !== 'object') return null;
-    const ten = String(raw.ten || raw.title || raw.tieu_de || '').trim();
+    const ten = getImportedSingleLineText(raw.ten || raw.title || raw.tieu_de || '');
     if(!ten) return null;
 
-    const lvName = String(raw.lvName || raw.linh_vuc || raw.field || 'Dân sự').trim();
-    const sfName = String(raw.sfName || raw.chu_de || raw.topic || 'Bản án').trim();
-    const lvId = raw.lvId || raw.linh_vuc_id || createSlug(lvName);
-    const sfId = raw.sfId || raw.chu_de_id || createSlug(sfName);
+    const lvName = String(raw.lvName || raw.linh_vuc || raw.field || 'Dan su').trim();
+    const sfName = String(raw.sfName || raw.chu_de || raw.topic || 'Ban an').trim();
+    const lvNameEn = String(raw.lvName_en || raw.lvNameEn || raw.linh_vuc_en || raw.field_en || raw.fieldEn || '').trim();
+    const sfNameEn = String(raw.sfName_en || raw.sfNameEn || raw.chu_de_en || raw.topic_en || raw.topicEn || '').trim();
+    const normalizedLvName = getImportedSingleLineText(lvName || 'Dan su');
+    const normalizedSfName = getImportedSingleLineText(sfName || 'Ban an');
+    const normalizedLvNameEn = getImportedSingleLineText(lvNameEn);
+    const normalizedSfNameEn = getImportedSingleLineText(sfNameEn);
+    const lvId = normalizeImportedTaxonomyId(raw.lvId || raw.linh_vuc_id, normalizedLvName, 'linh-vuc');
+    const sfId = normalizeImportedTaxonomyId(raw.sfId || raw.chu_de_id, normalizedSfName, 'chu-de');
     const detailOnly = isDetailOnlySubfield(sfId);
+    const importedAt = new Date(Date.now() - index).toISOString();
 
     let sao = parseInt(raw.sao || raw.stars || raw.tinh_chat || 0, 10) || 0;
     if(sfId === 'an-le') sao = 3;
@@ -2540,7 +2647,7 @@ function normalizeImportedCase(raw, index) {
     const tomLuoc = detailOnly ? '' : formatImportedContent(raw.tom_luoc || raw.timelineText || raw.timeline_text || '');
     const apDung = detailOnly ? '' : formatImportedContent(raw.ap_dung || raw.analogousUse || raw.ap_dung_tuong_tu || '');
     const chiTiet = formatImportedContent(raw.chi_tiet || raw.detail || raw.noi_dung_chi_tiet || '');
-    const moTa = String(raw.mo_ta || raw.summary || raw.tom_tat_ngan || '').trim();
+    const moTa = cleanInlineText(raw.mo_ta || raw.summary || raw.tom_tat_ngan || '');
     const timeline = detailOnly ? [] : (Array.isArray(raw.timeline) ? raw.timeline : String(raw.timelineText || raw.timeline_text || '').split(/\r?\n/).map(t => t.trim()).filter(Boolean));
     const rawEn = raw.translations && raw.translations.en ? raw.translations.en : {};
     const searchableText = [ten, moTa, tomLuoc, apDung, chiTiet, rawEn.ten, rawEn.mo_ta, rawEn.tom_luoc, rawEn.ap_dung, rawEn.chi_tiet, raw.lawsText || ''].join(' ');
@@ -2551,23 +2658,27 @@ function normalizeImportedCase(raw, index) {
         ten: ten,
         mo_ta: moTa,
         lvId: lvId,
-        lvName: lvName,
+        lvName: normalizedLvName,
         sfId: sfId,
-        sfName: sfName,
+        sfName: normalizedSfName,
         sao: sao,
-        ngay: raw.ngay || raw.date || new Date().toISOString(),
+        ngay: raw.ngay || raw.date || importedAt,
+        importedAt: importedAt,
+        updatedAt: importedAt,
         tom_luoc: tomLuoc,
         ap_dung: apDung,
         chi_tiet: chiTiet,
         timeline: timeline,
         laws: laws
     };
+    if(normalizedLvNameEn) caseData.lvName_en = normalizedLvNameEn;
+    if(normalizedSfNameEn) caseData.sfName_en = normalizedSfNameEn;
 
     const en = raw.translations && raw.translations.en ? raw.translations.en : (raw.en || {});
     if(en && typeof en === 'object') {
         const englishPayload = {};
-        if(en.ten || en.title) englishPayload.ten = String(en.ten || en.title).trim();
-        if(en.mo_ta || en.summary) englishPayload.mo_ta = String(en.mo_ta || en.summary).trim();
+        if(en.ten || en.title) englishPayload.ten = getImportedSingleLineText(en.ten || en.title);
+        if(en.mo_ta || en.summary) englishPayload.mo_ta = cleanInlineText(en.mo_ta || en.summary || '');
         if(en.tom_luoc || en.timelineText) englishPayload.tom_luoc = formatImportedContent(en.tom_luoc || en.timelineText);
         if(en.ap_dung || en.analogousUse) englishPayload.ap_dung = formatImportedContent(en.ap_dung || en.analogousUse);
         if(en.chi_tiet || en.detail) englishPayload.chi_tiet = formatImportedContent(en.chi_tiet || en.detail);
@@ -2588,10 +2699,20 @@ function ensureImportedCaseTaxonomy(caseData) {
     let lv = getLVById(caseData.lvId);
     if(!lv) {
         lv = { id: caseData.lvId, ten: caseData.lvName || caseData.lvId, icon: '<i class="ph ph-folder"></i>', subfields: [...baseSubfields.map(s=>({...s}))], totalCases: 0 };
+        if(caseData.lvName_en) lv.translations = { en: { ten: caseData.lvName_en } };
         LINH_VUC_LUAT.push(lv);
+    } else if(caseData.lvName_en && !getEntityEnglishName(lv)) {
+        lv.translations = { ...(lv.translations || {}), en: { ...((lv.translations && lv.translations.en) || {}), ten: caseData.lvName_en } };
     }
     if(!lv.subfields.find(sf => sf.id === caseData.sfId)) {
-        lv.subfields.push({ id: caseData.sfId, ten: caseData.sfName || caseData.sfId, soLuong: 0 });
+        const sf = { id: caseData.sfId, ten: caseData.sfName || caseData.sfId, soLuong: 0 };
+        if(caseData.sfName_en) sf.translations = { en: { ten: caseData.sfName_en } };
+        lv.subfields.push(sf);
+    } else {
+        const sf = lv.subfields.find(item => item.id === caseData.sfId);
+        if(caseData.sfName_en && sf && !getEntityEnglishName(sf)) {
+            sf.translations = { ...(sf.translations || {}), en: { ...((sf.translations && sf.translations.en) || {}), ten: caseData.sfName_en } };
+        }
     }
 }
 
@@ -2637,18 +2758,28 @@ function importBulkCasesFile(event) {
 function applyBulkCasesImport(importedCases, importedLawDb) {
     if(importedLawDb && typeof importedLawDb === 'object') Object.assign(LAW_DB, importedLawDb);
     const recentItems = [];
+    const bucketInsertCounts = {};
+    const casesToImport = [...importedCases].sort((a, b) => getCaseSortTimestamp(b) - getCaseSortTimestamp(a));
 
-    importedCases.forEach((caseData, index) => {
+    casesToImport.forEach((caseData, index) => {
         caseData.id = makeImportedCaseId(caseData, index);
         ensureImportedCaseTaxonomy(caseData);
         const bucketKey = getCaseBucketKey(caseData.lvId, caseData.sfId);
         if(!CASES_DATA[bucketKey]) CASES_DATA[bucketKey] = [];
-        CASES_DATA[bucketKey].push(caseData);
+        const insertIndex = bucketInsertCounts[bucketKey] || 0;
+        CASES_DATA[bucketKey].splice(insertIndex, 0, caseData);
+        bucketInsertCounts[bucketKey] = insertIndex + 1;
         if(Array.isArray(caseData.laws)) syncAdminLawsToLawDB(caseData.laws);
         recentItems.push({ id: caseData.id, ten: caseData.ten, lvId: caseData.lvId, sfId: caseData.sfId });
     });
 
     RECENT_UPDATES.unshift(...recentItems);
+    const orderMap = getStoredCaseOrderMap();
+    Object.keys(bucketInsertCounts).forEach(bucketKey => {
+        orderMap[bucketKey] = (CASES_DATA[bucketKey] || []).map(c => c.id);
+    });
+    localStorage.setItem(CASE_ORDER_STORAGE_KEY, JSON.stringify(orderMap));
+    applyStoredCaseOrder();
     saveCasesDataToStorage();
     localStorage.setItem('dcsl_law_db', JSON.stringify(LAW_DB));
     renderHome(); buildFilterF1(); renderReadHistory();
@@ -2734,6 +2865,7 @@ function submitAdmin() {
   const caseData = {
       id: editingCaseId || 'case_' + Date.now(), ten: ten, mo_ta: mota, lvId: lvId, lvName: finalLvName, sfId: sfId, sfName: finalSfName,
       sao: sao, ngay: editingCaseId ? findCaseById(editingCaseId).cas.ngay : new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
       tom_luoc: detailOnly ? '' : formatContent(tomluocText), ap_dung: detailOnly ? '' : formatContent(apdungText), chi_tiet: formatContent(chitietText), timeline: detailOnly ? [] : timelineArr, laws: adminFormLaws
   };
 
