@@ -12,10 +12,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#152238">
 <link rel="canonical" href="https://dauchianthangluatvn.github.io/vn/">
-<meta property="og:image" content="https://dauchianthangluatvn.github.io/vn/data/og-image.jpg">
+<meta property="og:image" content="https://dauchianthangluatvn.github.io/vn/data/og-image.svg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta name="twitter:image" content="https://dauchianthangluatvn.github.io/vn/data/og-image.jpg">
+<meta name="twitter:image" content="https://dauchianthangluatvn.github.io/vn/data/og-image.svg">
 <title>Đấu Chiến Thắng Luật.com</title>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -998,7 +998,7 @@ const RECENT_THUMBS = [
   'https://images.unsplash.com/photo-1618044733300-9472054094ee?w=600&h=400&fit=crop&q=80'
 ];
 
-let state = { curLV: null, curSF: null, curCase: null, curPage: 1, readHistory: [], filter: { f1:null, f2:null, f4:'' }, searchQuery: '', uiLang: 'vi' };
+let state = { curLV: null, curSF: null, curCase: null, curPage: 1, readHistory: [], filter: { f1:null, f2:null, f4:'' }, searchQuery: '', subQuery: '', uiLang: 'vi' };
 const ITEMS_PER_PAGE = 8;
 const LANGUAGE_STORAGE_KEY = 'dcsl_ui_lang';
 const CASE_ORDER_STORAGE_KEY = 'dcsl_case_order';
@@ -1777,7 +1777,7 @@ function renderHome(){
 
   const recGrid = document.getElementById('recent-grid');
   if(recGrid) {
-    const recentItems = getRenderableRecentItems(5);
+    const recentItems = getRenderableRecentItems(6);
     recGrid.innerHTML = recentItems.map((r,i)=>{
       const lv = r.lv || getLVById(r.lvId); const imgUrl = RECENT_THUMBS[i % RECENT_THUMBS.length]; const isNew = i === 0 || i === 1;
       const displayTitle = r.displayTitle;
@@ -1839,7 +1839,7 @@ function renderReadHistory(){
 
 function goSubfields(lvId){
   if(lvId) state.curLV = getLVById(lvId); if(!state.curLV) return;
-  state.curSF = null; state.curCase = null; state.searchQuery = '';
+  state.curSF = null; state.curCase = null; state.searchQuery = ''; state.subQuery = '';
   document.getElementById('pagination-bar').classList.remove('visible');
   document.getElementById('sf-breadcrumb-cur').textContent = getLVDisplayName(state.curLV); document.getElementById('sf-title').textContent = getLVDisplayName(state.curLV);
   const list = document.getElementById('subfield-list');
@@ -1876,7 +1876,7 @@ function goCasesList(lvId, sfId) {
 
 function removeAccents(str) { return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'd').toLowerCase(); }
 
-const SEARCH_STOPWORDS = new Set('toi muon can tim ve va la cua cho trong khi voi neu thi co bi da duoc cac nhung mot nhieu nay do theo tai den tu hoac the an ban vu viec phan noi dung he thong phap ly tinh huong tuong dong hai chi con lai vao nguoi ben case cases the a an and or of to in for with by on from about into without under'.split(' '));
+const SEARCH_STOPWORDS = new Set('toi muon can tim ve va la cua cho trong khi voi neu thi co bi da duoc cac nhung mot nhieu nay do theo tai den tu hoac the an ban vu viec phan noi dung he thong phap ly tinh huong tuong dong hai chi con lai vao nguoi ben case cases the a an and or of to in for with by on from about into without under dung cung chu nhu vay nen boi qua gi ai khac xem ket loai nam thang ngay quan su lam thanh toan tin nhat rang viet'.split(' '));
 const SEARCH_SYNONYMS = {
   'thua ke': ['di san', 'di chuc', 'nguoi thua ke', 'chia di san', 'inheritance', 'estate', 'will'],
   'di san': ['thua ke', 'di chuc', 'chia di san', 'estate', 'inheritance'],
@@ -1893,7 +1893,17 @@ const SEARCH_SYNONYMS = {
   'hinh su': ['toi pham', 'bi cao', 'hinh phat', 'criminal'],
   'doanh nghiep': ['cong ty', 'co dong', 'gop von', 'enterprise', 'company', 'shareholder'],
   'an le': ['precedent', 'case law'],
-  'ban an': ['judgment', 'case']
+  'ban an': ['quyet dinh', 'phan quyet', 'judgment', 'verdict', 'ruling'],
+  'ly hon': ['cham dut hon nhan', 'giai quyet ly hon', 'phan chia tai san ly hon', 'divorce', 'dissolution of marriage'],
+  'boi thuong': ['boi thuong thiet hai', 'thiet hai thuc te', 'compensation', 'damages', 'reparation'],
+  'tranh chap': ['xung dot', 'mau thuan', 'khieu kien', 'khieu nai', 'dispute', 'conflict', 'lawsuit'],
+  'tai san': ['tai san chung', 'tai san rieng', 'dong san', 'bat dong san', 'property', 'asset'],
+  'nha dat': ['nha o', 'can ho', 'bat dong san', 'chung cu', 'house', 'real estate', 'apartment'],
+  'vay no': ['hop dong vay', 'cho vay', 'no', 'cong no', 'tien vay', 'loan', 'debt', 'credit'],
+  'sa thai': ['don phuong cham dut', 'cham dut hop dong lao dong', 'mat viec', 'cho thoi viec', 'dismiss', 'terminate', 'fired'],
+  'giam doc tham': ['tai tham', 'huy ban an', 'xem xet lai ban an', 'cassation', 'retrial', 'review'],
+  'phuc tham': ['toa phuc tham', 'khang cao', 'xet xu phuc tham', 'appeal', 'court of appeal'],
+  'quyen su dung dat': ['qsdd', 'so do', 'giay red', 'giay hong', 'land use rights', 'land certificate']
 };
 
 const SEARCH_CONCEPTS = [
@@ -1901,7 +1911,15 @@ const SEARCH_CONCEPTS = [
   { id: 'one-signer', weight: 820, aliases: ['mot nguoi ky', 'chi mot nguoi ky', 'mot ben ky', 'nguoi con lai khong ky', 'khong tham gia ky', 'only one signed', 'one spouse signed'] },
   { id: 'no-objection', weight: 920, aliases: ['khong phan doi', 'biet va khong phan doi', 'biet nhung khong phan doi', 'im lang', 'dong y ngam', 'khong co y kien', 'did not object', 'knew and did not object'] },
   { id: 'contract-signing', weight: 520, aliases: ['ky hop dong', 'ky vao hop dong', 'ky ket hop dong', 'chu ky', 'hop dong chuyen nhuong', 'signed contract'] },
-  { id: 'land-transfer', weight: 380, aliases: ['chuyen nhuong quyen su dung dat', 'hop dong chuyen nhuong quyen su dung dat', 'mua ban dat', 'land use right transfer'] }
+  { id: 'land-transfer', weight: 380, aliases: ['chuyen nhuong quyen su dung dat', 'hop dong chuyen nhuong quyen su dung dat', 'mua ban dat', 'land use right transfer'] },
+  { id: 'divorce', weight: 500, aliases: ['ly hon', 'cham dut hon nhan', 'phan chia tai san ly hon', 'nuoi con sau ly hon', 'divorce', 'dissolution of marriage'] },
+  { id: 'inheritance', weight: 480, aliases: ['thua ke', 'chia di san', 'di chuc', 'nguoi thua ke hop phap', 'phan chia di san', 'inheritance', 'estate division'] },
+  { id: 'compensation', weight: 460, aliases: ['boi thuong thiet hai', 'boi thuong', 'thiet hai thuc te', 'ton that', 'damages', 'compensation'] },
+  { id: 'criminal', weight: 500, aliases: ['hinh su', 'toi pham', 'bi cao', 'xu phat tu', 'hinh phat', 'criminal offense', 'conviction', 'imprisonment'] },
+  { id: 'employment', weight: 440, aliases: ['hop dong lao dong', 'sa thai', 'tien luong', 'bao hiem xa hoi', 'nghi viec', 'thoi viec', 'dismissal', 'wrongful termination'] },
+  { id: 'real-estate', weight: 460, aliases: ['nha dat', 'bat dong san', 'can ho', 'nha o', 'mua ban nha', 'real estate', 'property purchase'] },
+  { id: 'debt', weight: 440, aliases: ['cong no', 'vay no', 'hop dong vay', 'doi no', 'tra no', 'chu no', 'debt', 'loan', 'creditor'] },
+  { id: 'cassation', weight: 600, aliases: ['giam doc tham', 'tai tham', 'huy ban an', 'khang nghi giam doc tham', 'cassation', 'retrial', 'review judgment'] }
 ];
 
 function normalizeSearchText(text) {
@@ -2008,7 +2026,7 @@ function showSearchResultsPage(query, page = 1) {
   query = String(query || '').trim(); if(!query) return;
   const searchInput = document.getElementById('smart-search-input-page');
   if(searchInput) searchInput.value = query;
-  closeFilter(); state.searchQuery = query; state.curSF = null; state.curCase = null; state.curPage = Math.max(1, parseInt(page, 10) || 1);
+  closeFilter(); state.searchQuery = query; state.subQuery = ''; state.curSF = null; state.curCase = null; state.curPage = Math.max(1, parseInt(page, 10) || 1);
   document.getElementById('cases-bc-lv').style.display = 'none'; document.getElementById('cases-sep-1').style.display = 'none'; document.getElementById('cases-sep-2').style.display = 'none';
   document.getElementById('cases-bc-sf').textContent = `${t('searchResult')}: "${query}"`; document.getElementById('cases-title').textContent = `${t('searchTitle')}: "${query}"`;
   renderCasesList(); showPage('page-cases'); document.getElementById('pagination-bar').classList.add('visible');
@@ -2140,7 +2158,15 @@ function renderCasesList(){
     scoredCases.sort((a,b) => b.score - a.score);
     cases = scoredCases.map(item => item.cas);
 
-  } else { cases = getCasesForSF(state.curLV.id, state.curSF.id); }
+  } else {
+    cases = getCasesForSF(state.curLV.id, state.curSF.id);
+    if (state.subQuery) {
+      const subQInfo = getSearchTerms(state.subQuery);
+      const subScored = cases.map(c => scoreCaseForQuery(c, subQInfo)).filter(Boolean);
+      subScored.sort((a, b) => b.score - a.score);
+      cases = subScored.length ? subScored.map(item => item.caseObj) : [];
+    }
+  }
   
   const total = cases.length; const totalPages = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
   if(state.curPage > totalPages) state.curPage = totalPages;
@@ -2299,7 +2325,7 @@ function switchTab(tabId){
 function goHome(){ 
   const searchInput = document.getElementById('smart-search-input-page');
   if(searchInput) searchInput.value = '';
-  state.searchQuery = ''; state.curLV = null; state.curSF = null; state.curCase = null; state.curPage = 1;
+  state.searchQuery = ''; state.subQuery = ''; state.curLV = null; state.curSF = null; state.curCase = null; state.curPage = 1;
   document.getElementById('pagination-bar').classList.remove('visible'); 
   renderReadHistory(); renderSeoLinkIndex(); showPage('page-home'); 
   updateRoute({ view: 'home' });
@@ -2329,11 +2355,13 @@ function selectFilter(fnum, val, label){
 }
 function toggleFilter(fnum){ const list = document.getElementById(fnum+'-list'); const header = document.querySelector(`[onclick="toggleFilter('${fnum}')"]`); const open = list.classList.toggle('open'); header.classList.toggle('expanded', open); }
 function applyFilter(){
-  if(!filterState.f1){ showAlert('Vui lòng chọn lĩnh vực luật!'); return; }
+  const f4Text = ((document.getElementById('f4-text') || {}).value || '').trim();
+  if(!filterState.f1 && !f4Text){ showAlert('Vui lòng chọn lĩnh vực luật hoặc nhập nội dung cần tìm!'); return; }
+  if(!filterState.f1 && f4Text){ closeFilter(); showSearchResultsPage(f4Text, 1); return; }
   closeFilter(); state.curLV = getLVById(filterState.f1);
-  if(!filterState.f2){ goSubfields(filterState.f1); return; }
+  if(!filterState.f2){ if(f4Text){ showSearchResultsPage(f4Text, 1); return; } goSubfields(filterState.f1); return; }
   state.curSF = state.curLV.subfields.find(s=>s.id===filterState.f2); state.curPage = 1;
-  state.searchQuery = ''; 
+  state.searchQuery = ''; state.subQuery = f4Text;
   const searchInput = document.getElementById('smart-search-input-page'); if(searchInput) searchInput.value = '';
   document.getElementById('cases-bc-lv').style.display = 'inline'; document.getElementById('cases-sep-1').style.display = 'inline'; document.getElementById('cases-sep-2').style.display = 'inline';
   document.getElementById('cases-bc-lv').textContent = getLVDisplayName(state.curLV); document.getElementById('cases-bc-sf').textContent = getSFDisplayName(state.curLV.id, state.curSF); document.getElementById('cases-title').textContent = getSFDisplayName(state.curLV.id, state.curSF);

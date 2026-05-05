@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#152238;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1E3050;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#DAB98E;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#A37F4B;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Subtle texture lines -->
+  <rect x="0" y="0" width="1200" height="630" fill="none" stroke="rgba(192,154,107,0.04)" stroke-width="0"/>
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="rgba(192,154,107,0.05)" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="rgba(192,154,107,0.05)" stroke-width="1"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="6" height="630" fill="url(#goldGrad)"/>
+  <!-- Right accent bar -->
+  <rect x="1194" y="0" width="6" height="630" fill="url(#goldGrad)"/>
+
+  <!-- Top decorative line -->
+  <rect x="60" y="56" width="1080" height="1.5" fill="url(#goldGrad)" opacity="0.4"/>
+  <!-- Bottom decorative line -->
+  <rect x="60" y="572" width="1080" height="1.5" fill="url(#goldGrad)" opacity="0.4"/>
+
+  <!-- === SCALES OF JUSTICE (center, top) === -->
+  <!-- Pillar -->
+  <rect x="594" y="108" width="12" height="130" fill="#C09A6B" rx="2"/>
+  <!-- Base -->
+  <rect x="564" y="234" width="72" height="8" fill="#C09A6B" rx="4"/>
+  <rect x="574" y="242" width="52" height="4" fill="#A37F4B" rx="2"/>
+  <!-- Top ornament -->
+  <circle cx="600" cy="104" r="9" fill="#C09A6B"/>
+  <!-- Balance beam -->
+  <rect x="480" y="118" width="240" height="8" fill="#C09A6B" rx="4"/>
+
+  <!-- Left chain -->
+  <line x1="504" y1="126" x2="496" y2="182" stroke="#C09A6B" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="504" y1="126" x2="516" y2="182" stroke="#C09A6B" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Left pan -->
+  <ellipse cx="506" cy="185" rx="38" ry="8" fill="#C09A6B" opacity="0.9"/>
+  <rect x="472" y="182" width="68" height="10" fill="none" stroke="#C09A6B" stroke-width="2" rx="4"/>
+
+  <!-- Right chain -->
+  <line x1="696" y1="126" x2="688" y2="182" stroke="#C09A6B" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="696" y1="126" x2="708" y2="182" stroke="#C09A6B" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Right pan -->
+  <ellipse cx="698" cy="185" rx="38" ry="8" fill="#C09A6B" opacity="0.9"/>
+  <rect x="664" y="182" width="68" height="10" fill="none" stroke="#C09A6B" stroke-width="2" rx="4"/>
+
+  <!-- === MAIN TEXT === -->
+  <!-- Site name -->
+  <text x="600" y="316" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="62" font-weight="700" fill="#FFFFFF"
+        letter-spacing="1">&#272;&#7845;u Chi&#7871;n Th&#7855;ng Lu&#7853;t</text>
+
+  <!-- Gold .com -->
+  <text x="600" y="362" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="36" font-weight="400" fill="#C09A6B"
+        letter-spacing="4">.com</text>
+
+  <!-- Divider -->
+  <rect x="480" y="382" width="240" height="1.5" fill="url(#goldGrad)" opacity="0.5"/>
+
+  <!-- Subtitle -->
+  <text x="600" y="418" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="22" fill="rgba(255,255,255,0.72)"
+        letter-spacing="0.5">Kho tra c&#7913;u b&#7843;n &#225;n, &#225;n l&#7879; v&#224; tranh ch&#7845;p ph&#225;p l&#253;</text>
+
+  <!-- Tag line -->
+  <text x="600" y="460" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="17" fill="rgba(192,154,107,0.85)"
+        letter-spacing="1.5">H&#192;NG &#272;&#7846;U VI&#7878;T NAM</text>
+
+  <!-- Bottom URL badge -->
+  <rect x="400" y="498" width="400" height="42" rx="21"
+        fill="rgba(192,154,107,0.12)" stroke="#C09A6B" stroke-width="1.5"/>
+  <text x="600" y="524" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="14" fill="#C09A6B" letter-spacing="2">DAUCHIANTHANGLUATVN.GITHUB.IO/VN</text>
+</svg>
