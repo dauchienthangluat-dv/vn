@@ -10,11 +10,17 @@
 <meta property="og:title" content="Đấu Chiến Thắng Luật.com">
 <meta property="og:description" content="Đấu Chiến Thắng Luật - Kho tra cứu bản án, án lệ và tranh chấp pháp lý hàng đầu Việt Nam.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#152238">
+<link rel="canonical" href="https://dauchianthangluatvn.github.io/vn/">
+<meta property="og:image" content="https://dauchianthangluatvn.github.io/vn/data/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://dauchianthangluatvn.github.io/vn/data/og-image.jpg">
 <title>Đấu Chiến Thắng Luật.com</title>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <!-- Phosphor Icons (Bộ icon chuyên nghiệp) -->
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
 <style>
 :root {
@@ -35,6 +41,7 @@
   --text-muted: #737373;
   --shadow-sm: 0 2px 8px rgba(21, 34, 56, 0.04); 
   --shadow-md: 0 8px 24px rgba(21, 34, 56, 0.06);
+  --shadow-lg: 0 20px 60px rgba(21, 34, 56, 0.15);
   --radius: 12px; 
   --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
 }
@@ -630,6 +637,12 @@ const ADMIN_PASSWORD = '';
 let secretCode = "";
 let isAdminMode = false;
 document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const openModal = document.querySelector('.overlay-modal.open');
+        if (openModal) { openModal.classList.remove('open'); return; }
+        if (document.getElementById('sidebar').classList.contains('open')) { closeSidebar(); return; }
+        if (document.getElementById('side-left').classList.contains('open')) { closeFilter(); return; }
+    }
     if (IS_PUBLIC_BUILD || !ADMIN_PASSWORD) return;
     if (e.key.length > 1) return; 
     secretCode += e.key;
