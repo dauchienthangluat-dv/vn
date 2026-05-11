@@ -1,7 +1,7 @@
 {
   "type": "dcsl-site-data",
   "version": 1,
-  "exportedAt": "2026-05-08T14:37:17.600Z",
+  "exportedAt": "2026-05-11T13:07:49.674Z",
   "data": {
     "casesData": {
       "cases": {
@@ -4203,6 +4203,261 @@
         ],
         "hinh-su::giai-dap-nghiep-vu": [
           {
+            "id": "case-cong-van-250-hinh-su-3",
+            "ten": "Công văn 250/TANDTC-PC về việc thông báo kết quả giải đáp trực tuyến một số vướng mắc trong công tác xét xử",
+            "mo_ta": "",
+            "lvId": "hinh-su",
+            "lvName": "Hình sự",
+            "sfId": "giai-dap-nghiep-vu",
+            "sfName": "Giải đáp nghiệp vụ",
+            "sao": 0,
+            "ngay": "2026-05-11T18:20:13.3109721+07:00",
+            "importedAt": "2026-05-11T13:01:04.280Z",
+            "updatedAt": "2026-05-11T13:01:04.280Z",
+            "tom_luoc": "",
+            "ap_dung": "",
+            "chi_tiet": "<div class=\"detail-section-title\">VỀ H&#204;NH SỰ, TỔ TỤNG H&#204;NH SỰ, THI H&#192;NH &#193;N H&#204;NH SỰ V&#192; TƯ PH&#193;P NGƯỜI CHƯA TH&#192;NH NI&#202;N</div><p>1. Người phạm tội bị tuy&#234;n h&#236;nh phạt tử h&#236;nh (trước ng&#224;y 01/7/2025) về Tội sản xuất tr&#225;i ph&#233;p chất ma t&#250;y (Điều 248) hoặc Tội mua b&#225;n tr&#225;i ph&#233;p chất ma t&#250;y (Điều 251) với khối lượng ma t&#250;y rất lớn nhưng họ kh&#244;ng phải là chủ mưu, cầm đầu, chỉ huy hoặc kh&#244;ng c&#243; 02 t&#236;nh tiết tăng nặng tr&#225;ch nhiệm h&#236;nh sự trở l&#234;n th&#236; họ c&#243; được chuyển h&#236;nh phạt tửh&#236;nh th&#224;nh t&#249; chung th&#226;n kh&#244;ng?</p><p>=&gt; Theo quy định tại điểm b khoản 3 Điều 4 của Luật sửa đổi, bổ sung một số điều của Bộ luật H&#236;nh sự (c&#243; hiệu lực thi h&#224;nh từ ng&#224;y 01/7/2025) th&#236; h&#236;nh phạt tử h&#236;nh đ&#227; tuy&#234;n trước ng&#224;y 01/7/2025 đối với người phạm tội về Tội sản xuất tr&#225;i ph&#233;p chất ma t&#250;y (Điều 248) hoặc Tội mua b&#225;n tr&#225;i ph&#233;p chất ma t&#250;y (Điều 251) m&#224; chưa thi h&#224;nh &#225;n th&#236; được chuyển h&#236;nh phạt tử h&#236;nh th&#224;nh t&#249; chung th&#226;n nếu khối lượng, thể t&#237;ch chất ma t&#250;y được x&#225;c định trong bản &#225;n để quyết định h&#236;nh phạt lớn hơn khối lượng, thể t&#237;ch chất ma t&#250;y thấp nhất quy định tại khoản 5 Điều 248 hoặc khoản 5 Điều 251 của Bộ luật H&#236;nh sự m&#224; người phạm tội kh&#244;ng phải l&#224; người chủ mưu, cầm đầu, chỉ huy hoặc kh&#244;ng c&#243; 02 t&#236;nh tiết tăng nặng tr&#225;ch nhiệm h&#236;nh sự trở l&#234;n.</p><p>=&gt; Do đ&#243;, trường hợp n&#224;y, nếu bản &#225;n kh&#244;ng x&#225;c định người phạm tội l&#224; người chủ mưu, cầm đầu hoặc chỉ huy hoặc kh&#244;ng x&#225;c định họ c&#243; 02 t&#236;nh tiết tăng nặng tr&#225;ch nhiệm h&#236;nh sự trở l&#234;n theo hướng dẫn tại Điều 5 của Nghị quyết 03/2025/NQ-HĐTP ng&#224;y 30/9/2025 của Hội đồng Thẩm ph&#225;n T&#242;a &#225;n nh&#226;n d&#226;n tối cao hướng dẫn &#225;p dụng một số quy định về chuyển h&#236;nh phạt tử h&#236;nh th&#224;nh t&#249; chung th&#226;n th&#236; T&#242;a &#225;n xem x&#233;t, quyết định chuyển h&#236;nh phạt tử h&#236;nh th&#224;nh chung th&#226;n đối với người phạm tội, kh&#244;ng phụ thuộc v&#224;o khối lượng, thể t&#237;ch chất ma t&#250;y được x&#225;c định trong bản &#225;n.</p><p>2. Khi xử l&#253; vật, tiền c&#243; li&#234;n quan trong vụ &#225;n h&#236;nh sự về tội cho vạy l&#227;i nặng trong giao dịch d&#226;n sự, cơ quan c&#243; thẩm quyền căn cứ v&#224;o tổng số tiền cho vay qua nhiều lần giao dịch hay chỉ căn cứ v&#224;o số tiền gốc ban đầu để tịch thu sung quỹ nh&#224; nước?</p><p>=&gt; Theo hướng dẫn tại điểm a khoản 1 Điều 5 Nghị quyết số 01/2021/NQHĐTP ng&#224;y 20/12/2021 của Hội đồng Thẩm ph&#225;n T&#242;a &#225;n nh&#226;n d&#226;n tối cao hướng dẫn &#225;p dụng Điều 201 của Bộ luật H&#236;nh sự v&#224; việc x&#233;t xử vụ &#225;n h&#236;nh sự về tội cho vay l&#227;i nặng trong giao dịch d&#226;n sự th&#236; phải tịch thụ sung quỹ nh&#224; nước đối với khoản tiền, t&#224;i sản kh&#225;c m&#224; người phạm tội d&#249;ng để cho vay. Theo đ&#243;, t&#249;y từng trường hợp xử l&#253; như sau:</p><p>- Trường hợp cho vay nhiều lần nhưng mỗi lần giao dịch c&#243; số tiền gốc l&#224; độc lập, kh&#244;ng li&#234;n quan đến nhau th&#236; số tiền cho vay l&#224; tổng số tiền gốc của từng lần giao dịch.</p><p>V&#237; dụ: Lần 1, ng&#224;y 01/01/2025, Nguyễn Văn A cho Nguyễn Văn B vay với số tiền gốc l&#224; 10.000.000 đồng trong thời hạn 07 ng&#224;y với số tiền l&#227;i l&#224; 1.400.000 đồng (20.000 đồng/1.000.000 đồng/01 ng&#224;y). Lần 2, ng&#224;y 05/01/2025, A lại tiếp tục cho B vay với số tiền 50.000.000 đồng trong thời hạn 07 ng&#224;y, với số tiền l&#227;i l&#224; 7.000.000 đồng. Trường hợp n&#224;y, tổng số tiền cho vay được x&#225;c định l&#224; 60.000.000 đồng.</p><p>- Trường hợp cho vay nhiều lần nhưng lần giao dịch sau c&#243; số tiền cho vay l&#224; số tiền gốc ban đầu cộng với tiền l&#227;i của lần trước m&#224; chưa trả th&#236; số tiền cho vay l&#224; số tiền gốc ban đầu.</p><p>V&#237; dụ: Nguyễn Văn A cho Nguyễn Văn B vay lần 1 với số tiền gốc l&#224; 10.000.000 đồng trong thời hạn 07 ng&#224;y với l&#227;i suất l&#224; 1.400.000 đồng (20.000 đồng/1.000.000 đồng/01 ng&#224;y). Đến hạn B kh&#244;ng trả được nợ cho A n&#234;n A tiếp tục lập giấy vay nợ lần 2 với tổng số tiền l&#224; 11.400.000 đồng (bao gồm tiền gốc v&#224; l&#227;i lần 1) trong thời hạn 07 ng&#224;y với l&#227;i suất 17.556.000 đồng. Trường hợp n&#224;y, số tiền cho vay l&#224; số tiền gốc ban đầu được x&#225;c định l&#224; 10.000.000 đồng.</p><p>3. Bị c&#225;o thực hiện h&#224;nh vi vi phạm quy định về điều khiển phương tiện giao th&#244;ng đường bộ, qu&#225; tr&#236;nh điều tra v&#224; tại phi&#234;n t&#242;a bị c&#225;o khai trước khi tham gia giao th&#244;ng kh&#244;ng uống rượu, bia. Kết quả gi&#225;m định x&#225;c định nồng độ cồn trong m&#225;u của bị c&#225;o l&#224; 0,282mg/100ml (kh&#244;ng x&#225;c định nồng độ cồn do nguy&#234;n nh&#226;n n&#224;o). Trường hợp n&#224;y c&#243; &#225;p dụng t&#236;nh tiết “trong t&#236;nh trạng c&#243; sử dụng rượu, bia m&#224; trong m&#225;u hoặc hơi thở c&#243; nồng độ cồn vượt qu&#225; m&#237;ức quy định, c&#243; sử dụng chất ma t&#250;y hoặc chất k&#237;ch th&#237;ch mạnh kh&#225;c” quy định tại điểm b khoản 2 Điều 260 của Bộ luật H&#236;nh sự đối với bị c&#225;o kh&#244;ng?</p><p>=&gt;Theo quy định tại điểm b khoản 2 Điều 260 của Bộ luật H&#236;nh sự th&#236; người phạm tội bị &#225;p dụng t&#236;nh tiết n&#224;y phải trong t&#236;nh trạng c&#243; sử dụng rượu, bia. Do đ&#243;, để &#225;p dụng t&#236;nh tiết n&#224;y th&#236; kết luận gi&#225;m định phải x&#225;c định r&#245; nồng độ cồn trong m&#225;u l&#224; do sử dụng rượu, bia hoặc c&#243; căn cứ kh&#225;c chứng minh người phạm tội đ&#227; sử dụng rượu, bia. Trường hợp kh&#244;ng c&#243; căn cứ x&#225;c định người phạm tội đ&#227; sử dụng rượu, bia th&#236; kh&#244;ng &#225;p dụng t&#236;nh tiết n&#224;y.</p><p>4. Nguyễn Văn A đưa bạn g&#225;i l&#224; Nguyễn Thị B (B 15 tuổi) về ph&#242;ng trọ của A. Tại ph&#242;ng trọ, trong một khoảng thời gian, A đ&#227; thực hiện h&#224;nh vi 2 giao cấu với B 02 lần. Trường hợp n&#224;y, A c&#243; bị &#225;p dụng t&#236;nh tiết “phạm tội 02 lần trở l&#234;n” kh&#244;ng?</p><p>=&gt; Theo hướng dẫn tại khoản 7 Điều 4 Nghị quyết số 04/2025/NQ-HĐTP ng&#224;y 30/09/2025 của Hội đồng Thẩm ph&#225;n T&#242;a &#225;n nh&#226;n d&#226;n tối cao hướng dẫn &#225;p dụng c&#225;c t&#236;nh tiết giảm nhẹ tr&#225;ch nhiệm h&#236;nh sự, c&#225;c t&#236;nh tiết tăng nặng tr&#225;ch nhiệm h&#236;nh sự quy định tại Điểu 51 v&#224; Điều 52 của Bộ luật H&#236;nh sự th&#236; “phạm tội 02 lần trở l&#234;n” quy định tại điểm g khoản 1 Điều 52 của Bộ luật H&#236;nh sự l&#224; trường hợp người phạm tội đ&#227; thực hiện từ 02 lần phạm tội trở l&#234;n đối với một tội phạm m&#224; mỗi lần phạm tội đều c&#243; đủ yếu tố cấu th&#224;nh tội phạm nhưng chưa c&#243; lần n&#224;o bị truy cứu tr&#225;ch nhiệm h&#236;nh sự v&#224; chưa hết thời hiệu truy cứu tr&#225;ch nhiệm h&#236;nh sự. Do vậy, trường hợp n&#224;y, nếu mỗi lần thực hiện h&#224;nh vi giao cấu của A đ&#227; đủ yếu tố cấu th&#224;nh tội phạm th&#236; A bị &#225;p dụng t&#236;nh tiết “phạm tội 02 lần trở l&#234;n”.</p><p>5. T&#236;nh tiết “đ&#227; bị xử phạt vi phạm h&#224;nh ch&#237;nh về một trong c&#225;c h&#224;nh vi quy định tại Điều n&#224;y” quy định tại khoản 1 Điều 306 của Bộ luật H&#236;nh sự chỉ được &#225;p dụng cho khoản 1 Điều 306 của Bộ luật H&#236;nh sự hay được &#225;p dụng cho tất cả c&#225;c khoản kh&#225;c tại Điều 306 của Bộ luật H&#236;nh sự?</p><p>=&gt; Trường hợp n&#234;u tr&#234;n, hậu quả, quy m&#244; của h&#224;nh vi chế tạo, t&#224;ng trữ, vận chuyển, sử dụng, mua b&#225;n tr&#225;i ph&#233;p hoặc chiếm đoạt s&#250;ng săn, vũ kh&#237; th&#244; sơ, vũ kh&#237; thể thao, vũ kh&#237; kh&#225;c c&#243; t&#237;nh năng, t&#225;c dụng tương tự như s&#250;ng săn, vũ kh&#237; thể thao hoặc c&#244;ng cụ hỗ trợ được quy định l&#224; t&#236;nh tiết định khung tăng nặng tr&#225;ch nhiệm h&#236;nh sự tại khoản 2 v&#224; khoản 3 Điều 306 của Bộ luật H&#236;nh sự. Trong khi đ&#243;, t&#236;nh tiết “đ&#227; bị xử phạt vi phạm h&#224;nh ch&#237;nh về một trong c&#225;c h&#224;nh vi quy định tại Điều n&#224;y” quy định tại khoản 1 Điều 306 của Bộ luật H&#236;nh sự kh&#244;ng gắn với hậu quả, quy m&#244; tội phạm để l&#224;m căn cứ truy cứu tr&#225;ch nhiệm h&#236;nh sự tại khoản 2 v&#224; khoản 3 Điều 306 của Bộ luật H&#236;nh sự. Như vậy, t&#236;nh tiết định khung h&#236;nh phạt quy định tại khoản 2 v&#224; khoản 3 Điều 306 của Bộ luật H&#236;nh sự l&#224; độc lập, kh&#244;ng bắt buộc phải đủ yếu tố cấu th&#224;nh tội phạm quy định tại khoản 1 Điều 306 của Bộ luật H&#236;nh sự mới được &#225;p dụng t&#236;nh tiết định khung tăng nặng tr&#225;ch nhiệm h&#236;nh sự.</p><p>6. Nguyễn Văn A đủ 18 tuổi, nhiều lần thực hiện h&#224;nh vi quan hệ t&#236;nh dục đều c&#243; sự đồng &#253; của Nguyễn Thị B. Trong đ&#243; c&#243; lần quan hệ t&#236;nh dục khi B chưa đủ 13 tuổi v&#224; c&#243; lần quan hệ t&#236;nh dục khi B đ&#227; đủ 13 tuổi đến dưới 16 tuổi. Vậy A bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội hiếp d&#226;m người dưới 16 tuổi theo quy định tại Điều 142 của Bộ luật H&#236;nh sự hay Tội giao cấu hoặc thực hiện h&#224;nh vi quan hệ t&#236;nh dục kh&#225;c với người từ đủ 13 tuổi đến dưới 16 tuổi theo quy định tại Điều 145 của Bộ luật H&#236;nh sự hay bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về c&#227; 02 tội tr&#234;n?</p><p>=&gt; Đối với h&#224;nh vi quan hệ t&#236;nh dục khi B chưa đủ 13 tuổi th&#236; cấu th&#224;nh Tội hiếp d&#226;m người dưới 16 tuổi theo quy định tại Điều 142 của Bộ luật H&#236;nh sự.</p><p>=&gt; Đối với h&#224;nh vi quan hệ t&#236;nh dục khi B từ đủ 13 tuổi đến dưới 16 tuổi th&#236; cấu th&#224;nh Tội giao cấu hoặc thực hiện h&#224;nh vi quan hệ t&#236;nh dục kh&#225;c với người từ đủ 13 tuổi đến dưới 16 tuổi theo quy định tại Điều 145 của Bộ luật H&#236;nh sự.</p><p>=&gt; Như vậy, trường hợp n&#224;y, A bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội hiếp d&#226;m người dưới 16 tuổi theo quy định tại Điều 142 của Bộ luật H&#236;nh sự v&#224; Tội giao cấu hoặc thực hiện h&#224;nh vi quan hệ t&#236;nh dục kh&#225;c với người từ đủ 13 tuổi đến dưới 16 tuổi theo quy định tại Điều 145 của Bộ luật H&#236;nh sự, nếu c&#243; đủ yếu tố cấu th&#224;nh tội phạm. Tuy nhi&#234;n, khi quyết định h&#236;nh phạt, ngo&#224;i việc căn cứ quy định tại Điều 50 của Bộ luật H&#236;nh sự, T&#242;a &#225;n cần c&#226;n nhắc đến ho&#224;n cảnh gia đ&#236;nh, m&#244;i trường sống, phong tục, tập qu&#225;n v&#224; t&#236;nh h&#236;nh thực tiễn tại địa phương để xem x&#233;t, quyết định cho ph&#249; hợp.</p><p>7. Trường hợp người c&#243; h&#224;nh vi sử dụng dao c&#243; t&#237;nh s&#225;t thương cao g&#226;y rối, l&#224;m mất trật tự c&#244;ng cộng th&#236; bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội g&#226;y rối trật tự c&#244;ng cộng theo quy định tại điểm b khoản 2 Điều 318 của Bộ luật H&#236;nh sự hay bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về 02 tội l&#224; Tội g&#226;y rối trật tự c&#244;ng cộng theo quy định tại điểm b khoản 2 Điều 318 của Bộ luật H&#236;nh sự v&#224; Tội chế tạo, t&#224;ng trữ, vận chuyển, sử dụng, mua b&#225;n tr&#225;i ph&#233;p hoặc chiếm đoạt s&#250;ng săn, vũ kh&#237; th&#244; sơ, vũ kh&#237; thể thao hoặc c&#244;ng cụ hỗ trợ theo quy định tại Điều 306 của Bộ luật H&#236;nh sự?</p><p>=&gt; Trường hợp người sử dụng dao c&#243; t&#237;nh s&#225;t thương cao để thực hiện h&#224;nh vi g&#226;y rối, l&#224;m mất trật tự c&#244;ng cộng th&#236; bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội g&#226;y rối trật tự c&#244;ng cộng theo quy định tại điểm b khoản 2 Điều 318 của Bộ luật H&#236;nh sự, nếu c&#243; đủ yếu tố cấu th&#224;nh tội phạm m&#224; kh&#244;ng bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội chế tạo, t&#224;ng trữ, vận chuyển, sử dụng, mua b&#225;n tr&#225;i ph&#233;p hoặc chiếm đoạt s&#250;ng săn, vũ kh&#237; th&#244; sơ, vũ kh&#237; thể thao hoặc c&#244;ng cụ hỗ trợ theo quy định tại Điều 306 của Bộ luật H&#236;nh sự.</p><p>8. Về kh&#243; khăn vướng mắc đối với Tội l&#224;m giả con dấu, t&#224;i liệu của cơ quan, tổ chức; sử dụng con dấu hoặc t&#224;i liệu giả của cơ quan, tổ chức quy định tại Điều 341 của Bộ luật H&#236;nh sự:</p><p>- Trường hợp bị c&#225;o kh&#244;ng phải l&#224; người trực tiếp l&#224;m giả giấy đi đường m&#224; nhờ hoặc thu&#234; người kh&#225;c l&#224;m giả giấy đi đường, sau đ&#243; sử dụng giấy đi đường để thực hiện h&#224;nh vi tr&#225;i ph&#225;p luật. Trường hợp n&#224;y mặc d&#249; đ&#227; được hướng dẫn tại C&#244;ng văn số 196/TANDTC-PC ng&#224;y 03/10/2023 của T&#242;a &#225;n nh&#226;n d&#226;n tối cao, tuy nhi&#234;n vẫn c&#242;n quan điểm kh&#225;c nhau về xử l&#253; tr&#225;ch nhiệm h&#236;nh sự đối với bị c&#225;o về Tội sử dụng con dấu hoặc t&#224;i liệu giả của cơ quan, tổ chức hay Tội l&#224;m giả con dấu, t&#224;i liệu của cơ quan, tổ chức theo quy định tại Điều 341 của Bộ luật H&#236;nh sự.</p><p>=&gt; Về vấn đề n&#224;y, C&#244;ng văn số 196/TANDTC-PC ng&#224;y 03/10/2023 của T&#242;a &#225;n nh&#226;n d&#226;n tối cao đ&#227; x&#225;c định bị c&#225;o kh&#244;ng phải l&#224; người trực tiếp l&#224;m giả giấy đi đường m&#224; chỉ c&#243; h&#224;nh v&#236; nhờ hoặc thu&#234; người kh&#225;c l&#224;m giả giấy đi đường, sau đ&#243; sử dụng giấy đi đường để thực hiện h&#224;nh vi tr&#225;i ph&#225;p luật th&#236; chỉ phạm Tội sử dụng con dấu hoặc t&#224;i liệu giả của cơ quan, tổ chức, nếu c&#243; đủ yếu tố cấu th&#224;nh tội phạm, m&#224; kh&#244;ng xử l&#253; tr&#225;ch nhiệm h&#236;nh sự về Tội l&#224;m giả con dấu, t&#224;i liệu của cơ quan, tổ chức. Đề nghị c&#225;c T&#242;a &#225;n thực hiện thống nhất như nội dung đ&#227; hướng dẫn.</p><p>- Trường hợp bị c&#225;o trực tiếp tham gia l&#224;m giả 01 t&#224;i liệu sau đ&#243; đi c&#244;ng chứng, chứng thực th&#224;nh nhiều bản sao th&#236; x&#225;c định bị c&#225;o l&#224;m hoặc sử dụng bao nhi&#234;u t&#224;i liệu giả để l&#224;m cơ sở truy cứu tr&#225;ch nhiệm h&#236;nh sự (t&#237;nh theo bản gốc hay cả c&#225;c bản sao). Bị c&#225;o c&#243; h&#224;nh vi l&#224;m giả giấy tờ, t&#224;i liệu, sau đ&#243; sử dụng gi&#226;y tờ t&#224;i liệu đ&#243; v&#224;o giao dịch tr&#225;i ph&#225;p luật. Vậy ngo&#224;i việc xử l&#253; bị c&#225;o về Tội l&#224;m giả con dấu, t&#224;i liệu của cơ quan, tổ chức, c&#243; xử l&#253; bị c&#225;o về Tội sử dụng con dấu hoặc t&#224;i liệu giả của cơ quan, tổ chức hay kh&#244;ng. Nếu x&#233;t xử bị c&#225;o về 02 tội danh tr&#234;n th&#236; &#225;p dụng 01 h&#236;nh phạt chung cho cả 02 tội hay &#225;p dụng h&#236;nh phạt ri&#234;ng cho mỗi tội danh sau đ&#243; tổng hợp h&#236;nh phạt.</p><p>=&gt; Đối với trường hợp l&#224;m giả 01 t&#224;i liệu sau đ&#243; đi c&#244;ng chứng, chứng thực th&#224;nh nhiều bản sao th&#236; c&#225;c bản sao được c&#244;ng chứng, chứng thực kh&#244;ng được t&#237;nh l&#224; số lượng t&#224;i liệu giả để truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội l&#224;m gi&#224; con dấu, t&#224;i liệu của cơ quan, tổ chức theo quy định tại điểm c khoản 2 v&#224; điểm a khoản 3 Điều 341 của Bộ luật H&#236;nh sự. Trường hợp sử dụng c&#225;c bản sao để thực hiện h&#224;nh vi tr&#225;i ph&#225;p luật th&#236; bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội sử dụng con dấu hoặc t&#224;i liệu giả của cơ quan, tổ chức, nếu c&#243; đủ yếu tố cấu th&#224;nh tội phạm.</p><p>=&gt; Mục 2 Phần I của C&#244;ng văn số 196/TANDTC-PC ng&#224;y 03/10/2023 của T&#242;a &#225;n nh&#226;n d&#226;n tối cao đ&#227; x&#225;c định Điều 341 của Bộ luật H&#236;nh sự quy định về Tội l&#224;m giả con dấu, t&#224;i liệu của cơ quan, tổ chức; Tội sử dụng con dấu hoặc t&#224;i liệu giả của cơ quan, tổ chức l&#224; 02 tội danh độc lập trong c&#249;ng 01 điều luật. Do vậy, nếu c&#225;c h&#224;nh vi của bị c&#225;o đủ yếu tố cấu th&#224;nh 02 tội n&#224;y th&#236; bị c&#225;o phải bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về 02 tội danh độc lập, quyết định h&#236;nh phạt đối với mỗi tội sau đ&#243; tổng hợp h&#236;nh phạt theo quy định.</p><p>9. Theo quy định tại khoản 1 Điều 256a của Bộ luật H&#236;nh sự th&#236; người n&#224;o: (1) đang trong thời hạn cai nghiện ma t&#250;y hoặc điều trị nghiện c&#225;c chất ma t&#250;y bằng thuốc thay thế; (2) đang trong thời hạn quản l&#253; sau cai nghiện ma t&#250;y; (3) đang trong thời hạn 02 năm kể từ ng&#224;y hết thời hạn quản l&#253; sau cai nghiện ma t&#250;y v&#224; trong thời hạn quản l&#253; người sử dụng tr&#225;i ph&#233;p chất ma t&#250;y; (4) đang trong thời hạn 02 năm kể từ khi tự &#253; chấm dứt cai nghiện ma t&#250;y tự nguyện hoặc điều trị nghiện c&#225;c chất ma t&#250;y bằng thuốc thay thế m&#224; sử dụng tr&#225;i ph&#233;p chất ma t&#250;y th&#236; bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội sử dụng tr&#225;i ph&#233;p chất ma t&#250;y.</p><p>Trường hợp, người sử dụng tr&#225;i ph&#233;p chất ma t&#250;y sau ng&#224;y 01/7/2025 m&#224; đang c&#242;n một trong 04 thời hạn n&#234;u tr&#234;n th&#236; c&#243; bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội sử dụng tr&#225;i ph&#233;p chất ma t&#250;y kh&#244;ng? Thời điểm x&#225;c định c&#225;c thời hạn n&#234;u tr&#234;n l&#224; trước ng&#224;y 01/7/2025 hay sau ng&#224;y 01/7/2025 (ng&#224;y Luật sửa đổi, bỗ sung một số điều của Bộ luật H&#236;nh sự c&#243; hiệu lực thi h&#224;nh)?</p><p>=&gt; Theo quy định tại Điều 256a của Bộ luật H&#236;nh sự th&#236; người n&#224;o sử dụng tr&#225;i ph&#233;p chất ma t&#250;y m&#224; đang trong một trong 04 thời hạn n&#234;u tr&#234;n th&#236; bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội sử dụng tr&#225;i ph&#233;p chất ma t&#250;y. Như vậy, điều luật kh&#244;ng quy định cụ thể c&#225;c thời hạn được x&#225;c định từ thời điểm n&#224;o, tuy nhi&#234;n, nếu x&#225;c định 04 thời hạn n&#224;y phải từ sau ng&#224;y 01/7/2025 th&#236; chưa phủ hợp, sẽ dẫn đến hiệu lực thi h&#224;nh quy định tại Điều 256a của Bộ luật H&#236;nh sự l&#249;i sau thời điểm c&#243; hiệu lực thi h&#224;nh của Luật sửa đổi, bổ sung một số điều của Bộ luật H&#236;nh sự. Do vậy, nếu người sử dụng tr&#225;i ph&#233;p chất ma t&#250;y v&#224; vẫn đang trong thời hạn quy định tại khoản 1 Điều 256a của Bộ luật H&#236;nh sự th&#236; bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội sử dụng tr&#225;i ph&#233;p chất ma t&#250;y kh&#244;ng phụ thuộc v&#224;o c&#225;c thời hạn đ&#243; c&#243; trước hoặc sau ng&#224;y 01/7/2025.</p><p>10. Người nghiện ma t&#250;y đăng k&#253; cai nghiện tự nguyện tại gia đ&#236;nh, cộng đồng hoặc điều trị nghiện c&#225;c chất dạng thuốc phiện bằng thuốc thay thế nhưng kh&#244;ng c&#243; quyết định cai nghiện ma t&#250;y tự nguyện của Chủ tịch Ủy ban nh&#226;n d&#226;n cấp x&#227; m&#224; lại sử dụng tr&#225;i ph&#233;p chất ma t&#250;y th&#236; họ c&#243; bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội sử dụng tr&#225;i ph&#233;p chất ma t&#250;y theo quy định tại Điều 256a của Bộ luật H&#236;nh sự kh&#244;ng?</p><p>=&gt; Theo quy định tại Điều 30 của Luật Ph&#242;ng, chống ma t&#250;y năm 2021 v&#224; Điều 30 Nghị định số 116/2021/NĐ-CP ng&#224;y 21/12/2021 của Ch&#237;nh phủ quy định chi tiết một số điều của Luật Ph&#242;ng, chống ma t&#250;y, Luật Xử l&#253; vi phạm h&#224;nh ch&#237;nh về cai nghiện ma t&#250;y v&#224; quản l&#253; sau cai nghiện ma t&#250;y th&#236; người nghiện ma t&#250;y đăng k&#253; cai nghiện tự nguyện tại gia đ&#236;nh, cộng đồng hoặc điều trị nghiện c&#225;c chất dạng thuốc phiện bằng thuốc thay thế phải c&#243; quyết định cai nghiện ma t&#250;y tự nguyện của Chủ tịch Ủy ban nh&#226;n d&#226;n cấp x&#227;. Quyết định n&#224;y l&#224; căn cứ, cơ sở x&#225;c định người nghiện ma t&#250;y đ&#227; hoặc đang tự nguyện cai nghiện ma t&#250;y tại gia đ&#236;nh, cộng đồng. Do đ&#243;, nếu người sử dụng tr&#225;i ph&#233;p chất ma t&#250;y kh&#244;ng c&#243; Quyết định cai nghiện ma t&#250;y tự nguyện tại gia đ&#236;nh, cộng đồng của Chủ tịch Ủy ban nh&#226;n d&#226;n cấp x&#227; m&#224; lại sử dụng tr&#225;i ph&#233;p chất ma t&#250;y th&#236; kh&#244;ng c&#243; cơ sở xem x&#233;t, truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội sử dụng tr&#225;i ph&#233;p chất ma t&#250;y theo quy định tại Điều 256a của Bộ luật H&#236;nh sự.</p><p>11. Nguyễn Văn Ả đ&#227; c&#243; 01 tiền &#225;n về Tội trộm cắp t&#224;i sản chưa được x&#243;a &#225;n t&#237;ch, sau đ&#243; A lại thực hiện 02 h&#224;nh vi trộm cắp, trong đ&#243;: 01 h&#224;nh vi đủ định lượng, 01 h&#224;nh vi kh&#244;ng đủ định lượng của Tội trộm cắp t&#224;i sản theo quy định tại khoản 1 Điều 173 của Bộ luật H&#236;nh sự. Trường hợp n&#224;y, A bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội trộm cắp t&#224;i sản với t&#236;nh tiết l&#224; t&#225;i phạm hay phạm tội 02 lần trở l&#234;n?</p><p>=&gt; Đối với h&#224;nh vi trộm cắp t&#224;i sản đủ định lượng theo quy định tại khoản 1 Điều 173 của Bộ luật H&#236;nh sự th&#236; A bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội trộm cắp t&#224;i sản, nếu c&#243; đủ yếu tố cấu th&#224;nh tội phạm (phạm tội lần 01).</p><p>=&gt; Đối với h&#224;nhvi trộm cắp t&#224;i sản kh&#244;ng đủ định lượng theo quy định tại khoản 1 Điều 173 của Bộ luật H&#236;nh sự nhưng do trước đ&#243; A đ&#227; bị kết &#225;n về Tội trộm cắp t&#224;i sản, chưa được x&#243;a &#225;n t&#237;ch. Căn cứ quy định tại khoản 1 Điều 173 của Bộ luật H&#236;nh sự, A bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội trộm cắp t&#224;i sản, nếu c&#243; đủ yếu tố cấu th&#224;nh tội phạm (phạm tội lần 02). Như vậy, t&#236;nh tiết “đ&#227; bị kết &#225;n” được sử dụng để l&#224;m t&#236;nh tiết định tội lần 02. Do đ&#243;, căn cứ khoản 2 Điều 52 của Bộ luật H&#236;nh sự th&#236; kh&#244;ng sử dụng t&#236;nh tiết l&#224; dấu hiệu định tội l&#224; t&#236;nh tiết tăng nặng tr&#225;ch nhiệm h&#236;nh sự.</p><p>=&gt; Do vậy, trường hợp n&#224;y, A bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội trộm cắp t&#224;i sản theo quy định tại Điều 173 của Bộ luật H&#236;nh sự v&#224; bị &#225;p dụng t&#236;nh tiết tăng nặng tr&#225;ch nhiệm h&#236;nh sự “phạm tội 02 lần trở l&#234;n” theo quy định tại điểm g khoản 1 Điểu 52 của Bộ luật H&#236;nh sự.</p><p>12. Nguyễn Văn A hỏi mua chất ma t&#250;y của Nguyễn Văn B để sử dụng. B đồng &#253; b&#225;n chất ma t&#250;y v&#224; đ&#227; nhận tiền của A. B mua chất ma t&#250;y của C theo số lượng m&#224; A đ&#227; đặt mua. Tr&#234;n đường mang chất ma t&#250;y về giao cho A th&#236; B bị thu giữ số ma t&#250;y tr&#234;n. Trường hợp n&#224;y, A phạm tội mua b&#225;n tr&#225;i ph&#233;p chất ma t&#250;y hay tội t&#224;ng trữ tr&#225;i ph&#233;p chất ma t&#250;y (thuộc trường hợp phạm tội chưa đạt)?</p><p>=&gt; Nguyễn Văn A chưa c&#243; h&#224;nh vi cất giữ, cất giấu bất hợp ph&#225;p chất ma t&#250;y, theo đ&#243; kh&#244;ng c&#243; h&#224;nh vi t&#224;ng trữ tr&#225;i ph&#233;p chất ma t&#250;y n&#234;n kh&#244;ng cấu th&#224;nh Tội t&#224;ng trữ tr&#225;i ph&#233;p chất ma t&#250;y theo quy định tại Điều 249 của Bộ luật H&#236;nh sự. Trường hợp n&#224;y, Nguyễn Văn A đ&#227; đưa tiền cho Nguyễn Văn B để B mua chất ma t&#250;y nhằm b&#225;n tr&#225;i ph&#233;p chất ma t&#250;y cho m&#236;nh. B đ&#227; mua chất ma t&#250;y của C theo số lượng m&#224; A đ&#227; đặt mua. Do vậy, B đ&#227; phạm tội mua b&#225;n tr&#225;i ph&#233;p chất ma t&#250;y v&#224; A cũng phạm tội mua b&#225;n tr&#225;i ph&#233;p chất ma t&#250;y quy định tại Điều 251 của Bộ luật H&#236;nh sự với vai tr&#242; l&#224; đồng phạm.</p><p>13. Vụ &#225;n c&#243; nhiều bị c&#225;o, sau khi x&#233;t xử sơ thẩm một số bị c&#225;o kh&#244;ng kh&#225;ng c&#225;o v&#224; bản &#225;n sơ thẩm c&#243; hiệu lực đối với bị c&#225;o n&#224;y. Một số bị c&#225;o kh&#225;ng c&#225;o xin giảm h&#236;nh phạt. Khi x&#233;t xử ph&#250;c thẩm, T&#242;a &#225;n cấp ph&#250;c thẩm c&#243; quyền hủy to&#224;n bộ bản &#225;n sơ thẩm (bao gồm cả phần bản &#225;n c&#243; hiệu lực) để điều tra, x&#233;t xử lại theo hướng tăng nặng hay kh&#244;ng?</p><p>=&gt; Theo quy định tại khoản 2 Điều 357 của Bộ luật Tố tụng h&#236;nh sự, khi c&#243; kh&#225;ng nghị của Viện kiểm s&#225;t, kh&#225;ng c&#225;o của bị hại th&#236; Hội đồng x&#233;t xử ph&#250;c thẩm c&#243; thể: (1) Tăng h&#236;nh phạt, &#225;p dụng điều, khoản của Bộ luật H&#236;nh sự về tội nặng hơn; &#225;p dụng h&#236;nh phạt bổ sung; &#225;p dụng biện ph&#225;p tư ph&#225;p; (2) Tăng mức bồi thường thiệt hại; (3) Chuyển sang h&#236;nh phạt kh&#225;c thuộc loại nặng hơn; (4) Kh&#244;ng cho bị c&#225;o hưởng &#225;n treo.</p><p>=&gt; Đối với trường hợp n&#224;y, vụ &#225;n chỉ c&#243; kh&#225;ng c&#225;o của bị c&#225;o m&#224; kh&#244;ng c&#243; kh&#225;ng c&#225;o của bị hại, kh&#225;ng nghị của Viện kiểm s&#225;t. Do vậy, T&#242;a &#225;n cấp ph&#250;c thẩm kh&#244;ng c&#243; quyền hủy to&#224;n bộ bản &#225;n sơ thẩm (bao gồm cả phần bản &#225;n c&#243; hiệu lực) để điều tra, x&#233;t xử lại theo hướng tăng nặng m&#224; kiến nghị người c&#243; thẩm quyền kh&#225;ng nghị theo thủ tục gi&#225;m đốc thẩm.</p><p>14. Nguyễn Văn A bị xử phạt 05 năm t&#249; về Tội giết người, chấp h&#224;nh h&#236;nh phạt t&#249; trong trại giam được hơn 02 năm th&#236; bỏ trốn khỏi nơi giam, cơ quan c&#243; thẩm quyền kh&#244;ng ra lệnh truy n&#227; ngay m&#224; hơn 14 năm sau mới ra lệnh truy n&#227;, đến nay vẫn chưa bắt được. Trường hợp n&#224;y A c&#243; được hưởng thời hiệu thi h&#224;nh bản &#225;n hay kh&#244;ng?</p><p>=&gt; Theo quy định tại khoản 1 Điều 60 của Bộ luật H&#236;nh sự th&#236; “Thời hiệu thi h&#224;nh bản &#225;n h&#236;nh sự l&#224; thời hạn do Bộ luật n&#224;y quy định m&#224; khi hết thời hạn đ&#243; người bị kết &#225;n, ph&#225;p nh&#226;n thương mại bị kết &#225;n kh&#244;ng phải chấp h&#224;nh bản &#225;n đ&#227; tuy&#234;n”.</p><p>=&gt; Trường hợp n&#224;y, A đ&#227; thi h&#224;nh bản &#225;n được hơn 02 năm th&#236; bỏ trốn, n&#234;n phải x&#225;c định A l&#224; người đang chấp h&#224;nh &#225;n, m&#224; kh&#244;ng phải l&#224; chưa chấp h&#224;nh bản &#225;n (hoặc đ&#227; được ho&#227;n chấp h&#224;nh h&#236;nh phạt t&#249;, tạm đ&#236;nh chỉ chấp h&#224;nh h&#236;nh phạt t&#249;) để xem x&#233;t c&#243; được hưởng thời hiệu thi h&#224;nh &#225;n hay kh&#244;ng. Hơn nữa, người chấp h&#224;nh &#225;n buộc phải biết việc chấp h&#224;nh bản &#225;n của T&#242;a &#225;n. Do đ&#243;, trường hợp n&#224;y A kh&#244;ng được hưởng thời hiệu thi h&#224;nh bản &#225;n.</p><p>15. Trường hợp người đang chấp h&#224;nh h&#236;nh phạt t&#249; bị &#225;p dụng biện ph&#225;p tư ph&#225;p bắt buộc chữa bệnh theo quyết định của T&#242;a &#225;n m&#224; hết thời hạn chấp h&#224;nh &#225;n phạt t&#249; vẫn chưa khỏi bệnh th&#236; T&#242;a &#225;n giải quyết như thế n&#224;o?</p><p>=&gt; Khoản 3 Điều 49 của Bộ luật H&#236;nh sự quy định:</p><p>“3. Đối với người đang chấp h&#224;nh h&#236;nh phạt t&#249; m&#224; bị bệnh tới mức mất khả năng nhận thức hoặc khả năng điều khiển h&#224;nh vi của m&#236;nh, th&#236; căn cứ v&#224;o kết luận gi&#225;m định ph&#225;p y, gi&#225;m định ph&#225;p y t&#226;m thần, T&#242;a &#225;n c&#243; thể quyết định đưa họ v&#224;o một cơ sở kh&#225;m bệnh, chữa bệnh để bắt buộc chữa bệnh...</p><p>Thời gian bắt buộc chữa bệnh được trừ v&#224;o thời hạn chấp h&#224;nh h&#236;nh phạt t&#249;.”</p><p>=&gt; Như vậy, trường hợp người đang chấp h&#224;nh h&#236;nh phạt t&#249; bị &#225;p dụng biện ph&#225;p tư ph&#225;p bắt buộc chữa bệnh theo quyết định của T&#242;a &#225;n m&#224; hết thời hạn chấp h&#224;nh &#225;n phạt t&#249; vẫn chưa khỏi bệnh th&#236; thời gian bắt buộc chữa bệnh được trừ v&#224;o thời hạn chấp h&#224;nh h&#236;nh phạt t&#249;. Nếu đến thời điểm hết thời hạn chấp h&#224;nh &#225;n phạt t&#249;, người đ&#243; vẫn chưa khỏi bệnh th&#236; T&#242;a &#225;n căn cứ điểm b khoản 2 Điều 44 của Bộ luật Tố tụng h&#236;nh sự ra quyết định đ&#236;nh chỉ biện ph&#225;p bắt buộc chữa bệnh.</p><p>16. Nguyễn Văn A d&#249;ng xe m&#244; t&#244; chở Nguyễn Thị B l&#224; người dưới 16 tuổi g&#226;y tai nạn giao th&#244;ng, hậu quả B chết. A bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội vi phạm quy định về tham gia giao th&#244;ng đường bộ. Trường hợp n&#224;y, A c&#243; bị &#225;p dụng t&#236;nh tiết tăng nặng tr&#225;ch nhiệm h&#236;nh sự “Phạm tội đổi với người đưới 16 tuổi” theo quy định tại điểm i khoản 1 Điều 52 của Bộ luật H&#236;nh sự kh&#244;ng?</p><p>=&gt; Kh&#225;ch thể bị x&#226;m phạm của Tội vi phạm quy định về tham gia giao th&#244;ng đường bộ (Điều 260 của Bộ luật H&#236;nh sự) l&#224; trật tự an to&#224;n giao th&#244;ng đường bộ. A kh&#244;ng cố &#253; x&#226;m phạm đến t&#237;nh mạng, sức khỏe của B. Do đ&#243;, A kh&#244;ng bị &#225;p dụng t&#236;nh tiết tăng nặng tr&#225;ch nhiệm h&#236;nh sự “Phạm tội đối với người dưới 16 tuổi” theo quy định tại điểm i khoản 1 Điều 52 của Bộ luật H&#236;nh sự.</p><p>17. Trường hợp nh&#243;m thanh, thiếu ni&#234;n tụ tập, điều khiển m&#244; t&#244;, xe m&#225;y di chuyển tốc độ cao, lạng l&#225;ch, đ&#225;nh v&#245;ng, mang theo hung kh&#237; nguy hiểm t&#236;m đ&#225;nh nhau đế giải quyết m&#226;u thuẩn th&#236; bị truy cứu tr&#225;ch nhiệm h&#236;nh sự theo quy định tại khoản 6 Điều 134 hay điểm b khoản 2 Điều 318 của Bộ luật H&#236;nh sự?</p><p>=&gt; Theo quy định tại khoản 6 Điều 134 của Bộ luật H&#236;nh sự v&#224; hướng dẫn tại tiểu mục 9 mục I C&#244;ng văn số 163/TANDTC-PC ng&#224;y 10/9/2024 th&#236; trường hợp n&#224;y, nh&#243;m thanh, thiếu ni&#234;n đ&#227; chuẩn bị hung kh&#237; nguy hiểm v&#224; x&#225;c định r&#245; được đối tượng m&#236;nh sẽ g&#226;y thương t&#237;ch hoặc g&#226;y tổn hại cho sức khỏe của họ. Do vậy, c&#225;c đối tượng n&#224;y bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội cố &#253; g&#226;y thương t&#237;ch theo quy định tại khoản 6 Điều 134 của Bộ luật H&#236;nh sự, nếu c&#243; đủ yếu tổ cấu th&#224;nh tội phạm.</p><p>=&gt; Nếu nh&#243;m thanh, thiếu ni&#234;n d&#249;ng hung kh&#237; nguy hiểm l&#224; vũ kh&#237; qu&#226;n dụng th&#236; c&#225;c đối tượng n&#224;y bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội chế tạo, t&#224;ng trữ, vận chuyển, sử dụng, mua b&#225;n tr&#225;i ph&#233;p hoặc chiếm đoạt vũ kh&#237; qu&#226;n dụng, phương tiện kỹ thuật qu&#226;n sự theo quy định tại Điều 304 của Bộ luật H&#236;nh sự, nếu c&#243; đủ yếu tố cấu th&#224;nh tội phạm theo hướng dẫn tại điểm c tiểu mục 1.2 mục 1 C&#244;ng văn số 01/TANDTC-PC ng&#224;y 05/01/2026 của T&#242;a &#225;n nh&#226;n d&#226;n tối cao.</p><p>18. Nguyễn Văn A c&#243; h&#224;nh vi t&#224;ng trữ 01 khẩu s&#250;ng k&#237;p v&#224; 100 gam thuốc nỗ. A khai thuốc nổ d&#249;ng để l&#224;m mồi nỗ của s&#250;ng, s&#250;ng k&#237;p d&#249;ng để đi săn th&#250; rừng. H&#224;nh vi t&#224;ng trữ 01 khẩu s&#250;ng k&#237;p của A bị xử phạt vi phạm h&#224;nh ch&#237;nh theo quy định tại khoản 4 Điều 11 Nghị định số 144/2021/NĐ-СР. Đối với h&#224;nh vi t&#224;ng trữ thuốc nỗ của A c&#243; bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội t&#224;ng trữ tr&#225;i ph&#233;p vật liệu nổ theo quy định tại Điều 305 của Bộ luật H&#236;nh sự kh&#244;ng?</p><p>=&gt; Theo quy định tại điểm a khoản 7 Điều 3 của Luật Quản l&#253;, sử dụng vũ kh&#237;, vật liệu nổ v&#224; c&#244;ng cụ hỗ trợ v&#224; hướng dẫn tại khoản 4 Điều 2 của Nghị quyết số 03/2022/NQ-HĐTP ng&#224;y 09/9/2022 của Hội đồng Thẩm ph&#225;n T&#242;a &#225;n nh&#226;n d&#226;n tối cao hướng dẫn &#225;p dụng một số quy định tại Điều 304, Điều 305, Điều 306, Điều 307 v&#224; Điều 308 của Bộ luật H&#236;nh sự th&#236; thuốc nổ l&#224; vật liệu nổ. Do vậy, h&#224;nh vi t&#224;ng trữ 100 gam thuốc nổ của Nguyễn Văn A bị truy cứu tr&#225;ch nhiệm h&#236;nh sự về Tội t&#224;ng trữ tr&#225;i ph&#233;p vật liệu nổ theo quy định tại Điều 305 của Bộ luật H&#236;nh sự, nếu c&#243; đủ yếu tố cấu th&#224;nh tội phạm.</p><p>19. T&#242;a &#225;n nh&#226;n d&#226;n khu vực x&#233;t xử sơ thẩm đối với 03 bị c&#225;o, sau x&#233;t xử sơ thẩm 01 bị c&#225;o đầu vụ c&#243; kh&#225;ng c&#225;o xin giảm nhẹ h&#236;nh phạt (02 bị c&#225;o kh&#244;ng c&#243; kh&#225;ng c&#225;o). Khi x&#233;t xử ph&#250;c thẩm, do vụ &#225;n kh&#244;ng c&#243; kh&#225;ng nghị của Viện kiểm s&#225;t, bị c&#225;o chỉ kh&#225;ng c&#225;o xin giảm nhẹ h&#236;nh phạt, n&#234;n T&#242;a &#225;n cấp ph&#250;c thẩm kh&#244;ng c&#243; quyền sửa bản &#225;n theo hướng bất lợi cho bị c&#225;o v&#224; nhận định T&#242;a &#225;n cấp sơ thẩm quyết định h&#236;nh phạt cho bị c&#225;o c&#243; phần nhẹ, chưa tương xứng với t&#237;nh chất, mức độ, hậu quả của h&#224;nh vi phạm tội m&#224; bị c&#225;o g&#226;y ra, c&#243; sai lầm nghi&#234;m trọng trong việc &#225;p dụng Bộ luật H&#236;nh sự. Do đ&#243;, để kh&#244;ng l&#224;m xấu đi t&#236;nh trạng của bị c&#225;o n&#234;n Hội đồng x&#233;t xử x&#233;t ph&#250;c thẩm kh&#244;ng chấp nhận kh&#225;ng c&#225;o của bị c&#225;o, giữ nguy&#234;n bản &#225;n h&#236;nh sự sơ thẩm. Trường hợp n&#224;y, Ch&#225;nh &#225;n To&#224; &#225;n nh&#226;n d&#226;n tỉnh c&#243; thẩm quyền kh&#225;ng nghị gi&#225;m đốc thẩm đối với bản &#225;n h&#236;nh sự sơ thẩm của To&#224; &#225;n nh&#226;n d&#226;n khu vực theo hướng tăng mức h&#236;nh phạt đối với cả 03 bị c&#225;o hay kh&#244;ng?</p><p>=&gt; Đối với bản &#225;n ph&#250;c thẩm đ&#227; tuy&#234;n đối với 01 bị c&#225;o th&#236; người c&#243; thẩm quyền kh&#225;ng nghị theo thủ tục gi&#225;m đốc thẩm l&#224; Ch&#225;nh &#225;n T&#242;a &#225;n nh&#226;n d&#226;n tối cao, Viện trưởng Viện kiểm s&#225;t nh&#226;n d&#226;n tối cao theo quy định tại khoản 1 Điều 373 của Bộ luật Tố tụng h&#236;nh sự đ&#227; được sửa đổi, bổ một một số điều năm 2025 (sau đ&#226;y gọi l&#224; Bộ luật Tố tụng h&#236;nh sự)&#39;; đối với bản &#225;n sơ thẩm đ&#227; tuy&#234;n đối với 02 bị c&#225;o c&#242;n lại kh&#244;ng bị kh&#225;ng c&#225;o, kh&#225;ng nghị n&#234;n c&#243; hiệu lực ph&#225;p luật th&#236; người c&#243; thẩm quyền kh&#225;ng nghị theo thủ tục gi&#225;m đốc thầm c&#243; thể l&#224; Ch&#225;nh &#225;n T&#242;a &#225;n nh&#226;n d&#226;n tối cao, Viện trưởng Viện kiểm s&#225;t nh&#226;n d&#226;n tối cao theo quy định tại khoản 1 Điều 373 của Bộ luật Tố tụng h&#236;nh sự khi x&#233;t thấy cần thiết hoặc Ch&#225;nh &#225;n T&#242;a &#225;n nh&#226;n d&#226;n cấp tỉnh, Viện trưởng Viện kiểm s&#225;t nh&#226;n d&#226;n cấp tỉnh theo quy định tại khoản 3 Điều 373 của Bộ luật Tố tụng h&#236;nh sự.</p><p>=&gt; Trường hợp n&#234;u tr&#234;n nếu Ch&#225;nh &#225;n T&#242;a &#225;n nh&#226;n d&#226;n cấp tỉnh, Viện trưởng Viện kiểm s&#225;t nh&#226;n d&#226;n cấp tỉnh kh&#225;ng nghị theo thủ tục gi&#225;m đốc thẩm đối với bản &#225;n sơ thẩm sẽ kh&#244;ng c&#243; thẩm quyền xem x&#233;t đối với bản &#225;n ph&#250;c thẩm đ&#227; tuy&#234;n đối với bị c&#225;o c&#243; kh&#225;ng c&#225;o. Do đ&#243;, để bảo đảm t&#237;nh kh&#225;ch quan, to&#224;n diện khi giải quyết vụ &#225;n, trường hợp n&#224;y Ch&#225;nh &#225;n T&#242;a &#225;n nh&#226;n d&#226;n tối cao, Viện trưởng Viện kiểm s&#225;t nh&#226;n d&#226;n tối cao xem x&#233;t kh&#225;ng nghị theo thủ tục gi&#225;m đốc thẩm đối với bản &#225;n ph&#250;c thẩm, bản &#225;n sơ thẩm v&#224; căn cứ khoản 5 Điều 382 của Bộ luật Tố tụng h&#236;nh sự, Hội đồng Thẩm ph&#225;n T&#242;a &#225;n nh&#226;n d&#226;n tối cao gi&#225;m đốc to&#224;n bộ vụ &#225;n.</p><p>20. Điều 124 của Luật Tư ph&#225;p người chưa th&#224;nh ni&#234;n quy định T&#242;a &#225;n ấn định thời gian thử th&#225;ch cho người chưa th&#224;nh ni&#234;n phạm tội được hưởng &#225;n treo từ 01 năm đến 03 năm. Tuy nhi&#234;n, T&#242;a &#225;n c&#243; được ấn định thời gian thử th&#225;ch cho người phạm tội l&#224; người chưa th&#224;nh ni&#234;n được hưởng &#225;n treo bằng 02 lần mức h&#236;nh phạt t&#249; như người đ&#227; th&#224;nh ni&#234;n kh&#244;ng?</p><p>=&gt; Theo quy định tại Điều 124 của Luật Tư Ph&#225;p người chưa th&#224;nh ni&#234;n th&#236; thời gian thử th&#225;ch đối với người chưa th&#224;nh ni&#234;n được hưởng &#225;n treo l&#224; từ 01 năm đến 03 năm. Khi cho người chưa th&#224;nh ni&#234;n phạm tội hưởng &#225;n treo, T&#242;a &#225;n ấn định thời gian thử th&#225;ch bằng mức h&#236;nh phạt t&#249; nhưng kh&#244;ng được dưới 01 năm v&#224; kh&#244;ng được qu&#225; 03 năm.</p><p>21. Trường hợp Cơ quan điều tra, Viện kiểm s&#225;t chuyển hồ sơ đề nghị &#225;p dụng biện ph&#225;p xử l&#253; chuyển hướng cho T&#242;a &#225;n nhưng T&#242;a &#225;n kh&#244;ng chấp nhận đề nghị v&#224; trả hồ sơ để giải quyết theo thủ tục tố tụng, sau đ&#243; Viện kiểm s&#225;t ra c&#225;o trạng đề nghị T&#242;a &#225;n x&#233;t xử vụ &#225;n theoeo quy định. Vậy tại giai đoạn x&#233;t xử, T&#242;a &#225;n c&#243; xem x&#233;t, quyết định &#225;p dụng biện ph&#225;p xử l&#253; chuyển hướng đối với người chưa th&#224;nh ni&#234;n nữa hay kh&#244;ng?</p><p>=&gt; Theo quy định tại khoản 6 Điều 151 của Luật Tư ph&#225;p người chưa th&#224;nh ni&#234;n th&#236; “Khi x&#233;t xử, nếu th&#225;y người chưa th&#224;nh ni&#234;n c&#243; đủ điều kiện &#225;p dụng biện ph&#225;p xử l&#253; chuyển hướng th&#236; Hội đồng x&#233;t xử xem x&#233;t, ra quyết định &#225;p dụng biện ph&#225;p xử l&#253; chuyển hướng đối với bị c&#225;o”. Như vậy, trong trường hợp n&#224;y, nếu người chưa th&#224;nh ni&#234;n c&#243; đủ c&#225;c điều kiện &#225;p dụng biện ph&#225;p xử l&#253; chuyển hướng theo quy định của Luật Tư ph&#225;p người chưa th&#224;nh ni&#234;n th&#236; T&#242;a &#225;n vẫn xem x&#233;t &#225;p dụng biện ph&#225;p xử l&#253; chuyễn hướng đối với họ.</p><p>22. Luật Tư ph&#225;p người chưa th&#224;nh ni&#234;n quy định việc xin lỗi bị hại được thi h&#224;nh ngay tại phi&#234;n họp hoặc tại phi&#234;n t&#242;a. Tuy nhi&#234;n, nếu bị hại kh&#244;ng c&#243; mặt tại phi&#234;n họp hoặc phi&#234;n t&#242;a th&#236; T&#242;a &#225;n c&#243; xem x&#233;t, quyết định &#225;p dụng v&#224; thi h&#224;nh biện ph&#225;p xử l&#253; chuyển hướng xin lỗi bị hại đối với người chưa th&#224;nh ni&#234;n kh&#244;ng?</p><p>=&gt; Khoản 1 Điều 41 của Luật Tư ph&#225;p người chưa th&#224;nh ni&#234;n quy định việc xin lỗi bị hại được thi h&#224;nh ngay tại phi&#234;n họp hoặc phi&#234;n t&#242;a. Đ&#226;y l&#224; biện ph&#225;p để người chưa th&#224;nh ni&#234;n nhận lỗi trước bị hại gi&#250;p họ thay đổi nhận thức v&#224; sửa chữa sai lầm m&#224; m&#236;nh đ&#227; g&#226;y ra. Do đ&#243;, nếu tại phi&#234;n họp, phi&#234;n t&#242;a m&#224; bị hại văng mặt th&#236; T&#242;a &#225;n c&#243; thể ho&#227;n phi&#234;n họp, phi&#234;n t&#242;a.</p><p>=&gt; Trường hợp bị hại c&#243; đơn đề nghị giải quyết văng mặt hoặc đ&#227; được triệu tập hợp lệ lần thứ hai m&#224; vẫn vắng mặt th&#236; T&#242;a &#225;n vẫn xem x&#233;t, quyết định &#225;p dụng v&#224; thi h&#224;nh biện ph&#225;p xử l&#253; chuyển hướng xin lỗi bị hại.</p><p>23. Luật Tư ph&#225;p người chưa th&#224;nh ni&#234;n c&#243; hiệu lực thi h&#224;nh từ ng&#224;y 01/01/2026. Đối với những vụ &#225;n h&#236;nh sự c&#243; bị c&#225;o l&#224; người chưa th&#224;nh ni&#234;n đang trong giai đoạn x&#233;t xứ sơ thẩm m&#224; đến ng&#224;y 01/01/2026 chưa giải quyết xong th&#236; việc xử l&#253;, &#225;p dụng biện ph&#225;p xử l&#253; chuyển hướng đối với người chưa th&#224;nh ni&#234;n được thực hiện như thế n&#224;o?</p><p>=&gt; Trường hợp n&#224;y, T&#242;a &#225;n &#225;p dụng quy định tại điểm a khoản 1 Điều 179 của Luật Tư ph&#225;p người chưa th&#224;nh ni&#234;n để giải quyết. Theo đ&#243;, đối với những vụ việc, vụ &#225;n đang trong qu&#225; tr&#236;nh x&#233;t xử sơ thẩm m&#224; đến ng&#224;y 01/01/2026 chưa kết th&#250;c th&#236; &#225;p dụng quy định của Luật Tư ph&#225;p người chưa th&#224;nh ni&#234;n để giải quyết, trừ thời hạn điều tra, thời hạn quyết định việc truy tố hoặc thời hạn chuẩn bị x&#233;t xử sơ thẩm, thời hạn tạm giữ, thời hạn tạm giam v&#224; việc t&#225;ch vụ &#225;n được thực hiện theo quy định của Bộ luật Tố tụng h&#236;nh sự. Nếu trong giai đoạn x&#233;t xử chưa c&#243; sự tham gia của người l&#224;m c&#244;ng t&#225;c x&#227; hội th&#236; T&#242;a &#225;n y&#234;u cầu người l&#224;m c&#244;ng t&#225;c x&#227; hội tham gia tổ tụng.</p><p>=&gt; Trường hợp thời hạn x&#233;t xử sơ thẩm kh&#244;ng đủ để &#225;p dụng đầy đủ thủ tục xử l&#253; chuyển hướng nhưng c&#243; căn cứ để &#225;p dụng biện ph&#225;p xử l&#253; chuyển hướng th&#236; T&#242;a &#225;n sẽ xem x&#233;t, quyết định &#225;p dụng biện ph&#225;p xử l&#253; chuyển hướng đối với người chưa th&#224;nh ni&#234;n tại phi&#234;n họp xem x&#233;t, &#225;p dụng biện ph&#225;p xử l&#253; chuyển hướng hoặc tại phi&#234;n t&#242;a.</p><p>24. Khoản 4 Điều 12 của Luật Tư ph&#225;p người chưa th&#224;nh ni&#234;n quy định T&#242;a &#225;n chỉ &#225;p dụng h&#236;nh phạt t&#249; c&#243; thời hạn đối với người chưa th&#224;nh ni&#234;n phạm tội khi x&#233;t thấy h&#236;nh phạt v&#224; c&#225;c biện ph&#225;p kh&#225;c kh&#244;ng c&#243; t&#225;c dụng răn đe, ph&#242;ng ngừa. Tuy nhi&#234;n, trường hợp người chưa th&#224;nh ni&#234;n phạm tội chỉ c&#243; 01 t&#236;nh tiết giảm nhẹ “Th&#224;nh khẩn khai b&#225;o, ăn năn hối cải” theo điểm s khoản 1 Điều 51 của Bộ luật H&#236;nh sự th&#236; c&#243; bị &#225;p dụng h&#236;nh phạt v&#224; c&#225;c biện ph&#225;p kh&#225;c ngo&#224;i h&#236;nh phạt t&#249; hay kh&#244;ng?</p><p>=&gt; Trường hợp n&#224;y, khi xem x&#233;t, quyết định h&#236;nh phạt đối với người chưa th&#224;nh ni&#234;n phạm tội, T&#242;a &#225;n cần phải xem x&#233;t, đ&#225;nh gi&#225; t&#237;nh chất, mức độ nguy hiểm của h&#224;nh vi phạm tội, c&#225;c t&#236;nh tiết tăng nặng, giảm nhẹ tr&#225;ch nhiệm h&#236;nh sự cũng như khả năng gi&#225;o dục, phục hồi của người chưa th&#224;nh ni&#234;n để quyết định h&#236;nh phạt bảo đảm ph&#249; hợp với ho&#224;n cảnh, độ tuổi, đặc điểm t&#226;m sinh l&#253; của người chưa th&#224;nh ni&#234;n m&#224; kh&#244;ng nhất thiết phải căn cứ bị c&#225;o c&#243; một t&#236;nh tiết giảm nhẹ.</p>",
+            "timeline": [],
+            "laws": [
+              {
+                "name": "Điều 248",
+                "content": ""
+              },
+              {
+                "name": "Điều 251",
+                "content": ""
+              },
+              {
+                "name": "điểm b khoản 3 Điều 4 của Luật sửa đổi",
+                "content": ""
+              },
+              {
+                "name": "khoản 5 Điều 248",
+                "content": ""
+              },
+              {
+                "name": "khoản 5 Điều 251 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Điều 5",
+                "content": "",
+                "name_en": "Article 5",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Article 5",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "điểm a khoản 1 Điều 5",
+                "content": ""
+              },
+              {
+                "name": "Điều 201 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "điểm b khoản 2 Điều 260 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "khoản 7 Điều 4",
+                "content": ""
+              },
+              {
+                "name": "Điều 52 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "điểm g khoản 1 Điều 52 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 306 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Điều 306 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "khoản 3 Điều 306 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Điều 142 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Điều 145 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Điều 50 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "điểm b khoản 2 Điều 318 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Điều 341 của Bộ luật H&#236",
+                "content": "1. Người nào làm giả con dấu, tài liệu hoặc giấy tờ khác của cơ quan, tổ chức hoặc sử dụng con dấu, tài liệu, giấy tờ đó thực hiện hành vi trái pháp luật, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng, phạt cải tạo không giam giữ đến 03 năm hoặc bị phạt tù từ 06 tháng đến 03 năm.2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 05 năm:a) Có tổ chức;b) Phạm tội 02 lần trở lên;c) Làm từ 02 đến 05 con dấu, tài liệu hoặc giấy tờ khác;d) Sử dụng con dấu, tài liệu hoặc giấy tờ khác thực hiện tội phạm;đ) Thu lợi bất chính 10.000.000 đồng đến dưới 50.000.000 đồng;e) Tái phạm nguy hiểm.3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 03 năm đến 07 năm:a) Làm 06 con dấu, tài liệu hoặc giấy tờ khác trở lên;b) Sử dụng con dấu, tài liệu hoặc giấy tờ khác thực hiện tội phạm rất nghiêm trọng hoặc tội đặc biệt nghiêm trọng;c) Thu lợi bất chính 50.000.000 đồng trở lên.4. Người phạm tội còn có thể bị phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng."
+              },
+              {
+                "name": "điểm a khoản 3 Điều 341 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 256a của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Điều 256a của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Điều 30 của Luật Ph&#242",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 173 của Bộ luật H&#236",
+                "content": "",
+                "name_en": "Clause 1 Article 173",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Clause 1 Article 173",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "khoản 2 Điều 52 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Điều 173 của Bộ luật H&#236",
+                "content": "1. Người nào trộm cắp tài sản của người khác trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng hoặc dưới 2.000.000 đồng nhưng thuộc một trong các trường hợp sau đây, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm:a) Đã bị xử phạt vi phạm hành chính về hành vi chiếm đoạt tài sản mà còn vi phạm;b) Đã bị kết án về tội này hoặc về một trong các tội quy định tại các điều 168, 169, 170, 171, 172, 174, 175 và 290 của Bộ luật này, chưa được xóa án tích mà còn vi phạm;c) Gây ảnh hưởng xấu đến an ninh, trật tự, an toàn xã hội;d) Tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ; tài sản là kỷ vật, di vật, đồ thờ cúng có giá trị đặc biệt về mặt tinh thần đối với người bị hại.2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 07 năm:a) Có tổ chức;b) Có tính chất chuyên nghiệp;c) Chiếm đoạt tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng;d) Dùng thủ đoạn xảo quyệt, nguy hiểm;đ) Hành hung để tẩu thoát;e) Trộm cắp tài sản trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;g) Tái phạm nguy hiểm.3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 07 năm đến 15 năm:a) Chiếm đoạt tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng;b) Trộm cắp tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;c) Lợi dụng thiên tai, dịch bệnh.4. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 12 năm đến 20 năm:a) Chiếm đoạt tài sản trị giá 500.000.000 đồng trở lên;b) Trộm cắp tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;c) Lợi dụng hoàn cảnh chiến tranh, tình trạng khẩn cấp.5. Người phạm tội còn có thể bị phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng.",
+                "name_en": "Article 173",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Article 173",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Điều 249 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 357 của Bộ luật Tố tụng h&#236",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 60 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Khoản 3 Điều 49 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "điểm b khoản 2 Điều 44 của Bộ luật Tố tụng h&#236",
+                "content": ""
+              },
+              {
+                "name": "điểm i khoản 1 Điều 52 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Điều 260 của Bộ luật H&#236",
+                "content": "1. Người nào tham gia giao thông đường bộ mà vi phạm quy định về an toàn giao thông đường bộ thuộc một trong các trường hợp sau đây, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng, phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 01 năm đến 05 năm:a) Làm chết 01 người hoặc gây thương tích hoặc gây tổn hại cho sức khỏe của 01 người với tỷ lệ tổn thương cơ thể 61% trở lên;b) Gây thương tích hoặc gây tổn hại cho sức khỏe cho 02 người với tỷ lệ tổn thương cơ thể của mỗi người từ 31% đến 60%;c) Gây thương tích hoặc gây tổn hại cho sức khỏe cho 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 61% đến 121%;d) Gây thiệt hại về tài sản từ 100.000.000 đồng đến dưới 500.000.000 đồng.2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 03 năm đến 10 năm:a) Không có giấy phép lái xe theo quy định;b) Trong tình trạng có sử dụng rượu, bia mà trong máu hoặc hơi thở có nồng độ cồn vượt quá mức quy định hoặc có sử dụng chất ma túy hoặc các chất kích thích mạnh khác mà pháp luật cấm sử dụng;c) Gây tai nạn rồi bỏ chạy để trốn tránh trách nhiệm hoặc cố ý không cứu giúp người bị nạn;d) Không chấp hành hiệu lệnh của người điều khiển hoặc hướng dẫn giao thông;đ) Làm chết 02 người;e) Gây thương tích hoặc gây tổn hại cho sức khỏe của 02 người với tỷ lệ tổn thương cơ thể của mỗi người 61% trở lên;g) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 122% đến 200%;h) Gây thiệt hại về tài sản từ 500.000.000 đồng đến dưới 1.500.000.000 đồng.3. Phạm tội thuộc một trong các trường sau đây, thì bị phạt tù từ 07 năm đến 15 năm:a) Làm chết 03 người trở lên;b) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người với tỷ lệ tổn thương cơ thể của mỗi người 61% trở lên;c) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này 201% trở lên;d) Gây thiệt hại về tài sản 1.500.000.000 đồng trở lên.4. Người tham gia giao thông đường bộ mà vi phạm quy định về an toàn giao thông đường bộ gây thương tích hoặc gây tổn hại cho sức khỏe của 01 người với tỷ lệ tổn thương cơ thể từ 31% đến 60% hoặc gây thương tích hoặc gây tổn hại cho sức khỏe của 02 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 31% đến 60%, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng hoặc phạt cải tạo không giam giữ đến 03 năm.5. Vi phạm quy định về an toàn giao thông đường bộ mà có khả năng thực tế dẫn đến hậu quả gây thiệt hại cho tính mạng, sức khỏe hoặc tài sản của người khác nếu không được ngăn chặn kịp thời, thì bị phạt tiền từ 10.000.000 đồng đến 50.000.000 đồng, phạt cải tạo không giam giữ đến 01 năm hoặc phạt tù từ 03 tháng đến 01 năm.6. Người phạm tội còn có thể bị cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định từ 01 năm đến 05 năm."
+              },
+              {
+                "name": "khoản 6 Điều 134",
+                "content": ""
+              },
+              {
+                "name": "Điều 304 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "khoản 4 Điều 11",
+                "content": ""
+              },
+              {
+                "name": "Điều 305 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "điểm a khoản 7 Điều 3 của Luật Quản l&#253",
+                "content": ""
+              },
+              {
+                "name": "khoản 4 Điều 2",
+                "content": ""
+              },
+              {
+                "name": "Điều 307",
+                "content": ""
+              },
+              {
+                "name": "Điều 308 của Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 373 của Bộ luật Tố tụng h&#236",
+                "content": ""
+              },
+              {
+                "name": "khoản 3 Điều 373 của Bộ luật Tố tụng h&#236",
+                "content": ""
+              },
+              {
+                "name": "khoản 5 Điều 382 của Bộ luật Tố tụng h&#236",
+                "content": ""
+              },
+              {
+                "name": "Điều 124 của Luật Tư ph&#225",
+                "content": ""
+              },
+              {
+                "name": "khoản 6 Điều 151 của Luật Tư ph&#225",
+                "content": ""
+              },
+              {
+                "name": "Khoản 1 Điều 41 của Luật Tư ph&#225",
+                "content": ""
+              },
+              {
+                "name": "điểm a khoản 1 Điều 179 của Luật Tư ph&#225",
+                "content": ""
+              },
+              {
+                "name": "Khoản 4 Điều 12 của Luật Tư ph&#225",
+                "content": ""
+              },
+              {
+                "name": "điểm s khoản 1 Điều 51 của Bộ luật H&#236",
+                "content": "",
+                "name_en": "Point s Clause 1 Article 51",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Point s Clause 1 Article 51",
+                    "content": ""
+                  }
+                }
+              }
+            ]
+          },
+          {
             "id": "case-cong-van-163-tandtc-pc-nam-2024-hinh-su-1",
             "ten": "Công văn 163 TANDTC - PC năm 2024",
             "mo_ta": "",
@@ -4305,6 +4560,221 @@
           }
         ],
         "dan-su::giai-dap-nghiep-vu": [
+          {
+            "id": "case-cong-van-250-dan-su-1",
+            "ten": "Công văn 250/TANDTC-PC về việc thông báo kết quả giải đáp trực tuyến một số vướng mắc trong công tác xét xử",
+            "mo_ta": "",
+            "lvId": "dan-su",
+            "lvName": "Dân sự",
+            "sfId": "giai-dap-nghiep-vu",
+            "sfName": "Giải đáp nghiệp vụ",
+            "sao": 0,
+            "ngay": "2026-05-11T19:38:07.8219883+07:00",
+            "importedAt": "2026-05-11T13:01:04.225Z",
+            "updatedAt": "2026-05-11T13:01:04.225Z",
+            "tom_luoc": "",
+            "ap_dung": "",
+            "chi_tiet": "<div class=\"detail-section-title\">VỀ D&#194;N SỰ, TỐ TỤNG D&#194;N SỰ V&#192; KINH DOANH THƯƠNG MẠI</div><p>25. Trường hợp Hội đồng x&#233;t xử ph&#250;c thẩm giữ nguy&#234;n bản &#225;n sơ thẩm th&#236; việc giải th&#237;ch bản &#225;n sẽ do T&#242;a &#225;n cấp sơ thẩm hay T&#242;a &#225;n cấp ph&#250;c thầm thực hiện?</p><p>=&gt; Điều 486 của Bộ luật Tố tụng d&#226;n sự quy định:</p><p>“1. Người được thi h&#224;nh &#225;n, người phải thi h&#224;nh &#225;n, người c&#243; quyền lợi, nghĩa vụ li&#234;n quan đến việc thi h&#224;nh bản &#225;n, quyết định của T&#242;a &#225;n v&#224; cơ quan thi h&#224;nh &#225;n c&#243; quyển y&#234;u cầu bằng văn bản T&#242;a &#225;n đ&#227; ra bản &#225;n, quyết định, giải th&#237;ch, sửa chữa những điểm chưa r&#245; trong bản &#225;n, quyết định để thi h&#224;nh.</p><p>2. Thẩm ph&#225;n đ&#227; ra quyết định hoặc Thẩm ph&#225;n l&#224; chủ tọa phi&#234;n t&#242;a c&#243; tr&#225;ch nhiệm giải th&#237;ch, sửa chữa những điểm chưa r&#245; trong bản &#225;n, quyết định của T&#242;a &#225;n. Trường hợp họ kh&#244;ng c&#242;n l&#224; Thẩm ph&#225;n của T&#242;a &#225;n th&#236; Ch&#225;nh &#225;n T&#242;a &#225;n đ&#243; c&#243; tr&#225;ch nhiệm giải th&#237;ch, sửa chữa bản &#225;n, quyết định của T&#242;a &#225;n...&quot;</p><p>=&gt; Như vậy, theo quy định n&#234;u tr&#234;n th&#236; Thẩm ph&#225;n đ&#227; ra quyết định hoặc Thẩm ph&#225;n l&#224; chủ tọa phi&#234;n t&#242;a c&#243; tr&#225;ch nhiệm giải th&#237;ch bản &#225;n, quyết định của m&#236;nh. Trường hợp họ kh&#244;ng c&#242;n l&#224; Thẩm ph&#225;n của T&#242;a &#225;n th&#236; Ch&#225;nh &#225;n T&#242;a &#225;n đ&#243; c&#243; tr&#225;ch nhiệm giải th&#237;ch, sửa chữa bản &#225;n, quyết định của T&#242;a &#225;n.</p><p>=&gt; Trường hợp người c&#243; quyền y&#234;u cầu c&#243; văn bản y&#234;u cầu T&#242;a &#225;n cấp ph&#250;c thẩm giải th&#237;ch bản &#225;n, quyết định ph&#250;c thẩm hoặc giải th&#237;ch bản &#225;n, quyết định ph&#250;c thẩm v&#224; bản &#225;n, quyết định sơ thẩm th&#236; T&#242;a &#225;n cấp ph&#250;c thẩm chỉ c&#243; tr&#225;ch nhiệm giải th&#237;ch bản &#225;n, quyết định ph&#250;c thẩm.</p><p>=&gt; Trường hợp người c&#243; quyền y&#234;u cầu c&#243; văn bản y&#234;u cầu T&#242;a &#225;n cấp sơ thẩm giải th&#237;ch bản &#225;n, quyết định sơ thẩm hoặc giải th&#237;ch bản &#225;n, quyết định sơ thẩm v&#224; bản &#225;n, quyết định ph&#250;c thẩm th&#236; T&#242;a &#225;n cấp sơ thẩm chỉ c&#243; tr&#225;ch nhiệm giải th&#237;ch bản &#225;n, quyết định sơ thẩm.</p><p>26. Trong vụ &#225;n d&#226;n sự, bị đơn A l&#224; người cao tuổi c&#243; đơn gửi T&#242;a &#225;n xin miễn &#225;n ph&#237;. Qu&#225; tr&#236;nh giải quyết vụ &#225;n th&#236; bị đơn A chết v&#224; T&#242;a &#225;n đ&#227; đưa B v&#224;o tham gia tố tụng với tư c&#225;ch l&#224; người kế thừa quyền, nghĩa vụ tố tụng của bị đơn A (B kh&#244;ng thuộc trường hợp được miễn nộp tiền &#225;n ph&#237;). Nếu T&#242;a &#225;n x&#225;c định bị đơn A được miễn nộp tiền &#225;n ph&#237; th&#236; B c&#243; được miễn &#225;n ph&#237; hay kh&#244;ng?</p><p>=&gt; Theo quy định tại khoản 1 Điều 74 của Bộ luật Tố tụng d&#226;n sự th&#236;: “Trường hợp đương sự l&#224; c&#225; nh&#226;n đang tham gia tố tụng chết m&#224; quyền, nghĩa vụ về t&#224;i sản của họ được thừa kế th&#236; người thừa kế tham gia tố tụng&quot;.</p><p>=&gt; Như vậy, đối với trường hợp n&#234;u tr&#234;n, nếu T&#242;a &#225;n x&#225;c định bị đơn A được miễn nộp tiền &#225;n ph&#237;, B l&#224; người kế thừa quyền, nghĩa vụ tố tụng của bị đơn A th&#236; B được miễn &#225;n ph&#237;.</p><p>27. Khi khởi kiện những người thừa kế để thực hiện nghĩa vụ về t&#224;i sản do người chết để lại th&#236; người khởi kiện kh&#244;ng cung cấp được t&#224;i liệu, chứng cứ chứng minh l&#224; người chết c&#243; để lại t&#224;i sản. Trong trường hợp n&#224;y T&#242;a &#225;n thụ l&#253; vụ &#225;n hay trả lại đơn khởi kiện v&#236; thuộc trường hợp “chưa c&#243; đủ điều kiện khởi kiện theo quy định của ph&#225;p luật” quy định tại điểm b khoản 1 Điều 192 của Bộ luật Tố tụng d&#226;n sự?</p><p>=&gt; Điểm b khoản 1 Điều 192 của Bộ luật Tố tụng d&#226;n sự quy định:</p><p>“b) Chưa c&#243; đủ điều kiện khởi kiện theo quy định của ph&#225;p luật.</p><p>Chưa c&#243; đủ điều kiện khởi kiện l&#224; trường hợp ph&#225;p luật c&#243; quy định về c&#225;c điều kiện khởi kiện nhưng người khởi kiện đ&#227; khởi kiện đến T&#242;a ản khi c&#242;n thiếu một trong c&#225;c điều kiện đ&#243;;”</p><p>=&gt; Khoản 1 Điều 3 Nghị quyết số 04/2017/NQ-HĐTP ng&#224;y 05/5/2017 của Hội đồng Thẩm ph&#225;n T&#242;a &#225;n nh&#226;n d&#226;n tối cao hướng dẫn:</p><p>“Chưa c&#243; đủ điều kiện khởi kiện theo quy định của ph&#225;p luật l&#224; trường hợp ph&#225;p luật tố tụng d&#226;n sự, ph&#225;p luật kh&#225;c c&#243; quy định về c&#225;c điều kiện để cơ quan, tổ chức, c&#225; nh&#226;n khởi kiện y&#234;u cầu T&#242;a &#225;n bảo vệ quyền v&#224; lợi &#237;ch hợp ph&#225;p của m&#236;nh hoặc bảo vệ quyến v&#224; lợi &#237;ch hợp ph&#225;p của người kh&#225;c, lợi &#237;ch c&#244;ng cộng v&#224; lợi &#237;ch của Nh&#224; nước nhưng người khởi kiện đ&#227; khởi kiện đến T&#242;a &#225;n khi c&#242;n thiểu một trong c&#225;c điều kiện đ&#243;”.</p><p>=&gt; Như vậy, tại thời điểm khởi kiện người khởi kiện kh&#244;ng cung cấp được t&#224;i liệu, chứng cứ chứng minh l&#224; người chết c&#243; để lại t&#224;i sản th&#236; kh&#244;ng thuộc trường hợp “chưa đủ điều kiện khởi kiện” theo quy định tại điểm b khoản 1 Điều 192 của Bộ luật Tố tụng d&#226;n sự v&#224; hướng dẫn tại khoản 1 Điều 3 Nghị quyết số 04/2017/NQ-HĐTP ng&#224;y 05/5/2017 của Hội đồng Thẩm ph&#225;n T&#242;a &#225;n nh&#226;n d&#226;n tối cao n&#234;n T&#242;a &#225;n vẫn phải xem x&#233;t thụ l&#253; vụ &#225;n. Tuy nhiến, sau khi thụ l&#253; vụ &#225;n T&#242;a &#225;n phải y&#234;u cầu người khởi kiện cung cấp t&#224;i liệu, chứng cứ để chứng minh cho y&#234;u cầu khởi kiện của m&#236;nh theo quy định của ph&#225;p luật.</p><p>28. Trong qu&#225; tr&#236;nh giải quyết vụ &#225;n kinh doanh, thương mại, người đại diện theo ph&#225;p luật của C&#244;ng ty đ&#227; k&#253; giấy ủy quyền cho c&#225; nh&#226;n, ph&#225;p nh&#226;n kh&#225;c thay mặt C&#244;ng ty tham gia tố tụng. Sau đ&#243;, người đại diện theo ph&#225;p luật của C&#244;ng ty chết th&#236; giấy ủy quyền tham gia tố tụng của C&#244;ng ty c&#242;n hiệu lực ph&#225;p luật kh&#244;ng?</p><p>=&gt; Theo quy định của Bộ luật D&#226;n sự th&#236; đại diện của ph&#225;p nh&#226;n c&#243; thể l&#224; đại diện theo ph&#225;p luật hoặc đại diện theo ủy quyền v&#224; đại diện theo ủy quyền chỉ chấm dứt khi thuộc một trong c&#225;c trường hợp quy định tại khoản 3 Điều 140 của Bộ luật D&#226;n sự. Do trường hợp người đại diện theo ph&#225;p luật của C&#244;ng ty đ&#227; ủy quyền cho c&#225; nh&#226;n, ph&#225;p nh&#226;n kh&#225;c tham gia tố tụng nhưng sau đ&#243; người đại diện theo ph&#225;p luật của C&#244;ng ty chết kh&#244;ng thuộc một trong c&#225;c trường hợp chấm d&#250;t đại diện theo ủy quyền quy định tại khoản 3 Điều 140 của Bộ luật D&#226;n sự n&#234;n việc ủy quyền trong trường hợp n&#224;y vẫn c&#242;n hiệu lực.</p><p>29. Trong vụ &#225;n kinh doanh, thương mại, bị đơn l&#224; C&#244;ng ty cố phần X nhưng người đại diện theo ph&#225;p luật duy nhất của c&#244;ng ty đ&#227; chết. C&#225;c cổ đ&#244;ng s&#225;ng lập kh&#244;ng cử được người đại diện của c&#244;ng ty để tham gia tố tụng. Trường hợp n&#224;y, T&#242;a &#225;n c&#243; đưa tất cả c&#225;c cố đ&#244;ng s&#225;ng lập tham gia tố tụng với tư c&#225;ch l&#224; người đại diện của c&#244;ng ty kh&#244;ng?</p><p>=&gt; Căn cứ quy định tại khoản 1, 2 v&#224; 5 Điều 12, khoản 2 Điều 137 của Luật Doanh nghiệp (sửa đổi, bổ sung năm 2025) th&#236; trường hợp n&#224;y bị đơn l&#224; c&#244;ng ty cổ phần chỉ c&#243; một người đại diện theo ph&#225;p luật duy nhất, nhưng người đại diện theo ph&#225;p luật của c&#244;ng ty đ&#227; chết th&#236; Hội đồng quản trị c&#244;ng ty cổ phần phải cử người kh&#225;c l&#224;m người đại diện theo ph&#225;p luật của c&#244;ng ty. Nếu Hội đồng quản trị kh&#244;ng cử được người kh&#225;c l&#224;m đại diện theo ph&#225;p luật của c&#244;ng ty th&#236; T&#242;a &#225;n căn cứ quy định tại điểm c khoản 1 Điều 137 của Bộ luật D&#226;n sự để chỉ định người đại diện theo ph&#225;p luật của c&#244;ng ty tham gia tổ tụng tại T&#242;a &#225;n m&#224; kh&#244;ng đưa tất cả c&#225;c cổ đ&#244;ng s&#225;ng lập tham gia tố tụng với tư c&#225;ch l&#224; người đại diện của c&#244;ng ty.</p><p>30. Khoản 7 Điều 12 Luật Doanh nghiệp quy định T&#242;a &#225;n c&#243; quyền chỉ định người đại diện theo ph&#225;p luật của doanh nghiệp. Tuy nhi&#234;n, trong trường hợp người đại diện theo ph&#225;p luật vi phạm ph&#225;p luật h&#236;nh sự, doanh nghiệp kh&#244;ng thay đổi th&#244;ng tin đăng k&#253; kinh doanh n&#234;n kh&#244;ng c&#243; người đại diện theo ph&#225;p luật; T&#242;a &#225;n y&#234;u cầu nhưng doanh nghiệp kh&#244;ng cung cấp điều lệ, danh s&#225;ch th&#224;nh vi&#234;n Hội đồng quản trị, Hội đồng th&#224;nh vi&#234;n... hoặc c&#243; trường hợp nhiệm kỳ của Hội đồng quản trị, Hội đồng th&#224;nh vi&#234;n đ&#227; hết nhưng doanh nghiệp kh&#244;ng tổ chức đại hội để bầu Hội đồng quản trị, Hội đồng th&#224;nh vi&#234;n mới. Vậy trong c&#225;c trường hợp n&#224;y, T&#242;a &#225;n cần chỉ định ai l&#224; người đại diện theo ph&#225;p luật của doanh nghiệp?</p><p>=&gt; Căn cứ quy định tại khoản 1 Điều 434 của Bộ luật Tố tụng h&#236;nh sự, khoản 7 Điều 12 của Luật Doanh nghiệp (sửa đổi, bổ sung năm 2025) v&#224; khoản 1 Điều 137 của Bộ luật D&#226;n sự th&#236; trong trường hợp n&#224;y T&#242;a &#225;n phải y&#234;u cầu đương sự cung cấp t&#224;i liệu, chứng cứ để chứng minh tư c&#225;ch người đại diện theo ph&#225;p luật của doanh nghiệp. Trường hợp họ kh&#244;ng cung cập được th&#236; T&#242;a &#225;n y&#234;u c&#226;u Cơ quan đăng k&#253; kinh doanh cung cấp th&#244;ng tin về đăng k&#253; kinh doanh, điều lệ của doanh nghiệp. Tr&#234;n cơ sở t&#224;i liệu được cung cấp, T&#242;a &#225;n chỉ định người đại diện theo ph&#225;p luật của doanh nghiệp ph&#249; hợp với y&#234;u cầu giải quyết vụ việc. Người đại diện theo ph&#225;p luật của doanh nghiệp được T&#242;a &#225;n chỉ định tham gia tổ tụng c&#243; thể l&#224; một trong số nhiều người đại diện theo ph&#225;p luật của doanh nghiệp (trong trường hợp doanh nghiệp c&#243; nhiều người đại diện theo ph&#225;p luật); trường hợp doanh nghiệp kh&#244;ng c&#243; người đại diện theo ph&#225;p luật th&#236; T&#242;a &#225;n c&#243; quyền chỉ định người đang được giao quyền điều h&#224;nh, quản l&#253; doanh nghiệp... l&#224;m đại diện cho doanh nghiệp tham gia tổ tụng.</p><p>31. Trường hợp giải quyết tranh chấp hợp đồng vay t&#224;i sản l&#224; v&#224;ng th&#236; T&#242;a &#225;n quyết định c&#225;c c&#225; nh&#226;n thanh to&#225;n cho nhau bằng v&#224;ng hay l&#224; quy đổi v&#224;ng th&#224;nh tiền. Trường hợp T&#242;a &#225;n quyết định việc thanh to&#225;n bằng v&#224;ng th&#236; c&#243; tuy&#234;n l&#227;i chậm thực hiện nghĩa vụ trả nợ kh&#244;ng?</p><p>=&gt; Khoản 1 v&#224; khoản 2 Điều 466 của Bộ luật D&#226;n sự quy định:</p><p>“1. B&#234;n vay t&#224;i sản l&#224; tiền th&#236; phải trả đủ tiền khi đến hạn; nếu t&#224;i sản l&#224; vật th&#236; phải trả vật c&#249;ng loại đ&#250;ng số lượng, chất lượng, trừ trường hợp c&#243; thỏa thuận kh&#225;c.</p><p>2. Trường hợp b&#234;n vay kh&#244;ng thể trả vật th&#236; c&#243; thể trả bằng tiền theo trị gi&#225; của vật đ&#227; vay tại địa điểm v&#224; thời điểm trả nợ, nếu được b&#234;n cho vay đồng &#253;&quot;.</p><p>=&gt; Trong trường hợp n&#234;u tr&#234;n, do đối tượng của hợp đồng vay l&#224; v&#224;ng, n&#234;n T&#242;a &#225;n phải giải quyết buộc b&#234;n vay trả lại cho b&#234;n cho vay số v&#224;ng đ&#227; vay, trừ trường hợp c&#243; thỏa thuận kh&#225;c bảo đảm đ&#250;ng quy định ph&#225;p luật. Tuy nhi&#234;n, T&#242;a &#225;n vẫn quy đổi v&#224;ng th&#224;nh tiền theo gi&#225; thị trường tại thời điểm x&#233;t xử sơ thẩm để t&#237;nh &#225;n ph&#237;, chi ph&#237; tổ tụng.</p><p>=&gt; Trong trường hợp T&#242;a &#225;n quyết định b&#234;n vay trả lại v&#224;ng cho b&#234;n cho vay th&#236; kh&#244;ng quyết định b&#234;n vay phải chịu l&#227;i chậm thực hiện nghĩa vụ trả nợ, trừ trường hợp c&#243; thỏa thuận kh&#225;c. Trường hợp hợp đồng vay t&#224;i sản l&#224; v&#224;ng c&#243; thỏa thuận l&#227;i th&#236; nghĩa vụ trả l&#227;i được thực hiện theo thỏa thuận ph&#249; hợp với quy định của ph&#225;p luật.</p><p>32. Trong vụ &#225;n tranh chấp hợp đồng t&#237;n dụng giữa Ng&#226;n h&#224;ng v&#224; Doanh nghiệp, Doanh nghiệp đ&#227; bị thu hồi Giấy chứng nhận đăng k&#253; doanh nghiệp, nhiều năm kh&#244;ng nộp thuế cho Nh&#224; nước, đ&#227; dừng hoạt động kinh doanh nhưng chưa giải thể, chưa tuy&#234;n bố ph&#225; sản. T&#242;a &#225;n kh&#244;ng tống đạt được c&#225;c văn bản tố tụng cho Doanh nghiệp. Trường hợp n&#224;y T&#242;a &#225;n giải quyết như thế n&#224;o?</p><p>=&gt; Luật Doanh nghiệp (sửa đổi, bổ sung năm 2025) kh&#244;ng quy định cụ thể c&#225;c trường hợp doanh nghiệp phải chấm dứt hoạt động. Tuy nhi&#234;n, căn cứ quy định tại khoản 3 Điều 16, điểm d khoản 1 v&#224; khoản 2 Điểu 207 của Luật Doanh nghiệp, điểm a v&#224; b khoản 2 Điều 74 của Bộ luật Tố tụng d&#226;n sự th&#236; trường hợp doanh nghiệp đ&#227; bị thu hồi Giấy chứng nhận đăng k&#253; doanh nghiệp thuộc trường hợp phải chấm dứt hoạt động kinh doanh, bị giải thể (trừ trường hợp Luật Quản l&#253; thuế c&#243; quy định kh&#225;c). Do đ&#243;, trường hợp n&#224;y T&#242;a &#225;n phải căn cứ quy định tại điểm a v&#224; điểm b khoản 2 Điều 74 của Bộ luật Tố tụng dần sự để x&#225;c định người đại diện của doanh nghiệp đ&#227; bị thu hồi Giấy chứng nhận đăng k&#253; doanh nghiệp tham gia tố tụng v&#224; thực hiện việc tống đạt văn bản tố tụng theo quy định của Bộ luật Tổ tụng d&#226;n sự. Trường hợp doanh nghiệp l&#224; c&#244;ng ty cổ phần, c&#244;ng ty tr&#225;ch nhiệm hữu hạn, c&#244;ng ty hợp danh th&#236; c&#225; nh&#226;n, tổ chức l&#224; th&#224;nh vi&#234;n của tổ chức đ&#243; hoặc đại diện của họ tham gia tố tụng. Trường hợp doanh nghiệp l&#224; doanh nghiệp nh&#224; nước th&#236; đại diện hợp ph&#225;p của cơ quan, tổ chức cấp tr&#234;n trực tiếp của cơ quan, tổ chức đ&#243; hoặc đại diện hợp ph&#225;p của cơ quan, tổ chức tiếp nhận c&#225;c quyền, nghĩa vụ của cơ quan, tổ chức đ&#243; tham gia tổ tụng. Doanh nghiệp thuộc trường hợp bị giải thể th&#236; c&#242;n phải đưa người quản l&#253; c&#243; li&#234;n quan v&#224;o tham gia tố tụng.</p><p>33. Trong vụ &#225;n tranh chấp hợp đồng t&#237;n dụng, Ng&#226;n h&#224;ng khởi kiện vợ chồng chị A, anh B y&#234;u cầu trả nợ theo hợp đồng t&#237;n dụng đ&#227; vay v&#224; y&#234;u cầu xử l&#253; t&#224;i sản thế chấp l&#224; t&#224;i sản chung của vợ chồng. Anh B đang ở nước ngo&#224;i, thường xuy&#234;n li&#234;n lạc với chị A v&#224; biết việc Ng&#226;n h&#224;ng y&#234;u cầu trả nợ, xử l&#253; t&#224;i sản thế chấp. T&#242;a &#225;n đ&#227; y&#234;u cầu chị A cung cấp địa chỉ của anh B tại nước ngo&#224;i v&#224; để nghị chị A th&#244;ng b&#225;o cho anh B về việc T&#242;a &#225;n đ&#227; thụ l&#253; vụ &#225;n, y&#234;u cầu anh B cung cấp địa chỉ ở nước ngo&#224;i, c&#243; &#253; kiến bằng văn bản gửi T&#242;a &#225;n về việc Ng&#226;n h&#224;ng khởi kiện, nhưng chị A kh&#244;ng cung cấp địa chỉ của anh B cho T&#242;a &#225;n v&#224; anh B cũng kh&#244;ng cung cấp địa chỉ ở nước ngo&#224;i, kh&#244;ng c&#243; &#253; kiến bằng văn bản gửi T&#242;a &#225;n. Trường hợp n&#224;y T&#242;a &#225;n giải quyết như thế n&#224;o?</p><p>=&gt; Căn cứ quy định tại điểm a khoản 2 Điều 6 Nghị quyết số 04/2017/NQHĐTP ng&#224;y 05/5/2017 của Hội đồng Thẩm ph&#225;n T&#242;a &#225;n nh&#226;n d&#226;n tối cao hướng dẫn một số quy định tại khoản 1 v&#224; khoản 3 Điều 192 của Bộ luật Tố tụng d&#226;n sự số 92/2015/QH13 về trả lại đơn khởi kiện, quyền nộp đơn khởi kiện lại vụ &#225;n th&#236; trường hợp n&#224;y T&#242;a &#225;n phải x&#225;c định đ&#226;y l&#224; trường hợp bị đơn cố t&#236;nh giấu địa chỉ để giải quyết vụ &#225;n theo thủ tục chung.</p><p>34. Tại phi&#234;n t&#242;a d&#226;n sự sơ thẩm c&#225;c đương sự c&#243; mặt đầy đủ theo giấy triệu tập. Tuy nhi&#234;n, sau khi Chủ tọa phi&#234;n t&#242;a kết th&#250;c phần thủ tục, chuyển sang phần tranh tụng tại phi&#234;n t&#242;a th&#236; bị đơn kh&#244;ng tr&#236;nh b&#224;y m&#224; tự &#253; rời khỏi ph&#242;ng xứ &#225;n v&#224; bỏ về. Trường hợp n&#224;y Hội đồng x&#233;t xử ho&#227;n phi&#234;n t&#242;a hay tiếp tục tiến h&#224;nh x&#233;t xử?</p><p>=&gt; Khoản 1 Điều 233 của Bộ luật Tố tụng d&#226;n sự quy định“Hội đồng x&#233;t xử quyết định ho&#227;n phi&#234;n t&#242;a trong c&#225;c trường hợp quy định tại khoản 2 Điều 56, khoản 2 Điều 62, khoản 2 Điều 84, Điều 227, khoản 2 Điều 229, khoản 2 Điều 230, khoản 2 Điều 231 v&#224; Điều 241 của Bộ luật n&#224;y. Thời hạn ho&#227;n phi&#234;n t&#242;a l&#224; kh&#244;ng qu&#225; 01 th&#225;ng, đối với phiện t&#242;a x&#233;t xử vụ &#225;n theo thủ tục r&#250;t gọn l&#224; kh&#244;ng qu&#225; 15 ng&#224;y, kể từ ng&#224;y ra quyết định ho&#227;n phi&#234;n t&#242;a&quot;.</p><p>=&gt; Khoản 7 Điều 234 của Bộ luật Tố tụng d&#226;n sự quy định “Người tham gia phi&#234;n t&#242;a theo y&#234;u cầu của T&#242;a &#225;n phải c&#243; mặt tại phi&#234;n t&#242;a trong suốt thời gian x&#233;t xử vụ &#225;n, trừ trường hợp được chủ tọa phi&#234;n t&#242;a đồng &#253; cho rời khỏi ph&#242;ng xử &#225;n khi c&#243; l&#253; do ch&#237;nh đ&#225;ng...”.</p><p>=&gt; Như vậy, bị đơn tự &#253; bỏ về kh&#244;ng thuộc trường hợp bất khả kh&#225;ng hoặc trở ngại kh&#225;ch quan, kh&#244;ng thuộc trường hợp ho&#227;n phi&#234;n t&#242;a quy định tại khoản 2 Điều 227 của Bộ luật Tố tụng d&#226;n sự n&#234;n Hội đồng x&#233;t xử tiếp tục tiến h&#224;nh x&#233;t xử theo quy định của ph&#225;p luật.</p><p>35. Trong vụ &#225;n d&#226;n sự m&#224; đương sự c&#243; y&#234;u cầu hủy Giấy chứng nhận quyền sử dụng đất hoặc khi T&#242;a &#225;n xết thấy cần thiết phải hủy Giấy chứng nhận quyền sử dụng đất, T&#242;a &#225;n quyết định tuy&#234;n hủy Giấy chứng nhận quyền sử dụng đất cấp cho đương sự. Trường hợp n&#224;y đương sự c&#243; phải chịu &#225;n ph&#237; đối với việc hủy Giấy chứng nhận quyền sử dụng đất hay kh&#244;ng?</p><p>=&gt; Điều 26 Nghị quyết số 326/2016/UBTVQH14 ng&#224;y 30/12/2016 của Ủy ban Thường vụ Quốc hội quy định về mức thu, miễn, giảm, thu, nộp, quản l&#253; v&#224; sử dụng &#225;n ph&#237; v&#224; lệ ph&#237; T&#242;a &#225;n quy định:</p><p>“1. Đương sự phải chịu &#225;n ph&#237; d&#226;n sự sơ thẩm đối với y&#234;u cầu của họ kh&#244;ng được T&#242;a &#225;n chấp nhận, trừ trường hợp được miễn hoặc kh&#244;ng phải chịu &#225;n ph&#237; sơ thẩm.</p><p>2. Bị đơn phải chịu to&#224;n bộ &#225;n ph&#237; d&#226;n sự sơ thấm trong trường hợp to&#224;n bộ y&#234;u c&#226;u của nguy&#234;n đơn được T&#242;a &#225;n chấp nhận”.</p><p>=&gt; Theo quy định Điều 34 của Bộ luật Tố tụng d&#226;n sự, y&#234;u cầu hủy Giấy chứng nhận quyền sử dụng đất của đương sự kh&#244;ng phải l&#224; y&#234;u cầu khởi kiện, y&#234;u cầu phản tố, y&#234;u cầu độc lập. Do đ&#243;, trường hợp T&#242;a &#225;n tuy&#234;n hủy Giấy chứng nhận quyền sử dụng đất th&#236; đương sự kh&#244;ng phải chịu &#225;n ph&#237; đối với y&#234;u cầu n&#224;y.</p><p>36. Nguy&#234;n đơn khởi kiện y&#234;u cầu bị đơn trả tiền vay v&#224; l&#227;i vay. Trường hợp c&#243; căn cứ x&#225;c định bị đơn đ&#227; trả tiền l&#227;i nhiều hơn so với tiền l&#227;i vay v&#224; sau khi d&#249;ng số tiền dư thanh to&#225;n khoản nợ gốc th&#236; vẫn c&#242;n tiền thừa. Bị đơn y&#234;u cầu trả lại tiền thừa th&#236; y&#234;u cầu n&#224;y của bị đơn c&#243; phải l&#224; y&#234;u cầu phản tố kh&#244;ng? Nếu kh&#244;ng l&#224; yều cầu phẩn tố th&#236; T&#242;a &#225;n c&#243; tuyền buộc nguy&#234;n đơn phải trả cho bị đơn tiền thừa hay kh&#244;ng?</p><p>=&gt; Khoản 2 Điều 200 của Bộ luật Tố tụng d&#226;n sự quy định:</p><p>“2. Y&#234;u cầu phản tổ của bị đơn đổi với nguy&#234;n đơn, người c&#243; quyền lợi, nghĩa vụ li&#234;n quan c&#243; y&#234;u cẩu độc lập được chấp nhận khi thuộc một trong c&#225;c trường hợp sau đ&#226;y:</p><p>a) Y&#234;u cầu phản tố để b&#249; trừ nghĩa vụ với y&#234;u cầu của nguy&#234;n đơn, người c&#243; quyền lợi, nghĩa vụ li&#234;n quan c&#243; y&#234;u cầu độc lập;</p><p>b) Y&#234;u cầu phản tố được chấp nhận dẫn đến loại trừ việc chấp nhận một phần hoặc to&#224;n bộ y&#234;u cầu của nguy&#234;n đơn, người c&#243; quyền lợi, nghĩa vụ li&#234;n quan c&#243; y&#234;u cầu độc lập;</p><p>c) Giữa y&#234;u cầu phản tố v&#224; y&#234;u cầu của nguy&#234;n đơn, người c&#243; quyền lợi, nghĩa vụ li&#234;n quan c&#243; y&#234;u cầu độc lập c&#243; sự li&#234;n quan với nhau v&#224; nếu được giải quyết trong c&#249;ng một vụ &#225;n th&#236; l&#224;m cho việc giải quyết vụ &#225;n được ch&#237;nh x&#225;c v&#224; nhanh hơn”.</p><p>=&gt; Như vậy, trong trường hợp n&#234;u tr&#234;n, y&#234;u cầu của bị đơn l&#224; y&#234;u cầu phản tố v&#224; T&#242;a &#225;n buộc nguy&#234;n đơn phải trả cho bị đơn số tiền thừa m&#224; bị đơn đ&#227; trả cho nguy&#234;n đơn.</p><p>37. Trong vụ &#225;n tranh chấp hợp đồng chuyển nhượng quyền sử dụng đất, To&#224; &#225;n cấp sơ thẩm kh&#244;ng chấp nhận y&#234;u cầu khởi kiện “Tuy&#234;n bố hợp đồng chuyển nhượng v&#244; hiệu”, nhưng To&#224; &#225;n cấp ph&#250;c thẩm chấp nhận y&#234;u cầu khởi kiện v&#224; giải quyết hậu quả hợp đồng chuyển nhượng quyền sử dụng đất v&#244; hiệu. Việc thu thập chứng cứ v&#224; chứng minh của T&#242;a &#225;n cấp sơ thẩm đ&#227; được thực hiện đ&#250;ng v&#224; đầy đủ hoặc chưa được thực hiện đầy đủ ở cấp sơ thẩm nhưng tại phi&#234;n t&#242;a ph&#250;c thẩm đ&#227; được bố sung đầy đủ. Trường hợp n&#224;y T&#242;a &#225;n cấp ph&#250;c thẩm hủy bản &#225;n sơ thẩm hay sửa bản &#225;n sơ thẩm?</p><p>=&gt; Điều 293 về phạm vi x&#233;t xử ph&#250;c thẩm của Bộ luật Tố tụng d&#226;n sự quy định:</p><p>“T&#242;a &#225;n cấp ph&#250;c thẩm chỉ xem x&#233;t lại phần của bản &#225;n sơ thẩm, quyết định của T&#242;a &#225;n cấp sơ thẩm c&#243; kh&#225;ng c&#225;o, kh&#225;ng nghị hoặc c&#243; li&#234;n quan đến việc xem x&#233;t nội dung kh&#225;ng c&#225;o, kh&#225;ng nghị”.</p><p>=&gt; Điều 309 của Bộ luật Tố tụng d&#226;n sự quy định:</p><p>“Hội đồng x&#233;t xử ph&#250;c thẩm sửa một phần hoặc to&#224;n bộ bản &#225;n sơ thẩm nếu T&#242;a &#225;n cấp sơ thẩm quyết định kh&#244;ng đ&#250;ng ph&#225;p luật trong c&#225;c trường hợp sau đ&#226;y:</p><p>1. Việc thu thập chứng cứ v&#224; chứng minh đ&#227; được thực hiện đẩy đủ v&#224; theo đ&#250;ng quy định tại Chương VII của Bộ luật n&#224;y.</p><p>2. Việc thu thập chứng cứ v&#224; ch&#250;ng minh chưa được thực hiện đầy đủ ở cấp sơ thẩm nhưng tại phi&#234;n t&#242;a ph&#250;c thẩm đ&#227; được bổ sung đầy đủ”.</p><p>=&gt; Như vậy, trường hợp tại T&#242;a &#225;n cấp sơ thẩm đương sự đ&#227; y&#234;u cầu giải quyết hậu quả của hợp đồng v&#244; hiệu th&#236; T&#242;a &#225;n cấp ph&#250;c thẩm sửa bản &#225;n sơ thầm theo hướng chấp nhận y&#234;u cầu khởi kiện của đương sự, tuy&#234;n bố hợp đồng chuyển nhượng quyền sử dụng đất v&#244; hiệu v&#224; giải quyết hậu quả của hợp đồng v&#244; hiệu.</p><p>=&gt; Trường hợp tại T&#242;a &#225;n cấp sơ thẩm đương sự kh&#244;ng y&#234;u cầu giải quyết hậu quả hợp đồng v&#244; hiệu th&#236; T&#242;a &#225;n cấp ph&#250;c thẩm sửa bản &#225;n sơ thẩm theo hướng chấp nhận y&#234;u cầu khởi kiện của đương sự, tuy&#234;n bố hợp đồng chuyển nhượng quyền sử dụng đất v&#244; hiệu v&#224; kh&#244;ng giải quyết hậu quả của hợp đồng v&#244; hiệu. Tuy nhi&#234;n trong phần nhận định của bản &#225;n phải n&#234;u r&#245; đương sự c&#243; quyền khởi kiện y&#234;u cầu giải quyết hậu quả của hợp đồng v&#244; hiệu bằng vụ &#225;n kh&#225;c nếu họ c&#243; y&#234;u cầu theo quy định của ph&#225;p luật.</p><p>38. Hợp đồng t&#237;n dụng giữa Ng&#226;n h&#224;ng v&#224; b&#234;n vay, c&#243; thế chấp t&#224;i sản quyền sử dụng đất v&#224; nh&#224; xưởng x&#226;y dựng tr&#234;n đất của b&#234;n thứ ba (b&#234;n thế chấp) để bảo đảm nghĩa vụ trả nợ của b&#234;n vay. Do b&#234;n vay vi phạm nghĩa vụ thanh to&#225;n n&#234;n Ng&#226;n h&#224;ng khởi kiện đ&#242;i tiền v&#224; y&#234;u cầu ph&#225;t mại t&#224;i sản thế chấp nếu b&#234;n vay kh&#244;ng thanh to&#225;n nợ. T&#224;i liệu, chứng cứ trong hồ sơ vụ &#225;n thế hiện nh&#224; xưởng đ&#227; được b&#234;n thế chấp cho thu&#234; trước khi k&#253; kết hợp đồng thế chấp v&#224; b&#234;n thu&#234; vẫn đang sản xuất, kinh doanh tr&#234;n diện t&#237;ch đất thu&#234;. Khi giải quyết vụ &#225;n n&#224;y, cần xem x&#233;t, giải quyết như thế n&#224;o đối với hợp đồng thu&#234; nh&#224; xưởng?</p><p>=&gt; Trong vụ &#225;n n&#224;y, việc giải quyết hợp đồng thế chấp c&#243; li&#234;n quan đến hợp đồng cho thu&#234; nh&#224; xưởng. Khi k&#253; kết hợp đồng thế chấp quyền sử dụng đất v&#224; nh&#224; xưởng tr&#234;n đất th&#236; nh&#224; xưởng đ&#227; được b&#234;n thế chấp cho người kh&#225;c thu&#234;. Do đ&#243;, T&#242;a &#225;n phải đưa b&#234;n thu&#234; v&#224;o tham gia tố tụng với tư c&#225;ch người c&#243; quyền lợi, nghĩa vụ li&#234;n quan.</p><p>=&gt; Qu&#225; tr&#236;nh giải quyết vụ &#225;n, T&#242;a &#225;n phải x&#225;c định hiệu lực ph&#225;p l&#253; của hợp đồng t&#237;n dụng, hợp đồng thế chấp, hợp đồng thu&#234; nh&#224; xưởng v&#224; căn cứ v&#224;o nội dung thỏa thuận của c&#225;c b&#234;n trong c&#225;c hợp đồng, y&#234;u cầu của c&#225;c b&#234;n (b&#234;n cho vay, b&#234;n vay, b&#234;n thu&#234; nh&#224; xưởng) trong vụ &#225;n để giải quyết triệt để, đ&#250;ng ph&#225;p luật đối với c&#225;c y&#234;u cầu n&#224;y.</p><p>=&gt; Trường hợp c&#225;c b&#234;n (b&#234;n cho vay, b&#234;n vay, b&#234;n thu&#234; nh&#224; xưởng) c&#243; y&#234;u cầu giải quyết hợp đồng thu&#234; nh&#224; xưởng th&#236; T&#242;a &#225;n phải xem x&#233;t giải quyết.</p><p>=&gt; Trường hợp c&#225;c b&#234;n (b&#234;n cho vay, b&#234;n vay, b&#234;n thu&#234; nh&#224; xưởng) kh&#244;ng y&#234;u cầu xem x&#233;t hợp đồng thu&#234; nh&#224; xưởng th&#236; T&#242;a &#225;n kh&#244;ng xem x&#233;t hợp đồng cho thu&#234; nh&#224; xưởng m&#224; chỉ giải quyết tranh chấp hợp đồng t&#237;n dụng, hợp đồng thế chấp. Trường hợp hợp đồng t&#237;n dụng v&#224; hợp đồng thế chấp c&#243; hiệu lực ph&#225;p luật th&#236; T&#242;a &#225;n tuy&#234;n xử l&#253; t&#224;i sản bảo đảm. Việc giải quyết tranh chấp hợp đồng t&#237;n dụng v&#224; xử l&#253; t&#224;i sản bảo đảm kh&#244;ng l&#224;m chấm dứt hợp đồng cho thu&#234; nh&#224; xưởng, b&#234;n thu&#234; được tiếp tục thu&#234; đến khi hết thời hạn hợp đồng theo quy định tại khoản 2 Điều 34 Nghị định số 21/2021/NĐ-CP ng&#224;y 19/3/2021 của Ch&#237;nh phủ quy định thi h&#224;nh Bộ luật D&#226;n sự về bảo đảm thực hiện nghĩa vụ.</p><p>39. C&#244;ng ty P do &#244;ng A l&#224; gi&#225;m đốc - đại diện theo ph&#225;p luật v&#224; C&#244;ng ty K do &#244;ng B l&#224; gi&#225;m đốc - đại diện theo ph&#225;p luật k&#253; hợp đồng mua b&#225;n h&#224;ng h&#243;a hợp ph&#225;p. Sau khi k&#253; hợp đồng, C&#244;ng ty P (b&#234;n b&#225;n) đ&#227; chuyển cho C&#244;ng ty K (b&#234;n mua) số lượng h&#224;ng h&#243;a đặt mua như thỏa thuận. Sau đ&#243;, &#244;ng B đ&#227; chuyễn nhượng 100% phần vốn g&#243;p tại C&#244;ng ty K cho &#244;ng C; &#244;ng C trở th&#224;nh gi&#225;m đốc - đại diện theo ph&#225;p luật của C&#244;ng ty K. Do C&#244;ng ty K kh&#244;ng thực hiện nghĩa vụ trả tiền theo hợp đồng mua b&#225;n h&#224;ng h&#243;a n&#234;n C&#244;ng ty P khởi kiện y&#234;u cầu T&#242;a &#225;n buộc C&#244;ng ty K trả tiền. &#212;ng C kh&#244;ng đồng &#253; trả tiền cho C&#244;ng ty P với l&#253; do khi chuyển nhượng phần vốn g&#243;p giữa &#244;ng B v&#224; &#244;ng C, hai b&#234;n kh&#244;ng b&#224;n giao khoản nợ theo hợp đồng mua b&#225;n h&#224;ng h&#243;a với C&#244;ng ty P. Trường hợp n&#224;y, T&#242;a &#225;n x&#225;c định ai l&#224; người c&#243; nghĩa vụ trả tiền?</p><p>=&gt; Khoản 1 Điều 87 của Bộ luật D&#226;n sự quy định “Ph&#225;p nh&#226;n phải chịu tr&#225;ch nhiệm d&#226;n sự về việc thực hiện quyền, nghĩa vụ d&#226;n sự do người đại diện x&#225;c lập, thực hiện nh&#226;n danh ph&#225;p nh&#226;n...”. Căn cứ quy định n&#234;u tr&#234;n, trong trường hợp n&#224;y hợp đồng mua b&#225;n h&#224;ng h&#243;a đ&#227; được k&#253; kết hợp ph&#225;p giữa C&#244;ng ty P (b&#234;n b&#225;n) v&#224; C&#244;ng ty K (b&#234;n mua), n&#234;n tr&#225;ch nhiệm thanh to&#225;n tiền mua b&#225;n h&#224;ng h&#243;a l&#224; thuộc về C&#244;ng ty K chứ kh&#244;ng phải người đại diện theo ph&#225;p luật của C&#244;ng ty K. Do đ&#243;, C&#244;ng ty K c&#243; nghĩa vụ trả tiền cho C&#244;ng ty P theo hợp đồng mua b&#225;n h&#224;ng h&#243;a đ&#227; k&#253; kết giữa hai b&#234;n, kh&#244;ng phụ thuộc v&#224;o việc C&#244;ng ty K c&#243; thay đổi về th&#224;nh vi&#234;n g&#243;p vốn, đồng thời l&#224; người đại diện theo ph&#225;p luật.</p><p>40. Hợp đồng t&#237;n dụng c&#243; thỏa thuận về l&#227;i trong hạn, l&#227;i qu&#225; hạn, phạt vị phạm trong trường hợp b&#234;n vay kh&#244;ng trả nợ khi đến hạn. Vậy thỏa thuận về phạt vi phạm trong trường hợp n&#224;y c&#243; ph&#249; hợp quy định của ph&#225;p luật kh&#244;ng?</p><p>=&gt; Căn cứ quy định tại Điều 100 của Luật c&#225;c tổ chức t&#237;n dụng (sửa đổi, bổ sung năm 2025); Điều 7, Điều 12 Nghị quyết số 01/2019/NQ-HĐTP ng&#224;y 11/01/2019 của Hội đồng Thẩm ph&#225;n T&#242;a &#225;n nh&#226;n d&#226;n tối cao; khoản 1 Điều 25, khoản 4 Điều 13 Th&#244;ng tư số 39/2016/TT-NHNN ng&#224;y 30/12/2016 của Ng&#226;n h&#224;ng nh&#224; nước (được sửa đổi, bổ sung một số điều theo Th&#244;ng tư số 06/2023/TTNHNN ng&#224;y 28/6/2023) quy định về hoạt động cho vay của tổ chức t&#237;n dụng, chi nh&#225;nh ng&#226;n h&#224;ng nước ngo&#224;i đối với kh&#225;ch h&#224;ng th&#236; hợp đồng t&#237;n dụng c&#243; thỏa thuận về l&#227;i trong hạn, l&#227;i qu&#225; hạn, phạt vi phạm trong trường hợp b&#234;n vay kh&#244;ng trả nợ khi đến hạn th&#236; thỏa thuận phạt vi phạm l&#224; kh&#244;ng ph&#249; hợp với quy định của ph&#225;p luật.</p><p>41. Ng&#226;n h&#224;ng A khởi kiện &#244;ng B (l&#224; chủ hộ kinh doanh) y&#234;u cầu trả tiền vay do vi phạm hợp đồng t&#237;n dụng. Đ&#226;y l&#224; vụ &#225;n d&#226;n sự hay vụ &#225;n kinh doanh, thương mại?</p><p>=&gt; Căn cứ quy định tại khoản 1 Điều 30 của Bộ Luật Tố tụng d&#226;n sự, Điều 79 Nghị định số 01/2021/NĐ-CP ng&#224;y 04/01/2021 của Ch&#237;nh phủ về đăng k&#253; doanh nghiệp, khoản 3 Điều 2 Th&#244;ng tư số 39/2016/TT-NHNN ng&#224;y 30/12/2016 của Ng&#226;n h&#224;ng Nh&#224; nước (được sửa đổi, bổ sung một số điều theo Th&#244;ng tư số 06/2023/TT-NHNN ng&#224;y 28/6/2023) quy định về hoạt động cho vay của tổ chức t&#237;n dụng, chi nh&#225;nh ng&#226;n h&#224;ng nước ngo&#224;i đối với kh&#225;ch h&#224;ng th&#236; trong trường hợp n&#224;y khi xem x&#233;t thụ l&#253; y&#234;u cầu khởi kiện của Ng&#226;n h&#224;ng, T&#242;a &#225;n phải xem x&#233;t nội dung hợp đồng t&#237;n dụng giữa Ng&#226;n h&#224;ng A v&#224; &#244;ng B để x&#225;c định loại tranh chấp như sau:</p><p>- Trường hợp nội dung hợp đồng t&#237;n dụng thỏa thuận Ng&#226;n h&#224;ng cấp t&#237;n dụng cho &#244;ng B vay ti&#234;u d&#249;ng c&#225; nh&#226;n, kh&#244;ng nhằm hoạt động kinh doanh, thương mại v&#236; mục đ&#237;ch lợi nhuận th&#236; tranh chấp giữa &#244;ng B v&#224; Ng&#226;n h&#224;ng l&#224; tranh chấp d&#226;n sự.</p><p>- Trường hợp nội dung hợp đồng t&#237;n dụng thỏa thuận Ng&#226;n h&#224;ng cấp t&#237;n dụng cho &#244;ng B (l&#224; chủ hộ kinh doanh) nhằm hoạt động kinh doanh, thương mại v&#236; mục đ&#237;ch lợi nhuận th&#236; tranh chấp giữa Ng&#226;n h&#224;ng A v&#224; &#244;ng B l&#224; tranh chấp kinh doanh, thương mại.</p><p>42. Điểm c khoản 1 Điều 39 của Bộ luật Tố tụng d&#226;n sự năm 2015 quy định “Đối tượng tranh chấp l&#224; bất động sản th&#236; chỉ T&#242;a &#225;n nơi c&#243; bất động sản c&#243; thẩm quyền giải quyết”. Vậy trong vụ &#225;n tranh chấp thừa kế t&#224;i sản l&#224; bất động sản, vụ &#225;n tranh chấp hợp đồng chuyển nhượng quyền sử dụng đất, hợp đồng li&#234;n quan đến quyền sử dụng đất (đặt cọc, thế chấp, cho thu&#234;, cho thu&#234; lại...) th&#236; T&#242;a &#225;n nơi bị đơn cư tr&#250;, nơi c&#243; bất động sản hay nơi thực hiện hợp đồng c&#243; thẩm quyền giải quyết?</p><p>=&gt; Theo quy định tại khoản 3 v&#224; khoản 5 Điều 26 của Bộ luật Tố tụng d&#226;n sự th&#236; tranh chấp về thừa kế t&#224;i sản, tranh chấp về giao dịch d&#226;n sự, hợp đồng d&#226;n sự l&#224; tranh chấp về d&#226;n sự.</p><p>=&gt; Theo quy định tại điểm a khoản 1 Điều 39 của Bộ luật Tố tụng d&#226;n sự th&#236; “T&#242;a &#225;n nơi bị đơn cư tr&#250;, l&#224;m việc, nếu bị đơn l&#224; c&#225; nh&#226;n hoặc nơi bị đơn c&#243; trụ sở, nếu bị đơn l&#224; cơ quan, tổ chức c&#243; thẩm quyền giải quyết theo thủ tục sơ thẩm nhũng tranh chấp về d&#226;n sự, h&#244;n nh&#226;n v&#224; gia đ&#236;nh, kinh doanh, thương mại, lao động quy định tại c&#225;c điều 26, 28, 30 v&#224; 32 của Bộ luật n&#224;y&quot;.</p><p>=&gt; Trong vụ &#225;n tranh chấp thừa kế t&#224;i sản th&#236; quan hệ ph&#225;p luật cần giải quyết l&#224; chia thừa kế; trong vụ &#225;n tranh chấp về giao dịch d&#226;n sự, hợp đồng d&#226;n sự th&#236; quan hệ ph&#225;p luật cần giải quyết l&#224; quyền v&#224; nghĩa vụ theo giao dịch d&#226;n sự, hợp đồng d&#226;n sự.</p><p>=&gt; Đối với vụ &#225;n tranh chấp thừa kế t&#224;i sản l&#224; bất động sản th&#236; thẩm quyền giải quyết của T&#242;a &#225;n được x&#225;c định theo quy định tại điểm a khoản 1 Điều 39 của Bộ luật Tố tụng d&#226;n sự, cụ thể l&#224; T&#242;a &#225;n nơi bị đơn cư tr&#250;, l&#224;m việc.</p><p>=&gt; Trường hợp c&#225;c đương sự thỏa thuận với nhau bằng văn bản y&#234;u cầu T&#242;a &#225;n nơi cư tr&#250;, l&#224;m việc của nguy&#234;n đơn th&#236; T&#242;a &#225;n nơi cư tr&#250;, l&#224;m việc của nguy&#234;n đơn c&#243; thẩm quyền giải quyết theo quy định tại điểm b khoản 1 Điều 39 của Bộ luật Tố tụng d&#226;n sự.</p><p>=&gt; Đối với tranh chấp hợp đồng chuyển nhượng quyền sử dụng đất, hợp đồng li&#234;n quan đến quyền sử dụng đất (hợp đồng đặt cọc, thế chấp, cho thu&#234;, cho thu&#234; lại...) th&#236; thẩm quyền giải quyết của T&#242;a &#225;n được x&#225;c định theo quy định tại điểm a, điểm b khoản 1 Điều 39 hoặc điểm g khoản 1 Điều 40 của Bộ luật Tố tụng d&#226;n sự (T&#242;a &#225;n nơi hợp đồng được thực hiện theo sự lựa chọn của nguy&#234;n đơn, người y&#234;u cầu).</p><p>=&gt; Đối với những tranh chấp m&#224; đối tượng của tranh chấp l&#224; bất động sản th&#236; việc x&#225;c định thẩm quyền theo quy định điểm c khoản 1 Điểu 39 của Bộ luật TỐ tụng d&#226;n sự l&#224; T&#242;a &#225;n nơi c&#243; bất động sản giải quyết.</p>",
+            "timeline": [],
+            "laws": [
+              {
+                "name": "Điều 486 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 74 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "điểm b khoản 1 Điều 192 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "Khoản 1 Điều 3",
+                "content": ""
+              },
+              {
+                "name": "khoản 3 Điều 140 của Bộ luật D&#226",
+                "content": ""
+              },
+              {
+                "name": "Điều 12",
+                "content": "Chi hội, tổ hội người cao tuổi thuộc Hội Người cao tuổi cơ sở tại địa bàn thôn, ấp, bản, làng, phum, sóc, tổ dân phố, khu dân cư hoặc tương đương thuộc Hội Người cao tuổi cơ sở"
+              },
+              {
+                "name": "khoản 2 Điều 137 của Luật Doanh nghiệp (sửa đổi",
+                "content": ""
+              },
+              {
+                "name": "điểm c khoản 1 Điều 137 của Bộ luật D&#226",
+                "content": ""
+              },
+              {
+                "name": "Khoản 7 Điều 12 Luật Doanh nghiệp quy định T&#242",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 434 của Bộ luật Tố tụng h&#236",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 137 của Bộ luật D&#226",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 466 của Bộ luật D&#226",
+                "content": ""
+              },
+              {
+                "name": "khoản 3 Điều 16",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 74 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "điểm b khoản 2 Điều 74 của Bộ luật Tố tụng dần sự để x&#225",
+                "content": ""
+              },
+              {
+                "name": "điểm a khoản 2 Điều 6",
+                "content": ""
+              },
+              {
+                "name": "khoản 3 Điều 192 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "Khoản 1 Điều 233 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 56",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 62",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 84",
+                "content": ""
+              },
+              {
+                "name": "Điều 227",
+                "content": "1. Tòa án triệu tập hợp lệ lần thứ nhất, đương sự hoặc người đại diện của họ, người bảo vệ quyền và lợi ích hợp pháp của đương sự phải có mặt tại phiên tòa; nếu có người vắng mặt thì Hội đồng xét xử phải hoãn phiên tòa, trừ trường hợp người đó có đơn đề nghị xét xử vắng mặt.Tòa án phải thông báo cho đương sự, người đại diện, người bảo vệ quyền và lợi ích hợp pháp của đương sự về việc hoãn phiên tòa.2. Tòa án triệu tập hợp lệ lần thứ hai, đương sự hoặc người đại diện của họ, người bảo vệ quyền và lợi ích hợp pháp của đương sự phải có mặt tại phiên tòa, trừ trường hợp họ có đơn đề nghị xét xử vắng mặt; nếu vắng mặt vì sự kiện bất khả kháng hoặc trở ngại khách quan thì Tòa án có thể hoãn phiên tòa, nếu không vì sự kiện bất khả kháng hoặc trở ngại khách quan thì xử lý như sau:a) Nguyên đơn vắng mặt mà không có người đại diện tham gia phiên tòa thì bị coi là từ bỏ việc khởi kiện và Tòa án ra quyết định đình chỉ giải quyết vụ án đối với yêu cầu khởi kiện của người đó, trừ trường hợp người đó có đơn đề nghị xét xử vắng mặt. Nguyên đơn có quyền khởi kiện lại theo quy định của pháp luật;b) Bị đơn không có yêu cầu phản tố, người có quyền lợi, nghĩa vụ liên quan không có yêu cầu độc lập vắng mặt mà không có người đại diện tham gia phiên tòa thì Tòa án tiến hành xét xử vắng mặt họ;c) Bị đơn có yêu cầu phản tố vắng mặt mà không có người đại diện tham gia phiên tòa thì bị coi là từ bỏ yêu cầu phản tố và Tòa án quyết định đình chỉ giải quyết đối với yêu cầu phản tố, trừ trường hợp bị đơn có đơn đề nghị xét xử vắng mặt. Bị đơn có quyền khởi kiện lại đối với yêu cầu phản tố đó theo quy định của pháp luật;d) Người có quyền lợi, nghĩa vụ liên quan có yêu cầu độc lập vắng mặt mà không có người đại diện tham gia phiên tòa thì bị coi là từ bỏ yêu cầu độc lập và Tòa án quyết định đình chỉ giải quyết đối với yêu cầu độc lập của người đó, trừ trường hợp người đó có đơn đề nghị xét xử vắng mặt. Người có quyền lợi, nghĩa vụ liên quan có yêu cầu độc lập có quyền khởi kiện lại đối với yêu cầu độc lập đó theo quy định của pháp luật;đ) Người bảo vệ quyền và lợi ích hợp pháp của đương sự vắng mặt thì Tòa án vẫn tiến hành xét xử vắng mặt họ."
+              },
+              {
+                "name": "khoản 2 Điều 229",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 230",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 231",
+                "content": ""
+              },
+              {
+                "name": "Điều 241 của Bộ luật n&#224",
+                "content": "Khi có người tham gia tố tụng vắng mặt tại phiên tòa mà không thuộc trường hợp Tòa án phải hoãn phiên tòa thì chủ tọa phiên tòa phải hỏi xem có ai đề nghị hoãn phiên tòa hay không; nếu có người đề nghị thì Hội đồng xét xử xem xét, quyết định theo thủ tục do Bộ luật này quy định và có thể chấp nhận hoặc không chấp nhận; trường hợp không chấp nhận thì phải nêu rõ lý do."
+              },
+              {
+                "name": "Khoản 7 Điều 234 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 227 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "Điều 26",
+                "content": "",
+                "name_en": "Article 26",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Article 26",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Điều 34 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "Khoản 2 Điều 200 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "Điều 293",
+                "content": ""
+              },
+              {
+                "name": "Điều 309 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 34",
+                "content": ""
+              },
+              {
+                "name": "Khoản 1 Điều 87 của Bộ luật D&#226",
+                "content": ""
+              },
+              {
+                "name": "Điều 100 của Luật c&#225",
+                "content": ""
+              },
+              {
+                "name": "Điều 7",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 25",
+                "content": ""
+              },
+              {
+                "name": "khoản 4 Điều 13",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 30 của Bộ Luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "Điều 79",
+                "content": "1. Hộ kinh doanh do một cá nhân hoặc các thành viên hộ gia đình đăng ký thành lập và chịu trách nhiệm bằng toàn bộ tài sản của mình đối với hoạt động kinh doanh của hộ. Trường hợp các thành viên hộ gia đình đăng ký hộ kinh doanh thì ủy quyền cho một thành viên làm đại diện hộ kinh doanh. Cá nhân đăng ký hộ kinh doanh, người được các thành viên hộ gia đình ủy quyền làm đại diện hộ kinh doanh là chủ hộ kinh doanh."
+              },
+              {
+                "name": "khoản 3 Điều 2",
+                "content": ""
+              },
+              {
+                "name": "Điểm c khoản 1 Điều 39 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "khoản 5 Điều 26 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "điểm a khoản 1 Điều 39 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "điểm b khoản 1 Điều 39 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "điểm g khoản 1 Điều 40 của Bộ luật Tố tụng d&#226",
+                "content": ""
+              }
+            ]
+          },
           {
             "id": "case-cong-van-163-tandtc-pc-nam-2024-dan-su-2",
             "ten": "Công văn 163 TANDTC-PC năm 2024",
@@ -4460,6 +4930,117 @@
           }
         ],
         "hanh-chinh::giai-dap-nghiep-vu": [
+          {
+            "id": "case-cong-van-250-hanh-chinh-2",
+            "ten": "Công văn 250/TANDTC-PC về việc thông báo kết quả giải đáp trực tuyến một số vướng mắc trong công tác xét xử",
+            "mo_ta": "",
+            "lvId": "hanh-chinh",
+            "lvName": "Hành chính",
+            "sfId": "giai-dap-nghiep-vu",
+            "sfName": "Giải đáp nghiệp vụ",
+            "sao": 0,
+            "ngay": "2026-05-11T19:36:31.9825136+07:00",
+            "importedAt": "2026-05-11T13:01:04.273Z",
+            "updatedAt": "2026-05-11T13:01:04.273Z",
+            "tom_luoc": "",
+            "ap_dung": "",
+            "chi_tiet": "<div class=\"detail-section-title\">VỀ H&#192;NH CH&#205;NH</div><p>43. Trường hợp c&#244;ng tr&#236;nh x&#226;y dựng đang cho thu&#234; bị cơ quan h&#224;nh ch&#237;nh nh&#224; nước ra quyết định cưỡng chế buộc th&#225;o dỡ. Sau đ&#243;, quyết định cưỡng chế buộc th&#225;o dỡ bị T&#242;a &#225;n tuy&#234;n hủy do tr&#225;i ph&#225;p luật, người khởi kiện y&#234;u cầu bồi thường do bị mất thu nhập từ nguồn cho thu&#234; c&#244;ng tr&#236;nh x&#226;y dựng đ&#227; bị cưỡng chế th&#225;o dỡ. Vậy thu nhập từ nguồn cho thu&#234; c&#244;ng tr&#236;nh x&#226;y dựng đ&#227; bị cưỡng chế th&#225;o dỡ c&#243; phải l&#224; khoản thu nhập thực tế bị mất hay kh&#244;ng?</p><p>=&gt;  Khoản 1 Điều 7 của Luật Tố tụng h&#224;nh ch&#237;nh quy định: “Người khởi kiện, người c&#243; quyễn lợi, nghĩa vụ li&#234;n quan trong vụ &#225;n h&#224;nh ch&#237;nh c&#243; thể đồng thời y&#234;u cầu bồi thường thiệt hại do quyết định h&#224;nh ch&#237;nh, h&#224;nh vi h&#224;nh ch&#237;nh, quyết định kỷ luật buộc th&#244;i việc, quyết định giải quyết khiếu nại về quyết định xử l&#253; vụ việc cạnh tranh, quyết định giải quyết khiểu nại trong hoạt động kiểm to&#225;n nh&#224; nước, danh s&#225;ch cử tri g&#226;y ra.”; “Khi giải quyết y&#234;u cầu bồi thường thiệt hại trong vụ &#225;n h&#224;nh ch&#237;nh, c&#225;c&#225;c quy định của ph&#225;p luật về tr&#225;ch nhiệm bổi thường của Nh&#224; nước v&#224; ph&#225;p luật về tố tụng d&#226;n sự được &#225;p dụng để giải quyết.”</p><p>=&gt; Khoản 3 Điều 23 của Luật Tr&#225;ch nhiệm bồi thường của Nh&#224; nước quy định: “Trường hợp c&#243; thiệt hại ph&#225;t sinh do việc kh&#244;ng sử dụng, khai th&#225;c t&#224;i sản th&#236; thiệt hại được x&#225;c định l&#224; thu nhập thực tế bị mất. Đối với những t&#224;i sản tr&#234;n thị trường c&#243; cho thu&#234;, thu nhập thực tế bị mất được x&#225;c định ph&#249; hợp với mức gi&#225; thu&#234; trung b&#236;nh 01 th&#225;ng của t&#224;i sản c&#249;ng loại hoặc t&#224;i sản c&#243; c&#249;ng ti&#234;u chuẩn kỹ thuật, t&#237;nh năng, t&#225;c dụng v&#224; chất lượng tại thời điểm quy định tại khoản 2 Điều 22 của Luật n&#224;y; đối với những t&#224;i sản tr&#234;n thị trường kh&#244;ng c&#243; cho thu&#234;, thu nhập thực tế bị mất được x&#225;c định tr&#234;n cơ sở thu nhập trung b&#236;nh của 03 th&#225;ng liền kể do t&#224;i sản bị thiệt hại mang lại trong điều kiện b&#236;nh thường trước thời điểm thiệt hại xảy ra.&quot;</p><p>=&gt; Như vậy, thiệt hại do bị mất thu nhập từ nguồn cho thu&#234; c&#244;ng tr&#236;nh x&#226;y dựng đ&#227; bị cưỡng chế th&#225;o dỡ tr&#225;i ph&#225;p luật được coi l&#224; khoản thu nhập thực tế bị mất.</p><p>44. Năm 2010, &#244;ng A nhận được Giấy chứng nhận quyền sử dụng đất. Tuy nhi&#234;n, đến năm 2020, &#244;ng A mới biết việc cấp Giấy chứng nhận quyền sử dụng đất cho &#244;ng A l&#224; sai thửa đất, vị tr&#237; đất, diện t&#237;ch đất, chồng lấn l&#234;n đất của &#244;ng B. Năm 2024, &#244;ng A khởi kiện yều cầu hủy Giấy chứng nhận quyền sử dụng đất cấp cho &#244;ng A v&#224; y&#234;u cầu cấp lại Giấy chứng nhận quyền sử dụng đất. Trong qu&#225; tr&#236;nh giải quyết vụ &#225;n, T&#242;a &#225;n x&#225;c định thời hiệu khởi kiện đ&#227; hết. Trường hợp n&#224;y giải quyết như thế n&#224;o để đảm bảo được quyền v&#224; lợi &#237;ch hợp ph&#225;p của đương sự?</p><p>=&gt; Theo quy định tại điểm b khoản 1 Điều 152 của Luật Đất đai năm 2024 th&#236; cơ quan c&#243; thầm quyền cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu t&#224;i sản gắn liền với đất quy định tại Điều 136 của Luật n&#224;y c&#243; tr&#225;ch nhiệm đ&#237;nh ch&#237;nh giấy chứng nhận đ&#227; cấp trong trường hợp “C&#243; sai s&#243;t th&#244;ng tin về thửa đất, t&#224;i sản gắn liền với đất so với hồ sơ k&#234; khai đăng k&#253; đất đai, t&#224;i sản gắn liền với đất đ&#227; được tổ chức đăng k&#253; đất đai kiểm tra x&#225;c nhận hoặc được thể hiện trong văn bản c&#243; hiệu lực của cơ quan nh&#224; nước c&#243; thẩm quyền về giải quyết tranh chấp đất đai.&quot;</p><p>=&gt; Trong qu&#225; tr&#236;nh giải quyết vụ &#225;n, T&#242;a &#225;n x&#225;c định y&#234;u cầu khởi kiện của &#244;ng A đ&#227; hết thời hiệu khởi kiện th&#236; rara quyết định đ&#236;nh chỉ giải quyết vụ &#225;n theo quy định tại điểm g khoản 1 Điều 143 của Luật Tố tụng h&#224;nh ch&#237;nh. Trường hợp Giấy chứng nhận quyền sử dụng đất cấp cho &#244;ng A c&#243; sai s&#243;t về thửa đất, vị tr&#237; đất, diện t&#237;ch đất, chồng lấn l&#234;n phần đất thuộc quyền sử dụng của &#244;ng B, th&#236; T&#242;a &#225;n hướng dẫn &#244;ng A đề nghị cơ quan c&#243; thẩm quyền cấp Giấy chứng nhận quyền sử dụng đất đ&#237;nh ch&#237;nh lại Giấy chứng nhận quyền sử dụng đất theo quy định tại khoản 1 Điều 152 của Luật Đất đai năm 2024. Trường hợp cơ quan c&#243; th&#226;̉m quyền kh&#244;ng thực hiện việc đ&#237;nh ch&#237;nh Giấy chứng nhận quyền sử dụng đất th&#236; &#244;ng A c&#243; quyền khởi kiện h&#224;nh vi h&#224;nh ch&#237;nh đ&#243;.</p><p>=&gt; Trường hợp &#244;ng A c&#243; tranh chấp quyền sử dụng đất với &#244;ng B th&#236; &#244;ng A c&#243; quyền khởi kiện y&#234;u cầu T&#242;a &#225;n c&#243; thẩm quyền giải quyết theo thủ tục tố tụng d&#226;n sự; đồng thời, y&#234;u cầu T&#242;a &#225;n hủy Giấy chứng nhận quyền sử dụng đất n&#234;u tr&#234;n.</p><p>45. Bản &#225;n h&#224;nh ch&#237;nh đ&#227; c&#243; hiệu lực ph&#225;p luật c&#243; nội dung tuy&#234;n hủy quyết định h&#224;nh ch&#237;nh của Ủy ban nh&#226;n d&#226;n. Tại Quyết định buộc thi h&#224;nh &#225;n h&#224;nh ch&#237;nh, T&#242;a &#225;n buộc Ủy ban nh&#226;n d&#226;n hủy quyết định h&#224;nh ch&#237;nh tr&#234;n l&#224; đ&#250;ng hay sai?</p><p>=&gt; Điểm b khoản 1 Điều 311 của Luật Tố tụng h&#224;nh ch&#237;nh quy định:</p><p>“b) Trường hợp bản &#225;n, quyết định của T&#242;a &#225;n đ&#227; hủy to&#224;n bộ hoặc một phần quyết định h&#224;nh ch&#237;nh, quyết định giải quyết khiếu nại về quyết định xủ l&#253; vụ việc cạnh tranh, quyết định giải quyết khiếu nại trong hoạt động kiểm to&#225;n nh&#224; nước th&#236; quyết định hoặc phần quyết định bị hủy kh&#244;ng c&#242;n hiệu lục...&quot;</p><p>=&gt; Như vậy, bản &#225;n h&#224;nh ch&#237;nh tuy&#234;n hủy quyết định h&#224;nh ch&#237;nh th&#236; quyết định h&#224;nh ch&#237;nh kh&#244;ng c&#242;n hiệu lực kể từ ng&#224;y bản &#225;n h&#224;nh ch&#237;nh c&#243; hiệu lực ph&#225;p luật. Trong Quyết định buộc thi h&#224;nh &#225;n h&#224;nh ch&#237;nh, T&#242;a &#225;n kh&#244;ng được ghi buộc Ủy ban nh&#226;n d&#226;n hủy quyết định h&#224;nh ch&#237;nh đ&#227; bị T&#242;a &#225;n tuy&#234;n hủy.</p><p>46. &#212;ng A khởi kiện y&#234;u cầu hủy Giấy chứng nhận quyền sử dụng đất mang t&#234;n &#244;ng B, tuy nhi&#234;n do phần diện t&#237;ch đất c&#243; tranh chấp nằm trong Giấy chứng nhận quyền sử dụng đất đ&#227; bị nh&#224; nước thu hồi (thu hồi phần diện t&#237;ch đất c&#243; tranh chấp) v&#224; Giấy chứng nhận quyền sử dụng đất đ&#227; được Trung t&#226;m ph&#225;t triển quỹ đất thu hồi để đăng k&#253; biến động theo diện t&#237;ch mới. Trường hợp n&#224;y c&#243; được x&#225;c định đối tượng khởi kiện kh&#244;ng c&#242;n kh&#244;ng?</p><p>=&gt; Trường hợp cơ quan nh&#224; nước c&#243; thẩm quyền ban h&#224;nh quyết định thu hồi phần diện t&#237;ch đất tranh chấp li&#234;n quan đến Giấy chứng nhận quyền sử dụng đất (GCNQSDĐ) bị kiện sau khi T&#242;a &#225;n thụ l&#253; vụ &#225;n h&#224;nh ch&#237;nh m&#224; người khởi kiện r&#250;t đơn khởi kiện th&#236; T&#242;a &#225;n ra quyết định đ&#236;nh chỉ giải quyết vụ &#225;n theo quy định tại điểm e khoản 1 Điều 143 của Luật Tố tụng h&#224;nh ch&#237;nh. Nếu người khởi kiện kh&#244;ng r&#250;t đơn khởi kiện th&#236; To&#224; &#225;n phải tiếp tục xem x&#233;t t&#237;nh hợp ph&#225;p của quyết định h&#224;nh ch&#237;nh bị khởi kiện v&#224; quyết định h&#224;nh ch&#237;nh mới.</p><p>=&gt; Trường hợp cơ quan nh&#224; nước c&#243; thẩm quyền ban h&#224;nh quyết định thu hồi phần diện t&#237;ch đất tranh chấp li&#234;n quan đến GCNQSDĐ bị kiện trước khi T&#242;a &#225;n thụ l&#253; vụ &#225;n h&#224;nh ch&#237;nh th&#236; x&#225;c định đối tượng khởi kiện kh&#244;ng c&#242;n tồn tại tại thời 25 điểm thụ l&#253; vụ &#225;n, do đ&#227; bị cơ quan c&#243; thẩm quyền thu hồi hoặc hủy bỏ theo quy định của ph&#225;p luật n&#234;n kh&#244;ng c&#242;n đối tượng để T&#242;a &#225;n xem x&#233;t trong vụ &#225;n h&#224;nh ch&#237;nh. Trường hợp n&#224;y, T&#242;a &#225;n căn cứ quy định tại điểm h khoản 1 Điều 143 v&#224; điểm a khoản 1 Điều 123 của Luật Tố tụng h&#224;nh ch&#237;nh để ra quyết định đ&#236;nh chỉ giải quyết vụ &#225;n h&#224;nh ch&#237;nh. Nếu giữa c&#225;c b&#234;n c&#243; tranh chấp về việc ai c&#243; quyền sử dụng đất để nhận tiền bồi thường khi Nh&#224; nước thu hồi đất th&#236; đương sự c&#243; quyền khởi kiện vụ &#225;n d&#226;n sự để y&#234;u cầu T&#242;a &#225;n x&#225;c định chủ thể c&#243; quyền sử dụng đất hợp ph&#225;p tại thời điểm thu hồi l&#224;m căn cứ chi trả tiền bồi thường.</p><p>47. Khi giải quyết khiếu kiện quyết định h&#224;nh ch&#237;nh, h&#224;nh vi h&#224;nh ch&#237;nh về việc cấp Giấy chứng nhận quyền sử dụng đất, x&#225;c nhận thay đổi v&#224;o Giấy chứng nhận quyền sử dụng đất đ&#227; cấp đối với hộ gia đ&#236;nh, c&#225; nh&#226;n, cộng đồng d&#226;n cư, người Việt Nam định cư ở nước ngo&#224;i được sở hữu nh&#224; ở gắn liền với quyền sử dụng đất ở tại Việt Nam của Chỉ nh&#225;nh Văn ph&#242;ng đăng k&#253; đất đai th&#236; x&#225;c định người bị kiện l&#224; Chi nh&#225;nh Văn ph&#242;ng đăng k&#253; đất đai hay Văn ph&#242;ng đăng k&#253; đất đai tỉnh?</p><p>=&gt; Điểm b v&#224; điểm c khoản 2 Điều 136 của Luật Đất đai năm 2024 quy định:</p><p>“b) Chi nh&#225;nh của tổ chức đăng k&#253; đất đai hoặc tổ chức đăng k&#253; đất đai thực hiện cho người sử dụng đất, chủ sở hữu t&#224;i sản gắn liền với đất l&#224; c&#225; nh&#226;n, cộng đồng d&#226;n cư, người gốc Việt Nam định cư ở nước ngo&#224;i;</p><p>c) Tổ chức đăng k&#253; đất đai, chi nh&#225;nh của tổ chức đăng k&#253; đất đai được sử dụng con dấu của m&#236;nh để thực hiện cấp Giấy ch&#250;ng nhận quyền sử dụng đất, quyền sở hữu t&#224;i sản gắn liền với đất hoặc x&#225;c nhận thay đổi v&#224;o gi&#225;y chứng nhận đ&#227; cấp&quot;.</p><p>=&gt; Điểm b khoản 3 Điều 13 Nghị định số 102/2024/NĐ-CP ng&#224;y 30/7/2024 của Ch&#237;nh phủ quy định chi tiết thi h&#224;nh một số điều của Luật Đất đai c&#243; hiệu lực ph&#225;p luật từ ng&#224;y 01/8/2024 quy định:</p><p>“b) Văn ph&#242;ng đăng k&#253; đất đai v&#224; Chi nh&#225;nh Văn ph&#242;ng đăng k&#253; đất đai c&#243; tư c&#225;ch ph&#225;p nh&#226;n, c&#243; con dấu ri&#234;ng v&#224; được mở t&#224;i khoản, hoạt động theo quy định đối với đơn vị sự nghiệp c&#244;ng lập; hạch to&#225;n theo quyết định của Ủy ban nh&#226;n d&#226;n cấp tỉnh.”.</p><p>=&gt; Căn cứ khoản 9 Điều 3 của Luật Tố tụng h&#224;nh ch&#237;nh v&#224; c&#225;c quy định n&#234;u tr&#234;n th&#236; người bị kiện trong vụ &#225;n h&#224;nh ch&#237;nh được x&#225;c định như sau:</p><p>- Đối với c&#225;c khiếu kiện quyết định h&#224;nh ch&#237;nh của Chi nh&#225;nh Văn ph&#242;ng đăng k&#253; đất đai được ban h&#224;nh từ ng&#224;y 01/8/2024 th&#236; x&#225;c định người bị kiện trong vụ &#225;n h&#224;nh ch&#237;nh l&#224; Chi nh&#225;nh Văn ph&#242;ng đăng k&#253; đất đai;</p><p>- Đối với c&#225;c khiếu kiện quyết định h&#224;nh ch&#237;nh của Chi nh&#225;nh Văn ph&#242;ng đăng k&#253; đất đai được ban h&#224;nh trước ng&#224;y 01/8/2024 th&#236; x&#225;c định người bị kiện trong vụ &#225;n h&#224;nh ch&#237;nh l&#224; Văn ph&#242;ng đăng k&#253; đất đai.</p><p>48. Trong vụ &#225;n h&#224;nh ch&#237;nh y&#234;u cầu hủy Giấy chứng nhận đăng k&#253; doanh nghiệp th&#236; x&#225;c định đối tượng khởi kiện như thế n&#224;o?</p><p>=&gt; Căn cứ khoản 15 Điều 4 của Luật Doanh nghiệp năm 2020 (sửa đổi, bổ sung năm 2025) th&#236; Giấy chứng nhận đăng k&#253; doanh nghiệp l&#224; văn bản ghi nhận th&#244;ng tin đăng k&#253; doanh nghiệp do Cơ quan đăng k&#253; kinh doanh cấp. Trường hợp nội dung Giấy chứng nhận đăng k&#253; doanh nghiệp kh&#244;ng ch&#237;nh x&#225;c so với hồ sơ đăng k&#253;, Cơ quan đăng k&#253; kinh doanh phải thực hiện hiệu đ&#237;nh theo quy định tại khoản 1 Điều 77 Nghị định số 168/2025/NĐ-CP ng&#224;y 30/6/2025 của Ch&#237;nh phủ về đăng k&#253; doanh nghiệp (sau đ&#226;y gọi l&#224; Nghị định số 168/2025/NĐ-CP). Trường hợp Giấy chứng nhận đăng k&#253; doanh nghiệp được cấp kh&#244;ng đ&#250;ng quy định ph&#225;p luật, Cơ quan đăng k&#253; kinh doanh c&#243; tr&#225;ch nhiệm thu hồi theo quy định tại khoản 1 Điều 212 của Luật Doanh nghiệp v&#224; Điều 69 Nghị định số 68/2025/NĐ-CP.</p><p>=&gt; Căn cứ c&#225;c quy định n&#234;u tr&#234;n, Giấy chứng nhận đăng k&#253; doanh nghiệp kh&#244;ng phải l&#224; quyết định h&#224;nh ch&#237;nh v&#224; kh&#244;ng thuộc đối tượng khởi kiện vụ &#225;n h&#224;nh ch&#237;nh. Khi ph&#225;t hiện nội dung Giấy chứng nhận đăng k&#253; doanh nghiệp kh&#244;ng ch&#237;nh x&#225;c hoặc được cấp kh&#244;ng đ&#250;ng quy định, doanh nghiệp c&#243; quyền để nghị Cơ quan đăng k&#253; kinh doanh thực hiện hiệu đ&#237;nh, cấp đổi, thu hổi theo thầm quyền hoặc khởi kiện đối với h&#224;nh vi h&#224;nh ch&#237;nh của Cơ quan đăng k&#253; kinh doanh trong việc cấp Giấy chứng nhận đăng k&#253; doanh nghiệp. V&#236; vậy, trường hợp người khởi kiện y&#234;u cầu hủy Giấy chứng nhận đăng k&#253; doanh nghiệp, T&#242;a &#225;n cần x&#225;c định đ&#250;ng đổi tượng khởi kiện của vụ &#225;n l&#224; khiếu kiện h&#224;nh vỉ h&#224;nh ch&#237;nh trong việc cấp Giấy chứng nhận đăng k&#253; doanh nghiệp.</p><p>49. Theo quy định tại khoản 4 Điều 152 của Luật Đất đại năm 2024, Nh&#224; nước kh&#244;ng thu hồi Giấy chứng nhận quyền sử dụng đất đ&#227; cấp tr&#225;i ph&#225;p luật theo quy định tại điểm b khoản 2 Điều 152 của Luật Đất đai năm 2024 nếu người được cấp Giấy chứng nhận quyền sử dụng đất đ&#227; thực hiện việc chuyền quyền sử dụng đất theo quy định của ph&#225;p luật về đất đai. Vậy n&#234;́u Nh&#224; nước kh&#244;ng thu hồi Giấy chứng nhận quyền sử dụng đất n&#224;y th&#236; T&#242;a &#225;n c&#243; quyền hủy Giấy chứng nhận quyền sử dụng đất n&#224;y hay kh&#244;ng?</p><p>=&gt; Mặc d&#249; Ủy ban nh&#226;n d&#226;n kh&#244;ng thu hồi Giấy chứng nhận quyền sử dụng đất trong trường hợp n&#224;y nhưng trong vụ &#225;n h&#224;nh ch&#237;nh T&#242;a &#225;n c&#243; quyền hủy Giấy chứng nhận quyền sử dụng đất n&#224;y v&#224; c&#225;c quyết định h&#224;nh ch&#237;nh li&#234;n quan (nếu c&#243;) theo quy định tại khoản 2 Điều 193 của Luật Tổ tụng h&#224;nh ch&#237;nh.</p><p>50. Trong vụ &#225;n d&#226;n sự giải quyết tranh chấp quyền sử dụng đất giữa &#244;ng A v&#224; &#244;ng B. T&#242;a &#225;n đ&#227; x&#225;c định đất tranh chấp l&#224; của &#244;ng B v&#224; &#244;ng B căn cứ bản &#225;n đi đăng k&#253; xin cấp Giấy chứng nhận quyền sử dụng đất. Sau đ&#243; &#244;ng C khởi kiện vụ &#225;n h&#224;nh ch&#237;nh y&#234;u cầu hủy Giấy chứng nhận quyền sử dụng đất cấp cho &#244;ng B, v&#236; &#244;ng C cho rằng đất l&#224; của &#244;ng C. Trường hợp n&#224;y c&#243; được x&#225;c định l&#224; vụ việc đ&#227; được giải quyết bằng bản &#225;n đ&#227; c&#243; hiệu lực ph&#225;p luật hay kh&#244;ng?</p><p>=&gt; Việc &#244;ng C khởi kiện y&#234;u cầu hủy Giấy chứng nhận quyền sử dụng đất đ&#227; cấp cho &#244;ng B l&#224; quyền khởi kiện độc lập v&#224; kh&#244;ng được x&#225;c định l&#224; vụ việc đ&#227; được giải quyết bằng bản &#225;n đ&#227; c&#243; hiệu lực ph&#225;p luật. Giấy chứng nhận quyền sử dụng đất được cấp cho &#244;ng B tr&#234;n cơ sở bản &#225;n đ&#227; c&#243; hiệu lực ph&#225;p luật l&#224; một quyết định h&#224;nh ch&#237;nh mới do cơ quan nh&#224; nước c&#243; thẩm quyền ban h&#224;nh n&#234;n vẫn thuộc đổi tượng khởi kiện vụ &#225;n h&#224;nh ch&#237;nh theo quy định của Luật Tổ tụng h&#224;nh ch&#237;nh v&#224; T&#242;a &#225;n thụ l&#253; vụ &#225;n h&#224;nh ch&#237;nh theo y&#234;u cấu khởi kiện của &#244;ng C. Trong qu&#225; tr&#236;nh giải quyết vụ &#225;n h&#224;nh ch&#237;nh, nếu &#244;ng C cung cấp được t&#224;i liệu, chứng cứ chứng minh &#244;ng c&#243; quyền sử dụng hợp ph&#225;p đối với thửa đất đ&#227; được cấp cho &#244;ng B th&#236; T&#242;a &#225;n căn cứ quy định điểm d khoản 1 Điều 141 của Luật Tổ tụng h&#224;nh ch&#237;nh tạm đ&#236;nh chỉ vụ &#225;n h&#224;nh ch&#237;nh v&#224; kiến nghị T&#242;a &#225;n c&#243; thẩm quyền xem x&#233;t lại bản &#225;n d&#226;n sự đ&#227; c&#243; hiệu lực ph&#225;p luật theo thủ tục gi&#225;m đốc thẩm, t&#225;i thẩm khi c&#243; căn cứ theo quy định của ph&#225;p luật.</p><p>51. &#212;ng A v&#224; &#244;ng B trạnh chấp quyền sử dụng đất được Uy ban nhận d&#226;n c&#243; thẩm quyền giải quyết bằng quyết định h&#224;nh ch&#237;nh v&#224; x&#225;c định quyền sử dụng đất l&#224; của &#244;ng B. &#212;ng A kh&#244;ng khiểu nại quyết định h&#224;nh ch&#237;nh. Sau khi ống B được cấp giấy chứng nhận quyền sử dụng đất th&#236; &#244;ng A khởi kiện vụ &#225;n h&#224;nh ch&#237;nh y&#234;u cầu hủy giấy chứng nhận quyền sử dụng đất đ&#227; cấp cho &#244;ng B. Trường hợp n&#224;y c&#243; được x&#225;c định l&#224; vụ việc đ&#227; được giải quyết bằng quyết định c&#243; hiệu lực ph&#225;p luật hay kh&#244;ng?</p><p>=&gt; Điểm d khoản 1 Điều 123 của Luật Tố tụng h&#224;nh ch&#237;nh quy định Thẩm ph&#225;n trả lại đơn khởi kiện trong trường hợp: “d) Sự việc đ&#227; được giải quyết bằng bản &#225;n hoặc quyết định của T&#242;a &#225;n đ&#227; c&#243; hiệu lực ph&#225;p luật; ”. Quy định n&#224;y chỉ &#225;p dụng đối với trường hợp vụ việc đ&#227; được giải quyết bằng bản &#225;n hoặc quyết định của T&#242;a &#225;n, kh&#244;ng bao gồm quyết định h&#224;nh ch&#237;nh của cơ quan h&#224;nh ch&#237;nh nh&#224; nước.</p><p>=&gt; Dọ đ&#243;, y&#234;u cầu khởi kiện của &#244;ng A về việc hủy Giấy chứng nhận quyền sử dụng đất cấp cho &#244;ng B kh&#244;ng được x&#225;c định l&#224; sự việc đ&#227; được giải quyết bằng bản &#225;n, quyết định của T&#242;a &#225;n đ&#227; c&#243; hiệu lực ph&#225;p luật v&#224; kh&#244;ng thuộc trường hợp phải trả lại đơn khởi kiện theo quy định n&#234;u tr&#234;n.</p><p>=&gt; Tr&#234;n đ&#226;y l&#224; kết quả giải đ&#225;p một số vướng mắc trong c&#244;ng t&#225;c x&#233;t xử của c&#225;c T&#242;a &#225;n, T&#242;a &#225;n nh&#226;n d&#226;n tối cao th&#244;ng b&#225;o để c&#225;c T&#242;a &#225;n nghi&#234;n cứu, tham khảo in nehi&#234;n trong qu&#225; tr&#236;nh giải quyết c&#225;c vụ việc thuộc thẩm quy&#234;̀n.</p>",
+            "timeline": [],
+            "laws": [
+              {
+                "name": "Khoản 1 Điều 7 của Luật Tố tụng h&#224",
+                "content": ""
+              },
+              {
+                "name": "Khoản 3 Điều 23 của Luật Tr&#225",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 22 của Luật n&#224",
+                "content": ""
+              },
+              {
+                "name": "điểm b khoản 1 Điều 152 của Luật Đất đai năm 2024 th&#236",
+                "content": ""
+              },
+              {
+                "name": "Điều 136 của Luật n&#224",
+                "content": ""
+              },
+              {
+                "name": "điểm g khoản 1 Điều 143 của Luật Tố tụng h&#224",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 152 của Luật Đất đai năm 2024",
+                "content": ""
+              },
+              {
+                "name": "Điểm b khoản 1 Điều 311 của Luật Tố tụng h&#224",
+                "content": ""
+              },
+              {
+                "name": "điểm e khoản 1 Điều 143 của Luật Tố tụng h&#224",
+                "content": ""
+              },
+              {
+                "name": "điểm h khoản 1 Điều 143",
+                "content": ""
+              },
+              {
+                "name": "điểm a khoản 1 Điều 123 của Luật Tố tụng h&#224",
+                "content": ""
+              },
+              {
+                "name": "điểm c khoản 2 Điều 136 của Luật Đất đai năm 2024 quy định",
+                "content": ""
+              },
+              {
+                "name": "Điểm b khoản 3 Điều 13",
+                "content": ""
+              },
+              {
+                "name": "khoản 9 Điều 3 của Luật Tố tụng h&#224",
+                "content": ""
+              },
+              {
+                "name": "khoản 15 Điều 4 của Luật Doanh nghiệp năm 2020 (sửa đổi",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 77",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 212 của Luật Doanh nghiệp v&#224",
+                "content": ""
+              },
+              {
+                "name": "Điều 69",
+                "content": ""
+              },
+              {
+                "name": "khoản 4 Điều 152 của Luật Đất đại năm 2024",
+                "content": ""
+              },
+              {
+                "name": "điểm b khoản 2 Điều 152 của Luật Đất đai năm 2024 nếu người được cấp Giấy chứng nhận quyền sử dụng đất đ&#227",
+                "content": ""
+              },
+              {
+                "name": "khoản 2 Điều 193 của Luật Tổ tụng h&#224",
+                "content": ""
+              },
+              {
+                "name": "điểm d khoản 1 Điều 141 của Luật Tổ tụng h&#224",
+                "content": ""
+              },
+              {
+                "name": "Điểm d khoản 1 Điều 123 của Luật Tố tụng h&#224",
+                "content": ""
+              }
+            ]
+          },
           {
             "id": "case-cong-van-163-tandtc-pc-nam-2024-hanh-chinh-3",
             "ten": "Công văn 163 TANDTC-PC năm 2024",
@@ -10017,6 +10598,24 @@
       },
       "recent": [
         {
+          "id": "case-cong-van-250-hinh-su-3",
+          "ten": "Công văn 250/TANDTC-PC về việc thông báo kết quả giải đáp trực tuyến một số vướng mắc trong công tác xét xử",
+          "lvId": "hinh-su",
+          "sfId": "giai-dap-nghiep-vu"
+        },
+        {
+          "id": "case-cong-van-250-hanh-chinh-2",
+          "ten": "Công văn 250/TANDTC-PC về việc thông báo kết quả giải đáp trực tuyến một số vướng mắc trong công tác xét xử",
+          "lvId": "hanh-chinh",
+          "sfId": "giai-dap-nghiep-vu"
+        },
+        {
+          "id": "case-cong-van-250-dan-su-1",
+          "ten": "Công văn 250/TANDTC-PC về việc thông báo kết quả giải đáp trực tuyến một số vướng mắc trong công tác xét xử",
+          "lvId": "dan-su",
+          "sfId": "giai-dap-nghiep-vu"
+        },
+        {
           "id": "case-ban-dau-gia-3",
           "ten": "Bình luận về Tranh chấp về hủy bỏ kết quả bán đấu giá, hợp đồng bán đấu giá và hủy Giấy chứng nhận quyền sử dụng đất",
           "lvId": "dan-su",
@@ -10599,10 +11198,10 @@
             {
               "id": "giai-dap-nghiep-vu",
               "ten": "Giải đáp nghiệp vụ",
-              "soLuong": 1
+              "soLuong": 2
             }
           ],
-          "totalCases": 21
+          "totalCases": 22
         },
         {
           "id": "dan-su",
@@ -10627,10 +11226,10 @@
             {
               "id": "giai-dap-nghiep-vu",
               "ten": "Giải đáp nghiệp vụ",
-              "soLuong": 1
+              "soLuong": 2
             }
           ],
-          "totalCases": 42
+          "totalCases": 43
         },
         {
           "id": "kinh-doanh-thuong-mai",
@@ -10711,10 +11310,10 @@
             {
               "id": "giai-dap-nghiep-vu",
               "ten": "Giải đáp nghiệp vụ",
-              "soLuong": 1
+              "soLuong": 2
             }
           ],
-          "totalCases": 3
+          "totalCases": 4
         },
         {
           "id": "dat-dai",
@@ -10912,7 +11511,7 @@
         "content": "1. Người dưới 18 tuổi phạm tội bị phạt cải tạo không giam giữ hoặc phạt tù, nếu có tiến bộ và đã chấp hành được một phần tư thời hạn, thì được Tòa án xét giảm; riêng đối với hình phạt tù, mỗi lần có thể giảm đến 04 năm nhưng phải bảo đảm đã chấp hành ít nhất là hai phần năm mức hình phạt đã tuyên.<br><br>2. Người dưới 18 tuổi phạm tội bị phạt cải tạo không giam giữ hoặc phạt tù, nếu lập công hoặc mắc bệnh hiểm nghèo, thì được xét giảm ngay và có thể được miễn chấp hành phần hình phạt còn lại.<br><br>3. Người dưới 18 tuổi phạm tội bị phạt tiền nhưng bị lâm vào hoàn cảnh kinh tế đặc biệt khó khăn kéo dài do thiên tai, hoả hoạn, tai nạn hoặc ốm đau gây ra hoặc lập công lớn, thì theo đề nghị của Viện trưởng Viện kiểm sát, Tòa án có thể quyết định giảm hoặc miễn việc chấp hành phần tiền phạt còn lại."
       },
       "law-173": {
-        "title": "Điều 173 Bộ luật H&#236",
+        "title": "Điều 173 của Bộ luật H&#236",
         "content": "1. Người nào trộm cắp tài sản của người khác trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng hoặc dưới 2.000.000 đồng nhưng thuộc một trong các trường hợp sau đây, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm:a) Đã bị xử phạt vi phạm hành chính về hành vi chiếm đoạt tài sản mà còn vi phạm;b) Đã bị kết án về tội này hoặc về một trong các tội quy định tại các điều 168, 169, 170, 171, 172, 174, 175 và 290 của Bộ luật này, chưa được xóa án tích mà còn vi phạm;c) Gây ảnh hưởng xấu đến an ninh, trật tự, an toàn xã hội;d) Tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ; tài sản là kỷ vật, di vật, đồ thờ cúng có giá trị đặc biệt về mặt tinh thần đối với người bị hại.2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 07 năm:a) Có tổ chức;b) Có tính chất chuyên nghiệp;c) Chiếm đoạt tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng;d) Dùng thủ đoạn xảo quyệt, nguy hiểm;đ) Hành hung để tẩu thoát;e) Trộm cắp tài sản trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;g) Tái phạm nguy hiểm.3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 07 năm đến 15 năm:a) Chiếm đoạt tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng;b) Trộm cắp tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;c) Lợi dụng thiên tai, dịch bệnh.4. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 12 năm đến 20 năm:a) Chiếm đoạt tài sản trị giá 500.000.000 đồng trở lên;b) Trộm cắp tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;c) Lợi dụng hoàn cảnh chiến tranh, tình trạng khẩn cấp.5. Người phạm tội còn có thể bị phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng.",
         "title_en": "Article 173",
         "content_en": "",
@@ -10948,8 +11547,16 @@
         "content": "6. Người có chức vụ, quyền hạn trong các doanh nghiệp, tổ chức ngoài Nhà nước mà tham ô tài sản, thì bị xử lý theo quy định tại Điều này."
       },
       "law-79": {
-        "title": "khoản 1 Điều 79. Hộ kinh doanh",
-        "content": "1. Hộ kinh doanh do một cá nhân hoặc các thành viên hộ gia đình đăng ký thành lập và chịu trách nhiệm bằng toàn bộ tài sản của mình đối với hoạt động kinh doanh của hộ. Trường hợp các thành viên hộ gia đình đăng ký hộ kinh doanh thì ủy quyền cho một thành viên làm đại diện hộ kinh doanh. Cá nhân đăng ký hộ kinh doanh, người được các thành viên hộ gia đình ủy quyền làm đại diện hộ kinh doanh là chủ hộ kinh doanh."
+        "title": "Điều 79",
+        "content": "1. Hộ kinh doanh do một cá nhân hoặc các thành viên hộ gia đình đăng ký thành lập và chịu trách nhiệm bằng toàn bộ tài sản của mình đối với hoạt động kinh doanh của hộ. Trường hợp các thành viên hộ gia đình đăng ký hộ kinh doanh thì ủy quyền cho một thành viên làm đại diện hộ kinh doanh. Cá nhân đăng ký hộ kinh doanh, người được các thành viên hộ gia đình ủy quyền làm đại diện hộ kinh doanh là chủ hộ kinh doanh.",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
       },
       "law-4": {
         "title": "Điều 4",
@@ -10968,12 +11575,28 @@
         "content": "(Nội dung điều luật sẽ được cập nhật sau.)"
       },
       "law-260": {
-        "title": "Điều 260. Tội vi phạm quy định về tham gia giao thông đường bộ",
-        "content": "1. Người nào tham gia giao thông đường bộ mà vi phạm quy định về an toàn giao thông đường bộ thuộc một trong các trường hợp sau đây, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng, phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 01 năm đến 05 năm:<br><br>a) Làm chết 01 người hoặc gây thương tích hoặc gây tổn hại cho sức khỏe của 01 người với tỷ lệ tổn thương cơ thể 61% trở lên;<br><br>b) Gây thương tích hoặc gây tổn hại cho sức khỏe cho 02 người với tỷ lệ tổn thương cơ thể của mỗi người từ 31% đến 60%;<br><br>c) Gây thương tích hoặc gây tổn hại cho sức khỏe cho 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 61% đến 121%;<br><br>d) Gây thiệt hại về tài sản từ 100.000.000 đồng đến dưới 500.000.000 đồng.<br><br>2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 03 năm đến 10 năm:<br><br>a) Không có giấy phép lái xe theo quy định;<br><br>b) Trong tình trạng có sử dụng rượu, bia mà trong máu hoặc hơi thở có nồng độ cồn vượt quá mức quy định hoặc có sử dụng chất ma túy hoặc các chất kích thích mạnh khác mà pháp luật cấm sử dụng;<br><br>c) Gây tai nạn rồi bỏ chạy để trốn tránh trách nhiệm hoặc cố ý không cứu giúp người bị nạn;<br><br>d) Không chấp hành hiệu lệnh của người điều khiển hoặc hướng dẫn giao thông;<br><br>đ) Làm chết 02 người;<br><br>e) Gây thương tích hoặc gây tổn hại cho sức khỏe của 02 người với tỷ lệ tổn thương cơ thể của mỗi người 61% trở lên;<br><br>g) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 122% đến 200%;<br><br>h) Gây thiệt hại về tài sản từ 500.000.000 đồng đến dưới 1.500.000.000 đồng.<br><br>3. Phạm tội thuộc một trong các trường sau đây, thì bị phạt tù từ 07 năm đến 15 năm:<br><br>a) Làm chết 03 người trở lên;<br><br>b) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người với tỷ lệ tổn thương cơ thể của mỗi người 61% trở lên;<br><br>c) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này 201% trở lên;<br><br>d) Gây thiệt hại về tài sản 1.500.000.000 đồng trở lên.<br><br>4. Người tham gia giao thông đường bộ mà vi phạm quy định về an toàn giao thông đường bộ gây thương tích hoặc gây tổn hại cho sức khỏe của 01 người với tỷ lệ tổn thương cơ thể từ 31% đến 60% hoặc gây thương tích hoặc gây tổn hại cho sức khỏe của 02 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 31% đến 60%, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng hoặc phạt cải tạo không giam giữ đến 03 năm.<br><br>5. Vi phạm quy định về an toàn giao thông đường bộ mà có khả năng thực tế dẫn đến hậu quả gây thiệt hại cho tính mạng, sức khỏe hoặc tài sản của người khác nếu không được ngăn chặn kịp thời, thì bị phạt tiền từ 10.000.000 đồng đến 50.000.000 đồng, phạt cải tạo không giam giữ đến 01 năm hoặc phạt tù từ 03 tháng đến 01 năm.<br><br>6. Người phạm tội còn có thể bị cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định từ 01 năm đến 05 năm."
+        "title": "Điều 260 của Bộ luật H&#236",
+        "content": "1. Người nào tham gia giao thông đường bộ mà vi phạm quy định về an toàn giao thông đường bộ thuộc một trong các trường hợp sau đây, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng, phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 01 năm đến 05 năm:a) Làm chết 01 người hoặc gây thương tích hoặc gây tổn hại cho sức khỏe của 01 người với tỷ lệ tổn thương cơ thể 61% trở lên;b) Gây thương tích hoặc gây tổn hại cho sức khỏe cho 02 người với tỷ lệ tổn thương cơ thể của mỗi người từ 31% đến 60%;c) Gây thương tích hoặc gây tổn hại cho sức khỏe cho 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 61% đến 121%;d) Gây thiệt hại về tài sản từ 100.000.000 đồng đến dưới 500.000.000 đồng.2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 03 năm đến 10 năm:a) Không có giấy phép lái xe theo quy định;b) Trong tình trạng có sử dụng rượu, bia mà trong máu hoặc hơi thở có nồng độ cồn vượt quá mức quy định hoặc có sử dụng chất ma túy hoặc các chất kích thích mạnh khác mà pháp luật cấm sử dụng;c) Gây tai nạn rồi bỏ chạy để trốn tránh trách nhiệm hoặc cố ý không cứu giúp người bị nạn;d) Không chấp hành hiệu lệnh của người điều khiển hoặc hướng dẫn giao thông;đ) Làm chết 02 người;e) Gây thương tích hoặc gây tổn hại cho sức khỏe của 02 người với tỷ lệ tổn thương cơ thể của mỗi người 61% trở lên;g) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 122% đến 200%;h) Gây thiệt hại về tài sản từ 500.000.000 đồng đến dưới 1.500.000.000 đồng.3. Phạm tội thuộc một trong các trường sau đây, thì bị phạt tù từ 07 năm đến 15 năm:a) Làm chết 03 người trở lên;b) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người với tỷ lệ tổn thương cơ thể của mỗi người 61% trở lên;c) Gây thương tích hoặc gây tổn hại cho sức khỏe của 03 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này 201% trở lên;d) Gây thiệt hại về tài sản 1.500.000.000 đồng trở lên.4. Người tham gia giao thông đường bộ mà vi phạm quy định về an toàn giao thông đường bộ gây thương tích hoặc gây tổn hại cho sức khỏe của 01 người với tỷ lệ tổn thương cơ thể từ 31% đến 60% hoặc gây thương tích hoặc gây tổn hại cho sức khỏe của 02 người trở lên mà tổng tỷ lệ tổn thương cơ thể của những người này từ 31% đến 60%, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng hoặc phạt cải tạo không giam giữ đến 03 năm.5. Vi phạm quy định về an toàn giao thông đường bộ mà có khả năng thực tế dẫn đến hậu quả gây thiệt hại cho tính mạng, sức khỏe hoặc tài sản của người khác nếu không được ngăn chặn kịp thời, thì bị phạt tiền từ 10.000.000 đồng đến 50.000.000 đồng, phạt cải tạo không giam giữ đến 01 năm hoặc phạt tù từ 03 tháng đến 01 năm.6. Người phạm tội còn có thể bị cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định từ 01 năm đến 05 năm.",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
       },
       "law-341": {
-        "title": "Điều 341. Tội làm giả con dấu, tài liệu của cơ quan, tổ chức; tội sử dụng con dấu, tài liệu giả của cơ quan, tổ chức",
-        "content": "1. Người nào làm giả con dấu, tài liệu hoặc giấy tờ khác của cơ quan, tổ chức hoặc sử dụng con dấu, tài liệu, giấy tờ đó thực hiện hành vi trái pháp luật, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng, phạt cải tạo không giam giữ đến 03 năm hoặc bị phạt tù từ 06 tháng đến 03 năm.<br><br>2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 05 năm:<br><br>a) Có tổ chức;<br><br>b) Phạm tội 02 lần trở lên;<br><br>c) Làm từ 02 đến 05 con dấu, tài liệu hoặc giấy tờ khác;<br><br>d) Sử dụng con dấu, tài liệu hoặc giấy tờ khác thực hiện tội phạm;<br><br>đ) Thu lợi bất chính 10.000.000 đồng đến dưới 50.000.000 đồng;<br><br>e) Tái phạm nguy hiểm.<br><br>3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 03 năm đến 07 năm:<br><br>a) Làm 06 con dấu, tài liệu hoặc giấy tờ khác trở lên;<br><br>b) Sử dụng con dấu, tài liệu hoặc giấy tờ khác thực hiện tội phạm rất nghiêm trọng hoặc tội đặc biệt nghiêm trọng;<br><br>c) Thu lợi bất chính 50.000.000 đồng trở lên.<br><br>4. Người phạm tội còn có thể bị phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng."
+        "title": "Điều 341 của Bộ luật H&#236",
+        "content": "1. Người nào làm giả con dấu, tài liệu hoặc giấy tờ khác của cơ quan, tổ chức hoặc sử dụng con dấu, tài liệu, giấy tờ đó thực hiện hành vi trái pháp luật, thì bị phạt tiền từ 30.000.000 đồng đến 100.000.000 đồng, phạt cải tạo không giam giữ đến 03 năm hoặc bị phạt tù từ 06 tháng đến 03 năm.2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 05 năm:a) Có tổ chức;b) Phạm tội 02 lần trở lên;c) Làm từ 02 đến 05 con dấu, tài liệu hoặc giấy tờ khác;d) Sử dụng con dấu, tài liệu hoặc giấy tờ khác thực hiện tội phạm;đ) Thu lợi bất chính 10.000.000 đồng đến dưới 50.000.000 đồng;e) Tái phạm nguy hiểm.3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 03 năm đến 07 năm:a) Làm 06 con dấu, tài liệu hoặc giấy tờ khác trở lên;b) Sử dụng con dấu, tài liệu hoặc giấy tờ khác thực hiện tội phạm rất nghiêm trọng hoặc tội đặc biệt nghiêm trọng;c) Thu lợi bất chính 50.000.000 đồng trở lên.4. Người phạm tội còn có thể bị phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng.",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
       },
       "law-174": {
         "title": "Điều 174. Tội lừa đảo chiếm đoạt tài sản",
@@ -11120,7 +11743,7 @@
         "content": "1. Tranh chấp đất đai mà các bên tranh chấp hoặc một trong các bên tranh chấp có Giấy chứng nhận quyền sử dụng đất, Giấy chứng nhận quyền sở hữu nhà ở và quyền sử dụng đất ở, Giấy chứng nhận quyền sở hữu nhà ở, Giấy chứng nhận quyền sở hữu công trình xây dựng, Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất, Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất hoặc có một trong các loại giấy tờ quy định tại Điều 137 của Luật này và tranh chấp về tài sản gắn liền với đất thì do Tòa án giải quyết.<br><br>2. Tranh chấp đất đai mà các bên tranh chấp không có Giấy chứng nhận quyền sử dụng đất, Giấy chứng nhận quyền sở hữu nhà ở và quyền sử dụng đất ở, Giấy chứng nhận quyền sở hữu nhà ở, Giấy chứng nhận quyền sở hữu công trình xây dựng, Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất, Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất hoặc không có một trong các loại giấy tờ quy định tại Điều 137 của Luật này thì các bên tranh chấp được lựa chọn một trong hai hình thức giải quyết tranh chấp đất đai theo quy định sau đây:<br><br>a) Nộp đơn yêu cầu giải quyết tranh chấp tại Ủy ban nhân dân cấp có thẩm quyền theo quy định tại khoản 3 Điều này;<br><br>b) Khởi kiện tại Tòa án có thẩm quyền theo quy định của pháp luật về tố tụng dân sự.<br><br>3. Trường hợp các bên tranh chấp lựa chọn giải quyết tranh chấp tại Ủy ban nhân dân cấp có thẩm quyền thì việc giải quyết tranh chấp đất đai được thực hiện như sau:<br><br>a) Trường hợp tranh chấp giữa hộ gia đình, cá nhân, cộng đồng dân cư với nhau thì Chủ tịch Ủy ban nhân dân cấp huyện giải quyết. Sau thời hạn 30 ngày kể từ ngày nhận được quyết định giải quyết của Chủ tịch Ủy ban nhân dân cấp huyện mà các bên tranh chấp không khởi kiện hoặc khiếu nại theo quy định tại điểm này thì quyết định giải quyết tranh chấp của Chủ tịch Ủy ban nhân dân cấp huyện có hiệu lực thi hành.<br><br>Trường hợp không đồng ý với quyết định giải quyết thì trong thời hạn 30 ngày kể từ ngày nhận được quyết định giải quyết của Chủ tịch Ủy ban nhân dân cấp huyện, các bên tranh chấp có quyền khởi kiện tại Tòa án theo quy định của pháp luật về tố tụng hành chính hoặc khiếu nại đến Chủ tịch Ủy ban nhân dân cấp tỉnh. Quyết định giải quyết của Chủ tịch Ủy ban nhân dân cấp tỉnh có hiệu lực thi hành.<br><br>b) Trường hợp tranh chấp mà một bên tranh chấp là tổ chức, tổ chức tôn giáo, tổ chức tôn giáo trực thuộc, người gốc Việt Nam định cư ở nước ngoài, tổ chức kinh tế có vốn đầu tư nước ngoài thì Chủ tịch Ủy ban nhân dân cấp tỉnh giải quyết. Sau thời hạn 30 ngày kể từ ngày nhận được quyết định giải quyết của Chủ tịch Ủy ban nhân dân cấp tỉnh mà các bên tranh chấp không khởi kiện hoặc khiếu nại theo quy định tại điểm này thì quyết định giải quyết của Chủ tịch Ủy ban nhân dân cấp tỉnh có hiệu lực thi hành.<br><br>Trường hợp không đồng ý với quyết định giải quyết thì trong thời hạn 30 ngày kể từ ngày nhận được quyết định giải quyết của Chủ tịch Ủy ban nhân dân cấp tỉnh, các bên tranh chấp có quyền khởi kiện tại Tòa án theo quy định của pháp luật về tố tụng hành chính hoặc khiếu nại đến Bộ trưởng Bộ Tài nguyên và Môi trường. Quyết định giải quyết của Bộ trưởng Bộ Tài nguyên và Môi trường có hiệu lực thi hành.<br><br>4. Chủ tịch Ủy ban nhân dân cấp huyện, Chủ tịch Ủy ban nhân dân cấp tỉnh, Bộ trưởng Bộ Tài nguyên và Môi trường khi giải quyết tranh chấp đất đai quy định tại khoản 3 Điều này phải ra quyết định giải quyết tranh chấp. Quyết định giải quyết tranh chấp có hiệu lực thi hành phải được các bên nghiêm chỉnh chấp hành. Sau thời hạn 30 ngày kể từ ngày quyết định giải quyết tranh chấp có hiệu lực thi hành mà các bên hoặc một trong các bên không chấp hành sẽ bị cưỡng chế thi hành.<br><br>Chủ tịch Ủy ban nhân dân cấp huyện nơi có đất tranh chấp ban hành quyết định cưỡng chế thực hiện quyết định giải quyết tranh chấp đất đai và tổ chức thực hiện quyết định cưỡng chế.<br><br>5. Tranh chấp giữa các bên phát sinh từ hoạt động thương mại liên quan đến đất đai do Tòa án giải quyết theo quy định của pháp luật về tố tụng dân sự hoặc do Trọng tài thương mại Việt Nam giải quyết theo quy định của pháp luật về trọng tài thương mại.<br><br>6. Ủy ban nhân dân các cấp có trách nhiệm cung cấp hồ sơ, tài liệu có liên quan đến việc quản lý, sử dụng đất đai khi được Tòa án, Trọng tài thương mại Việt Nam yêu cầu để làm căn cứ cho giải quyết tranh chấp đất đai.<br><br>7. Chính phủ quy định chi tiết việc giải quyết tranh chấp thuộc thẩm quyền của Chủ tịch Ủy ban nhân dân cấp huyện, Chủ tịch Ủy ban nhân dân cấp tỉnh, Bộ trưởng Bộ Tài nguyên và Môi trường tại Điều này."
       },
       "law-5": {
-        "title": "Điều 5 Bộ luật Tố tụng d&#226",
+        "title": "Điều 5",
         "content": "",
         "title_en": "Article 5",
         "content_en": "",
@@ -11168,8 +11791,16 @@
         "content": "2. Tại phiên tòa, việc thay đổi Kiểm sát viên do Hội đồng xét xử quyết định sau khi nghe ý kiến của người bị yêu cầu thay đổi. Hội đồng xét xử thảo luận tại phòng nghị án và quyết định theo đa số.<br><br>Trường hợp phải thay đổi Kiểm sát viên thì Hội đồng xét xử ra quyết định hoãn phiên tòa. Việc cử Kiểm sát viên thay thế Kiểm sát viên bị thay đổi do Viện trưởng Viện kiểm sát cùng cấp quyết định. Nếu Kiểm sát viên bị thay đổi là Viện trưởng Viện kiểm sát thì do Viện trưởng Viện kiểm sát cấp trên trực tiếp quyết định."
       },
       "law-227": {
-        "title": "Điều 227. Sự có mặt của đương sự, người đại diện, người bảo vệ quyền và lợi ích hợp pháp của đương sự",
-        "content": "1. Tòa án triệu tập hợp lệ lần thứ nhất, đương sự hoặc người đại diện của họ, người bảo vệ quyền và lợi ích hợp pháp của đương sự phải có mặt tại phiên tòa; nếu có người vắng mặt thì Hội đồng xét xử phải hoãn phiên tòa, trừ trường hợp người đó có đơn đề nghị xét xử vắng mặt.<br><br>Tòa án phải thông báo cho đương sự, người đại diện, người bảo vệ quyền và lợi ích hợp pháp của đương sự về việc hoãn phiên tòa.<br><br>2. Tòa án triệu tập hợp lệ lần thứ hai, đương sự hoặc người đại diện của họ, người bảo vệ quyền và lợi ích hợp pháp của đương sự phải có mặt tại phiên tòa, trừ trường hợp họ có đơn đề nghị xét xử vắng mặt; nếu vắng mặt vì sự kiện bất khả kháng hoặc trở ngại khách quan thì Tòa án có thể hoãn phiên tòa, nếu không vì sự kiện bất khả kháng hoặc trở ngại khách quan thì xử lý như sau:<br><br>a) Nguyên đơn vắng mặt mà không có người đại diện tham gia phiên tòa thì bị coi là từ bỏ việc khởi kiện và Tòa án ra quyết định đình chỉ giải quyết vụ án đối với yêu cầu khởi kiện của người đó, trừ trường hợp người đó có đơn đề nghị xét xử vắng mặt. Nguyên đơn có quyền khởi kiện lại theo quy định của pháp luật;<br><br>b) Bị đơn không có yêu cầu phản tố, người có quyền lợi, nghĩa vụ liên quan không có yêu cầu độc lập vắng mặt mà không có người đại diện tham gia phiên tòa thì Tòa án tiến hành xét xử vắng mặt họ;<br><br>c) Bị đơn có yêu cầu phản tố vắng mặt mà không có người đại diện tham gia phiên tòa thì bị coi là từ bỏ yêu cầu phản tố và Tòa án quyết định đình chỉ giải quyết đối với yêu cầu phản tố, trừ trường hợp bị đơn có đơn đề nghị xét xử vắng mặt. Bị đơn có quyền khởi kiện lại đối với yêu cầu phản tố đó theo quy định của pháp luật;<br><br>d) Người có quyền lợi, nghĩa vụ liên quan có yêu cầu độc lập vắng mặt mà không có người đại diện tham gia phiên tòa thì bị coi là từ bỏ yêu cầu độc lập và Tòa án quyết định đình chỉ giải quyết đối với yêu cầu độc lập của người đó, trừ trường hợp người đó có đơn đề nghị xét xử vắng mặt. Người có quyền lợi, nghĩa vụ liên quan có yêu cầu độc lập có quyền khởi kiện lại đối với yêu cầu độc lập đó theo quy định của pháp luật;<br><br>đ) Người bảo vệ quyền và lợi ích hợp pháp của đương sự vắng mặt thì Tòa án vẫn tiến hành xét xử vắng mặt họ."
+        "title": "Điều 227",
+        "content": "1. Tòa án triệu tập hợp lệ lần thứ nhất, đương sự hoặc người đại diện của họ, người bảo vệ quyền và lợi ích hợp pháp của đương sự phải có mặt tại phiên tòa; nếu có người vắng mặt thì Hội đồng xét xử phải hoãn phiên tòa, trừ trường hợp người đó có đơn đề nghị xét xử vắng mặt.Tòa án phải thông báo cho đương sự, người đại diện, người bảo vệ quyền và lợi ích hợp pháp của đương sự về việc hoãn phiên tòa.2. Tòa án triệu tập hợp lệ lần thứ hai, đương sự hoặc người đại diện của họ, người bảo vệ quyền và lợi ích hợp pháp của đương sự phải có mặt tại phiên tòa, trừ trường hợp họ có đơn đề nghị xét xử vắng mặt; nếu vắng mặt vì sự kiện bất khả kháng hoặc trở ngại khách quan thì Tòa án có thể hoãn phiên tòa, nếu không vì sự kiện bất khả kháng hoặc trở ngại khách quan thì xử lý như sau:a) Nguyên đơn vắng mặt mà không có người đại diện tham gia phiên tòa thì bị coi là từ bỏ việc khởi kiện và Tòa án ra quyết định đình chỉ giải quyết vụ án đối với yêu cầu khởi kiện của người đó, trừ trường hợp người đó có đơn đề nghị xét xử vắng mặt. Nguyên đơn có quyền khởi kiện lại theo quy định của pháp luật;b) Bị đơn không có yêu cầu phản tố, người có quyền lợi, nghĩa vụ liên quan không có yêu cầu độc lập vắng mặt mà không có người đại diện tham gia phiên tòa thì Tòa án tiến hành xét xử vắng mặt họ;c) Bị đơn có yêu cầu phản tố vắng mặt mà không có người đại diện tham gia phiên tòa thì bị coi là từ bỏ yêu cầu phản tố và Tòa án quyết định đình chỉ giải quyết đối với yêu cầu phản tố, trừ trường hợp bị đơn có đơn đề nghị xét xử vắng mặt. Bị đơn có quyền khởi kiện lại đối với yêu cầu phản tố đó theo quy định của pháp luật;d) Người có quyền lợi, nghĩa vụ liên quan có yêu cầu độc lập vắng mặt mà không có người đại diện tham gia phiên tòa thì bị coi là từ bỏ yêu cầu độc lập và Tòa án quyết định đình chỉ giải quyết đối với yêu cầu độc lập của người đó, trừ trường hợp người đó có đơn đề nghị xét xử vắng mặt. Người có quyền lợi, nghĩa vụ liên quan có yêu cầu độc lập có quyền khởi kiện lại đối với yêu cầu độc lập đó theo quy định của pháp luật;đ) Người bảo vệ quyền và lợi ích hợp pháp của đương sự vắng mặt thì Tòa án vẫn tiến hành xét xử vắng mặt họ.",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
       },
       "law-229": {
         "title": "khoản 2 Điều 229. Sự có mặt của người làm chứng",
@@ -11184,8 +11815,16 @@
         "content": "2. Trường hợp người phiên dịch vắng mặt mà không có người khác thay thế thì Hội đồng xét xử quyết định hoãn phiên tòa."
       },
       "law-241": {
-        "title": "Điều 241. Xem xét, quyết định hoãn phiên tòa khi có người vắng mặt",
-        "content": "Khi có người tham gia tố tụng vắng mặt tại phiên tòa mà không thuộc trường hợp Tòa án phải hoãn phiên tòa thì chủ tọa phiên tòa phải hỏi xem có ai đề nghị hoãn phiên tòa hay không; nếu có người đề nghị thì Hội đồng xét xử xem xét, quyết định theo thủ tục do Bộ luật này quy định và có thể chấp nhận hoặc không chấp nhận; trường hợp không chấp nhận thì phải nêu rõ lý do."
+        "title": "Điều 241 của Bộ luật n&#224",
+        "content": "Khi có người tham gia tố tụng vắng mặt tại phiên tòa mà không thuộc trường hợp Tòa án phải hoãn phiên tòa thì chủ tọa phiên tòa phải hỏi xem có ai đề nghị hoãn phiên tòa hay không; nếu có người đề nghị thì Hội đồng xét xử xem xét, quyết định theo thủ tục do Bộ luật này quy định và có thể chấp nhận hoặc không chấp nhận; trường hợp không chấp nhận thì phải nêu rõ lý do.",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
       },
       "law-18": {
         "title": "Điều 18",
@@ -11212,8 +11851,16 @@
         "content": "1. Việc tách thửa đất, hợp thửa đất phải bảo đảm các nguyên tắc, điều kiện sau đây:<br><br>a) Thửa đất đã được cấp một trong các loại giấy chứng nhận: Giấy chứng nhận quyền sử dụng đất, Giấy chứng nhận quyền sở hữu nhà ở và quyền sử dụng đất ở, Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất, Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất;<br><br>b) Thửa đất còn trong thời hạn sử dụng đất;<br><br>c) Đất không có tranh chấp, không bị kê biên để bảo đảm thi hành án, không bị áp dụng biện pháp khẩn cấp tạm thời của cơ quan nhà nước có thẩm quyền.<br><br>Trường hợp đất có tranh chấp nhưng xác định được phạm vi diện tích, ranh giới đang tranh chấp thì phần diện tích, ranh giới còn lại không tranh chấp của thửa đất đó được phép tách thửa đất, hợp thửa đất;<br><br>d) Việc tách thửa đất, hợp thửa đất phải bảo đảm có lối đi; được kết nối với đường giao thông công cộng hiện có; bảo đảm cấp nước, thoát nước và nhu cầu cần thiết khác một cách hợp lý. Trường hợp người sử dụng đất dành một phần diện tích của thửa đất ở hoặc thửa đất có đất ở và đất khác trong cùng thửa đất để làm lối đi, khi thực hiện việc tách thửa đất hoặc hợp thửa đất thì không phải thực hiện chuyển mục đích sử dụng đất đối với phần diện tích đất để làm lối đi đó.<br><br>2. Trường hợp tách thửa đất thì ngoài các nguyên tắc, điều kiện quy định tại khoản 1 Điều này còn phải bảo đảm các điều kiện sau đây:<br><br>a) Các thửa đất sau khi tách thửa phải bảo đảm diện tích tối thiểu với loại đất đang sử dụng theo quy định của Ủy ban nhân dân cấp tỉnh;<br><br>Trường hợp thửa đất được tách có diện tích nhỏ hơn diện tích tối thiểu được phép tách thửa thì phải thực hiện đồng thời việc hợp thửa với thửa đất liền kề;<br><br>b) Trường hợp chuyển mục đích sử dụng một phần thửa đất thì thực hiện tách thửa, diện tích tối thiểu của thửa đất sau khi tách phải bằng hoặc lớn hơn diện tích tối thiểu của loại đất sau khi chuyển mục đích sử dụng. Đối với thửa đất có đất ở và đất khác thì không bắt buộc thực hiện tách thửa khi chuyển mục đích sử dụng một phần thửa đất, trừ trường hợp người sử dụng đất có nhu cầu tách thửa;<br><br>c) Trường hợp phân chia quyền sử dụng đất theo bản án, quyết định của Tòa án mà việc phân chia không bảo đảm các điều kiện, diện tích, kích thước tách thửa theo quy định thì không thực hiện tách thửa.<br><br>3. Trường hợp hợp thửa đất thì ngoài các nguyên tắc, điều kiện quy định tại khoản 1 Điều này còn phải bảo đảm các điều kiện sau đây:<br><br>a) Việc hợp các thửa đất phải bảo đảm có cùng mục đích sử dụng đất, thời hạn sử dụng đất, hình thức trả tiền thuê đất trừ trường hợp hợp toàn bộ hoặc một phần thửa đất có đất ở và đất khác trong cùng thửa đất với nhau và trường hợp hợp thửa đất có đất ở và đất khác trong cùng thửa đất với thửa đất ở;<br><br>b) Trường hợp hợp các thửa đất khác nhau về mục đích sử dụng đất, thời hạn sử dụng đất, hình thức trả tiền thuê đất thì phải thực hiện đồng thời với thủ tục chuyển mục đích sử dụng đất, điều chỉnh thời hạn sử dụng đất, chuyển hình thức trả tiền thuê đất để thống nhất theo một mục đích, một thời hạn sử dụng đất, một hình thức trả tiền thuê đất theo quy định của pháp luật.<br><br>4. Ủy ban nhân dân cấp tỉnh căn cứ quy định tại các khoản 1, 2 và 3 Điều này, quy định khác của pháp luật có liên quan và phong tục, tập quán tại địa phương để quy định cụ thể điều kiện, diện tích tối thiểu của việc tách thửa đất, hợp thửa đất đối với từng loại đất."
       },
       "law-12": {
-        "title": "khoản 4 Điều 12",
-        "content": "Chi hội, tổ hội người cao tuổi thuộc Hội Người cao tuổi cơ sở tại địa bàn thôn, ấp, bản, làng, phum, sóc, tổ dân phố, khu dân cư hoặc tương đương thuộc Hội Người cao tuổi cơ sở"
+        "title": "Điều 12",
+        "content": "Chi hội, tổ hội người cao tuổi thuộc Hội Người cao tuổi cơ sở tại địa bàn thôn, ấp, bản, làng, phum, sóc, tổ dân phố, khu dân cư hoặc tương đương thuộc Hội Người cao tuổi cơ sở",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
       },
       "law-22": {
         "title": "khoản 1 Điều 22",
@@ -12664,7 +13311,7 @@
         }
       },
       "law-51:clause-1:point-s": {
-        "title": "điểm s khoản 1 Điều 51",
+        "title": "điểm s khoản 1 Điều 51 của Bộ luật H&#236",
         "content": "",
         "title_en": "Point s Clause 1 Article 51",
         "content_en": "",
@@ -13480,7 +14127,7 @@
         }
       },
       "law-26": {
-        "title": "Article 26",
+        "title": "Điều 26",
         "content": "",
         "title_en": "Article 26",
         "content_en": "",
@@ -13936,7 +14583,7 @@
         }
       },
       "law-30": {
-        "title": "Điều 30 Luật Thi h&#224",
+        "title": "Điều 30 của Luật Ph&#242",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -14068,7 +14715,7 @@
         }
       },
       "law-39:clause-1:point-a": {
-        "title": "điểm a khoản 1 Điều 39 Bộ luật Tố tụng d&#226",
+        "title": "điểm a khoản 1 Điều 39 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -14176,7 +14823,7 @@
         }
       },
       "law-293": {
-        "title": "Điều 293 Bộ luật Tố tụng d&#226",
+        "title": "Điều 293",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -14260,7 +14907,7 @@
         }
       },
       "law-309": {
-        "title": "Điều 309 Bộ luật Tố tụng d&#226",
+        "title": "Điều 309 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -14392,7 +15039,7 @@
         }
       },
       "law-357:clause-2": {
-        "title": "khoản 2 Điều 357 của Bộ luật D&#226",
+        "title": "khoản 2 Điều 357 của Bộ luật Tố tụng h&#236",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -14500,7 +15147,7 @@
         }
       },
       "law-52:clause-1:point-g": {
-        "title": "điểm g khoản 1 Điều 52 Bộ luật H&#236",
+        "title": "điểm g khoản 1 Điều 52 của Bộ luật H&#236",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -14572,7 +15219,7 @@
         }
       },
       "law-136": {
-        "title": "Điều 136 của Bộ luật Tố tụng h&#236",
+        "title": "Điều 136 của Luật n&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -15004,7 +15651,7 @@
         }
       },
       "law-30:clause-1": {
-        "title": "khoản 1 Điều 30",
+        "title": "khoản 1 Điều 30 của Bộ Luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -15676,7 +16323,7 @@
         }
       },
       "law-3:clause-1": {
-        "title": "khoản 1 Điều 3",
+        "title": "Khoản 1 Điều 3",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -16048,7 +16695,7 @@
         }
       },
       "law-123:clause-1:point-d": {
-        "title": "điểm d khoản 1 Điều 123",
+        "title": "Điểm d khoản 1 Điều 123 của Luật Tố tụng h&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -16576,7 +17223,7 @@
         }
       },
       "law-34": {
-        "title": "Điều 34",
+        "title": "Điều 34 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -16696,7 +17343,1171 @@
         }
       },
       "law-308": {
-        "title": "Điều 308 Bộ luật Tố tụng D&#226",
+        "title": "Điều 308 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-248": {
+        "title": "Điều 248",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-251": {
+        "title": "Điều 251",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-4:clause-3:point-b": {
+        "title": "điểm b khoản 3 Điều 4 của Luật sửa đổi",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-248:clause-5": {
+        "title": "khoản 5 Điều 248",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-251:clause-5": {
+        "title": "khoản 5 Điều 251 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-5:clause-1:point-a": {
+        "title": "điểm a khoản 1 Điều 5",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-201": {
+        "title": "Điều 201 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-260:clause-2:point-b": {
+        "title": "điểm b khoản 2 Điều 260 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-4:clause-7": {
+        "title": "khoản 7 Điều 4",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-52": {
+        "title": "Điều 52 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-306:clause-1": {
+        "title": "khoản 1 Điều 306 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-306": {
+        "title": "Điều 306 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-306:clause-3": {
+        "title": "khoản 3 Điều 306 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-142": {
+        "title": "Điều 142 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-145": {
+        "title": "Điều 145 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-50": {
+        "title": "Điều 50 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-318:clause-2:point-b": {
+        "title": "điểm b khoản 2 Điều 318 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-341:clause-3:point-a": {
+        "title": "điểm a khoản 3 Điều 341 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-256a:clause-1": {
+        "title": "khoản 1 Điều 256a của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-256a": {
+        "title": "Điều 256a của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-52:clause-2": {
+        "title": "khoản 2 Điều 52 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-249": {
+        "title": "Điều 249 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-60:clause-1": {
+        "title": "khoản 1 Điều 60 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-49:clause-3": {
+        "title": "Khoản 3 Điều 49 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-44:clause-2:point-b": {
+        "title": "điểm b khoản 2 Điều 44 của Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-52:clause-1:point-i": {
+        "title": "điểm i khoản 1 Điều 52 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-134:clause-6": {
+        "title": "khoản 6 Điều 134",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-304": {
+        "title": "Điều 304 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-11:clause-4": {
+        "title": "khoản 4 Điều 11",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-305": {
+        "title": "Điều 305 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-3:clause-7:point-a": {
+        "title": "điểm a khoản 7 Điều 3 của Luật Quản l&#253",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-2:clause-4": {
+        "title": "khoản 4 Điều 2",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-373:clause-1": {
+        "title": "khoản 1 Điều 373 của Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-373:clause-3": {
+        "title": "khoản 3 Điều 373 của Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-382:clause-5": {
+        "title": "khoản 5 Điều 382 của Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-124": {
+        "title": "Điều 124 của Luật Tư ph&#225",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-151:clause-6": {
+        "title": "khoản 6 Điều 151 của Luật Tư ph&#225",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-41:clause-1": {
+        "title": "Khoản 1 Điều 41 của Luật Tư ph&#225",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-179:clause-1:point-a": {
+        "title": "điểm a khoản 1 Điều 179 của Luật Tư ph&#225",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-12:clause-4": {
+        "title": "Khoản 4 Điều 12 của Luật Tư ph&#225",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-7:clause-1": {
+        "title": "Khoản 1 Điều 7 của Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-23:clause-3": {
+        "title": "Khoản 3 Điều 23 của Luật Tr&#225",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-22:clause-2": {
+        "title": "khoản 2 Điều 22 của Luật n&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-152:clause-1:point-b": {
+        "title": "điểm b khoản 1 Điều 152 của Luật Đất đai năm 2024 th&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-143:clause-1:point-g": {
+        "title": "điểm g khoản 1 Điều 143 của Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-152:clause-1": {
+        "title": "khoản 1 Điều 152 của Luật Đất đai năm 2024",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-311:clause-1:point-b": {
+        "title": "Điểm b khoản 1 Điều 311 của Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-143:clause-1:point-e": {
+        "title": "điểm e khoản 1 Điều 143 của Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-143:clause-1:point-h": {
+        "title": "điểm h khoản 1 Điều 143",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-123:clause-1:point-a": {
+        "title": "điểm a khoản 1 Điều 123 của Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-136:clause-2:point-c": {
+        "title": "điểm c khoản 2 Điều 136 của Luật Đất đai năm 2024 quy định",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-13:clause-3:point-b": {
+        "title": "Điểm b khoản 3 Điều 13",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-3:clause-9": {
+        "title": "khoản 9 Điều 3 của Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-4:clause-15": {
+        "title": "khoản 15 Điều 4 của Luật Doanh nghiệp năm 2020 (sửa đổi",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-77:clause-1": {
+        "title": "khoản 1 Điều 77",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-212:clause-1": {
+        "title": "khoản 1 Điều 212 của Luật Doanh nghiệp v&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-69": {
+        "title": "Điều 69",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-152:clause-4": {
+        "title": "khoản 4 Điều 152 của Luật Đất đại năm 2024",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-152:clause-2:point-b": {
+        "title": "điểm b khoản 2 Điều 152 của Luật Đất đai năm 2024 nếu người được cấp Giấy chứng nhận quyền sử dụng đất đ&#227",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-193:clause-2": {
+        "title": "khoản 2 Điều 193 của Luật Tổ tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-141:clause-1:point-d": {
+        "title": "điểm d khoản 1 Điều 141 của Luật Tổ tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-486": {
+        "title": "Điều 486 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-74:clause-1": {
+        "title": "khoản 1 Điều 74 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-192:clause-1:point-b": {
+        "title": "điểm b khoản 1 Điều 192 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-140:clause-3": {
+        "title": "khoản 3 Điều 140 của Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-137:clause-2": {
+        "title": "khoản 2 Điều 137 của Luật Doanh nghiệp (sửa đổi",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-137:clause-1:point-c": {
+        "title": "điểm c khoản 1 Điều 137 của Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-12:clause-7": {
+        "title": "Khoản 7 Điều 12 Luật Doanh nghiệp quy định T&#242",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-434:clause-1": {
+        "title": "khoản 1 Điều 434 của Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-137:clause-1": {
+        "title": "khoản 1 Điều 137 của Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-466:clause-2": {
+        "title": "khoản 2 Điều 466 của Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-16:clause-3": {
+        "title": "khoản 3 Điều 16",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-74:clause-2": {
+        "title": "khoản 2 Điều 74 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-74:clause-2:point-b": {
+        "title": "điểm b khoản 2 Điều 74 của Bộ luật Tố tụng dần sự để x&#225",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-6:clause-2:point-a": {
+        "title": "điểm a khoản 2 Điều 6",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-192:clause-3": {
+        "title": "khoản 3 Điều 192 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-233:clause-1": {
+        "title": "Khoản 1 Điều 233 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-56:clause-2": {
+        "title": "khoản 2 Điều 56",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-62:clause-2": {
+        "title": "khoản 2 Điều 62",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-84:clause-2": {
+        "title": "khoản 2 Điều 84",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-229:clause-2": {
+        "title": "khoản 2 Điều 229",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-230:clause-2": {
+        "title": "khoản 2 Điều 230",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-231:clause-2": {
+        "title": "khoản 2 Điều 231",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-234:clause-7": {
+        "title": "Khoản 7 Điều 234 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-227:clause-2": {
+        "title": "khoản 2 Điều 227 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-200:clause-2": {
+        "title": "Khoản 2 Điều 200 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-34:clause-2": {
+        "title": "khoản 2 Điều 34",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-87:clause-1": {
+        "title": "Khoản 1 Điều 87 của Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-100": {
+        "title": "Điều 100 của Luật c&#225",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-7": {
+        "title": "Điều 7",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-25:clause-1": {
+        "title": "khoản 1 Điều 25",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-13:clause-4": {
+        "title": "khoản 4 Điều 13",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-2:clause-3": {
+        "title": "khoản 3 Điều 2",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-39:clause-1:point-c": {
+        "title": "Điểm c khoản 1 Điều 39 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-26:clause-5": {
+        "title": "khoản 5 Điều 26 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-39:clause-1:point-b": {
+        "title": "điểm b khoản 1 Điều 39 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-40:clause-1:point-g": {
+        "title": "điểm g khoản 1 Điều 40 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -16812,6 +18623,18 @@
         "case-ban-dau-gia-3",
         "case-rut-kinh-nghiem-dan-su-2",
         "case-tranh-chap-qsd-d-1"
+      ],
+      "hinh-su::giai-dap-nghiep-vu": [
+        "case-cong-van-250-hinh-su-3",
+        "case-cong-van-163-tandtc-pc-nam-2024-hinh-su-1"
+      ],
+      "hanh-chinh::giai-dap-nghiep-vu": [
+        "case-cong-van-250-hanh-chinh-2",
+        "case-cong-van-163-tandtc-pc-nam-2024-hanh-chinh-3"
+      ],
+      "dan-su::giai-dap-nghiep-vu": [
+        "case-cong-van-250-dan-su-1",
+        "case-cong-van-163-tandtc-pc-nam-2024-dan-su-2"
       ]
     },
     "language": "vi"
