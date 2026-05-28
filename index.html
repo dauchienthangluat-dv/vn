@@ -4002,7 +4002,7 @@ async function callThueClaudeAPI(apiKey, outputEl) {
     method: 'POST',
     headers,
     body: JSON.stringify({
-      model: 'llama-3.1-8b-instant',
+      model: 'meta-llama/llama-3.3-70b-instruct:free',
       messages,
       stream: true,
       max_tokens: 8192,
