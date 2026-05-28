@@ -1,2 +1,9 @@
 ﻿admin-local.html
 *.before-site-data-sync.html
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
