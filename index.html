@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<html lang="vi" data-build="public">
+<!DOCTYPE html>
+<html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,6 @@
 <meta property="og:title" content="Đấu Chiến Thắng Luật.com">
 <meta property="og:description" content="Đấu Chiến Thắng Luật - Kho tra cứu bản án, án lệ và tranh chấp pháp lý hàng đầu Việt Nam.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#152238">
-<link rel="canonical" href="https://dauchianthangluatvn.github.io/vn/">
-<meta property="og:image" content="https://dauchianthangluatvn.github.io/vn/data/og-image.svg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:image" content="https://dauchianthangluatvn.github.io/vn/data/og-image.svg">
 <title>Đấu Chiến Thắng Luật.com</title>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -42,7 +36,7 @@
   --shadow-sm: 0 2px 8px rgba(21, 34, 56, 0.04); 
   --shadow-md: 0 8px 24px rgba(21, 34, 56, 0.06);
   --shadow-lg: 0 20px 60px rgba(21, 34, 56, 0.15);
-  --radius: 12px; 
+  --radius: 12px;
   --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
 }
 
@@ -203,8 +197,6 @@ body { top: 0 !important; }
 .smart-search-wrapper input::placeholder { color: #A0A0A0; }
 .smart-search-wrapper button { background: var(--navy); border: none; color: #fff; padding: 10px 16px; border-radius: 6px; font-family: 'Be Vietnam Pro', sans-serif; font-weight: 500; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; white-space: nowrap; display: flex; align-items: center; gap: 6px;}
 .smart-search-wrapper button:hover { background: var(--gold-rich); }
-@keyframes phspin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-.ph-spin { animation: phspin 0.8s linear infinite; display: inline-block; }
 
 .hero-stats{display:flex;gap:24px;margin-top:24px;position:relative;z-index:2; border-top: 1px solid rgba(21, 34, 56, 0.08); padding-top: 16px;}
 .hero-stat-num{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--navy);font-weight:700;display:block;}
@@ -219,6 +211,10 @@ body { top: 0 !important; }
 .lv-card:hover .lv-card-icon{transform:scale(1.1); color: var(--gold-rich);}
 .lv-card-title{ font-family:'Be Vietnam Pro',sans-serif;font-size:0.9rem;font-weight:600; color:var(--text); }
 .lv-card-count{ font-size:0.7rem;color:var(--text-muted); }
+.admin-entity-delete{position:absolute;top:8px;right:8px;width:28px;height:28px;border:none;border-radius:6px;background:#fff;color:#E53935;box-shadow:var(--shadow-sm);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0.92;transition:all 0.2s;}
+.admin-entity-delete:hover{background:#E53935;color:#fff;transform:scale(1.04);}
+.lv-card{position:relative;}
+.subfield-item-actions{display:flex;align-items:center;gap:8px;flex-shrink:0;}
 
 .section-title{ font-size:1rem;font-weight:700;color:var(--navy); padding:24px 16px 12px;letter-spacing:0.2px; font-family: 'Playfair Display', serif;}
 .home-section-title { font-size: 1.15rem; font-weight: 700; color: var(--navy); padding: 28px 16px 16px; font-family: 'Playfair Display', serif; }
@@ -353,6 +349,59 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 @media(max-width:420px){.admin-backup-actions{flex-direction:column;}}
 
 .detail-section-title{ font-family:'Playfair Display',serif; font-size:1.05rem;font-weight:700;color:var(--navy); margin: 24px 0 12px 0; border-bottom: 1px solid var(--gold-border); padding-bottom: 8px;}
+
+/* ========== TRANG THUẾ AI ========== */
+#page-thue { padding-top: 75px; min-height: 100vh; padding-bottom: 40px; }
+.thue-intro { margin: 0 16px 16px; padding: 18px 20px; background: linear-gradient(135deg, #EDF4FF 0%, #E8F4FD 100%); border: 1px solid rgba(33,150,243,0.2); border-radius: 12px; font-size: 0.85rem; color: var(--text-sec); line-height: 1.6; }
+.thue-intro-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.thue-section { margin: 0 16px 14px; }
+.thue-label { font-size: 0.85rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.thue-label i { color: var(--gold-rich); }
+.thue-textarea { width: 100%; min-height: 140px; padding: 14px; border: 1px solid var(--gold-border); border-radius: 8px; font-family: 'Be Vietnam Pro', sans-serif; font-size: 0.9rem; color: var(--text); background: var(--surface); outline: none; resize: vertical; line-height: 1.6; transition: border-color 0.2s; }
+.thue-textarea:focus { border-color: var(--navy); box-shadow: 0 0 0 2px var(--gold-dim); }
+.thue-file-zone { border: 2px dashed var(--gold-border); border-radius: 8px; padding: 18px; text-align: center; cursor: pointer; transition: all 0.2s; background: var(--surface2); margin-top: 10px; }
+.thue-file-zone:hover, .thue-file-zone.drag-over { border-color: var(--navy); background: var(--gold-dim); }
+.thue-file-zone-text { font-size: 0.82rem; color: var(--text-muted); display: flex; flex-direction: column; align-items: center; gap: 5px; pointer-events: none; }
+.thue-file-zone-text i { font-size: 1.7rem; color: var(--gold-rich); }
+.thue-file-list { margin-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+.thue-file-item { display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; background: var(--surface); border: 1px solid var(--gold-border); border-radius: 6px; font-size: 0.82rem; }
+.thue-file-name { display: flex; align-items: center; gap: 8px; color: var(--text); font-weight: 500; overflow: hidden; }
+.thue-file-name span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 240px; }
+.thue-file-remove { background: none; border: none; color: var(--text-muted); cursor: pointer; padding: 4px; border-radius: 4px; transition: all 0.2s; flex-shrink: 0; }
+.thue-file-remove:hover { color: #E53935; background: #FDECEC; }
+.thue-analyze-btn { width: 100%; padding: 14px; background: var(--navy); color: #fff; border: none; border-radius: 8px; font-family: 'Be Vietnam Pro', sans-serif; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 14px; }
+.thue-analyze-btn:hover:not(:disabled) { background: var(--gold-rich); }
+.thue-analyze-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.thue-api-section { padding: 12px 14px; background: var(--bg2); border: 1px solid var(--gold-border); border-radius: 8px; margin-bottom: 14px; }
+.thue-api-toggle { display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-size: 0.82rem; font-weight: 600; color: var(--navy); user-select: none; }
+.thue-api-toggle i { transition: transform 0.2s; }
+.thue-api-body { margin-top: 10px; display: none; }
+.thue-api-body.open { display: block; }
+.thue-api-input { width: 100%; padding: 10px 12px; border: 1px solid var(--gold-border); border-radius: 6px; font-family: 'Be Vietnam Pro', sans-serif; font-size: 0.85rem; color: var(--text); background: var(--surface); outline: none; transition: border-color 0.2s; }
+.thue-api-input:focus { border-color: var(--navy); }
+.thue-api-note { font-size: 0.73rem; color: var(--text-muted); margin-top: 6px; line-height: 1.5; }
+.thue-result-wrapper { margin: 0 16px 24px; }
+.thue-result-box { background: var(--surface); border: 1px solid var(--gold-border); border-radius: 12px; overflow: hidden; }
+.thue-result-header { padding: 14px 18px; background: var(--navy); color: #fff; display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.9rem; }
+.thue-result-body { padding: 20px; font-size: 0.9rem; line-height: 1.75; color: var(--text); min-height: 60px; }
+.thue-loading { display: flex; align-items: center; gap: 10px; color: var(--text-muted); font-size: 0.9rem; padding: 10px 0; }
+.thue-loading-dots { display: flex; gap: 4px; }
+.thue-loading-dots span { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-rich); animation: tDot 1.2s infinite; }
+.thue-loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+.thue-loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes tDot { 0%,80%,100%{opacity:0.3;transform:scale(0.8);}40%{opacity:1;transform:scale(1);} }
+@keyframes spin { from{transform:rotate(0deg);}to{transform:rotate(360deg);} }
+.thue-legal-cite { background: rgba(192,154,104,0.12); color: var(--gold-rich); border-radius: 3px; padding: 1px 5px; font-size: 0.85em; font-weight: 500; border: 1px solid var(--gold-border); white-space: nowrap; }
+.thue-followup { margin-top: 14px; padding: 16px; background: var(--bg2); border: 1px solid var(--gold-border); border-radius: 8px; }
+.thue-followup-label { font-size: 0.85rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+.thue-followup-textarea { width: 100%; min-height: 80px; padding: 12px; border: 1px solid var(--gold-border); border-radius: 6px; font-family: 'Be Vietnam Pro', sans-serif; font-size: 0.87rem; resize: vertical; outline: none; transition: border-color 0.2s; background: var(--surface); color: var(--text); }
+.thue-followup-textarea:focus { border-color: var(--navy); }
+.thue-followup-btn { width: 100%; padding: 12px; background: var(--gold-rich); color: #fff; border: none; border-radius: 6px; font-family: 'Be Vietnam Pro', sans-serif; font-weight: 600; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.thue-followup-btn:hover:not(:disabled) { background: var(--navy); }
+.thue-followup-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.thue-user-msg { background: var(--gold-dim); border: 1px solid var(--gold-border); border-radius: 8px; padding: 12px 14px; margin: 16px 0; font-size: 0.87rem; }
+.thue-user-msg-label { font-weight: 600; color: var(--gold-rich); margin-bottom: 4px; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.thue-divider { border: none; border-top: 1px dashed var(--gold-border); margin: 16px 0; }
 </style>
 </head>
 <body>
@@ -365,7 +414,7 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
         <button class="lang-btn active" id="lang-vi" data-lang="vi" onclick="switchLanguage('vi')">VN</button>
         <button class="lang-btn" id="lang-en" data-lang="en" onclick="switchLanguage('en')">EN</button>
     </div>
-    <button id="admin-btn-top" onclick="openAdmin()" style="display:none; background:var(--bg2);color:var(--navy);border:none;padding:6px 10px;border-radius:6px;cursor:pointer;font-weight:600;font-size:0.8rem; align-items:center; gap:4px;"><i class="ph ph-gear"></i> Admin</button>
+    <!-- admin-btn removed in public build -->
   </div>
 </header>
 
@@ -380,7 +429,7 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
   <div id="sidebar-logo">Đấu Chiến Thắng Luật<small>Kho Tranh Chấp & Bản Án</small></div>
   <div class="sidebar-item" onclick="goHome();closeSidebar()"><i class="ph ph-house si-icon"></i> Trang chủ</div>
   <div class="sidebar-item" onclick="closeSidebar();openFilter()"><i class="ph ph-funnel si-icon"></i> Lọc tìm kiếm</div>
-  <div id="admin-sidebar-item" class="sidebar-item" onclick="openAdmin()" style="display: none;"><i class="ph ph-plus-circle si-icon"></i> Thêm mới (Admin)</div>
+  <!-- admin-sidebar-item removed in public build -->
   <div class="sidebar-item" onclick="openHuongDan()"><i class="ph ph-book-open-text si-icon"></i> Hướng dẫn sử dụng</div>
   <div class="sidebar-item" onclick="openGioiThieu()"><i class="ph ph-info si-icon"></i> Giới thiệu</div>
   <div class="sidebar-footer">© 2026 Đấu Chiến Thắng Luật.com</div>
@@ -471,6 +520,93 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
       <div class="tab-content" id="tc-chi-tiet"></div>
     </div>
 
+    <!-- ===== TRANG THUẾ ===== -->
+    <div id="page-thue" class="page">
+      <div class="page-header">
+        <div class="page-breadcrumb">
+          <a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHome()">Trang chủ</a>
+          <span class="bc-sep">/</span>
+          <span id="thue-breadcrumb-text">Tư vấn Thuế</span>
+        </div>
+        <div class="page-title" style="display:flex;align-items:center;gap:10px;">
+          <i class="ph ph-calculator" style="color:var(--gold-rich);font-size:1.3rem;"></i> <span id="thue-page-title">Tư vấn Thuế</span>
+        </div>
+      </div>
+
+      <div style="padding: 0 16px 4px;">
+        <div class="thue-intro">
+          <div class="thue-intro-title"><i class="ph ph-info"></i> <span id="thue-guide-title">Hướng dẫn sử dụng</span></div>
+          <p id="thue-guide-text">Nhập tình huống thuế của bạn kèm <strong>dữ liệu, con số cụ thể</strong>. Hệ thống sẽ phân tích <strong>từng bước</strong>: xác định loại thuế → phân loại dữ kiện → kiểm tra miễn thuế → kiểm tra giảm thuế → tính toán đáp số. Mỗi kết luận đều kèm <strong>căn cứ pháp lý chính xác</strong> theo Luật và Nghị định hiện hành 2025–2026.</p>
+        </div>
+      </div>
+
+      <div class="thue-section">
+        <!-- Cài đặt API Key -->
+        <div class="thue-api-section" id="thue-api-section-wrapper">
+          <div class="thue-api-toggle" onclick="toggleThueApiSection()">
+            <span><i class="ph ph-key" style="margin-right:6px;color:var(--gold-rich);"></i> <span id="thue-api-label">Cài đặt Gemini API Key</span></span>
+            <i class="ph ph-caret-down" id="thue-api-arrow"></i>
+          </div>
+          <div class="thue-api-body" id="thue-api-body">
+            <input type="password" id="thue-api-key" class="thue-api-input" placeholder="AIzaSy..." autocomplete="off" />
+            <div class="thue-api-note" id="thue-api-note">⚠️ API Key được lưu cục bộ trong trình duyệt, không gửi đi đâu ngoài Google Gemini API. Lấy key miễn phí tại aistudio.google.com. Không chia sẻ file này khi đang chứa API Key.</div>
+            <button onclick="saveThuApiKey()" style="margin-top:8px;padding:8px 16px;background:var(--navy);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:0.82rem;font-weight:600;font-family:'Be Vietnam Pro',sans-serif;">Lưu key</button>
+          </div>
+        </div>
+
+        <!-- Textarea nhập tình huống -->
+        <div class="thue-label" id="thue-input-label"><i class="ph ph-note-pencil"></i> Mô tả tình huống và dữ liệu của bạn</div>
+        <textarea id="thue-input" class="thue-textarea" placeholder="Ví dụ: Tôi là cá nhân kinh doanh bán lẻ quần áo, doanh thu năm 2025 là 800 triệu đồng, chi phí hợp lý 600 triệu đồng. Ngoài ra có thu nhập lương từ công ty ABC là 25 triệu/tháng. Tôi có 2 người phụ thuộc. Xin hỏi tôi phải nộp những loại thuế nào và số tiền là bao nhiêu?"></textarea>
+
+        <!-- Upload file -->
+        <div class="thue-file-zone" id="thue-file-zone"
+          onclick="document.getElementById('thue-file-input').click()"
+          ondragover="event.preventDefault(); this.classList.add('drag-over')"
+          ondragleave="this.classList.remove('drag-over')"
+          ondrop="handleThueDrop(event)">
+          <input type="file" id="thue-file-input" style="display:none" multiple
+            accept=".txt,.csv,.png,.jpg,.jpeg"
+            onchange="handleThueFiles(this.files)">
+          <div class="thue-file-zone-text">
+            <i class="ph ph-upload-simple"></i>
+            <span id="thue-upload-hint">Kéo thả hoặc <strong>nhấp để tải tệp lên</strong></span>
+            <span id="thue-upload-types" style="font-size:0.73rem;">Hỗ trợ: TXT, CSV (dữ liệu số), PNG, JPG (ảnh bảng số liệu)</span>
+          </div>
+        </div>
+        <div class="thue-file-list" id="thue-file-list"></div>
+
+        <button class="thue-analyze-btn" id="thue-analyze-btn" onclick="submitThuePhanTich()">
+          <i class="ph ph-magnifying-glass"></i> <span id="thue-analyze-btn-text">Phân tích thuế</span>
+        </button>
+      </div>
+
+      <!-- Khu vực kết quả -->
+      <div class="thue-result-wrapper" id="thue-result" style="display:none;">
+        <div class="thue-result-box">
+          <div class="thue-result-header">
+            <i class="ph ph-sparkle"></i> <span id="thue-result-header-text">Kết quả phân tích thuế</span>
+            <button onclick="resetThueAnalysis()"
+              style="margin-left:auto;background:rgba(255,255,255,0.15);border:none;color:#fff;padding:4px 12px;border-radius:4px;cursor:pointer;font-size:0.78rem;font-family:'Be Vietnam Pro',sans-serif;transition:all 0.2s;"
+              onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+              <i class="ph ph-arrow-counter-clockwise"></i> <span id="thue-new-analysis-text">Phân tích mới</span>
+            </button>
+          </div>
+          <div class="thue-result-body" id="thue-result-body"></div>
+        </div>
+
+        <!-- Hỏi thêm / Bổ sung -->
+        <div class="thue-followup" id="thue-followup" style="display:none;">
+          <div class="thue-followup-label"><i class="ph ph-chat-circle-dots"></i> <span id="thue-followup-label-text">Bổ sung thông tin hoặc đặt câu hỏi thêm</span></div>
+          <textarea id="thue-followup-input" class="thue-followup-textarea"
+            placeholder="Trả lời câu hỏi của hệ thống, hoặc hỏi thêm về kết quả phân tích..."></textarea>
+          <button class="thue-followup-btn" id="thue-followup-btn" onclick="thueSendFollowUp()">
+            <i class="ph ph-paper-plane-right"></i> <span id="thue-followup-btn-text">Tiếp tục phân tích</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- ===== HẾT TRANG THUẾ ===== -->
+
     <div id="pagination-bar">
       <button class="pg-btn" id="pg-prev" onclick="changePage(-1)"><i class="ph ph-caret-left"></i></button><div id="pg-text">Trang 1/1</div><button class="pg-btn" id="pg-next" onclick="changePage(1)"><i class="ph ph-caret-right"></i></button>
     </div>
@@ -496,13 +632,24 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
         <button type="button" class="admin-btn admin-btn-secondary" onclick="triggerAdminBackupImport()"><i class="ph ph-upload-simple"></i> Nhập dữ liệu</button>
         <button type="button" class="admin-btn admin-btn-secondary" onclick="triggerBulkCasesImport()"><i class="ph ph-files"></i> Nhập hàng loạt vụ án</button>
         <button type="button" class="admin-btn admin-btn-secondary" onclick="exportSiteDataFile()"><i class="ph ph-globe-hemisphere-east"></i> Xuất dữ liệu web chung</button>
+        <button type="button" class="admin-btn admin-btn-secondary" onclick="resetGithubFolder()" title="Đổi thư mục GitHub đã chọn"><i class="ph ph-folder-open"></i> Đổi thư mục</button>
       </div>
       <input type="file" id="admin-backup-file" accept=".json,application/json" style="display:none;" onchange="importAdminBackupFile(event)" />
       <input type="file" id="bulk-cases-file" accept=".json,application/json" style="display:none;" onchange="importBulkCasesFile(event)" />
     </div>
     <div class="admin-form-group"><label class="admin-label">Tiêu đề vụ án / văn bản:</label><input type="text" id="ad-ten" class="admin-input" placeholder="Nhập tiêu đề..." /></div>
-    <div class="admin-form-group"><label class="admin-label">Lĩnh vực luật:</label><select id="ad-lv" class="admin-input" onchange="updateAdminSF()"></select><input type="text" id="ad-new-lv" class="admin-input" placeholder="Gõ tên lĩnh vực mới" style="display:none; margin-top:8px;" /></div>
-    <div class="admin-form-group"><label class="admin-label">Chủ đề cụ thể:</label><select id="ad-sf" class="admin-input" onchange="checkNewSF()"></select><input type="text" id="ad-new-sf" class="admin-input" placeholder="Gõ tên chủ đề mới" style="display:none; margin-top:8px;" /></div>
+    <div class="admin-form-group">
+      <label class="admin-label">Lĩnh vực luật:</label>
+      <select id="ad-lv" class="admin-input" onchange="updateAdminSF()"></select>
+      <input type="text" id="ad-new-lv" class="admin-input" placeholder="Gõ tên lĩnh vực mới" style="display:none; margin-top:8px;" />
+      <input type="text" id="ad-new-lv-en" class="admin-input" placeholder="English field name..." style="display:none; margin-top:8px;" />
+    </div>
+    <div class="admin-form-group">
+      <label class="admin-label">Chủ đề cụ thể:</label>
+      <select id="ad-sf" class="admin-input" onchange="checkNewSF()"></select>
+      <input type="text" id="ad-new-sf" class="admin-input" placeholder="Gõ tên chủ đề mới" style="display:none; margin-top:8px;" />
+      <input type="text" id="ad-new-sf-en" class="admin-input" placeholder="English topic name..." style="display:none; margin-top:8px;" />
+    </div>
     <div class="admin-form-group">
       <label class="admin-label">Tính chất (Phân loại):</label>
       <select id="ad-tinhchat" class="admin-input"><option value="0">Sơ thẩm / Phúc thẩm (Bình thường)</option><option value="1">⭐ Giám đốc thẩm / Tái thẩm</option></select>
@@ -634,29 +781,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 </script>
 <script>
-const IS_PUBLIC_BUILD = true;
-const ADMIN_PASSWORD = '';
-let secretCode = "";
-let isAdminMode = false;
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        const openModal = document.querySelector('.overlay-modal.open');
-        if (openModal) { openModal.classList.remove('open'); return; }
-        if (document.getElementById('sidebar').classList.contains('open')) { closeSidebar(); return; }
-        if (document.getElementById('side-left').classList.contains('open')) { closeFilter(); return; }
-    }
-    if (IS_PUBLIC_BUILD || !ADMIN_PASSWORD) return;
-    if (e.key.length > 1) return; 
-    secretCode += e.key;
-    if (secretCode.length > 10) secretCode = secretCode.substring(secretCode.length - 10);
-    if (secretCode.toLowerCase() === ADMIN_PASSWORD) {
-        isAdminMode = true;
-        document.getElementById('admin-btn-top').style.display = 'flex';
-        document.getElementById('admin-sidebar-item').style.display = 'flex';
-        showAlert('Chế độ Admin đã được mở khóa!'); secretCode = ""; 
-        if (document.getElementById('page-cases').classList.contains('active')) renderCasesList();
-    }
-});
+const isAdminMode = false; // public version – admin mode disabled
 
 const LAW_DB = {
   'blds-423': { title: 'Điều 423. Hủy bỏ hợp đồng (BLDS 2015)', content: '<strong>Điều 423</strong> quy định về hủy bỏ hợp đồng và bồi thường thiệt hại trong các trường hợp hợp đồng không còn giá trị hoặc có khiếu nại hợp lệ từ một trong các bên.<br><br>Điều luật này là một phần quan trọng của Bộ Luật Dân sự 2015.' }
@@ -1059,7 +1184,25 @@ const UI_TEXT = {
     smartPlaceholder: 'VD: Chia di sản thừa kế không có di chúc...',
     guide1: 'Nhập <strong>từ khóa</strong> hoặc <strong>tình huống pháp lý</strong> cụ thể (VD: <em>"chia di sản thừa kế không có di chúc"</em>).',
     guide2: 'Hệ thống sẽ tự động quét và trả về kết quả chứa chính xác các cụm từ này, đảm bảo độ chính xác cao nhất.',
-    guide3: 'Có thể kết hợp nhiều tình tiết để hệ thống tự động tìm kiếm các án lệ, bản án tương đồng.'
+    guide3: 'Có thể kết hợp nhiều tình tiết để hệ thống tự động tìm kiếm các án lệ, bản án tương đồng.',
+    thueTaxCounsel: 'Tư vấn Thuế',
+    thueAIBadge: '✦ Tư vấn thông minh',
+    thueGuideTitle: 'Hướng dẫn sử dụng',
+    thueGuideText: 'Nhập tình huống thuế của bạn kèm dữ liệu, con số cụ thể. Hệ thống sẽ phân tích từng bước: xác định loại thuế → phân loại dữ kiện → kiểm tra miễn thuế → kiểm tra giảm thuế → tính toán đáp số. Mỗi kết luận đều kèm căn cứ pháp lý chính xác theo Luật và Nghị định hiện hành 2025–2026.',
+    thueApiLabel: 'Cài đặt Gemini API Key',
+    thueApiNote: '⚠️ API Key được lưu cục bộ trong trình duyệt, không gửi đi đâu ngoài Google Gemini API. Lấy key miễn phí tại aistudio.google.com. Không chia sẻ file này khi đang chứa API Key.',
+    thueInputLabel: 'Mô tả tình huống và dữ liệu của bạn',
+    thueUploadHint: 'Kéo thả hoặc nhấp để tải tệp lên',
+    thueUploadTypes: 'Hỗ trợ: TXT, CSV (dữ liệu số), PNG, JPG (ảnh bảng số liệu)',
+    thueAnalyzeBtn: 'Phân tích thuế',
+    thueResultHeader: 'Kết quả phân tích thuế',
+    thueNewAnalysis: 'Phân tích mới',
+    thueFollowupLabel: 'Bổ sung thông tin hoặc đặt câu hỏi thêm',
+    thueFollowupPlaceholder: 'Trả lời câu hỏi của hệ thống, hoặc hỏi thêm về kết quả phân tích...',
+    thueFollowupBtn: 'Tiếp tục phân tích',
+    thueLoadingMsg: 'Hệ thống đang phân tích tình huống thuế của bạn...',
+    thueContinueMsg: 'Đang tiếp tục phân tích...',
+    thueUserSupplied: 'Bạn bổ sung:'
   },
   en: {
     filterTitle: 'Search Filter',
@@ -1111,7 +1254,25 @@ const UI_TEXT = {
     smartPlaceholder: 'Example: inheritance division without a will...',
     guide1: 'Enter specific <strong>keywords</strong> or a <strong>legal situation</strong> (for example: <em>"inheritance division without a will"</em>).',
     guide2: 'The system scans the library and returns closely matching results with higher precision.',
-    guide3: 'You can combine multiple facts so the system can automatically find similar precedents and judgments.'
+    guide3: 'You can combine multiple facts so the system can automatically find similar precedents and judgments.',
+    thueTaxCounsel: 'Tax Counsel',
+    thueAIBadge: '✦ Smart Counsel',
+    thueGuideTitle: 'How to use',
+    thueGuideText: 'Enter your tax situation with specific data and numbers. The system will analyze step by step: identify tax type → classify data → check exemptions → check reductions → calculate. Every conclusion includes accurate legal references per current Vietnamese Tax Laws 2025–2026.',
+    thueApiLabel: 'Gemini API Key Settings',
+    thueApiNote: '⚠️ Your API Key is stored locally in the browser and is only sent to Google Gemini API. Get a free key at aistudio.google.com. Do not share this file while it contains an API Key.',
+    thueInputLabel: 'Describe your situation and data',
+    thueUploadHint: 'Drag & drop or click to upload files',
+    thueUploadTypes: 'Supported: TXT, CSV (numerical data), PNG, JPG (tables/screenshots)',
+    thueAnalyzeBtn: 'Analyze Tax',
+    thueResultHeader: 'Tax Analysis Results',
+    thueNewAnalysis: 'New Analysis',
+    thueFollowupLabel: 'Add information or ask follow-up questions',
+    thueFollowupPlaceholder: 'Answer the system\'s questions, or ask about the analysis results...',
+    thueFollowupBtn: 'Continue Analysis',
+    thueLoadingMsg: 'System is analyzing your tax situation...',
+    thueContinueMsg: 'Continuing analysis...',
+    thueUserSupplied: 'You added:'
   }
 };
 const FIELD_LABELS_EN = {
@@ -1139,6 +1300,13 @@ function getEntityEnglishName(entity) {
   if(!entity) return '';
   const en = entity.translations && entity.translations.en ? entity.translations.en : {};
   return entity.ten_en || entity.name_en || entity.title_en || en.ten || en.name || en.title || '';
+}
+
+function applyEntityEnglishName(entity, englishName) {
+  const name = (englishName || '').trim();
+  if(!entity || !name) return;
+  entity.ten_en = name;
+  entity.translations = { ...(entity.translations || {}), en: { ...((entity.translations && entity.translations.en) || {}), name: name, ten: name } };
 }
 
 function getLVDisplayName(lvOrId) {
@@ -1226,6 +1394,39 @@ function applyStaticTranslations() {
   if(smartGuide1) smartGuide1.innerHTML = t('guide1');
   if(smartGuide2) smartGuide2.innerHTML = t('guide2');
   if(smartGuide3) smartGuide3.innerHTML = t('guide3');
+  // Tax page translations
+  const thuePageTitle = document.getElementById('thue-page-title');
+  const thueBreadcrumb = document.getElementById('thue-breadcrumb-text');
+  const thueGuideTitle = document.getElementById('thue-guide-title');
+  const thueGuideText = document.getElementById('thue-guide-text');
+  const thueApiLabel = document.getElementById('thue-api-label');
+  const thueApiNote = document.getElementById('thue-api-note');
+  const thueInputLabel = document.getElementById('thue-input-label');
+  const thueUploadHint = document.getElementById('thue-upload-hint');
+  const thueUploadTypes = document.getElementById('thue-upload-types');
+  const thueAnalyzeBtnText = document.getElementById('thue-analyze-btn-text');
+  const thueResultHeaderText = document.getElementById('thue-result-header-text');
+  const thueNewAnalysisText = document.getElementById('thue-new-analysis-text');
+  const thueFollowupLabelText = document.getElementById('thue-followup-label-text');
+  const thueFollowupInput = document.getElementById('thue-followup-input');
+  const thueFollowupBtnText = document.getElementById('thue-followup-btn-text');
+  const thueCardBadge = document.getElementById('thue-card-badge');
+  if(thuePageTitle) thuePageTitle.textContent = t('thueTaxCounsel');
+  if(thueBreadcrumb) thueBreadcrumb.textContent = t('thueTaxCounsel');
+  if(thueGuideTitle) thueGuideTitle.textContent = t('thueGuideTitle');
+  if(thueGuideText) thueGuideText.textContent = t('thueGuideText');
+  if(thueApiLabel) thueApiLabel.textContent = t('thueApiLabel');
+  if(thueApiNote) thueApiNote.textContent = t('thueApiNote');
+  if(thueInputLabel) thueInputLabel.innerHTML = `<i class="ph ph-note-pencil"></i> ${t('thueInputLabel')}`;
+  if(thueUploadHint) thueUploadHint.innerHTML = `${t('thueUploadHint').replace('nhấp', '<strong>nhấp</strong>')}`;
+  if(thueUploadTypes) thueUploadTypes.textContent = t('thueUploadTypes');
+  if(thueAnalyzeBtnText) thueAnalyzeBtnText.textContent = t('thueAnalyzeBtn');
+  if(thueResultHeaderText) thueResultHeaderText.textContent = t('thueResultHeader');
+  if(thueNewAnalysisText) thueNewAnalysisText.textContent = t('thueNewAnalysis');
+  if(thueFollowupLabelText) thueFollowupLabelText.textContent = t('thueFollowupLabel');
+  if(thueFollowupInput) thueFollowupInput.placeholder = t('thueFollowupPlaceholder');
+  if(thueFollowupBtnText) thueFollowupBtnText.textContent = t('thueFollowupBtn');
+  if(thueCardBadge) thueCardBadge.textContent = t('thueAIBadge');
 }
 
 function getActiveLanguage() {
@@ -1691,7 +1892,6 @@ function getStoredCaseOrderMap() {
 }
 
 function getEffectiveCaseOrderMap() {
-  if(typeof IS_PUBLIC_BUILD !== 'undefined' && IS_PUBLIC_BUILD) return { ...(SITE_CASE_ORDER || {}) };
   return { ...(SITE_CASE_ORDER || {}), ...getStoredCaseOrderMap() };
 }
 
@@ -1768,8 +1968,16 @@ function renderHome(){
         <div class="lv-card-count">${t('smartSearchShort')}</div>
       </a>
     `;
-    grid.innerHTML = searchCard + LINH_VUC_LUAT.map(lv=>`
+    const thueCard = `
+      <a class="lv-card" href="./#thue" onclick="event.preventDefault(); goThue()" style="border-color:rgba(192,154,104,0.5); background:linear-gradient(135deg,#FDF9F3 0%,#FAF6EE 100%);">
+        <div class="lv-card-icon"><i class="ph ph-calculator"></i></div>
+        <div class="lv-card-title">${t('thueTaxCounsel')}</div>
+        <div class="lv-card-count" id="thue-card-badge" style="color:var(--gold-rich);font-weight:600;">${t('thueAIBadge')}</div>
+      </a>
+    `;
+    grid.innerHTML = searchCard + thueCard + LINH_VUC_LUAT.map(lv=>`
       <a class="lv-card" href="${escapeHtmlText(routeHref({ view: 'field', lv: lv.id }))}" onclick="event.preventDefault(); goSubfields('${lv.id}')">
+        ${isAdminMode ? `<button class="admin-entity-delete" onclick="deleteField('${lv.id}', event)" title="Xóa lĩnh vực"><i class="ph ph-trash"></i></button>` : ''}
         <div class="lv-card-icon">${lv.icon}</div>
         <div class="lv-card-title">${getLVDisplayName(lv)}</div>
         <div class="lv-card-count">${lv.totalCases} ${t('documents')}</div>
@@ -1847,7 +2055,11 @@ function goSubfields(lvId){
   const list = document.getElementById('subfield-list');
   list.innerHTML = state.curLV.subfields.map(sf=>`
     <a class="subfield-item" href="${escapeHtmlText(routeHref({ view: 'list', lv: state.curLV.id, sf: sf.id }))}" onclick="event.preventDefault(); goCasesList('${state.curLV.id}','${sf.id}')">
-      <div class="subfield-item-left"><div class="subfield-item-icon"><i class="ph ph-folder-open"></i></div><div><div class="subfield-item-name">${getSFDisplayName(state.curLV.id, sf)}</div><div class="subfield-item-count">${sf.soLuong} ${t('documents')}</div></div></div><div class="subfield-item-arrow"><i class="ph ph-caret-right"></i></div>
+      <div class="subfield-item-left"><div class="subfield-item-icon"><i class="ph ph-folder-open"></i></div><div><div class="subfield-item-name">${getSFDisplayName(state.curLV.id, sf)}</div><div class="subfield-item-count">${sf.soLuong} ${t('documents')}</div></div></div>
+      <div class="subfield-item-actions">
+        ${isAdminMode ? `<button class="admin-entity-delete" style="position:static;" onclick="deleteSubfield('${state.curLV.id}','${sf.id}', event)" title="Xóa chủ đề"><i class="ph ph-trash"></i></button>` : ''}
+        <div class="subfield-item-arrow"><i class="ph ph-caret-right"></i></div>
+      </div>
     </a>
   `).join('');
   showPage('page-subfields');
@@ -1880,113 +2092,48 @@ function removeAccents(str) { return str.normalize('NFD').replace(/[\u0300-\u036
 
 const SEARCH_STOPWORDS = new Set('toi muon can tim ve va la cua cho trong khi voi neu thi co bi da duoc cac nhung mot nhieu nay do theo tai den tu hoac the an ban vu viec phan noi dung he thong phap ly tinh huong tuong dong hai chi con lai vao nguoi ben case cases the a an and or of to in for with by on from about into without under dung cung chu nhu vay nen boi qua gi ai khac xem ket loai nam thang ngay quan su lam thanh toan tin nhat rang viet'.split(' '));
 const SEARCH_SYNONYMS = {
-  'thua ke': ['di san', 'di chuc', 'nguoi thua ke', 'chia di san', 'phan chia di san', 'hang thua ke', 'inheritance', 'estate', 'will', 'heir'],
-  'di san': ['thua ke', 'di chuc', 'chia di san', 'tai san nguoi qua doi', 'estate', 'inheritance'],
-  'di chuc': ['ban di chuc', 'lap di chuc', 'co di chuc', 'di chuc viet tay', 'vo hieu di chuc', 'will', 'testament', 'testamentary'],
-  'khong co di chuc': ['thua ke theo phap luat', 'chia di san khong co di chuc', 'chet khong de lai di chuc', 'intestate', 'no will', 'no testament'],
-  'chia di san': ['phan chia tai san', 'chia thua ke', 'phan chia di san thua ke', 'yeu cau chia di san', 'estate division', 'division of inheritance'],
-  'nguoi thua ke': ['hang thua ke', 'con cai thua ke', 'vo chong thua ke', 'cha me thua ke', 'heir', 'beneficiary'],
+  'thua ke': ['di san', 'di chuc', 'nguoi thua ke', 'chia di san', 'inheritance', 'estate', 'will'],
+  'di san': ['thua ke', 'di chuc', 'chia di san', 'estate', 'inheritance'],
   'dat': ['dat dai', 'quyen su dung dat', 'so do', 'giay chung nhan', 'land', 'land use right'],
-  'dat dai': ['quyen su dung dat', 'so do', 'giay chung nhan quyen su dung dat', 'land', 'land use right'],
-  'so do': ['giay chung nhan quyen su dung dat', 'gcnqsdd', 'giay hong', 'giay do', 'land certificate', 'land title'],
-  'quyen su dung dat': ['qsdd', 'so do', 'giay red', 'giay hong', 'land use rights', 'land certificate'],
-  'tranh chap dat dai': ['tranh chap quyen su dung dat', 'tranh chap nha dat', 'tranh chap dat', 'land dispute', 'land use dispute'],
-  'thu hoi dat': ['boi thuong giai phong mat bang', 'thu hoi dat de xay dung', 'boi thuong dat dai', 'land acquisition', 'land expropriation', 'compulsory acquisition'],
-  'chuyen nhuong dat': ['mua ban dat', 'chuyen nhuong quyen su dung dat', 'hop dong mua ban dat', 'land transfer', 'land sale'],
-  'dat chua so do': ['dat chua cap so do', 'dat chua co giay chung nhan', 'dat giay tay', 'unregistered land'],
-  'hop dong': ['giao dich', 'thoa thuan', 'ky ket', 'contract', 'agreement'],
-  'hop dong vo hieu': ['giao dich vo hieu', 'hop dong bat hop phap', 'tuyen bo vo hieu', 'hop dong bi huy', 'void contract', 'invalid contract', 'null contract'],
-  'ky hop dong': ['ky ket hop dong', 'ky vao hop dong', 'chu ky', 'ky ten', 'signed contract'],
-  'khong ky': ['khong ky ten', 'khong tham gia ky', 'khong ky hop dong', 'not sign', 'did not sign'],
-  'khong phan doi': ['biet va khong phan doi', 'im lang', 'dong y ngam', 'khong co y kien phan doi', 'did not object', 'knew and did not object'],
-  'don phuong cham dut': ['huy hop dong don phuong', 'don phuong huy hop dong', 'vi pham hop dong', 'unilateral termination', 'unilateral cancellation'],
-  'vi pham hop dong': ['khong thuc hien nghia vu', 'khong thanh toan', 'vi pham nghia vu', 'breach of contract', 'default', 'non-performance'],
-  'the chap': ['cam co', 'bao dam thuc hien nghia vu', 'tai san the chap', 'tai san bao dam', 'mortgage', 'pledge', 'collateral', 'security'],
-  'lua dao': ['lua gat', 'gian lan hop dong', 'chiem doat tai san', 'fraud', 'deception', 'misrepresentation'],
-  'gia mao': ['gia mao chu ky', 'gia mao giay to', 'gia mao hop dong', 'forged signature', 'forgery', 'counterfeit'],
-  'giao dich gia tao': ['giao dich gia', 'hop dong gia tao', 'che giau giao dich that', 'sham transaction', 'simulated contract'],
-  'vo chong': ['chong vo', 'hai vo chong', 'tai san chung vo chong', 'hon nhan', 'spouse', 'husband and wife', 'married couple'],
-  'hon nhan': ['cuoc hon nhan', 'ket hon', 'dang ky ket hon', 'marriage', 'matrimony'],
-  'ly hon': ['cham dut hon nhan', 'giai quyet ly hon', 'phan chia tai san ly hon', 'don ly hon', 'divorce', 'dissolution of marriage', 'separation'],
-  'tai san chung vo chong': ['tai san trong thoi ky hon nhan', 'tai san chung', 'phan chia tai san vo chong', 'marital property', 'matrimonial property', 'joint property'],
-  'nuoi con': ['quyen nuoi con', 'giao con nuoi', 'cap duong nuoi con', 'quyen trong nom con', 'child custody', 'guardianship'],
-  'cap duong': ['cap duong nuoi con', 'tro cap sau ly hon', 'cap duong hang thang', 'alimony', 'child support', 'maintenance payment'],
-  'hinh su': ['toi pham', 'bi cao', 'vu an hinh su', 'hinh phat', 'criminal', 'criminal case', 'criminal offense'],
-  'toi pham': ['hanh vi pham toi', 'cau thanh toi pham', 'bi phat tu', 'criminal offense', 'crime', 'criminal act'],
-  'bi cao': ['nguoi bi buoc toi', 'bi can', 'nguoi pham toi', 'defendant', 'accused', 'suspect'],
-  'gay thuong tich': ['co y gay thuong tich', 'danh nguoi', 'xam pham suc khoe', 'bodily harm', 'assault', 'battery', 'physical injury'],
-  'trom cap': ['toi trom cap', 'trom cap tai san', 'theft', 'robbery', 'burglary', 'stealing'],
-  'lua dao chiem doat': ['toi lua dao chiem doat tai san', 'chiem doat tai san bang lua dao', 'fraud and misappropriation'],
-  'tuyen an': ['ban an hinh su', 'muc an', 'tuyen phat', 'hinh phat tu', 'ket an', 'sentencing', 'conviction', 'verdict', 'judgment'],
-  'giam an': ['tha truoc han', 'giam muc an', 'dac xa', 'tha co dieu kien', 'parole', 'commutation', 'early release', 'pardon'],
-  'lao dong': ['nguoi lao dong', 'nhan vien', 'hop dong lao dong', 'cong nhan', 'labor', 'employment', 'worker', 'employee'],
-  'sa thai': ['don phuong cham dut hop dong lao dong', 'mat viec', 'cho thoi viec', 'sa thai trai luat', 'dismiss', 'terminate employment', 'fired', 'wrongful dismissal'],
-  'hop dong lao dong': ['hdld', 'hop dong viec lam', 'thu viec', 'employment contract', 'labor contract', 'work contract'],
-  'bao hiem xa hoi': ['bhxh', 'dong bao hiem', 'tro cap bhxh', 'luong huu', 'social insurance', 'social security', 'retirement benefit'],
-  'bao hiem that nghiep': ['tro cap that nghiep', 'bhtn', 'mat viec lam', 'unemployment insurance', 'unemployment benefit'],
-  'tien luong': ['luong', 'muc luong', 'luong toi thieu', 'thuong', 'phu cap', 'salary', 'wage', 'minimum wage', 'remuneration'],
-  'lam them gio': ['tang ca', 'lam ngoai gio hanh chinh', 'phu cap lam them', 'overtime', 'overtime pay'],
-  'ky luat lao dong': ['canh cao lao dong', 'ky luat nhan vien', 'quyet dinh ky luat', 'disciplinary action', 'employee discipline'],
-  'doanh nghiep': ['cong ty', 'co dong', 'gop von', 'to chuc kinh doanh', 'enterprise', 'company', 'business entity'],
-  'co dong': ['nguoi gop von', 'co phan vien', 'thanh vien cong ty', 'shareholder', 'stockholder', 'equity investor'],
-  'pha san': ['mat kha nang thanh toan', 'pha san doanh nghiep', 'thanh ly tai san', 'giai the', 'bankruptcy', 'insolvency', 'liquidation'],
-  'tranh chap thuong mai': ['tranh chap kinh doanh', 'tranh chap hop dong thuong mai', 'tranh chap mua ban', 'commercial dispute', 'business dispute'],
-  'hop dong thuong mai': ['hop dong mua ban hang hoa', 'hop dong dich vu', 'hop dong kinh doanh', 'commercial contract', 'business contract'],
-  'xuc tien thuong mai': ['khuyen mai', 'quang cao thuong mai', 'trung bay hang hoa', 'hoi cho thuong mai', 'trade promotion', 'sales promotion', 'marketing'],
-  'boi thuong': ['boi thuong thiet hai', 'thiet hai thuc te', 'yeu cau boi thuong', 'doi boi thuong', 'compensation', 'damages', 'reparation'],
-  'boi thuong thiet hai': ['thiet hai vat chat', 'thiet hai tinh than', 'ton that', 'boi thuong', 'damages', 'compensation for loss'],
-  'tranh chap': ['xung dot', 'mau thuan', 'khieu kien ra toa', 'khieu nai', 'dispute', 'conflict', 'lawsuit'],
-  'chuyen nhuong': ['mua ban', 'sang nhuong', 'chuyen giao quyen', 'transfer', 'assignment', 'sale'],
-  'tai san': ['tai san chung', 'tai san rieng', 'dong san', 'bat dong san', 'property', 'asset', 'estate'],
-  'nha dat': ['nha o', 'can ho', 'bat dong san', 'chung cu', 'real estate', 'housing', 'apartment', 'condominium'],
-  'vay no': ['hop dong vay', 'cho vay tien', 'no', 'cong no', 'tien vay', 'mon no', 'loan', 'debt', 'credit', 'borrowing'],
-  'cho vay': ['hop dong vay tien', 'lai suat', 'cho vay lai', 'lending', 'money lending', 'creditor'],
-  'doi no': ['thu hoi no', 'xuat no', 'doi thu hoi no', 'debt collection', 'debt recovery'],
-  'giam doc tham': ['tai tham', 'huy ban an', 'xem xet lai ban an', 'khang nghi giam doc tham', 'cassation', 'retrial', 'review of judgment'],
-  'phuc tham': ['toa phuc tham', 'khang cao phuc tham', 'xet xu phuc tham', 'appeal', 'court of appeal', 'appellate court'],
-  'khang cao': ['don khang cao', 'nop don khang cao', 'gui khang cao', 'appeal', 'filing an appeal', 'notice of appeal'],
-  'hoa giai': ['hoa giai thanh', 'ket qua hoa giai', 'giai quyet bang thuong luong', 'mediation', 'conciliation', 'amicable settlement'],
-  'an le': ['ap dung an le', 'an le so', 'tham khao an le', 'precedent', 'case law', 'judicial precedent'],
-  'ban an': ['ban an so', 'quyet dinh toa an', 'phan quyet', 'judgment', 'verdict', 'ruling', 'court order'],
-  'nghi dinh': ['nghi dinh chinh phu', 'ban hanh nghi dinh', 'government decree', 'decree'],
-  'thong tu': ['thong tu bo', 'thong tu lien bo', 'thong tu huong dan', 'ministerial circular', 'circular'],
-  'cong van': ['cong van giai dap', 'cong van huong dan', 'cong van toa an toi cao', 'official dispatch', 'official letter'],
-  'van ban phap luat': ['van ban quy pham phap luat', 'quy dinh phap luat', 'quy pham', 'legal document', 'regulation', 'statute'],
-  'huong dan ap dung': ['huong dan ap dung phap luat', 'giai dap phap luat', 'giai thich phap luat', 'legal guidance', 'legal interpretation'],
-  'giai dap nghiep vu': ['giai dap phap luat', 'huong dan nghiep vu tu phap', 'phap luat quy dinh nhu the nao', 'legal Q&A', 'legal advice'],
-  'hanh chinh': ['quyet dinh hanh chinh', 'khieu nai hanh chinh', 'to tung hanh chinh', 'administrative', 'administrative law'],
-  'quyet dinh hanh chinh': ['quyet dinh cua co quan nha nuoc', 'khieu kien quyet dinh hanh chinh', 'administrative decision', 'government order']
+  'dat dai': ['quyen su dung dat', 'so do', 'giay chung nhan', 'land', 'land use right'],
+  'hop dong': ['giao dich', 'thoa thuan', 'chuyen nhuong', 'contract', 'agreement'],
+  'ky hop dong': ['ky ket hop dong', 'ky vao hop dong', 'chu ky', 'signed contract'],
+  'khong ky': ['khong ky ten', 'khong tham gia ky', 'not sign', 'did not sign'],
+  'khong phan doi': ['biet va khong phan doi', 'im lang', 'dong y ngam', 'khong co y kien', 'did not object'],
+  'vo chong': ['chong vo', 'tai san chung vo chong', 'spouse', 'husband and wife'],
+  'chuyen nhuong': ['mua ban', 'sang nhuong', 'transfer', 'assignment'],
+  'lao dong': ['tien luong', 'sa thai', 'hop dong lao dong', 'labor', 'employment', 'salary'],
+  'hon nhan': ['ly hon', 'tai san chung', 'nuoi con', 'marriage', 'divorce'],
+  'hinh su': ['toi pham', 'bi cao', 'hinh phat', 'criminal'],
+  'doanh nghiep': ['cong ty', 'co dong', 'gop von', 'enterprise', 'company', 'shareholder'],
+  'an le': ['precedent', 'case law'],
+  'ban an': ['quyet dinh', 'phan quyet', 'judgment', 'verdict', 'ruling'],
+  'ly hon': ['cham dut hon nhan', 'giai quyet ly hon', 'phan chia tai san ly hon', 'divorce', 'dissolution of marriage'],
+  'boi thuong': ['boi thuong thiet hai', 'thiet hai thuc te', 'compensation', 'damages', 'reparation'],
+  'tranh chap': ['xung dot', 'mau thuan', 'khieu kien', 'khieu nai', 'dispute', 'conflict', 'lawsuit'],
+  'tai san': ['tai san chung', 'tai san rieng', 'dong san', 'bat dong san', 'property', 'asset'],
+  'nha dat': ['nha o', 'can ho', 'bat dong san', 'chung cu', 'house', 'real estate', 'apartment'],
+  'vay no': ['hop dong vay', 'cho vay', 'no', 'cong no', 'tien vay', 'loan', 'debt', 'credit'],
+  'sa thai': ['don phuong cham dut', 'cham dut hop dong lao dong', 'mat viec', 'cho thoi viec', 'dismiss', 'terminate', 'fired'],
+  'giam doc tham': ['tai tham', 'huy ban an', 'xem xet lai ban an', 'cassation', 'retrial', 'review'],
+  'phuc tham': ['toa phuc tham', 'khang cao', 'xet xu phuc tham', 'appeal', 'court of appeal'],
+  'quyen su dung dat': ['qsdd', 'so do', 'giay red', 'giay hong', 'land use rights', 'land certificate']
 };
 
 const SEARCH_CONCEPTS = [
-  { id: 'spouse',           weight: 420, aliases: ['vo chong', 'chong vo', 'tai san chung vo chong', 'spouse', 'husband wife', 'husband and wife'] },
-  { id: 'one-signer',       weight: 820, aliases: ['mot nguoi ky', 'chi mot nguoi ky', 'mot ben ky', 'nguoi con lai khong ky', 'khong tham gia ky', 'only one signed', 'one spouse signed'] },
-  { id: 'no-objection',     weight: 920, aliases: ['khong phan doi', 'biet va khong phan doi', 'biet nhung khong phan doi', 'im lang', 'dong y ngam', 'khong co y kien', 'did not object', 'knew and did not object'] },
+  { id: 'spouse', weight: 420, aliases: ['vo chong', 'chong vo', 'tai san chung vo chong', 'spouse', 'husband wife', 'husband and wife'] },
+  { id: 'one-signer', weight: 820, aliases: ['mot nguoi ky', 'chi mot nguoi ky', 'mot ben ky', 'nguoi con lai khong ky', 'khong tham gia ky', 'only one signed', 'one spouse signed'] },
+  { id: 'no-objection', weight: 920, aliases: ['khong phan doi', 'biet va khong phan doi', 'biet nhung khong phan doi', 'im lang', 'dong y ngam', 'khong co y kien', 'did not object', 'knew and did not object'] },
   { id: 'contract-signing', weight: 520, aliases: ['ky hop dong', 'ky vao hop dong', 'ky ket hop dong', 'chu ky', 'hop dong chuyen nhuong', 'signed contract'] },
-  { id: 'land-transfer',    weight: 380, aliases: ['chuyen nhuong quyen su dung dat', 'hop dong chuyen nhuong quyen su dung dat', 'mua ban dat', 'land use right transfer'] },
-  { id: 'divorce',          weight: 500, aliases: ['ly hon', 'cham dut hon nhan', 'phan chia tai san ly hon', 'nuoi con sau ly hon', 'divorce', 'dissolution of marriage'] },
-  { id: 'inheritance',      weight: 480, aliases: ['thua ke', 'chia di san', 'di chuc', 'nguoi thua ke hop phap', 'phan chia di san', 'inheritance', 'estate division'] },
-  { id: 'no-will',          weight: 700, aliases: ['khong co di chuc', 'chet khong co di chuc', 'thua ke theo phap luat', 'chia di san khong co di chuc', 'intestate', 'no will', 'no testament'] },
-  { id: 'compensation',     weight: 460, aliases: ['boi thuong thiet hai', 'boi thuong', 'thiet hai thuc te', 'ton that', 'damages', 'compensation'] },
-  { id: 'criminal',         weight: 500, aliases: ['hinh su', 'toi pham', 'bi cao', 'xu phat tu', 'hinh phat', 'criminal offense', 'conviction', 'imprisonment'] },
-  { id: 'employment',       weight: 440, aliases: ['hop dong lao dong', 'sa thai', 'tien luong', 'bao hiem xa hoi', 'nghi viec', 'thoi viec', 'dismissal', 'wrongful termination'] },
-  { id: 'real-estate',      weight: 460, aliases: ['nha dat', 'bat dong san', 'can ho', 'nha o', 'mua ban nha', 'real estate', 'property purchase'] },
-  { id: 'debt',             weight: 440, aliases: ['cong no', 'vay no', 'hop dong vay', 'doi no', 'tra no', 'chu no', 'debt', 'loan', 'creditor'] },
-  { id: 'cassation',        weight: 600, aliases: ['giam doc tham', 'tai tham', 'huy ban an', 'khang nghi giam doc tham', 'cassation', 'retrial', 'review judgment'] },
-  { id: 'void-contract',    weight: 720, aliases: ['hop dong vo hieu', 'giao dich vo hieu', 'tuyen bo vo hieu', 'hop dong bi huy', 'bat hop phap', 'void contract', 'invalid contract', 'null contract'] },
-  { id: 'land-certificate', weight: 450, aliases: ['so do', 'giay chung nhan quyen su dung dat', 'giay hong', 'giay do', 'chua cap so do', 'dat chua so do', 'land certificate', 'land title'] },
-  { id: 'child-custody',    weight: 560, aliases: ['quyen nuoi con', 'nuoi con chung', 'giao con', 'cap duong nuoi con', 'quyen trong nom', 'child custody', 'custody'] },
-  { id: 'marital-property', weight: 570, aliases: ['tai san chung vo chong', 'tai san trong thoi ky hon nhan', 'tai san rieng', 'phan chia tai san vo chong', 'marital property', 'matrimonial property'] },
-  { id: 'fraud-forgery',    weight: 720, aliases: ['lua dao', 'gia mao', 'gian lan', 'gia mao giay to', 'chiem doat tai san', 'giao dich gia tao', 'fraud', 'forgery', 'deception', 'misrepresentation'] },
-  { id: 'wrongful-dismiss', weight: 640, aliases: ['sa thai trai luat', 'don phuong cham dut trai luat', 'cho thoi viec trai quy dinh', 'mat viec trai luat', 'wrongful dismissal', 'unfair termination'] },
-  { id: 'trade-document',   weight: 380, aliases: ['van ban phap luat', 'nghi dinh', 'thong tu', 'cong van', 'huong dan ap dung', 'quy dinh phap luat', 'decree', 'circular', 'official letter'] },
-  { id: 'legal-qa',         weight: 400, aliases: ['giai dap nghiep vu', 'giai thich phap luat', 'huong dan ap dung phap luat', 'phap luat quy dinh nhu the nao', 'legal question', 'legal guidance'] },
-  { id: 'mortgage',         weight: 490, aliases: ['the chap', 'cam co', 'tai san bao dam', 'bao dam thuc hien nghia vu', 'vay co the chap', 'mortgage', 'pledge', 'secured loan'] },
-  { id: 'appeal',           weight: 510, aliases: ['khang cao', 'phuc tham', 'khang nghi', 'xem xet lai ban an', 'nop don khang cao', 'appeal', 'appellate', 'review'] },
-  { id: 'trade-promotion',  weight: 360, aliases: ['xuc tien thuong mai', 'khuyen mai', 'quang cao', 'trung bay hang hoa', 'hoi cho', 'trade promotion', 'commercial promotion', 'marketing'] },
-  { id: 'personal-injury',  weight: 510, aliases: ['gay thuong tich', 'thiet hai suc khoe', 'xam pham than the', 'thuong tich', 'personal injury', 'bodily harm', 'assault'] },
-  { id: 'bankruptcy',       weight: 530, aliases: ['pha san', 'mat kha nang thanh toan', 'giai the cong ty', 'thanh ly tai san', 'bankruptcy', 'insolvency', 'liquidation'] },
-  { id: 'administrative',   weight: 390, aliases: ['hanh chinh', 'quyet dinh hanh chinh', 'khieu nai hanh chinh', 'to tung hanh chinh', 'administrative decision', 'administrative complaint'] }
+  { id: 'land-transfer', weight: 380, aliases: ['chuyen nhuong quyen su dung dat', 'hop dong chuyen nhuong quyen su dung dat', 'mua ban dat', 'land use right transfer'] },
+  { id: 'divorce', weight: 500, aliases: ['ly hon', 'cham dut hon nhan', 'phan chia tai san ly hon', 'nuoi con sau ly hon', 'divorce', 'dissolution of marriage'] },
+  { id: 'inheritance', weight: 480, aliases: ['thua ke', 'chia di san', 'di chuc', 'nguoi thua ke hop phap', 'phan chia di san', 'inheritance', 'estate division'] },
+  { id: 'compensation', weight: 460, aliases: ['boi thuong thiet hai', 'boi thuong', 'thiet hai thuc te', 'ton that', 'damages', 'compensation'] },
+  { id: 'criminal', weight: 500, aliases: ['hinh su', 'toi pham', 'bi cao', 'xu phat tu', 'hinh phat', 'criminal offense', 'conviction', 'imprisonment'] },
+  { id: 'employment', weight: 440, aliases: ['hop dong lao dong', 'sa thai', 'tien luong', 'bao hiem xa hoi', 'nghi viec', 'thoi viec', 'dismissal', 'wrongful termination'] },
+  { id: 'real-estate', weight: 460, aliases: ['nha dat', 'bat dong san', 'can ho', 'nha o', 'mua ban nha', 'real estate', 'property purchase'] },
+  { id: 'debt', weight: 440, aliases: ['cong no', 'vay no', 'hop dong vay', 'doi no', 'tra no', 'chu no', 'debt', 'loan', 'creditor'] },
+  { id: 'cassation', weight: 600, aliases: ['giam doc tham', 'tai tham', 'huy ban an', 'khang nghi giam doc tham', 'cassation', 'retrial', 'review judgment'] }
 ];
 
 function normalizeSearchText(text) {
@@ -2006,7 +2153,6 @@ function buildQueryPhrases(words) {
 }
 
 function getSearchTerms(query) {
-  query = String(query || '').replace(/\bko\b/gi, 'kh' + 'ông').replace(/\bk\b/gi, 'kh' + 'ông').replace(/\bdc\b/gi, 'đ' + 'ược').replace(/\bj\b/gi, 'g' + 'ì');
   const normalized = normalizeSearchText(query);
   const rawWords = normalized.split(/\s+/).filter(w => w.length > 1);
   const words = rawWords.filter(w => !SEARCH_STOPWORDS.has(w));
@@ -2101,40 +2247,8 @@ function showSearchResultsPage(query, page = 1) {
   updateRoute({ view: 'search', q: query, page: state.curPage });
 }
 
-const GEMINI_API_KEY = 'AIzaSyBX7guTlCfL1DN5AHcNAWH9hchaNVF5U5o'; // Lấy miễn phí tại: https://aistudio.google.com/app/apikey
-
-async function aiExpandQuery(query) {
-  try {
-    const resp = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        signal: AbortSignal.timeout(6000),
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: `Bạn là chuyên gia pháp lý Việt Nam. Người dùng mô tả: "${query}"\n\nTrả về tối đa 8 từ khóa pháp lý tiếng Việt quan trọng nhất, cách nhau bằng dấu cách. Chỉ trả về từ khóa, không giải thích.` }] }],
-          generationConfig: { maxOutputTokens: 80, temperature: 0 }
-        })
-      }
-    );
-    if (!resp.ok) return null;
-    const data = await resp.json();
-    return data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || null;
-  } catch { return null; }
-}
-
-async function executeSmartSearchPage() {
-  const input = document.getElementById('smart-search-input-page');
-  const query = (input?.value || '').trim();
-  if (!query) return;
-  const btn = document.querySelector('#page-smart-search .smart-search-wrapper button');
-  const origHtml = btn?.innerHTML;
-  if (query.split(/\s+/).length >= 4 && navigator.onLine && GEMINI_API_KEY && GEMINI_API_KEY !== 'YOUR_GEMINI_API_KEY') {
-    if (btn) btn.innerHTML = '<i class="ph ph-circle-notch ph-spin"></i> Đang phân tích...';
-    const aiResult = await aiExpandQuery(query);
-    if (btn && origHtml) btn.innerHTML = origHtml;
-    if (aiResult) { showSearchResultsPage(aiResult, 1); return; }
-  }
+function executeSmartSearchPage() {
+  const query = document.getElementById('smart-search-input-page').value.trim(); if(!query) return;
   showSearchResultsPage(query, 1);
 }
 
@@ -2225,6 +2339,72 @@ function deleteCase(caseId) {
   renderReadHistory();
   if(document.getElementById('page-cases').classList.contains('active')) renderCasesList();
   showAlert('Đã xóa vụ án. Nếu muốn điện thoại/người xem khác cũng thấy thay đổi, hãy bấm "Xuất dữ liệu web chung" rồi Commit/Push lại GitHub.');
+}
+
+function removeDeletedCaseReferences(caseIds, bucketKeys) {
+  const idSet = new Set(caseIds || []);
+  if(idSet.size) {
+    RECENT_UPDATES = RECENT_UPDATES.filter(item => !idSet.has(item.id));
+    state.readHistory = state.readHistory.filter(item => !idSet.has(item.id));
+  }
+  const orderMap = getStoredCaseOrderMap();
+  (bucketKeys || []).forEach(key => delete orderMap[key]);
+  Object.keys(orderMap).forEach(key => {
+    if(Array.isArray(orderMap[key]) && idSet.size) orderMap[key] = orderMap[key].filter(id => !idSet.has(id));
+    if(Array.isArray(orderMap[key]) && orderMap[key].length === 0) delete orderMap[key];
+  });
+  localStorage.setItem(CASE_ORDER_STORAGE_KEY, JSON.stringify(orderMap));
+}
+
+function refreshAfterTaxonomyDelete() {
+  saveCasesDataToStorage();
+  renderHome();
+  buildFilterF1();
+  renderReadHistory();
+  if(document.getElementById('page-subfields').classList.contains('active')) {
+    if(state.curLV && getLVById(state.curLV.id)) goSubfields(state.curLV.id);
+    else goHome();
+  }
+  if(document.getElementById('page-cases').classList.contains('active')) {
+    if(state.curLV && state.curSF && getSFById(state.curLV.id, state.curSF.id)) renderCasesList();
+    else goHome();
+  }
+}
+
+function deleteField(lvId, event) {
+  if(event) { event.preventDefault(); event.stopPropagation(); }
+  if(!isAdminMode) { showAlert('Cần quyền Admin để xóa lĩnh vực.'); return; }
+  const lv = getLVById(lvId);
+  if(!lv) { showAlert('Không tìm thấy lĩnh vực cần xóa.'); return; }
+  const bucketKeys = (lv.subfields || []).map(sf => getCaseBucketKey(lv.id, sf.id));
+  const caseIds = bucketKeys.flatMap(key => (CASES_DATA[key] || []).map(c => c.id));
+  const ok = window.confirm(`Bạn có chắc muốn xóa lĩnh vực này không?\n\n${lv.ten}\n\nSố vụ án/văn bản sẽ bị xóa theo: ${caseIds.length}\n\nSau khi xóa, hãy bấm "Xuất dữ liệu web chung" rồi push lại GitHub nếu muốn bản public cập nhật.`);
+  if(!ok) return;
+  bucketKeys.forEach(key => delete CASES_DATA[key]);
+  const idx = LINH_VUC_LUAT.findIndex(item => item.id === lvId);
+  if(idx >= 0) LINH_VUC_LUAT.splice(idx, 1);
+  removeDeletedCaseReferences(caseIds, bucketKeys);
+  if(state.curLV && state.curLV.id === lvId) { state.curLV = null; state.curSF = null; state.curCase = null; }
+  refreshAfterTaxonomyDelete();
+  showAlert('Đã xóa lĩnh vực. Hãy xuất dữ liệu web chung nếu muốn cập nhật bản public.');
+}
+
+function deleteSubfield(lvId, sfId, event) {
+  if(event) { event.preventDefault(); event.stopPropagation(); }
+  if(!isAdminMode) { showAlert('Cần quyền Admin để xóa chủ đề.'); return; }
+  const lv = getLVById(lvId);
+  const sf = getSFById(lvId, sfId);
+  if(!lv || !sf) { showAlert('Không tìm thấy chủ đề cần xóa.'); return; }
+  const bucketKey = getCaseBucketKey(lvId, sfId);
+  const caseIds = (CASES_DATA[bucketKey] || []).map(c => c.id);
+  const ok = window.confirm(`Bạn có chắc muốn xóa chủ đề này không?\n\n${sf.ten}\n\nSố vụ án/văn bản sẽ bị xóa theo: ${caseIds.length}\n\nSau khi xóa, hãy bấm "Xuất dữ liệu web chung" rồi push lại GitHub nếu muốn bản public cập nhật.`);
+  if(!ok) return;
+  delete CASES_DATA[bucketKey];
+  lv.subfields = (lv.subfields || []).filter(item => item.id !== sfId);
+  removeDeletedCaseReferences(caseIds, [bucketKey]);
+  if(state.curLV && state.curLV.id === lvId && state.curSF && state.curSF.id === sfId) { state.curSF = null; state.curCase = null; }
+  refreshAfterTaxonomyDelete();
+  showAlert('Đã xóa chủ đề. Hãy xuất dữ liệu web chung nếu muốn cập nhật bản public.');
 }
 
 function renderCasesList(){
@@ -2529,15 +2709,13 @@ function createSlug(str) {
 }
 
 function openAdmin() {
-  if(IS_PUBLIC_BUILD) {
-    showAlert('Bản public chỉ dùng để tra cứu. Vui lòng mở bản Admin local để nhập hoặc sửa dữ liệu.');
-    return;
-  }
-  closeSidebar(); 
+  hasUnsavedChanges = true;
+  closeSidebar();
   if(!editingCaseId) {
     const lvSel = document.getElementById('ad-lv');
     lvSel.innerHTML = '<option value="">-- Chọn lĩnh vực --</option>' + LINH_VUC_LUAT.map(lv => `<option value="${lv.id}">${lv.ten}</option>`).join('') + '<option value="NEW" style="font-weight:bold;color:var(--navy);">+ Thêm lĩnh vực mới...</option>';
-    document.getElementById('ad-new-lv').style.display = 'none'; document.getElementById('ad-new-sf').style.display = 'none'; document.getElementById('ad-sf').innerHTML = '';
+    document.getElementById('ad-new-lv').style.display = 'none'; document.getElementById('ad-new-lv-en').style.display = 'none'; document.getElementById('ad-new-sf').style.display = 'none'; document.getElementById('ad-new-sf-en').style.display = 'none'; document.getElementById('ad-sf').innerHTML = '';
+    document.getElementById('ad-new-lv').value = ''; document.getElementById('ad-new-lv-en').value = ''; document.getElementById('ad-new-sf').value = ''; document.getElementById('ad-new-sf-en').value = '';
     document.getElementById('ad-submit-btn').textContent = 'Lưu Dữ Liệu';
     adminFormLaws = []; renderLawsList();
     document.querySelector('.info-modal-title').innerHTML = '<i class="ph ph-gear"></i> Thêm Mới Dữ Liệu';
@@ -2555,16 +2733,23 @@ function openAdmin() {
 function updateAdminSF() {
   const lvId = document.getElementById('ad-lv').value; const sfSel = document.getElementById('ad-sf');
   const newLvInput = document.getElementById('ad-new-lv'); const newSfInput = document.getElementById('ad-new-sf');
+  const newLvEnInput = document.getElementById('ad-new-lv-en'); const newSfEnInput = document.getElementById('ad-new-sf-en');
   if (lvId === 'NEW') {
-      newLvInput.style.display = 'block'; sfSel.innerHTML = '<option value="NEW">-- Sẽ tạo Chủ đề mới --</option>'; sfSel.style.display = 'none'; newSfInput.style.display = 'block';
+      newLvInput.style.display = 'block'; newLvEnInput.style.display = 'block'; sfSel.innerHTML = '<option value="NEW">-- Sẽ tạo Chủ đề mới --</option>'; sfSel.style.display = 'none'; newSfInput.style.display = 'block'; newSfEnInput.style.display = 'block';
   } else {
-      newLvInput.style.display = 'none'; sfSel.style.display = 'block'; newSfInput.style.display = 'none';
+      newLvInput.style.display = 'none'; newLvEnInput.style.display = 'none'; sfSel.style.display = 'block'; newSfInput.style.display = 'none'; newSfEnInput.style.display = 'none';
       const lv = getLVById(lvId); sfSel.innerHTML = lv ? lv.subfields.map(sf => `<option value="${sf.id}">${sf.ten}</option>`).join('') + '<option value="NEW" style="font-weight:bold;color:var(--navy);">+ Thêm chủ đề mới...</option>' : '';
   }
   syncAdminContentPartVisibility();
 }
-function checkNewSF() { const sfId = document.getElementById('ad-sf').value; document.getElementById('ad-new-sf').style.display = (sfId === 'NEW') ? 'block' : 'none'; syncAdminContentPartVisibility(); }
-function closeAdmin() { editingCaseId = null; document.getElementById('admin-modal').classList.remove('open'); }
+function checkNewSF() {
+  const sfId = document.getElementById('ad-sf').value;
+  const showNew = sfId === 'NEW';
+  document.getElementById('ad-new-sf').style.display = showNew ? 'block' : 'none';
+  document.getElementById('ad-new-sf-en').style.display = showNew ? 'block' : 'none';
+  syncAdminContentPartVisibility();
+}
+function closeAdmin() { editingCaseId = null; hasUnsavedChanges = false; document.getElementById('admin-modal').classList.remove('open'); }
 
 window.handlePasteAsPlainText = function(e) {
     e.preventDefault();
@@ -2832,9 +3017,43 @@ function makeSiteDataPayload() {
     };
 }
 
-function exportSiteDataFile() {
+let _githubDataDirHandle = null;
+
+async function exportSiteDataFile() {
     const payload = makeSiteDataPayload();
-    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const jsonStr = JSON.stringify(payload, null, 2);
+
+    if (window.showDirectoryPicker) {
+        if (!_githubDataDirHandle) {
+            try {
+                _githubDataDirHandle = await window.showDirectoryPicker({ mode: 'readwrite', startIn: 'documents' });
+            } catch (e) {
+                if (e.name === 'AbortError') return;
+                _githubDataDirHandle = null;
+            }
+        }
+        if (_githubDataDirHandle) {
+            try {
+                let dataDir;
+                try {
+                    dataDir = await _githubDataDirHandle.getDirectoryHandle('data', { create: false });
+                } catch {
+                    dataDir = _githubDataDirHandle;
+                }
+                const fh = await dataDir.getFileHandle('site-data.json', { create: true });
+                const w = await fh.createWritable();
+                await w.write(jsonStr);
+                await w.close();
+                showAlert('✓ Đã lưu site-data.json thẳng vào thư mục GitHub!\n\nMở GitHub Desktop → Stage All → Commit → Push để cập nhật web.');
+                return;
+            } catch (e) {
+                _githubDataDirHandle = null;
+            }
+        }
+    }
+
+    // Fallback: tải xuống như cũ
+    const blob = new Blob([jsonStr], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
@@ -2843,7 +3062,12 @@ function exportSiteDataFile() {
     link.click();
     link.remove();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
-    showAlert('Đã xuất file site-data.json. Để điện thoại và người xem khác thấy dữ liệu, hãy đặt file này vào thư mục data của dự án rồi đưa cả thư mục data lên GitHub.');
+    showAlert('Đã xuất file site-data.json. Hãy đặt file này vào thư mục data của dự án rồi đưa lên GitHub.');
+}
+
+function resetGithubFolder() {
+    _githubDataDirHandle = null;
+    showAlert('Đã xóa thư mục đã lưu. Lần xuất tiếp theo sẽ hỏi lại thư mục.');
 }
 
 function normalizeAdminBackupPayload(backup) {
@@ -3148,20 +3372,18 @@ function ensureImportedCaseTaxonomy(caseData) {
     let lv = getLVById(caseData.lvId);
     if(!lv) {
         lv = { id: caseData.lvId, ten: caseData.lvName || caseData.lvId, icon: '<i class="ph ph-folder"></i>', subfields: [...baseSubfields.map(s=>({...s}))], totalCases: 0 };
-        if(caseData.lvName_en) lv.translations = { en: { ten: caseData.lvName_en } };
+        applyEntityEnglishName(lv, caseData.lvName_en || '');
         LINH_VUC_LUAT.push(lv);
     } else if(caseData.lvName_en && !getEntityEnglishName(lv)) {
-        lv.translations = { ...(lv.translations || {}), en: { ...((lv.translations && lv.translations.en) || {}), ten: caseData.lvName_en } };
+        applyEntityEnglishName(lv, caseData.lvName_en);
     }
     if(!lv.subfields.find(sf => sf.id === caseData.sfId)) {
         const sf = { id: caseData.sfId, ten: caseData.sfName || caseData.sfId, soLuong: 0 };
-        if(caseData.sfName_en) sf.translations = { en: { ten: caseData.sfName_en } };
+        applyEntityEnglishName(sf, caseData.sfName_en || '');
         lv.subfields.push(sf);
     } else {
         const sf = lv.subfields.find(item => item.id === caseData.sfId);
-        if(caseData.sfName_en && sf && !getEntityEnglishName(sf)) {
-            sf.translations = { ...(sf.translations || {}), en: { ...((sf.translations && sf.translations.en) || {}), ten: caseData.sfName_en } };
-        }
+        if(sf && caseData.sfName_en && !getEntityEnglishName(sf)) applyEntityEnglishName(sf, caseData.sfName_en);
     }
 }
 
@@ -3299,9 +3521,15 @@ function submitAdmin() {
   const timelineArr = tomluocText.split(/\r?\n/).map(t => t.trim()).filter(t => t.length > 0);
   let sao = 0; if (sfId === 'an-le') sao = 3; else if (sfId === 'tb-rut-kinh-nghiem') sao = 2; else sao = parseInt(document.getElementById('ad-tinhchat').value) || 0;
 
-  let finalLvName = getLVById(lvId) ? getLVById(lvId).ten : document.getElementById('ad-new-lv').value;
+  const selectedLvBeforeSave = getLVById(lvId);
+  let finalLvName = selectedLvBeforeSave ? selectedLvBeforeSave.ten : document.getElementById('ad-new-lv').value.trim();
+  let finalLvNameEn = selectedLvBeforeSave ? getEntityEnglishName(selectedLvBeforeSave) : document.getElementById('ad-new-lv-en').value.trim();
+  if(lvId === 'NEW' && !finalLvName) { showAlert('Vui lòng nhập tên lĩnh vực mới.'); return; }
   if(lvId === 'NEW') lvId = createSlug(finalLvName);
-  let finalSfName = getSFById(lvId, sfId) ? getSFById(lvId, sfId).ten : document.getElementById('ad-new-sf').value;
+  const selectedSfBeforeSave = getSFById(lvId, sfId);
+  let finalSfName = selectedSfBeforeSave ? selectedSfBeforeSave.ten : document.getElementById('ad-new-sf').value.trim();
+  let finalSfNameEn = selectedSfBeforeSave ? getEntityEnglishName(selectedSfBeforeSave) : document.getElementById('ad-new-sf-en').value.trim();
+  if((sfId === 'NEW' || document.getElementById('ad-lv').value === 'NEW') && !finalSfName) { showAlert('Vui lòng nhập tên chủ đề mới.'); return; }
   if(sfId === 'NEW' || document.getElementById('ad-lv').value === 'NEW') sfId = createSlug(finalSfName);
   const detailOnly = isDetailOnlySubfield(sfId);
   if(detailOnly && englishPayload) {
@@ -3317,6 +3545,8 @@ function submitAdmin() {
       updatedAt: new Date().toISOString(),
       tom_luoc: detailOnly ? '' : formatContent(tomluocText), ap_dung: detailOnly ? '' : formatContent(apdungText), chi_tiet: formatContent(chitietText), timeline: detailOnly ? [] : timelineArr, laws: adminFormLaws
   };
+  if(finalLvNameEn) caseData.lvName_en = finalLvNameEn;
+  if(finalSfNameEn) caseData.sfName_en = finalSfNameEn;
 
   if(englishPayload) {
       caseData.translations = { en: englishPayload };
@@ -3328,8 +3558,20 @@ function submitAdmin() {
 
   if(window.saveCaseToDB) { window.saveCaseToDB(caseData); return; }
 
-  if (!getLVById(lvId)) LINH_VUC_LUAT.push({ id: lvId, ten: finalLvName, icon: '<i class="ph ph-folder"></i>', subfields: [...baseSubfields.map(s=>({...s}))], totalCases: 0 });
-  const lvObj = getLVById(lvId); if (lvObj && !lvObj.subfields.find(s => s.id === sfId)) lvObj.subfields.push({ id: sfId, ten: finalSfName, soLuong: 0 });
+  if (!getLVById(lvId)) {
+    const newLv = { id: lvId, ten: finalLvName, icon: '<i class="ph ph-folder"></i>', subfields: [...baseSubfields.map(s=>({...s}))], totalCases: 0 };
+    applyEntityEnglishName(newLv, finalLvNameEn);
+    LINH_VUC_LUAT.push(newLv);
+  }
+  const lvObj = getLVById(lvId);
+  if(lvObj && finalLvNameEn && !getEntityEnglishName(lvObj)) applyEntityEnglishName(lvObj, finalLvNameEn);
+  if (lvObj && !lvObj.subfields.find(s => s.id === sfId)) {
+    const newSf = { id: sfId, ten: finalSfName, soLuong: 0 };
+    applyEntityEnglishName(newSf, finalSfNameEn);
+    lvObj.subfields.push(newSf);
+  }
+  const sfObj = getSFById(lvId, sfId);
+  if(sfObj && finalSfNameEn && !getEntityEnglishName(sfObj)) applyEntityEnglishName(sfObj, finalSfNameEn);
 
   if(editingCaseId) {
     const found = findCaseById(editingCaseId);
@@ -3355,19 +3597,529 @@ function submitAdmin() {
   document.getElementById('ad-ten').value = ''; document.getElementById('ad-mota').value = ''; document.getElementById('ad-tomluoc').innerHTML = ''; document.getElementById('ad-apdung').innerHTML = ''; document.getElementById('ad-chitiet').innerHTML = ''; clearEnglishAdminFields();
   editingCaseId = null; renderHome(); if(state.curSF) renderCasesList();
   if(shouldRefreshDetail) goDetail(null, null, caseData.id);
-  btn.textContent = 'Lưu Dữ Liệu'; btn.disabled = false; closeAdmin(); showAlert('Đã lưu thành công!');
+  btn.textContent = 'Lưu Dữ Liệu'; btn.disabled = false; hasUnsavedChanges = false; closeAdmin(); showAlert('Đã lưu thành công!');
 }
+
+// ============================================================
+// THUẾ AI - Tư vấn thuế theo pháp luật Việt Nam 2025-2026
+// ============================================================
+
+let thueConversation = [];
+let thueUploadedFiles = [];
+
+const THUE_SYSTEM_PROMPT = `[CƠ SỞ DỮ LIỆU PHÁP LUẬT THUẾ VIỆT NAM]
+
+Bạn là chuyên gia tư vấn thuế Việt Nam có kiến thức chuyên sâu về pháp luật thuế hiện hành năm 2025–2026. Bạn có toàn bộ nội dung các luật thuế và nghị định dưới đây và PHẢI trích dẫn chính xác điều khoản khi phân tích.
+
+=== LUẬT THUẾ THU NHẬP CÁ NHÂN (Luật 109/2025/QH15, hiệu lực 01/07/2026) ===
+
+Điều 2. Người nộp thuế: Cá nhân cư trú (có mặt ≥183 ngày/năm hoặc có nơi ở thường xuyên tại VN) chịu thuế với thu nhập trong và ngoài VN; cá nhân không cư trú chịu thuế với thu nhập phát sinh tại VN.
+
+Điều 3. Thu nhập chịu thuế TNCN gồm: (1) Thu nhập từ kinh doanh: sản xuất-kinh doanh hàng hóa-dịch vụ, hành nghề độc lập, đại lý-môi giới, TMĐT/nền tảng số; (2) Tiền lương tiền công; (3) Đầu tư vốn: lãi cho vay, lợi tức cổ phần; (4) Chuyển nhượng vốn, chứng khoán; (5) Chuyển nhượng bất động sản; (6) Trúng thưởng; (7) Bản quyền; (8) Nhượng quyền thương mại; (9) Thừa kế, quà tặng là chứng khoán/BĐS/tài sản đăng ký; (10) Thu nhập khác: tên miền .vn, tín chỉ carbon, biển số xe đấu giá, tài sản số, vàng miếng.
+
+Điều 4. Thu nhập miễn thuế TNCN: BĐS giữa người thân (vợ chồng, cha mẹ-con, anh chị em ruột); BĐS duy nhất; đất được Nhà nước giao; nông nghiệp trực tiếp; lãi trái phiếu CP, lãi tiền gửi, bảo hiểm nhân thọ; kiều hối; lương làm đêm/thêm giờ; lương hưu BHXH; học bổng; bồi thường BH; thu nhập từ thiện nhân đạo; lương thuyền viên tàu quốc tế; R&D công nghệ cao (miễn 5 năm).
+
+Điều 7. Thuế TNCN từ kinh doanh (cá nhân cư trú):
+- Doanh thu ≤500 triệu đồng/năm: KHÔNG phải nộp thuế TNCN.
+- Doanh thu >500 triệu đến 3 tỷ: thuế suất 15% trên thu nhập tính thuế (doanh thu - chi phí), HOẶC chọn thuế khoán: phân phối/cung cấp hàng hóa 0,5%; dịch vụ/xây dựng không bao thầu NVL 2%; cho thuê tài sản/đại lý BH/xổ số/MLM 5%; sản xuất/vận tải/xây dựng bao thầu NVL 1,5%; nội dung số giải trí 5%; khác 1%.
+- Doanh thu >3 tỷ đến 50 tỷ: thuế suất 17%.
+- Doanh thu >50 tỷ: thuế suất 20%.
+- Cho thuê BĐS (không kể lưu trú): 5% × phần doanh thu vượt 500 triệu.
+
+Điều 8-9. Thuế TNCN từ tiền lương tiền công (biểu lũy tiến từng phần):
+Thu nhập tính thuế = Tổng lương - BHXH/BHYT/BHTN bắt buộc - Giảm trừ gia cảnh - Đóng từ thiện nhân đạo.
+Biểu thuế lũy tiến:
+- Bậc 1: ≤10 triệu/tháng (≤120 triệu/năm): 5%
+- Bậc 2: 10-30 triệu/tháng (120-360 triệu/năm): 10%
+- Bậc 3: 30-60 triệu/tháng (360-720 triệu/năm): 20%
+- Bậc 4: 60-100 triệu/tháng (720-1.200 triệu/năm): 30%
+- Bậc 5: >100 triệu/tháng (>1.200 triệu/năm): 35%
+
+Điều 10. Giảm trừ gia cảnh:
+- Bản thân: 15,5 triệu đồng/tháng (186 triệu/năm).
+- Mỗi người phụ thuộc: 6,2 triệu đồng/tháng.
+- Mỗi người phụ thuộc chỉ tính một lần vào một người nộp thuế.
+
+Điều 12. Thuế TNCN từ đầu tư vốn: 5% × thu nhập (lãi cho vay, lợi tức cổ phần).
+Điều 13. Chuyển nhượng vốn: 20% × (giá CN - giá mua - chi phí), hoặc 2% × giá CN nếu không xác định được chi phí; chứng khoán: 0,1% × giá CN mỗi lần.
+Điều 14. Chuyển nhượng BĐS: 2% × giá chuyển nhượng (bất kể lãi hay lỗ).
+Điều 15. Trúng thưởng: 10% × (giải thưởng - 20 triệu đồng).
+Điều 16. Bản quyền: 5% × (thu nhập - 20 triệu).
+Điều 17. Nhượng quyền TM: 5% × (thu nhập - 20 triệu).
+Điều 18. Thừa kế/Quà tặng: 10% × (giá trị - 20 triệu).
+Điều 19. Thu nhập khác (tên miền, tín chỉ carbon, biển số): 5% × (thu nhập - 20 triệu); tài sản số/vàng miếng: 0,1% × giá CN.
+Chương III (Điều 20-28). Cá nhân KHÔNG cư trú: lương 20%; kinh doanh 1-5% trên doanh thu; đầu tư vốn 5%; CN chứng khoán 0,1%; CN BĐS 2%.
+
+=== LUẬT THUẾ THU NHẬP DOANH NGHIỆP (Luật 67/2025/QH15, hiệu lực 01/10/2025) ===
+
+Điều 2. Người nộp thuế: DN VN (toàn cầu); DN nước ngoài có CSTT (thu nhập liên quan đến CSTT); DN nước ngoài không có CSTT (thu nhập phát sinh tại VN).
+
+Điều 3. Thu nhập chịu thuế: Thu nhập từ SXKD + thu nhập khác (CN vốn, CN BĐS, CN dự án đầu tư, CN tài sản, bản quyền, lãi tiền gửi, chênh lệch tỷ giá, tài trợ-quà tặng nhận được, v.v.).
+
+Điều 4. Thu nhập miễn thuế TNDN: đánh bắt hải sản; nông nghiệp vùng đặc biệt khó khăn; HTX nông nghiệp; R&D hợp đồng (≤3 năm); DN sử dụng ≥30% lao động khuyết tật/cai nghiện/HIV; GD nghề nghiệp cho dân tộc thiểu số; lợi tức từ góp vốn/liên doanh đã nộp TNDN; tài trợ giáo dục-y tế-từ thiện; chuyển nhượng tín chỉ carbon/trái phiếu xanh lần đầu.
+
+Điều 9. Chi được trừ: phải thực tế phát sinh, liên quan SXKD, có hóa đơn chứng từ và thanh toán không tiền mặt. Các khoản không được trừ: phạt vi phạm HC; chi bù đắp từ nguồn khác; trích khấu hao sai; lương chủ DNTN/TNHH MTV; lãi vay thiếu vốn điều lệ; thuế TNDN; tiền chậm nộp.
+
+Điều 10. Thuế suất TNDN:
+- 20%: doanh nghiệp thông thường (doanh thu >50 tỷ/năm).
+- 15%: DN có tổng doanh thu năm ≤3 tỷ đồng (doanh thu năm trước liền kề).
+- 17%: DN có tổng doanh thu >3 tỷ đến ≤50 tỷ đồng.
+- 25-50%: dầu khí; 50%: khai thác tài nguyên quý hiếm.
+
+Điều 13. Thuế suất ưu đãi TNDN:
+- 10% trong 15 năm: dự án đầu tư mới công nghệ cao, phần mềm, CN hỗ trợ, năng lượng tái tạo, kết cấu hạ tầng, vùng ĐBKK, KCN-KCX-KCN số tập trung.
+- 15%: doanh thu dưới 3 tỷ (Điều 10 Khoản 2).
+- 17% trong 10 năm: dự án đầu tư mới tại vùng KT-XH khó khăn, KKT, một số ngành sx.
+- Miễn 4 năm, giảm 50% trong 9 năm tiếp: dự án đủ điều kiện ưu đãi 10%.
+- Miễn 2 năm, giảm 50% trong 4 năm: dự án ưu đãi 17%.
+
+Điều 16. Chuyển lỗ: tối đa 5 năm liên tục kể từ năm sau phát sinh lỗ.
+Điều 17. Quỹ phát triển KH&CN: được trích tối đa 20% thu nhập tính thuế; phải sử dụng trong 5 năm, dùng ≥70%.
+
+=== LUẬT THUẾ GIÁ TRỊ GIA TĂNG (Luật 48/2024/QH15) ===
+
+Điều 3. Đối tượng chịu thuế: hàng hóa-dịch vụ dùng cho SXKD và tiêu dùng tại VN (trừ Điều 5).
+Điều 4. Người nộp thuế: tổ chức/hộ/cá nhân SXKD; người nhập khẩu; tổ chức VN mua dịch vụ từ nước ngoài; nhà cung cấp nước ngoài TMĐT; sàn TMĐT có chức năng thanh toán.
+
+Điều 5. Đối tượng KHÔNG chịu thuế GTGT (26 nhóm): nông lâm thủy sản chưa chế biến; giống cây trồng vật nuôi; thức ăn chăn nuôi; muối NaCl; nhà ở tài sản công bán cho người thuê; tưới tiêu nông nghiệp; chuyển quyền SDĐ; bảo hiểm nhân thọ-sức khỏe-nông nghiệp; dịch vụ tài chính-NH-CK (tín dụng, cho vay, môi giới CK, CN vốn, bán nợ, ngoại tệ, phái sinh); dịch vụ y tế, thú y; tang lễ; duy tu di tích lịch sử bằng vốn nhân dân; dạy học-dạy nghề; phát sóng bằng NSNN; xuất bản sách giáo khoa-sách chính trị-pháp luật; vận chuyển HK công cộng bằng xe buýt-tàu điện; thiết bị nhập khẩu cho NCKHCN; sản phẩm QP-AN; viện trợ nhân đạo; chuyển giao CN/SHTT; phần mềm; vàng thỏi/miếng nhập khẩu; hàng hóa-dịch vụ DN/hộ cá nhân có doanh thu ≤200 triệu/năm.
+
+Điều 9. Thuế suất GTGT:
+- 0%: hàng hóa dịch vụ xuất khẩu, vận tải quốc tế, khu phi thuế quan.
+- 5%: nước sạch SX-sinh hoạt; phân bón-BVTV; dịch vụ nông nghiệp; sản phẩm nông lâm thủy sản sơ chế; cao su sơ chế; thiết bị y tế-dược phẩm; đồ chơi trẻ em; sách; dịch vụ KHCN; nhà ở xã hội.
+- 10%: hàng hóa-dịch vụ không thuộc 0% và 5%.
+
+Điều 11. Phương pháp khấu trừ: Thuế GTGT phải nộp = Thuế đầu ra - Thuế đầu vào được khấu trừ. Áp dụng cho DN doanh thu ≥1 tỷ/năm hoặc đăng ký tự nguyện.
+Điều 12. Phương pháp trực tiếp (tỷ lệ % × doanh thu): phân phối HH 1%; dịch vụ/XD không bao thầu NVL 5%; SX/VT/dịch vụ gắn HH/XD bao thầu NVL 3%; khác 2%. Áp dụng cho DN doanh thu <1 tỷ, hộ kinh doanh, cá nhân kinh doanh.
+
+NĐ 174/2025/NĐ-CP (Giảm thuế GTGT theo NQ 204/2025/QH15): Giảm thuế GTGT từ 10% xuống 8% cho hàng hóa-dịch vụ thông thường (trừ viễn thông, tài chính-NH-CK-BH-BĐS, kim loại, khoáng sản, hàng hóa TTĐB trừ xăng). Cơ sở tính trực tiếp được giảm 20% tỷ lệ %.
+
+NĐ 181/2025/NĐ-CP và NĐ 359/2025/NĐ-CP: Hướng dẫn chi tiết Luật GTGT.
+NĐ 117/2025/NĐ-CP: Quản lý thuế TMĐT và nền tảng số - nhà cung cấp nước ngoài phải đăng ký, khai, nộp thuế tại VN.
+TT 69/2025/TT-BTC: Hướng dẫn Luật GTGT và NĐ 181.
+
+=== LUẬT THUẾ TIÊU THỤ ĐẶC BIỆT (Luật 66/2025/QH15, hiệu lực 01/01/2026) ===
+
+Điều 2. Đối tượng chịu TTĐB - Hàng hóa: thuốc lá; rượu; bia; xe có động cơ dưới 24 chỗ; xe mô tô >125 cm³; máy bay/trực thăng/tàu lượn/du thuyền; xăng; điều hòa >24.000-90.000 BTU; bài lá; vàng mã-hàng mã; nước giải khát đường >5g/100ml. Dịch vụ: vũ trường; massage/karaoke; casino/trò chơi điện tử có thưởng; đặt cược; golf; xổ số.
+
+Điều 8. Biểu thuế TTĐB 2026:
+- Thuốc lá điếu: 75% + mức tuyệt đối tăng dần (từ 2027: 2.000đ/bao đến 2031: 10.000đ/bao)
+- Rượu ≥20 độ: 65% (2026), tăng 5%/năm đến 90% (2031)
+- Rượu <20 độ: 35% (2026), tăng đến 60% (2031)
+- Bia: 65% (2026), tăng đến 90% (2031)
+- Xe ô tô ≤9 chỗ xăng: ≤1.500cc: 35%; 1.500-2.000cc: 40%; 2.000-2.500cc: 50%; 2.500-3.000cc: 60%; 3.000-4.000cc: 90%; 4.000-5.000cc: 110%; 5.000-6.000cc: 130%; >6.000cc: 150%
+- Xe điện pin (BEV) ≤9 chỗ: 3% (2026), 11% (từ 01/3/2027)
+- Xe điện khác ≤9 chỗ: 15%
+- Xe hybrid: 70% mức xe xăng cùng loại
+- Xe chạy năng lượng sinh học: 50% mức xe xăng cùng loại
+- Xe ô tô nhà ở lưu động: 75%
+- Mô tô >125cc: 20%
+- Máy bay/trực thăng/tàu lượn: 30%; Du thuyền: 30%
+- Xăng: 10%; Xăng E5: 8%; Xăng E10: 7%
+- Điều hòa >24.000-90.000 BTU: 10%
+- Bài lá: 40%; Vàng mã-hàng mã: 70%
+- Nước giải khát đường >5g/100ml: 8% (từ 2027), 10% (từ 2028)
+- Vũ trường: 40%; Massage-Karaoke: 30%; Casino/trò chơi có thưởng: 35%; Đặt cược: 30%; Golf: 20%; Xổ số: 15%
+
+Điều 5. Cách tính TTĐB: Thuế TTĐB = Giá tính thuế × Thuế suất % + Lượng hàng × Mức thuế tuyệt đối (nếu có). Giá tính thuế = giá bán chưa có TTĐB, chưa BVMT, chưa GTGT.
+Điều 9. Khấu trừ TTĐB: người SX được khấu trừ TTĐB đã nộp ở khâu NVL khi tính TTĐB thành phẩm (cần chứng từ hợp lệ).
+
+NĐ 360/2025/NĐ-CP: Hướng dẫn chi tiết Luật TTĐB.
+TT 158/2025/TT-BTC: Hướng dẫn TTĐB.
+
+=== NGHỊ ĐỊNH VÀ THÔNG TƯ BỔ SUNG ===
+
+NĐ 320/2025/NĐ-CP (hướng dẫn Luật TNDN 67/2025): Chi tiết về doanh thu, chi phí được trừ, ưu đãi thuế, chuyển lỗ, quỹ KH&CN.
+TT 20/2026/TT-BTC (hướng dẫn TNDN): Thủ tục kê khai, quyết toán, hoàn thuế TNDN.
+
+[HƯỚNG DẪN PHÂN TÍCH]
+
+Mỗi khi nhận tình huống từ người dùng, PHẢI phân tích theo đúng 5 bước sau:
+
+BƯỚC 1: XÁC ĐỊNH LOẠI THUẾ ÁP DỤNG
+Xem xét toàn bộ dữ kiện. Xác định loại thuế (TNCN, TNDN, GTGT, TTĐB, hoặc nhiều loại). Nêu căn cứ pháp lý trong ngoặc đơn ngay sau khẳng định.
+
+BƯỚC 2: PHÂN LOẠI TỪNG DỮ KIỆN
+Với mỗi dữ kiện, xác định thuộc nhóm nào theo luật. Nêu căn cứ pháp lý cụ thể.
+
+BƯỚC 3: KIỂM TRA MIỄN THUẾ
+Kiểm tra từng dữ kiện xem có thuộc trường hợp miễn thuế không. Nêu rõ điều khoản nếu có.
+
+BƯỚC 4: KIỂM TRA GIẢM THUẾ / GIẢM TRỪ
+Xem xét giảm trừ gia cảnh (15,5 triệu bản thân + 6,2 triệu/người phụ thuộc), BHXH/BHYT/BHTN bắt buộc, từ thiện nhân đạo, ưu đãi đầu tư. Nêu mức cụ thể và căn cứ pháp lý.
+
+BƯỚC 5: TÍNH TOÁN VÀ KẾT LUẬN
+Trình bày từng bước tính toán rõ ràng. Áp dụng đúng biểu thuế, thuế suất. Ra đáp số cuối bằng số tiền cụ thể (đồng hoặc triệu đồng).
+
+YÊU CẦU ĐỊNH DẠNG:
+1. Căn cứ pháp lý bắt buộc: mỗi khẳng định pháp lý phải kèm "(Điều X, Khoản Y, Luật số ZZZ/QH15)" ngay sau câu đó.
+2. Câu hỏi bổ sung: nếu thiếu thông tin, liệt kê câu hỏi đánh số (1, 2, 3...).
+3. Tính toán tường minh: mọi phép tính từng dòng, không bỏ bước.
+4. Định dạng Markdown: **in đậm** cho số liệu quan trọng, dấu gạch (-) cho danh sách.
+5. Ưu tiên dữ liệu người dùng đã cung cấp: tính ngay, chỉ hỏi thêm khi thực sự thiếu.`;
+
+// ─── Worker URL ────────────────────────────────────────────────────────────────
+// Sau khi deploy Cloudflare Worker (xem cloudflare-worker/worker.js), paste URL vào đây.
+// Khi có URL này, mọi khách web dùng được tính năng Thuế mà KHÔNG cần nhập API key.
+// Để trống → mỗi người tự nhập Gemini API key của họ (chế độ cũ).
+const THUE_WORKER_URL = 'https://thue-proxy.ngocduc2006-hp.workers.dev';
+// ──────────────────────────────────────────────────────────────────────────────
+
+function goThue() {
+  const wrapper = document.getElementById('thue-api-section-wrapper');
+  if (THUE_WORKER_URL) {
+    // Worker mode – không cần API key, ẩn cả section
+    if (wrapper) wrapper.style.display = 'none';
+  } else {
+    // Direct mode – cần API key của người dùng
+    if (wrapper) wrapper.style.display = '';
+    const savedKey = localStorage.getItem('dcsl_thue_gemini_key');
+    const keyEl = document.getElementById('thue-api-key');
+    if (keyEl && savedKey) keyEl.value = savedKey;
+    if (!savedKey) {
+      const body = document.getElementById('thue-api-body');
+      const arrow = document.getElementById('thue-api-arrow');
+      if (body) body.classList.add('open');
+      if (arrow) arrow.style.transform = 'rotate(180deg)';
+    }
+  }
+  showPage('page-thue');
+}
+
+function toggleThueApiSection() {
+  const body = document.getElementById('thue-api-body');
+  const arrow = document.getElementById('thue-api-arrow');
+  if (!body) return;
+  body.classList.toggle('open');
+  if (arrow) arrow.style.transform = body.classList.contains('open') ? 'rotate(180deg)' : '';
+}
+
+function saveThuApiKey() {
+  const key = (document.getElementById('thue-api-key').value || '').trim();
+  if (!key) { showAlert('Vui lòng nhập API Key!'); return; }
+  localStorage.setItem('dcsl_thue_gemini_key', key);
+  const body = document.getElementById('thue-api-body');
+  const arrow = document.getElementById('thue-api-arrow');
+  if (body) body.classList.remove('open');
+  if (arrow) arrow.style.transform = '';
+  showAlert('Đã lưu API Key thành công!');
+}
+
+function handleThueFiles(fileList) {
+  Array.from(fileList).forEach(file => {
+    const reader = new FileReader();
+    const isImage = file.type.startsWith('image/');
+    if (isImage) {
+      reader.onload = (e) => {
+        const base64 = e.target.result.split(',')[1];
+        thueUploadedFiles.push({ name: file.name, type: file.type, isImage: true, data: base64 });
+        renderThueFileList();
+      };
+      reader.readAsDataURL(file);
+    } else {
+      reader.onload = (e) => {
+        thueUploadedFiles.push({ name: file.name, type: file.type, isImage: false, content: e.target.result });
+        renderThueFileList();
+      };
+      reader.readAsText(file, 'UTF-8');
+    }
+  });
+  // Reset input để có thể upload lại cùng file
+  document.getElementById('thue-file-input').value = '';
+}
+
+function handleThueDrop(e) {
+  e.preventDefault();
+  document.getElementById('thue-file-zone').classList.remove('drag-over');
+  handleThueFiles(e.dataTransfer.files);
+}
+
+function removeThueFile(index) {
+  thueUploadedFiles.splice(index, 1);
+  renderThueFileList();
+}
+
+function renderThueFileList() {
+  const list = document.getElementById('thue-file-list');
+  if (!list) return;
+  if (thueUploadedFiles.length === 0) { list.innerHTML = ''; return; }
+  list.innerHTML = thueUploadedFiles.map((f, i) => `
+    <div class="thue-file-item">
+      <div class="thue-file-name">
+        <i class="ph ph-${f.isImage ? 'image' : 'file-text'}" style="color:var(--gold-rich);flex-shrink:0;"></i>
+        <span title="${f.name}">${f.name}</span>
+      </div>
+      <button class="thue-file-remove" onclick="removeThueFile(${i})" title="Xóa file">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+  `).join('');
+}
+
+async function submitThuePhanTich() {
+  const input = (document.getElementById('thue-input').value || '').trim();
+  const storedKey = localStorage.getItem('dcsl_thue_gemini_key') || '';
+  const keyEl = document.getElementById('thue-api-key');
+  const typedKey = keyEl ? (keyEl.value || '').trim() : '';
+  const apiKey = typedKey || storedKey;
+
+  if (!THUE_WORKER_URL && !apiKey) {
+    toggleThueApiSection();
+    showAlert('Vui lòng nhập Gemini API Key trước!');
+    return;
+  }
+  if (!THUE_WORKER_URL && typedKey && typedKey !== storedKey) {
+    localStorage.setItem('dcsl_thue_gemini_key', typedKey);
+  }
+  if (!input && thueUploadedFiles.length === 0) {
+    showAlert('Vui lòng nhập tình huống thuế của bạn!');
+    return;
+  }
+
+  const btn = document.getElementById('thue-analyze-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="ph ph-circle-notch" style="animation:spin 1s linear infinite"></i> Đang phân tích...';
+
+  // Xây dựng content gửi cho AI
+  const userContent = [];
+  thueUploadedFiles.forEach(f => {
+    if (f.isImage) {
+      userContent.push({ type: 'image', source: { type: 'base64', media_type: f.type, data: f.data } });
+      userContent.push({ type: 'text', text: `[Hình ảnh trên là file "${f.name}" chứa dữ liệu/bảng số liệu. Hãy đọc và trích xuất thông tin từ hình ảnh này để phân tích.]` });
+    } else {
+      userContent.push({ type: 'text', text: `\n--- NỘI DUNG FILE "${f.name}" ---\n${f.content}\n--- HẾT FILE ---\n` });
+    }
+  });
+  if (input) userContent.push({ type: 'text', text: input });
+
+  thueConversation = [{ role: 'user', content: userContent }];
+
+  const resultEl = document.getElementById('thue-result');
+  const bodyEl = document.getElementById('thue-result-body');
+  resultEl.style.display = 'block';
+  bodyEl.innerHTML = `<div class="thue-loading"><div class="thue-loading-dots"><span></span><span></span><span></span></div>&nbsp; <span id="thue-loading-msg-text">${t('thueLoadingMsg') || 'Hệ thống đang phân tích tình huống thuế của bạn...'}</span></div>`;
+  document.getElementById('thue-followup').style.display = 'none';
+  setTimeout(() => resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+
+  try {
+    const responseText = await callThueClaudeAPI(apiKey, bodyEl);
+    thueConversation.push({ role: 'assistant', content: responseText });
+    document.getElementById('thue-followup').style.display = 'block';
+  } catch (e) {
+    bodyEl.innerHTML = `<div style="color:#C62828;padding:14px;background:#FDECEC;border-radius:8px;line-height:1.6;">
+      <strong>Lỗi khi gọi API:</strong> ${escapeHtmlText(e.message)}
+      <br><small style="color:var(--text-muted);margin-top:8px;display:block;">
+        Kiểm tra: (1) API Key đúng chưa? (2) API Key có hợp lệ trên Google AI Studio không?
+        (3) Nếu lỗi CORS, hãy mở file qua localhost thay vì file:// hoặc dùng extension cho phép CORS.
+      </small>
+    </div>`;
+  }
+
+  btn.disabled = false;
+  btn.innerHTML = '<i class="ph ph-magnifying-glass"></i> Phân tích thuế';
+}
+
+async function thueSendFollowUp() {
+  const input = (document.getElementById('thue-followup-input').value || '').trim();
+  if (!input) { showAlert('Vui lòng nhập nội dung bổ sung hoặc câu hỏi!'); return; }
+
+  const storedKey = localStorage.getItem('dcsl_thue_gemini_key') || '';
+  const keyEl2 = document.getElementById('thue-api-key');
+  const typedKey = keyEl2 ? (keyEl2.value || '').trim() : '';
+  const apiKey = typedKey || storedKey;
+  if (!THUE_WORKER_URL && !apiKey) { showAlert('Vui lòng nhập API Key!'); return; }
+
+  thueConversation.push({ role: 'user', content: input });
+
+  const bodyEl = document.getElementById('thue-result-body');
+  const userMsgHtml = `
+    <div class="thue-user-msg">
+      <div class="thue-user-msg-label"><i class="ph ph-user"></i> ${t('thueUserSupplied') || 'Bạn bổ sung:'}</div>
+      <div>${input.replace(/\n/g,'<br>')}</div>
+    </div>
+    <hr class="thue-divider">
+  `;
+  bodyEl.innerHTML += userMsgHtml;
+
+  const btn = document.getElementById('thue-followup-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="ph ph-circle-notch" style="animation:spin 1s linear infinite"></i> Đang tiếp tục...';
+  document.getElementById('thue-followup-input').value = '';
+
+  const streamDiv = document.createElement('div');
+  bodyEl.appendChild(streamDiv);
+  streamDiv.innerHTML = `<div class="thue-loading"><div class="thue-loading-dots"><span></span><span></span><span></span></div>&nbsp; ${t('thueContinueMsg') || 'Đang tiếp tục phân tích...'}</div>`;
+  streamDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
+
+  try {
+    const responseText = await callThueClaudeAPI(apiKey, streamDiv);
+    thueConversation.push({ role: 'assistant', content: responseText });
+  } catch (e) {
+    streamDiv.innerHTML = `<div style="color:#C62828;padding:10px;background:#FDECEC;border-radius:8px;">
+      <strong>Lỗi:</strong> ${escapeHtmlText(e.message)}
+    </div>`;
+  }
+
+  btn.disabled = false;
+  btn.innerHTML = '<i class="ph ph-paper-plane-right"></i> Tiếp tục phân tích';
+}
+
+async function callThueClaudeAPI(apiKey, outputEl) {
+  // Convert thueConversation (Claude format) to Gemini format
+  const geminiContents = thueConversation.map(msg => {
+    const role = msg.role === 'assistant' ? 'model' : 'user';
+    let parts;
+    if (typeof msg.content === 'string') {
+      parts = [{ text: msg.content }];
+    } else if (Array.isArray(msg.content)) {
+      parts = msg.content.map(item => {
+        if (item.type === 'text') return { text: item.text };
+        if (item.type === 'image') return { inlineData: { mimeType: item.source.media_type, data: item.source.data } };
+        return { text: '' };
+      });
+    } else {
+      parts = [{ text: String(msg.content || '') }];
+    }
+    return { role, parts };
+  });
+
+  // Nếu có Worker URL → gọi qua proxy (khách web không cần API key)
+  // Ngược lại → gọi thẳng Gemini với key của người dùng
+  const endpoint = THUE_WORKER_URL
+    ? THUE_WORKER_URL
+    : `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?key=${encodeURIComponent(apiKey)}&alt=sse`;
+
+  const response = await fetch(endpoint, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({
+      contents: geminiContents,
+      systemInstruction: { parts: [{ text: THUE_SYSTEM_PROMPT }] },
+      generationConfig: { maxOutputTokens: 8192, temperature: 0.3 }
+    })
+  });
+
+  if (!response.ok) {
+    let errMsg = `HTTP ${response.status}`;
+    try { const err = await response.json(); errMsg = err.error?.message || errMsg; } catch(e2) {}
+    throw new Error(errMsg);
+  }
+
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let fullText = '';
+  let buffer = '';
+  outputEl.innerHTML = '';
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+    const lines = buffer.split('\n');
+    buffer = lines.pop();
+
+    for (const line of lines) {
+      if (!line.startsWith('data: ')) continue;
+      const data = line.slice(6).trim();
+      if (!data || data === '[DONE]') continue;
+      try {
+        const parsed = JSON.parse(data);
+        const text = parsed.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (text) {
+          fullText += text;
+          outputEl.innerHTML = formatThueResponse(fullText);
+        }
+      } catch(e) { /* ignore parse errors on partial chunks */ }
+    }
+  }
+  outputEl.innerHTML = formatThueResponse(fullText);
+  return fullText;
+}
+
+function formatThueResponse(text) {
+  if (!text) return '';
+  let html = text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+
+  // In đậm **...**
+  html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  // In nghiêng *...*
+  html = html.replace(/(?<!\*)\*(?!\*)([^*\n]+?)\*(?!\*)/g, '<em>$1</em>');
+
+  // Căn cứ pháp lý - nhận dạng nội dung trong ngoặc có chứa từ khóa pháp lý
+  html = html.replace(/\(([^)]{5,160}(?:Luật số|QH\d+|NĐ-CP|TT-BTC|Nghị định|Thông tư|Khoản \d|Điều \d)[^)]{0,100})\)/gi,
+    '<span class="thue-legal-cite">($1)</span>');
+
+  // Tiêu đề BƯỚC X
+  html = html.replace(/^(?:###\s*)?(?:⚡\s*)?BƯỚC\s+(\d+)[:.]\s*(.+)$/gm, (_, num, title) =>
+    `<div style="display:flex;align-items:center;gap:10px;margin:22px 0 12px;padding:12px 16px;background:var(--navy);color:#fff;border-radius:8px;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;min-width:28px;border-radius:50%;background:var(--gold-rich);font-weight:700;font-size:0.82rem;">${num}</span>
+      <span style="font-weight:600;font-size:0.92rem;">${title}</span>
+    </div>`
+  );
+
+  // Tiêu đề ### và ##
+  html = html.replace(/^###\s+(.+)$/gm, '<div style="font-family:\'Playfair Display\',serif;font-size:1rem;font-weight:700;color:var(--navy);margin:18px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--gold-border);">$1</div>');
+  html = html.replace(/^##\s+(.+)$/gm, '<div style="font-family:\'Playfair Display\',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin:22px 0 10px;">$1</div>');
+
+  // Bullet lists
+  html = html.replace(/^[-•]\s+(.+)$/gm, '<li style="margin:5px 0;line-height:1.65;">$1</li>');
+  html = html.replace(/(<li[^>]*>[\s\S]*?<\/li>(?:\n<li[^>]*>[\s\S]*?<\/li>)*)/g,
+    '<ul style="padding-left:22px;margin:8px 0;">$1</ul>');
+
+  // Numbered list
+  html = html.replace(/^\d+\.\s+(.+)$/gm, '<li style="margin:5px 0;line-height:1.65;">$1</li>');
+
+  // Phân cách ---
+  html = html.replace(/^---+$/gm, '<hr style="border:none;border-top:1px dashed var(--gold-border);margin:16px 0;">');
+
+  // Kết quả cuối / số tiền thuế - highlight dòng bắt đầu bằng **Tổng thuế / Số thuế
+  html = html.replace(/((?:Tổng|Số) thuế[^<\n]*(?:\d[\d,.]+[^<\n]*(?:đồng|VNĐ|triệu)[^<\n]*))/gi,
+    '<strong style="color:var(--navy);font-size:1.02em;">$1</strong>');
+
+  // Xuống dòng
+  html = html.replace(/\n\n/g, '</p><p style="margin:10px 0;">');
+  html = html.replace(/\n/g, '<br>');
+  html = '<p style="margin:0 0 8px;">' + html + '</p>';
+
+  return html;
+}
+
+function resetThueAnalysis() {
+  thueConversation = [];
+  thueUploadedFiles = [];
+  const inputEl = document.getElementById('thue-input');
+  const fileListEl = document.getElementById('thue-file-list');
+  const resultEl = document.getElementById('thue-result');
+  const followupEl = document.getElementById('thue-followup');
+  const followupInput = document.getElementById('thue-followup-input');
+  if (inputEl) inputEl.value = '';
+  if (fileListEl) fileListEl.innerHTML = '';
+  if (resultEl) resultEl.style.display = 'none';
+  if (followupEl) followupEl.style.display = 'none';
+  if (followupInput) followupInput.value = '';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ============================================================
+
+let hasUnsavedChanges = false;
+window.addEventListener('beforeunload', function(e) {
+    if (hasUnsavedChanges) {
+        e.preventDefault();
+        e.returnValue = 'Bạn có dữ liệu chưa lưu. Bạn có chắc muốn rời trang không?';
+    }
+});
 
 window.addEventListener('scroll',()=>{ document.getElementById('global-header').classList.toggle('scrolled', window.scrollY>10); });
 
 async function safeInit() { 
     const hasSharedSiteData = await loadSharedSiteData();
-    if(!IS_PUBLIC_BUILD) restoreCasesDataFromStorage({ merge: hasSharedSiteData }); 
+    restoreCasesDataFromStorage({ merge: hasSharedSiteData }); 
     const savedLang = localStorage.getItem(LANGUAGE_STORAGE_KEY);
     if(savedLang === 'en' || savedLang === 'vi') state.uiLang = savedLang;
-    if(!IS_PUBLIC_BUILD) {
-        try { Object.assign(LAW_DB, JSON.parse(localStorage.getItem('dcsl_law_db'))); } catch(e){}
-    }
+    try { Object.assign(LAW_DB, JSON.parse(localStorage.getItem('dcsl_law_db'))); } catch(e){}
     renderHome(); buildFilterF1(); syncLanguageButtons(); applyRouteFromUrl();
 }
 if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', safeInit); } else { safeInit(); }
