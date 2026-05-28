@@ -3964,37 +3964,49 @@ async function thueSendFollowUp() {
 }
 
 async function callThueClaudeAPI(apiKey, outputEl) {
-  // Convert thueConversation (Claude format) to Gemini format
-  const geminiContents = thueConversation.map(msg => {
-    const role = msg.role === 'assistant' ? 'model' : 'user';
-    let parts;
+  // Chuyển thueConversation sang OpenAI-compatible format (dùng cho Groq)
+  const messages = [{ role: 'system', content: THUE_SYSTEM_PROMPT }];
+
+  thueConversation.forEach(msg => {
+    const role = msg.role === 'assistant' ? 'assistant' : 'user';
+    let content;
     if (typeof msg.content === 'string') {
-      parts = [{ text: msg.content }];
+      content = msg.content;
     } else if (Array.isArray(msg.content)) {
-      parts = msg.content.map(item => {
-        if (item.type === 'text') return { text: item.text };
-        if (item.type === 'image') return { inlineData: { mimeType: item.source.media_type, data: item.source.data } };
-        return { text: '' };
-      });
+      const parts = msg.content.map(item => {
+        if (item.type === 'text') return { type: 'text', text: item.text };
+        if (item.type === 'image') return {
+          type: 'image_url',
+          image_url: { url: `data:${item.source.media_type};base64,${item.source.data}` }
+        };
+        return null;
+      }).filter(Boolean);
+      // Nếu chỉ có 1 text part, đơn giản hóa thành string
+      content = (parts.length === 1 && parts[0].type === 'text') ? parts[0].text : parts;
     } else {
-      parts = [{ text: String(msg.content || '') }];
+      content = String(msg.content || '');
     }
-    return { role, parts };
+    messages.push({ role, content });
   });
 
   // Nếu có Worker URL → gọi qua proxy (khách web không cần API key)
-  // Ngược lại → gọi thẳng Gemini với key của người dùng
+  // Ngược lại → gọi thẳng Groq (cần CORS, chỉ dùng khi test)
   const endpoint = THUE_WORKER_URL
     ? THUE_WORKER_URL
-    : `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?key=${encodeURIComponent(apiKey)}&alt=sse`;
+    : 'https://api.groq.com/openai/v1/chat/completions';
+
+  const headers = { 'content-type': 'application/json' };
+  if (!THUE_WORKER_URL && apiKey) headers['Authorization'] = `Bearer ${apiKey}`;
 
   const response = await fetch(endpoint, {
     method: 'POST',
-    headers: { 'content-type': 'application/json' },
+    headers,
     body: JSON.stringify({
-      contents: geminiContents,
-      systemInstruction: { parts: [{ text: THUE_SYSTEM_PROMPT }] },
-      generationConfig: { maxOutputTokens: 8192, temperature: 0.3 }
+      model: 'llama-3.3-70b-versatile',
+      messages,
+      stream: true,
+      max_tokens: 8192,
+      temperature: 0.3
     })
   });
 
@@ -4023,7 +4035,8 @@ async function callThueClaudeAPI(apiKey, outputEl) {
       if (!data || data === '[DONE]') continue;
       try {
         const parsed = JSON.parse(data);
-        const text = parsed.candidates?.[0]?.content?.parts?.[0]?.text;
+        // Groq / OpenAI SSE format: choices[0].delta.content
+        const text = parsed.choices?.[0]?.delta?.content;
         if (text) {
           fullText += text;
           outputEl.innerHTML = formatThueResponse(fullText);
