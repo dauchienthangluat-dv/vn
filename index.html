@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi" data-build="public">
 <head>
 <meta charset="UTF-8">
@@ -203,6 +203,8 @@ body { top: 0 !important; }
 .smart-search-wrapper input::placeholder { color: #A0A0A0; }
 .smart-search-wrapper button { background: var(--navy); border: none; color: #fff; padding: 10px 16px; border-radius: 6px; font-family: 'Be Vietnam Pro', sans-serif; font-weight: 500; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; white-space: nowrap; display: flex; align-items: center; gap: 6px;}
 .smart-search-wrapper button:hover { background: var(--gold-rich); }
+@keyframes phspin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.ph-spin { animation: phspin 0.8s linear infinite; display: inline-block; }
 
 .hero-stats{display:flex;gap:24px;margin-top:24px;position:relative;z-index:2; border-top: 1px solid rgba(21, 34, 56, 0.08); padding-top: 16px;}
 .hero-stat-num{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--navy);font-weight:700;display:block;}
@@ -1878,48 +1880,113 @@ function removeAccents(str) { return str.normalize('NFD').replace(/[\u0300-\u036
 
 const SEARCH_STOPWORDS = new Set('toi muon can tim ve va la cua cho trong khi voi neu thi co bi da duoc cac nhung mot nhieu nay do theo tai den tu hoac the an ban vu viec phan noi dung he thong phap ly tinh huong tuong dong hai chi con lai vao nguoi ben case cases the a an and or of to in for with by on from about into without under dung cung chu nhu vay nen boi qua gi ai khac xem ket loai nam thang ngay quan su lam thanh toan tin nhat rang viet'.split(' '));
 const SEARCH_SYNONYMS = {
-  'thua ke': ['di san', 'di chuc', 'nguoi thua ke', 'chia di san', 'inheritance', 'estate', 'will'],
-  'di san': ['thua ke', 'di chuc', 'chia di san', 'estate', 'inheritance'],
+  'thua ke': ['di san', 'di chuc', 'nguoi thua ke', 'chia di san', 'phan chia di san', 'hang thua ke', 'inheritance', 'estate', 'will', 'heir'],
+  'di san': ['thua ke', 'di chuc', 'chia di san', 'tai san nguoi qua doi', 'estate', 'inheritance'],
+  'di chuc': ['ban di chuc', 'lap di chuc', 'co di chuc', 'di chuc viet tay', 'vo hieu di chuc', 'will', 'testament', 'testamentary'],
+  'khong co di chuc': ['thua ke theo phap luat', 'chia di san khong co di chuc', 'chet khong de lai di chuc', 'intestate', 'no will', 'no testament'],
+  'chia di san': ['phan chia tai san', 'chia thua ke', 'phan chia di san thua ke', 'yeu cau chia di san', 'estate division', 'division of inheritance'],
+  'nguoi thua ke': ['hang thua ke', 'con cai thua ke', 'vo chong thua ke', 'cha me thua ke', 'heir', 'beneficiary'],
   'dat': ['dat dai', 'quyen su dung dat', 'so do', 'giay chung nhan', 'land', 'land use right'],
-  'dat dai': ['quyen su dung dat', 'so do', 'giay chung nhan', 'land', 'land use right'],
-  'hop dong': ['giao dich', 'thoa thuan', 'chuyen nhuong', 'contract', 'agreement'],
-  'ky hop dong': ['ky ket hop dong', 'ky vao hop dong', 'chu ky', 'signed contract'],
-  'khong ky': ['khong ky ten', 'khong tham gia ky', 'not sign', 'did not sign'],
-  'khong phan doi': ['biet va khong phan doi', 'im lang', 'dong y ngam', 'khong co y kien', 'did not object'],
-  'vo chong': ['chong vo', 'tai san chung vo chong', 'spouse', 'husband and wife'],
-  'chuyen nhuong': ['mua ban', 'sang nhuong', 'transfer', 'assignment'],
-  'lao dong': ['tien luong', 'sa thai', 'hop dong lao dong', 'labor', 'employment', 'salary'],
-  'hon nhan': ['ly hon', 'tai san chung', 'nuoi con', 'marriage', 'divorce'],
-  'hinh su': ['toi pham', 'bi cao', 'hinh phat', 'criminal'],
-  'doanh nghiep': ['cong ty', 'co dong', 'gop von', 'enterprise', 'company', 'shareholder'],
-  'an le': ['precedent', 'case law'],
-  'ban an': ['quyet dinh', 'phan quyet', 'judgment', 'verdict', 'ruling'],
-  'ly hon': ['cham dut hon nhan', 'giai quyet ly hon', 'phan chia tai san ly hon', 'divorce', 'dissolution of marriage'],
-  'boi thuong': ['boi thuong thiet hai', 'thiet hai thuc te', 'compensation', 'damages', 'reparation'],
-  'tranh chap': ['xung dot', 'mau thuan', 'khieu kien', 'khieu nai', 'dispute', 'conflict', 'lawsuit'],
-  'tai san': ['tai san chung', 'tai san rieng', 'dong san', 'bat dong san', 'property', 'asset'],
-  'nha dat': ['nha o', 'can ho', 'bat dong san', 'chung cu', 'house', 'real estate', 'apartment'],
-  'vay no': ['hop dong vay', 'cho vay', 'no', 'cong no', 'tien vay', 'loan', 'debt', 'credit'],
-  'sa thai': ['don phuong cham dut', 'cham dut hop dong lao dong', 'mat viec', 'cho thoi viec', 'dismiss', 'terminate', 'fired'],
-  'giam doc tham': ['tai tham', 'huy ban an', 'xem xet lai ban an', 'cassation', 'retrial', 'review'],
-  'phuc tham': ['toa phuc tham', 'khang cao', 'xet xu phuc tham', 'appeal', 'court of appeal'],
-  'quyen su dung dat': ['qsdd', 'so do', 'giay red', 'giay hong', 'land use rights', 'land certificate']
+  'dat dai': ['quyen su dung dat', 'so do', 'giay chung nhan quyen su dung dat', 'land', 'land use right'],
+  'so do': ['giay chung nhan quyen su dung dat', 'gcnqsdd', 'giay hong', 'giay do', 'land certificate', 'land title'],
+  'quyen su dung dat': ['qsdd', 'so do', 'giay red', 'giay hong', 'land use rights', 'land certificate'],
+  'tranh chap dat dai': ['tranh chap quyen su dung dat', 'tranh chap nha dat', 'tranh chap dat', 'land dispute', 'land use dispute'],
+  'thu hoi dat': ['boi thuong giai phong mat bang', 'thu hoi dat de xay dung', 'boi thuong dat dai', 'land acquisition', 'land expropriation', 'compulsory acquisition'],
+  'chuyen nhuong dat': ['mua ban dat', 'chuyen nhuong quyen su dung dat', 'hop dong mua ban dat', 'land transfer', 'land sale'],
+  'dat chua so do': ['dat chua cap so do', 'dat chua co giay chung nhan', 'dat giay tay', 'unregistered land'],
+  'hop dong': ['giao dich', 'thoa thuan', 'ky ket', 'contract', 'agreement'],
+  'hop dong vo hieu': ['giao dich vo hieu', 'hop dong bat hop phap', 'tuyen bo vo hieu', 'hop dong bi huy', 'void contract', 'invalid contract', 'null contract'],
+  'ky hop dong': ['ky ket hop dong', 'ky vao hop dong', 'chu ky', 'ky ten', 'signed contract'],
+  'khong ky': ['khong ky ten', 'khong tham gia ky', 'khong ky hop dong', 'not sign', 'did not sign'],
+  'khong phan doi': ['biet va khong phan doi', 'im lang', 'dong y ngam', 'khong co y kien phan doi', 'did not object', 'knew and did not object'],
+  'don phuong cham dut': ['huy hop dong don phuong', 'don phuong huy hop dong', 'vi pham hop dong', 'unilateral termination', 'unilateral cancellation'],
+  'vi pham hop dong': ['khong thuc hien nghia vu', 'khong thanh toan', 'vi pham nghia vu', 'breach of contract', 'default', 'non-performance'],
+  'the chap': ['cam co', 'bao dam thuc hien nghia vu', 'tai san the chap', 'tai san bao dam', 'mortgage', 'pledge', 'collateral', 'security'],
+  'lua dao': ['lua gat', 'gian lan hop dong', 'chiem doat tai san', 'fraud', 'deception', 'misrepresentation'],
+  'gia mao': ['gia mao chu ky', 'gia mao giay to', 'gia mao hop dong', 'forged signature', 'forgery', 'counterfeit'],
+  'giao dich gia tao': ['giao dich gia', 'hop dong gia tao', 'che giau giao dich that', 'sham transaction', 'simulated contract'],
+  'vo chong': ['chong vo', 'hai vo chong', 'tai san chung vo chong', 'hon nhan', 'spouse', 'husband and wife', 'married couple'],
+  'hon nhan': ['cuoc hon nhan', 'ket hon', 'dang ky ket hon', 'marriage', 'matrimony'],
+  'ly hon': ['cham dut hon nhan', 'giai quyet ly hon', 'phan chia tai san ly hon', 'don ly hon', 'divorce', 'dissolution of marriage', 'separation'],
+  'tai san chung vo chong': ['tai san trong thoi ky hon nhan', 'tai san chung', 'phan chia tai san vo chong', 'marital property', 'matrimonial property', 'joint property'],
+  'nuoi con': ['quyen nuoi con', 'giao con nuoi', 'cap duong nuoi con', 'quyen trong nom con', 'child custody', 'guardianship'],
+  'cap duong': ['cap duong nuoi con', 'tro cap sau ly hon', 'cap duong hang thang', 'alimony', 'child support', 'maintenance payment'],
+  'hinh su': ['toi pham', 'bi cao', 'vu an hinh su', 'hinh phat', 'criminal', 'criminal case', 'criminal offense'],
+  'toi pham': ['hanh vi pham toi', 'cau thanh toi pham', 'bi phat tu', 'criminal offense', 'crime', 'criminal act'],
+  'bi cao': ['nguoi bi buoc toi', 'bi can', 'nguoi pham toi', 'defendant', 'accused', 'suspect'],
+  'gay thuong tich': ['co y gay thuong tich', 'danh nguoi', 'xam pham suc khoe', 'bodily harm', 'assault', 'battery', 'physical injury'],
+  'trom cap': ['toi trom cap', 'trom cap tai san', 'theft', 'robbery', 'burglary', 'stealing'],
+  'lua dao chiem doat': ['toi lua dao chiem doat tai san', 'chiem doat tai san bang lua dao', 'fraud and misappropriation'],
+  'tuyen an': ['ban an hinh su', 'muc an', 'tuyen phat', 'hinh phat tu', 'ket an', 'sentencing', 'conviction', 'verdict', 'judgment'],
+  'giam an': ['tha truoc han', 'giam muc an', 'dac xa', 'tha co dieu kien', 'parole', 'commutation', 'early release', 'pardon'],
+  'lao dong': ['nguoi lao dong', 'nhan vien', 'hop dong lao dong', 'cong nhan', 'labor', 'employment', 'worker', 'employee'],
+  'sa thai': ['don phuong cham dut hop dong lao dong', 'mat viec', 'cho thoi viec', 'sa thai trai luat', 'dismiss', 'terminate employment', 'fired', 'wrongful dismissal'],
+  'hop dong lao dong': ['hdld', 'hop dong viec lam', 'thu viec', 'employment contract', 'labor contract', 'work contract'],
+  'bao hiem xa hoi': ['bhxh', 'dong bao hiem', 'tro cap bhxh', 'luong huu', 'social insurance', 'social security', 'retirement benefit'],
+  'bao hiem that nghiep': ['tro cap that nghiep', 'bhtn', 'mat viec lam', 'unemployment insurance', 'unemployment benefit'],
+  'tien luong': ['luong', 'muc luong', 'luong toi thieu', 'thuong', 'phu cap', 'salary', 'wage', 'minimum wage', 'remuneration'],
+  'lam them gio': ['tang ca', 'lam ngoai gio hanh chinh', 'phu cap lam them', 'overtime', 'overtime pay'],
+  'ky luat lao dong': ['canh cao lao dong', 'ky luat nhan vien', 'quyet dinh ky luat', 'disciplinary action', 'employee discipline'],
+  'doanh nghiep': ['cong ty', 'co dong', 'gop von', 'to chuc kinh doanh', 'enterprise', 'company', 'business entity'],
+  'co dong': ['nguoi gop von', 'co phan vien', 'thanh vien cong ty', 'shareholder', 'stockholder', 'equity investor'],
+  'pha san': ['mat kha nang thanh toan', 'pha san doanh nghiep', 'thanh ly tai san', 'giai the', 'bankruptcy', 'insolvency', 'liquidation'],
+  'tranh chap thuong mai': ['tranh chap kinh doanh', 'tranh chap hop dong thuong mai', 'tranh chap mua ban', 'commercial dispute', 'business dispute'],
+  'hop dong thuong mai': ['hop dong mua ban hang hoa', 'hop dong dich vu', 'hop dong kinh doanh', 'commercial contract', 'business contract'],
+  'xuc tien thuong mai': ['khuyen mai', 'quang cao thuong mai', 'trung bay hang hoa', 'hoi cho thuong mai', 'trade promotion', 'sales promotion', 'marketing'],
+  'boi thuong': ['boi thuong thiet hai', 'thiet hai thuc te', 'yeu cau boi thuong', 'doi boi thuong', 'compensation', 'damages', 'reparation'],
+  'boi thuong thiet hai': ['thiet hai vat chat', 'thiet hai tinh than', 'ton that', 'boi thuong', 'damages', 'compensation for loss'],
+  'tranh chap': ['xung dot', 'mau thuan', 'khieu kien ra toa', 'khieu nai', 'dispute', 'conflict', 'lawsuit'],
+  'chuyen nhuong': ['mua ban', 'sang nhuong', 'chuyen giao quyen', 'transfer', 'assignment', 'sale'],
+  'tai san': ['tai san chung', 'tai san rieng', 'dong san', 'bat dong san', 'property', 'asset', 'estate'],
+  'nha dat': ['nha o', 'can ho', 'bat dong san', 'chung cu', 'real estate', 'housing', 'apartment', 'condominium'],
+  'vay no': ['hop dong vay', 'cho vay tien', 'no', 'cong no', 'tien vay', 'mon no', 'loan', 'debt', 'credit', 'borrowing'],
+  'cho vay': ['hop dong vay tien', 'lai suat', 'cho vay lai', 'lending', 'money lending', 'creditor'],
+  'doi no': ['thu hoi no', 'xuat no', 'doi thu hoi no', 'debt collection', 'debt recovery'],
+  'giam doc tham': ['tai tham', 'huy ban an', 'xem xet lai ban an', 'khang nghi giam doc tham', 'cassation', 'retrial', 'review of judgment'],
+  'phuc tham': ['toa phuc tham', 'khang cao phuc tham', 'xet xu phuc tham', 'appeal', 'court of appeal', 'appellate court'],
+  'khang cao': ['don khang cao', 'nop don khang cao', 'gui khang cao', 'appeal', 'filing an appeal', 'notice of appeal'],
+  'hoa giai': ['hoa giai thanh', 'ket qua hoa giai', 'giai quyet bang thuong luong', 'mediation', 'conciliation', 'amicable settlement'],
+  'an le': ['ap dung an le', 'an le so', 'tham khao an le', 'precedent', 'case law', 'judicial precedent'],
+  'ban an': ['ban an so', 'quyet dinh toa an', 'phan quyet', 'judgment', 'verdict', 'ruling', 'court order'],
+  'nghi dinh': ['nghi dinh chinh phu', 'ban hanh nghi dinh', 'government decree', 'decree'],
+  'thong tu': ['thong tu bo', 'thong tu lien bo', 'thong tu huong dan', 'ministerial circular', 'circular'],
+  'cong van': ['cong van giai dap', 'cong van huong dan', 'cong van toa an toi cao', 'official dispatch', 'official letter'],
+  'van ban phap luat': ['van ban quy pham phap luat', 'quy dinh phap luat', 'quy pham', 'legal document', 'regulation', 'statute'],
+  'huong dan ap dung': ['huong dan ap dung phap luat', 'giai dap phap luat', 'giai thich phap luat', 'legal guidance', 'legal interpretation'],
+  'giai dap nghiep vu': ['giai dap phap luat', 'huong dan nghiep vu tu phap', 'phap luat quy dinh nhu the nao', 'legal Q&A', 'legal advice'],
+  'hanh chinh': ['quyet dinh hanh chinh', 'khieu nai hanh chinh', 'to tung hanh chinh', 'administrative', 'administrative law'],
+  'quyet dinh hanh chinh': ['quyet dinh cua co quan nha nuoc', 'khieu kien quyet dinh hanh chinh', 'administrative decision', 'government order']
 };
 
 const SEARCH_CONCEPTS = [
-  { id: 'spouse', weight: 420, aliases: ['vo chong', 'chong vo', 'tai san chung vo chong', 'spouse', 'husband wife', 'husband and wife'] },
-  { id: 'one-signer', weight: 820, aliases: ['mot nguoi ky', 'chi mot nguoi ky', 'mot ben ky', 'nguoi con lai khong ky', 'khong tham gia ky', 'only one signed', 'one spouse signed'] },
-  { id: 'no-objection', weight: 920, aliases: ['khong phan doi', 'biet va khong phan doi', 'biet nhung khong phan doi', 'im lang', 'dong y ngam', 'khong co y kien', 'did not object', 'knew and did not object'] },
+  { id: 'spouse',           weight: 420, aliases: ['vo chong', 'chong vo', 'tai san chung vo chong', 'spouse', 'husband wife', 'husband and wife'] },
+  { id: 'one-signer',       weight: 820, aliases: ['mot nguoi ky', 'chi mot nguoi ky', 'mot ben ky', 'nguoi con lai khong ky', 'khong tham gia ky', 'only one signed', 'one spouse signed'] },
+  { id: 'no-objection',     weight: 920, aliases: ['khong phan doi', 'biet va khong phan doi', 'biet nhung khong phan doi', 'im lang', 'dong y ngam', 'khong co y kien', 'did not object', 'knew and did not object'] },
   { id: 'contract-signing', weight: 520, aliases: ['ky hop dong', 'ky vao hop dong', 'ky ket hop dong', 'chu ky', 'hop dong chuyen nhuong', 'signed contract'] },
-  { id: 'land-transfer', weight: 380, aliases: ['chuyen nhuong quyen su dung dat', 'hop dong chuyen nhuong quyen su dung dat', 'mua ban dat', 'land use right transfer'] },
-  { id: 'divorce', weight: 500, aliases: ['ly hon', 'cham dut hon nhan', 'phan chia tai san ly hon', 'nuoi con sau ly hon', 'divorce', 'dissolution of marriage'] },
-  { id: 'inheritance', weight: 480, aliases: ['thua ke', 'chia di san', 'di chuc', 'nguoi thua ke hop phap', 'phan chia di san', 'inheritance', 'estate division'] },
-  { id: 'compensation', weight: 460, aliases: ['boi thuong thiet hai', 'boi thuong', 'thiet hai thuc te', 'ton that', 'damages', 'compensation'] },
-  { id: 'criminal', weight: 500, aliases: ['hinh su', 'toi pham', 'bi cao', 'xu phat tu', 'hinh phat', 'criminal offense', 'conviction', 'imprisonment'] },
-  { id: 'employment', weight: 440, aliases: ['hop dong lao dong', 'sa thai', 'tien luong', 'bao hiem xa hoi', 'nghi viec', 'thoi viec', 'dismissal', 'wrongful termination'] },
-  { id: 'real-estate', weight: 460, aliases: ['nha dat', 'bat dong san', 'can ho', 'nha o', 'mua ban nha', 'real estate', 'property purchase'] },
-  { id: 'debt', weight: 440, aliases: ['cong no', 'vay no', 'hop dong vay', 'doi no', 'tra no', 'chu no', 'debt', 'loan', 'creditor'] },
-  { id: 'cassation', weight: 600, aliases: ['giam doc tham', 'tai tham', 'huy ban an', 'khang nghi giam doc tham', 'cassation', 'retrial', 'review judgment'] }
+  { id: 'land-transfer',    weight: 380, aliases: ['chuyen nhuong quyen su dung dat', 'hop dong chuyen nhuong quyen su dung dat', 'mua ban dat', 'land use right transfer'] },
+  { id: 'divorce',          weight: 500, aliases: ['ly hon', 'cham dut hon nhan', 'phan chia tai san ly hon', 'nuoi con sau ly hon', 'divorce', 'dissolution of marriage'] },
+  { id: 'inheritance',      weight: 480, aliases: ['thua ke', 'chia di san', 'di chuc', 'nguoi thua ke hop phap', 'phan chia di san', 'inheritance', 'estate division'] },
+  { id: 'no-will',          weight: 700, aliases: ['khong co di chuc', 'chet khong co di chuc', 'thua ke theo phap luat', 'chia di san khong co di chuc', 'intestate', 'no will', 'no testament'] },
+  { id: 'compensation',     weight: 460, aliases: ['boi thuong thiet hai', 'boi thuong', 'thiet hai thuc te', 'ton that', 'damages', 'compensation'] },
+  { id: 'criminal',         weight: 500, aliases: ['hinh su', 'toi pham', 'bi cao', 'xu phat tu', 'hinh phat', 'criminal offense', 'conviction', 'imprisonment'] },
+  { id: 'employment',       weight: 440, aliases: ['hop dong lao dong', 'sa thai', 'tien luong', 'bao hiem xa hoi', 'nghi viec', 'thoi viec', 'dismissal', 'wrongful termination'] },
+  { id: 'real-estate',      weight: 460, aliases: ['nha dat', 'bat dong san', 'can ho', 'nha o', 'mua ban nha', 'real estate', 'property purchase'] },
+  { id: 'debt',             weight: 440, aliases: ['cong no', 'vay no', 'hop dong vay', 'doi no', 'tra no', 'chu no', 'debt', 'loan', 'creditor'] },
+  { id: 'cassation',        weight: 600, aliases: ['giam doc tham', 'tai tham', 'huy ban an', 'khang nghi giam doc tham', 'cassation', 'retrial', 'review judgment'] },
+  { id: 'void-contract',    weight: 720, aliases: ['hop dong vo hieu', 'giao dich vo hieu', 'tuyen bo vo hieu', 'hop dong bi huy', 'bat hop phap', 'void contract', 'invalid contract', 'null contract'] },
+  { id: 'land-certificate', weight: 450, aliases: ['so do', 'giay chung nhan quyen su dung dat', 'giay hong', 'giay do', 'chua cap so do', 'dat chua so do', 'land certificate', 'land title'] },
+  { id: 'child-custody',    weight: 560, aliases: ['quyen nuoi con', 'nuoi con chung', 'giao con', 'cap duong nuoi con', 'quyen trong nom', 'child custody', 'custody'] },
+  { id: 'marital-property', weight: 570, aliases: ['tai san chung vo chong', 'tai san trong thoi ky hon nhan', 'tai san rieng', 'phan chia tai san vo chong', 'marital property', 'matrimonial property'] },
+  { id: 'fraud-forgery',    weight: 720, aliases: ['lua dao', 'gia mao', 'gian lan', 'gia mao giay to', 'chiem doat tai san', 'giao dich gia tao', 'fraud', 'forgery', 'deception', 'misrepresentation'] },
+  { id: 'wrongful-dismiss', weight: 640, aliases: ['sa thai trai luat', 'don phuong cham dut trai luat', 'cho thoi viec trai quy dinh', 'mat viec trai luat', 'wrongful dismissal', 'unfair termination'] },
+  { id: 'trade-document',   weight: 380, aliases: ['van ban phap luat', 'nghi dinh', 'thong tu', 'cong van', 'huong dan ap dung', 'quy dinh phap luat', 'decree', 'circular', 'official letter'] },
+  { id: 'legal-qa',         weight: 400, aliases: ['giai dap nghiep vu', 'giai thich phap luat', 'huong dan ap dung phap luat', 'phap luat quy dinh nhu the nao', 'legal question', 'legal guidance'] },
+  { id: 'mortgage',         weight: 490, aliases: ['the chap', 'cam co', 'tai san bao dam', 'bao dam thuc hien nghia vu', 'vay co the chap', 'mortgage', 'pledge', 'secured loan'] },
+  { id: 'appeal',           weight: 510, aliases: ['khang cao', 'phuc tham', 'khang nghi', 'xem xet lai ban an', 'nop don khang cao', 'appeal', 'appellate', 'review'] },
+  { id: 'trade-promotion',  weight: 360, aliases: ['xuc tien thuong mai', 'khuyen mai', 'quang cao', 'trung bay hang hoa', 'hoi cho', 'trade promotion', 'commercial promotion', 'marketing'] },
+  { id: 'personal-injury',  weight: 510, aliases: ['gay thuong tich', 'thiet hai suc khoe', 'xam pham than the', 'thuong tich', 'personal injury', 'bodily harm', 'assault'] },
+  { id: 'bankruptcy',       weight: 530, aliases: ['pha san', 'mat kha nang thanh toan', 'giai the cong ty', 'thanh ly tai san', 'bankruptcy', 'insolvency', 'liquidation'] },
+  { id: 'administrative',   weight: 390, aliases: ['hanh chinh', 'quyet dinh hanh chinh', 'khieu nai hanh chinh', 'to tung hanh chinh', 'administrative decision', 'administrative complaint'] }
 ];
 
 function normalizeSearchText(text) {
@@ -1939,6 +2006,7 @@ function buildQueryPhrases(words) {
 }
 
 function getSearchTerms(query) {
+  query = String(query || '').replace(/\bko\b/gi, 'kh' + 'ông').replace(/\bk\b/gi, 'kh' + 'ông').replace(/\bdc\b/gi, 'đ' + 'ược').replace(/\bj\b/gi, 'g' + 'ì');
   const normalized = normalizeSearchText(query);
   const rawWords = normalized.split(/\s+/).filter(w => w.length > 1);
   const words = rawWords.filter(w => !SEARCH_STOPWORDS.has(w));
@@ -2033,8 +2101,40 @@ function showSearchResultsPage(query, page = 1) {
   updateRoute({ view: 'search', q: query, page: state.curPage });
 }
 
-function executeSmartSearchPage() {
-  const query = document.getElementById('smart-search-input-page').value.trim(); if(!query) return;
+const GEMINI_API_KEY = 'AIzaSyBX7guTlCfL1DN5AHcNAWH9hchaNVF5U5o'; // Lấy miễn phí tại: https://aistudio.google.com/app/apikey
+
+async function aiExpandQuery(query) {
+  try {
+    const resp = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        signal: AbortSignal.timeout(6000),
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: `Bạn là chuyên gia pháp lý Việt Nam. Người dùng mô tả: "${query}"\n\nTrả về tối đa 8 từ khóa pháp lý tiếng Việt quan trọng nhất, cách nhau bằng dấu cách. Chỉ trả về từ khóa, không giải thích.` }] }],
+          generationConfig: { maxOutputTokens: 80, temperature: 0 }
+        })
+      }
+    );
+    if (!resp.ok) return null;
+    const data = await resp.json();
+    return data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || null;
+  } catch { return null; }
+}
+
+async function executeSmartSearchPage() {
+  const input = document.getElementById('smart-search-input-page');
+  const query = (input?.value || '').trim();
+  if (!query) return;
+  const btn = document.querySelector('#page-smart-search .smart-search-wrapper button');
+  const origHtml = btn?.innerHTML;
+  if (query.split(/\s+/).length >= 4 && navigator.onLine && GEMINI_API_KEY && GEMINI_API_KEY !== 'YOUR_GEMINI_API_KEY') {
+    if (btn) btn.innerHTML = '<i class="ph ph-circle-notch ph-spin"></i> Đang phân tích...';
+    const aiResult = await aiExpandQuery(query);
+    if (btn && origHtml) btn.innerHTML = origHtml;
+    if (aiResult) { showSearchResultsPage(aiResult, 1); return; }
+  }
   showSearchResultsPage(query, 1);
 }
 
