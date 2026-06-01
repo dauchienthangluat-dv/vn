@@ -3610,11 +3610,24 @@ let thueUploadedFiles = [];
 const THUE_SYSTEM_PROMPT = `[CƠ SỞ DỮ LIỆU PHÁP LUẬT THUẾ VIỆT NAM - CẬP NHẬT 2025-2026]
 
 QUY TẮC BẮT BUỘC — ĐỌC TRƯỚC KHI TRẢ LỜI:
-1. MỌI khẳng định pháp lý PHẢI kèm trích dẫn dạng **(Điều X Khoản Y Điểm Z, [tên văn bản số ...])** ngay sau câu đó. TUYỆT ĐỐI KHÔNG được viết một câu pháp lý nào mà không có trích dẫn.
-2. Chỉ áp dụng các văn bản pháp luật được liệt kê trong cơ sở dữ liệu này — KHÔNG dùng kiến thức cũ trước 2025. Nếu không chắc, hãy nói rõ "cần tra cứu thêm".
+
+1. TRÍCH DẪN PHÁP LÝ TỐI ĐA CHI TIẾT: MỌI khẳng định pháp lý PHẢI kèm trích dẫn đến mức CỤ THỂ NHẤT CÓ THỂ, ưu tiên theo thứ tự: **(Điểm X, Khoản Y, Điều Z, [tên văn bản số ...])** — BẮT BUỘC trích đến điểm hoặc khoản nếu luật có quy định đó. KHÔNG được chỉ ghi "Điều Z" khi nội dung thực tế nằm ở Khoản Y hoặc Điểm X. TUYỆT ĐỐI KHÔNG được viết một câu pháp lý nào mà thiếu trích dẫn điều khoản.
+   VIẾT TÊN VĂN BẢN ĐẦY ĐỦ — NGHIÊM CẤM VIẾT TẮT:
+   - ĐÚNG: "Luật Thuế Giá trị gia tăng số 48/2024/QH15", "Luật Thuế Thu nhập cá nhân số 109/2025/QH15", "Luật Thuế Thu nhập doanh nghiệp số 67/2025/QH15", "Luật Thuế Tiêu thụ đặc biệt số 66/2025/QH15"
+   - ĐÚNG: "Nghị định 117/2025/NĐ-CP", "Thông tư 40/2021/TT-BTC", "Quyết định 3389/QĐ-BTC"
+   - SAI (NGHIÊM CẤM): "Luật GTGT", "Luật TNCN", "Luật TNDN", "Luật TTĐB", "NĐ 117", "TT 40", "QĐ 3389"
+
+2. PHẠM VI TRẢ LỜI NGHIÊM NGẶT — KHÔNG BỊA THÔNG TIN:
+   a) Chỉ trả lời dựa trên các văn bản pháp luật được liệt kê trong cơ sở dữ liệu này (Luật GTGT 48/2024, Luật TNCN 109/2025, Luật TNDN 67/2025, Luật TTĐB 66/2025, các Nghị định và Thông tư hướng dẫn đi kèm, TT40/2021, QĐ 3389/2025).
+   b) Nếu câu hỏi thuộc loại thuế hoặc lĩnh vực KHÔNG có trong cơ sở dữ liệu (ví dụ: thuế môn bài, thuế tài nguyên, thuế xuất nhập khẩu, thuế sử dụng đất phi nông nghiệp, lệ phí trước bạ...), PHẢI TỪ CHỐI và trả lời theo mẫu: "⚠️ Vấn đề này nằm ngoài phạm vi dữ liệu pháp lý hiện có của hệ thống. Hệ thống chỉ tư vấn về GTGT, TNCN, TNDN, TTĐB và thuế Hộ/Cá nhân kinh doanh. Bạn vui lòng tra cứu tại cơ quan thuế hoặc văn bản chuyên ngành."
+   c) TUYỆT ĐỐI KHÔNG tự đặt ra tên văn bản pháp lý, số hiệu, điều khoản không có trong danh sách. Nếu không tìm thấy điều khoản cụ thể → nói rõ "Chưa có trong dữ liệu" thay vì bịa.
+
 3. TÍNH TOÁN TỪNG BƯỚC, không bỏ qua bước nào. Viết ra từng phép tính cụ thể bằng ký tự THƯỜNG: dùng × cho nhân, ÷ cho chia, = cho bằng. TUYỆT ĐỐI KHÔNG dùng ký hiệu LaTeX (\[, \], \text{}, \times, \frac{}{}, \cdot...) vì hệ thống không hỗ trợ render LaTeX.
+
 4. Nếu câu hỏi thuộc giai đoạn chuyển tiếp (ví dụ: cuối 2025 trước khi Luật TNCN 109/2025 có hiệu lực), PHẢI nêu rõ luật nào đang áp dụng.
+
 5. Viết phép tính theo dạng: "35.000 - 100 = 34.900 triệu đồng" hoặc "7.900 × 20% = 1.580 triệu đồng" (không dùng \text, \[ \], $...$).
+
 6. QUY TẮC TÍNH CHÍNH XÁC — BẮT BUỘC TUÂN THỦ TỪNG ĐIỂM:
    a) KHI NHÂN VỚI PHẦN TRĂM: luôn tách thành 2 bước rõ ràng.
       - ĐÚNG: "5.443.500 × 10% = 5.443.500 × 0,10 = 544.350 đồng"
@@ -3626,7 +3639,15 @@ QUY TẮC BẮT BUỘC — ĐỌC TRƯỚC KHI TRẢ LỜI:
    d) VỚI SỐ TIỀN LỚN (hàng triệu, tỷ): kiểm tra số chữ số sau dấu phẩy. Nhân với 10% → kết quả phải bé hơn 10 lần số gốc.
    e) CUỐI MỖI PHẦN TÍNH TOÁN: cộng lại và đối chiếu xem tổng có khớp không trước khi kết luận.
 
-Bạn là chuyên gia tư vấn thuế Việt Nam cao cấp, nắm vững toàn bộ hệ thống pháp luật thuế hiện hành. Ưu tiên văn bản có hiệu lực sau trong trường hợp có sửa đổi.
+7. MIỄN/GIẢM THUẾ PHẢI KÈM ĐỦ ĐIỀU KIỆN — NGHIÊM CẤM NÓI CHUNG CHUNG:
+   a) Khi đề cập đến miễn thuế, giảm thuế, không chịu thuế, không phải nộp thuế — PHẢI liệt kê ĐẦY ĐỦ các điều kiện cụ thể mà luật quy định, kèm điều khoản trích dẫn.
+   b) Ví dụ SAI: "Đóng góp từ thiện được giảm trừ thuế TNCN."
+      Ví dụ ĐÚNG: "Đóng góp vào các quỹ từ thiện, nhân đạo, khuyến học DO NHÀ NƯỚC THÀNH LẬP HOẶC CÔNG NHẬN được giảm trừ — điều kiện: khoản đóng góp phải có chứng từ hợp lệ do quỹ cấp **(Khoản 1, Điều 11, Luật TNCN 109/2025)**."
+   c) Ví dụ SAI: "Chuyển nhượng BĐS giữa người thân được miễn thuế TNCN."
+      Ví dụ ĐÚNG: "Miễn thuế TNCN khi chuyển nhượng/thừa kế/quà tặng BĐS — điều kiện: phải giữa các đối tượng CỤ THỂ được liệt kê (vợ-chồng; cha/mẹ đẻ/nuôi với con đẻ/nuôi; cha/mẹ chồng với con dâu; cha/mẹ vợ với con rể; ông/bà nội/ngoại với cháu nội/ngoại; anh chị em ruột) **(Khoản 1, Điều 4, Luật TNCN 109/2025)**. Quan hệ khác KHÔNG được miễn."
+   d) Nếu điều kiện miễn/giảm thuế KHÔNG được ghi rõ trong dữ liệu → không được khẳng định miễn/giảm, mà phải nói "cần tra cứu thêm điều kiện cụ thể".
+
+Bạn là chuyên gia tư vấn thuế Việt Nam cao cấp, chỉ áp dụng đúng các văn bản đã được liệt kê. Ưu tiên văn bản có hiệu lực sau trong trường hợp có sửa đổi. Thà từ chối trả lời còn hơn bịa thông tin sai.
 
 ══════════════════════════════════════════════════════
 I. LUẬT THUẾ GIÁ TRỊ GIA TĂNG (GTGT)
@@ -4433,30 +4454,43 @@ function formatThueResponse(text) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
 
+  // ── Bước 1b: Mở rộng tên văn bản viết tắt → tên đầy đủ chính thức ─────────
+  const tenVanBan = [
+    [/\bLuật GTGT\b/g,   'Luật Thuế Giá trị gia tăng'],
+    [/\bLuật TNCN\b/g,   'Luật Thuế Thu nhập cá nhân'],
+    [/\bLuật TNDN\b/g,   'Luật Thuế Thu nhập doanh nghiệp'],
+    [/\bLuật TTĐB\b/g,   'Luật Thuế Tiêu thụ đặc biệt'],
+    [/\bNĐ\s+(\d+\/\d{4}\/NĐ-CP)\b/g, 'Nghị định $1'],
+    [/\bTT\s+(\d+\/\d{4}\/TT-BTC)\b/g,'Thông tư $1'],
+    [/\bQĐ\s+(\d+\/QĐ-BTC)\b/g,       'Quyết định $1'],
+    [/\bNQ\s+(\d+\/\d{4}\/QH\d+)\b/g, 'Nghị quyết $1'],
+  ];
+  tenVanBan.forEach(([pat, rep]) => { html = html.replace(pat, rep); });
+
   // In đậm **...**
   html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
   // In nghiêng *...*
   html = html.replace(/(?<!\*)\*(?!\*)([^*\n]+?)\*(?!\*)/g, '<em>$1</em>');
 
   // Căn cứ pháp lý — nhận dạng mọi dạng "(Điều X...)", "(Khoản Y...)", "(Luật TNDN...)"
-  // {0,160} thay vì {5,160} để match khi Điều/Khoản đứng đầu ngoặc
-  // Thêm đủ tên luật: Luật TNDN, TNCN, GTGT, TTĐB, số \d+, và mã số nghị định/thông tư
   html = html.replace(
-    /\(([^)]{0,160}(?:Luật số|Luật TNCN|Luật TNDN|Luật GTGT|Luật TTĐB|QH\d+|NĐ-CP|TT-BTC|Nghị định|Thông tư|Khoản \d|Điều \d|\d{2,3}\/20\d\d)[^)]{0,120})\)/gi,
+    /\(([^)]{0,160}(?:Luật số|Luật Thu(?:ế|e)|Luật TNCN|Luật TNDN|Luật GTGT|Luật TTĐB|Quyết định|Nghị quyết|QH\d+|NĐ-CP|TT-BTC|Nghị định|Thông tư|Khoản \d|Điều \d|\d{2,3}\/20\d\d)[^)]{0,120})\)/gi,
     '<span class="thue-legal-cite">($1)</span>'
   );
 
-  // Tiêu đề BƯỚC X
-  html = html.replace(/^(?:###\s*)?(?:⚡\s*)?BƯỚC\s+(\d+)[:.]\s*(.+)$/gm, (_, num, title) =>
+  // Tiêu đề BƯỚC X — nhận dạng mọi prefix # (####, ###, ##, #) và mọi separator (–, —, -, :, .)
+  html = html.replace(/^(?:#{1,6}\s*)?(?:⚡\s*)?BƯỚC\s+(\d+)\s*[:\.\-–—]\s*(.+)$/gm, (_, num, title) =>
     `<div style="display:flex;align-items:center;gap:10px;margin:22px 0 12px;padding:12px 16px;background:var(--navy);color:#fff;border-radius:8px;">
       <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;min-width:28px;border-radius:50%;background:var(--gold-rich);font-weight:700;font-size:0.82rem;">${num}</span>
       <span style="font-weight:600;font-size:0.92rem;">${title}</span>
     </div>`
   );
 
-  // Tiêu đề ### và ##
+  // Tiêu đề ####, ###, ##, # (theo thứ tự từ nhỏ đến lớn để tránh trùng)
+  html = html.replace(/^####\s+(.+)$/gm, '<div style="font-family:\'Playfair Display\',serif;font-size:0.95rem;font-weight:700;color:var(--navy);margin:14px 0 6px;padding-left:10px;border-left:3px solid var(--gold-rich);">$1</div>');
   html = html.replace(/^###\s+(.+)$/gm, '<div style="font-family:\'Playfair Display\',serif;font-size:1rem;font-weight:700;color:var(--navy);margin:18px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--gold-border);">$1</div>');
   html = html.replace(/^##\s+(.+)$/gm, '<div style="font-family:\'Playfair Display\',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin:22px 0 10px;">$1</div>');
+  html = html.replace(/^#\s+(.+)$/gm, '<div style="font-family:\'Playfair Display\',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin:24px 0 10px;">$1</div>');
 
   // Bullet lists
   html = html.replace(/^[-•]\s+(.+)$/gm, '<li style="margin:5px 0;line-height:1.65;">$1</li>');
