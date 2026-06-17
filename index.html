@@ -350,6 +350,29 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 
 .detail-section-title{ font-family:'Playfair Display',serif; font-size:1.05rem;font-weight:700;color:var(--navy); margin: 24px 0 12px 0; border-bottom: 1px solid var(--gold-border); padding-bottom: 8px;}
 
+
+
+
+
+/* ===== VBPL-CSS START ===== */
+.doc-article-title{ font-family:'Playfair Display',serif; font-size:1.06rem; font-weight:700; color:var(--navy); margin:22px 0 10px 0; line-height:1.5; }
+.vbpl-amended{ cursor:pointer; background:linear-gradient(transparent 62%, rgba(192,154,104,.30) 0); border-radius:2px; transition:background .2s ease; }
+.vbpl-amended:hover{ background:rgba(192,154,104,.22); }
+.vbpl-amended::after{ content:"✎"; font-size:.72rem; color:var(--gold-rich); margin-left:6px; vertical-align:super; }
+.doc-article-title.vbpl-amended::after{ vertical-align:baseline; }
+.vbpl-directive{ cursor:pointer; background:rgba(46,93,164,.07); border-left:3px solid var(--navy); padding:6px 12px; border-radius:0 4px 4px 0; font-weight:600; color:var(--navy); transition:background .2s ease; }
+.vbpl-directive:hover{ background:rgba(46,93,164,.14); }
+.vbpl-directive::after{ content:"✎"; font-size:.72rem; margin-left:6px; opacity:.5; }
+.vbpl-directive-head{ cursor:default; background:rgba(46,93,164,.05); }
+.vbpl-directive-head:hover{ background:rgba(46,93,164,.05); }
+.vbpl-directive-head::after{ content:none; }
+.vbpl-modal-src{ margin:12px 0; padding:10px 12px; background:var(--bg2,#f5f1e8); border-radius:6px; border-left:3px solid var(--gold-rich); }
+.vbpl-modal-srctitle{ font-weight:700; color:var(--navy); margin:6px 0; }
+.vbpl-modal-newcontent, .vbpl-modal-original{ font-size:.92rem; line-height:1.65; }
+.vbpl-modal-newcontent p, .vbpl-modal-original p{ margin:4px 0; }
+/* ===== VBPL-CSS END ===== */
+
+
 /* ========== TRANG THUẾ AI ========== */
 #page-thue { padding-top: 75px; min-height: 100vh; padding-bottom: 40px; }
 .thue-intro { margin: 0 16px 16px; padding: 18px 20px; background: linear-gradient(135deg, #EDF4FF 0%, #E8F4FD 100%); border: 1px solid rgba(33,150,243,0.2); border-radius: 12px; font-size: 0.85rem; color: var(--text-sec); line-height: 1.6; }
@@ -1522,6 +1545,491 @@ function isLikelySectionHeadingText(text) {
   return SECTION_HEADING_FALLBACK_PATTERN.test(plain.toUpperCase());
 }
 
+
+/* ===== VBPL-INTEGRATION START (Văn bản pháp luật: định dạng & liên kết sửa đổi) ===== */
+/* =====================================================================
+   VĂN BẢN PHÁP LUẬT — Định dạng & liên kết sửa đổi (amendment linker)
+   ---------------------------------------------------------------------
+   Pure functions, không phụ thuộc DOM (trừ output là chuỗi HTML).
+   Dùng được cả trong trình duyệt (inline vào HTML) lẫn Node (để test).
+
+   Nhiệm vụ:
+   1. Định dạng dòng tiêu đề "Điều N. ..." khác với nội dung điều luật.
+   2. Trong văn bản pháp luật KHÔNG tô màu tham chiếu điểm/khoản/điều.
+   3. Liên kết sửa đổi 2 chiều giữa các nghị định:
+      - Nghị định bổ sung (tiêu đề có "sửa đổi, bổ sung"): tô màu phần
+        chỉ thị "Sửa đổi, bổ sung ... Điều X" + phần nội dung mới ("...").
+      - Nghị định gốc: tô màu phần đã bị nghị định khác sửa, bấm vào hiện
+        nội dung mới.
+   ===================================================================== */
+
+/* ---------- Tiện ích chung ---------- */
+
+// Bỏ dấu tiếng Việt để so khớp không phân biệt dấu
+function vbplRemoveAccents(str) {
+  return String(str || '')
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/đ/g, 'd').replace(/Đ/g, 'D');
+}
+
+// Chuẩn hoá số hiệu nghị định thành khoá so khớp: "98/2020/NĐ-CP" -> "98/2020/ND-CP"
+function vbplDecreeKey(num) {
+  return vbplRemoveAccents(String(num || '')).toUpperCase().replace(/\s+/g, '');
+}
+
+// Trích số hiệu văn bản đầu tiên trong một đoạn text (vd 24/2025/NĐ-CP, 12/2024/TT-BCT)
+function vbplFindDecreeNumber(text) {
+  const m = String(text || '').match(/\d{1,4}\/\d{4}\/(?:N[ĐD]-CP|TT-[A-ZĐ]+|QH\d+)/i);
+  return m ? m[0] : '';
+}
+
+// Trích TẤT CẢ số hiệu trong text
+function vbplFindAllDecreeNumbers(text) {
+  const re = /\d{1,4}\/\d{4}\/(?:N[ĐD]-CP|TT-[A-ZĐ]+|QH\d+)/gi;
+  const out = []; let m;
+  while ((m = re.exec(String(text || '')))) out.push(m[0]);
+  return out;
+}
+
+// Tiêu đề có phải nghị định "sửa đổi, bổ sung" không (VI + EN)
+function vbplIsAmendmentTitle(title) {
+  const t = vbplRemoveAccents(title).toLowerCase();
+  if (/sua doi/.test(t) && /bo sung/.test(t)) return true;           // VI
+  if (/amend/.test(t) && /supplement/.test(t)) return true;          // EN: amending and supplementing
+  return false;
+}
+
+// Số hiệu CHÍNH của văn bản.
+// QUAN TRỌNG: ưu tiên TIÊU ĐỀ (tiêu đề luôn mở đầu bằng "Nghị định 98/2020/NĐ-CP ..."),
+// vì thân văn bản thường TRÍCH DẪN số hiệu nghị định KHÁC -> nếu quét thân sẽ bắt nhầm.
+function vbplGetOwnNumber(title, contentText) {
+  const fromTitle = vbplFindDecreeNumber(title);
+  if (fromTitle) return fromTitle;
+  // fallback: dòng "Số: X" / "No.: X" ở ĐẦU văn bản (header), KHÔNG quét cả thân
+  const head = String(contentText || '').slice(0, 800);
+  const m = head.match(/(?:^|\n|>|\s)S[ốo]\s*:\s*(\d{1,4}\/\d{4}\/(?:N[ĐD]-CP|TT-[A-ZĐ]+|QH\d+))/i)
+        || head.match(/(?:^|\n|>|\s)No\.?\s*:?\s*(\d{1,4}\/\d{4}\/(?:N[ĐD]-CP|TT-[A-ZĐ]+|QH\d+))/i);
+  return m ? m[1] : '';
+}
+
+// Số hiệu văn bản BỊ sửa: số sau cụm "của Nghị định ..." (VI) hoặc "of Decree ..." (EN)
+function vbplGetBaseNumber(title, contentText) {
+  const src = (title || '') + '\n' + (contentText || '');
+  const m = src.match(/(?:c[ủu]a\s+Ngh[ịi]\s*đ[ịi]nh|of\s+Decree)(?:\s+(?:s[ốo]|No\.?))?\s+(\d{1,4}\/\d{4}\/N[ĐD]-CP)/i);
+  if (m) return m[1];
+  // fallback: số thứ 2 trong tiêu đề (số 1 là của chính nó)
+  const all = vbplFindAllDecreeNumbers(title);
+  return all.length >= 2 ? all[1] : (all[0] || '');
+}
+
+/* ---------- Tách block & lấy text ---------- */
+
+// Tách nội dung HTML thành các block top-level (<p>...</p> hoặc <div ...>...</div>)
+function vbplSplitBlocks(html) {
+  const blocks = [];
+  const re = /<(p|div|h\d)\b([^>]*)>([\s\S]*?)<\/\1>/gi;
+  let m, lastIndex = 0;
+  while ((m = re.exec(html))) {
+    // giữ phần text trần giữa các block (nếu có) như block thô
+    const between = html.slice(lastIndex, m.index).trim();
+    if (between) blocks.push({ tag: '', attrs: '', inner: between, raw: between });
+    blocks.push({ tag: m[1].toLowerCase(), attrs: m[2] || '', inner: m[3], raw: m[0] });
+    lastIndex = re.lastIndex;
+  }
+  const tail = html.slice(lastIndex).trim();
+  if (tail) blocks.push({ tag: '', attrs: '', inner: tail, raw: tail });
+  return blocks;
+}
+
+// Lấy text trần (đã decode entity cơ bản) từ inner HTML của 1 block
+function vbplPlainText(inner) {
+  return String(inner || '')
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, ' ')
+    .replace(/\s+/g, ' ').trim();
+}
+
+/* ---------- Nhận diện cấu trúc điều/khoản/điểm ---------- */
+
+// Song ngữ: "Điều N" / "Article N"
+const VBPL_ARTICLE_RE = /^(?:Điều|Article)\s+(\d+[a-zđ]?)\b/i;   // "Điều 17." , "Article 46a"
+const VBPL_CLAUSE_RE  = /^(\d+[a-zđ]?)[.)]\s+/;                  // "1. ..." , "13. ..." (số như nhau 2 ngôn ngữ)
+const VBPL_POINT_RE   = /^([a-zđ])\)\s+/;                        // "a) ..." , "đ) ..."
+const VBPL_SECTION_RE = /^(?:Mục|Chương|Phần|Section|Chapter|Part)\s+([0-9IVXLCDM]+[a-zđ]?)\b/i;
+
+// Mở/đóng ngoặc kép kiểu Việt Nam dùng để bọc nội dung mới
+function vbplHasOpenQuote(t) { return /[“"]/.test(t.charAt(0)) || /^[“"]/.test(t); }
+function vbplStartsQuote(t) { return /^[“"]/.test(t); }
+function vbplEndsQuote(t)  { return /[”"]\s*[.;]?\s*[”"]?\s*[.;]?$/.test(t) && /[”"]/.test(t); }
+
+/* ---------- Phân tích chỉ thị sửa đổi ---------- */
+
+// Một dòng có phải "chỉ thị sửa đổi" không (VI: Sửa đổi/Bổ sung/Bãi bỏ/Thay thế; EN: amend/supplement/...)
+const VBPL_DIRECTIVE_VERB = /^(?:\d+[.)]\s*|[a-zđ]\)\s*|-\s*)?(?:to\s+)?(?:sửa đổi|bổ sung|bãi bỏ|thay thế|huỷ bỏ|hủy bỏ|amend|supplement|annul|repeal|abolish|replac|add)/i;
+// đơn vị văn bản (VI + EN)
+const VBPL_REF_WORD = /(điểm|khoản|Điều|tên Điều|Mục|Chương|Point|Clause|Subsection|Section|Article|Chapter|Part)\b/i;
+
+function vbplIsDirectiveLine(text) {
+  if (!VBPL_DIRECTIVE_VERB.test(text)) return false;
+  // loại dòng chapeau "Điều N. ..." / "Article N. ..." -> là tiêu đề điều
+  if (/^(?:Điều|Article)\s+\d/i.test(text)) return false;
+  // loại dòng IN HOA (tiêu đề văn bản)
+  if (/[A-ZÀ-Ỹ]/.test(text) && text === text.toUpperCase()) return false;
+  // phải tham chiếu tới một đơn vị văn bản
+  return VBPL_REF_WORD.test(text);
+}
+
+// Trích nhãn đầu dòng ("1.", "a)") nếu có
+function vbplLeadingLabel(text) {
+  const m = text.match(/^(\d+[.)]|[a-zđ]\))/);
+  return m ? m[0] : '';
+}
+
+// Phân tích các tham chiếu trong 1 dòng chỉ thị -> { article, clauses[], points[] }
+function vbplParseRefs(text, inheritedArticle) {
+  const SEP = /\s*,\s*|\s*và\s*|\s*and\s*/; // dấu phân cách danh sách (VI "và" / EN "and")
+  // điều = "Điều N" / "Article N" cuối cùng trong dòng
+  let article = inheritedArticle || null;
+  const artMatches = [...text.matchAll(/(?:Điều|Article)\s+(\d+[a-zđ]?)/gi)];
+  if (artMatches.length) article = artMatches[artMatches.length - 1][1].toLowerCase();
+
+  const clauses = [];
+  // khoản N / Clause N / Subsection N  (số, có thể là danh sách)
+  for (const m of text.matchAll(/(?:khoản|Clause|Subsection)\s+([\d]+(?:\s*(?:,|và|and)\s*\d+)*)/gi)) {
+    m[1].split(SEP).forEach(n => { n = n.trim(); if (n) clauses.push(n); });
+  }
+  const points = [];
+  // điểm x / Point x  (chữ cái a..u, đ; có thể là danh sách)
+  for (const m of text.matchAll(/(?:điểm|Point)\s+([a-zđ](?:\s*(?:,|và|and)\s*[a-zđ])*)/gi)) {
+    m[1].split(SEP).forEach(p => { p = p.trim(); if (p) points.push(p); });
+  }
+  const targetsName = /tên\s+Điều|(?:name|title)\s+of\s+Article/i.test(text); // "Sửa đổi tên Điều N" / "amend the title of Article N"
+  return { article, clauses: [...new Set(clauses)], points: [...new Set(points)], targetsName };
+}
+
+// Phân tích toàn bộ nội dung 1 nghị định bổ sung -> danh sách entry
+//   entry = { label, refText, article, clauses[], points[], newContentHtml }
+function vbplParseAmendmentEntries(html) {
+  const blocks = vbplSplitBlocks(html);
+  const entries = [];
+  let cur = null;
+  let parentArticle = null;       // điều của chỉ thị đánh số gần nhất (cho sub a/b/c kế thừa)
+  let collectingQuote = false;
+
+  const finalize = () => {
+    if (cur) {
+      cur.newContentHtml = cur.contentBlocks.join('');
+      delete cur.contentBlocks;
+      entries.push(cur);
+    }
+    cur = null; collectingQuote = false;
+  };
+
+  for (const b of blocks) {
+    const text = vbplPlainText(b.inner);
+    if (!text) continue;
+    const label = vbplLeadingLabel(text);
+    const isNumbered = /^\d+[.)]/.test(text);
+
+    if (vbplIsDirectiveLine(text)) {
+      finalize();
+      const refs = vbplParseRefs(text, isNumbered ? null : parentArticle);
+      if (isNumbered && refs.article) parentArticle = refs.article;
+      // Chỉ chỉ thị THAY NỘI DUNG (kết thúc "như sau:" / "as follows:") mới có nội dung mới theo sau.
+      // Chỉ thị tự chứa (Bãi bỏ.../Thay thế cụm từ...) KHÔNG gom block sau -> tránh bắt nhầm
+      // sang Điều 2/Điều 3 (hiệu lực, chuyển tiếp) của chính nghị định bổ sung.
+      const hasContent = /(?:như sau|as follows)\s*:?\s*$/i.test(text);
+      cur = {
+        label, refText: text,
+        article: refs.article, clauses: refs.clauses, points: refs.points,
+        targetsName: refs.targetsName,
+        hasContent, contentBlocks: []
+      };
+      continue;
+    }
+
+    if (cur && cur.hasContent) {
+      // gom nội dung mới (các block nằm sau chỉ thị, thường bọc trong “ ”)
+      cur.contentBlocks.push(b.raw);
+    }
+  }
+  finalize();
+  // bỏ entry không có điều mục tiêu
+  return entries.filter(e => e.article || e.clauses.length || e.points.length);
+}
+
+/* ---------- Build index toàn site ---------- */
+// casesList: mảng case có { ten, sfId, chi_tiet, tom_luoc, ap_dung, id, ... }
+// Trả về { byBaseKey: {key: [amendInfo...]}, docByKey: {key: caseObj} }
+//   amendInfo = { sourceNumber, sourceTitle, sourceId, entries[] }
+function vbplBuildIndex(casesList, getContent) {
+  const byBaseKey = {};
+  const docByKey = {};
+  (casesList || []).forEach(c => {
+    if (!c || c.sfId !== 'van-ban-phap-luat') return;
+    const content = getContent(c);
+    const ownNum = vbplGetOwnNumber(c.ten, content);
+    if (ownNum) docByKey[vbplDecreeKey(ownNum)] = c;
+    if (vbplIsAmendmentTitle(c.ten)) {
+      const baseNum = vbplGetBaseNumber(c.ten, content);
+      if (!baseNum) return;
+      const entries = vbplParseAmendmentEntries(content);
+      const key = vbplDecreeKey(baseNum);
+      (byBaseKey[key] = byBaseKey[key] || []).push({
+        sourceNumber: ownNum || vbplFindDecreeNumber(c.ten),
+        sourceTitle: c.ten, sourceId: c.id, entries
+      });
+    }
+  });
+  return { byBaseKey, docByKey };
+}
+
+/* ---------- Build map mục tiêu cho nghị định gốc ---------- */
+// amendInfos: [{ sourceNumber, sourceTitle, sourceId, entries[] }]
+// Trả về map: "art|clause|point" -> [{sourceNumber, sourceTitle, sourceId, label, newContentHtml, refText}]
+//   point/clause có thể rỗng -> "art||", "art|clause|"
+function vbplBuildBaseTargets(amendInfos) {
+  const map = {};
+  const add = (key, info) => { (map[key] = map[key] || []).push(info); };
+  (amendInfos || []).forEach(src => {
+    (src.entries || []).forEach(e => {
+      if (!e.article) return;
+      // Chỉ lấy chỉ thị có nội dung mới cụ thể. Dòng "công bố" cha (vd item 3 liệt kê
+      // nhiều khoản rồi được làm rõ ở a/b/c/d) không có nội dung -> bỏ để tránh tô sai
+      // và để modal luôn có nội dung mới để hiển thị.
+      if (!String(e.newContentHtml || '').trim()) return;
+      const base = { sourceNumber: src.sourceNumber, sourceTitle: src.sourceTitle, sourceId: src.sourceId, label: e.label, newContentHtml: e.newContentHtml, refText: e.refText };
+      const art = e.article.toLowerCase();
+      if (e.points.length && e.clauses.length) {
+        // ghép điểm với khoản: nếu cùng số lượng thì ghép theo cặp, không thì nhân chéo
+        if (e.points.length === e.clauses.length) {
+          e.points.forEach((p, i) => add(`${art}|${e.clauses[i]}|${p}`, base));
+        } else {
+          e.clauses.forEach(c => e.points.forEach(p => add(`${art}|${c}|${p}`, base)));
+        }
+      } else if (e.clauses.length) {
+        e.clauses.forEach(c => add(`${art}|${c}|`, base));
+      } else if (e.points.length) {
+        e.points.forEach(p => add(`${art}||${p}`, base));
+      } else {
+        add(`${art}||`, base); // cấp điều / sửa tên điều
+      }
+    });
+  });
+  return map;
+}
+
+/* ---------- Trích 1 đơn vị (điều / khoản / điểm) từ HTML nghị định gốc ---------- */
+function vbplExtractUnit(html, article, clause, point) {
+  const blocks = vbplSplitBlocks(html);
+  const art = String(article || '').toLowerCase();
+  let curArticle = null, curClause = null;
+  const picked = [];
+  let capturing = false;
+  for (const b of blocks) {
+    const text = vbplPlainText(b.inner);
+    if (!text) continue;
+    const am = text.match(VBPL_ARTICLE_RE);
+    if (am) {
+      const a = am[1].toLowerCase();
+      if (capturing && a !== curArticle) break; // sang điều khác -> dừng
+      curArticle = a; curClause = null;
+      if (a === art) {
+        if (!clause && !point) { capturing = true; picked.push(b.raw); continue; }
+        capturing = (false); // chờ tới khoản/điểm
+        if (!clause && !point) picked.push(b.raw);
+        continue;
+      } else { capturing = false; continue; }
+    }
+    if (curArticle !== art) continue;
+    const cm = text.match(VBPL_CLAUSE_RE);
+    if (cm) curClause = cm[1].toLowerCase();
+    if (!clause && !point) { picked.push(b.raw); continue; } // cả điều
+    if (clause && !point) {
+      if (curClause === String(clause).toLowerCase()) { capturing = true; picked.push(b.raw); }
+      else if (capturing && cm) break; // hết khoản
+      continue;
+    }
+    if (point) {
+      const pm = text.match(VBPL_POINT_RE);
+      const clauseOk = !clause || curClause === String(clause).toLowerCase();
+      if (clauseOk && pm && pm[1].toLowerCase() === String(point).toLowerCase()) { picked.push(b.raw); }
+    }
+  }
+  return picked.join('');
+}
+
+/* ---------- Render nội dung văn bản pháp luật ---------- */
+// opts: { mode:'base'|'amend'|'plain', targets, baseNumber, ownNumber, baseDoc(html|null),
+//         clickStore:{}, keyPrefix:'k', escapeFn, upgradeHeadings:true }
+function vbplRenderDoc(html, opts) {
+  opts = opts || {};
+  const mode = opts.mode || 'plain';
+  const targets = opts.targets || {};
+  const store = opts.clickStore || {};
+  const prefix = opts.keyPrefix || 'vbplk';
+  let keyN = 0;
+  const newKey = (payload) => { const k = prefix + (keyN++); store[k] = payload; return k; };
+
+  const blocks = vbplSplitBlocks(html);
+  let curArticle = null, curClause = null, curPoint = null;
+  let amendParent = null;       // điều của chỉ thị đánh số gần nhất (cho tiểu mục a/b/c kế thừa)
+  const out = [];
+
+  // mục cha = chỉ thị đánh số mà NGAY SAU là tiểu mục chữ a)/b)... (đã tách yêu cầu riêng) -> không cho bấm
+  const nextNonEmptyIsLetterDirective = (fromIdx) => {
+    for (let j = fromIdx + 1; j < blocks.length; j++) {
+      const t = vbplPlainText(blocks[j].inner);
+      if (!t) continue;
+      return blocks[j].tag === 'p' && vbplIsDirectiveLine(t) && /^[a-zđ]\)/.test(t);
+    }
+    return false;
+  };
+
+  for (let bi = 0; bi < blocks.length; bi++) {
+    const b = blocks[bi];
+    const text = vbplPlainText(b.inner);
+    if (!text) { out.push(b.raw); continue; }
+
+    const artM = text.match(VBPL_ARTICLE_RE);
+    const clauseM = text.match(VBPL_CLAUSE_RE);
+    const pointM = text.match(VBPL_POINT_RE);
+
+    // cập nhật ngữ cảnh
+    if (artM) { curArticle = artM[1].toLowerCase(); curClause = null; curPoint = null; }
+    else if (clauseM) { curClause = clauseM[1].toLowerCase(); curPoint = null; }
+    else if (pointM) { curPoint = pointM[1].toLowerCase(); }
+
+    let extraClass = '';
+    let clickKey = '';
+
+    // ----- chế độ nghị định BỔ SUNG: CHỈ tô các dòng chỉ thị (tiểu mục), nội dung để bình thường -----
+    if (mode === 'amend' && b.tag === 'p' && vbplIsDirectiveLine(text)) {
+      const isNumbered = /^\d+[.)]/.test(text);
+      const refs = vbplParseRefs(text, isNumbered ? null : amendParent);
+      if (isNumbered && refs.article) amendParent = refs.article;
+      if (isNumbered && nextNonEmptyIsLetterDirective(bi)) {
+        // mục cha gom nhiều yêu cầu (đã tách chính xác ở tiểu mục a/b/c) -> định dạng nhưng KHÔNG cho bấm
+        extraClass = 'vbpl-directive vbpl-directive-head';
+      } else {
+        const original = (opts.baseDoc && refs.article)
+          ? vbplExtractUnit(opts.baseDoc, refs.article, refs.clauses[0] || '', refs.points[0] || '')
+          : '';
+        clickKey = newKey({ type: 'amend', refText: text, refs, baseNumber: opts.baseNumber, original });
+        extraClass = 'vbpl-directive';
+      }
+    }
+
+    // ----- chế độ nghị định GỐC: tô phần đã bị sửa -----
+    if (mode === 'base') {
+      let key = '';
+      if (artM) key = `${curArticle}||`;
+      else if (pointM && curArticle) key = `${curArticle}|${curClause || ''}|${curPoint}`;
+      else if (clauseM && curArticle) key = `${curArticle}|${curClause}|`;
+      const matches = key && targets[key] ? targets[key] : null;
+      if (matches && matches.length) {
+        clickKey = newKey({ type: 'base', unit: text.slice(0, 80), matches });
+        extraClass = 'vbpl-amended';
+      }
+    }
+
+    // ----- định dạng tiêu đề "Điều N." (KHÔNG áp dụng cho chế độ bổ sung: nội dung để bình thường) -----
+    let isArticleTitle = artM && b.tag === 'p' && mode !== 'amend';
+
+    // dựng lại block
+    if (isArticleTitle) {
+      const cls = ['doc-article-title', extraClass].filter(Boolean).join(' ');
+      const attr = clickKey ? ` data-vbpl="${clickKey}" onclick="vbplOpenModal('${clickKey}')" role="button" tabindex="0"` : '';
+      out.push(`<div class="${cls}"${attr}>${b.inner}</div>`);
+    } else if (extraClass || clickKey) {
+      const tag = b.tag || 'p';
+      const baseAttrs = (b.attrs || '').trim();
+      // gộp class vào attrs sẵn có
+      let attrs = baseAttrs;
+      if (/class\s*=/.test(attrs)) attrs = attrs.replace(/class\s*=\s*"([^"]*)"/i, (mm, c) => `class="${(c + ' ' + extraClass).trim()}"`);
+      else attrs = (attrs ? attrs + ' ' : '') + `class="${extraClass}"`;
+      const clickAttr = clickKey ? ` data-vbpl="${clickKey}" onclick="vbplOpenModal('${clickKey}')" role="button" tabindex="0"` : '';
+      out.push(`<${tag} ${attrs}${clickAttr}>${b.inner}</${tag}>`);
+    } else {
+      out.push(b.raw);
+    }
+  }
+  return out.join('');
+}
+
+
+/* ---------- Glue UI cho web ---------- */
+function getAllCasesFlat(){
+  const out=[];
+  for(const k in CASES_DATA){ if(Array.isArray(CASES_DATA[k])) out.push.apply(out, CASES_DATA[k]); }
+  return out;
+}
+
+function renderVanBanPhapLuat(raw, cas){
+  let html = upgradeContentHeadingMarkup(raw || '');
+  if(!html || !html.trim()) return '';
+  const title = getPrimaryTextLine(getCaseFieldText(cas,'ten')) || (cas && cas.ten) || '';
+  const content = getCaseFieldText(cas,'chi_tiet') || raw || '';
+  const getDoc = c => getCaseFieldText(c,'chi_tiet') || getCaseFieldText(c,'tom_luoc') || getCaseFieldText(c,'ap_dung') || '';
+  let idx; try { idx = vbplBuildIndex(getAllCasesFlat(), getDoc); } catch(e){ idx = {byBaseKey:{},docByKey:{}}; }
+  window.__VBPL_CLICK = {};
+  const opts = { clickStore: window.__VBPL_CLICK, keyPrefix:'vbplk' };
+  try {
+    if(vbplIsAmendmentTitle(title)){
+      const baseNum = vbplGetBaseNumber(title, content);
+      const baseDoc = baseNum ? idx.docByKey[vbplDecreeKey(baseNum)] : null;
+      opts.mode='amend'; opts.baseNumber=baseNum; opts.baseDoc = baseDoc ? getDoc(baseDoc) : '';
+    } else {
+      const ownNum = vbplGetOwnNumber(title, content);
+      opts.mode='base'; opts.targets = vbplBuildBaseTargets(idx.byBaseKey[vbplDecreeKey(ownNum)]);
+    }
+    return vbplRenderDoc(html, opts);
+  } catch(e){ if(window.console) console.warn('VBPL render error', e); return html; }
+}
+
+function vbplRefDesc(r, en){
+  const parts=[];
+  if(r.points && r.points.length) parts.push((en?'point ':'điểm ')+r.points.join(', '));
+  if(r.clauses && r.clauses.length) parts.push((en?'clause ':'khoản ')+r.clauses.join(', '));
+  if(r.article) parts.push((en?'Article ':'Điều ')+r.article);
+  return parts.join(' ');
+}
+
+function vbplOpenModal(key){
+  const data = (window.__VBPL_CLICK||{})[key];
+  if(!data) return;
+  const en = (typeof getActiveLanguage==='function') && getActiveLanguage()==='en';
+  let title='', body='';
+  if(data.type==='base'){
+    title = '<i class="ph ph-pencil-line"></i> ' + (en?'This provision has been amended':'Nội dung đã được sửa đổi, bổ sung');
+    body = '<p>' + (en?'This part has been amended/supplemented by:':'Phần này đã được sửa đổi, bổ sung bởi:') + '</p>';
+    (data.matches||[]).forEach(m=>{
+      const srcLabel = (en?'Decree ':'Nghị định ') + escapeHtmlText(m.sourceNumber||'') + (m.label?(en?(' — item '+escapeHtmlText(m.label)):(' — mục '+escapeHtmlText(m.label))):'');
+      body += '<div class="vbpl-modal-src"><div class="vbpl-modal-srctitle">'+srcLabel+'</div>'+
+              '<div class="vbpl-modal-newcontent">'+(m.newContentHtml||('<em>'+(en?'(no content)':'(không có nội dung)')+'</em>'))+'</div></div>';
+    });
+  } else if(data.type==='amend'){
+    title = '<i class="ph ph-arrow-bend-down-right"></i> ' + (en?'Amendment provision':'Quy định sửa đổi, bổ sung');
+    const refDesc = vbplRefDesc(data.refs||{}, en);
+    body = '<p>'+(en?'This provision amends/supplements ':'Quy định này sửa đổi, bổ sung ')+'<strong>'+escapeHtmlText(refDesc)+'</strong>'+
+           (data.baseNumber?((en?' of Decree ':' của Nghị định ')+escapeHtmlText(data.baseNumber)):'')+'.</p>';
+    if(data.original && data.original.trim()){
+      body += '<div class="vbpl-modal-srctitle">'+(en?'Original content':'Nội dung gốc')+(data.baseNumber?(' ('+escapeHtmlText(data.baseNumber)+')'):'')+':</div>'+
+              '<div class="vbpl-modal-original">'+data.original+'</div>';
+    } else {
+      body += '<p style="color:var(--text-muted);font-size:.85rem">'+(en?'(The original document is not yet available in the system for comparison.)':'(Chưa có văn bản gốc trong hệ thống để đối chiếu.)')+'</p>';
+    }
+  } else { return; }
+  document.getElementById('modal-title').innerHTML = title;
+  document.getElementById('modal-body').innerHTML = body;
+  document.getElementById('info-modal').classList.add('open');
+}
+window.vbplOpenModal = vbplOpenModal;
+
+/* ===== VBPL-INTEGRATION END ===== */
+
 function upgradeContentHeadingMarkup(html) {
   const text = String(html || '');
   if(!text || !text.includes('<p')) return text;
@@ -2550,10 +3058,16 @@ function goDetail(lvId, sfId, caseId){
       
       dienBienEl.innerHTML = ''; apDungEl.innerHTML = '';
       
-      const detailContent = upgradeContentHeadingMarkup(getCaseFieldText(cas, 'chi_tiet') || getCaseFieldText(cas, 'tom_luoc') || getCaseFieldText(cas, 'ap_dung') || '');
-      if(detailContent){
-        chiTietEl.innerHTML = autoLinkLaws(detailContent);
-      } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>${t('detailLater')}</p></div>`; }
+      const docRaw = getCaseFieldText(cas, 'chi_tiet') || getCaseFieldText(cas, 'tom_luoc') || getCaseFieldText(cas, 'ap_dung') || '';
+      if(cas.sfId === 'van-ban-phap-luat'){
+        const rendered = renderVanBanPhapLuat(docRaw, cas);
+        chiTietEl.innerHTML = rendered || `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>${t('detailLater')}</p></div>`;
+      } else {
+        const detailContent = upgradeContentHeadingMarkup(docRaw);
+        if(detailContent){
+          chiTietEl.innerHTML = autoLinkLaws(detailContent);
+        } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>${t('detailLater')}</p></div>`; }
+      }
 
       switchTab('chi-tiet');
   } else {
