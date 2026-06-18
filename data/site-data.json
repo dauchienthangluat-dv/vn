@@ -1,7 +1,7 @@
 {
   "type": "dcsl-site-data",
   "version": 1,
-  "exportedAt": "2026-06-17T14:30:24.004Z",
+  "exportedAt": "2026-06-18T10:22:32.935Z",
   "data": {
     "casesData": {
       "cases": {
@@ -10741,6 +10741,299 @@
         ],
         "kinh-doanh-thuong-mai::an-le": [
           {
+            "id": "case-an-le-so-87-2",
+            "ten": "Bình luận về Án lệ số 87/2026/AL về thứ tự ưu tiên thanh toán khi xử lý tài sản bảo đảm",
+            "mo_ta": "",
+            "lvId": "kinh-doanh-thuong-mai",
+            "lvName": "Kinh doanh - Thương mại",
+            "sfId": "an-le",
+            "sfName": "Án lệ",
+            "sao": 3,
+            "ngay": "2026-06-18T17:15:43.3417223+07:00",
+            "updatedAt": "2026-06-18T10:20:00.439Z",
+            "tom_luoc": "<p>Vào ngày 22/10/2013, khi Ngân hàng A và Công ty H ký hợp đồng tín dụng cho vay hơn 23,3 tỷ đồng để mua tàu biển P 06, đồng thời ký hợp đồng thế chấp con tàu này.</p><p>Do tàu bị hư hỏng, ngày 18/11/2013, Công ty H ký hợp đồng với Công ty Đ để sửa chữa, nâng cấp và sau đó đổi tên thành tàu R 268.</p><p>Đến ngày 21/7/2015, Ngân hàng A và Công ty H ký hợp đồng thế chấp bổ sung đối với tài sản bảo đảm mới là tàu R 268.</p><p>Quá trình thực hiện, Công ty H vi phạm nghĩa vụ trả nợ nên ngày 16/02/2017, Ngân hàng A đã nộp đơn khởi kiện.</p><p>Cùng lúc đó, do Công ty H cũng không thanh toán chi phí sửa chữa và tiền trông giữ tàu (theo hợp đồng ký ngày 06/11/2017), Công ty Đ đã đưa ra yêu cầu độc lập vào ngày 26/12/2017 để đòi nợ.</p><p>Ngày 12/7/2019, Tòa án sơ thẩm ban hành bản án chấp nhận yêu cầu của các bên, nhưng quyết định ưu tiên trích tiền xử lý tài sản thế chấp để thanh toán tiền lương công nhân, tiền thuế và tiền trông coi cho Công ty Đ trước khi trả nợ cho Ngân hàng.</p><p>Ngân hàng A kháng cáo, nhưng Bản án phúc thẩm ngày 25/11/2019 vẫn giữ nguyên phán quyết này.</p><p>Ngân hàng A tiếp tục khiếu nại vào ngày 06/7/2021, dẫn đến việc Viện kiểm sát nhân dân cấp cao ra quyết định kháng nghị giám đốc thẩm vào ngày 24/7/2023 vì cho rằng việc ưu tiên thanh toán làm thiệt hại quyền lợi của ngân hàng.</p><p>Cuối cùng, tại phiên tòa giám đốc thẩm, Ủy ban Thẩm phán đã bác bỏ kháng nghị, khẳng định việc ưu tiên thanh toán cho Công ty Đ là hợp lý, hợp tình và đúng pháp luật nhằm bảo vệ người lao động và bảo đảm nộp thuế cho Nhà nước, qua đó chính thức giữ nguyên bản án phúc thẩm</p>",
+            "ap_dung": "<p>Nội dung án lệ này có thể được áp dụng như một cơ sở pháp lý quan trọng cho các cơ quan tiến hành tố tụng khi giải quyết các vụ án tranh chấp hợp đồng tín dụng và xử lý tài sản thế chấp (đặc biệt là tài sản đặc thù như tàu biển).</p><p>Cụ thể, án lệ này sẽ được vận dụng trong những tình huống mà tài sản thế chấp được chủ tài sản giao cho một bên thứ ba (như xưởng đóng tàu) tiến hành sửa chữa, nâng cấp và trông giữ, và việc này được thực hiện với sự biết đến cũng như thống nhất của bên nhận thế chấp (ngân hàng). Nếu chủ tài sản mất khả năng tài chính, vi phạm nghĩa vụ trả nợ cho ngân hàng đồng thời không thanh toán chi phí cho bên nhận sửa chữa, dẫn đến việc Tòa án phải quyết định phát mại tài sản thế chấp để giải quyết nợ, Tòa án sẽ áp dụng đường lối của án lệ này để xác định thứ tự ưu tiên thanh toán. Theo đó, Tòa án sẽ ưu tiên trích số tiền thu được từ việc bán tài sản để thanh toán trước cho bên thứ ba (bên sửa chữa, trông giữ) các khoản chi phí mang tính chất thiết yếu bao gồm: tiền lương của công nhân, tiền thuế và tiền công trông giữ tài sản. Chỉ sau khi đã thanh toán xong các khoản ưu tiên này nhằm bảo vệ quyền lợi hợp pháp, chính đáng của người lao động và bảo đảm việc thực hiện nghĩa vụ nộp thuế với Nhà nước, thì số tiền còn lại mới được dùng để thanh toán các khoản nợ gốc và nợ lãi cho ngân hàng.</p><p>Việc vận dụng đúng án lệ này không chỉ giải quyết tranh chấp một cách hợp tình, hợp lý theo Bộ luật Dân sự, mà còn bảo vệ được lợi ích của những người lao động trực tiếp tạo ra hoặc bảo vệ giá trị của tài sản đó</p>",
+            "chi_tiet": "<div class=\"detail-section-title\">NỘI DUNG VỤ ÁN</div><p>Tại đơn khởi kiện ngày 16/02/2017 và trong quá trình giải quyết vụ án, nguyên đơn là Ngân hàng thương mại cổ phần A do người đại diện theo ủy quyền trình bày:</p><p>Ngân hàng thương mại cổ phần A (viết tắt là Ngân hàng) và Công ty cổ phần hàng hải H (viết tắt là Công ty H) đã ký kết Hợp đồng tín dụng số 68/13/TD/XI ngày 22/10/2013 với nội dung: Ngân hàng cho Công ty H vay 23.331.000.000d; mục đích để thanh toán tiền mua tàu vận tải biển P 06; thời hạn vay 120 tháng; lãi suất vay theo quy định tại thời điểm giải ngân và khi Ngân hàng có thông báo thay đổi lãi suất; lãi suất quá hạn bằng 150% lãi suất trong hạn. Công ty H đã nhận tiền theo Giấy nhận nợ số 01 ngày 22/10/2013.</p><p>Để bảo đảm cho khoản vay, Công ty H đã thế chấp tài sản hình thành từ vốn vay là tàu biển P 06, theo Hợp đồng thế chấp tàu biển hình thành trong tương lai số 112/13/TC/XI ngày 22/10/2013. Sau đó Ngân hàng và Công ty H thỏa thuận để Công ty cổ phần đóng tàu Đ (viết tắt là Công ty Đ) sửa chữa nâng cấp, thay đổi tên và số hiệu của Tàu P 06 thành Tàu vận tải biển R 268 và nâng giá trị tài sản bảo đảm là 45.638.000.000đ. Ngày 21/7/2015, Ngân hàng và Công ty H đã ký thêm Hợp đồng sửa đổi, bổ sung Hợp đồng tín dụng số 3278/15/PLTD-TT/IXI. Theo đó, Ngân hàng chấp thuận cho Công ty H được chuyển đổi tên tài sản bảo đảm từ Tàu biển P 06 sang là Tàu vận tải biển R 268 và ký Hợp đồng thế chấp tài sản số 3364/15/TC/XI ngày 21/7/2015, tài sản bảo đảm được hoán đổi là Tàu R 268. Các hợp đồng thế chấp được công chứng và đăng ký giao dịch bảo đảm theo quy định.</p><p>Trong quá trình thực hiện hợp đồng tín dụng, tính đến ngày 25/09/2016 Công ty H đã trả được cho Ngân hàng tổng số tiền là 7.621.242.760đ; trong đó gốc là 2.316.135.000d; lãi trong hạn là 5.183.270.790đ và lãi quá hạn là 121.836.970d. Công ty H đã vi phạm các kỳ hạn trả nợ theo Hợp đồng tín dụng nên Ngân hàng khởi kiện đề nghị Toà án giải quyết: Buộc Công ty H trả cho Ngân hàng 32.834.248.529đ, trong đó: Nợ gốc là 21.014.865.000đ, lãi trong hạn là 2.539.919.640đ và lãi quá hạn là 9.279.463.889đ (tính đến ngày 12/7/2019). Buộc Công ty H tiếp tục thanh toán cho Ngân hàng lãi phát sinh theo hợp đồng tín dụng và giấy nhận nợ kể từ ngày 13/7/2019 cho đến khi thanh toán hết nợ. Trường hợp Công ty H không trả được nợ vay, Ngân hàng có quyền yêu cầu cơ quan có thẩm quyền kê biên, phát mại tài sản bảo đảm là Tàu biển R 268 để thu hồi nợ. Nếu số tiền thu được từ việc phát mại tài sản bảo đảm không đủ để thu hồi nợ thì Công ty H vẫn phải có nghĩa vụ trả nợ gốc và nợ lãi phát sinh cho Ngân hàng theo lãi suất nợ quá hạn đã nêu trong Hợp đồng tín dụng và Giấy nhận nợ cho đến khi trả xong nợ.</p><p>Bị đơn là Công ty cổ phần Hàng hải H do người đại diện theo pháp luật trình bày:</p><p>Công ty H thừa nhận lời trình bày của Ngân hàng và yêu cầu độc lập của Công ty Đ là đúng. Công ty H chịu trách nhiệm thanh toán các khoản tiền còn nợ cho Ngân hàng và Công ty Đ. Nay Công ty H không yêu cầu áp dụng thời hiệu trả lãi đối với tiền lãi vay Ngân hàng. Tuy nhiên, hiện Công ty H đang gặp nhiều khó khăn không còn khả năng tài chính. Tại cuộc họp cổ đông của Công ty đã thống nhất bán phát mại Tàu R 268 để trả các khoản nợ, số tiền có từ việc phát mại tài sản là Tàu R 268, sau khi thanh toán các khoản nợ trên, nếu còn thiêu thì Công ty cam kết sẽ trả tiếp, nếu còn thừa thì chuyển về tài khoản của Công ty H.</p><p>Người có quyền lợi nghĩa vụ liên quan có yêu cầu độc lập là Công ty cổ phần đóng tàu Đ do người đại diện theo ủy quyền trình bày:</p><p>Tàu P 06 tại thời điểm thế chấp Ngân hàng đã bị hư hỏng nghiêm trọng, không còn khả năng hoạt động nên Công ty H và Công ty Đ đã ký Hợp đồng sửa chữa, thay thế, nâng cấp (lần thứ nhất) số 11/HĐKT ngày 18/11/2013 (sửa nghiệm thu ngày 14/7/2015). Thực hiện hợp đồng trên, Công ty Đ đã đầu tư lần 1 vào tàu số tiền là 18.774.000.000đ, sau đó sửa chữa lần 2 hết 9.013.573.634d. Tàu được khai thác đến hết tháng 12/2017 thì dừng và Công ty H không còn khả năng thanh toán.</p><p>Công ty Đ trông giữ Tàu R 268 cho Công ty H theo Hợp đồng số 06-11/2017/HHHG-ĐTHG ngày 06/11/2017 là 3.000.000 đồng/ngày. Cho đến nay, Công ty H vẫn chưa thanh toán cho Công ty Đ toàn bộ số tiền sửa chữa và tiền công trông giữ Tàu R 268. Ngày 26/12/2017, Công ty Đ có yêu cầu độc lập đề nghị Công ty H trả cho Công ty Đ 9.103.573.634d, trong đó: Chi phí sửa chữa tàu là 8.194.157.849đ bao gồm tiền lương công nhân trong quá trình sửa tàu là 4.303.138.651đ; tiền điện nước khấu hao thiết bị là 1.527.796.391đ, tiền vật tư thiết bị thay thế là 2.363.322.807đ; tiền thuế Giá trị gia tăng là 819.415.785đ và chi phí trông giữ neo đậu tàu từ ngày 06/11/2017 đến khi thanh lý hợp đồng. Nếu Công ty H không thanh toán được thì đề nghị phát mại tài sản là Tàu R 268 để trả các khoản nợ cho Công ty Đ.</p><div class=\"detail-section-title\">NHẬN ĐỊNH CỦA TÒA ÁN CẤP SƠ THẨM VÀ PHÚC THẨM</div><p>Tại Bản án kinh doanh, thương mại số 05/2019/KDTM-ST ngày 12/7/2019, Tòa án nhân dân quận Hồng Bàng, thành phố Hải Phòng quyết định:</p><p>1. Chấp nhận yêu cầu khởi kiện của Ngân hàng đối với Công ty H:</p><p>- Buộc Công ty H phải thanh toán cho Ngân hàng tổng số tiền còn nợ tính đến ngày 12/7/2019 là 32.834.248.529đ; trong đó: Số tiền nợ gốc là 21.014.865.000đ; số tiền lãi trong hạn là 2.539.919.640đ; số tiền lãi quá hạn là 9.279.463.889đ.</p><p>Kể từ ngày tiếp theo của ngày 13/7/2019 cho đến khi thi hành án xong, bên phải thi hành án còn phải chịu khoản tiền lãi của số tiền còn phải thi hành án theo mức lãi suất các bên thỏa thuận nhưng phải phù hợp với quy định của pháp luật.</p><p>2. Chấp nhận yêu cầu độc lập của Công ty Đ đối với Công ty H: Buộc Công ty H phải thanh toán cho Công ty Đ tổng số tiền sửa chữa Tàu R 268 là 11.967.073.634d; trong đó: Chi phí sửa chữa tàu là 8.194.157.849đ (gồm tiền lương công nhân trong quá trình sửa chữa tàu là 4.303.138.651đ; tiền điện, nước, khấu hao thiết bị là 1.527.796.391đ; tiền vật tư thiết bị thay thế là 2.363.322.807đ); tiền thuế giá trị gia tăng là 819.415.785đ; chi phí trông giữ neo đậu Tàu R 268 từ ngày 21/01/2017 đến ngày 12/7/2019 là 2.953.500.000đ.</p><p>Công ty cổ phần H có nghĩa vụ nộp thuế Giá trị gia tăng theo quy định của pháp luật về thuế. Công ty H có nghĩa vụ tiếp tục thanh toán chi phí trông giữ neo đậu Tàu R 268 cho Công ty Đ kể ngày 13/7/2019 (theo Hợp đồng kinh tế số 06-11/2017/HDHG-DTHG) cho đến khi di dời và thanh lý hợp đồng trông giữ neo đậu Tàu R 268.</p><p>Đối với khoản tiền nợ nêu trên, khi bản án có hiệu lực pháp luật, kể từ ngày người được thi hành án có đơn yêu cầu thi hành cho đến khi thi hành án xong, nếu người phải thi hành án dân sự không thi hành thì hàng tháng phải chịu tiền lãi của số tiền còn phải thi hành án theo lãi suất được quy định tại Điều 357, Điều 468 Bộ luật Dân sự.</p><p>3. Trường hợp Công ty H không thực hiện việc trả toàn bộ khoản tiền nợ nói trên cho Ngân hàng thì Ngân hàng có quyền yêu cầu Cơ quan Thi hành án dân sự có thẩm quyền xử lý tài sản thế chấp (Hợp đồng thế chấp tài sản 3354/15/TC-TT/XI ngày 21/7/2015), theo quy định của pháp luật để thực hiện nghĩa vụ thanh toán khoản tiền trên cho Ngân hàng. Tài sản thế chấp được xử lý là: Tàu R 268.</p><p>4. Về thứ tự thanh toán:</p><p>Khi xử lý tài sản thế chấp là Tàu R 268, số tiền thu được sau khi trừ các chi phí về thi hành án thì ưu tiên thanh toán trước tiền lương công nhân là 4.303.318.651d, tiền thuế giá trị gia tăng là 819.415.785đ và phí neo đậu trông coi tàu là 2.953.500.000đ cho Công ty Đ; sau đó thanh toán tiền nợ gốc là 21.014.865.000đ, tiền nợ lãi trong hạn là 2.539.919.640d, tiền nợ lãi quá hạn là 9.279.463.889đ cho Ngân hàng; sau đó tiếp tục thực hiện nghĩa vụ thanh toán phần còn thiếu cho Công ty Đ tiền mua phụ tùng thay thế là 2.363.322.807đ; tiền khấu hao máy móc thiết bị, điện, nước, dầu nhớt, mỡ xăng, cát bắn làm sạch tôn là 1.527.796.391đ.</p><p>Trong quá trình thực hiện việc thanh toán theo thứ tự nêu trên, nếu không trả đủ thì Công ty H còn phải trả tiếp phần còn thiếu đối với các khoản nợ tương ứng còn phải thanh toán, nếu còn thừa thì trả lại cho Công ty H.</p><p>Ngoài ra, bản án còn quyết định về án phí, quyền kháng cáo và thi hành án của các đương sự.</p><p>Sau khi xét xử sơ thẩm, Ngân hàng thương mại cổ phần A kháng cáo một phần bản án sơ thẩm.</p><p>Tại Bản án kinh doanh, thương mại phúc thẩm số 19/2019/KDTM-PT ngày 25/11/2019, Tòa án nhân dân thành phố Hải Phòng quyết định:</p><p>Giữ nguyên Bản án kinh doanh, thương mại sơ thẩm số 05/2019/KDTM-ST ngày 12/7/2019 của Tòa án nhân dân quận Hồng Bàng, thành phố Hải Phòng.</p><p>Ngày 06/7/2021, Ngân hàng TMCP A có đơn khiếu nại đề nghị xem xét theo thủ tục giám đốc thẩm gửi Viện kiểm sát nhân dân cấp cao tại Hà Nội đổi với Bản án kinh doanh, thương mại phúc thẩm số 19/2019/KDTM-PT ngày 25/11/2019 của Tòa án nhân dân thành phố Hải Phòng.</p><p>Tại Quyết định số 06/QĐKNGĐT-VC1-KDTM ngày 24/7/2023, Viện trưởng Viện kiểm sát nhân dân cấp cao tại Hà Nội kháng nghị Bản án kinh doanh, thương mại phúc thẩm số 19/2019/KDTM-PT ngày 25/11/2019 của Tòa án nhân dân thành phố Hải Phòng; đề nghị Ủy ban Thẩm phán Tòa án nhân dân cấp cao tại Hà Nội xét xử giám đốc thẩm hủy bản án kinh doanh, thương mại phúc thẩm nêu trên và Bản án kinh doanh, thương mại sơ thẩm số 05/2019/KDTM-ST ngày 12/7/2019 của Tòa án nhân dân quận Hồng Bàng, thành phố Hải Phòng; giao hồ sơ vụ án cho Tòa án nhân dân quận Hồng Bàng xét xử sơ thẩm lại theo quy định pháp luật, với lý do: Tòa án cấp sơ thẩm và Tòa án cấp phúc thẩm tuyên xử ưu tiên thanh toán chi phí sửa chữa tàu khi xử lý tài sản bảo đảm là không đúng, gây thiệt hại quyền lợi của Ngân hàng.</p><p>Tại phiên tòa giám đốc thẩm, đại diện Viện kiểm sát nhân dân cấp cao tại Hà Nội đề nghị Ủy ban Thẩm phán Toà án nhân dân cấp cao tại Hà Nội chấp nhận kháng nghị của Viện trưởng Viện kiểm sát nhân dân cấp cao tại Hà Nội.</p><div class=\"detail-section-title\">NHẬN ĐỊNH CỦA TÒA ÁN TỐI CAO</div><p>[1] Ngân hàng thương mại cổ phần A (viết tắt là Ngân hàng) và Công ty cổ phần hàng hải H (viết tắt là Công ty H) ký kết Hợp đồng tín dụng số 68/13/TD/XI ngày 22/10/2013 với nội dung: Ngân hàng cho Công ty H vay 23.331.000.000đ; mục đích là thanh toán tiền mua tàu vận tải biển P 06; thời hạn vay 120 tháng; lãi suất quy định tại thời điểm giải ngân và khi Ngân hàng có thông báo thay đổi lãi suất; lãi suất quá hạn 150% lãi suất trong hạn. Công ty H đã nhận tiền theo Giấy nhận nợ số 01 ngày 22/10/2013. Để bảo đảm cho khoản vay, Công ty H thế chấp tài sản hình thành từ vốn vay là tàu biển P 06, theo Hợp đồng thế chấp tàu biển hình thành trong tương lai số 112/13/TC/XI ngày 22/10/2013; sau khi nâng cấp, thay đổi tên và số hiệu của Tàu P 06 thành Tàu vận tải biển R 268 thì giá trị tài sản bảo đảm là 45.638.000.000đ và các bên ký tiếp Hợp đồng thế chấp tài sản số 3364/15/TC/X1 ngày 21/7/2015. Các hợp đồng thế chấp được công chứng và đăng ký giao dịch bảo đảm theo quy định.</p><p>[2] Quá trình thực hiện hợp đồng tín dụng, Công ty H đã trả được cho Ngân hàng tổng số tiền là 7.621.242.760d; trong đó gốc là 2.316.135.000d; lãi trong hạn là 5.183.270.790đ và lãi quá hạn là 121.836.970đ (tính đến ngày 25/9/2016). Do Công ty H đã vi phạm các kỳ hạn trả nợ nên Ngân hàng khởi kiện đề nghị Toà án buộc Công ty H trả nợ 32.834.248.529d, trong đó: 21.014.865.000đ nợ gốc, 2.539.919.640đ lãi trong hạn và 9.279.463.889đ lãi quá hạn (tính đến ngày 12/7/2019), lãi phát sinh theo hợp đồng tín dụng và giấy nhận nợ kể từ ngày 13/7/2019 cho đến khi hết nợ. Trường hợp Công ty H không trả được nợ vay, Ngân hàng có quyền yêu cầu cơ quan có thẩm quyền kê biên, phát mại tài sản bảo đảm là Tàu biển R 268 để thu hồi nợ. Nếu số tiền thu được từ việc phát mại tài sản bảo đảm không đủ để thu hồi nợ thì Công ty H phải có nghĩa vụ trả nợ gốc và nợ lãi phát sinh cho Ngân hàng theo lãi suất nợ quá hạn đã nêu trong Hợp đồng tín dụng và Giấy nhận nợ cho đến khi trả xong nợ.</p><p>[3] Về yêu cầu của Công ty cổ phần đóng tàu Đ (Công ty Đ), do Tàu P 06 tại thời điểm thế chấp Ngân hàng đã bị hư hỏng nghiêm trọng nên Ngân hàng và Công ty H thỏa thuận để Công ty H sửa chữa, nâng cấp Tàu P 06 thành Tàu vận tải biển R 268. Công ty H đã ký hợp đồng với Công ty Đ về việc sửa chữa, nâng cấp và trông giữ tàu. Cho đến ngày Ngân hàng khởi kiện vụ án, Công ty H chưa thanh toán cho Công ty Đ toàn bộ chi phí sửa chữa và tiền trông giữ tàu Tàu R 268. Ngày 26/12/2017, Công ty Đ có yêu cầu độc lập đề nghị Công ty H trả cho Công ty Đ chi phí sửa chữa tàu là 8.194.157.849đ, gồm tiền lương công nhân trong quá trình sửa tàu là 4.303.138.6514; tiền điện nước khấu hao thiết bị là 1.527.796.391đ, tiền vật tư thiết bị thay thế là 2.363.322.807đ; tiền thuế giá trị gia tăng là 819.415.785đ và chi phí trông giữ neo đậu tàu từ ngày 06/11/2017 đến khi thanh lý hợp đồng. Trường hợp Công ty 11 không thanh toán được thì đề nghị phát mại tài sản là Tàu R 268 để trả các khoản nợ cho Công ty Đ.</p><p>[4] Quá trình giải quyết vụ án, Công ty H xác nhận số tiền nợ gốc và lãi đối với Ngân hàng; xác nhận số tiền còn nợ Công ty Đ. Do đó, Tòa án cấp sơ thẩm và Tòa án cấp phúc thẩm xử buộc Công ty H phải trả cho Công ty trách nhiệm hữu hạn Q Việt Nam (là người kế thừa quyền và nghĩa vụ tố tụng của Ngân hàng) và Công ty Đ các khoản còn nợ là có căn cứ.</p><p>[5] Tại Quyết định kháng nghị số 06/QĐKNGĐT-VC1-KDTM của Viện trưởng Viện kiểm sát nhân dân cấp cao tại Hà Nội nhận định: “... Tòa án cấp sơ thẩm và Tòa án cấp phúc thẩm đều xử buộc Công ty H phải trả cho Công ty trách nhiệm hữu hạn Q Việt Nam (là người kế thừa quyền và nghĩa vụ tố tụng của Ngân hàng) tổng số tiền nợ gốc và nợ lãi tính đến ngày 12/7/2019 là 32.834.248.529đ; buộc Công ty H phải trả cho Công ty Đ tiền sửa chữa tàu và tiền trông coi Tàu R 268 tổng là 11.967.073.634đ là có căn cứ”; chỉ đề nghị giải quyết lại về thứ tự ưu tiên thanh toán, nhưng lại đề nghị hủy cả bản án phúc thẩm và sơ thẩm để giải quyết lại là không phù hợp.</p><p>[6] Về thứ tự ưu tiên thanh toán, thấy rằng, việc sửa chữa nâng cấp và trông giữ Tàu R 268 giữa Công ty H và Công ty Đ là có thật; Ngân hàng biết và thống nhất việc Công ty H sửa chữa nâng cấp giá trị tàu. Cho đến khi xét xử sơ thẩm, phúc thẩm, Công ty H chưa thanh toán cho Công ty Đ các khoản chi phí sửa chữa và trông giữ theo các hợp đồng đã ký. Tòa án sơ thẩm và Tòa án phúc thẩm đã viện dẫn quy định tại Điều 307 Bộ luật Dân sự năm 2015 và điểm b khoản 12 Điều 1 Nghị định số 11/2012/NĐ-CP ngày 22/02/2012 để quyết định khi xử lý tài sản thế chấp thì ưu tiên thanh toán trước cho Công ty Đ khoản chi phí là tiền lương công nhân, tiền thuế và tiền trông giữ tàu là có căn cứ, hợp tình, hợp lý, bảo đảm quyền lợi của người lao động, bảo đảm thực hiện nghĩa vụ nộp thuế với Nhà nước. Do đó, cần giữ nguyên quyết định của bản án sơ thẩm và bản án phúc thẩm.</p><p>Vì các lẽ trên,</p><div class=\"detail-section-title\">QUYẾT ĐỊNH</div><p>Căn cứ điểm a khoản 1 Điều 337, khoản 1 Điều 343 của Bộ luật Tố tụng dân sự năm 2015;</p><p>1. Không chấp nhận Quyết định kháng nghị giám đốc thẩm số 06/QĐKNGĐT-VC1-KDTM ngày 24/7/2023 của Viện trưởng Viện kiểm sát nhân dân cấp cao tại Hà Nội.</p><p>2. Giữ nguyên Bản án kinh doanh, thương mại phúc thẩm số 19/2019/KDTM-PT ngày 25/11/2019 của Tòa án nhân dân thành phố Hải Phòng về vụ án “Tranh chấp hợp đồng tín dụng” giữa nguyên đơn là Ngân hàng thương mại cổ phần A với bị đơn là Công ty cổ phần Hàng hải H; người có quyền lợi, nghĩa vụ liên quan là Công ty cổ phần đóng tàu Đ.</p><div class=\"detail-section-title\">NỘI DUNG ÁN LỆ</div><p>“[6] Về thứ tự ưu tiên thanh toán, thấy rằng, việc sửa chữa nâng cấp và trông giữ Tàu R 268 giữa Công ty H và Công ty Đ là có thật: Ngân hàng biết và thống nhất việc Công ty H sửa chữa nâng cấp giá trị tàu. Cho đến khi xét xử sơ thẩm, phúc thẩm, Công ty H chưa thanh toán cho Công ty Đ các khoản chi phí sửa chữa và trông giữ theo các hợp đồng đã ký. Tòa án sơ thẩm và Tòa án phúc thẩm đã viện dẫn quy định tại Điều 307 Bộ luật Dân sự năm 2015 và điểm b khoản 12 Điều 1 Nghị định 11/2012/NĐ-CP ngày 22/02/2012 để quyết định khi xử lý tài sản thế chấp thì ưu tiên thanh toán trước cho Công ty Đ khoản chi phí là tiền lương công nhân, tiền thuế và tiền trông giữ tàu là có căn cứ, hợp tình, hợp lý, bảo đảm quyền lợi của người lao động, bảo đảm thực hiện nghĩa vụ nộp thuế với Nhà nước. Do đó, cần giữ nguyên quyết định của bản án sơ thẩm và bản án phúc thẩm.\"</p>",
+            "timeline": [
+              "Vào ngày 22/10/2013, khi Ngân hàng A và Công ty H ký hợp đồng tín dụng cho vay hơn 23,3 tỷ đồng để mua tàu biển P 06, đồng thời ký hợp đồng thế chấp con tàu này.",
+              "Do tàu bị hư hỏng, ngày 18/11/2013, Công ty H ký hợp đồng với Công ty Đ để sửa chữa, nâng cấp và sau đó đổi tên thành tàu R 268.",
+              "Đến ngày 21/7/2015, Ngân hàng A và Công ty H ký hợp đồng thế chấp bổ sung đối với tài sản bảo đảm mới là tàu R 268.",
+              "Quá trình thực hiện, Công ty H vi phạm nghĩa vụ trả nợ nên ngày 16/02/2017, Ngân hàng A đã nộp đơn khởi kiện.",
+              "Cùng lúc đó, do Công ty H cũng không thanh toán chi phí sửa chữa và tiền trông giữ tàu (theo hợp đồng ký ngày 06/11/2017), Công ty Đ đã đưa ra yêu cầu độc lập vào ngày 26/12/2017 để đòi nợ.",
+              "Ngày 12/7/2019, Tòa án sơ thẩm ban hành bản án chấp nhận yêu cầu của các bên, nhưng quyết định ưu tiên trích tiền xử lý tài sản thế chấp để thanh toán tiền lương công nhân, tiền thuế và tiền trông coi cho Công ty Đ trước khi trả nợ cho Ngân hàng.",
+              "Ngân hàng A kháng cáo, nhưng Bản án phúc thẩm ngày 25/11/2019 vẫn giữ nguyên phán quyết này.",
+              "Ngân hàng A tiếp tục khiếu nại vào ngày 06/7/2021, dẫn đến việc Viện kiểm sát nhân dân cấp cao ra quyết định kháng nghị giám đốc thẩm vào ngày 24/7/2023 vì cho rằng việc ưu tiên thanh toán làm thiệt hại quyền lợi của ngân hàng.",
+              "Cuối cùng, tại phiên tòa giám đốc thẩm, Ủy ban Thẩm phán đã bác bỏ kháng nghị, khẳng định việc ưu tiên thanh toán cho Công ty Đ là hợp lý, hợp tình và đúng pháp luật nhằm bảo vệ người lao động và bảo đảm nộp thuế cho Nhà nước, qua đó chính thức giữ nguyên bản án phúc thẩm"
+            ],
+            "laws": [
+              {
+                "name": "Điều 357",
+                "content": "",
+                "name_en": "Article 357",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Article 357",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Điều 468 Bộ luật D&#226",
+                "content": "",
+                "name_en": "Article 468 of the Civil Code",
+                "translations": {
+                  "en": {
+                    "title": "Article 468 of the Civil Code",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Điều 307 Bộ luật D&#226",
+                "content": "",
+                "name_en": "Article 307",
+                "translations": {
+                  "en": {
+                    "title": "Article 307",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "điểm b khoản 12 Điều 1",
+                "content": ""
+              },
+              {
+                "name": "điểm a khoản 1 Điều 337",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 343 của Bộ luật Tố tụng d&#226",
+                "content": "",
+                "name_en": "Clause 1 Article 343",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Clause 1 Article 343",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Point b, Clause 12, Article 1",
+                "content": "",
+                "name_en": "Point b, Clause 12, Article 1",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Point b, Clause 12, Article 1",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Point a, Clause 1, Article 337",
+                "content": "",
+                "name_en": "Point a, Clause 1, Article 337",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Point a, Clause 1, Article 337",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Clause 1, Article 343",
+                "content": "",
+                "name_en": "Clause 1, Article 343",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Clause 1, Article 343",
+                    "content": ""
+                  }
+                }
+              }
+            ],
+            "translations": {
+              "en": {
+                "ten": "Commentary on Case Law No. 87/2026/AL regarding the order of priority for payment upon disposal of secured assets",
+                "tom_luoc": "<p>On October 22, 2013, Bank A and Company H signed a credit contract for a loan of over 23.3 billion VND to purchase the vessel P 06, simultaneously mortgaging the ship.</p><p>Because the ship was damaged, on November 18, 2013, Company H signed a contract with Company Đ to repair and upgrade it, later renaming it R 268.</p><p>On July 21, 2015, Bank A and Company H signed a supplementary mortgage contract for the new collateral, vessel R 268.</p><p>During execution, Company H breached its repayment obligations, prompting Bank A to file a lawsuit on February 16, 2017.</p><p>Meanwhile, because Company H also failed to pay the repair and custody fees (under a contract signed on November 6, 2017), Company Đ filed an independent claim on December 26, 2017 to recover its debt.</p><p>On July 12, 2019, the first-instance court issued a judgment accepting the claims, but decided to prioritize the proceeds from the mortgaged asset's sale to pay workers' wages, taxes, and custody fees to Company Đ before settling the Bank's debt.</p><p>Bank A appealed, but the appellate judgment on November 25, 2019, upheld this decision.</p><p>Bank A filed a further complaint on July 6, 2021, leading the High People's Procuracy to issue a cassation protest on July 24, 2023, arguing that the payment priority harmed the bank's interests.</p><p>Ultimately, at the cassation trial, the Judicial Committee rejected the protest, affirming that prioritizing payment to Company Đ was reasonable, fair, and lawful to protect workers and ensure tax obligations to the State, thereby officially upholding the appellate judgment.</p>",
+                "timeline": [
+                  "On October 22, 2013, Bank A and Company H signed a credit contract for a loan of over 23.3 billion VND to purchase the vessel P 06, simultaneously mortgaging the ship.",
+                  "Because the ship was damaged, on November 18, 2013, Company H signed a contract with Company Đ to repair and upgrade it, later renaming it R 268.",
+                  "On July 21, 2015, Bank A and Company H signed a supplementary mortgage contract for the new collateral, vessel R 268.",
+                  "During execution, Company H breached its repayment obligations, prompting Bank A to file a lawsuit on February 16, 2017.",
+                  "Meanwhile, because Company H also failed to pay the repair and custody fees (under a contract signed on November 6, 2017), Company Đ filed an independent claim on December 26, 2017 to recover its debt.",
+                  "On July 12, 2019, the first-instance court issued a judgment accepting the claims, but decided to prioritize the proceeds from the mortgaged asset's sale to pay workers' wages, taxes, and custody fees to Company Đ before settling the Bank's debt.",
+                  "Bank A appealed, but the appellate judgment on November 25, 2019, upheld this decision.",
+                  "Bank A filed a further complaint on July 6, 2021, leading the High People's Procuracy to issue a cassation protest on July 24, 2023, arguing that the payment priority harmed the bank's interests.",
+                  "Ultimately, at the cassation trial, the Judicial Committee rejected the protest, affirming that prioritizing payment to Company Đ was reasonable, fair, and lawful to protect workers and ensure tax obligations to the State, thereby officially upholding the appellate judgment."
+                ],
+                "ap_dung": "<p>The content of this precedent can be applied as a crucial legal basis for judicial bodies when resolving credit contract disputes and handling mortgaged assets (especially specific assets like maritime vessels).</p><p>Specifically, this precedent will be utilized in situations where the asset owner hands over the mortgaged asset to a third party (such as a shipyard) to repair, upgrade, and keep custody of it, and this is done with the knowledge and agreement of the mortgagee (the bank). If the asset owner becomes financially insolvent, breaching the debt repayment obligation to the bank while also failing to pay the repair company, leading the Court to decide on liquidating the mortgaged asset to settle the debts, the Court will apply the direction of this precedent to determine the priority of payment. Accordingly, the Court will prioritize using the proceeds from the sale of the asset to first pay the third party (the repair and custody provider) for essential expenses including: workers' wages, taxes, and custody fees. Only after these priority payments are settled to protect the legitimate and justifiable rights of workers and to ensure the fulfillment of tax obligations to the State, will the remaining funds be used to pay the principal and interest to the bank.</p><p>Correctly applying this precedent not only resolves disputes reasonably and fairly in accordance with the Civil Code but also protects the interests of the laborers who directly created or preserved the value of that asset</p>",
+                "chi_tiet": "<div class=\"detail-section-title\">CASE FACTS</div><p>In the lawsuit petition dated February 16, 2017, and during the resolution process of the case, the plaintiff, Joint Stock Commercial Bank A, represented by its authorized representative, presented as follows:</p><p>Joint Stock Commercial Bank A (abbreviated as the Bank) and H Maritime Joint Stock Company (abbreviated as H Company) signed Credit Contract No. 68/13/TD/XI dated October 22, 2013, with the following contents: The Bank grants H Company a loan of 23,331,000,000 VND; the purpose is to pay for the purchase of the marine transport vessel P 06; the loan term is 120 months; the loan interest rate is in accordance with the regulations at the time of disbursement and when the Bank issues a notice of interest rate change; the overdue interest rate equals 150% of the in-term interest rate. H Company received the money under Debt Acknowledgement Note No. 01 dated October 22, 2013.</p><p>To secure the loan, H Company mortgaged the asset formed from the loan capital, which was the sea vessel P 06, under the Mortgage Contract for Sea Vessel to be Formed in the Future No. 112/13/TC/XI dated October 22, 2013. Subsequently, the Bank and H Company agreed to allow D Shipbuilding Joint Stock Company (abbreviated as D Company) to repair and upgrade the vessel, changing the name and registration number of Vessel P 06 to Marine Transport Vessel R 268, and increasing the value of the secured asset to 45,638,000,000 VND. On July 21, 2015, the Bank and H Company signed an additional Amendment and Supplement Contract to the Credit Contract No. 3278/15/PLTD-TT/IXI. Accordingly, the Bank approved H Company to change the name of the secured asset from Sea Vessel P 06 to Marine Transport Vessel R 268 and signed Asset Mortgage Contract No. 3364/15/TC/XI dated July 21, 2015, where the swapped secured asset was Vessel R 268. The mortgage contracts were notarized and registered for secured transaction in accordance with regulations.</p><p>During the execution of the credit contract, as of September 25, 2016, H Company had repaid the Bank a total amount of 7,621,242,760 VND; in which the principal was 2,316,135,000 VND; the in-term interest was 5,183,270,790 VND, and the overdue interest was 121,836,970 VND. H Company breached the debt repayment periods under the Credit Contract, so the Bank filed a lawsuit requesting the Court to resolve the following: To compel H Company to pay the Bank 32,834,248,529 VND, in which: the principal debt is 21,014,865,000 VND, the in-term interest is 2,539,919,640 VND, and the overdue interest is 9,279,463,889 VND (calculated up to July 12, 2019). To compel H Company to continue paying the Bank interest arising under the credit contract and debt acknowledgement note from July 13, 2019, until the debt is fully paid. In case H Company fails to pay the loan debt, the Bank has the right to request competent authorities to distrain and distrain-sell the secured asset, which is Sea Vessel R 268, to recover the debt. If the amount obtained from the distrain-sale of the secured asset is insufficient to recover the debt, H Company still has the obligation to pay the arising principal debt and interest debt to the Bank at the overdue debt interest rate stated in the Credit Contract and Debt Acknowledgement Note until the debt is fully repaid.</p><p>The defendant, H Maritime Joint Stock Company, represented by its legal representative, presented:</p><p>H Company acknowledges that the presentation of the Bank and the independent claim of D Company are correct. H Company is responsible for paying the amounts still owed to the Bank and D Company. Now, H Company does not request the application of the statute of limitations for interest payment regarding the Bank loan interest. However, currently, H Company is facing many difficulties and no longer has financial capacity. At the shareholders' meeting of the Company, it was agreed to distrain-sell Vessel R 268 to pay the debts; regarding the amount obtained from the distrain-sale of the asset, which is Vessel R 268, after paying the aforementioned debts, if there is still a shortfall, the Company commits to continue paying, and if there is a surplus, it shall be transferred to the account of H Company.</p><p>The person with related rights and obligations who has an independent claim, D Shipbuilding Joint Stock Company, represented by its authorized representative, presented:</p><p>Vessel P 06 at the time of mortgaging to the Bank was seriously damaged and no longer capable of operating, so H Company and D Company signed the Repair, Replacement, and Upgrade Contract (the 1st time) No. 11/HDKT dated November 18, 2013 (amended and accepted on July 14, 2015). Implementing the aforementioned contract, D Company made the 1st investment in the vessel with an amount of 18,774,000,000 VND, and then the 2nd repair costed 9,013,573,634 VND. The vessel was exploited until the end of December 2017 when it stopped, and H Company no longer had the capacity to pay.</p><p>D Company kept and guarded Vessel R 268 for H Company under Contract No. 06-11/2017/HHHG-DTHG dated November 6, 2017, at 3,000,000 VND/day. Up to now, H Company has still not paid D Company the entire amount for repairs and the guarding fee for Vessel R 268. On December 26, 2017, D Company filed an independent claim requesting H Company to pay D Company 9,103,573,634 VND, in which: the vessel repair cost is 8,194,157,849 VND comprising workers' wages during the vessel repair process of 4,303,138,651 VND; electricity, water, and equipment depreciation cost of 1,527,796,391 VND, replacement materials and equipment cost of 2,363,322,807 VND; Value Added Tax is 819,415,785 VND and the vessel guarding and anchoring cost from November 6, 2017, until the liquidation of the contract. If H Company cannot pay, it is requested to distrain-sell the asset, which is Vessel R 268, to pay the debts to D Company.</p><div class=\"detail-section-title\">ASSESSMENT OF THE FIRST-INSTANCE COURT AND THE APELLATE COURT</div><p>In the Business and Commercial Judgment No. 05/2019/KDTM-ST dated July 12, 2019, the People's Court of Hong Bang District, Hai Phong City decided:</p><p>To accept the lawsuit petition of the Bank against H Company:</p><p>To compel H Company to pay the Bank the total amount still owed calculated up to July 12, 2019, which is 32,834,248,529 VND; in which: the principal debt amount is 21,014,865,000 VND; the in-term interest amount is 2,539,919,640 VND; the overdue interest amount is 9,279,463,889 VND.</p><p>From the day following July 13, 2019, until the judgment enforcement is completed, the judgment debtor shall also bear interest on the remaining amount to be enforced at the interest rate agreed upon by the parties, which must be compliant with the provisions of law.</p><p>To accept the independent claim of D Company against H Company: To compel H Company to pay D Company the total cost for repairing Vessel R 268, which is 11,967,073,634 VND; in which: the vessel repair cost is 8,194,157,849 VND (comprising workers' wages during the vessel repair process of 4,303,138,651 VND; electricity, water, and equipment depreciation of 1,527,796,391 VND; replacement materials and equipment of 2,363,322,807 VND); Value Added Tax is 819,415,785 VND; the guarding and anchoring cost for Vessel R 268 from January 21, 2017, to July 12, 2019, is 2,953,500,000 VND.</p><p>H Joint Stock Company has the obligation to pay Value Added Tax in accordance with the provisions of tax law. H Company has the obligation to continue paying the guarding and anchoring cost for Vessel R 268 to D Company from July 13, 2019 (under Economic Contract No. 06-11/2017/HDHG-DTHG) until the removal and liquidation of the guarding and anchoring contract for Vessel R 268.</p><p>Regarding the aforementioned debt amount, when the judgment takes legal effect, from the date the judgment creditor files an application for enforcement until the enforcement is completed, if the civil judgment debtor fails to execute it, they shall bear monthly interest on the remaining amount to be enforced at the interest rate stipulated in Article 357 and Article 468 of the Civil Code.</p><p>In case H Company fails to perform the repayment of the entire aforementioned debt amount to the Bank, the Bank has the right to request the competent Civil Judgment Enforcement Agency to dispose of the mortgaged asset (Asset Mortgage Contract 3354/15/TC-TT/XI dated July 21, 2015) in accordance with the provisions of law to perform the obligation of paying the aforementioned amount to the Bank. The mortgaged asset to be disposed of is: Vessel R 268.</p><p>Regarding the order of priority for payment:</p><p>When disposing of the mortgaged asset, which is Vessel R 268, the amount collected after deducting judgment enforcement costs shall be prioritized for payment first to workers' wages of 4,303,318,651 VND, Value Added Tax of 819,415,785 VND, and the vessel anchoring and guarding fee of 2,953,500,000 VND to D Company; then payment of the principal debt of 21,014,865,000 VND, the in-term interest debt of 2,539,919,640 VND, and the overdue interest debt of 9,279,463,889 VND to the Bank; then continue to perform the payment obligation for the remaining shortfall to D Company for the purchase of replacement parts of 2,363,322,807 VND; and the depreciation of machinery and equipment, electricity, water, lubricating oil, gasoline grease, and blasting sand for cleaning sheet metals of 1,527,796,391 VND.</p><p>During the process of executing the payment according to the aforementioned order, if it is not paid in full, H Company must continue to pay the remaining shortfall regarding the corresponding debts still to be paid, and if there is a surplus, it shall be returned to H Company.</p><p>In addition, the judgment also decided on court fees, the right to appeal, and judgment enforcement of the litigants.</p><p>After the first-instance trial, Joint Stock Commercial Bank A appealed a part of the first-instance judgment.</p><p>In the Appellate Business and Commercial Judgment No. 19/2019/KDTM-PT dated November 25, 2019, the People's Court of Hải Phòng City decided:</p><p>To sustain the First-instance Business and Commercial Judgment No. 05/2019/KDTM-ST dated July 12, 2019, of the People's Court of Hong Bang District, Hai Phong City.</p><p>On July 6, 2021, Joint Stock Commercial Bank A submitted a complaint requesting a review under cassation procedures sent to the High People's Procuracy in Hanoi against the Appellate Business and Commercial Judgment No. 19/2019/KDTM-PT dated November 25, 2019, of the People's Court of Hai Phong City.</p><p>In Decision No. 06/QDKNGĐT-VC1-KDTM dated July 24, 2023, the Procurator General of the High People's Procuracy in Hanoi filed a protest against the Appellate Business and Commercial Judgment No. 19/2019/KDTM-PT dated November 25, 2019, of the People's Court of Hai Phong City; requesting the Judges' Committee of the High People's Court in Hanoi to conduct a cassation trial to vacate the aforementioned appellate business and commercial judgment and the First-instance Business and Commercial Judgment No. 05/2019/KDTM-ST dated July 12, 2019, of the People's Court of Hong Bang District, Hai Phong City; and to transfer the case file to the People's Court of Hong Bang District for first-instance retrial in accordance with the regulations of law, for the reason: The first-instance Court and the appellate Court ruling to prioritize the payment of vessel repair costs when disposing of the secured asset was incorrect, causing damage to the rights and interests of the Bank.</p><p>At the cassation trial, the representative of the High People's Procuracy in Hanoi requested the Judges' Committee of the High People's Court in Hanoi to accept the protest of the Procurator General of the High People's Procuracy in Hanoi.</p><div class=\"detail-section-title\">ASSESSMENT OF THE SUPREME COURT</div><p>[1] Joint Stock Commercial Bank A (abbreviated as the Bank) and H Maritime Joint Stock Company (abbreviated as H Company) signed Credit Contract No. 68/13/TD/XI dated October 22, 2013, with the contents: The Bank grants H Company a loan of 23,331,000,000 VND; the purpose is to pay for the purchase of the marine transport vessel P 06; the loan term is 120 months; the interest rate is stipulated at the time of disbursement and when the Bank issues a notice of interest rate change; the overdue interest rate is 150% of the in-term interest rate. H Company received the money under Debt Acknowledgement Note No. 01 dated October 22, 2013. To secure the loan, H Company mortgaged the asset formed from the loan capital, which was the sea vessel P 06, under the Mortgage Contract for Sea Vessel to be Formed in the Future No. 112/13/TC/XI dated October 22, 2013; after upgrading and changing the name and registration number of Vessel P 06 to Marine Transport Vessel R 268, the value of the secured asset was 45,638,000,000 VND and the parties further signed Asset Mortgage Contract No. 3364/15/TC/X1 dated July 21, 2015. The mortgage contracts were notarized and registered for secured transaction in accordance with regulations.</p><p>[2] During the execution of the credit contract, H Company had repaid the Bank a total amount of 7,621,242,760 VND; in which the principal was 2,316,135,000 VND; the in-term interest was 5,183,270,790 VND, and the overdue interest was 121,836,970 VND (calculated up to September 25, 2016). Since H Company breached the debt repayment periods, the Bank filed a lawsuit requesting the Court to compel H Company to pay the debt of 32,834,248,529 VND, in which: 21,014,865,000 VND principal debt, 2,539,919,640 VND in-term interest, and 9,279,463,889 VND overdue interest (calculated up to July 12, 2019), and the interest arising under the credit contract and debt acknowledgement note from July 13, 2019, until the debt is fully paid. In case H Company fails to pay the loan debt, the Bank has the right to request competent authorities to distrain and distrain-sell the secured asset, which is Sea Vessel R 268, to recover the debt. If the amount obtained from the distrain-sale of the secured asset is insufficient to recover the debt, H Company must have the obligation to pay the arising principal debt and interest debt to the Bank at the overdue debt interest rate stated in the Credit Contract and Debt Acknowledgement Note until the debt is fully repaid.</p><p>[3] Regarding the claim of D Shipbuilding Joint Stock Company (D Company), since Vessel P 06 at the time of mortgaging to the Bank was seriously damaged, the Bank and H Company agreed to allow H Company to repair and upgrade Vessel P 06 into Marine Transport Vessel R 268. H Company signed a contract with D Company regarding the repair, upgrade, and guarding of the vessel. Until the date the Bank filed the lawsuit, H Company had not paid D Company the entire repair costs and guarding fee for Vessel R 268. On December 26, 2017, D Company filed an independent claim requesting H Company to pay D Company the vessel repair cost of 8,194,157,849 VND, comprising workers' wages during the vessel repair process of 4,303,138,651 VND; electricity, water, and equipment depreciation of 1,527,796,391 VND, replacement materials and equipment of 2,363,322,807 VND; Value Added Tax of 819,415,785 VND and the vessel guarding and anchoring cost from November 6, 2017, until the liquidation of the contract. In case H Company cannot pay, it is requested to distrain-sell the asset, which is Vessel R 268, to pay the debts to D Company.</p><p>[4] During the resolution process of the case, H Company confirmed the principal debt and interest amounts toward the Bank and confirmed the amount still owed to D Company. Therefore, it is well-founded for the first-instance Court and the appellate Court to rule to compel H Company to pay Q Vietnam Company Limited (as the legal successor to the procedural rights and obligations of the Bank) and D Company the outstanding amounts.</p><p>[5] In the Protest Decision No. 06/QDKNGĐT-VC1-KDTM, the Procurator General of the High People's Procuracy in Hanoi assessed: \"... it is well-founded for both the first-instance Court and the appellate Court to rule to compel H Company to pay Q Vietnam Company Limited (as the legal successor to the procedural rights and obligations of the Bank) the total principal debt and interest debt calculated up to July 12, 2019, which is 32,834,248,529 VND; and to compel H Company to pay D Company the vessel repair money and guarding money for Vessel R 268 totaling 11,967,073,634 VND\"; only requesting re-resolution regarding the order of priority for payment, but requesting to vacate both the appellate and first-instance judgments for re-resolution is inappropriate.</p><p>[6] Regarding the order of priority for payment, it is found that the repair, upgrade, and guarding of Vessel R 268 between H Company and D Company are factual; the Bank was aware of and agreed on H Company repairing and upgrading the vessel's value. Until the first-instance and appellate trials, H Company had not paid D Company the repair and guarding costs under the signed contracts. The first-instance Court and the appellate Court cited the provisions in Article 307 of the 2015 Civil Code and Point b, Clause 12, Article 1 of Decree No. 11/2012/ND-CP dated February 22, 2012, to decide that when disposing of the mortgaged asset, priority shall be given to first paying D Company the costs regarding workers' wages, taxes, and vessel guarding fees, which is well-founded, equitable, and reasonable, ensuring the rights and interests of workers and ensuring the performance of tax payment obligations to the State. Therefore, it is necessary to sustain the decisions of the first-instance judgment and the appellate judgment.</p><p>For the reasons stated above,</p><div class=\"detail-section-title\">DECISION</div><p>Pursuant to Point a, Clause 1, Article 337 and Clause 1, Article 343 of the 2015 Civil Procedure Code;</p><p>To reject the Cassation Decision to Protest No. 06/QDKNGĐT-VC1-KDTM dated July 24, 2023, of the Procurator General of the High People's Procuracy in Hanoi.</p><p>To sustain the Appellate Business and Commercial Judgment No. 19/2019/KDTM-PT dated November 25, 2019, of the People's Court of Hai Phong City regarding the case \"Credit contract dispute\" between the plaintiff Joint Stock Commercial Bank A and the defendant H Maritime Joint Stock Company; the person with related rights and obligations being D Shipbuilding Joint Stock Company.</p><div class=\"detail-section-title\">CONTENT OF THE CASE LAW</div><p>\"[6] Regarding the order of priority for payment, it is found that the repair, upgrade, and guarding of Vessel R 268 between H Company and D Company are factual; the Bank was aware of and agreed on H Company repairing and upgrading the vessel's value. Until the first-instance and appellate trials, H Company had not paid D Company the repair and guarding costs under the signed contracts. The first-instance Court and the appellate Court cited the provisions in Article 307 of the 2015 Civil Code and Point b, Clause 12, Article 1 of Decree 11/2012/ND-CP dated February 22, 2012, to decide that when disposing of the mortgaged asset, priority shall be given to first paying D Company the costs regarding workers' wages, taxes, and vessel guarding fees, which is well-founded, equitable, and reasonable, ensuring the rights and interests of workers and ensuring the performance of tax payment obligations to the State. Therefore, it is necessary to sustain the decisions of the first-instance judgment and the appellate judgment.\"</p>",
+                "provider": "manual-admin",
+                "translatedAt": "2026-06-18T10:20:00.439Z"
+              }
+            },
+            "translationMeta": {
+              "en": {
+                "status": "ready",
+                "provider": "manual-admin",
+                "translatedAt": "2026-06-18T10:20:00.439Z"
+              }
+            }
+          },
+          {
+            "id": "case-an-le-so-86-1",
+            "ten": "Bình luận về Án lệ số 86/2026/AL về sự kiện pháp lý làm phát sinh căn cứ để xem xét kháng nghị theo thủ tục tái thẩm",
+            "mo_ta": "",
+            "lvId": "kinh-doanh-thuong-mai",
+            "lvName": "Kinh doanh - Thương mại",
+            "sfId": "an-le",
+            "sfName": "Án lệ",
+            "sao": 3,
+            "ngay": "2026-06-18T17:16:44.3275574+07:00",
+            "updatedAt": "2026-06-18T10:20:24.904Z",
+            "tom_luoc": "<p>Vào ngày 21/3/2011, Công ty T ký hợp đồng tín dụng hạn mức với Ngân hàng Q.</p><p>Để đảm bảo cho khoản vay, Công ty T đã thế chấp quyền đòi nợ đối với Công ty H thông qua các hợp đồng thế chấp được ký kết và đăng ký trong năm 2011 (vào các ngày 21/3, 30/9 và được sửa đổi bổ sung vào ngày 14/11/2011).</p><p>Do Công ty T vi phạm nghĩa vụ trả nợ, đến ngày 19/7/2018, Ngân hàng Q đã chính thức làm đơn khởi kiện yêu cầu Tòa án giải quyết.</p><p>Trải qua quá trình xét xử, vào ngày 22/8/2020, Tòa án nhân dân quận Hai Bà Trưng đã ban hành Bản án sơ thẩm số 15/2020/KDTM-ST, tuyên chấp nhận toàn bộ yêu cầu khởi kiện của Ngân hàng Q.</p><p>Tuy nhiên, diễn biến vụ án hoàn toàn thay đổi khi Cơ quan điều tra hình sự Bộ Quốc phòng vào cuộc và phát hiện ông Đoàn Hồng D (Giám đốc Công ty T) có hành vi gian dối nhằm chiếm đoạt tiền của ngân hàng.</p><p>Dẫn đến việc ngày 26/9/2021, cơ quan điều tra đã ra quyết định khởi tố vụ án hình sự và khởi tố bị can đối với ông D cùng người liên quan.</p><p>Đến ngày 15/11/2021, cơ quan này đã có văn bản đề nghị Tòa án xem xét kháng nghị bản án sơ thẩm do xuất hiện tình tiết mới.</p><p>Căn cứ vào đó, ngày 10/12/2021, Chánh án Tòa án nhân dân cấp cao tại Hà Nội đã ban hành quyết định kháng nghị tái thẩm.</p><p>Cuối cùng, tại phiên tòa tái thẩm, Ủy ban Thẩm phán đã ra quyết định hủy bỏ toàn bộ bản án sơ thẩm ngày 22/8/2020, giao hồ sơ về cho Tòa án nhân dân quận Hai Bà Trưng để giải quyết lại từ đầu, đồng thời định hướng phải tạm đình chỉ giải quyết vụ án dân sự để chờ kết quả xử lý của vụ án hình sự.</p>",
+            "ap_dung": "<p>Nội dung án lệ này có thể được áp dụng như một cơ sở pháp lý định hướng quan trọng cho các cơ quan tiến hành tố tụng khi giải quyết các vụ án dân sự hoặc kinh doanh thương mại (đặc biệt là các tranh chấp hợp đồng tín dụng), mà trong đó có sự đan xen với các yếu tố hình sự.</p><p>Cụ thể, án lệ này sẽ được vận dụng trong những tình huống mà sau khi Tòa án đã ban hành bản án giải quyết tranh chấp, cơ quan điều tra lại phát hiện ra một bên đương sự có hành vi gian dối, chiếm đoạt tài sản liên quan trực tiếp đến chính khoản tiền hoặc tài sản đang tranh chấp và quyết định khởi tố vụ án hình sự,. Trong các trường hợp tương tự, Tòa án phải coi hành vi phạm tội mới bị phát hiện này là một \"tình tiết mới\" có thể làm thay đổi cơ bản nội dung của bản án trước đó, từ đó làm căn cứ để kháng nghị theo thủ tục tái thẩm nhằm hủy bỏ toàn bộ bản án dân sự/kinh doanh thương mại đã tuyên.</p><p>Khi thụ lý xét xử lại vụ án, Tòa án bắt buộc phải tạm đình chỉ giải quyết vụ án dân sự để chờ kết quả giải quyết của vụ án hình sự. Nếu khoản tiền tranh chấp đã được giải quyết triệt để theo quy định của pháp luật hình sự bằng một bản án hoặc quyết định có hiệu lực, Tòa án sẽ ra quyết định đình chỉ giải quyết vụ án dân sự/kinh doanh thương mại đó</p>",
+            "chi_tiet": "<div class=\"detail-section-title\">NỘI DUNG VỤ ÁN</div><p>Theo đơn khởi kiện đề ngày 19/7/2018 và quá trình tố tụng, nguyên đơn là Ngân hàng thương mại cổ phần Q (do người đại diện) trình bày: Ngày 21/3/2011, Công ty trách nhiệm hữu hạn T (sau đây viết tắt là Công ty T) ký hợp đồng tín dụng hạn mức số 29.11.066.899998.TD với Ngân hàng thương mại có phần Q (sau đây viết tắt là Ngân hàng Q). Theo đó, Ngân hàng Q đồng ý cấp cho Công ty T các khoản tín dụng với tổng số tiền cam kết tối đa tại mọi thời điểm là 300.000.000.000 đồng trong đó giá trị hạn mức bảo lãnh thanh toán tối đa là 200.000.000.000 đồng đề tài trợ vốn lưu động, mở L/C nhập khẩu phục vụ cho hoạt động sản xuất kinh doanh thép, phôi thép và các loại than năm 2011.</p><p>Ngân hàng Q đã giải ngân cho Công ty T số tiền 246.000.000.000 đồng thông qua 06 khế ước nhận nợ, thời hạn vay vốn là 03 tháng tỉnh từ ngày giải ngân của từng khế ước</p><p>Tài sản bảo đảm cho khoản vay nêu trên của Công ty T bao gồm:</p><p>- Quyền đòi nợ đối với Công ty TNHH thương mại và xây dựng H theo hợp đồng thế chấp số 18.11.066.899998. ĐB ngày 21/3/2011 (sửa đổi ngày 14/11/2011) được đăng ký thế chấp tại Trung tâm đăng ký giao dịch tài sản tại Hà Nội ngày 29/3/2011, giá trị 607.550.000.000 đồng.</p><p>- Quyền đòi nợ đối với Công ty TNHH thương mại và xây dựng H theo hợp đồng thể chấp số 78.11.066.899998. ĐB ngày 30/9/2011 được đăng ký thẻ chấp tại Trung tâm đăng ký giao dịch tài sản tại Hà Nội ngày 04/10/2011, giá trị 65.620.480,302 đồng.</p><p>Ngoài ra, khoản vay còn được bảo đảm bằng tài sản là bất động sản khác nhưng đã được hai bên thỏa thuận xử lý trong quá trình Ngân hàng thu hồi nợ đổi với Công ty T và đã giải chấp đối với các bất động sản thế chấp.</p><p>Quá trình thực hiện hợp đồng, do Công ty Ti vi phạm nghĩa vụ trả nợ dần đến các khoản nợ theo các khế ước nêu trên bị chuyển sang nợ quá hạn nên Ngân hàng khởi kiện đề nghị Tòa án buộc Công ty T phải trả nợ Ngân hàng tỉnh đến ngày xét xử sơ thẩm 22/8/2020 với tổng số tiền là 535.605.196.882 đồng; trong đó nợ gốc là 133.783.843.161 đồng, lãi trong hạn là 4.979.395.772 đồng; lãi quả hạn là 396.841.957.949 đồng và có quyền yêu cầu cơ quan có thẩm quyền xử lý các tài sản bảo đảm là quyền đòi nợ theo hợp đồng thế chấp số 18.11.066.899998.DB ngày 21/3/2011 (sửa đổi ngày 14/11/2011) và quyền đối nợ theo hợp đồng thế chấp số 78.11.066.899998 ĐB ngày 30/9/2011 trong trường hợp Công ty T không trả được khoản vay nợ nêu trên đối với Ngân hàng.</p><p>Bị đơn là Công ty trách nhiệm hữu hạn thương mại và dịch vụ du lịch T (do người đại diện là ông Đoàn Hồng D tại Biên bản lấy lời khai ngày 04/6/2020) trình bày: Ông nhất trí với lời trình bày của đại diện Ngân hàng về việc ký kết hợp đồng tín dụng hạn mức số 29.11.066.899998. TD, về số tiền giải ngân theo 06 khế ước nhận nợ đã ký. Tài sản bảo đảm cho khoản vay nêu trên là 02 quyền đòi nợ đối với Công ty trách nhiệm hữu hạn thương mại và xây dựng H (sau đây viết tắt là Công ty H) và một số các bất động sản khác. Quá trình thực hiện nghĩa vụ trả nợ, Công ty T và Ngân hàng Q đã thỏa thuận xử lý các tài sản bảo đảm là một số các bất động sản để thu hồi nợ, Ngân hàng Q đã giải chấp các bất động sản. Tuy nhiên, do khẩu trừ các giá trị bất động sản quá thấp dần đến dư nợ của hợp đồng vẫn còn như yêu cầu khởi kiện hiện nay của Ngân hàng Q. Theo nội dung đơn khởi kiện và các tài liệu mà Tòa án thông báo, Công ty T được biết tạm tỉnh đến ngày 14/7/2018, Công ty T còn nợ Ngân hàng tổng số tiền là 407.316.591.766 đồng, trong đó nợ gốc là 133.783.843.161 đồng, nợ lãi là 313.532.748.605 đồng. Đây là số liệu do Ngân hàng Q cung cấp, phía Công ty T không còn hoạt động, bản thân ông là đại diện theo pháp luật của Công ty T nhưng bị tạm giam đã lâu nên không nhớ và không còn bất cứ một tài liệu chứng cứ nào để đối chiếu và chúng mình nên ông không có cơ sở để xác nhận số dư nợ nêu trên. Vì vậy, ông không đồng ý với yêu cầu khởi kiện của Ngân hàng Q. Do hiện nay Công ty T không còn hoạt động và không có khả năng tài chính dễ thực hiện nghĩa vụ trả nợ nên đề nghị Tòa án căn cứ quy định của pháp luật để giải quyết. Đối với việc xử lý tài sản thế chấp là 02 quyền đòi nợ của Công ty T đối với Công ty H theo các hợp đồng đã ký giữa các bên. Do hiện nay Công ty H cũng không còn hoạt động và không còn khả năng tài chính, đại diện theo pháp luật của Công ty H là bà Nguyễn Thị Thanh 5 và các thành viên của Công ty H hiện đang làm gì, ở đâu ông không biết, các hợp đồng mua bán giữa Công ty T và Công ty H cũng đã tất toán nên không còn tài sản để Ngân hàng yêu cầu xử lý tài sản thế chấp là 02 quyền đòi nợ với Công ty H, đề nghị Tòa án giải quyết theo quy định của pháp luật.</p><p>Người có quyền lợi, nghĩa vụ liên quan là Công ty trách nhiệm hữu hạn thương mại và xây dựng H có trụ sở theo Giấy chứng nhận đăng ký doanh nghiệp tại Cụm tiểu thủ công nghiệp, làng nghề Đ, xã H1, huyện D, tỉnh Hà Nam. Qua xác minh tài chính quyền địa phương, hiện Công ty H không còn hoạt động tại địa chỉ nêu trên, bà Nguyễn Thị Thanh S là người đại diện theo pháp luật của Công ty H cũng không còn sinh sống tại nơi đăng ký hộ khẩu thường trú. Địa chỉ số 425 đường M, phường V, quận B, thành phố Hà Nội đã bị giải tỏa cho dự án mở dưỡng M. hiện bà S đi đâu chính quyền địa phương không biết.</p><div class=\"detail-section-title\">NHẬN ĐỊNH CỦA TÒA ÁN CẤP SƠ THẨM</div><p>Tại Bản án kinh doanh, thương mại sơ thẩm số 15/2020/KDTM-ST ngày 22/8/2020, Tòa án nhân dân quận Hai Bà Trưng, thành phố Hà Nội quyết định:</p><p>Chấp nhận toàn bộ yêu cầu khởi kiện của Ngân hàng Q đối với Công ty T.</p><p>Buộc Công ty T phải trả cho Ngân hàng Q số dư nợ theo hợp đồng tín dụng hạn mức số 29.11.066.899998. TD ngày 21/3/2011 và 06 khế ước nhận nợ kèm theo tạm tính đến ngày 22/8/2020 số tiền là:</p><p>- Nợ gốc: 133.783.843.161 đồng.</p><p>- Nợ lãi trong hạn: 4.979.395.772 đồng.</p><p>- Nợ lãi quá hạn: 396.841.957.949 đồng</p><p>Tổng cộng: 535.605.196.882 đồng (Năm trăm ba mươi lăm tỷ sáu trăm linh năm triệu một trăm chín sáu nghìn tám trăm tám hai đồng).</p><p>Kể từ ngày tiếp theo của ngày xét xử sơ thẩm cho đến khi thi hành án xong. bên phải thi hành án còn phải chịu khoản tiền lãi của số tiền nợ gốc còn phải thi hành án theo mức lãi suất nợ quá hạn mà các bên thỏa thuận trong hợp đồng tín dụng nhưng phải phù hợp với quy định của pháp luật,</p><p>Trường hợp Công ty T không trả hoặc trả không đầy đủ khoản nợ trên, Ngân hàng Q có quyền đề nghị cơ quan thi hành án có thẩm quyền xử lý các tài sản đảm bảo gồm:</p><p>Quyền đòi nợ của Công ty T đối với Công ty TNHH thương mại và xây dựng 1 có giá trị là 607.550.000.000 đồng theo hợp đồng thế chấp số 18.11.066.899998.ĐB ngày 21/03/2011 và Văn bản sửa đổi hợp đồng số 90.11.066.899998 ngày 14/11/2011;</p><p>- Quyền đòi nợ của Công ty T đối với Công ty TNHH thương mại và xây dựng H có giá trị là 65.620.480.302 đồng theo hợp đồng thế chấp số 76.11.066.899998.ĐB ngày 30/9/2011.</p><p>Ngoài ra bản án còn quyết định về án phí và quyền kháng cáo của các đương sự.</p><p>Ngày 15/11/2021, Cơ quan điều tra hình sự - Bộ Quốc phòng có Văn bản số 258/ĐTHS-P1 đề nghị xem xét kháng nghị theo thủ tục giám đốc thẩm, tái thẩm đối với bản án kinh doanh, thương mại sơ thẩm nêu trên của Tòa án nhân dân quận Hai Bà Trưng, thành phố Hà Nội.</p><p>Tại Quyết định kháng nghị tái thẩm số 23/2021/KN-KDTM ngày 10/12/2021, Chánh án Tòa án nhân dân cấp cao tại Hà Nội kháng nghị Bản án kinh doanh, thương mại sơ thẩm số 15/2020/KDTM-ST ngày 22/8/2020 của Tòa án nhân dân quận Hai Bà Trưng, thành phố Hà Nội; đề nghị Ủy ban Thẩm phán Tòa án nhân dân cấp cao tại Hà Nội xét xử tải thầm hủy toàn bộ bản án kinh doanh, thương mại sơ thẩm nêu trên, giao hồ sơ vụ án cho Tòa án nhân dân quận Hai Bà Trưng, thành phố Hà Nội giải quyết lại theo thủ tục sơ thẩm đúng quy định của pháp luật.</p><p>Tại phiên tòa tái thẩm, đại diện Viện kiểm sát nhân dân cấp cao tại Hà Nội đề nghị Ủy ban Thẩm phán Tòa án nhân dân cấp cao tại Hà Nội chấp nhận kháng nghị của Chánh án Tòa án nhân dân cấp cao tại Hà Nội.</p><div class=\"detail-section-title\">NHẬN ĐỊNH CỦA TÒA ÁN TỐI CAO</div><p>[1] Theo xác minh của Cơ quan điều tra hình sự Bộ Quốc phòng xác định, sau khi ký kết hợp đồng tín dụng số 29.11.066.899998.TD ngày 21/3/2011 với Ngân hàng Q, Công ty T đã lập hồ sơ vay tiền của Ngân hàng Q - Chi nhánh L thành phố Hà Nội mua phôi thép của Công ty SĨ Việt Nam bản cho Công ty 0. Thực tế, Công ty T đã không chuyển số tiên bản phôi thép vào tài khoản của Công ty T mở tại Ngân hàng Q để trả nợ cho Ngân hàng mà yêu cầu Công ty ) chuyển tiền về tài khoản của Công ty T mở tại Ngân hàng B - Chi nhánh H2 để sử dụng vào mục đích khác nên có căn cứ xác định ông Đoàn Hồng D - Giám đốc Công ty T đã có hành vi gian dối trong việc trả nợ để chiếm đoạt của Ngân hàng Q số tiền 86.000.000.000 đồng nợ gốc. Ngày 26/9/2021, Cơ quan điều tra hình sự Bộ Quốc phòng ra quyết định khởi tố vụ án và quyết định khởi tố bị can đối với Đoàn Hồng D và Nguyễn Thị Thanh S về hành vi \"Lạm dụng tín nhiệm chiếm đoạt tài sản\" theo quy định tại khoản 4 Điều 175 Bộ luật Hình sự.</p><p>[2] Như vậy, hành vi của ông Đoàn Hồng D được Cơ quan điều tra hình sự Bộ Quốc phòng xác định là hành vi phạm tội, đây là tỉnh tiết mới được phát hiện có thể làm thay đổi cơ bản nội dung của Bản án kinh doanh, thương mại sơ thẩm số 15/2020/KDTM-ST ngày 22/8/2020 của Tòa án nhân dân quận Hai Bà Trưng, thành phố Hà Nội, là căn cứ để kháng nghị vụ án theo thủ tục tái thẩm. Do đó, cần hủy bản án kinh doanh, thương mại sơ thẩm nêu trên theo thủ tục tái thẩm để giao cho Tòa án cấp sơ thẩm xét xử lại.</p><p>[3] Khi thụ lý lại vụ án, Tòa án nhân dân quận Hai Bà Trưng cần căn cứ điểm d khoản 1 Điều 214 Bộ luật Tố tụng dân sự tạm đình chỉ giải quyết vụ án đề chờ kết quả giải quyết vụ án hình sự đối với các bị can Đoàn Hồng D và Nguyễn Thị Thanh S. Nếu các hành vi nêu trên và khoản tiền vay theo hợp đồng tín dụng hạn mức số 29.11.066.899998.TD ngày 21/3/2011 được xử lý theo quy định của pháp luật hình sự bằng bản án, quyết định có hiệu lực thì Tòa án cấp sơ thẩm định chỉ giải quyết vụ án kinh doanh, thương mại theo quy định tại điểm c khoản 1 Điều 192 và điểm g Điều 217 Bộ luật Tố tụng dân sự năm 2015.</p><p>Vì các lẽ trên,</p><div class=\"detail-section-title\">QUYẾT ĐỊNH</div><p>Căn cứ vào Điều 351; khoản 2 Điều 356 Bộ luật Tố tụng dân sự năm 2015;</p><p>1. Chấp nhận Quyết định kháng nghị tái thẩm số 23/2021/KN-KDTM ngày 10/12/2021 của Chánh án Tòa án nhân dân cấp cao tại Hà Nội.</p><p>2. Hủy Bản ẩn kinh doanh, thương mại sơ thẩm số 15/2020/KDTM-ST ngày 22/8/2020 của Tòa án nhân dân quận Hai Bà Trưng, thành phố Hà Nội về vụ án \"Tranh chấp hợp đồng tín dụng\" giữa nguyên đơn là Ngân hàng Q với bị đơn là Công ty T; người có quyền lợi, nghĩa vụ liên quan là Công ty trách nhiệm hữu hạn thương mại và xây dựng H.</p><p>3. Giao hồ sơ vụ án cho Tòa án nhân dân quận Hai Bà Trưng, thành phố Hà Nội giải quyết lại theo thủ tục sơ thẩm theo quy định của pháp luật.</p><div class=\"detail-section-title\">NỘI DUNG ÁN LỆ</div><p>\"[1] Theo xác minh của Cơ quan điều tra hình sự Bộ Quốc phòng xác định, sau khi ký kết hợp đồng tín dụng số 29.11.066.899998.TD ngày 21/3/2011 với Ngân hàng Q. Công ty T đã lập hồ sơ vay tiền của Ngân hàng Q - Chi nhánh 1, thành phố Hà Nội mua phôi thép của Công ty S1 Việt Nam bán cho Công ty Q. Thực tế, Công ty T đã không chuyển số tiền bản phôi thép vào tài khoản của Công ty T mở tại Ngân hàng Q để trả nợ cho Ngân hàng mà yêu cầu Công ty ở chuyên tiến về tài khoản của Công ty T mở tại Ngân hàng B - Chi nhánh H2 để sử dụng vào mục đích khác nên có căn cứ xác định ông Đoàn Hồng D - Giám đốc Công ty T đã có hành vi gian dối trong việc trả nợ để chiếm đoạt của Ngân hàng Q số tiền 86.000.000.000 đồng nợ gốc. Ngày 26/9/2021, Cơ quan điều tra hình sự Bộ Quốc phòng ra quyết định khởi tố vụ án và quyết định khởi tố bị can đối với Đoàn Hồng D và Nguyễn Thị Thanh S về hành vi \"Lạm dụng tín nhiệm chiếm đoạt tài sản\" theo quy định tại khoản 4 Điều 175 Bộ luật Hình sự.</p><p>[2] Như vậy, hành vi của ông Đoàn Hồng D được Cơ quan điều tra hình sự Bộ Quốc phòng xác định là hành vi phạm tội, đây là tình tiết mới được phát hiện có thể làm thay đổi cơ bản nội dung của Bản án kinh doanh, thương mại sơ thẩm số 15/2020/KDTM-ST ngày 22/8/2020 của Tòa án nhân dân quận Hai Bà Trưng, thành phố Hà Nội, là căn cứ để kháng nghị vụ án theo thủ tục tái thẩm. Do đó, cần hủy bản án kinh doanh, thương mại sơ thẩm nêu trên theo thủ tục tải thấm để giao cho Tòa án cấp. sơ thẩm xét xử lại.</p>",
+            "timeline": [
+              "Vào ngày 21/3/2011, Công ty T ký hợp đồng tín dụng hạn mức với Ngân hàng Q.",
+              "Để đảm bảo cho khoản vay, Công ty T đã thế chấp quyền đòi nợ đối với Công ty H thông qua các hợp đồng thế chấp được ký kết và đăng ký trong năm 2011 (vào các ngày 21/3, 30/9 và được sửa đổi bổ sung vào ngày 14/11/2011).",
+              "Do Công ty T vi phạm nghĩa vụ trả nợ, đến ngày 19/7/2018, Ngân hàng Q đã chính thức làm đơn khởi kiện yêu cầu Tòa án giải quyết.",
+              "Trải qua quá trình xét xử, vào ngày 22/8/2020, Tòa án nhân dân quận Hai Bà Trưng đã ban hành Bản án sơ thẩm số 15/2020/KDTM-ST, tuyên chấp nhận toàn bộ yêu cầu khởi kiện của Ngân hàng Q.",
+              "Tuy nhiên, diễn biến vụ án hoàn toàn thay đổi khi Cơ quan điều tra hình sự Bộ Quốc phòng vào cuộc và phát hiện ông Đoàn Hồng D (Giám đốc Công ty T) có hành vi gian dối nhằm chiếm đoạt tiền của ngân hàng.",
+              "Dẫn đến việc ngày 26/9/2021, cơ quan điều tra đã ra quyết định khởi tố vụ án hình sự và khởi tố bị can đối với ông D cùng người liên quan.",
+              "Đến ngày 15/11/2021, cơ quan này đã có văn bản đề nghị Tòa án xem xét kháng nghị bản án sơ thẩm do xuất hiện tình tiết mới.",
+              "Căn cứ vào đó, ngày 10/12/2021, Chánh án Tòa án nhân dân cấp cao tại Hà Nội đã ban hành quyết định kháng nghị tái thẩm.",
+              "Cuối cùng, tại phiên tòa tái thẩm, Ủy ban Thẩm phán đã ra quyết định hủy bỏ toàn bộ bản án sơ thẩm ngày 22/8/2020, giao hồ sơ về cho Tòa án nhân dân quận Hai Bà Trưng để giải quyết lại từ đầu, đồng thời định hướng phải tạm đình chỉ giải quyết vụ án dân sự để chờ kết quả xử lý của vụ án hình sự."
+            ],
+            "laws": [
+              {
+                "name": "khoản 4 Điều 175 Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "điểm d khoản 1 Điều 214 Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "điểm c khoản 1 Điều 192",
+                "content": ""
+              },
+              {
+                "name": "điểm g Điều 217 Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "Điều 351",
+                "content": "",
+                "name_en": "Article 351",
+                "translations": {
+                  "en": {
+                    "title": "Article 351",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "khoản 2 Điều 356 Bộ luật Tố tụng d&#226",
+                "content": ""
+              },
+              {
+                "name": "Clause 4, Article 175 of the Criminal Code",
+                "content": "",
+                "name_en": "Clause 4, Article 175 of the Criminal Code",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Clause 4, Article 175 of the Criminal Code",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Point d, Clause 1, Article 214",
+                "content": "",
+                "name_en": "Point d, Clause 1, Article 214",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Point d, Clause 1, Article 214",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Point c, Clause 1, Article 192",
+                "content": "",
+                "name_en": "Point c, Clause 1, Article 192",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Point c, Clause 1, Article 192",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Point g, Article 217",
+                "content": "",
+                "name_en": "Point g, Article 217",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Point g, Article 217",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Clause 2, Article 356",
+                "content": "",
+                "name_en": "Clause 2, Article 356",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Clause 2, Article 356",
+                    "content": ""
+                  }
+                }
+              }
+            ],
+            "translations": {
+              "en": {
+                "ten": "Commentary on Case Law No. 86/2026/AL regarding the legal event giving rise to grounds for reviewing a protest under reopening procedures",
+                "tom_luoc": "<p>On March 21, 2011, Company T signed a credit limit contract with Bank Q.</p><p>To secure the loan, Company T mortgaged its right to claim debt against Company H through mortgage contracts signed and registered in 2011 (specifically on March 21, September 30, and amended on November 14, 2011).</p><p>Because Company T violated its debt repayment obligations, Bank Q officially filed a lawsuit on July 19, 2018, requesting the Court's resolution.</p><p>Through the trial process, on August 22, 2020, the People's Court of Hai Ba Trung District issued First-Instance Judgment No. 15/2020/KDTM-ST, accepting all of Bank Q's claims.</p><p>However, the progression of the case completely changed when the Criminal Investigation Agency of the Ministry of Defense intervened and discovered that Mr. Doan Hong D (Director of Company T) had committed fraudulent acts to appropriate the bank's money.</p><p>This led to the investigation agency issuing a decision to prosecute a criminal case and prosecute Mr. D and related individuals on September 26, 2021.</p><p>On November 15, 2021, this agency issued a document requesting the Court to consider protesting the first-instance judgment due to the emergence of new circumstances.</p><p>Based on this, on December 10, 2021, the Chief Justice of the High People's Court in Hanoi issued a retrial protest decision.</p><p>Ultimately, at the retrial, the Judicial Committee decided to completely cancel the first-instance judgment dated August 22, 2020, and returned the file to the People's Court of Hai Ba Trung District for retrial, while also directing a temporary suspension of the civil case to await the outcome of the criminal case</p>",
+                "timeline": [
+                  "On March 21, 2011, Company T signed a credit limit contract with Bank Q.",
+                  "To secure the loan, Company T mortgaged its right to claim debt against Company H through mortgage contracts signed and registered in 2011 (specifically on March 21, September 30, and amended on November 14, 2011).",
+                  "Because Company T violated its debt repayment obligations, Bank Q officially filed a lawsuit on July 19, 2018, requesting the Court's resolution.",
+                  "Through the trial process, on August 22, 2020, the People's Court of Hai Ba Trung District issued First-Instance Judgment No. 15/2020/KDTM-ST, accepting all of Bank Q's claims.",
+                  "However, the progression of the case completely changed when the Criminal Investigation Agency of the Ministry of Defense intervened and discovered that Mr. Doan Hong D (Director of Company T) had committed fraudulent acts to appropriate the bank's money.",
+                  "This led to the investigation agency issuing a decision to prosecute a criminal case and prosecute Mr. D and related individuals on September 26, 2021.",
+                  "On November 15, 2021, this agency issued a document requesting the Court to consider protesting the first-instance judgment due to the emergence of new circumstances.",
+                  "Based on this, on December 10, 2021, the Chief Justice of the High People's Court in Hanoi issued a retrial protest decision.",
+                  "Ultimately, at the retrial, the Judicial Committee decided to completely cancel the first-instance judgment dated August 22, 2020, and returned the file to the People's Court of Hai Ba Trung District for retrial, while also directing a temporary suspension of the civil case to await the outcome of the criminal case"
+                ],
+                "ap_dung": "<p>The content of this precedent can be applied as a crucial guiding legal basis for judicial bodies when resolving civil or commercial dispute cases (especially credit contract disputes) that intertwine with criminal elements.</p><p>Specifically, this precedent will be applied in situations where, after the Court has issued a judgment resolving the dispute, the investigating agency discovers that one of the parties committed fraudulent acts to appropriate property directly related to the very funds or assets under dispute, leading to the initiation of a criminal case,. In such similar cases, the Court must recognize this newly discovered criminal act as a \"new circumstance\" that could fundamentally change the content of the previous judgment, thereby serving as a basis for a retrial protest to annul the entirety of the issued civil/commercial judgment.</p><p>Upon re-accepting the case for trial, the Court is strictly required to temporarily suspend the civil proceedings to await the resolution of the criminal case. If the disputed amount is thoroughly resolved under criminal law through a legally effective judgment or decision, the Court will issue a decision to terminate the civil/commercial case entirely.</p>",
+                "chi_tiet": "<div class=\"detail-section-title\">CASE FACTS</div><p>According to the lawsuit petition dated July 19, 2018, and during the course of legal proceedings, the plaintiff, Joint Stock Commercial Bank Q (represented by its representative), presented as follows:</p><p>On March 21, 2011, T Company Limited (hereinafter abbreviated as T Company) signed credit line contract No. 29.11.066.899998.TD with Joint Stock Commercial Bank Q (hereinafter abbreviated as Bank Q). Accordingly, Bank Q agreed to grant T Company credit facilities with a maximum total committed amount at any time of 300,000,000,000 VND, in which the maximum value of the payment guarantee limit was 200,000,000,000 VND, to finance working capital and open import L/Cs serving production and business activities of steel, steel billets, and types of coal in 2011.</p><p>Bank Q disbursed to T Company the amount of 246,000,000,000 VND through 06 debt acknowledgement notes, with a loan term of 03 months calculated from the disbursement date of each note.</p><p>Secured assets for the aforementioned loan of T Company included:</p><p>The right to demand debt from H Trading and Construction Company Limited under mortgage contract No. 18.11.066.899998.DB dated March 21, 2011 (amended on November 14, 2011), registered for mortgage at the Center for Registration of Asset Transactions in Hanoi on March 29, 2011, with a value of 607,550,000,000 VND.</p><p>The right to demand debt from H Trading and Construction Company Limited under mortgage contract No. 78.11.066.899998.DB dated September 30, 2011, registered for mortgage at the Center for Registration of Asset Transactions in Hanoi on October 4, 2011, with a value of 65,620,480,302 VND.</p><p>In addition, the loan was also secured by other real estate assets, but the two parties agreed to handle them during the process of the Bank recovering debts from T Company, and the release of mortgage has been executed for the mortgaged real estates.</p><p>During the execution of the contract, due to T Company breaching its debt repayment obligation, leading to the debts under the aforementioned notes being transferred to overdue status, the Bank filed a lawsuit requesting the Court to compel T Company to pay the debt to the Bank provisionally calculated to the first-instance trial date of August 22, 2020, with a total amount of 535,605,196,882 VND; in which the principal debt was 133,783,843,161 VND, the in-term interest was 4,979,395,772 VND; the overdue interest was 396,841,957,949 VND, and requested the right to demand competent authorities to dispose of the secured assets which are the rights to demand debt under mortgage contract No. 18.11.066.899998.DB dated March 21, 2011 (amended on November 14, 2011) and the right to demand debt under mortgage contract No. 78.11.066.899998.DB dated September 30, 2011, in case T Company fails to pay the aforementioned loan debt to the Bank.</p><p>The defendant, T Trading and Travel Services Company Limited (represented by Mr. Doan Hong D according to the Minutes of Deposition dated June 4, 2020), presented: He agrees with the presentation of the Bank's representative regarding the signing of credit line contract No. 29.11.066.899998.TD and regarding the disbursed amount under the 06 signed debt acknowledgement notes. The secured assets for the aforementioned loan were 02 rights to demand debt from H Trading and Construction Company Limited (hereinafter abbreviated as H Company) and a number of other real estate assets. During the process of performing the debt repayment obligation, T Company and Bank Q agreed to dispose of the secured assets which were a number of real estates to recover the debt, and Bank Q executed the release of mortgage for these real estates. However, due to the deducted values of the real estates being too low, the outstanding debt of the contract remains as currently claimed by Bank Q. According to the contents of the lawsuit petition and the documents notified by the Court, T Company is aware that provisionally calculated to July 14, 2018, T Company still owed the Bank a total amount of 407,316,591,766 VND, in which the principal debt was 133,783,843,161 VND and the interest debt was 313,532,748,605 VND. These are the figures provided by Bank Q; T Company is no longer active, and he himself is the legal representative of T Company but has been in temporary detention for a long time, so he does not remember and no longer holds any documents or evidence to compare and prove, thus he has no basis to confirm the aforementioned outstanding debt amount. Therefore, he does not agree with the lawsuit petition of Bank Q. Since T Company is currently no longer active and has no financial capacity to perform its debt repayment obligation, he requests the Court to base on the provisions of law to resolve the matter. Regarding the disposal of the mortgaged assets which are 02 rights to demand debt of T Company from H Company under the contracts signed between the parties: Since H Company is currently also no longer active and has no financial capacity, and where the legal representative of H Company, Mrs. Nguyen Thị Thanh S, and the members of H Company are currently doing what or residing where he does not know, and the purchase and sale contracts between T Company and H Company have also been finalized, there are no remaining assets for the Bank to request disposal of the mortgaged assets which are 02 rights to demand debt from H Company; he requests the Court to resolve the matter in accordance with the provisions of law.</p><p>The person with related rights and obligations, H Trading and Construction Company Limited, has its head office according to its Enterprise Registration Certificate at D Small and Medium Industrial and Craft Village Cluster, H1 Commune, D District, Ha Nam Province. Through verification with the local authority, H Company is currently no longer active at the aforementioned address, and Mrs. Nguyen Thi Thanh S, the legal representative of H Company, also no longer resides at her registered place of permanent residence. The address at No. 425 M Road, V Ward, B District, Hanoi City was cleared for the M road expansion project, and the local authority does not know where Mrs. S has gone currently.</p><div class=\"detail-section-title\">ASSESSMENT OF THE FIRST-INSTANCE COURT</div><p>In the First-instance Business and Commercial Judgment No. 15/2020/KDTM-ST dated August 22, 2020, the People's Court of Hai Ba Trung District, Hanoi City decided:</p><p>To accept the entire lawsuit petition of Bank Q against T Company.</p><p>To compel T Company to pay Bank Q the outstanding debt under credit line contract No. 29.11.066.899998.TD dated March 21, 2011, and the 06 accompanying debt acknowledgement notes provisionally calculated to August 22, 2020, with the amount of:</p><p>Principal debt: 133,783,843,161 VND.</p><p>In-term interest debt: 4,979,395,772 VND.</p><p>Overdue interest debt: 396,841,957,949 VND. Total: 535,605,196,882 VND (Five hundred thirty-five billion, six hundred and five million, one hundred ninety-six thousand, eight hundred and eighty-two VND).</p><p>From the day following the first-instance trial date until the judgment enforcement is completed, the judgment debtor shall also bear interest on the remaining principal debt to be enforced at the overdue interest rate agreed upon by the parties in the credit contract, which must be compliant with the provisions of law.</p><p>In case T Company fails to pay or fails to pay in full the aforementioned debt, Bank Q has the right to request the competent judgment enforcement agency to dispose of the secured assets including:</p><p>The right to demand debt of T Company from H Trading and Construction Company Limited with a value of 607,550,000,000 VND under mortgage contract No. 18.11.066.899998.DB dated March 21, 2011, and the Contract Amendment Document No. 90.11.066.899998 dated November 14, 2011;</p><p>The right to demand debt of T Company from H Trading and Construction Company Limited with a value of 65,620,480,302 VND under mortgage contract No. 76.11.066.899998.DB dated September 30, 2011.</p><p>In addition, the judgment also decided on court fees and the right to appeal of the litigants.</p><p>On November 15, 2021, the Criminal Investigation Agency of the Ministry of National Defence issued Document No. 258/DTHS-P1 requesting a review for protest under cassation or reopening procedures against the aforementioned first-instance business and commercial judgment of the People's Court of Hai Ba Trung District, Hanoi City.</p><p>In the Reopening Decision to Protest No. 23/2021/KN-KDTM dated December 10, 2021, the Chief Justice of the High People's Court in Hanoi filed a protest against the First-instance Business and Commercial Judgment No. 15/2020/KDTM-ST dated August 22, 2020, of the People's Court of Hai Ba Trung District, Hanoi City; requesting the Judges' Committee of the High People's Court in Hanoi to conduct a reopening trial to vacate the entirety of the aforementioned first-instance business and commercial judgment, and to transfer the case file to the People's Court of Hai Ba Trung District, Hanoi City for re-resolution under first-instance procedures in accordance with the regulations of law.</p><p>At the reopening trial, the representative of the High People's Procuracy in Hanoi requested the Judges' Committee of the High People's Court in Hanoi to accept the protest of the Chief Justice of the High People's Court in Hanoi.</p><div class=\"detail-section-title\">ASSESSMENT OF THE SUPREME COURT</div><p>[1] According to the verification by the Criminal Investigation Agency of the Ministry of National Defence, it is determined that after signing credit contract No. 29.11.066.899998.TD dated March 21, 2011, with Bank Q, T Company prepared a loan application dossier at Bank Q - L Branch, Hanoi City to purchase steel billets from S1 Vietnam Company to sell to Q Company. In reality, T Company did not transfer the money from selling the steel billets into T Company's account opened at Bank Q to repay the debt to the Bank, but requested Q Company to transfer the money to T Company's account opened at Bank B - H2 Branch to use for other purposes; therefore, there is a basis to determine that Mr. Doan Hong D – Director of T Company committed a fraudulent act in debt repayment to appropriate from Bank Q the principal debt amount of 86,000,000,000 VND. On September 26, 2021, the Criminal Investigation Agency of the Ministry of National Defence issued a decision to institute criminal case proceedings and a decision to initiate criminal suspect proceedings against Doan Hong D and Nguyen Thi Thanh S for the act of \"Abuse of trust to appropriate property\" under the provisions in Clause 4, Article 175 of the Criminal Code.</p><p>[2] Thus, the act of Mr. Doan Hong D is determined by the Criminal Investigation Agency of the Ministry of National Defence to be a criminal offense; this is a newly discovered detail that may fundamentally change the content of the First-instance Business and Commercial Judgment No. 15/2020/KDTM-ST dated August 22, 2020, of the People's Court of Hai Ba Trung District, Hanoi City, serving as a basis to protest the case under reopening procedures. Therefore, it is necessary to vacate the aforementioned first-instance business and commercial judgment under reopening procedures to hand it over to the first-instance Court for retrial.</p><p>[3] When re-accepting the case, the People's Court of Hai Ba Trung District needs to base on Point d, Clause 1, Article 214 of the Civil Procedure Code to provisionally suspend the resolution of the case to await the results of the resolution of the criminal case against the defendants Doan Hong D and Nguyen Thi Thanh S. If the aforementioned acts and the loan amount under credit line contract No. 29.11.066.899998.TD dated March 21, 2011, are resolved in accordance with the regulations of criminal law by a legally effective judgment or decision, the first-instance Court shall terminate the resolution of the business and commercial case in accordance with the provisions in Point c, Clause 1, Article 192 and Point g, Article 217 of the 2015 Civil Procedure Code.</p><p>For the reasons stated above,</p><div class=\"detail-section-title\">DECISION</div><p>Pursuant to Article 351; Clause 2, Article 356 of the 2015 Civil Procedure Code;</p><p>To accept the Reopening Decision to Protest No. 23/2021/KN-KDTM dated December 10, 2021, of the Chief Justice of the High People's Court in Hanoi.</p><p>To vacate the First-instance Business and Commercial Judgment No. 15/2020/KDTM-ST dated August 22, 2020, of the People's Court of Hai Ba Trung District, Hanoi City regarding the case \"Credit contract dispute\" between the plaintiff Bank Q and the defendant T Company; the person with related rights and obligations being H Trading and Construction Company Limited.</p><p>To transfer the case file to the People's Court of Hai Ba Trung District, Hanoi City for re-resolution under first-instance procedures in accordance with the regulations of law.</p><div class=\"detail-section-title\">CONTENT OF THE CASE LAW</div><p>\"[1] According to the verification by the Criminal Investigation Agency of the Ministry of National Defence, it is determined that after signing credit contract No. 29.11.066.899998.TD dated March 21, 2011, with Bank Q, T Company prepared a loan application dossier at Bank Q - L Branch, Hanoi City to purchase steel billets from S1 Vietnam Company to sell to Q Company. In reality, T Company did not transfer the money from selling the steel billets into T Company's account opened at Bank Q to repay the debt to the Bank, but requested Q Company to transfer the money to T Company's account opened at Bank B - H2 Branch to use for other purposes; therefore, there is a basis to determine that Mr. Doan Hong D – Director of T Company committed a fraudulent act in debt repayment to appropriate from Bank Q the principal debt amount of 86,000,000,000 VND. On September 26, 2021, the Criminal Investigation Agency of the Ministry of National Defence issued a decision to institute criminal case proceedings and a decision to initiate criminal suspect proceedings against Doan Hong D and Nguyen Thi Thanh S for the act of \"Abuse of trust to appropriate property\" under the provisions in Clause 4, Article 175 of the Criminal Code.</p><p>[2] Thus, the act of Mr. Doan Hong D is determined by the Criminal Investigation Agency of the Ministry of National Defence to be a criminal offense; this is a newly discovered detail that may fundamentally change the content of the First-instance Business and Commercial Judgment No. 15/2020/KDTM-ST dated August 22, 2020, of the People's Court of Hai Ba Trung District, Hanoi City, serving as a basis to protest the case under reopening procedures. Therefore, it is necessary to vacate the aforementioned first-instance business and commercial judgment under reopening procedures to hand it over to the first-instance Court for retrial.\"</p>",
+                "provider": "manual-admin",
+                "translatedAt": "2026-06-18T10:20:24.904Z"
+              }
+            },
+            "translationMeta": {
+              "en": {
+                "status": "ready",
+                "provider": "manual-admin",
+                "translatedAt": "2026-06-18T10:20:24.904Z"
+              }
+            }
+          },
+          {
             "id": "case-an-le-so-79-2-4",
             "ten": "Bình luận về Án lệ số 79/2025/AL về chủ thể giao kết hợp đồng đặt cọc và hiệu lực của hợp đồng đặt cọc",
             "mo_ta": "",
@@ -15098,6 +15391,18 @@
       },
       "recent": [
         {
+          "id": "case-an-le-so-87-2",
+          "ten": "Bình luận về Án lệ số 87/2026/AL về thứ tự ưu tiên thanh toán khi xử lý tài sản bảo đảm.",
+          "lvId": "kinh-doanh-thuong-mai",
+          "sfId": "an-le"
+        },
+        {
+          "id": "case-an-le-so-86-1",
+          "ten": "Bình luận về Án lệ số 86/2026/AL về sự kiện pháp lý làm phát sinh căn cứ để xem xét kháng nghị theo thủ tục tái thẩm.",
+          "lvId": "kinh-doanh-thuong-mai",
+          "sfId": "an-le"
+        },
+        {
           "id": "case-an-le-so-83-3",
           "ten": "Bình luận về Án lệ số 83/2026/AL về trách nhiệm bồi thường của doanh nghiệp bảo hiểm khi cơ quan có thẩm quyền chưa xác định được người gây ra thiệt hại về tài sản.",
           "lvId": "dan-su",
@@ -16098,7 +16403,7 @@
             {
               "id": "an-le",
               "ten": "Án lệ",
-              "soLuong": 7
+              "soLuong": 9
             },
             {
               "id": "tb-rut-kinh-nghiem",
@@ -16123,7 +16428,7 @@
               }
             }
           ],
-          "totalCases": 43
+          "totalCases": 45
         },
         {
           "id": "lao-dong",
@@ -18121,13 +18426,13 @@
         }
       },
       "law-307": {
-        "title": "Điều 307",
+        "title": "Điều 307 Bộ luật D&#226",
         "content": "",
-        "title_en": "",
+        "title_en": "Article 307",
         "content_en": "",
         "translations": {
           "en": {
-            "title": "",
+            "title": "Article 307",
             "content": ""
           }
         }
@@ -18769,7 +19074,7 @@
         }
       },
       "law-343:clause-1": {
-        "title": "khoản 1 Điều 343 Bộ luật Tố tụng d&#226",
+        "title": "khoản 1 Điều 343 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "Clause 1 Article 343",
         "content_en": "",
@@ -23701,13 +24006,13 @@
         }
       },
       "law-468": {
-        "title": "Điều 468 của Bộ luật D&#226",
+        "title": "Điều 468 Bộ luật D&#226",
         "content": "",
-        "title_en": "",
+        "title_en": "Article 468 of the Civil Code",
         "content_en": "",
         "translations": {
           "en": {
-            "title": "",
+            "title": "Article 468 of the Civil Code",
             "content": ""
           }
         }
@@ -25199,6 +25504,150 @@
             "content": ""
           }
         }
+      },
+      "law-1:clause-12:point-b": {
+        "title": "điểm b khoản 12 Điều 1",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-1:clause-12,article:point-b": {
+        "title": "Point b, Clause 12, Article 1",
+        "content": "",
+        "title_en": "Point b, Clause 12, Article 1",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Point b, Clause 12, Article 1",
+            "content": ""
+          }
+        }
+      },
+      "law-343:clause-1,article": {
+        "title": "Clause 1, Article 343",
+        "content": "",
+        "title_en": "Clause 1, Article 343",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Clause 1, Article 343",
+            "content": ""
+          }
+        }
+      },
+      "law-175:clause-4": {
+        "title": "khoản 4 Điều 175 Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-214:clause-1:point-d": {
+        "title": "điểm d khoản 1 Điều 214 Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-217:point-g": {
+        "title": "điểm g Điều 217 Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-351": {
+        "title": "Điều 351",
+        "content": "",
+        "title_en": "Article 351",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Article 351",
+            "content": ""
+          }
+        }
+      },
+      "law-356:clause-2": {
+        "title": "khoản 2 Điều 356 Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "blhs-175:clause-4,article": {
+        "title": "Clause 4, Article 175 of the Criminal Code",
+        "content": "",
+        "title_en": "Clause 4, Article 175 of the Criminal Code",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Clause 4, Article 175 of the Criminal Code",
+            "content": ""
+          }
+        }
+      },
+      "law-214:clause-1,article:point-d": {
+        "title": "Point d, Clause 1, Article 214",
+        "content": "",
+        "title_en": "Point d, Clause 1, Article 214",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Point d, Clause 1, Article 214",
+            "content": ""
+          }
+        }
+      },
+      "law-217:point-g,article": {
+        "title": "Point g, Article 217",
+        "content": "",
+        "title_en": "Point g, Article 217",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Point g, Article 217",
+            "content": ""
+          }
+        }
+      },
+      "law-356:clause-2,article": {
+        "title": "Clause 2, Article 356",
+        "content": "",
+        "title_en": "Clause 2, Article 356",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Clause 2, Article 356",
+            "content": ""
+          }
+        }
       }
     },
     "caseOrder": {
@@ -25288,6 +25737,8 @@
         "case-an-le-17-1"
       ],
       "kinh-doanh-thuong-mai::an-le": [
+        "case-an-le-so-87-2",
+        "case-an-le-so-86-1",
         "case-an-le-so-79-2-4",
         "case-an-le-so-78-3-5",
         "case-an-le-so-77-3-3",
@@ -25388,6 +25839,6 @@
         "case-nd-135-1"
       ]
     },
-    "language": "vi"
+    "language": "en"
   }
 }
