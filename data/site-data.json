@@ -1,7 +1,7 @@
 {
   "type": "dcsl-site-data",
   "version": 1,
-  "exportedAt": "2026-06-24T15:14:03.923Z",
+  "exportedAt": "2026-06-28T12:28:52.218Z",
   "data": {
     "casesData": {
       "cases": {
@@ -17624,19 +17624,18 @@
           },
           {
             "id": "case-an-le-so-16-ve-cong-nhan-hop-dong-chuyen-nhuong-quyen-su-dung-dat-la-di-san-thua-ke-do-mot-trong-cac-dong-thua-ke-chuyen-nhuong-1",
-            "ten": "Án lệ số 16 về công nhận hợp đồng chuyển nhượng quyền sử dụng đất là di sản thừa kế do một trong các đồng thừa kế chuyển nhượng.",
+            "ten": "Bình luận về Án lệ số 16 về công nhận hợp đồng chuyển nhượng quyền sử dụng đất là di sản thừa kế do một trong các đồng thừa kế chuyển nhượng.",
             "mo_ta": "",
             "lvId": "dat-dai",
-            "lvName": "Đất đai",
+            "lvName": "Đất đai",
             "sfId": "an-le",
             "sfName": "Án lệ",
             "sao": 3,
             "ngay": "2026-06-22T18:27:35.7834797+07:00",
-            "importedAt": "2026-06-22T11:43:42.921Z",
-            "updatedAt": "2026-06-22T11:43:42.921Z",
-            "tom_luoc": "<p>D&#242;ng thời gian của vụ &#225;n bắt đầu từ nguồn gốc khối t&#224;i sản 398m2 đất tại Vĩnh Ph&#250;c vốn l&#224; t&#224;i sản chung của &#244;ng Ph&#249;ng Văn N v&#224; b&#224; Ph&#249;ng Thị G.</p><p>Ng&#224;y 07-7-1984, &#244;ng N qua đời kh&#244;ng để lại di ch&#250;c, để lại b&#224; G c&#249;ng người con trai l&#224; anh Ph&#249;ng Văn T tiếp tục quản l&#253;, sử dụng khu nh&#224; đất n&#224;y.</p><p>Đến năm 1991, b&#224; G đ&#227; chuyển nhượng 131m2 đất cho &#244;ng Ph&#249;ng Văn K để lấy tiền trang trải cuộc sống v&#224; nu&#244;i c&#225;c con; sự việc n&#224;y c&#225;c con đều biết nhưng kh&#244;ng ai c&#243; &#253; kiến phản đối.</p><p>Năm 1999, b&#224; G được cấp giấy chứng nhận quyền sử dụng đất cho phần diện t&#237;ch 267,4m2 c&#242;n lại, nhưng anh T lại l&#224; người nắm giữ giấy tờ n&#224;y.</p><p>Do muốn cắt một phần đất cho con g&#225;i l&#224; chị Ph&#249;ng Thị H1 nhưng anh T kh&#244;ng chịu trả lại giấy chứng nhận (mặc d&#249; trước đ&#243; T&#242;a &#225;n đ&#227; xử buộc anh T phải trả), n&#234;n v&#224;o ng&#224;y 05-3-2009, b&#224; G đ&#227; lập di ch&#250;c (được ch&#237;nh quyền chứng thực v&#224;o ng&#224;y 07-3-2009) để quyết định cho chị H1 90m2 đất.</p><p>Ng&#224;y 19-12-2010, b&#224; G qua đời, dẫn đến việc chị H1 c&#249;ng c&#225;c chị em g&#225;i ch&#237;nh thức l&#224;m đơn khởi kiện v&#224;o ng&#224;y 02-4-2011 để y&#234;u cầu chia di sản thừa kế.</p><p>Trong qu&#225; tr&#236;nh T&#242;a &#225;n giải quyết tranh chấp, bản &#225;n sơ thẩm ng&#224;y 04-10-2011 v&#224; bản &#225;n ph&#250;c thẩm ng&#224;y 23-02-2012 đều đưa ra ph&#225;n quyết ph&#226;n chia di sản nhưng lại c&#243; những sai s&#243;t nghi&#234;m trọng khi x&#225;c định sai khối di sản thực tế v&#224; kh&#244;ng t&#237;nh to&#225;n đ&#250;ng quyền định đoạt của b&#224; G đối với phần t&#224;i sản chung của vợ chồng chưa chia.</p><p>Nhận thấy những sai lầm n&#224;y, v&#224;o ng&#224;y 12-11-2013, Viện trưởng Viện kiểm s&#225;t nh&#226;n d&#226;n tối cao đ&#227; ra quyết định kh&#225;ng nghị gi&#225;m đốc thẩm. Kết quả cuối c&#249;ng, Hội đồng Thẩm ph&#225;n T&#242;a &#225;n nh&#226;n d&#226;n tối cao đ&#227; tuy&#234;n hủy to&#224;n bộ hai bản &#225;n sơ thẩm v&#224; ph&#250;c thẩm để giao hồ sơ về cho T&#242;a &#225;n nh&#226;n d&#226;n th&#224;nh phố Vĩnh Y&#234;n tiến h&#224;nh x&#233;t xử lại từ đầu.</p>",
-            "ap_dung": "<p>&#193;n lệ số 16 c&#243; thể được &#225;p dụng tương tự để giải quyết c&#225;c vụ &#225;n tranh chấp về chia di sản thừa kế hoặc hợp đồng chuyển nhượng quyền sử dụng đất c&#243; t&#236;nh huống ph&#225;p l&#253; l&#224;: một trong c&#225;c đồng thừa kế (thường l&#224; người đang trực tiếp quản l&#253; di sản) tự &#253; chuyển nhượng một phần t&#224;i sản l&#224; di sản thừa kế chưa chia cho người kh&#225;c.</p><p>Trong những trường hợp n&#224;y, T&#242;a &#225;n c&#243; thể &#225;p dụng &#225;n lệ để c&#244;ng nhận hiệu lực của giao dịch chuyển nhượng v&#224; kh&#244;ng đưa phần diện t&#237;ch đất đ&#227; b&#225;n v&#224;o khối di sản để chia thừa kế nếu thu thập đủ c&#225;c căn cứ: c&#225;c đồng thừa kế kh&#225;c đều biết việc chuyển nhượng nhưng kh&#244;ng hề c&#243; &#253; kiến phản đối g&#236;; số tiền b&#225;n đất được d&#249;ng để trang trải, lo cho cuộc sống của người chuyển nhượng v&#224; ch&#237;nh c&#225;c đồng thừa kế; đồng thời b&#234;n nhận chuyển nhượng cũng đ&#227; được cơ quan nh&#224; nước cấp giấy chứng nhận quyền sử dụng đất. Khi hội đủ c&#225;c yếu tố n&#234;u tr&#234;n, T&#242;a &#225;n c&#243; cơ sở để x&#225;c định c&#225;c đồng thừa kế đ&#227; đồng &#253; với việc chuyển nhượng đất, do đ&#243; việc T&#242;a &#225;n cấp dưới vẫn xem phần diện t&#237;ch đất đ&#227; b&#225;n l&#224; di sản thừa kế để đưa v&#224;o ph&#226;n chia l&#224; kh&#244;ng đ&#250;ng.</p>",
-            "chi_tiet": "<div class=\"detail-section-title\">NỘI DUNG VỤ &#193;N</div><p>Theo đơn khởi kiện ng&#224;y 02-4-2011 v&#224; c&#225;c lời khai tiếp theo nguy&#234;n đơn chị Ph&#249;ng Thị H1, chị Ph&#249;ng Thị N1, chị Ph&#249;ng Thị P, chị Ph&#249;ng Thị H2 tr&#236;nh b&#224;y:</p><p>Bố mẹ nguy&#234;n đơn l&#224; &#244;ng Ph&#249;ng Văn N v&#224; b&#224; Ph&#249;ng Thị G sinh được 06 người con l&#224;: Ph&#249;ng Thị N1, Ph&#249;ng Thị N2, Ph&#249;ng Thị H2, Ph&#249;ng Văn T, Ph&#249;ng Thị P, Ph&#249;ng Thị H1.</p><p>T&#224;i sản chung của &#244;ng Ph&#249;ng Văn N v&#224; b&#224; Ph&#249;ng Thị G l&#224; 01 ng&#244;i nh&#224; cấp 4 c&#249;ng c&#244;ng tr&#236;nh phụ tr&#234;n diện t&#237;ch đất 398m2&#160;ở tại khu L, phường M, th&#224;nh phố N, tỉnh Vĩnh Ph&#250;c, nguồn gốc đất do cha &#244;ng để lại. Ng&#224;y 07-7-1984 &#244;ng Ph&#249;ng Văn N chết (trước khi chết kh&#244;ng để lại di ch&#250;c) b&#224; Ph&#249;ng Thị G v&#224; anh Ph&#249;ng Văn T quản l&#253; v&#224; sử dụng nh&#224; đất tr&#234;n. Năm 1991 b&#224; Ph&#249;ng Thị G chuyển nhượng cho &#244;ng Ph&#249;ng Văn K một phần diện t&#237;ch đất tr&#234;n với diện t&#237;ch đất l&#224; 131m2, c&#242;n lại diện t&#237;ch 267m2, năm 1999 b&#224; Ph&#249;ng Thị G được cấp giấy chứng nhận quyền sử dụng đất. B&#224; Ph&#249;ng Thị G muốn cho con g&#225;i l&#224; chị Ph&#249;ng Thị H1 một phần diện t&#237;ch đất của b&#224; để l&#224;m nh&#224; ở v&#236; ho&#224;n cảnh của chị Ph&#249;ng Thị H1 đi lấy chồng ở xa, chồng chết n&#234;n b&#224; muốn chị về ở c&#249;ng, nhưng anh Ph&#249;ng Văn T giữ giấy chứng nhận quyền sử dụng đất n&#234;n b&#224; Ph&#249;ng Thị G kh&#244;ng t&#225;ch đất cho chị Ph&#249;ng Thị H1 được. V&#236; vậy, chị khởi kiện ra T&#242;a &#225;n buộc anh Ph&#249;ng Văn T trả giấy chứng nhận quyền sử dụng đất cho b&#224; Ph&#249;ng Thị G. T&#242;a &#225;n đ&#227; xử buộc anh Ph&#249;ng Văn T phải trả giấy chứng nhận quyền sử dụng đất cho b&#224; Ph&#249;ng Thị G nhưng anh Ph&#249;ng Văn T kh&#244;ng trả. V&#236; vậy th&#225;ng 3-2010 b&#224; Ph&#249;ng Thị G đ&#227; lập di ch&#250;c với nội dung: Để lại cho chị Ph&#249;ng Thị H1 diện t&#237;ch đất 90m2&#160;v&#224; to&#224;n bộ c&#226;y cối l&#226;m lộc tr&#234;n diện t&#237;ch đất c&#243; c&#225;c chiều cạnh: Ph&#237;a Đ&#244;ng gi&#225;p diện t&#237;ch đất của b&#224; Ph&#249;ng Thị G, ph&#237;a T&#226;y gi&#225;p nh&#224; &#244;ng N, ph&#237;a Nam gi&#225;p đường T, ph&#237;a Bắc gi&#225;p nh&#224; anh C. Khi lập di ch&#250;c b&#224; Ph&#249;ng Thị G ho&#224;n to&#224;n minh mẫn khỏe mạnh, c&#243; người l&#224;m chứng v&#224; di ch&#250;c đ&#243; đ&#227; được Ủy ban nh&#226;n d&#226;n phường M chứng thực. To&#224;n bộ diện t&#237;ch 398m2&#160;l&#224; của b&#224; Ph&#249;ng Thị G v&#236; khi &#244;ng Ph&#249;ng Văn N chết th&#236; b&#224; Ph&#249;ng Thị G được to&#224;n quyền sử dụng.</p><p>Ng&#224;y 19-12-2010 b&#224; Ph&#249;ng Thị G chết, to&#224;n bộ khối t&#224;i sản tr&#234;n vợ chồng anh Ph&#249;ng Văn T vẫn quản l&#253; sử dụng. Nay c&#225;c nguy&#234;n đơn y&#234;u cầu T&#242;a &#225;n giải quyết ph&#226;n chia di sản thừa kế theo di ch&#250;c b&#224; Ph&#249;ng Thị G để lại cho chị Ph&#249;ng Thị H1 l&#224; 90m2, phần c&#242;n lại l&#224; 177m2&#160;đề nghị chia theo ph&#225;p luật, kỷ phần thừa kế của chị Ph&#249;ng Thị N1, chị Ph&#249;ng Thị P, chị Ph&#249;ng Thị H2 nhường cho chị Ph&#249;ng Thị H1 sử dụng. Ngo&#224;i ra t&#224;i sản c&#226;y cối tr&#234;n đất v&#224; phần diện t&#237;ch đất n&#244;ng nghiệp của b&#224; Ph&#249;ng Thị G c&#225;c nguy&#234;n đơn kh&#244;ng đề nghị T&#242;a &#225;n giải quyết.</p><p>Bị đơn anh Ph&#249;ng Văn T do chị Ph&#249;ng Thị H3 (l&#224; vợ) đồng thời l&#224; người c&#243; quyền lợi, nghĩa vụ li&#234;n quan tr&#236;nh b&#224;y: chị x&#225;c nhận mối quan hệ bố mẹ, anh chị em trong gia đ&#236;nh, t&#224;i sản bố mẹ để lại l&#224; diện t&#237;ch đất 398m2&#160;ở tại khu L, phường M, th&#224;nh phố N v&#224; thời gian bố mẹ chết như c&#225;c nguy&#234;n đơn tr&#236;nh b&#224;y l&#224; đ&#250;ng nhưng to&#224;n bộ c&#244;ng tr&#236;nh x&#226;y dựng tr&#234;n đất l&#224; do vợ chồng anh chị x&#226;y dựng năm 1997. Năm 1991 b&#224; Ph&#249;ng Thị G tự &#253; b&#225;n 131m2&#160;cho &#244;ng Ph&#249;ng Văn K kh&#244;ng b&#224;n bạc với anh Ph&#249;ng Văn T, được bao nhi&#234;u tiền b&#224; sử dụng v&#224;o việc g&#236; anh Ph&#249;ng Văn T kh&#244;ng biết. Đến năm 1999 b&#224; Ph&#249;ng Thị G được cấp giấy chứng nhận quyền sử dụng đất với diện t&#237;ch c&#242;n lại l&#224; 267,4m2, &#244;ng Ph&#249;ng Văn K cũng được cấp giấy chứng nhận quyền sử dụng đất đ&#227; mua của b&#224; Ph&#249;ng Thị G. Khi b&#224; Ph&#249;ng Thị G c&#242;n sống c&#243; lập di ch&#250;c hay kh&#244;ng anh chị kh&#244;ng biết. Nay c&#225;c chị em trong gia đ&#236;nh khởi kiện y&#234;u cầu chia thừa kế theo di ch&#250;c v&#224; theo ph&#225;p luật, quan điểm của anh Ph&#249;ng Văn T kh&#244;ng đồng &#253; v&#236; bố mẹ anh chỉ c&#243; một m&#236;nh anh l&#224; con trai n&#234;n anh sử dụng để ở v&#224; thờ c&#250;ng tổ ti&#234;n, kh&#244;ng đồng &#253; ph&#226;n chia thừa kế. Ngo&#224;i ra b&#224; Ph&#249;ng Thị G c&#242;n c&#243; diện t&#237;ch đất n&#244;ng nghiệp nhưng anh Ph&#249;ng Văn T kh&#244;ng đề nghị ph&#226;n chia thừa kế.</p><p>Người c&#243; quyền lợi, nghĩa vụ li&#234;n quan chị Ph&#249;ng Thị N2 tr&#236;nh b&#224;y: chị x&#225;c nhận mối quan hệ bố mẹ, anh chị em trong gia đ&#236;nh, t&#224;i sản bố mẹ để lại diện t&#237;ch đất 398m2&#160;ở tại khu L, phường M, th&#224;nh phố N v&#224; thời gian bố mẹ chết như c&#225;c nguy&#234;n đơn tr&#236;nh b&#224;y l&#224; đ&#250;ng. Đến năm 1991 mẹ chị đ&#227; chuyển nhượng cho &#244;ng Ph&#249;ng Văn K diện t&#237;ch 131m2, khi chuyển nhượng c&#225;c chị đều biết việc n&#224;y, nhưng số tiền bao nhi&#234;u chị kh&#244;ng biết, chỉ biết mẹ chị đ&#227; d&#249;ng số tiền đ&#243; để trang trải nợ nần v&#224; nu&#244;i c&#225;c con. C&#242;n lại diện t&#237;ch 267,4m2&#160;đến năm 1999 mẹ chị đ&#227; được cấp giấy chứng nhận quyền sử dụng đất mang t&#234;n Ph&#249;ng Thị G m&#224; hiện nay anh Ph&#249;ng Văn T đang sử dụng quản l&#253;. Khi mẹ chị c&#242;n sống c&#243; lập di ch&#250;c hay kh&#244;ng chị kh&#244;ng biết nay c&#225;c chị Ph&#249;ng Thị N1, chị Ph&#249;ng Thị H1, chị Ph&#249;ng Thị H2, chị Ph&#249;ng Thị P y&#234;u cầu chia thừa kế diện t&#237;ch đất tr&#234;n chị kh&#244;ng đồng &#253; v&#236; bố mẹ chị chỉ c&#243; anh Ph&#249;ng Văn T l&#224; con trai n&#234;n phải để anh Ph&#249;ng Văn T ở v&#224; thờ c&#250;ng. Nếu T&#242;a &#225;n giải quyết ph&#226;n chia thừa kế theo ph&#225;p luật kỷ phần thừa kế của b&#224;, chị kh&#244;ng nhận m&#224; nhường cho anh Ph&#249;ng Văn T được hưởng.</p><div class=\"detail-section-title\">NH&#194;̣N ĐỊNH CỦA TÒA ÁN C&#194;́P SƠ TH&#194;̉M VÀ PHÚC TH&#194;̉M</div><p>Với nội dung vụ &#225;n như tr&#234;n;</p><p>Tại Bản &#225;n d&#226;n sự sơ thẩm số 11/2011/DSST ng&#224;y 04-10-2011 T&#242;a &#225;n nh&#226;n d&#226;n th&#224;nh phố Vĩnh Y&#234;n quyết định:</p><p>- Chấp nhận một phần y&#234;u cầu khởi kiện của chị Ph&#249;ng Thị H1, buộc anh Ph&#249;ng Văn T phải c&#243; tr&#225;ch nhiệm thanh to&#225;n cho chị Ph&#249;ng Thị H1 tổng số tiền l&#224; 340.000.000đ (trị gi&#225; 68m2&#160;đất). Giao anh Ph&#249;ng Văn T được sử dụng diện t&#237;ch đất 68m2&#160;tại tờ bản đồ số 32, số thửa 81 ở khu phố khu L, phường M, th&#224;nh phố N, tỉnh Vĩnh Ph&#250;c (c&#243; tứ cận).</p><p>- Kh&#244;ng chấp nhận y&#234;u cầu của chị Ph&#249;ng Thị N1, chị Ph&#249;ng Thị H2, chị Ph&#249;ng Thị P khởi kiện chia thừa kế t&#224;i sản của b&#224; Ph&#249;ng Thị G theo ph&#225;p luật.</p><p>Ngo&#224;i ra T&#242;a &#225;n cấp sơ thẩm c&#242;n quyết định về &#225;n ph&#237;, quyền kh&#225;ng c&#225;o của c&#225;c đương sự.</p><p>Sau khi x&#233;t xử sơ thẩm, ng&#224;y 18-01-2011 c&#225;c nguy&#234;n đơn chị Ph&#249;ng Thị N1, chị Ph&#249;ng Thị H2, chị Ph&#249;ng Thị P, chị Ph&#249;ng Thị H1 kh&#225;ng c&#225;o kh&#244;ng đồng &#253; với quyết định của bản &#225;n sơ thẩm, đề nghị T&#242;a &#225;n chia thừa kế theo di ch&#250;c v&#224; theo ph&#225;p luật.</p><p>Tại Bản &#225;n d&#226;n sự ph&#250;c thẩm số 06/2012/DSPT ng&#224;y 23-2-2012 của T&#242;a &#225;n nh&#226;n d&#226;n tỉnh Vĩnh Ph&#250;c quyết định: sửa Bản &#225;n d&#226;n sự sơ thẩm số 11/2011/DSST ng&#224;y 4-10-2011 của T&#242;a &#225;n nh&#226;n d&#226;n th&#224;nh phố Vĩnh Y&#234;n.</p><p>- Chấp nhận y&#234;u cầu chia thừa kế của chị Ph&#249;ng Thị N1, chị Ph&#249;ng Thị H2, chị Ph&#249;ng Thị H1, chị Ph&#249;ng Thị P.</p><p>- Giao cho anh Ph&#249;ng Văn T v&#224; người đại diện theo ph&#225;p luật của anh Ph&#249;ng Văn T l&#224; chị Ph&#249;ng Thị H3 diện t&#237;ch 267,4m2, trị gi&#225; 1.337.000.000đồng số thửa 81, tờ bản đồ số 32 ở khu phố L, phường M, th&#224;nh phố N.</p><p>- Anh Ph&#249;ng Văn T v&#224; người đại diện theo ph&#225;p luật của anh Ph&#249;ng Văn T l&#224; chị Ph&#249;ng Thị H3 c&#243; tr&#225;ch nhiệm thanh to&#225;n trị gi&#225; phần thừa kế cho chị Ph&#249;ng Thị H1 l&#224; 982.200.000 đồng.</p><p>Kể từ ng&#224;y chị Ph&#249;ng Thị H1 c&#243; đơn y&#234;u cầu thi h&#224;nh &#225;n nếu anh Ph&#249;ng Văn T v&#224; người đại diện theo ph&#225;p luật của anh Ph&#249;ng Văn T l&#224; chị Ph&#249;ng Thị H3 kh&#244;ng thanh to&#225;n số tiền tr&#234;n th&#236; h&#224;ng th&#225;ng anh Ph&#249;ng Văn T, chị Ph&#249;ng Thị H3 c&#242;n phải chịu l&#227;i theo mức l&#227;i suất cơ bản do Ng&#226;n h&#224;ng Nh&#224; nước Việt Nam quy định tương ứng với thời gian chưa thi h&#224;nh &#225;n.</p><p>Ngo&#224;i ra, T&#242;a &#225;n cấp ph&#250;c thẩm c&#242;n quyết định về &#225;n ph&#237;.</p><p>Sau khi x&#233;t xử ph&#250;c thẩm chị Ph&#249;ng Thị H3, anh Ph&#249;ng Văn T c&#243; đơn y&#234;u cầu xem x&#233;t lại bản &#225;n d&#226;n sự ph&#250;c thẩm n&#234;u tr&#234;n của T&#242;a &#225;n nh&#226;n d&#226;n tỉnh Vĩnh Ph&#250;c.</p><p>Tại Quyết định số 131/QĐ-KNGĐT-V5 ng&#224;y 12-11-2013 của Viện trưởng Viện kiểm s&#225;t nh&#226;n d&#226;n tối cao đối với Bản &#225;n d&#226;n sự ph&#250;c thẩm số 06/2012/DSPT ng&#224;y 23-2-2012 của T&#242;a &#225;n nh&#226;n d&#226;n tỉnh Vĩnh Ph&#250;c; với nhận định:</p><p>T&#242;a &#225;n cấp ph&#250;c thẩm kh&#244;ng đưa diện t&#237;ch đất b&#224; Ph&#249;ng Thị G đ&#227; b&#225;n cho &#244;ng Ph&#249;ng Văn K v&#224;o khối t&#224;i sản để chia l&#224; c&#243; căn cứ. T&#242;a &#225;n cấp sơ thẩm x&#225;c định di sản l&#224; tổng diện t&#237;ch đất 398m2&#160;(bao gồm cả phần đất đ&#227; b&#225;n cho &#244;ng Ph&#249;ng Văn K) để chia l&#224; kh&#244;ng đ&#250;ng.</p><p>Tuy nhi&#234;n, diện t&#237;ch 267m2&#160;đất đứng t&#234;n b&#224; Ph&#249;ng Thị G phải được x&#225;c định l&#224; t&#224;i sản chung của vợ chồng &#244;ng Ph&#249;ng Văn N v&#224; b&#224; Ph&#249;ng Thị G chưa chia. B&#224; Ph&#249;ng Thị G chỉ c&#243; quyền định đoạt 1/2 diện t&#237;ch đất trong tổng diện t&#237;ch 267m2&#160;đất chung của vợ chồng b&#224; l&#224; 133,5m2 - 90m2&#160;(đ&#227; cho chị Ph&#249;ng Thị H1) c&#242;n lại l&#224; 43,5m2&#160;được chia cho 5 thừa kế.</p><p>Đối với 1/2 diện t&#237;ch đất trong tổng diện t&#237;ch 267m2&#160;đất chung của vợ chồng l&#224; phần di sản của &#244;ng Ph&#249;ng Văn N để lại nay đ&#227; hết thời hiệu chia thừa kế, anh Ph&#249;ng Văn T đang quản l&#253; th&#236; được tiếp tục quản l&#253;. T&#242;a &#225;n cấp ph&#250;c thẩm x&#225;c định to&#224;n bộ diện t&#237;ch 267m2&#160;đất l&#224; di sản của b&#224; Ph&#249;ng Thị G để chia theo di ch&#250;c cho chị Ph&#249;ng Thị H1 90m2&#160;đất v&#224; phần đất c&#242;n lại 177,4m2&#160;chia theo ph&#225;p luật cho 5 kỷ phần l&#224; kh&#244;ng đ&#250;ng.</p><p>Tại phi&#234;n t&#242;a gi&#225;m đốc thẩm, đại diện Viện kiểm s&#225;t nh&#226;n d&#226;n tối cao giữ nguy&#234;n nội dung kh&#225;ng nghị của Viện trưởng, đề nghị Hội đồng x&#233;t xử chấp nhận kh&#225;ng nghị của Viện trưởng.</p><div class=\"detail-section-title\">NHẬN ĐỊNH CỦA H&#212;̣I Đ&#212;̀NG TH&#194;̉M PHÁN T&#210;A &#193;N NH&#194;N D&#194;N T&#212;́I CAO</div><p>[1] Căn cứ v&#224;o c&#225;c t&#224;i liệu c&#243; trong hồ sơ vụ &#225;n, th&#236; diện t&#237;ch 398m2&#160;đất tọa lạc tại khu phố L, phường M, th&#224;nh phố N, Vĩnh Ph&#250;c c&#243; nguồn gốc l&#224; t&#224;i sản chung vợ chồng &#244;ng Ph&#249;ng Văn N v&#224; b&#224; Ph&#249;ng Thị G. &#212;ng Ph&#249;ng Văn N v&#224; b&#224; Ph&#249;ng Thị G c&#243; 06 người con chung l&#224; chị Ph&#249;ng Thị H1, chị Ph&#249;ng Thị N1, chị Ph&#249;ng Thị H2, anh Ph&#249;ng Văn T, chị Ph&#249;ng Thị P, chị Ph&#249;ng Thị N2. Ng&#224;y 07-7-1984 &#244;ng Ph&#249;ng Văn N chết kh&#244;ng để lại di ch&#250;c, b&#224; Ph&#249;ng Thị G v&#224; anh Ph&#249;ng Văn T quản l&#253; v&#224; sử dụng nh&#224; đất tr&#234;n.</p><p>[2] Năm 1991, b&#224; Ph&#249;ng Thị G chuyển nhượng cho &#244;ng Ph&#249;ng Văn K diện t&#237;ch 131m2&#160;trong tổng diện t&#237;ch 398m2&#160;của thửa đất tr&#234;n; phần diện t&#237;ch đất c&#242;n lại của thửa đất l&#224; 267,4m2. Năm 1999 b&#224; Ph&#249;ng Thị G đ&#227; được cấp giấy chứng nhận quyền sử dụng đất, diện t&#237;ch 267,4m2, b&#224; Ph&#249;ng Thị G c&#249;ng vợ chồng anh Ph&#249;ng Văn T vẫn quản l&#253; sử dụng nh&#224; đất n&#224;y. Việc b&#224; Ph&#249;ng Thị G chuyển nhượng đất cho &#244;ng Ph&#249;ng Văn K c&#225;c con b&#224; Ph&#249;ng Thị G đều biết, nhưng kh&#244;ng ai c&#243; &#253; kiến phản đối g&#236;, c&#225;c con của b&#224; Ph&#249;ng Thị G c&#243; lời khai b&#224; Ph&#249;ng Thị G b&#225;n đất để lo cuộc sống của b&#224; v&#224; c&#225;c con. Nay &#244;ng Ph&#249;ng Văn K cũng đ&#227; được cơ quan nh&#224; nước cấp giấy chứng nhận quyền sử dụng đất. V&#236; vậy, c&#243; cơ sở để x&#225;c định c&#225;c con b&#224; Ph&#249;ng Thị G đ&#227; đồng &#253; để b&#224; Ph&#249;ng Thị G chuyển nhượng diện t&#237;ch 131m2&#160;n&#234;u tr&#234;n cho &#244;ng Ph&#249;ng Văn K. T&#242;a &#225;n cấp ph&#250;c thẩm kh&#244;ng đưa diện t&#237;ch đất b&#224; Ph&#249;ng Thị G đ&#227; b&#225;n cho &#244;ng Ph&#249;ng Văn K v&#224;o khối t&#224;i sản để chia l&#224; c&#243; căn cứ. T&#242;a &#225;n cấp sơ thẩm x&#225;c định di sản l&#224; tổng diện t&#237;ch đất 398m2&#160;(bao gồm cả phần đất đ&#227; b&#225;n cho &#244;ng Ph&#249;ng Văn K) để chia l&#224; kh&#244;ng đ&#250;ng.</p><p>[3] Ng&#224;y 19-12-2010 b&#224; Ph&#249;ng Thị G chết, trước khi chết b&#224; đ&#227; để lại di ch&#250;c lập ng&#224;y 05-3-2009 c&#243; nội dung để lại cho chị Ph&#249;ng Thị H1 (con g&#225;i b&#224; Ph&#249;ng Thị G) diện t&#237;ch 90m2&#160;đất trong tổng diện t&#237;ch 267m2&#160;đất tr&#234;n, di ch&#250;c c&#243; chứng thực của Ủy ban nh&#226;n d&#226;n phường M ng&#224;y 7-3-2009. Tuy di ch&#250;c được lập v&#224; chứng thực kh&#244;ng c&#249;ng ng&#224;y qua &#253; kiến của Ủy ban nh&#226;n d&#226;n phường v&#224; lời khai của những người l&#224;m chứng trong di ch&#250;c th&#236; c&#243; căn cứ để x&#225;c định b&#224; Ph&#249;ng Thị G lập di ch&#250;c khi c&#242;n minh mẫn v&#224; nội dung di ch&#250;c theo &#253; nguyện của b&#224; Ph&#249;ng Thị G n&#234;n T&#242;a &#225;n hai cấp chấp nhận di ch&#250;c l&#224; c&#243; l&#253;, c&#243; t&#236;nh.</p><p>[4] Tuy nhi&#234;n, diện t&#237;ch 267m2&#160;đất đứng t&#234;n b&#224; Ph&#249;ng Thị G, nhưng được h&#236;nh th&#224;nh trong thời gian h&#244;n nh&#226;n n&#234;n phải được x&#225;c định l&#224; t&#224;i sản chung của vợ chồng &#244;ng Ph&#249;ng Văn N v&#224; b&#224; Ph&#249;ng Thị G chưa chia. B&#224; Ph&#249;ng Thị G chỉ c&#243; quyền định đoạt 1/2 diện t&#237;ch đất trong tổng diện t&#237;ch 267m2&#160;đất chung của vợ chồng b&#224;. Do đ&#243;, phần di sản của b&#224; Ph&#249;ng Thị G để lại l&#224; 1/2 khối t&#224;i sản (133,5m2) được chia theo di ch&#250;c cho chị Ph&#249;ng Thị H1 (con g&#225;i b&#224; Ph&#249;ng Thị G) l&#224; 90m2, c&#242;n lại l&#224; 43,5m2&#160;được chia cho 5 kỷ phần c&#242;n lại (trong đ&#243; chị N2 nhường kỷ phần thừa kế cho anh Ph&#249;ng Văn T; chị Ph&#249;ng Thị H2, chị Ph&#249;ng Thị N1 v&#224; chị Ph&#249;ng Thị P nhường kỷ phần cho chị Ph&#249;ng Thị H1). Đối với 1/2 diện t&#237;ch đất trong tổng diện t&#237;ch 267m2&#160;đất chung của vợ chồng l&#224; phần di sản của &#244;ng Ph&#249;ng Văn N để lại nay đ&#227; hết thời hiệu chia thừa kế, anh Ph&#249;ng Văn T l&#224; một trong c&#225;c thừa kế kh&#244;ng đồng &#253; chia, theo quy định tại tiểu mục 2.4 mục 2 phần I của Nghị quyết số 02/2004/NQ- HĐTP ng&#224;y 10-8-2004 của Hội đồng Thẩm ph&#225;n T&#242;a &#225;n nh&#226;n d&#226;n tối cao th&#236; kh&#244;ng đủ điều kiện để chia t&#224;i sản chung n&#234;n phần diện t&#237;ch đất n&#224;y ai đang quản l&#253;, sử dụng th&#236; được tiếp tục quản l&#253;, sử dụng.</p><p>[5] T&#242;a &#225;n cấp ph&#250;c thẩm x&#225;c định to&#224;n bộ diện t&#237;ch 267m2&#160;đất l&#224; di sản của b&#224; Ph&#249;ng Thị G để chia theo di ch&#250;c cho chị Ph&#249;ng Thị H1 90m2&#160;đất v&#224; phần đất c&#242;n lại 177,4m2&#160;chia theo ph&#225;p luật cho 5 kỷ phần l&#224; kh&#244;ng đ&#250;ng.</p><p>[6] Ngo&#224;i ra, anh Ph&#249;ng Văn T kh&#244;ng kh&#225;ng c&#225;o nhưng T&#242;a &#225;n lại tuy&#234;n anh Ph&#249;ng Văn T phải chịu 200.000 đồng &#225;n ph&#237; ph&#250;c thẩm. Chị Ph&#249;ng Thị N1, chị Ph&#249;ng Thị H2, chị Ph&#249;ng Thị P tự nguyện nhường kỷ phần của c&#225;c chị cho chị Ph&#249;ng Thị H1 v&#224; được T&#242;a chấp nhận, chị Ph&#249;ng Thị H1 l&#224; hộ ngh&#232;o được miễn to&#224;n bộ &#225;n ph&#237; nhưng T&#242;a cấp ph&#250;c thẩm kh&#244;ng tuy&#234;n trả lại tiền tạm ứng &#225;n ph&#237; sơ thẩm cho chị Ph&#249;ng Thị N1, chị Ph&#249;ng Thị H2, chị Ph&#249;ng Thị P đều l&#224; kh&#244;ng đ&#250;ng. V&#236; vậy, kh&#225;ng nghị của Viện trưởng Viện kiểm s&#225;t nh&#226;n d&#226;n tối cao l&#224; c&#243; căn cứ chấp nhận.</p><p>Bởi c&#225;c lẽ tr&#234;n, căn cứ v&#224;o khoản 2 Điều 291, khoản 3 Điều 297 v&#224; Điều 299 của Bộ luật Tố tụng d&#226;n sự;</p><div class=\"detail-section-title\">QUYẾT ĐỊNH</div><p>Hủy to&#224;n bộ Bản &#225;n d&#226;n sự ph&#250;c thẩm số 06/2012/DSPT ng&#224;y 23-02-2012 của T&#242;a &#225;n nh&#226;n d&#226;n tỉnh Vĩnh Ph&#250;c v&#224; Bản &#225;n d&#226;n sự sơ thẩm số 11/2011/DS-ST ng&#224;y 04-10-2011 của T&#242;a &#225;n nh&#226;n d&#226;n th&#224;nh phố Vĩnh Y&#234;n, tỉnh Vĩnh Ph&#250;c về vụ &#225;n “Tranh chấp thừa kế t&#224;i sản” giữa nguy&#234;n đơn chị Ph&#249;ng Thị H1, chị Ph&#249;ng Thị N1, chị Ph&#249;ng Thị H2, chị Ph&#249;ng Thị P với bị đơn l&#224; anh Ph&#249;ng Văn T v&#224; người c&#243; quyền lợi, nghĩa vụ li&#234;n quan gồm chị Ph&#249;ng Thị N2, chị Ph&#249;ng Thị H3.</p><p>Giao hồ sơ cho T&#242;a &#225;n nh&#226;n d&#226;n th&#224;nh phố Vĩnh Y&#234;n, tỉnh Vĩnh Ph&#250;c x&#233;t xử sơ thẩm lại theo quy định của ph&#225;p luật.</p><div class=\"detail-section-title\">NỘI DUNG &#193;N LỆ</div><p>“[2]&#160;Năm 1991, b&#224; Ph&#249;ng Thị G chuyển nhượng cho &#244;ng Ph&#249;ng Văn K diện t&#237;ch 131m2&#160;trong tổng diện t&#237;ch 398m2&#160;của thửa đất tr&#234;n; phần diện t&#237;ch đất c&#242;n lại của thửa đất l&#224; 267,4m2. Năm 1999 b&#224; Ph&#249;ng Thị G đ&#227; được cấp giấy chứng nhận quyền sử dụng đất, diện t&#237;ch 267,4m2, b&#224; Ph&#249;ng Thị G c&#249;ng vợ chồng anh Ph&#249;ng Văn T vẫn quản l&#253; sử dụng nh&#224; đất n&#224;y. Việc b&#224; Ph&#249;ng Thị G chuyển nhượng đất cho &#244;ng Ph&#249;ng Văn K c&#225;c con b&#224; Ph&#249;ng Thị G đều biết, nhưng kh&#244;ng ai c&#243; &#253; kiến phản đối g&#236;, c&#225;c con của b&#224; Ph&#249;ng Thị G c&#243; lời khai b&#224; Ph&#249;ng Thị G b&#225;n đất để&#160;lo cuộc sống của b&#224; v&#224; c&#225;c con. Nay &#244;ng Ph&#249;ng Văn K cũng đ&#227; được cơ quan nh&#224; nước cấp giấy chứng nhận quyền sử dụng đất. V&#236; vậy, c&#243; cơ sở để&#160;x&#225;c định c&#225;c con b&#224; Ph&#249;ng Thị G đ&#227; đồng&#160;&#253;&#160;để&#160;b&#224; Ph&#249;ng Thị G chuyển nhượng diện t&#237;ch 131m2&#160;n&#234;u tr&#234;n cho &#244;ng Ph&#249;ng Văn K. T&#242;a &#225;n cấp ph&#250;c thẩm kh&#244;ng đưa diện t&#237;ch đất b&#224; Ph&#249;ng Thị G đ&#227; b&#225;n cho &#244;ng Ph&#249;ng Văn K v&#224;o khối t&#224;i sản để&#160;chia l&#224; c&#243; căn cứ. T&#242;a &#225;n cấp sơ thẩm x&#225;c định di sản l&#224; tổng diện t&#237;ch đất 398m2&#160;(bao gồm cả phần đất đ&#227; b&#225;n cho &#244;ng Ph&#249;ng Văn K) để&#160;chia l&#224; kh&#244;ng đ&#250;ng.”</p>",
+            "updatedAt": "2026-06-24T15:16:00.605Z",
+            "tom_luoc": "<p>Dòng thời gian của vụ án bắt đầu từ nguồn gốc khối tài sản 398m2 đất tại Vĩnh Phúc vốn là tài sản chung của ông Phùng Văn N và bà Phùng Thị G.</p><p>Ngày 07-7-1984, ông N qua đời không để lại di chúc, để lại bà G cùng người con trai là anh Phùng Văn T tiếp tục quản lý, sử dụng khu nhà đất này.</p><p>Đến năm 1991, bà G đã chuyển nhượng 131m2 đất cho ông Phùng Văn K để lấy tiền trang trải cuộc sống và nuôi các con; sự việc này các con đều biết nhưng không ai có ý kiến phản đối.</p><p>Năm 1999, bà G được cấp giấy chứng nhận quyền sử dụng đất cho phần diện tích 267,4m2 còn lại, nhưng anh T lại là người nắm giữ giấy tờ này.</p><p>Do muốn cắt một phần đất cho con gái là chị Phùng Thị H1 nhưng anh T không chịu trả lại giấy chứng nhận (mặc dù trước đó Tòa án đã xử buộc anh T phải trả), nên vào ngày 05-3-2009, bà G đã lập di chúc (được chính quyền chứng thực vào ngày 07-3-2009) để quyết định cho chị H1 90m2 đất.</p><p>Ngày 19-12-2010, bà G qua đời, dẫn đến việc chị H1 cùng các chị em gái chính thức làm đơn khởi kiện vào ngày 02-4-2011 để yêu cầu chia di sản thừa kế.</p><p>Trong quá trình Tòa án giải quyết tranh chấp, bản án sơ thẩm ngày 04-10-2011 và bản án phúc thẩm ngày 23-02-2012 đều đưa ra phán quyết phân chia di sản nhưng lại có những sai sót nghiêm trọng khi xác định sai khối di sản thực tế và không tính toán đúng quyền định đoạt của bà G đối với phần tài sản chung của vợ chồng chưa chia.</p><p>Nhận thấy những sai lầm này, vào ngày 12-11-2013, Viện trưởng Viện kiểm sát nhân dân tối cao đã ra quyết định kháng nghị giám đốc thẩm. Kết quả cuối cùng, Hội đồng Thẩm phán Tòa án nhân dân tối cao đã tuyên hủy toàn bộ hai bản án sơ thẩm và phúc thẩm để giao hồ sơ về cho Tòa án nhân dân thành phố Vĩnh Yên tiến hành xét xử lại từ đầu.</p>",
+            "ap_dung": "<p>Án lệ số 16 có thể được áp dụng tương tự để giải quyết các vụ án tranh chấp về chia di sản thừa kế hoặc hợp đồng chuyển nhượng quyền sử dụng đất có tình huống pháp lý là: một trong các đồng thừa kế (thường là người đang trực tiếp quản lý di sản) tự ý chuyển nhượng một phần tài sản là di sản thừa kế chưa chia cho người khác.</p><p>Trong những trường hợp này, Tòa án có thể áp dụng án lệ để công nhận hiệu lực của giao dịch chuyển nhượng và không đưa phần diện tích đất đã bán vào khối di sản để chia thừa kế nếu thu thập đủ các căn cứ: các đồng thừa kế khác đều biết việc chuyển nhượng nhưng không hề có ý kiến phản đối gì; số tiền bán đất được dùng để trang trải, lo cho cuộc sống của người chuyển nhượng và chính các đồng thừa kế; đồng thời bên nhận chuyển nhượng cũng đã được cơ quan nhà nước cấp giấy chứng nhận quyền sử dụng đất. Khi hội đủ các yếu tố nêu trên, Tòa án có cơ sở để xác định các đồng thừa kế đã đồng ý với việc chuyển nhượng đất, do đó việc Tòa án cấp dưới vẫn xem phần diện tích đất đã bán là di sản thừa kế để đưa vào phân chia là không đúng.</p>",
+            "chi_tiet": "<div class=\"detail-section-title\">NỘI DUNG VỤ ÁN</div><p>Theo đơn khởi kiện ngày 02-4-2011 và các lời khai tiếp theo nguyên đơn chị Phùng Thị H1, chị Phùng Thị N1, chị Phùng Thị P, chị Phùng Thị H2 trình bày:</p><p>Bố mẹ nguyên đơn là ông Phùng Văn N và bà Phùng Thị G sinh được 06 người con là: Phùng Thị N1, Phùng Thị N2, Phùng Thị H2, Phùng Văn T, Phùng Thị P, Phùng Thị H1.</p><p>Tài sản chung của ông Phùng Văn N và bà Phùng Thị G là 01 ngôi nhà cấp 4 cùng công trình phụ trên diện tích đất 398m2 ở tại khu L, phường M, thành phố N, tỉnh Vĩnh Phúc, nguồn gốc đất do cha ông để lại. Ngày 07-7-1984 ông Phùng Văn N chết (trước khi chết không để lại di chúc) bà Phùng Thị G và anh Phùng Văn T quản lý và sử dụng nhà đất trên. Năm 1991 bà Phùng Thị G chuyển nhượng cho ông Phùng Văn K một phần diện tích đất trên với diện tích đất là 131m2, còn lại diện tích 267m2, năm 1999 bà Phùng Thị G được cấp giấy chứng nhận quyền sử dụng đất. Bà Phùng Thị G muốn cho con gái là chị Phùng Thị H1 một phần diện tích đất của bà để làm nhà ở vì hoàn cảnh của chị Phùng Thị H1 đi lấy chồng ở xa, chồng chết nên bà muốn chị về ở cùng, nhưng anh Phùng Văn T giữ giấy chứng nhận quyền sử dụng đất nên bà Phùng Thị G không tách đất cho chị Phùng Thị H1 được. Vì vậy, chị khởi kiện ra Tòa án buộc anh Phùng Văn T trả giấy chứng nhận quyền sử dụng đất cho bà Phùng Thị G. Tòa án đã xử buộc anh Phùng Văn T phải trả giấy chứng nhận quyền sử dụng đất cho bà Phùng Thị G nhưng anh Phùng Văn T không trả. Vì vậy tháng 3-2010 bà Phùng Thị G đã lập di chúc với nội dung: Để lại cho chị Phùng Thị H1 diện tích đất 90m2 và toàn bộ cây cối lâm lộc trên diện tích đất có các chiều cạnh: Phía Đông giáp diện tích đất của bà Phùng Thị G, phía Tây giáp nhà ông N, phía Nam giáp đường T, phía Bắc giáp nhà anh C. Khi lập di chúc bà Phùng Thị G hoàn toàn minh mẫn khỏe mạnh, có người làm chứng và di chúc đó đã được Ủy ban nhân dân phường M chứng thực. Toàn bộ diện tích 398m2 là của bà Phùng Thị G vì khi ông Phùng Văn N chết thì bà Phùng Thị G được toàn quyền sử dụng.</p><p>Ngày 19-12-2010 bà Phùng Thị G chết, toàn bộ khối tài sản trên vợ chồng anh Phùng Văn T vẫn quản lý sử dụng. Nay các nguyên đơn yêu cầu Tòa án giải quyết phân chia di sản thừa kế theo di chúc bà Phùng Thị G để lại cho chị Phùng Thị H1 là 90m2, phần còn lại là 177m2 đề nghị chia theo pháp luật, kỷ phần thừa kế của chị Phùng Thị N1, chị Phùng Thị P, chị Phùng Thị H2 nhường cho chị Phùng Thị H1 sử dụng. Ngoài ra tài sản cây cối trên đất và phần diện tích đất nông nghiệp của bà Phùng Thị G các nguyên đơn không đề nghị Tòa án giải quyết.</p><p>Bị đơn anh Phùng Văn T do chị Phùng Thị H3 (là vợ) đồng thời là người có quyền lợi, nghĩa vụ liên quan trình bày: chị xác nhận mối quan hệ bố mẹ, anh chị em trong gia đình, tài sản bố mẹ để lại là diện tích đất 398m2 ở tại khu L, phường M, thành phố N và thời gian bố mẹ chết như các nguyên đơn trình bày là đúng nhưng toàn bộ công trình xây dựng trên đất là do vợ chồng anh chị xây dựng năm 1997. Năm 1991 bà Phùng Thị G tự ý bán 131m2 cho ông Phùng Văn K không bàn bạc với anh Phùng Văn T, được bao nhiêu tiền bà sử dụng vào việc gì anh Phùng Văn T không biết. Đến năm 1999 bà Phùng Thị G được cấp giấy chứng nhận quyền sử dụng đất với diện tích còn lại là 267,4m2, ông Phùng Văn K cũng được cấp giấy chứng nhận quyền sử dụng đất đã mua của bà Phùng Thị G. Khi bà Phùng Thị G còn sống có lập di chúc hay không anh chị không biết. Nay các chị em trong gia đình khởi kiện yêu cầu chia thừa kế theo di chúc và theo pháp luật, quan điểm của anh Phùng Văn T không đồng ý vì bố mẹ anh chỉ có một mình anh là con trai nên anh sử dụng để ở và thờ cúng tổ tiên, không đồng ý phân chia thừa kế. Ngoài ra bà Phùng Thị G còn có diện tích đất nông nghiệp nhưng anh Phùng Văn T không đề nghị phân chia thừa kế.</p><p>Người có quyền lợi, nghĩa vụ liên quan chị Phùng Thị N2 trình bày: chị xác nhận mối quan hệ bố mẹ, anh chị em trong gia đình, tài sản bố mẹ để lại diện tích đất 398m2 ở tại khu L, phường M, thành phố N và thời gian bố mẹ chết như các nguyên đơn trình bày là đúng. Đến năm 1991 mẹ chị đã chuyển nhượng cho ông Phùng Văn K diện tích 131m2, khi chuyển nhượng các chị đều biết việc này, nhưng số tiền bao nhiêu chị không biết, chỉ biết mẹ chị đã dùng số tiền đó để trang trải nợ nần và nuôi các con. Còn lại diện tích 267,4m2 đến năm 1999 mẹ chị đã được cấp giấy chứng nhận quyền sử dụng đất mang tên Phùng Thị G mà hiện nay anh Phùng Văn T đang sử dụng quản lý. Khi mẹ chị còn sống có lập di chúc hay không chị không biết nay các chị Phùng Thị N1, chị Phùng Thị H1, chị Phùng Thị H2, chị Phùng Thị P yêu cầu chia thừa kế diện tích đất trên chị không đồng ý vì bố mẹ chị chỉ có anh Phùng Văn T là con trai nên phải để anh Phùng Văn T ở và thờ cúng. Nếu Tòa án giải quyết phân chia thừa kế theo pháp luật kỷ phần thừa kế của bà, chị không nhận mà nhường cho anh Phùng Văn T được hưởng.</p><div class=\"detail-section-title\">NHẬN ĐỊNH CỦA TÒA ÁN CẤP SƠ THẨM VÀ PHÚC THẨM</div><p>Với nội dung vụ án như trên;</p><p>Tại Bản án dân sự sơ thẩm số 11/2011/DSST ngày 04-10-2011 Tòa án nhân dân thành phố Vĩnh Yên quyết định:</p><p>- Chấp nhận một phần yêu cầu khởi kiện của chị Phùng Thị H1, buộc anh Phùng Văn T phải có trách nhiệm thanh toán cho chị Phùng Thị H1 tổng số tiền là 340.000.000đ (trị giá 68m2 đất). Giao anh Phùng Văn T được sử dụng diện tích đất 68m2 tại tờ bản đồ số 32, số thửa 81 ở khu phố khu L, phường M, thành phố N, tỉnh Vĩnh Phúc (có tứ cận).</p><p>- Không chấp nhận yêu cầu của chị Phùng Thị N1, chị Phùng Thị H2, chị Phùng Thị P khởi kiện chia thừa kế tài sản của bà Phùng Thị G theo pháp luật.</p><p>Ngoài ra Tòa án cấp sơ thẩm còn quyết định về án phí, quyền kháng cáo của các đương sự.</p><p>Sau khi xét xử sơ thẩm, ngày 18-01-2011 các nguyên đơn chị Phùng Thị N1, chị Phùng Thị H2, chị Phùng Thị P, chị Phùng Thị H1 kháng cáo không đồng ý với quyết định của bản án sơ thẩm, đề nghị Tòa án chia thừa kế theo di chúc và theo pháp luật.</p><p>Tại Bản án dân sự phúc thẩm số 06/2012/DSPT ngày 23-2-2012 của Tòa án nhân dân tỉnh Vĩnh Phúc quyết định: sửa Bản án dân sự sơ thẩm số 11/2011/DSST ngày 4-10-2011 của Tòa án nhân dân thành phố Vĩnh Yên.</p><p>- Chấp nhận yêu cầu chia thừa kế của chị Phùng Thị N1, chị Phùng Thị H2, chị Phùng Thị H1, chị Phùng Thị P.</p><p>- Giao cho anh Phùng Văn T và người đại diện theo pháp luật của anh Phùng Văn T là chị Phùng Thị H3 diện tích 267,4m2, trị giá 1.337.000.000đồng số thửa 81, tờ bản đồ số 32 ở khu phố L, phường M, thành phố N.</p><p>- Anh Phùng Văn T và người đại diện theo pháp luật của anh Phùng Văn T là chị Phùng Thị H3 có trách nhiệm thanh toán trị giá phần thừa kế cho chị Phùng Thị H1 là 982.200.000 đồng.</p><p>Kể từ ngày chị Phùng Thị H1 có đơn yêu cầu thi hành án nếu anh Phùng Văn T và người đại diện theo pháp luật của anh Phùng Văn T là chị Phùng Thị H3 không thanh toán số tiền trên thì hàng tháng anh Phùng Văn T, chị Phùng Thị H3 còn phải chịu lãi theo mức lãi suất cơ bản do Ngân hàng Nhà nước Việt Nam quy định tương ứng với thời gian chưa thi hành án.</p><p>Ngoài ra, Tòa án cấp phúc thẩm còn quyết định về án phí.</p><p>Sau khi xét xử phúc thẩm chị Phùng Thị H3, anh Phùng Văn T có đơn yêu cầu xem xét lại bản án dân sự phúc thẩm nêu trên của Tòa án nhân dân tỉnh Vĩnh Phúc.</p><p>Tại Quyết định số 131/QĐ-KNGĐT-V5 ngày 12-11-2013 của Viện trưởng Viện kiểm sát nhân dân tối cao đối với Bản án dân sự phúc thẩm số 06/2012/DSPT ngày 23-2-2012 của Tòa án nhân dân tỉnh Vĩnh Phúc; với nhận định:</p><p>Tòa án cấp phúc thẩm không đưa diện tích đất bà Phùng Thị G đã bán cho ông Phùng Văn K vào khối tài sản để chia là có căn cứ. Tòa án cấp sơ thẩm xác định di sản là tổng diện tích đất 398m2 (bao gồm cả phần đất đã bán cho ông Phùng Văn K) để chia là không đúng.</p><p>Tuy nhiên, diện tích 267m2 đất đứng tên bà Phùng Thị G phải được xác định là tài sản chung của vợ chồng ông Phùng Văn N và bà Phùng Thị G chưa chia. Bà Phùng Thị G chỉ có quyền định đoạt 1/2 diện tích đất trong tổng diện tích 267m2 đất chung của vợ chồng bà là 133,5m2 - 90m2 (đã cho chị Phùng Thị H1) còn lại là 43,5m2 được chia cho 5 thừa kế.</p><p>Đối với 1/2 diện tích đất trong tổng diện tích 267m2 đất chung của vợ chồng là phần di sản của ông Phùng Văn N để lại nay đã hết thời hiệu chia thừa kế, anh Phùng Văn T đang quản lý thì được tiếp tục quản lý. Tòa án cấp phúc thẩm xác định toàn bộ diện tích 267m2 đất là di sản của bà Phùng Thị G để chia theo di chúc cho chị Phùng Thị H1 90m2 đất và phần đất còn lại 177,4m2 chia theo pháp luật cho 5 kỷ phần là không đúng.</p><p>Tại phiên tòa giám đốc thẩm, đại diện Viện kiểm sát nhân dân tối cao giữ nguyên nội dung kháng nghị của Viện trưởng, đề nghị Hội đồng xét xử chấp nhận kháng nghị của Viện trưởng.</p><div class=\"detail-section-title\">NHẬN ĐỊNH CỦA HỘI ĐỒNG THẨM PHÁN TÒA ÁN NHÂN DÂN TỐI CAO</div><p>[1] Căn cứ vào các tài liệu có trong hồ sơ vụ án, thì diện tích 398m2 đất tọa lạc tại khu phố L, phường M, thành phố N, Vĩnh Phúc có nguồn gốc là tài sản chung vợ chồng ông Phùng Văn N và bà Phùng Thị G. Ông Phùng Văn N và bà Phùng Thị G có 06 người con chung là chị Phùng Thị H1, chị Phùng Thị N1, chị Phùng Thị H2, anh Phùng Văn T, chị Phùng Thị P, chị Phùng Thị N2. Ngày 07-7-1984 ông Phùng Văn N chết không để lại di chúc, bà Phùng Thị G và anh Phùng Văn T quản lý và sử dụng nhà đất trên.</p><p>[2] Năm 1991, bà Phùng Thị G chuyển nhượng cho ông Phùng Văn K diện tích 131m2 trong tổng diện tích 398m2 của thửa đất trên; phần diện tích đất còn lại của thửa đất là 267,4m2. Năm 1999 bà Phùng Thị G đã được cấp giấy chứng nhận quyền sử dụng đất, diện tích 267,4m2, bà Phùng Thị G cùng vợ chồng anh Phùng Văn T vẫn quản lý sử dụng nhà đất này. Việc bà Phùng Thị G chuyển nhượng đất cho ông Phùng Văn K các con bà Phùng Thị G đều biết, nhưng không ai có ý kiến phản đối gì, các con của bà Phùng Thị G có lời khai bà Phùng Thị G bán đất để lo cuộc sống của bà và các con. Nay ông Phùng Văn K cũng đã được cơ quan nhà nước cấp giấy chứng nhận quyền sử dụng đất. Vì vậy, có cơ sở để xác định các con bà Phùng Thị G đã đồng ý để bà Phùng Thị G chuyển nhượng diện tích 131m2 nêu trên cho ông Phùng Văn K. Tòa án cấp phúc thẩm không đưa diện tích đất bà Phùng Thị G đã bán cho ông Phùng Văn K vào khối tài sản để chia là có căn cứ. Tòa án cấp sơ thẩm xác định di sản là tổng diện tích đất 398m2 (bao gồm cả phần đất đã bán cho ông Phùng Văn K) để chia là không đúng.</p><p>[3] Ngày 19-12-2010 bà Phùng Thị G chết, trước khi chết bà đã để lại di chúc lập ngày 05-3-2009 có nội dung để lại cho chị Phùng Thị H1 (con gái bà Phùng Thị G) diện tích 90m2 đất trong tổng diện tích 267m2 đất trên, di chúc có chứng thực của Ủy ban nhân dân phường M ngày 7-3-2009. Tuy di chúc được lập và chứng thực không cùng ngày qua ý kiến của Ủy ban nhân dân phường và lời khai của những người làm chứng trong di chúc thì có căn cứ để xác định bà Phùng Thị G lập di chúc khi còn minh mẫn và nội dung di chúc theo ý nguyện của bà Phùng Thị G nên Tòa án hai cấp chấp nhận di chúc là có lý, có tình.</p><p>[4] Tuy nhiên, diện tích 267m2 đất đứng tên bà Phùng Thị G, nhưng được hình thành trong thời gian hôn nhân nên phải được xác định là tài sản chung của vợ chồng ông Phùng Văn N và bà Phùng Thị G chưa chia. Bà Phùng Thị G chỉ có quyền định đoạt 1/2 diện tích đất trong tổng diện tích 267m2 đất chung của vợ chồng bà. Do đó, phần di sản của bà Phùng Thị G để lại là 1/2 khối tài sản (133,5m2) được chia theo di chúc cho chị Phùng Thị H1 (con gái bà Phùng Thị G) là 90m2, còn lại là 43,5m2 được chia cho 5 kỷ phần còn lại (trong đó chị N2 nhường kỷ phần thừa kế cho anh Phùng Văn T; chị Phùng Thị H2, chị Phùng Thị N1 và chị Phùng Thị P nhường kỷ phần cho chị Phùng Thị H1). Đối với 1/2 diện tích đất trong tổng diện tích 267m2 đất chung của vợ chồng là phần di sản của ông Phùng Văn N để lại nay đã hết thời hiệu chia thừa kế, anh Phùng Văn T là một trong các thừa kế không đồng ý chia, theo quy định tại tiểu mục 2.4 mục 2 phần I của Nghị quyết số 02/2004/NQ- HĐTP ngày 10-8-2004 của Hội đồng Thẩm phán Tòa án nhân dân tối cao thì không đủ điều kiện để chia tài sản chung nên phần diện tích đất này ai đang quản lý, sử dụng thì được tiếp tục quản lý, sử dụng.</p><p>[5] Tòa án cấp phúc thẩm xác định toàn bộ diện tích 267m2 đất là di sản của bà Phùng Thị G để chia theo di chúc cho chị Phùng Thị H1 90m2 đất và phần đất còn lại 177,4m2 chia theo pháp luật cho 5 kỷ phần là không đúng.</p><p>[6] Ngoài ra, anh Phùng Văn T không kháng cáo nhưng Tòa án lại tuyên anh Phùng Văn T phải chịu 200.000 đồng án phí phúc thẩm. Chị Phùng Thị N1, chị Phùng Thị H2, chị Phùng Thị P tự nguyện nhường kỷ phần của các chị cho chị Phùng Thị H1 và được Tòa chấp nhận, chị Phùng Thị H1 là hộ nghèo được miễn toàn bộ án phí nhưng Tòa cấp phúc thẩm không tuyên trả lại tiền tạm ứng án phí sơ thẩm cho chị Phùng Thị N1, chị Phùng Thị H2, chị Phùng Thị P đều là không đúng. Vì vậy, kháng nghị của Viện trưởng Viện kiểm sát nhân dân tối cao là có căn cứ chấp nhận.</p><p>Bởi các lẽ trên, căn cứ vào khoản 2 Điều 291, khoản 3 Điều 297 và Điều 299 của Bộ luật Tố tụng dân sự;</p><div class=\"detail-section-title\">QUYẾT ĐỊNH</div><p>Hủy toàn bộ Bản án dân sự phúc thẩm số 06/2012/DSPT ngày 23-02-2012 của Tòa án nhân dân tỉnh Vĩnh Phúc và Bản án dân sự sơ thẩm số 11/2011/DS-ST ngày 04-10-2011 của Tòa án nhân dân thành phố Vĩnh Yên, tỉnh Vĩnh Phúc về vụ án “Tranh chấp thừa kế tài sản” giữa nguyên đơn chị Phùng Thị H1, chị Phùng Thị N1, chị Phùng Thị H2, chị Phùng Thị P với bị đơn là anh Phùng Văn T và người có quyền lợi, nghĩa vụ liên quan gồm chị Phùng Thị N2, chị Phùng Thị H3.</p><p>Giao hồ sơ cho Tòa án nhân dân thành phố Vĩnh Yên, tỉnh Vĩnh Phúc xét xử sơ thẩm lại theo quy định của pháp luật.</p><div class=\"detail-section-title\">NỘI DUNG ÁN LỆ</div><p>“[2] Năm 1991, bà Phùng Thị G chuyển nhượng cho ông Phùng Văn K diện tích 131m2 trong tổng diện tích 398m2 của thửa đất trên; phần diện tích đất còn lại của thửa đất là 267,4m2. Năm 1999 bà Phùng Thị G đã được cấp giấy chứng nhận quyền sử dụng đất, diện tích 267,4m2, bà Phùng Thị G cùng vợ chồng anh Phùng Văn T vẫn quản lý sử dụng nhà đất này. Việc bà Phùng Thị G chuyển nhượng đất cho ông Phùng Văn K các con bà Phùng Thị G đều biết, nhưng không ai có ý kiến phản đối gì, các con của bà Phùng Thị G có lời khai bà Phùng Thị G bán đất để lo cuộc sống của bà và các con. Nay ông Phùng Văn K cũng đã được cơ quan nhà nước cấp giấy chứng nhận quyền sử dụng đất. Vì vậy, có cơ sở để xác định các con bà Phùng Thị G đã đồng ý để bà Phùng Thị G chuyển nhượng diện tích 131m2 nêu trên cho ông Phùng Văn K. Tòa án cấp phúc thẩm không đưa diện tích đất bà Phùng Thị G đã bán cho ông Phùng Văn K vào khối tài sản để chia là có căn cứ. Tòa án cấp sơ thẩm xác định di sản là tổng diện tích đất 398m2 (bao gồm cả phần đất đã bán cho ông Phùng Văn K) để chia là không đúng.”</p>",
             "timeline": [
               "Dòng thời gian của vụ án bắt đầu từ nguồn gốc khối tài sản 398m2 đất tại Vĩnh Phúc vốn là tài sản chung của ông Phùng Văn N và bà Phùng Thị G.",
               "Ngày 07-7-1984, ông N qua đời không để lại di chúc, để lại bà G cùng người con trai là anh Phùng Văn T tiếp tục quản lý, sử dụng khu nhà đất này.",
@@ -19229,7 +19228,7 @@
         "content": "dfaf"
       },
       "law-255": {
-        "title": "Điều 255",
+        "title": "Điều 255 của Bộ luật n&#224",
         "content": "Chủ sở hữu, người chiếm hữu hợp pháp có quyền yêu cầu Toà án, cơ quan, tổ chức có thẩm quyền khác buộc người có hành vi xâm phạm quyền sở hữu, quyền chiếm hữu phải trả lại tài sản, chấm dứt hành vi cản trở trái pháp luật việc thực hiện quyền sở hữu, quyền chiếm hữu và yêu cầu bồi thường thiệt hại.Chủ sở hữu, người chiếm hữu hợp pháp có quyền tự bảo vệ tài sản thuộc sở hữu của mình, tài sản đang chiếm hữu hợp pháp bằng những biện pháp theo quy định của pháp luật.",
         "title_en": "",
         "content_en": "",
@@ -19241,7 +19240,7 @@
         }
       },
       "law-256": {
-        "title": "Điều 256 của Bộ luật d&#226",
+        "title": "Điều 256 của Bộ luật H&#236",
         "content": "Chủ sở hữu, người chiếm hữu hợp pháp có quyền yêu cầu người chiếm hữu, người sử dụng tài sản, người được lợi về tài sản không có căn cứ pháp luật đối với tài sản thuộc quyền sở hữu hoặc quyền chiếm hữu hợp pháp của mình phải trả lại tài sản đó, trừ trường hợp quy định tại khoản 1 Điều 247 của Bộ luật này. Trong trường hợp tài sản đang thuộc sự chiếm hữu của người chiếm hữu ngay tình thì áp dụng Điều 257 và Điều 258 của Bộ luật này.Điều 247: 1. Người chiếm hữu, người được lợi về tài sản không có căn cứ pháp luật nhưng ngay tình, liên tục, công khai trong thời hạn mười năm đối với động sản, ba mươi năm đối với bất động sản thì trở thành chủ sở hữu tài sản đó, kể từ thời điểm bắt đầu chiếm hữu, trừ trường hợp quy định tại khoản 2 Điều này. 2. Người chiếm hữu tài sản thuộc hình thức sở hữu nhà nước không có căn cứ pháp luật thì dù ngay tình, liên tục, công khai, dù thời gian chiếm hữu là bao lâu cũng không thể trở thành chủ sở hữu tài sản đó.Điều 257: Chủ sở hữu có quyền đòi lại động sản không phải đăng ký quyền sở hữu từ người chiếm hữu ngay tình trong trường hợp người chiếm hữu ngay tình có được động sản này thông qua hợp đồng không có đền bù với người không có quyền định đoạt tài sản; trong trường hợp hợp đồng này là hợp đồng có đền bù thì chủ sở hữu có quyền đòi lại động sản nếu động sản đó bị lấy cắp, bị mất hoặc trường hợp khác bị chiếm hữu ngoài ý chí của chủ sở hữu.Điều 258: Chủ sở hữu được đòi lại động sản phải đăng ký quyền sở hữu và bất động sản, trừ trường hợp người thứ ba chiếm hữu ngay tình nhận được tài sản này thông qua bán đấu giá hoặc giao dịch với người mà theo bản án, quyết định của cơ quan nhà nước có thẩm quyền là chủ sở hữu tài sản nhưng sau đó người này không phải là chủ sở hữu tài sản do bản án, quyết định bị hủy, sửa.",
         "title_en": "Article 256",
         "content_en": "",
@@ -19253,7 +19252,7 @@
         }
       },
       "law-164": {
-        "title": "Điều 164",
+        "title": "Điều 164 của Bộ luật D&#226",
         "content": "2. Đơn khởi kiện phải có các nội dung chính sau đây:a) Ngày, tháng, năm làm đơn khởi kiện;b) Tên Toà án nhận đơn khởi kiện;c) Tên, địa chỉ của người khởi kiện;d) Tên, địa chỉ của người có quyền và lợi ích được bảo vệ, nếu có;đ) Tên, địa chỉ của người bị kiện;e) Tên, địa chỉ của người có quyền lợi, nghĩa vụ liên quan, nếu có;g) Những vấn đề cụ thể yêu cầu Toà án giải quyết đối với bị đơn, người có quyền lợi, nghĩa vụ liên quan;h) Họ, tên, địa chỉ của người làm chứng, nếu có;i) Tài liệu, chứng cứ để chứng minh cho yêu cầu khởi kiện là có căn cứ và hợp pháp;k) Các thông tin khác mà người khởi kiện xét thấy cần thiết cho việc giải quyết vụ án;l) Người khởi kiện là cá nhân phải ký tên hoặc điểm chỉ; nếu cơ quan, tổ chức khởi kiện thì đại diện hợp pháp của cơ quan, tổ chức đó phải ký tên và đóng dấu vào phần cuối đơn.",
         "title_en": "",
         "content_en": "",
@@ -19329,7 +19328,7 @@
         }
       },
       "law-173": {
-        "title": "Điều 173 của Bộ luật H&#236",
+        "title": "Điều 173 Luật Tố tụng h&#224",
         "content": "1. Người nào trộm cắp tài sản của người khác trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng hoặc dưới 2.000.000 đồng nhưng thuộc một trong các trường hợp sau đây, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm:a) Đã bị xử phạt vi phạm hành chính về hành vi chiếm đoạt tài sản mà còn vi phạm;b) Đã bị kết án về tội này hoặc về một trong các tội quy định tại các điều 168, 169, 170, 171, 172, 174, 175 và 290 của Bộ luật này, chưa được xóa án tích mà còn vi phạm;c) Gây ảnh hưởng xấu đến an ninh, trật tự, an toàn xã hội;d) Tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ; tài sản là kỷ vật, di vật, đồ thờ cúng có giá trị đặc biệt về mặt tinh thần đối với người bị hại.2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm đến 07 năm:a) Có tổ chức;b) Có tính chất chuyên nghiệp;c) Chiếm đoạt tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng;d) Dùng thủ đoạn xảo quyệt, nguy hiểm;đ) Hành hung để tẩu thoát;e) Trộm cắp tài sản trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;g) Tái phạm nguy hiểm.3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 07 năm đến 15 năm:a) Chiếm đoạt tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng;b) Trộm cắp tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;c) Lợi dụng thiên tai, dịch bệnh.4. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 12 năm đến 20 năm:a) Chiếm đoạt tài sản trị giá 500.000.000 đồng trở lên;b) Trộm cắp tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng nhưng thuộc một trong các trường hợp quy định tại các điểm a, b, c và d khoản 1 Điều này;c) Lợi dụng hoàn cảnh chiến tranh, tình trạng khẩn cấp.5. Người phạm tội còn có thể bị phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng.",
         "title_en": "Article 173",
         "content_en": "",
@@ -19341,8 +19340,16 @@
         }
       },
       "law-178": {
-        "title": "Điều 178. Thủ tục cấp, tống đạt, thông báo trực tiếp cho cơ quan, tổ chức",
-        "content": "1. Trường hợp người được cấp, tống đạt, thông báo là cơ quan, tổ chức thì văn bản tố tụng phải được giao trực tiếp cho người đại diện theo pháp luật hoặc người chịu trách nhiệm nhận văn bản của cơ quan, tổ chức đó và phải được những người này ký nhận. Trường hợp cơ quan, tổ chức được cấp, tống đạt, thông báo có người đại diện tham gia tố tụng hoặc cử người đại diện nhận văn bản tố tụng thì những người này ký nhận văn bản tố tụng đó. Ngày ký nhận là ngày được cấp, tống đạt, thông báo.<br><br>2. Trường hợp người được cấp, tống đạt, thông báo từ chối nhận văn bản tố tụng hoặc vắng mặt thì thực hiện theo quy định tại khoản 4 và khoản 5 Điều 177 của Bộ luật này."
+        "title": "Điều 178 Bộ luật H&#236",
+        "content": "1. Trường hợp người được cấp, tống đạt, thông báo là cơ quan, tổ chức thì văn bản tố tụng phải được giao trực tiếp cho người đại diện theo pháp luật hoặc người chịu trách nhiệm nhận văn bản của cơ quan, tổ chức đó và phải được những người này ký nhận. Trường hợp cơ quan, tổ chức được cấp, tống đạt, thông báo có người đại diện tham gia tố tụng hoặc cử người đại diện nhận văn bản tố tụng thì những người này ký nhận văn bản tố tụng đó. Ngày ký nhận là ngày được cấp, tống đạt, thông báo.2. Trường hợp người được cấp, tống đạt, thông báo từ chối nhận văn bản tố tụng hoặc vắng mặt thì thực hiện theo quy định tại khoản 4 và khoản 5 Điều 177 của Bộ luật này.",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
       },
       "law-182": {
         "title": "điểm a khoản 1 Điều 182. Tội vi phạm chế độ một vợ, một chồng",
@@ -19361,8 +19368,16 @@
         }
       },
       "law-353": {
-        "title": "khoản 6 Điều 353. Tội tham ô tài sản",
-        "content": "6. Người có chức vụ, quyền hạn trong các doanh nghiệp, tổ chức ngoài Nhà nước mà tham ô tài sản, thì bị xử lý theo quy định tại Điều này."
+        "title": "Điều 353 của Bộ luật H&#236",
+        "content": "6. Người có chức vụ, quyền hạn trong các doanh nghiệp, tổ chức ngoài Nhà nước mà tham ô tài sản, thì bị xử lý theo quy định tại Điều này.",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
       },
       "law-79": {
         "title": "Điều 79",
@@ -19417,8 +19432,16 @@
         }
       },
       "law-174": {
-        "title": "Điều 174. Tội lừa đảo chiếm đoạt tài sản",
-        "content": "1. Người nào bằng thủ đoạn gian dối chiếm đoạt tài sản của người khác trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng hoặc dưới 2.000.000 đồng nhưng thuộc một trong các trường hợp sau đây, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm:<br>a) Đã bị xử phạt vi phạm hành chính về hành vi chiếm đoạt tài sản mà còn vi phạm;<br><br>b) Đã bị kết án về tội này hoặc về một trong các tội quy định tại các điều<br>168, 169, 170, 171, 172, 173, 175 và 290 của Bộ luật này, chưa được xóa án tích mà còn vi phạm;<br><br>c) Gây ảnh hưởng xấu đến an ninh, trật tự, an toàn xã hội;<br><br>d) Tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ<br><br>2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 năm<br>đến 07 năm:<br>a) Có tổ chức;<br>b) Có tính chất chuyên nghiệp;<br>c) Chiếm đoạt tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng;<br>d) Tái phạm nguy hiểm;<br>đ) Lợi dụng chức vụ, quyền hạn hoặc lợi dụng danh nghĩa cơ quan, tổ chức;<br>e) Dùng thủ đoạn xảo quyệt;<br>g) (được bãi bỏ)<br><br>3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 07 năm đến 15 năm:<br>a) Chiếm đoạt tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng;<br>b) (được bãi bỏ)<br>c) Lợi dụng thiên tai, dịch bệnh.<br><br>4. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 12 năm<br>đến 20 năm hoặc tù chung thân:<br>a) Chiếm đoạt tài sản trị giá 500.000.000 đồng trở lên;<br>b) (được bãi bỏ)<br>c) Lợi dụng hoàn cảnh chiến tranh, tình trạng khẩn cấp.<br><br>5. Người phạm tội còn có thể bị phạt tiền từ 10.000.000 đồng đến<br>100.000.000 đồng, cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định từ 01 năm đến 05 năm hoặc tịch thu một phần hoặc toàn bộ tài sản."
+        "title": "Điều 174 của Bộ luật H&#236",
+        "content": "1. Người nào bằng thủ đoạn gian dối chiếm đoạt tài sản của người khác trị giá từ 2.000.000 đồng đến dưới 50.000.000 đồng hoặc dưới 2.000.000 đồng nhưng thuộc một trong các trường hợp sau đây, thì bị phạt cải tạo không giam giữ đến 03 năm hoặc phạt tù từ 06 tháng đến 03 năm:a) Đã bị xử phạt vi phạm hành chính về hành vi chiếm đoạt tài sản mà còn vi phạm;b) Đã bị kết án về tội này hoặc về một trong các tội quy định tại các điều168, 169, 170, 171, 172, 173, 175 và 290 của Bộ luật này, chưa được xóa án tích mà còn vi phạm;c) Gây ảnh hưởng xấu đến an ninh, trật tự, an toàn xã hội;d) Tài sản là phương tiện kiếm sống chính của người bị hại và gia đình họ2. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 02 nămđến 07 năm:a) Có tổ chức;b) Có tính chất chuyên nghiệp;c) Chiếm đoạt tài sản trị giá từ 50.000.000 đồng đến dưới 200.000.000 đồng;d) Tái phạm nguy hiểm;đ) Lợi dụng chức vụ, quyền hạn hoặc lợi dụng danh nghĩa cơ quan, tổ chức;e) Dùng thủ đoạn xảo quyệt;g) (được bãi bỏ)3. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 07 năm đến 15 năm:a) Chiếm đoạt tài sản trị giá từ 200.000.000 đồng đến dưới 500.000.000 đồng;b) (được bãi bỏ)c) Lợi dụng thiên tai, dịch bệnh.4. Phạm tội thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 12 nămđến 20 năm hoặc tù chung thân:a) Chiếm đoạt tài sản trị giá 500.000.000 đồng trở lên;b) (được bãi bỏ)c) Lợi dụng hoàn cảnh chiến tranh, tình trạng khẩn cấp.5. Người phạm tội còn có thể bị phạt tiền từ 10.000.000 đồng đến100.000.000 đồng, cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định từ 01 năm đến 05 năm hoặc tịch thu một phần hoặc toàn bộ tài sản.",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
       },
       "law-158": {
         "title": "Điều 158",
@@ -19453,7 +19476,7 @@
         }
       },
       "law-37": {
-        "title": "Điều 37 Bộ luật H&#236",
+        "title": "Điều 37 của Luật n&#224",
         "content": "2. Cơ quan, người có thẩm quyền ra quyết định hoãn chấp hành án phạt tù, tạm đình chỉ chấp hành án phạt tù, tha tù trước thời hạn có điều kiện, thi hành án treo, thi hành án phạt cải tạo không giam giữ có thẩm quyền quyết định tạm hoãn xuất cảnh đối với trường hợp quy định tại khoản 2 Điều 36 của Luật này.Khoản 2 Điều 36: 2. Người được hoãn chấp hành án phạt tù, người được tạm đình chỉ chấp hành án phạt tù, người được tha tù trước thời hạn có điều kiện trong thời gian thử thách, người được hưởng án treo trong thời gian thử thách, người chấp hành án phạt cải tạo không giam giữ trong thời gian chấp hành án theo quy định của Luật Thi hành án hình sự.",
         "title_en": "Article 37",
         "content_en": "",
@@ -19477,8 +19500,16 @@
         }
       },
       "law-84": {
-        "title": "khoản 2 Điều 84. Quyết định việc thay đổi người giám định, người phiên dịch",
-        "content": "2. Tại phiên tòa, phiên họp, việc thay đổi người giám định, người phiên dịch do Thẩm phán, Hội đồng xét xử, Hội đồng giải quyết việc dân sự quyết định sau khi nghe ý kiến của người bị yêu cầu thay đổi. Hội đồng xét xử, Hội đồng giải quyết việc dân sự thảo luận tại phòng nghị án và quyết định theo đa số.<br><br>Trường hợp phải thay đổi người giám định, người phiên dịch thì Thẩm phán, Hội đồng xét xử, Hội đồng giải quyết việc dân sự ra quyết định hoãn phiên tòa, phiên họp. Việc trưng cầu người giám định khác hoặc thay người phiên dịch khác được thực hiện theo quy định tại Điều 79 và Điều 81 của Bộ luật này."
+        "title": "Điều 84 Bộ luật D&#226",
+        "content": "2. Tại phiên tòa, phiên họp, việc thay đổi người giám định, người phiên dịch do Thẩm phán, Hội đồng xét xử, Hội đồng giải quyết việc dân sự quyết định sau khi nghe ý kiến của người bị yêu cầu thay đổi. Hội đồng xét xử, Hội đồng giải quyết việc dân sự thảo luận tại phòng nghị án và quyết định theo đa số.Trường hợp phải thay đổi người giám định, người phiên dịch thì Thẩm phán, Hội đồng xét xử, Hội đồng giải quyết việc dân sự ra quyết định hoãn phiên tòa, phiên họp. Việc trưng cầu người giám định khác hoặc thay người phiên dịch khác được thực hiện theo quy định tại Điều 79 và Điều 81 của Bộ luật này.",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
       },
       "law-364": {
         "title": "khoản 1 Điều 364. Thẩm quyền và thủ tục ra quyết định thi hành án",
@@ -19513,7 +19544,7 @@
         }
       },
       "law-71": {
-        "title": "Điều 71",
+        "title": "Điều 71 Luật Tố tụng h&#224",
         "content": "d) Biệt tích 05 năm liền trở lên và không có tin tức xác thực là còn sống; thời hạn này được tính theo quy định tại khoản 1 Điều 68 của Bộ luật này.Khoản 1 Điều 68 Bộ luật Dân sự: 1. Khi một người biệt tích 02 năm liền trở lên, mặc dù đã áp dụng đầy đủ các biện pháp thông báo, tìm kiếm theo quy định của pháp luật về tố tụng dân sự nhưng vẫn không có tin tức xác thực về việc người đó còn sống hay đã chết thì theo yêu cầu của người có quyền, lợi ích liên quan, Tòa án có thể tuyên bố người đó mất tích.Thời hạn 02 năm được tính từ ngày biết được tin tức cuối cùng về người đó; nếu không xác định được ngày có tin tức cuối cùng thì thời hạn này được tính từ ngày đầu tiên của tháng tiếp theo tháng có tin tức cuối cùng; nếu không xác định được ngày, tháng có tin tức cuối cùng thì thời hạn này được tính từ ngày đầu tiên của năm tiếp theo năm có tin tức cuối cùng.",
         "title_en": "",
         "content_en": "",
@@ -19801,7 +19832,7 @@
         }
       },
       "law-345": {
-        "title": "Điều 345",
+        "title": "Điều 345 Bộ Luật H&#236",
         "content": "",
         "title_en": "Article 345",
         "content_en": "",
@@ -19813,7 +19844,7 @@
         }
       },
       "law-188": {
-        "title": "Điều 188",
+        "title": "Điều 188 của Bộ luật H&#236",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -20221,7 +20252,7 @@
         }
       },
       "law-55": {
-        "title": "Điều 55",
+        "title": "Điều 55 của Luật tr&#225",
         "content": "",
         "title_en": "Article 55",
         "content_en": "",
@@ -20245,7 +20276,7 @@
         }
       },
       "law-68:clause-4": {
-        "title": "khoản 4 Điều 68 Bộ luật Tố tụng d&#226",
+        "title": "Khoản 4 Điều 68 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -20701,7 +20732,7 @@
         }
       },
       "law-42": {
-        "title": "Điều 42",
+        "title": "Điều 42 Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "Article 42",
         "content_en": "",
@@ -20917,7 +20948,7 @@
         }
       },
       "law-133:clause-2": {
-        "title": "khoản 2 điều 133 Bộ luật d&#226",
+        "title": "Khoản 2 Điều 133 của Bộ luật D&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -21229,7 +21260,7 @@
         }
       },
       "law-38": {
-        "title": "Điều 38",
+        "title": "Điều 38 của Luật C&#244",
         "content": "",
         "title_en": "Article 38",
         "content_en": "",
@@ -21277,7 +21308,7 @@
         }
       },
       "law-123": {
-        "title": "Điều 123 Bộ luật Lao động v&#224",
+        "title": "Điều 123 của Bộ luật D&#226",
         "content": "",
         "title_en": "Article 123",
         "content_en": "",
@@ -21361,7 +21392,7 @@
         }
       },
       "law-101:clause-2": {
-        "title": "khoản 2 Điều 101",
+        "title": "Khoản 2 Điều 101 của Luật H&#244",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -21769,7 +21800,7 @@
         }
       },
       "law-192:clause-1:point-c": {
-        "title": "điểm c khoản 1 Điều 192",
+        "title": "điểm c khoản 1 Điều 192 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -21781,7 +21812,7 @@
         }
       },
       "law-217:clause-1:point-g": {
-        "title": "điểm g khoản 1 Điều 217 Bộ luật Tố tụng d&#226",
+        "title": "điểm g khoản 1 Điều 217 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -21925,7 +21956,7 @@
         }
       },
       "law-35:clause-1": {
-        "title": "khoản 1 Điều 35 Bộ luật Tố tụng d&#226",
+        "title": "khoản 1 Điều 35 Luật Tố tụng h&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -21937,7 +21968,7 @@
         }
       },
       "law-122": {
-        "title": "Điều 122",
+        "title": "Điều 122 Luật Tố tụng h&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -21961,7 +21992,7 @@
         }
       },
       "law-429": {
-        "title": "Điều 429 Bộ luật d&#226",
+        "title": "Điều 429 của Bộ luật D&#226",
         "content": "",
         "title_en": "Article 429 of the Civil Code 2015",
         "content_en": "",
@@ -21973,7 +22004,7 @@
         }
       },
       "law-184": {
-        "title": "Điều 184 Bộ luật Tố tụng d&#226",
+        "title": "Điều 184 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "Article 184",
         "content_en": "",
@@ -21985,7 +22016,7 @@
         }
       },
       "law-26": {
-        "title": "Điều 26",
+        "title": "Điều 26 Luật sửa đổi",
         "content": "",
         "title_en": "Article 26",
         "content_en": "",
@@ -21997,7 +22028,7 @@
         }
       },
       "law-35": {
-        "title": "Điều 35",
+        "title": "Điều 35 của Luật H&#244",
         "content": "",
         "title_en": "Article 35",
         "content_en": "",
@@ -22117,7 +22148,7 @@
         }
       },
       "law-31:clause-1": {
-        "title": "Khoản 1 Điều 31",
+        "title": "khoản 1 Điều 31 của Luật Tố tụng h&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -22213,7 +22244,7 @@
         }
       },
       "law-51:clause-1": {
-        "title": "Clause 1 Article 51",
+        "title": "khoản 1 Điều 51 của Luật Hải quan năm 2014",
         "content": "",
         "title_en": "Clause 1 Article 51",
         "content_en": "",
@@ -22441,7 +22472,7 @@
         }
       },
       "law-30": {
-        "title": "Điều 30 Luật Thi h&#224",
+        "title": "Điều 30 Bộ luật Tố tụng h&#236",
         "content": "",
         "title_en": "Article 30 of the Law on Civil Judgment Enforcement",
         "content_en": "",
@@ -22561,7 +22592,7 @@
         }
       },
       "law-35:clause-1:point-a": {
-        "title": "điểm a khoản 1 Điều 35",
+        "title": "Điểm a khoản 1 Điều 35 Luật Tố tụng h&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -22597,7 +22628,7 @@
         }
       },
       "law-212": {
-        "title": "Điều 212",
+        "title": "Điều 212 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -22657,7 +22688,7 @@
         }
       },
       "law-147:clause-4": {
-        "title": "khoản 4 Điều 147",
+        "title": "Khoản 4 Điều 147 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -22669,7 +22700,7 @@
         }
       },
       "law-27:clause-5:point-a": {
-        "title": "điểm a khoản 5 Điều 27",
+        "title": "Điểm a khoản 5 Điều 27",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -22741,7 +22772,7 @@
         }
       },
       "law-129:clause-2": {
-        "title": "khoản 2 Điều 129 Bộ luật D&#226",
+        "title": "Khoản 2 Điều 129 Luật Tố tụng h&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -22789,7 +22820,7 @@
         }
       },
       "law-184:clause-2": {
-        "title": "khoản 2 Điều 184 Bộ luật Tố tụng d&#226",
+        "title": "Khoản 2 Điều 184 Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "Clause 2 Article 184",
         "content_en": "",
@@ -22921,7 +22952,7 @@
         }
       },
       "law-4:clause-2": {
-        "title": "khoản 2 Điều 4",
+        "title": "khoản 2, khoản 4 Điều 4",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -22945,7 +22976,7 @@
         }
       },
       "law-5:clause-1": {
-        "title": "khoản 1 Điều 5",
+        "title": "Khoản 1 Điều 5 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -23221,7 +23252,7 @@
         }
       },
       "law-106:clause-2:point-b": {
-        "title": "điểm b khoản 2 Điều 106 Bộ luật Tố tụng h&#236",
+        "title": "điểm b khoản 2 Điều 106",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -23233,7 +23264,7 @@
         }
       },
       "law-244": {
-        "title": "Điều 244 Bộ luật H&#236",
+        "title": "Điều 244",
         "content": "",
         "title_en": "Article 244",
         "content_en": "",
@@ -23413,7 +23444,7 @@
         }
       },
       "law-357": {
-        "title": "Điều 357",
+        "title": "Điều 357 Bộ luật Tố tụng h&#236",
         "content": "",
         "title_en": "Article 357",
         "content_en": "",
@@ -23509,7 +23540,7 @@
         }
       },
       "law-30:clause-1": {
-        "title": "khoản 1 Điều 30",
+        "title": "khoản 1 Điều 30 của Bộ luật n&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -24181,7 +24212,7 @@
         }
       },
       "law-3:clause-1": {
-        "title": "khoản 1, khoản 6 Điều 3",
+        "title": "khoản 1 Điều 3",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -24553,7 +24584,7 @@
         }
       },
       "law-123:clause-1:point-d": {
-        "title": "Điểm d khoản 1 Điều 123 của Luật Tố tụng h&#224",
+        "title": "điểm d khoản 1 Điều 123 Luật Tố tụng h&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -24925,7 +24956,7 @@
         }
       },
       "law-217:clause-1:point-e": {
-        "title": "điểm e khoản 1 Điều 217 của Bộ luật tố tụng d&#226",
+        "title": "Điểm e khoản 1 Điều 217 Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "Point e Clause 1 Article 217",
         "content_en": "",
@@ -24949,7 +24980,7 @@
         }
       },
       "law-3:clause-13": {
-        "title": "khoản 13 Điều 3",
+        "title": "Khoản 13 Điều 3 Luật Tố tụng h&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -24973,7 +25004,7 @@
         }
       },
       "law-27:clause-3": {
-        "title": "khoản 3 Điều 27 Luật H&#244",
+        "title": "khoản 3 Điều 27",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -25153,7 +25184,7 @@
         }
       },
       "law-34:clause-1": {
-        "title": "Khoản 1 Điều 34",
+        "title": "khoản 1 Điều 34 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -25273,7 +25304,7 @@
         }
       },
       "law-5:clause-1:point-a": {
-        "title": "điểm a khoản 1 Điều 5",
+        "title": "Điểm a khoản 1 Điều 5",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -25309,7 +25340,7 @@
         }
       },
       "law-4:clause-7": {
-        "title": "khoản 7 Điều 4",
+        "title": "Khoản 7 Điều 4 Luật Hộ tịch năm 2014 quy định",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -25561,7 +25592,7 @@
         }
       },
       "law-305": {
-        "title": "Điều 305 của Bộ luật H&#236",
+        "title": "Điều 305 Bộ luật Tố tụng h&#236",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -25693,7 +25724,7 @@
         }
       },
       "law-7:clause-1": {
-        "title": "Khoản 1 Điều 7 của Luật Tố tụng h&#224",
+        "title": "khoản 1 Điều 7",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -25741,7 +25772,7 @@
         }
       },
       "law-143:clause-1:point-g": {
-        "title": "điểm g khoản 1 Điều 143 của Luật Tố tụng h&#224",
+        "title": "điểm g khoản 1 Điều 143 Luật Tố tụng h&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -25837,7 +25868,7 @@
         }
       },
       "law-3:clause-9": {
-        "title": "khoản 9 Điều 3 của Luật Tố tụng h&#224",
+        "title": "khoản 9 Điều 3 Luật Tố tụng h&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -25909,7 +25940,7 @@
         }
       },
       "ldd-152:clause-2:point-b": {
-        "title": "điểm b khoản 2 Điều 152 của Luật Đất đai năm 2024 nếu người được cấp Giấy chứng nhận quyền sử dụng đất đ&#227",
+        "title": "điểm b khoản 2 Điều 152 Luật Đất đai năm 2024",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -25957,7 +25988,7 @@
         }
       },
       "law-74:clause-1": {
-        "title": "khoản 1 Điều 74 của Bộ luật Tố tụng d&#226",
+        "title": "khoản 1 Điều 74 Luật Tố tụng h&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -26077,7 +26108,7 @@
         }
       },
       "law-74:clause-2": {
-        "title": "khoản 2 Điều 74 của Bộ luật Tố tụng d&#226",
+        "title": "khoản 2 Điều 74 Luật Tố tụng h&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -26101,7 +26132,7 @@
         }
       },
       "law-6:clause-2:point-a": {
-        "title": "điểm a khoản 2 Điều 6",
+        "title": "điểm a, điểm b khoản 2 Điều 6",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -26113,7 +26144,7 @@
         }
       },
       "law-192:clause-3": {
-        "title": "khoản 3 Điều 192 của Bộ luật Tố tụng d&#226",
+        "title": "khoản 3 Điều 192",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -26269,7 +26300,7 @@
         }
       },
       "law-100": {
-        "title": "Điều 100 của Luật c&#225",
+        "title": "Điều 100 của Luật n&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -26281,7 +26312,7 @@
         }
       },
       "law-7": {
-        "title": "Điều 7",
+        "title": "Điều 7 Luật Hộ tịch năm 2014[19]&#160",
         "content": "",
         "title_en": "Article 7",
         "content_en": "",
@@ -26341,7 +26372,7 @@
         }
       },
       "law-26:clause-5": {
-        "title": "khoản 5 Điều 26",
+        "title": "Khoản 5 Điều 26 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -26473,7 +26504,7 @@
         }
       },
       "law-26:clause-2": {
-        "title": "khoản 2 Điều 26",
+        "title": "khoản 2 Điều 26 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -26593,7 +26624,7 @@
         }
       },
       "law-280": {
-        "title": "Điều 280",
+        "title": "Điều 280 của Bộ luật Tố tụng h&#236",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -26749,7 +26780,7 @@
         }
       },
       "law-32": {
-        "title": "Điều 32",
+        "title": "Điều 32 của Bộ luật n&#224",
         "content": "",
         "title_en": "Article 32 of the Law on Intellectual Property 2005",
         "content_en": "",
@@ -26965,7 +26996,7 @@
         }
       },
       "law-17:clause-2": {
-        "title": "khoản 2 Điều 17",
+        "title": "khoản 2 Điều 17 của Luật n&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -27769,7 +27800,7 @@
         }
       },
       "law-9:clause-1": {
-        "title": "khoản 1 Điều 9",
+        "title": "Khoản 1 Điều 9 Luật Tố tụng h&#224",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -27805,7 +27836,7 @@
         }
       },
       "law-13:clause-1": {
-        "title": "khoản 1 Điều 13",
+        "title": "Khoản 1 Điều 13",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -28021,7 +28052,7 @@
         }
       },
       "law-27:clause-2": {
-        "title": "khoản 2, khoản 3 Điều 27 Luật Nu&#244",
+        "title": "Khoản 2 Điều 27 Luật H&#244",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -28069,7 +28100,7 @@
         }
       },
       "law-28": {
-        "title": "Điều 28",
+        "title": "Điều 28 của Bộ luật n&#224",
         "content": "",
         "title_en": "Article 28",
         "content_en": "",
@@ -28177,7 +28208,7 @@
         }
       },
       "law-214:clause-1:point-d": {
-        "title": "điểm d khoản 1 Điều 214 Bộ luật Tố tụng d&#226",
+        "title": "điểm d khoản 1 Điều 214 của Bộ luật Tố tụng d&#226",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -28273,7 +28304,7 @@
         }
       },
       "law-85:clause-4": {
-        "title": "khoản 4 Điều 85 Bộ luật Tố tụng d&#226",
+        "title": "khoản 4 Điều 85",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -29027,6 +29058,2070 @@
             "content": ""
           }
         }
+      },
+      "law-620": {
+        "title": "Điều 620 Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-650:clause-2:point-c": {
+        "title": "Điểm c khoản 2 Điều 650 Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-238": {
+        "title": "Điều 238 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-152": {
+        "title": "Điều 152",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-153": {
+        "title": "Điều 153 Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-469:clause-1:point-d": {
+        "title": "Điểm d khoản 1 Điều 469 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-472:clause-1:point-d": {
+        "title": "điểm d khoản 1 Điều 472 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-21:clause-2": {
+        "title": "khoản 2 Điều 21 Bộ luật tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-259:clause-1:point-c": {
+        "title": "điểm c khoản 1 Điều 259 Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-259:clause-2": {
+        "title": "Khoản 2 Điều 259 Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-299:clause-1:point-b": {
+        "title": "Điểm b khoản 1 Điều 299 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-34:clause-4": {
+        "title": "Khoản 4 Điều 34 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-32:clause-4": {
+        "title": "Khoản 4 Điều 32 của Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-42:clause-1": {
+        "title": "Khoản 1 Điều 42 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-6:point-3": {
+        "title": "Mục 3 Điều 6",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-32:clause-1": {
+        "title": "Khoản 1 Điều 32 của Luật H&#244",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-16": {
+        "title": "Điều 16",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-5:clause-2": {
+        "title": "Khoản 2 Điều 5",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-52:clause-1": {
+        "title": "Khoản 1 Điều 52",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-188:clause-1": {
+        "title": "khoản 1 Điều 188 của Luật Đất đai năm 2013 quy định",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-186:clause-3": {
+        "title": "khoản 3 Điều 186",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-168:clause-1": {
+        "title": "khoản 1 Điều 168 của Luật n&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-422:clause-5": {
+        "title": "khoản 5 Điều 422 của Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-408": {
+        "title": "Điều 408 của Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-299:clause-1": {
+        "title": "khoản 1 Điều 299",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-303": {
+        "title": "Điều 303 của Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-126": {
+        "title": "Điều 126 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-12:clause-3": {
+        "title": "khoản 3 Điều 12",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-12:clause-2": {
+        "title": "khoản 2, khoản 3 Điều 12",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-133:clause-4": {
+        "title": "khoản 4 Điều 133 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-127:clause-1": {
+        "title": "Khoản 1 Điều 127 của Luật H&#244",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-130": {
+        "title": "Điều 130 của Luật n&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-213:clause-1": {
+        "title": "khoản 1 Điều 213 của Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-213:clause-2": {
+        "title": "khoản 2 Điều 213 của Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-29:clause-1": {
+        "title": "khoản 1 Điều 29",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-92": {
+        "title": "Điều 92 của Luật n&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-29:clause-10": {
+        "title": "Khoản 10 Điều 29 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-155:clause-3": {
+        "title": "khoản 3 Điều 155 của Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-133": {
+        "title": "Điều 133 Bộ luật d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-156:clause-1": {
+        "title": "Khoản 1 Điều 156 của Luật Ban h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-7:clause-1:point-d": {
+        "title": "điểm d khoản 1 Điều 7 của Luật Thi h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-26:clause-12": {
+        "title": "khoản 12 Điều 26 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-6:clause-8": {
+        "title": "Khoản 8 Điều 6 của Luật Ng&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-3:clause-16": {
+        "title": "Khoản 16 Điều 3 của Luật Đất đai năm 2013 quy định",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-3:clause-2": {
+        "title": "khoản 2 Điều 3 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-17:clause-2:point-g": {
+        "title": "điểm g khoản 2 Điều 17 của Luật C&#244",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-17:clause-2:point-d": {
+        "title": "điểm d khoản 2 Điều 17 của Luật C&#244",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-138:clause-1": {
+        "title": "Khoản 1 Điều 138 của Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-86:clause-2": {
+        "title": "Khoản 2 Điều 86 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-6:clause-1:point-b": {
+        "title": "điểm b khoản 1 Điều 6",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-217:clause-1": {
+        "title": "khoản 1 Điều 217 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-218:clause-1": {
+        "title": "Khoản 1 Điều 218 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-217:clause-1:point-c": {
+        "title": "điểm c khoản 1 Điều 217 của Bộ luật n&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-26:clause-7": {
+        "title": "khoản 7 Điều 26 của Bộ luật n&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-244:clause-2": {
+        "title": "Khoản 2 Điều 244 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-18:clause-3": {
+        "title": "khoản 3 Điều 18",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-192:clause-1:point-e": {
+        "title": "Điểm e khoản 1 Điều 192 của Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-6:clause-1": {
+        "title": "khoản 1 Điều 6",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-210:clause-2:point-a": {
+        "title": "điểm a khoản 2 Điều 210",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-217:clause-2": {
+        "title": "khoản 2 Điều 217",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-217:clause-3": {
+        "title": "khoản 3 Điều 217",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-217:clause-4": {
+        "title": "khoản 4 Điều 217",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-60:clause-3": {
+        "title": "khoản 3 Điều 60 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-61:clause-2": {
+        "title": "khoản 2 Điều 61 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-60:clause-6": {
+        "title": "khoản 6, khoản 7 Điều 60 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-6:clause-2": {
+        "title": "Khoản 2 Điều 6 Luật Tr&#225",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-3:clause-10": {
+        "title": "Khoản 10 Điều 3 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-95:clause-5": {
+        "title": "Khoản 5 Điều 95 Luật Đất đai năm 2013[6]&#160",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-60:clause-5": {
+        "title": "Khoản 5 Điều 60 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-204": {
+        "title": "Điều 204",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-205:clause-2": {
+        "title": "khoản 2, khoản 3 Điều 205 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-193:clause-2:point-a": {
+        "title": "điểm a khoản 2 Điều 193 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-193:clause-2:point-b": {
+        "title": "điểm b khoản 2 Điều 193 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-193:clause-2:point-c": {
+        "title": "điểm c khoản 2 Điều 193 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-83:clause-4": {
+        "title": "Khoản 4 Điều 83 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-68:clause-3": {
+        "title": "khoản 3 Điều 68 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-191:clause-3": {
+        "title": "Khoản 3 Điều 191 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-197:clause-1": {
+        "title": "khoản 1 Điều 197",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-194:clause-2:point-c": {
+        "title": "điểm c khoản 2 Điều 194",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-234:clause-1:point-b": {
+        "title": "điểm b khoản 1 Điều 234 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-61:clause-2:point-a": {
+        "title": "điểm a khoản 2, khoản 5, khoản 6 Điều 61 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-232": {
+        "title": "Điều 232 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-194:clause-3": {
+        "title": "Khoản 3 Điều 194 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-242:clause-6": {
+        "title": "Khoản 6 Điều 242 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-193:clause-1:point-b": {
+        "title": "điểm b khoản 1 Điều 193 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-1:clause-5": {
+        "title": "khoản 5 Điều 1",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-567:clause-2": {
+        "title": "Khoản 2 Điều 567 Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-75:clause-2": {
+        "title": "khoản 2 Điều 75",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-105:clause-2": {
+        "title": "Khoản 2 Điều 105 Luật Đất đai năm 2013[10]&#160",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-116:clause-2:point-a": {
+        "title": "điểm a khoản 2 Điều 116 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-3:clause-5": {
+        "title": "Khoản 5 Điều 3 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-30:clause-2": {
+        "title": "khoản 2 Điều 30 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-193": {
+        "title": "Điều 193 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-193:clause-1": {
+        "title": "khoản 1 Điều 193 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-67:clause-1": {
+        "title": "khoản 1, khoản 4 Điều 67",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-17:clause-1": {
+        "title": "khoản 1, khoản 2 Điều 17",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-7:clause-2": {
+        "title": "Khoản 2 Điều 7",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-124:clause-3": {
+        "title": "Khoản 3, khoản 4 Điều 124 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-124:clause-4:point-a": {
+        "title": "điểm a khoản 4 Điều 124 của Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-67:clause-4": {
+        "title": "khoản 4 Điều 67",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-170:clause-7": {
+        "title": "khoản 7 Điều 170",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-187:clause-1:point-c": {
+        "title": "điểm c khoản 1 Điều 187 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-118:clause-1": {
+        "title": "khoản 1 Điều 118 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-123:clause-1:point-g": {
+        "title": "Điểm g khoản 1 Điều 123 Luật tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-122:clause-3": {
+        "title": "Khoản 3 Điều 122 Luật tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-76": {
+        "title": "Điều 76 Luật Tr&#225",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-8:clause-4:point-a": {
+        "title": "điểm a khoản 4 Điều 8",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-8:clause-4:point-b": {
+        "title": "điểm b khoản 4 Điều 8",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-3:clause-6": {
+        "title": "Khoản 6 Điều 3 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-30:clause-1:point-c": {
+        "title": "điểm c khoản 1 Điều 30 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-133:clause-2": {
+        "title": "khoản 2 Điều 133 Luật Đất đai năm 2024",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-136:clause-1:point-b": {
+        "title": "điểm b khoản 1 Điều 136 Luật Đất đai năm 2024",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-106:clause-2:point-b": {
+        "title": "Điểm b khoản 2 Điều 106 Luật Đất đai năm 2013 quy định",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-85:clause-1": {
+        "title": "khoản 1, khoản 4 Điều 85",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-87": {
+        "title": "Điều 87 Luật Đất đai năm 2024",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-7:clause-2:point-b": {
+        "title": "điểm b khoản 2 Điều 7 Luật Hộ tịch năm 2014 quy định về thẩm quyền đăng k&#253",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-67:clause-4": {
+        "title": "Khoản 4 Điều 67 Luật Đất đai năm 2013 quy định",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-170:clause-7": {
+        "title": "Khoản 7 Điều 170 Luật Đất đai năm 2013 quy định về nghĩa vụ chung của người sử dụng đất như sau",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-31:clause-7": {
+        "title": "khoản 7 Điều 31 Luật Đất đai năm 2024",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-76:clause-1": {
+        "title": "khoản 1 Điều 76",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-60:clause-2": {
+        "title": "khoản 2 Điều 60",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-3:clause-4": {
+        "title": "khoản 4 Điều 3 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-30:clause-1:point-a": {
+        "title": "điểm a khoản 1 Điều 30 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-149:clause-2": {
+        "title": "Khoản 2 Điều 149 Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-8:clause-11:point-c": {
+        "title": "Điểm c khoản 11 Điều 8",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-37:clause-2": {
+        "title": "Khoản 2 Điều 37 Luật H&#244",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-35:clause-2": {
+        "title": "Khoản 2 Điều 35 của Luật H&#244",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-75:clause-1": {
+        "title": "Khoản 1 Điều 75",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-138:clause-3": {
+        "title": "khoản 3 Điều 138 Bộ luật Tố tụng d&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-312:clause-1": {
+        "title": "khoản 1 Điều 312 Luật tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-311:clause-2:point-b": {
+        "title": "điểm b khoản 2 Điều 311 của Luật n&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-3:clause-14": {
+        "title": "Khoản 14 Điều 3 Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-100:clause-1:point-b": {
+        "title": "điểm b khoản 1 Điều 100 của Luật Đất đai năm 2013 th&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-203:clause-1": {
+        "title": "khoản 1 Điều 203 của Luật Đất đai năm 2013",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-203:clause-2": {
+        "title": "khoản 2 Điều 203 của Luật Đất đai năm 2013",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-79:clause-1": {
+        "title": "khoản 1 Điều 79",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-80:clause-1": {
+        "title": "khoản 1 Điều 80 của Luật Đất đai năm 2013 đều quy định c&#225",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-3:clause-3": {
+        "title": "khoản 3 Điều 3 của Luật Tố tụng h&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-203": {
+        "title": "Điều 203 của Luật Đất đai năm 2013 về thẩm quyền giải quyết tranh chấp đất đai th&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-83:clause-2:point-c": {
+        "title": "điểm c khoản 2 Điều 83 của Luật Đất đai năm 2013 về hỗ trợ khi nh&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-107:clause-1:point-a": {
+        "title": "điểm a khoản 1 Điều 107 Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-234": {
+        "title": "Điều 234",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-7:clause-1:point-c": {
+        "title": "điểm c khoản 1 Điều 7",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-280:clause-1:point-b": {
+        "title": "điểm b khoản 1 Điều 280 Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-298:clause-1": {
+        "title": "khoản 1 Điều 298 Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-615": {
+        "title": "Điều 615 Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-357:clause-1": {
+        "title": "khoản 1 Điều 357 Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-119": {
+        "title": "Điều 119 của Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-292:clause-1": {
+        "title": "khoản 1 Điều 292 Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-178:clause-1": {
+        "title": "Khoản 1 Điều 178 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-326:clause-3": {
+        "title": "khoản 3 Điều 326 của Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-25:clause-5": {
+        "title": "khoản 5 Điều 25",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-21:clause-1:point-b": {
+        "title": "điểm b khoản 1 Điều 21",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-21:clause-1:point-c": {
+        "title": "điểm c khoản 1 Điều 21",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-352:clause-2": {
+        "title": "khoản 2 Điều 352",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-2:clause-5": {
+        "title": "khoản 5 Điều 2",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-209": {
+        "title": "Điều 209 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-209:clause-1": {
+        "title": "khoản 1 Điều 209 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-401": {
+        "title": "Điều 401 của Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-268:clause-2:point-b": {
+        "title": "điểm b khoản 2 Điều 268 của Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-364:clause-3": {
+        "title": "khoản 3 Điều 364 của Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-65": {
+        "title": "Điều 65 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-134:clause-3:point-d": {
+        "title": "điểm d khoản 3 Điều 134 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-134:clause-3:point-c": {
+        "title": "điểm c khoản 3 Điều 134 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-51:clause-1:point-o": {
+        "title": "điểm o khoản 1 Điều 51 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-260:clause-1": {
+        "title": "khoản 1 Điều 260 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-591:clause-1": {
+        "title": "Khoản 1 Điều 591 của Bộ luật D&#226",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-199": {
+        "title": "Điều 199 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-256:clause-1": {
+        "title": "khoản 1 Điều 256 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-240:clause-1": {
+        "title": "khoản 1, khoản 2 Điều 240 của Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-260:clause-2:point-e": {
+        "title": "điểm e khoản 2 Điều 260 của Bộ luật Tố tụng h&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-56:clause-3": {
+        "title": "khoản 3 Điều 56 của Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
       }
     },
     "caseOrder": {
@@ -29128,6 +31223,7 @@
         "case-an-le-so-36-5"
       ],
       "hanh-chinh::an-le": [
+        "case-an-le-so-322-1",
         "case-an-le-so-90-1",
         "case-an-le-so-89-2",
         "case-an-le-so-63-13",
@@ -29148,14 +31244,23 @@
         "case-tranh-chap-qsd-d-1"
       ],
       "hinh-su::giai-dap-nghiep-vu": [
+        "case-cong-van-196-2023-ve-hinh-su-to-tung-thi-hanh-an-hinh-su-4",
+        "case-cong-van-02-2021-hs-3",
+        "case-cong-van-206-2022-1",
         "case-cong-van-250-hinh-su-3",
         "case-cong-van-163-tandtc-pc-nam-2024-hinh-su-1"
       ],
       "hanh-chinh::giai-dap-nghiep-vu": [
+        "case-cong-van-206-2022-ve-hc-to-tung-hc-6",
+        "case-cong-van-196-2023-5",
+        "case-cv-207-2024-hc-2",
         "case-cong-van-250-hanh-chinh-2",
         "case-cong-van-163-tandtc-pc-nam-2024-hanh-chinh-3"
       ],
       "dan-su::giai-dap-nghiep-vu": [
+        "case-cong-van-206-2022-ve-dan-su-to-tung-ds-9",
+        "case-cong-van-196-2023-dan-su-hon-nhan-gd-to-tung-8",
+        "case-cong-van-02-2021-7",
         "case-cong-van-1476-vksnd-1",
         "case-cong-van-250-dan-su-1",
         "case-cong-van-163-tandtc-pc-nam-2024-dan-su-2"
@@ -29231,16 +31336,13 @@
         "case-tbao-rkn-25-2025-7"
       ],
       "dat-dai::an-le": [
+        "case-an-le-so-322-1",
         "case-an-le-so-89-1",
         "case-an-le-so-72-1",
         "case-an-le-so-52-3-3",
         "case-an-le-so-43-4",
         "case-an-le-so-40-5-2",
         "case-an-le-so-36-2",
-        "case-an-le-35-3",
-        "case-an-le-34-1",
-        "case-an-le-33-2",
-        "case-an-le-32-4",
         "case-an-le-so-16-ve-cong-nhan-hop-dong-chuyen-nhuong-quyen-su-dung-dat-la-di-san-thua-ke-do-mot-trong-cac-dong-thua-ke-chuyen-nhuong-1",
         "case-an-le-so-15-ve-cong-nhan-thoa-thuan-mieng-cua-cac-duong-su-trong-viec-chuyen-doi-quyen-su-dung-dat-nong-nghiep-2",
         "case-an-le-so-14-ve-cong-nhan-dieu-kien-cua-hop-dong-tang-cho-quyen-su-dung-dat-ma-dieu-kien-do-khong-duoc-ghi-trong-hop-dong-3",
