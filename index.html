@@ -66,6 +66,10 @@ body { top: 0 !important; }
 #side-left.open #filter-panel { transform: translateX(0); }
 .filter-close-btn { display: flex; }
 
+/* ===== DCSL-ZOOM START: phóng to toàn trang trên desktop — 100% mới = 110% cũ (media query tính theo px thật nên layout không đổi) ===== */
+@media(min-width:1210px){ html{ zoom: 1.1; } }
+/* ===== DCSL-ZOOM END ===== */
+
 @media(min-width:1100px){
   body { background:var(--bg2); } 
   #global-header { left:0!important; right:0!important; transform:none!important; max-width:none!important; background:rgba(255,255,255,0.98)!important; border-bottom:1px solid var(--gold-border); }
@@ -721,7 +725,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
     </div>
     <div class="admin-form-group">
       <label class="admin-label">Tính chất (Phân loại):</label>
-      <select id="ad-tinhchat" class="admin-input"><option value="0">Sơ thẩm / Phúc thẩm (Bình thường)</option><option value="1">⭐ Giám đốc thẩm / Tái thẩm</option></select>
+      <select id="ad-tinhchat" class="admin-input"><option value="0">Sơ thẩm (không sao)</option><option value="1">⭐ Phúc thẩm</option><option value="3">⭐⭐⭐ Giám đốc thẩm / Tái thẩm</option></select>
     </div>
     <div class="admin-form-group">
       <label class="admin-label" style="display:flex; justify-content:space-between;">
@@ -1440,11 +1444,15 @@ function applyStaticTranslations() {
   if(homeTitle) homeTitle.textContent = t('interest');
   if(sections[0]) sections[0].textContent = t('latest');
   if(sections[1]) sections[1].textContent = t('viewed');
-  if(sidebarItems[0]) sidebarItems[0].innerHTML = `<i class="ph ph-house si-icon"></i> ${t('sidebarHome')}`;
-  if(sidebarItems[1]) sidebarItems[1].innerHTML = `<i class="ph ph-funnel si-icon"></i> ${t('sidebarFilter')}`;
-  if(sidebarItems[2]) sidebarItems[2].innerHTML = `<i class="ph ph-plus-circle si-icon"></i> ${t('sidebarAdmin')}`;
-  if(sidebarItems[3]) sidebarItems[3].innerHTML = `<i class="ph ph-book-open-text si-icon"></i> ${t('sidebarGuide')}`;
-  if(sidebarItems[4]) sidebarItems[4].innerHTML = `<i class="ph ph-info si-icon"></i> ${t('sidebarAbout')}`;
+  // Gán nhãn theo CHỨC NĂNG (onclick) thay vì theo thứ tự — tránh lệch nhãn khi bản public không có mục Admin
+  const sbByClick = fn => document.querySelector('#sidebar .sidebar-item[onclick*="' + fn + '"]');
+  const sbHome = sbByClick('goHome'), sbFilter = sbByClick('openFilter'), sbGuide = sbByClick('openHuongDan'), sbAbout = sbByClick('openGioiThieu');
+  const sbAdmin = document.getElementById('admin-sidebar-item');
+  if(sbHome) sbHome.innerHTML = `<i class="ph ph-house si-icon"></i> ${t('sidebarHome')}`;
+  if(sbFilter) sbFilter.innerHTML = `<i class="ph ph-funnel si-icon"></i> ${t('sidebarFilter')}`;
+  if(sbAdmin) sbAdmin.innerHTML = `<i class="ph ph-plus-circle si-icon"></i> ${t('sidebarAdmin')}`;
+  if(sbGuide) sbGuide.innerHTML = `<i class="ph ph-book-open-text si-icon"></i> ${t('sidebarGuide')}`;
+  if(sbAbout) sbAbout.innerHTML = `<i class="ph ph-info si-icon"></i> ${t('sidebarAbout')}`;
   if(filterTitle) filterTitle.innerHTML = `<i class="ph ph-funnel"></i> ${t('filterTitle')}`;
   if(filterLabels[0]) filterLabels[0].innerHTML = `<span class="filter-step-num">1</span> ${t('filterFieldType')}`;
   if(filterLabels[1]) filterLabels[1].innerHTML = `<span class="filter-step-num">2</span> ${t('filterSpecificField')}`;
@@ -1561,10 +1569,10 @@ function getDisplayTypeLabel(caseObj) {
   const star = parseInt(caseObj && caseObj.sao, 10) || 0;
   if(getActiveLanguage() === 'en') {
     if(isDoc) return caseObj.sfId === 'van-ban-phap-luat' ? 'Legal document' : 'Judicial professional guidance';
-    if(star === 1) return 'Cassation / reopening';
+    if(star === 1) return 'Appellate judgment';
     if(star === 2) return 'Experience notice';
-    if(star === 3) return 'Precedent';
-    return 'Trial judgment';
+    if(star === 3) return 'Precedent / cassation / reopening';
+    return 'First-instance judgment';
   }
   if(isDoc) return caseObj.sfId === 'van-ban-phap-luat' ? 'Văn bản pháp luật' : 'Giải đáp nghiệp vụ';
   return getTypeLabel(star);
@@ -2021,9 +2029,19 @@ function applyStoredCaseOrder() {
 }
 
 function getTypeLabel(sao){
-  if(sao===1) return 'Giám đốc thẩm / Tái thẩm';
+  if(sao===1) return 'Phúc thẩm';
   if(sao===2) return 'Thông báo Rút kinh nghiệm';
-  if(sao===3) return 'Án lệ'; return 'Sơ thẩm / Phúc thẩm';
+  if(sao===3) return 'Án lệ / Giám đốc thẩm / Tái thẩm'; return 'Sơ thẩm';
+}
+
+// Tự nhận diện số sao theo tính chất trong TIÊU ĐỀ vụ án:
+// "giám đốc thẩm"/"tái thẩm" -> 3 sao; "phúc thẩm" -> 1 sao; không rõ -> null (dùng giá trị chọn tay).
+// Ưu tiên GĐT/tái thẩm trước vì quyết định GĐT thường nhắc tới "bản án phúc thẩm" bị hủy.
+function detectSaoFromTitle(ten){
+  const t = removeAccents(String(ten || ''));
+  if(/giam doc tham|tai tham/.test(t)) return 3;
+  if(/phuc tham/.test(t)) return 1;
+  return null;
 }
 function formatDate(str){
   if(!str) return ''; const d = new Date(str);
@@ -2764,9 +2782,11 @@ function openHuongDan(){
   if(getActiveLanguage() === 'en') {
     closeSidebar(); document.getElementById('modal-title').innerHTML = '<i class="ph ph-book-open-text"></i> User guide';
     document.getElementById('modal-body').innerHTML = `
-      <div style="margin-bottom: 16px;"><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">Search</h4><p style="margin-bottom: 8px;">Enter keywords or a legal situation to search matching documents.</p></div>
-      <div style="margin-bottom: 16px;"><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">Language</h4><p style="margin-bottom: 8px;">Use <strong>VN | EN</strong> in the top-right corner. The English view uses the admin-provided English content where available.</p></div>
-      <div><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">Document types</h4><p style="line-height: 1.8;">No star: Trial judgment<br>One star: Cassation / reopening<br>Two stars: Experience notice<br>Three stars: Precedent</p></div>
+      <div style="margin-bottom: 16px;"><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">🔍 Search</h4><p style="margin-bottom: 8px;">Type keywords or describe your legal situation in the search box on the home page. You can also open <strong>Search filters</strong> to narrow down by field of law and topic first.</p></div>
+      <div style="margin-bottom: 16px;"><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">📚 Document library</h4><p style="margin-bottom: 8px;">Each field of law contains four sections: <strong>Legal documents</strong>, <strong>Precedents</strong>, <strong>Experience notices</strong> and <strong>Judicial professional guidance</strong>. Open any item to read its summary and full text.</p></div>
+      <div style="margin-bottom: 16px;"><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">⭐ Case classification</h4><p style="line-height: 1.8;">• <strong>No star</strong>: First-instance judgment<br>• <strong>⭐</strong>: Appellate judgment<br>• <strong>⭐⭐</strong>: Experience notice<br>• <strong>⭐⭐⭐</strong>: Precedent, cassation / reopening decision</p></div>
+      <div style="margin-bottom: 16px;"><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">🧮 Tax AI assistant</h4><p style="margin-bottom: 8px;">Open the <strong>Tax advisory</strong> card on the home page and describe your situation to get an analysis based on current Vietnamese tax law.</p></div>
+      <div><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">🌐 Language</h4><p style="margin-bottom: 8px;">Use <strong>VN | EN</strong> in the top-right corner. The English view uses the provided English content where available.</p></div>
     `;
     document.getElementById('info-modal').classList.add('open');
     return;
@@ -2775,15 +2795,23 @@ function openHuongDan(){
   document.getElementById('modal-body').innerHTML = `
     <div style="margin-bottom: 16px;">
       <h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">🔍 Tra cứu thông minh</h4>
-      <p style="margin-bottom: 8px;">Nhập tình huống hoặc từ khóa vào ô tìm kiếm. Hệ thống sử dụng thuật toán Strict Search để lọc ra các tài liệu khớp chính xác nhất với yêu cầu của bạn.</p>
+      <p style="margin-bottom: 8px;">Nhập từ khóa hoặc mô tả tình huống của bạn vào ô tìm kiếm ở trang chủ. Bạn cũng có thể mở <strong>Lọc tìm kiếm</strong> để giới hạn theo lĩnh vực luật và chủ đề trước khi tìm, giúp kết quả chính xác hơn.</p>
     </div>
     <div style="margin-bottom: 16px;">
-      <h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">🌐 Dịch đa ngôn ngữ</h4>
-      <p style="margin-bottom: 8px;">Sử dụng nút <strong>VN | EN</strong> ở góc phải trên cùng để tự động dịch thuật toàn bộ giao diện và nội dung văn bản sang Tiếng Anh.</p>
+      <h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">📚 Kho tài liệu</h4>
+      <p style="margin-bottom: 8px;">Mỗi lĩnh vực luật gồm 4 mục: <strong>Văn bản pháp luật</strong>, <strong>Án lệ</strong>, <strong>Thông báo rút kinh nghiệm</strong> và <strong>Giải đáp nghiệp vụ</strong>. Bấm vào từng tài liệu để xem tóm tắt, diễn biến và nội dung chi tiết; các điều luật được trích dẫn có thể bấm để xem ngay nội dung.</p>
+    </div>
+    <div style="margin-bottom: 16px;">
+      <h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">⭐ Phân loại bản án</h4>
+      <p style="line-height: 1.8;">• <strong>Không sao</strong>: Bản án sơ thẩm<br>• <strong>⭐</strong>: Bản án phúc thẩm<br>• <strong>⭐⭐</strong>: Thông báo rút kinh nghiệm<br>• <strong>⭐⭐⭐</strong>: Án lệ, Quyết định giám đốc thẩm / tái thẩm</p>
+    </div>
+    <div style="margin-bottom: 16px;">
+      <h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">🧮 Tư vấn Thuế AI</h4>
+      <p style="margin-bottom: 8px;">Vào thẻ <strong>Tư vấn Thuế</strong> ở trang chủ, mô tả tình huống (có thể đính kèm tệp) để nhận phân tích dựa trên pháp luật thuế hiện hành. Kết quả chỉ mang tính tham khảo.</p>
     </div>
     <div>
-      <h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">⭐ Phân loại tài liệu</h4>
-      <p style="line-height: 1.8;">• <strong>Sơ thẩm / Phúc thẩm</strong>: Không có sao<br>• <strong>⭐⭐</strong>: Thông báo rút kinh nghiệm<br>• <strong>⭐⭐⭐</strong>: Án lệ, Giám đốc thẩm / Tái thẩm</p>
+      <h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">🌐 Song ngữ</h4>
+      <p style="margin-bottom: 8px;">Dùng nút <strong>VN | EN</strong> ở góc phải trên cùng để chuyển giao diện và nội dung (khi đã có bản dịch) sang Tiếng Anh.</p>
     </div>
   `;
   document.getElementById('info-modal').classList.add('open');
@@ -2801,8 +2829,8 @@ function openGioiThieu(){
   }
   closeSidebar(); document.getElementById('modal-title').innerHTML = '<i class="ph ph-info"></i> Giới thiệu';
   document.getElementById('modal-body').innerHTML = `
-    <p style="margin-bottom: 12px;"><strong>Đấu Chiến Thắng Luật.com</strong> là nền tảng thư viện bản án và tra cứu pháp lý thông minh hàng đầu Việt Nam.</p>
-    <p style="margin-bottom: 12px;">Với giao diện thiết kế chuyên nghiệp, công cụ tìm kiếm chuẩn xác và khả năng trích xuất điều luật tự động, chúng tôi mong muốn mang lại trải nghiệm tra cứu tối ưu nhất cho các chuyên gia pháp lý, luật sư và người dân.</p>
+    <p style="margin-bottom: 12px;"><strong>Đấu Chiến Thắng Luật.com</strong> là thư viện bản án và nền tảng tra cứu pháp lý thông minh của Việt Nam.</p>
+    <p style="margin-bottom: 12px;">Chúng tôi tổng hợp bản án, án lệ, văn bản pháp luật và giải đáp nghiệp vụ theo từng lĩnh vực, kèm công cụ tìm kiếm chính xác và khả năng trích xuất điều luật tự động — giúp luật sư, sinh viên luật và người dân tra cứu nhanh chóng, thuận tiện.</p>
     <p style="color: var(--text-muted); font-size: 0.85rem; font-style: italic;">*Lưu ý: Mọi thông tin trên website mang tính chất tham khảo. Vui lòng liên hệ luật sư để được tư vấn chính xác cho trường hợp của bạn.</p>
   `;
   document.getElementById('info-modal').classList.add('open');
@@ -3471,6 +3499,8 @@ function normalizeImportedCase(raw, index) {
     let sao = parseInt(raw.sao || raw.stars || raw.tinh_chat || 0, 10) || 0;
     if(sfId === 'an-le') sao = 3;
     else if(sfId === 'tb-rut-kinh-nghiem') sao = 2;
+    // Tự nhận diện theo tiêu đề khi nhập từ Word/JSON: phúc thẩm -> 1 sao, GĐT/tái thẩm -> 3 sao
+    else if(!detailOnly){ const autoSao = detectSaoFromTitle(ten); if(autoSao !== null) sao = autoSao; }
 
     const tomLuoc = detailOnly ? '' : formatImportedContent(raw.tom_luoc || raw.timelineText || raw.timeline_text || '');
     const apDung = detailOnly ? '' : formatImportedContent(raw.ap_dung || raw.analogousUse || raw.ap_dung_tuong_tu || '');
@@ -3674,7 +3704,11 @@ function submitAdmin() {
 
   let englishPayload = getEnglishAdminPayload(formatContent);
   const timelineArr = tomluocText.split(/\r?\n/).map(t => t.trim()).filter(t => t.length > 0);
-  let sao = 0; if (sfId === 'an-le') sao = 3; else if (sfId === 'tb-rut-kinh-nghiem') sao = 2; else sao = parseInt(document.getElementById('ad-tinhchat').value) || 0;
+  let sao = 0; if (sfId === 'an-le') sao = 3; else if (sfId === 'tb-rut-kinh-nghiem') sao = 2; else {
+    sao = parseInt(document.getElementById('ad-tinhchat').value) || 0;
+    // Tự nhận diện theo tiêu đề: phúc thẩm -> 1 sao, GĐT/tái thẩm -> 3 sao (không áp dụng cho văn bản/giải đáp)
+    if(!isDetailOnlySubfield(sfId)){ const autoSao = detectSaoFromTitle(ten); if(autoSao !== null) sao = autoSao; }
+  }
 
   const selectedLvBeforeSave = getLVById(lvId);
   let finalLvName = selectedLvBeforeSave ? selectedLvBeforeSave.ten : document.getElementById('ad-new-lv').value.trim();
