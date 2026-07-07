@@ -354,23 +354,14 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 
 
 
+
+
 /* ===== VBPL-CSS START ===== */
 .doc-article-title{ font-family:'Playfair Display',serif; font-size:1.06rem; font-weight:700; color:var(--navy); margin:22px 0 10px 0; line-height:1.5; }
-.vbpl-amended{ cursor:pointer; background:linear-gradient(transparent 62%, rgba(192,154,104,.30) 0); border-radius:2px; transition:background .2s ease; }
-.vbpl-amended:hover{ background:rgba(192,154,104,.22); }
-.vbpl-amended::after{ content:"✎"; font-size:.72rem; color:var(--gold-rich); margin-left:6px; vertical-align:super; }
-.doc-article-title.vbpl-amended::after{ vertical-align:baseline; }
-.vbpl-directive{ cursor:pointer; background:rgba(46,93,164,.07); border-left:3px solid var(--navy); padding:6px 12px; border-radius:0 4px 4px 0; font-weight:600; color:var(--navy); transition:background .2s ease; }
-.vbpl-directive:hover{ background:rgba(46,93,164,.14); }
-.vbpl-directive::after{ content:"✎"; font-size:.72rem; margin-left:6px; opacity:.5; }
-.vbpl-directive-head{ cursor:default; background:rgba(46,93,164,.05); }
-.vbpl-directive-head:hover{ background:rgba(46,93,164,.05); }
-.vbpl-directive-head::after{ content:none; }
-.vbpl-modal-src{ margin:12px 0; padding:10px 12px; background:var(--bg2,#f5f1e8); border-radius:6px; border-left:3px solid var(--gold-rich); }
-.vbpl-modal-srctitle{ font-weight:700; color:var(--navy); margin:6px 0; }
-.vbpl-modal-newcontent, .vbpl-modal-original{ font-size:.92rem; line-height:1.65; }
-.vbpl-modal-newcontent p, .vbpl-modal-original p{ margin:4px 0; }
+.ed-btn{ cursor:pointer; display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:22px; padding:0 6px; border:1px solid var(--gold-border); border-radius:4px; font-size:0.75rem; color:var(--navy); background:#fff; user-select:none; }
+.ed-btn:hover{ background:var(--gold-dim); border-color:var(--navy); }
 /* ===== VBPL-CSS END ===== */
+
 
 
 /* ========== TRANG THUẾ AI ========== */
@@ -426,8 +417,63 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 .thue-user-msg-label { font-weight: 600; color: var(--gold-rich); margin-bottom: 4px; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.5px; }
 .thue-divider { border: none; border-top: 1px dashed var(--gold-border); margin: 16px 0; }
 </style>
+<style id="dcsl-intro-style">
+/* ===== DCSL-INTRO-CSS START ===== */
+#site-intro{ position:fixed; inset:0; z-index:99999; overflow:hidden; transition:visibility 0s linear 1.6s; }
+#site-intro .intro-layer{ position:absolute; inset:0; transform:translateX(0); will-change:transform; }
+/* lớp trắng nằm dưới, trượt trái TRỄ hơn -> tạo dải trắng mượt theo sau lớp vàng */
+#site-intro .intro-layer-white{ background:#fff; z-index:1; transition:transform 1.05s cubic-bezier(.77,0,.18,1) .18s; }
+/* nền vàng champagne sáng — cùng gradient với hero banner "Thư viện Bản án" */
+#site-intro .intro-layer-main{ background:linear-gradient(135deg,#F3ECD8 0%,#E0D2B4 100%); z-index:2; display:flex; align-items:center; justify-content:center; transition:transform 1.05s cubic-bezier(.77,0,.18,1); }
+#site-intro.intro-hide{ visibility:hidden; }
+#site-intro.intro-hide .intro-layer{ transform:translateX(-100%); }
+#site-intro .intro-center{ text-align:center; padding:0 24px; }
+#site-intro .intro-logo{ width:64px; height:auto; display:block; margin:0 auto 20px; opacity:0; animation:dcslFadeIn 1.3s ease .05s forwards; filter:drop-shadow(0 1px 10px rgba(120,90,45,.28)); }
+/* chữ trắng thuần khiết (theo mẫu L Signature); bóng vàng trầm rất nhẹ để nổi trên nền champagne sáng */
+#site-intro .intro-brand{ font-family:'Playfair Display',serif; font-weight:700; color:#fff; font-size:clamp(1.05rem,2.8vw,1.6rem); letter-spacing:.3em; opacity:0; animation:dcslBrandIn 1.4s cubic-bezier(.22,1,.36,1) .15s forwards; white-space:nowrap; text-shadow:0 1px 18px rgba(120,90,45,.4); }
+#site-intro .intro-brand-sub{ font-family:'Be Vietnam Pro',sans-serif; color:rgba(255,255,255,.85); font-size:.62rem; letter-spacing:.55em; margin-top:10px; opacity:0; animation:dcslBrandIn 1.2s ease .5s forwards; text-shadow:0 1px 12px rgba(120,90,45,.35); }
+#site-intro .intro-loading{ font-family:'Be Vietnam Pro',sans-serif; color:rgba(255,255,255,.75); font-size:.58rem; font-weight:500; letter-spacing:.42em; margin-top:48px; font-variant-numeric:tabular-nums; opacity:0; animation:dcslFadeIn 1s ease .7s forwards; text-shadow:0 1px 10px rgba(120,90,45,.35); }
+@keyframes dcslBrandIn{ from{ opacity:0; letter-spacing:.5em; transform:translateY(14px);} to{ opacity:1; letter-spacing:.14em; transform:none;} }
+@keyframes dcslFadeIn{ from{ opacity:0; } to{ opacity:1; } }
+body.intro-lock{ overflow:hidden; }
+body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,.36,1) .25s both; }
+@keyframes dcslFadeDown{ from{ opacity:0; transform:translate(-50%,-14px);} to{ opacity:1; transform:translate(-50%,0);} }
+.dcsl-sr{ opacity:0; transform:translateY(26px); transition:opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1); }
+.dcsl-sr.dcsl-in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce){ #site-intro{ display:none !important; } .dcsl-sr{ opacity:1 !important; transform:none !important; transition:none !important; } body.intro-reveal #global-header{ animation:none !important; } }
+/* ===== DCSL-INTRO-CSS END ===== */
+</style>
 </head>
 <body>
+<!-- ===== DCSL-INTRO-HTML START ===== -->
+<div id="site-intro" aria-hidden="true">
+  <div class="intro-layer intro-layer-white"></div>
+  <div class="intro-layer intro-layer-main">
+    <div class="intro-center">
+      <svg class="intro-logo" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="14" r="4"/>
+        <line x1="60" y1="18" x2="60" y2="84"/>
+        <line x1="26" y1="30" x2="94" y2="30"/>
+        <line x1="26" y1="30" x2="12" y2="56"/>
+        <line x1="26" y1="30" x2="40" y2="56"/>
+        <line x1="12" y1="56" x2="40" y2="56"/>
+        <path d="M12 56 A14 14 0 0 0 40 56"/>
+        <line x1="94" y1="30" x2="80" y2="56"/>
+        <line x1="94" y1="30" x2="108" y2="56"/>
+        <line x1="80" y1="56" x2="108" y2="56"/>
+        <path d="M80 56 A14 14 0 0 0 108 56"/>
+        <line x1="46" y1="84" x2="74" y2="84"/>
+        <line x1="40" y1="92" x2="80" y2="92"/>
+      </svg>
+      <div class="intro-brand">Đấu Chiến Thắng Luật</div>
+      <div class="intro-brand-sub">.COM</div>
+      <div class="intro-loading">LOADING <span id="intro-count">0</span>%</div>
+    </div>
+  </div>
+</div>
+<noscript><style>#site-intro{display:none !important;}</style></noscript>
+<!-- ===== DCSL-INTRO-HTML END ===== -->
+
 
 <header id="global-header">
   <button id="hamburger-btn" onclick="openSidebar()" title="Menu"><i class="ph ph-list"></i></button>
@@ -687,21 +733,21 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
     <div class="admin-form-group" id="admin-part-1-vi">
       <label class="admin-label" style="display:flex; justify-content:space-between;">
         <span>Phần 1: Dòng thời gian (dùng cho mọi vụ án, trừ Văn bản pháp luật và Giải đáp nghiệp vụ tư pháp):</span>
-        <span style="cursor:pointer; color:var(--navy); font-size:0.75rem; font-weight:600;" onclick="cleanEditorText('ad-tomluoc')"><i class="ph ph-broom"></i> Nối dòng</span>
+        <span style="display:flex; gap:6px; align-items:center;"><span class="ed-btn" title="Bôi đen (chọn chữ rồi bấm)" onmousedown="edFormat(event,'bold')"><b>B</b></span><span class="ed-btn" title="In nghiêng (chọn chữ rồi bấm)" onmousedown="edFormat(event,'italic')"><i>I</i></span><span style="cursor:pointer; color:var(--navy); font-size:0.75rem; font-weight:600;" onclick="cleanEditorText('ad-tomluoc')"><i class="ph ph-broom"></i> Nối dòng</span></span>
       </label>
       <div id="ad-tomluoc" class="admin-editor" contenteditable="true" style="min-height: 80px;" onpaste="handlePasteAsPlainText(event)"></div>
     </div>
     <div class="admin-form-group" id="admin-part-2-vi">
       <label class="admin-label" style="display:flex; justify-content:space-between;">
         <span>Phần 2: Áp dụng tương tự (dùng cho mọi vụ án, trừ Văn bản pháp luật và Giải đáp nghiệp vụ tư pháp):</span>
-        <span style="cursor:pointer; color:var(--navy); font-size:0.75rem; font-weight:600;" onclick="cleanEditorText('ad-apdung')"><i class="ph ph-broom"></i> Nối dòng</span>
+        <span style="display:flex; gap:6px; align-items:center;"><span class="ed-btn" title="Bôi đen (chọn chữ rồi bấm)" onmousedown="edFormat(event,'bold')"><b>B</b></span><span class="ed-btn" title="In nghiêng (chọn chữ rồi bấm)" onmousedown="edFormat(event,'italic')"><i>I</i></span><span style="cursor:pointer; color:var(--navy); font-size:0.75rem; font-weight:600;" onclick="cleanEditorText('ad-apdung')"><i class="ph ph-broom"></i> Nối dòng</span></span>
       </label>
       <div id="ad-apdung" class="admin-editor" contenteditable="true" style="min-height: 80px;" onpaste="handlePasteAsPlainText(event)"></div>
     </div>
     <div class="admin-form-group">
       <label class="admin-label" style="display:flex; justify-content:space-between;">
         <span>Phần 3: Nội dung chi tiết (Dùng cho tất cả):</span>
-        <span style="cursor:pointer; color:var(--navy); font-size:0.75rem; font-weight:600;" onclick="cleanEditorText('ad-chitiet')"><i class="ph ph-broom"></i> Nối dòng</span>
+        <span style="display:flex; gap:6px; align-items:center;"><span class="ed-btn" title="Bôi đen (chọn chữ rồi bấm)" onmousedown="edFormat(event,'bold')"><b>B</b></span><span class="ed-btn" title="In nghiêng (chọn chữ rồi bấm)" onmousedown="edFormat(event,'italic')"><i>I</i></span><span style="cursor:pointer; color:var(--navy); font-size:0.75rem; font-weight:600;" onclick="cleanEditorText('ad-chitiet')"><i class="ph ph-broom"></i> Nối dòng</span></span>
       </label>
       <div id="ad-chitiet" class="admin-editor" contenteditable="true" style="min-height: 120px;" onpaste="handlePasteAsPlainText(event)"></div>
     </div>
@@ -712,11 +758,11 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
       </label>
       <input type="text" id="ad-ten-en" class="admin-input" placeholder="English case/document title..." style="margin-bottom:8px;" />
       <textarea id="ad-mota-en" class="admin-input" placeholder="Short English summary for the case list..." style="height: 60px; margin-bottom:8px;"></textarea>
-      <label class="admin-label" id="admin-part-1-en-label">Part 1: Case timeline (English, used for all cases except Legal Documents and Judicial Professional Guidance)</label>
+      <label class="admin-label" id="admin-part-1-en-label" style="display:flex; justify-content:space-between; align-items:center;"><span>Part 1: Case timeline (English, used for all cases except Legal Documents and Judicial Professional Guidance)</span><span style="display:flex; gap:6px;"><span class="ed-btn" title="Bold" onmousedown="edFormat(event,'bold')"><b>B</b></span><span class="ed-btn" title="Italic" onmousedown="edFormat(event,'italic')"><i>I</i></span></span></label>
       <div id="ad-tomluoc-en" class="admin-editor" contenteditable="true" style="min-height: 80px; margin-bottom:8px;" onpaste="handlePasteAsPlainText(event)"></div>
-      <label class="admin-label" id="admin-part-2-en-label">Part 2: Analogous application (English, used for all cases except Legal Documents and Judicial Professional Guidance)</label>
+      <label class="admin-label" id="admin-part-2-en-label" style="display:flex; justify-content:space-between; align-items:center;"><span>Part 2: Analogous application (English, used for all cases except Legal Documents and Judicial Professional Guidance)</span><span style="display:flex; gap:6px;"><span class="ed-btn" title="Bold" onmousedown="edFormat(event,'bold')"><b>B</b></span><span class="ed-btn" title="Italic" onmousedown="edFormat(event,'italic')"><i>I</i></span></span></label>
       <div id="ad-apdung-en" class="admin-editor" contenteditable="true" style="min-height: 80px; margin-bottom:8px;" onpaste="handlePasteAsPlainText(event)"></div>
-      <label class="admin-label">Part 3: Detailed content (English)</label>
+      <label class="admin-label" style="display:flex; justify-content:space-between; align-items:center;"><span>Part 3: Detailed content (English)</span><span style="display:flex; gap:6px;"><span class="ed-btn" title="Bold" onmousedown="edFormat(event,'bold')"><b>B</b></span><span class="ed-btn" title="Italic" onmousedown="edFormat(event,'italic')"><i>I</i></span></span></label>
       <div id="ad-chitiet-en" class="admin-editor" contenteditable="true" style="min-height: 120px;" onpaste="handlePasteAsPlainText(event)"></div>
     </div>
     <div class="admin-form-group">
@@ -1546,489 +1592,31 @@ function isLikelySectionHeadingText(text) {
 }
 
 
-/* ===== VBPL-INTEGRATION START (Văn bản pháp luật: định dạng & liên kết sửa đổi) ===== */
-/* =====================================================================
-   VĂN BẢN PHÁP LUẬT — Định dạng & liên kết sửa đổi (amendment linker)
-   ---------------------------------------------------------------------
-   Pure functions, không phụ thuộc DOM (trừ output là chuỗi HTML).
-   Dùng được cả trong trình duyệt (inline vào HTML) lẫn Node (để test).
-
-   Nhiệm vụ:
-   1. Định dạng dòng tiêu đề "Điều N. ..." khác với nội dung điều luật.
-   2. Trong văn bản pháp luật KHÔNG tô màu tham chiếu điểm/khoản/điều.
-   3. Liên kết sửa đổi 2 chiều giữa các nghị định:
-      - Nghị định bổ sung (tiêu đề có "sửa đổi, bổ sung"): tô màu phần
-        chỉ thị "Sửa đổi, bổ sung ... Điều X" + phần nội dung mới ("...").
-      - Nghị định gốc: tô màu phần đã bị nghị định khác sửa, bấm vào hiện
-        nội dung mới.
-   ===================================================================== */
-
-/* ---------- Tiện ích chung ---------- */
-
-// Bỏ dấu tiếng Việt để so khớp không phân biệt dấu
-function vbplRemoveAccents(str) {
-  return String(str || '')
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/đ/g, 'd').replace(/Đ/g, 'D');
-}
-
-// Chuẩn hoá số hiệu nghị định thành khoá so khớp: "98/2020/NĐ-CP" -> "98/2020/ND-CP"
-function vbplDecreeKey(num) {
-  return vbplRemoveAccents(String(num || '')).toUpperCase().replace(/\s+/g, '');
-}
-
-// Trích số hiệu văn bản đầu tiên trong một đoạn text (vd 24/2025/NĐ-CP, 12/2024/TT-BCT)
-function vbplFindDecreeNumber(text) {
-  const m = String(text || '').match(/\d{1,4}\/\d{4}\/(?:N[ĐD]-CP|TT-[A-ZĐ]+|QH\d+)/i);
-  return m ? m[0] : '';
-}
-
-// Trích TẤT CẢ số hiệu trong text
-function vbplFindAllDecreeNumbers(text) {
-  const re = /\d{1,4}\/\d{4}\/(?:N[ĐD]-CP|TT-[A-ZĐ]+|QH\d+)/gi;
-  const out = []; let m;
-  while ((m = re.exec(String(text || '')))) out.push(m[0]);
-  return out;
-}
-
-// Tiêu đề có phải nghị định "sửa đổi, bổ sung" không (VI + EN)
-function vbplIsAmendmentTitle(title) {
-  const t = vbplRemoveAccents(title).toLowerCase();
-  if (/sua doi/.test(t) && /bo sung/.test(t)) return true;           // VI
-  if (/amend/.test(t) && /supplement/.test(t)) return true;          // EN: amending and supplementing
-  return false;
-}
-
-// Số hiệu CHÍNH của văn bản.
-// QUAN TRỌNG: ưu tiên TIÊU ĐỀ (tiêu đề luôn mở đầu bằng "Nghị định 98/2020/NĐ-CP ..."),
-// vì thân văn bản thường TRÍCH DẪN số hiệu nghị định KHÁC -> nếu quét thân sẽ bắt nhầm.
-function vbplGetOwnNumber(title, contentText) {
-  const fromTitle = vbplFindDecreeNumber(title);
-  if (fromTitle) return fromTitle;
-  // fallback: dòng "Số: X" / "No.: X" ở ĐẦU văn bản (header), KHÔNG quét cả thân
-  const head = String(contentText || '').slice(0, 800);
-  const m = head.match(/(?:^|\n|>|\s)S[ốo]\s*:\s*(\d{1,4}\/\d{4}\/(?:N[ĐD]-CP|TT-[A-ZĐ]+|QH\d+))/i)
-        || head.match(/(?:^|\n|>|\s)No\.?\s*:?\s*(\d{1,4}\/\d{4}\/(?:N[ĐD]-CP|TT-[A-ZĐ]+|QH\d+))/i);
-  return m ? m[1] : '';
-}
-
-// Số hiệu văn bản BỊ sửa: số sau cụm "của Nghị định ..." (VI) hoặc "of Decree ..." (EN)
-function vbplGetBaseNumber(title, contentText) {
-  const src = (title || '') + '\n' + (contentText || '');
-  const m = src.match(/(?:c[ủu]a\s+Ngh[ịi]\s*đ[ịi]nh|of\s+Decree)(?:\s+(?:s[ốo]|No\.?))?\s+(\d{1,4}\/\d{4}\/N[ĐD]-CP)/i);
-  if (m) return m[1];
-  // fallback: số thứ 2 trong tiêu đề (số 1 là của chính nó)
-  const all = vbplFindAllDecreeNumbers(title);
-  return all.length >= 2 ? all[1] : (all[0] || '');
-}
-
-/* ---------- Tách block & lấy text ---------- */
-
-// Tách nội dung HTML thành các block top-level (<p>...</p> hoặc <div ...>...</div>)
-function vbplSplitBlocks(html) {
-  const blocks = [];
-  const re = /<(p|div|h\d)\b([^>]*)>([\s\S]*?)<\/\1>/gi;
-  let m, lastIndex = 0;
-  while ((m = re.exec(html))) {
-    // giữ phần text trần giữa các block (nếu có) như block thô
-    const between = html.slice(lastIndex, m.index).trim();
-    if (between) blocks.push({ tag: '', attrs: '', inner: between, raw: between });
-    blocks.push({ tag: m[1].toLowerCase(), attrs: m[2] || '', inner: m[3], raw: m[0] });
-    lastIndex = re.lastIndex;
-  }
-  const tail = html.slice(lastIndex).trim();
-  if (tail) blocks.push({ tag: '', attrs: '', inner: tail, raw: tail });
-  return blocks;
-}
-
-// Lấy text trần (đã decode entity cơ bản) từ inner HTML của 1 block
-function vbplPlainText(inner) {
-  return String(inner || '')
-    .replace(/<br\s*\/?>/gi, ' ')
-    .replace(/<[^>]+>/g, '')
-    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, ' ')
-    .replace(/\s+/g, ' ').trim();
-}
-
-/* ---------- Nhận diện cấu trúc điều/khoản/điểm ---------- */
-
-// Song ngữ: "Điều N" / "Article N"
-const VBPL_ARTICLE_RE = /^(?:Điều|Article)\s+(\d+[a-zđ]?)\b/i;   // "Điều 17." , "Article 46a"
-const VBPL_CLAUSE_RE  = /^(\d+[a-zđ]?)[.)]\s+/;                  // "1. ..." , "13. ..." (số như nhau 2 ngôn ngữ)
-const VBPL_POINT_RE   = /^([a-zđ])\)\s+/;                        // "a) ..." , "đ) ..."
-const VBPL_SECTION_RE = /^(?:Mục|Chương|Phần|Section|Chapter|Part)\s+([0-9IVXLCDM]+[a-zđ]?)\b/i;
-
-// Mở/đóng ngoặc kép kiểu Việt Nam dùng để bọc nội dung mới
-function vbplHasOpenQuote(t) { return /[“"]/.test(t.charAt(0)) || /^[“"]/.test(t); }
-function vbplStartsQuote(t) { return /^[“"]/.test(t); }
-function vbplEndsQuote(t)  { return /[”"]\s*[.;]?\s*[”"]?\s*[.;]?$/.test(t) && /[”"]/.test(t); }
-
-/* ---------- Phân tích chỉ thị sửa đổi ---------- */
-
-// Một dòng có phải "chỉ thị sửa đổi" không (VI: Sửa đổi/Bổ sung/Bãi bỏ/Thay thế; EN: amend/supplement/...)
-const VBPL_DIRECTIVE_VERB = /^(?:\d+[.)]\s*|[a-zđ]\)\s*|-\s*)?(?:to\s+)?(?:sửa đổi|bổ sung|bãi bỏ|thay thế|huỷ bỏ|hủy bỏ|amend|supplement|annul|repeal|abolish|replac|add)/i;
-// đơn vị văn bản (VI + EN)
-const VBPL_REF_WORD = /(điểm|khoản|Điều|tên Điều|Mục|Chương|Point|Clause|Subsection|Section|Article|Chapter|Part)\b/i;
-
-function vbplIsDirectiveLine(text) {
-  if (!VBPL_DIRECTIVE_VERB.test(text)) return false;
-  // loại dòng chapeau "Điều N. ..." / "Article N. ..." -> là tiêu đề điều
-  if (/^(?:Điều|Article)\s+\d/i.test(text)) return false;
-  // loại dòng IN HOA (tiêu đề văn bản)
-  if (/[A-ZÀ-Ỹ]/.test(text) && text === text.toUpperCase()) return false;
-  // phải tham chiếu tới một đơn vị văn bản
-  return VBPL_REF_WORD.test(text);
-}
-
-// Trích nhãn đầu dòng ("1.", "a)") nếu có
-function vbplLeadingLabel(text) {
-  const m = text.match(/^(\d+[.)]|[a-zđ]\))/);
-  return m ? m[0] : '';
-}
-
-// Phân tích các tham chiếu trong 1 dòng chỉ thị -> { article, clauses[], points[] }
-function vbplParseRefs(text, inheritedArticle) {
-  const SEP = /\s*,\s*|\s*và\s*|\s*and\s*/; // dấu phân cách danh sách (VI "và" / EN "and")
-  // điều = "Điều N" / "Article N" cuối cùng trong dòng
-  let article = inheritedArticle || null;
-  const artMatches = [...text.matchAll(/(?:Điều|Article)\s+(\d+[a-zđ]?)/gi)];
-  if (artMatches.length) article = artMatches[artMatches.length - 1][1].toLowerCase();
-
-  const clauses = [];
-  // khoản N / Clause N / Subsection N  (số, có thể là danh sách)
-  for (const m of text.matchAll(/(?:khoản|Clause|Subsection)\s+([\d]+(?:\s*(?:,|và|and)\s*\d+)*)/gi)) {
-    m[1].split(SEP).forEach(n => { n = n.trim(); if (n) clauses.push(n); });
-  }
-  const points = [];
-  // điểm x / Point x  (chữ cái a..u, đ; có thể là danh sách)
-  for (const m of text.matchAll(/(?:điểm|Point)\s+([a-zđ](?:\s*(?:,|và|and)\s*[a-zđ])*)/gi)) {
-    m[1].split(SEP).forEach(p => { p = p.trim(); if (p) points.push(p); });
-  }
-  const targetsName = /tên\s+Điều|(?:name|title)\s+of\s+Article/i.test(text); // "Sửa đổi tên Điều N" / "amend the title of Article N"
-  return { article, clauses: [...new Set(clauses)], points: [...new Set(points)], targetsName };
-}
-
-// Phân tích toàn bộ nội dung 1 nghị định bổ sung -> danh sách entry
-//   entry = { label, refText, article, clauses[], points[], newContentHtml }
-function vbplParseAmendmentEntries(html) {
-  const blocks = vbplSplitBlocks(html);
-  const entries = [];
-  let cur = null;
-  let parentArticle = null;       // điều của chỉ thị đánh số gần nhất (cho sub a/b/c kế thừa)
-  let collectingQuote = false;
-
-  const finalize = () => {
-    if (cur) {
-      cur.newContentHtml = cur.contentBlocks.join('');
-      delete cur.contentBlocks;
-      entries.push(cur);
-    }
-    cur = null; collectingQuote = false;
-  };
-
-  for (const b of blocks) {
-    const text = vbplPlainText(b.inner);
-    if (!text) continue;
-    const label = vbplLeadingLabel(text);
-    const isNumbered = /^\d+[.)]/.test(text);
-
-    if (vbplIsDirectiveLine(text)) {
-      finalize();
-      const refs = vbplParseRefs(text, isNumbered ? null : parentArticle);
-      if (isNumbered && refs.article) parentArticle = refs.article;
-      // Chỉ chỉ thị THAY NỘI DUNG (kết thúc "như sau:" / "as follows:") mới có nội dung mới theo sau.
-      // Chỉ thị tự chứa (Bãi bỏ.../Thay thế cụm từ...) KHÔNG gom block sau -> tránh bắt nhầm
-      // sang Điều 2/Điều 3 (hiệu lực, chuyển tiếp) của chính nghị định bổ sung.
-      const hasContent = /(?:như sau|as follows)\s*:?\s*$/i.test(text);
-      cur = {
-        label, refText: text,
-        article: refs.article, clauses: refs.clauses, points: refs.points,
-        targetsName: refs.targetsName,
-        hasContent, contentBlocks: []
-      };
-      continue;
-    }
-
-    if (cur && cur.hasContent) {
-      // gom nội dung mới (các block nằm sau chỉ thị, thường bọc trong “ ”)
-      cur.contentBlocks.push(b.raw);
-    }
-  }
-  finalize();
-  // bỏ entry không có điều mục tiêu
-  return entries.filter(e => e.article || e.clauses.length || e.points.length);
-}
-
-/* ---------- Build index toàn site ---------- */
-// casesList: mảng case có { ten, sfId, chi_tiet, tom_luoc, ap_dung, id, ... }
-// Trả về { byBaseKey: {key: [amendInfo...]}, docByKey: {key: caseObj} }
-//   amendInfo = { sourceNumber, sourceTitle, sourceId, entries[] }
-function vbplBuildIndex(casesList, getContent) {
-  const byBaseKey = {};
-  const docByKey = {};
-  (casesList || []).forEach(c => {
-    if (!c || c.sfId !== 'van-ban-phap-luat') return;
-    const content = getContent(c);
-    const ownNum = vbplGetOwnNumber(c.ten, content);
-    if (ownNum) docByKey[vbplDecreeKey(ownNum)] = c;
-    if (vbplIsAmendmentTitle(c.ten)) {
-      const baseNum = vbplGetBaseNumber(c.ten, content);
-      if (!baseNum) return;
-      const entries = vbplParseAmendmentEntries(content);
-      const key = vbplDecreeKey(baseNum);
-      (byBaseKey[key] = byBaseKey[key] || []).push({
-        sourceNumber: ownNum || vbplFindDecreeNumber(c.ten),
-        sourceTitle: c.ten, sourceId: c.id, entries
-      });
-    }
+/* ===== VBPL-INTEGRATION START (Văn bản pháp luật: bôi đen tiêu đề điều/mục) ===== */
+// Đổi các block <p> khớp mẫu tiêu đề thành .doc-article-title (giữ nguyên nội dung bên trong)
+function vbplHeadingize(html, headRe) {
+  return String(html || '').replace(/<p>([\s\S]*?)<\/p>/gi, (full, inner) => {
+    const plain = inner.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').trim();
+    if (headRe.test(plain)) return '<div class="doc-article-title">' + inner + '</div>';
+    return full;
   });
-  return { byBaseKey, docByKey };
 }
-
-/* ---------- Build map mục tiêu cho nghị định gốc ---------- */
-// amendInfos: [{ sourceNumber, sourceTitle, sourceId, entries[] }]
-// Trả về map: "art|clause|point" -> [{sourceNumber, sourceTitle, sourceId, label, newContentHtml, refText}]
-//   point/clause có thể rỗng -> "art||", "art|clause|"
-function vbplBuildBaseTargets(amendInfos) {
-  const map = {};
-  const add = (key, info) => { (map[key] = map[key] || []).push(info); };
-  (amendInfos || []).forEach(src => {
-    (src.entries || []).forEach(e => {
-      if (!e.article) return;
-      // Chỉ lấy chỉ thị có nội dung mới cụ thể. Dòng "công bố" cha (vd item 3 liệt kê
-      // nhiều khoản rồi được làm rõ ở a/b/c/d) không có nội dung -> bỏ để tránh tô sai
-      // và để modal luôn có nội dung mới để hiển thị.
-      if (!String(e.newContentHtml || '').trim()) return;
-      const base = { sourceNumber: src.sourceNumber, sourceTitle: src.sourceTitle, sourceId: src.sourceId, label: e.label, newContentHtml: e.newContentHtml, refText: e.refText };
-      const art = e.article.toLowerCase();
-      if (e.points.length && e.clauses.length) {
-        // ghép điểm với khoản: nếu cùng số lượng thì ghép theo cặp, không thì nhân chéo
-        if (e.points.length === e.clauses.length) {
-          e.points.forEach((p, i) => add(`${art}|${e.clauses[i]}|${p}`, base));
-        } else {
-          e.clauses.forEach(c => e.points.forEach(p => add(`${art}|${c}|${p}`, base)));
-        }
-      } else if (e.clauses.length) {
-        e.clauses.forEach(c => add(`${art}|${c}|`, base));
-      } else if (e.points.length) {
-        e.points.forEach(p => add(`${art}||${p}`, base));
-      } else {
-        add(`${art}||`, base); // cấp điều / sửa tên điều
-      }
-    });
-  });
-  return map;
+// Văn bản pháp luật (kể cả nghị định sửa đổi, bổ sung): bôi đen dòng "Điều N." / "Article N"
+function renderVanBanPhapLuat(raw, cas) {
+  const html = upgradeContentHeadingMarkup(raw || '');
+  if (!html || !html.trim()) return '';
+  return vbplHeadingize(html, /^(?:Điều|Article)\s+\d+[a-zđ]?\b/i);
 }
-
-/* ---------- Trích 1 đơn vị (điều / khoản / điểm) từ HTML nghị định gốc ---------- */
-function vbplExtractUnit(html, article, clause, point) {
-  const blocks = vbplSplitBlocks(html);
-  const art = String(article || '').toLowerCase();
-  let curArticle = null, curClause = null;
-  const picked = [];
-  let capturing = false;
-  for (const b of blocks) {
-    const text = vbplPlainText(b.inner);
-    if (!text) continue;
-    const am = text.match(VBPL_ARTICLE_RE);
-    if (am) {
-      const a = am[1].toLowerCase();
-      if (capturing && a !== curArticle) break; // sang điều khác -> dừng
-      curArticle = a; curClause = null;
-      if (a === art) {
-        if (!clause && !point) { capturing = true; picked.push(b.raw); continue; }
-        capturing = (false); // chờ tới khoản/điểm
-        if (!clause && !point) picked.push(b.raw);
-        continue;
-      } else { capturing = false; continue; }
-    }
-    if (curArticle !== art) continue;
-    const cm = text.match(VBPL_CLAUSE_RE);
-    if (cm) curClause = cm[1].toLowerCase();
-    if (!clause && !point) { picked.push(b.raw); continue; } // cả điều
-    if (clause && !point) {
-      if (curClause === String(clause).toLowerCase()) { capturing = true; picked.push(b.raw); }
-      else if (capturing && cm) break; // hết khoản
-      continue;
-    }
-    if (point) {
-      const pm = text.match(VBPL_POINT_RE);
-      const clauseOk = !clause || curClause === String(clause).toLowerCase();
-      if (clauseOk && pm && pm[1].toLowerCase() === String(point).toLowerCase()) { picked.push(b.raw); }
-    }
-  }
-  return picked.join('');
+// Giải đáp nghiệp vụ: bôi đen dòng CÂU HỎI — bắt đầu bằng số ("25. ...") hoặc "Câu hỏi ...",
+// và PHẢI kết thúc bằng dấu hỏi (cho phép ngoặc kép đóng sau dấu hỏi).
+// Dòng đánh số nhưng không kết thúc "?" (vd trích dẫn điều luật) thì KHÔNG bôi đen.
+function renderGiaiDapNghiepVu(raw) {
+  const html = upgradeContentHeadingMarkup(raw || '');
+  if (!html || !html.trim()) return '';
+  return vbplHeadingize(html, /^(?:\d+[.)]\s|Câu\s+hỏi\b)[\s\S]*\?\s*[”"']?\s*$/i);
 }
-
-/* ---------- Render nội dung văn bản pháp luật ---------- */
-// opts: { mode:'base'|'amend'|'plain', targets, baseNumber, ownNumber, baseDoc(html|null),
-//         clickStore:{}, keyPrefix:'k', escapeFn, upgradeHeadings:true }
-function vbplRenderDoc(html, opts) {
-  opts = opts || {};
-  const mode = opts.mode || 'plain';
-  const targets = opts.targets || {};
-  const store = opts.clickStore || {};
-  const prefix = opts.keyPrefix || 'vbplk';
-  let keyN = 0;
-  const newKey = (payload) => { const k = prefix + (keyN++); store[k] = payload; return k; };
-
-  const blocks = vbplSplitBlocks(html);
-  let curArticle = null, curClause = null, curPoint = null;
-  let amendParent = null;       // điều của chỉ thị đánh số gần nhất (cho tiểu mục a/b/c kế thừa)
-  const out = [];
-
-  // mục cha = chỉ thị đánh số mà NGAY SAU là tiểu mục chữ a)/b)... (đã tách yêu cầu riêng) -> không cho bấm
-  const nextNonEmptyIsLetterDirective = (fromIdx) => {
-    for (let j = fromIdx + 1; j < blocks.length; j++) {
-      const t = vbplPlainText(blocks[j].inner);
-      if (!t) continue;
-      return blocks[j].tag === 'p' && vbplIsDirectiveLine(t) && /^[a-zđ]\)/.test(t);
-    }
-    return false;
-  };
-
-  for (let bi = 0; bi < blocks.length; bi++) {
-    const b = blocks[bi];
-    const text = vbplPlainText(b.inner);
-    if (!text) { out.push(b.raw); continue; }
-
-    const artM = text.match(VBPL_ARTICLE_RE);
-    const clauseM = text.match(VBPL_CLAUSE_RE);
-    const pointM = text.match(VBPL_POINT_RE);
-
-    // cập nhật ngữ cảnh
-    if (artM) { curArticle = artM[1].toLowerCase(); curClause = null; curPoint = null; }
-    else if (clauseM) { curClause = clauseM[1].toLowerCase(); curPoint = null; }
-    else if (pointM) { curPoint = pointM[1].toLowerCase(); }
-
-    let extraClass = '';
-    let clickKey = '';
-
-    // ----- chế độ nghị định BỔ SUNG: CHỈ tô các dòng chỉ thị (tiểu mục), nội dung để bình thường -----
-    if (mode === 'amend' && b.tag === 'p' && vbplIsDirectiveLine(text)) {
-      const isNumbered = /^\d+[.)]/.test(text);
-      const refs = vbplParseRefs(text, isNumbered ? null : amendParent);
-      if (isNumbered && refs.article) amendParent = refs.article;
-      if (isNumbered && nextNonEmptyIsLetterDirective(bi)) {
-        // mục cha gom nhiều yêu cầu (đã tách chính xác ở tiểu mục a/b/c) -> định dạng nhưng KHÔNG cho bấm
-        extraClass = 'vbpl-directive vbpl-directive-head';
-      } else {
-        const original = (opts.baseDoc && refs.article)
-          ? vbplExtractUnit(opts.baseDoc, refs.article, refs.clauses[0] || '', refs.points[0] || '')
-          : '';
-        clickKey = newKey({ type: 'amend', refText: text, refs, baseNumber: opts.baseNumber, original });
-        extraClass = 'vbpl-directive';
-      }
-    }
-
-    // ----- chế độ nghị định GỐC: tô phần đã bị sửa -----
-    if (mode === 'base') {
-      let key = '';
-      if (artM) key = `${curArticle}||`;
-      else if (pointM && curArticle) key = `${curArticle}|${curClause || ''}|${curPoint}`;
-      else if (clauseM && curArticle) key = `${curArticle}|${curClause}|`;
-      const matches = key && targets[key] ? targets[key] : null;
-      if (matches && matches.length) {
-        clickKey = newKey({ type: 'base', unit: text.slice(0, 80), matches });
-        extraClass = 'vbpl-amended';
-      }
-    }
-
-    // ----- định dạng tiêu đề "Điều N." (KHÔNG áp dụng cho chế độ bổ sung: nội dung để bình thường) -----
-    let isArticleTitle = artM && b.tag === 'p' && mode !== 'amend';
-
-    // dựng lại block
-    if (isArticleTitle) {
-      const cls = ['doc-article-title', extraClass].filter(Boolean).join(' ');
-      const attr = clickKey ? ` data-vbpl="${clickKey}" onclick="vbplOpenModal('${clickKey}')" role="button" tabindex="0"` : '';
-      out.push(`<div class="${cls}"${attr}>${b.inner}</div>`);
-    } else if (extraClass || clickKey) {
-      const tag = b.tag || 'p';
-      const baseAttrs = (b.attrs || '').trim();
-      // gộp class vào attrs sẵn có
-      let attrs = baseAttrs;
-      if (/class\s*=/.test(attrs)) attrs = attrs.replace(/class\s*=\s*"([^"]*)"/i, (mm, c) => `class="${(c + ' ' + extraClass).trim()}"`);
-      else attrs = (attrs ? attrs + ' ' : '') + `class="${extraClass}"`;
-      const clickAttr = clickKey ? ` data-vbpl="${clickKey}" onclick="vbplOpenModal('${clickKey}')" role="button" tabindex="0"` : '';
-      out.push(`<${tag} ${attrs}${clickAttr}>${b.inner}</${tag}>`);
-    } else {
-      out.push(b.raw);
-    }
-  }
-  return out.join('');
-}
-
-
-/* ---------- Glue UI cho web ---------- */
-function getAllCasesFlat(){
-  const out=[];
-  for(const k in CASES_DATA){ if(Array.isArray(CASES_DATA[k])) out.push.apply(out, CASES_DATA[k]); }
-  return out;
-}
-
-function renderVanBanPhapLuat(raw, cas){
-  let html = upgradeContentHeadingMarkup(raw || '');
-  if(!html || !html.trim()) return '';
-  const title = getPrimaryTextLine(getCaseFieldText(cas,'ten')) || (cas && cas.ten) || '';
-  const content = getCaseFieldText(cas,'chi_tiet') || raw || '';
-  const getDoc = c => getCaseFieldText(c,'chi_tiet') || getCaseFieldText(c,'tom_luoc') || getCaseFieldText(c,'ap_dung') || '';
-  let idx; try { idx = vbplBuildIndex(getAllCasesFlat(), getDoc); } catch(e){ idx = {byBaseKey:{},docByKey:{}}; }
-  window.__VBPL_CLICK = {};
-  const opts = { clickStore: window.__VBPL_CLICK, keyPrefix:'vbplk' };
-  try {
-    if(vbplIsAmendmentTitle(title)){
-      const baseNum = vbplGetBaseNumber(title, content);
-      const baseDoc = baseNum ? idx.docByKey[vbplDecreeKey(baseNum)] : null;
-      opts.mode='amend'; opts.baseNumber=baseNum; opts.baseDoc = baseDoc ? getDoc(baseDoc) : '';
-    } else {
-      const ownNum = vbplGetOwnNumber(title, content);
-      opts.mode='base'; opts.targets = vbplBuildBaseTargets(idx.byBaseKey[vbplDecreeKey(ownNum)]);
-    }
-    return vbplRenderDoc(html, opts);
-  } catch(e){ if(window.console) console.warn('VBPL render error', e); return html; }
-}
-
-function vbplRefDesc(r, en){
-  const parts=[];
-  if(r.points && r.points.length) parts.push((en?'point ':'điểm ')+r.points.join(', '));
-  if(r.clauses && r.clauses.length) parts.push((en?'clause ':'khoản ')+r.clauses.join(', '));
-  if(r.article) parts.push((en?'Article ':'Điều ')+r.article);
-  return parts.join(' ');
-}
-
-function vbplOpenModal(key){
-  const data = (window.__VBPL_CLICK||{})[key];
-  if(!data) return;
-  const en = (typeof getActiveLanguage==='function') && getActiveLanguage()==='en';
-  let title='', body='';
-  if(data.type==='base'){
-    title = '<i class="ph ph-pencil-line"></i> ' + (en?'This provision has been amended':'Nội dung đã được sửa đổi, bổ sung');
-    body = '<p>' + (en?'This part has been amended/supplemented by:':'Phần này đã được sửa đổi, bổ sung bởi:') + '</p>';
-    (data.matches||[]).forEach(m=>{
-      const srcLabel = (en?'Decree ':'Nghị định ') + escapeHtmlText(m.sourceNumber||'') + (m.label?(en?(' — item '+escapeHtmlText(m.label)):(' — mục '+escapeHtmlText(m.label))):'');
-      body += '<div class="vbpl-modal-src"><div class="vbpl-modal-srctitle">'+srcLabel+'</div>'+
-              '<div class="vbpl-modal-newcontent">'+(m.newContentHtml||('<em>'+(en?'(no content)':'(không có nội dung)')+'</em>'))+'</div></div>';
-    });
-  } else if(data.type==='amend'){
-    title = '<i class="ph ph-arrow-bend-down-right"></i> ' + (en?'Amendment provision':'Quy định sửa đổi, bổ sung');
-    const refDesc = vbplRefDesc(data.refs||{}, en);
-    body = '<p>'+(en?'This provision amends/supplements ':'Quy định này sửa đổi, bổ sung ')+'<strong>'+escapeHtmlText(refDesc)+'</strong>'+
-           (data.baseNumber?((en?' of Decree ':' của Nghị định ')+escapeHtmlText(data.baseNumber)):'')+'.</p>';
-    if(data.original && data.original.trim()){
-      body += '<div class="vbpl-modal-srctitle">'+(en?'Original content':'Nội dung gốc')+(data.baseNumber?(' ('+escapeHtmlText(data.baseNumber)+')'):'')+':</div>'+
-              '<div class="vbpl-modal-original">'+data.original+'</div>';
-    } else {
-      body += '<p style="color:var(--text-muted);font-size:.85rem">'+(en?'(The original document is not yet available in the system for comparison.)':'(Chưa có văn bản gốc trong hệ thống để đối chiếu.)')+'</p>';
-    }
-  } else { return; }
-  document.getElementById('modal-title').innerHTML = title;
-  document.getElementById('modal-body').innerHTML = body;
-  document.getElementById('info-modal').classList.add('open');
-}
-window.vbplOpenModal = vbplOpenModal;
-
 /* ===== VBPL-INTEGRATION END ===== */
+
 
 function upgradeContentHeadingMarkup(html) {
   const text = String(html || '');
@@ -2043,6 +1631,12 @@ function upgradeContentHeadingMarkup(html) {
 function setEditorPlainText(id, value) {
   const el = document.getElementById(id);
   if(el) el.innerText = editorTextFromHtml(value);
+}
+
+// Đổ nội dung đã lưu vào editor: bỏ khung <p>/<div> nhưng GIỮ <em>/<strong> (in nghiêng, bôi đen)
+function setEditorFromStored(id, value) {
+  const el = document.getElementById(id);
+  if(el) el.innerHTML = String(value || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
 }
 
 function clearEnglishAdminFields() {
@@ -2062,9 +1656,9 @@ function fillEnglishAdminFields(caseObj) {
   const motaEl = document.getElementById('ad-mota-en');
   if(tenEl) tenEl.value = en.ten || '';
   if(motaEl) motaEl.value = en.mo_ta || '';
-  setEditorPlainText('ad-tomluoc-en', en.tom_luoc || '');
-  setEditorPlainText('ad-apdung-en', en.ap_dung || '');
-  setEditorPlainText('ad-chitiet-en', en.chi_tiet || '');
+  setEditorFromStored('ad-tomluoc-en', en.tom_luoc || '');
+  setEditorFromStored('ad-apdung-en', en.ap_dung || '');
+  setEditorFromStored('ad-chitiet-en', en.chi_tiet || '');
 }
 
 function getEnglishAdminPayload(formatContent) {
@@ -2077,11 +1671,11 @@ function getEnglishAdminPayload(formatContent) {
   if(ten.trim()) payload.ten = ten.trim();
   if(mota.trim()) payload.mo_ta = mota.trim();
   if(tomluocText.trim()) {
-    payload.tom_luoc = formatContent(tomluocText);
+    payload.tom_luoc = formatEditorContent('ad-tomluoc-en');
     payload.timeline = tomluocText.split(/\r?\n/).map(t => t.trim()).filter(Boolean);
   }
-  if(apdungText.trim()) payload.ap_dung = formatContent(apdungText);
-  if(chitietText.trim()) payload.chi_tiet = formatContent(chitietText);
+  if(apdungText.trim()) payload.ap_dung = formatEditorContent('ad-apdung-en');
+  if(chitietText.trim()) payload.chi_tiet = formatEditorContent('ad-chitiet-en');
   if(Object.keys(payload).length === 0) return null;
   payload.provider = 'manual-admin';
   payload.translatedAt = new Date().toISOString();
@@ -3062,6 +2656,9 @@ function goDetail(lvId, sfId, caseId){
       if(cas.sfId === 'van-ban-phap-luat'){
         const rendered = renderVanBanPhapLuat(docRaw, cas);
         chiTietEl.innerHTML = rendered || `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>${t('detailLater')}</p></div>`;
+      } else if(cas.sfId === 'giai-dap-nghiep-vu'){
+        const rendered = renderGiaiDapNghiepVu(docRaw);
+        chiTietEl.innerHTML = rendered ? autoLinkLaws(rendered) : `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>${t('detailLater')}</p></div>`;
       } else {
         const detailContent = upgradeContentHeadingMarkup(docRaw);
         if(detailContent){
@@ -3265,10 +2862,54 @@ function checkNewSF() {
 }
 function closeAdmin() { editingCaseId = null; hasUnsavedChanges = false; document.getElementById('admin-modal').classList.remove('open'); }
 
+// Lọc HTML dán vào: chỉ giữ in nghiêng (<em>) và bôi đen (<strong>), mọi thứ khác thành text thuần.
+// Nhận diện cả kiểu Word (span có style font-style:italic / font-weight:bold).
+function sanitizeInlineFormatting(node) {
+    if (node.nodeType === 3) return escapeHtmlText(node.nodeValue.replace(/\u00A0/g, ' '));
+    if (node.nodeType !== 1) return '';
+    const tag = node.tagName.toLowerCase();
+    if (tag === 'style' || tag === 'script' || tag === 'meta' || tag === 'link' || tag === 'title') return '';
+    if (tag === 'br') return '\n';
+    let inner = '';
+    node.childNodes.forEach(ch => { inner += sanitizeInlineFormatting(ch); });
+    const style = (node.getAttribute && node.getAttribute('style')) || '';
+    const isItalic = tag === 'i' || tag === 'em' || /font-style\s*:\s*italic/i.test(style);
+    const isBold = tag === 'b' || tag === 'strong' || /font-weight\s*:\s*(bold|[6-9]00)/i.test(style);
+    if (isItalic && inner.trim()) inner = '<em>' + inner + '</em>';
+    if (isBold && inner.trim()) inner = '<strong>' + inner + '</strong>';
+    if (/^(p|div|li|tr|h[1-6]|table|ul|ol|section|article|blockquote)$/.test(tag)) inner += '\n';
+    return inner;
+}
+// Tách nội dung editor/HTML dán vào thành các dòng (mỗi dòng: text đã escape + <em>/<strong>)
+function editorLinesFromNode(root) {
+    return sanitizeInlineFormatting(root).split(/\n/).map(l => l.replace(/[ \t]+/g, ' ').trim()).filter(Boolean);
+}
+// Chuyển nội dung 1 editor thành HTML lưu trữ: mỗi dòng 1 <p> (giữ <em>/<strong>), dòng IN HOA -> tiêu đề mục
+function formatEditorContent(id) {
+    const el = document.getElementById(id); if (!el) return '';
+    return editorLinesFromNode(el).map(line => {
+        const plain = line.replace(/<[^>]+>/g, '');
+        const decoded = plain.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+        if (decoded === decoded.toUpperCase() && /[A-ZÀ-Ỹ]/.test(decoded) && decoded.length < 200) return `<div class="detail-section-title">${plain}</div>`;
+        return `<p>${line}</p>`;
+    }).join('');
+}
 window.handlePasteAsPlainText = function(e) {
     e.preventDefault();
-    let text = (e.originalEvent || e).clipboardData.getData('text/plain');
-    document.execCommand('insertText', false, text);
+    const cd = (e.originalEvent || e).clipboardData;
+    const htmlData = cd.getData('text/html');
+    if (htmlData) {
+        const tmp = document.createElement('div');
+        tmp.innerHTML = htmlData;
+        const lines = editorLinesFromNode(tmp);
+        if (lines.length) { document.execCommand('insertHTML', false, lines.join('<br>')); return; }
+    }
+    document.execCommand('insertText', false, cd.getData('text/plain'));
+};
+// Nút bôi đen / in nghiêng: dùng onmousedown + preventDefault để không mất vùng chọn trong editor
+window.edFormat = function(ev, cmd) {
+    ev.preventDefault();
+    document.execCommand(cmd, false, null);
 };
 
 let adminFormLaws = [];
@@ -4057,7 +3698,7 @@ function submitAdmin() {
       id: editingCaseId || 'case_' + Date.now(), ten: ten, mo_ta: mota, lvId: lvId, lvName: finalLvName, sfId: sfId, sfName: finalSfName,
       sao: sao, ngay: editingCaseId ? findCaseById(editingCaseId).cas.ngay : new Date().toISOString(),
       updatedAt: new Date().toISOString(),
-      tom_luoc: detailOnly ? '' : formatContent(tomluocText), ap_dung: detailOnly ? '' : formatContent(apdungText), chi_tiet: formatContent(chitietText), timeline: detailOnly ? [] : timelineArr, laws: adminFormLaws
+      tom_luoc: detailOnly ? '' : formatEditorContent('ad-tomluoc'), ap_dung: detailOnly ? '' : formatEditorContent('ad-apdung'), chi_tiet: formatEditorContent('ad-chitiet'), timeline: detailOnly ? [] : timelineArr, laws: adminFormLaws
   };
   if(finalLvNameEn) caseData.lvName_en = finalLvNameEn;
   if(finalSfNameEn) caseData.sfName_en = finalSfNameEn;
@@ -4132,7 +3773,7 @@ QUY TẮC BẮT BUỘC — ĐỌC TRƯỚC KHI TRẢ LỜI:
    - SAI (NGHIÊM CẤM): "Luật GTGT", "Luật TNCN", "Luật TNDN", "Luật TTĐB", "NĐ 117", "TT 40", "QĐ 3389"
 
 2. PHẠM VI TRẢ LỜI NGHIÊM NGẶT — KHÔNG BỊA THÔNG TIN:
-   a) Chỉ trả lời dựa trên các văn bản pháp luật được liệt kê trong cơ sở dữ liệu này (Luật GTGT 48/2024, Luật TNCN 109/2025, Luật TNDN 67/2025, Luật TTĐB 66/2025, các Nghị định và Thông tư hướng dẫn đi kèm, TT40/2021, QĐ 3389/2025).
+   a) Chỉ trả lời dựa trên các văn bản pháp luật được liệt kê trong cơ sở dữ liệu này (Luật GTGT 48/2024 sửa đổi bởi Luật 149/2025, Luật TNCN 109/2025 sửa đổi bởi Luật 09/2026, Luật TNDN 67/2025, Luật TTĐB 66/2025, Luật Quản lý thuế 108/2025, NĐ 68/2026, NĐ 253/2026, TT 18/2026, TT 87/2026, các Nghị định và Thông tư hướng dẫn đi kèm, TT40/2021, QĐ 3389/2025).
    b) Nếu câu hỏi thuộc loại thuế hoặc lĩnh vực KHÔNG có trong cơ sở dữ liệu (ví dụ: thuế môn bài, thuế tài nguyên, thuế xuất nhập khẩu, thuế sử dụng đất phi nông nghiệp, lệ phí trước bạ...), PHẢI TỪ CHỐI và trả lời theo mẫu: "⚠️ Vấn đề này nằm ngoài phạm vi dữ liệu pháp lý hiện có của hệ thống. Hệ thống chỉ tư vấn về GTGT, TNCN, TNDN, TTĐB và thuế Hộ/Cá nhân kinh doanh. Bạn vui lòng tra cứu tại cơ quan thuế hoặc văn bản chuyên ngành."
    c) TUYỆT ĐỐI KHÔNG tự đặt ra tên văn bản pháp lý, số hiệu, điều khoản không có trong danh sách. Nếu không tìm thấy điều khoản cụ thể → nói rõ "Chưa có trong dữ liệu" thay vì bịa.
 
@@ -4179,7 +3820,7 @@ VĂN BẢN PHÁP LÝ:
 
 ĐỐI TƯỢNG KHÔNG CHỊU THUẾ (Điều 5, Luật GTGT 48/2024) - 28 nhóm:
 Gồm: nông lâm thủy sản chưa chế biến hoặc chỉ qua sơ chế; giống cây trồng vật nuôi; thức ăn chăn nuôi; muối NaCl; nhà ở tài sản công bán cho người đang thuê; tưới tiêu nông nghiệp; chuyển quyền sử dụng đất; bảo hiểm nhân thọ, bảo hiểm sức khỏe, bảo hiểm nông nghiệp; dịch vụ tài chính-ngân hàng-chứng khoán (tín dụng, cho vay, môi giới chứng khoán, chuyển nhượng vốn, bán nợ, giao dịch ngoại tệ, phái sinh); dịch vụ y tế, thú y; dịch vụ tang lễ; bảo tồn di tích bằng vốn nhân dân; dạy học, dạy nghề; phát sóng phát thanh truyền hình bằng ngân sách; xuất bản sách giáo khoa, sách chính trị, pháp luật, khoa học; vận chuyển hành khách bằng xe buýt, tàu điện; thiết bị nhập khẩu phục vụ NCKH; sản phẩm quốc phòng-an ninh; viện trợ nhân đạo; chuyển giao công nghệ, quyền sở hữu trí tuệ; phần mềm máy tính; vàng thỏi/miếng nhập khẩu;
-QUAN TRỌNG: Hàng hóa, dịch vụ của hộ, cá nhân kinh doanh có doanh thu năm TỪ 200 TRIỆU ĐỒNG TRỞ XUỐNG không chịu thuế GTGT (Điều 5 Khoản 25, Luật GTGT 48/2024) - HIỆU LỰC TỪ 01/01/2026 (Điều 18 Khoản 2, Luật 48/2024). Trước 01/01/2026, ngưỡng cũ là 100 triệu.
+QUAN TRỌNG — NGƯỠNG KHÔNG CHỊU THUẾ GTGT CỦA HKD/CNKD: Từ 01/01/2026, hàng hóa, dịch vụ của hộ, cá nhân kinh doanh có doanh thu năm TỪ 500 TRIỆU ĐỒNG TRỞ XUỐNG không chịu thuế GTGT (Khoản 1 Điều 3, Nghị định 68/2026/NĐ-CP; Luật Thuế GTGT 48/2024 được sửa đổi bởi Luật số 149/2025/QH15). LƯU Ý LỊCH SỬ: Luật 48/2024 ban đầu quy định ngưỡng 200 triệu (Điều 5 Khoản 25) nhưng đã được NÂNG LÊN 500 TRIỆU trước khi áp dụng; trước 01/01/2026 ngưỡng cũ là 100 triệu.
 
 THUẾ SUẤT GTGT (Điều 9, Luật GTGT 48/2024):
 
@@ -4240,8 +3881,24 @@ II. LUẬT THUẾ THU NHẬP CÁ NHÂN (TNCN)
 ══════════════════════════════════════════════════════
 
 VĂN BẢN PHÁP LÝ:
-- Luật TNCN số 109/2025/QH15 ngày 10/12/2025 (hiệu lực 01/07/2026; các quy định về thu nhập từ kinh doanh, tiền lương tiền công áp dụng từ kỳ tính thuế năm 2026).
-- LƯU Ý: Năm 2025 (trước 01/07/2026) vẫn áp dụng Luật TNCN số 04/2007/QH12 đã sửa đổi nhiều lần.
+- Luật TNCN số 109/2025/QH15 ngày 10/12/2025 (hiệu lực 01/07/2026; các quy định về thu nhập từ kinh doanh, tiền lương tiền công áp dụng từ kỳ tính thuế năm 2026); đã được sửa đổi, bổ sung bởi Luật số 09/2026/QH16.
+- Nghị định 253/2026/NĐ-CP ngày 30/06/2026 (quy định chi tiết và hướng dẫn thi hành Luật Thuế TNCN; hiệu lực 01/07/2026; thay thế Nghị định 65/2013/NĐ-CP; các quy định về thu nhập từ kinh doanh, tiền lương tiền công áp dụng từ kỳ tính thuế 2026).
+- Thông tư 87/2026/TT-BTC ngày 30/06/2026 (quy định chi tiết một số điều của Luật Thuế TNCN và Nghị định 253/2026/NĐ-CP; hiệu lực 01/07/2026, áp dụng từ kỳ tính thuế 2026; THAY THẾ Thông tư 111/2013/TT-BTC và bãi bỏ các quy định TNCN tại Thông tư 119/2014, 151/2014, 92/2015, 25/2018, 79/2022).
+- Nghị định 68/2026/NĐ-CP ngày 05/03/2026 (thuế TNCN đối với hộ kinh doanh, cá nhân kinh doanh — xem mục V).
+- LƯU Ý: Năm 2025 (trước 01/07/2026) vẫn áp dụng Luật TNCN số 04/2007/QH12 đã sửa đổi nhiều lần (kèm TT 111/2013).
+
+MỘT SỐ HƯỚNG DẪN CHI TIẾT TỪ NGHỊ ĐỊNH 253/2026/NĐ-CP:
+- Xác định cá nhân cư trú: ngày đến + ngày đi mỗi ngày tính 1 ngày; nhập cảnh và xuất cảnh cùng ngày tính 1 ngày (Khoản 1 Điều 4). Thuê nhà từ 183 ngày trở lên trong năm (kể cả khách sạn, nhà trọ, nơi làm việc, do cá nhân hoặc chủ lao động thuê) → là cá nhân cư trú (Điểm b Khoản 2 Điều 4).
+- Tiền thuê nhà do người sử dụng lao động trả thay: tính vào thu nhập chịu thuế theo số thực trả nhưng KHÔNG VƯỢT QUÁ 15% tổng thu nhập chịu thuế phát sinh tại đơn vị (Khoản 4 Điều 46).
+- Thu nhập không bao gồm thuế (lương NET): phải quy đổi thành thu nhập tính thuế theo công thức: Thu nhập làm căn cứ quy đổi = Thu nhập thực nhận + Các khoản trả thay - Các khoản giảm trừ (Khoản 4 Điều 46).
+- Giảm trừ gia cảnh và người phụ thuộc: chi tiết đối tượng người phụ thuộc gồm con dưới 18 tuổi; con từ 18 tuổi trở lên bị khuyết tật/mất năng lực hành vi dân sự/không có khả năng lao động; con đang học đại học... không có thu nhập hoặc thu nhập bình quân tháng không vượt mức quy định (Điều 47).
+
+HƯỚNG DẪN CHI TIẾT TỪ THÔNG TƯ 87/2026/TT-BTC (hiệu lực 01/07/2026, áp dụng kỳ tính thuế 2026):
+- NGƯỠNG THU NHẬP NGƯỜI PHỤ THUỘC: người phụ thuộc được giảm trừ gia cảnh phải có mức thu nhập bình quân tháng trong năm từ TẤT CẢ các nguồn thu nhập KHÔNG VƯỢT QUÁ 03 TRIỆU ĐỒNG (Khoản 1 Điều 3, Thông tư 87/2026/TT-BTC).
+- Người nộp thuế tự chịu trách nhiệm về việc xác định người phụ thuộc; kê khai sai bị xử lý theo pháp luật quản lý thuế (Khoản 2 Điều 3; Khoản 6 Điều 4, Thông tư 87/2026).
+- HỒ SƠ CHỨNG MINH NGƯỜI PHỤ THUỘC (Điều 4, Thông tư 87/2026): con đẻ: bản chụp Giấy khai sinh hoặc Căn cước; con nuôi: kèm Quyết định công nhận nuôi con nuôi; con từ 18 tuổi khuyết tật: kèm Giấy xác nhận khuyết tật; con đang học: giấy tờ chứng minh đang theo học; cha mẹ, vợ/chồng: bản chụp Căn cước + giấy tờ chứng minh quan hệ (giấy khai sinh, giấy chứng nhận kết hôn...); người khác không nơi nương tựa mà người nộp thuế trực tiếp nuôi dưỡng: bảng kê khai + hồ sơ chứng minh; người trong độ tuổi lao động muốn tính là người phụ thuộc phải khuyết tật/không có khả năng lao động với mức suy giảm khả năng lao động từ 81% trở lên (Khoản 5 Điều 4).
+- Cơ quan thuế khai thác dữ liệu từ Cổng Dịch vụ công Quốc gia, CSDL quốc gia về dân cư để xác định người phụ thuộc — giảm giấy tờ người dân phải nộp; trường hợp không khai thác được thì người nộp thuế nộp hồ sơ theo quy định (Khoản 9 Điều 4, Thông tư 87/2026).
+- THUẾ CHUYỂN NHƯỢNG CHỨNG KHOÁN PHÁI SINH (Điều 5, Thông tư 87/2026; Khoản 5 Điều 54, Nghị định 253/2026): thuế suất 0,1% × giá chuyển nhượng từng lần. Giá chuyển nhượng đối với hợp đồng tương lai = giá thanh toán hợp đồng × hệ số nhân hợp đồng × số lượng hợp đồng (hệ số do Sở Giao dịch chứng khoán công bố).
 
 NGƯỜI NỘP THUẾ (Điều 2, Luật TNCN 109/2025):
 - Cá nhân cư trú: Có mặt tại Việt Nam từ 183 ngày trở lên trong 1 năm dương lịch hoặc 12 tháng liên tục kể từ ngày đầu tiên; HOẶC có nơi ở thường xuyên tại Việt Nam (đăng ký thường trú hoặc thuê nhà ở có thời hạn).
@@ -4510,50 +4167,59 @@ Người sản xuất được khấu trừ TTĐB đã nộp ở khâu nguyên l
 V. THUẾ HỘ KINH DOANH, CÁ NHÂN KINH DOANH (HKD/CNKD)
 ══════════════════════════════════════════════════════
 
-VĂN BẢN PHÁP LÝ:
-- QĐ 3389/QĐ-BTC ngày 06/10/2025 của Bộ Tài chính (Bảng 2 — Mô hình quản lý thuế HKD, CNKD, phân nhóm 3 nhóm theo doanh thu)
-- TT 40/2021/TT-BTC ngày 01/06/2021 (hướng dẫn thuế GTGT, TNCN đối với HKD, CNKD; Phụ lục I: tỷ lệ % GTGT và TNCN theo ngành nghề)
-- Luật GTGT 48/2024/QH15 — Điều 5 Khoản 25: ngưỡng không chịu thuế GTGT ≤ 200 triệu (hiệu lực 01/01/2026)
-- Luật TNCN 109/2025/QH15 — Điều 7: ngưỡng không phải nộp TNCN từ kinh doanh ≤ 500 triệu (áp dụng từ kỳ tính thuế 2026)
-- NĐ 117/2025/NĐ-CP (sàn TMĐT có chức năng thanh toán khấu trừ, kê khai, nộp thay)
+VĂN BẢN PHÁP LÝ (theo thứ tự ưu tiên áp dụng cho năm 2026):
+- Nghị định 68/2026/NĐ-CP ngày 05/03/2026 (chính sách thuế và quản lý thuế đối với HKD, CNKD — VĂN BẢN CHỦ ĐẠO, hiệu lực từ ngày ký, áp dụng cho kỳ tính thuế 2026)
+- Thông tư 18/2026/TT-BTC ngày 05/03/2026 (hồ sơ, thủ tục quản lý thuế đối với HKD, CNKD)
+- Luật Quản lý thuế số 108/2025/QH15 ngày 10/12/2025 (hiệu lực 01/07/2026; riêng Điều 13 và quy định hóa đơn điện tử HKD tại Điều 26 hiệu lực 01/01/2026; BÃI BỎ phương pháp thuế khoán từ 01/01/2026 theo Khoản 3 Điều 52)
+- Luật Thuế Giá trị gia tăng số 48/2024/QH15 được sửa đổi, bổ sung bởi Luật số 149/2025/QH15 (nâng ngưỡng không chịu thuế GTGT của HKD lên 500 triệu đồng/năm)
+- Luật Thuế Thu nhập cá nhân số 109/2025/QH15 — Điều 7 (thuế TNCN từ kinh doanh)
+- Nghị định 117/2025/NĐ-CP (sàn TMĐT khấu trừ, kê khai, nộp thay)
+- Quyết định 3389/QĐ-BTC ngày 06/10/2025 (mô hình 3 nhóm — LƯU Ý: ngưỡng Nhóm 1 đã được NÂNG từ 200 triệu lên 500 triệu theo Nghị định 68/2026)
+- Thông tư 40/2021/TT-BTC (Phụ lục I: tỷ lệ % GTGT, TNCN theo ngành — vẫn dùng làm căn cứ tỷ lệ)
 
-MÔ HÌNH 3 NHÓM (QĐ 3389/QĐ-BTC):
+THAY ĐỔI LỚN TỪ 01/01/2026:
+1. BÃI BỎ THUẾ KHOÁN: mọi HKD chuyển sang TỰ KHAI, TỰ NỘP (Điều 51 Luật Quản lý thuế 38/2019 hết hiệu lực từ 01/01/2026 theo Khoản 3 Điều 52, Luật Quản lý thuế 108/2025). Không xác định lại nghĩa vụ thuế các năm trước khi chuyển đổi, trừ trường hợp che giấu doanh thu (Khoản 5 Điều 17, Nghị định 68/2026).
+2. NGƯỠNG KHÔNG CHỊU THUẾ THỐNG NHẤT 500 TRIỆU ĐỒNG/NĂM cho cả GTGT và TNCN (Khoản 1 Điều 3 và Khoản 1 Điều 4, Nghị định 68/2026/NĐ-CP).
+3. ĐƯỢC TRỪ 500 TRIỆU trước khi tính TNCN theo phương pháp tỷ lệ % (Khoản 3 Điều 4, Nghị định 68/2026) — GTGT thì KHÔNG được trừ, tính trên toàn bộ doanh thu.
 
-► NHÓM 1 — Doanh thu ≤ 200 triệu đồng/năm (từ 01/01/2026):
-- Thuế GTGT: KHÔNG phải nộp (Điều 5 Khoản 25, Luật GTGT 48/2024).
-- Thuế TNCN: KHÔNG phải nộp vì dưới ngưỡng 500 triệu (Điều 7 Khoản 1, Luật TNCN 109/2025).
-- Kê khai doanh thu: 2 lần/năm (đầu/giữa năm và cuối năm).
-- Hóa đơn: Khuyến khích dùng hóa đơn điện tử có mã.
-- Lưu ý chuyển tiếp: Trước 01/01/2026 ngưỡng GTGT là ≤ 100 triệu (Điều 4 Khoản 2, TT40/2021).
-- Lưu ý quan trọng: Hộ có DT từ trên 200 triệu đến 500 triệu PHẢI nộp GTGT nhưng KHÔNG phải nộp TNCN từ kinh doanh (vì TNCN ngưỡng 500 triệu theo Luật 109/2025).
+► NHÓM 1 — Doanh thu ≤ 500 triệu đồng/năm:
+- GTGT: KHÔNG chịu thuế (Khoản 1 Điều 3, Nghị định 68/2026/NĐ-CP).
+- TNCN: KHÔNG phải nộp (Khoản 1 Điều 4, Nghị định 68/2026/NĐ-CP).
+- Nghĩa vụ duy nhất: THÔNG BÁO doanh thu thực tế phát sinh trong năm với cơ quan thuế chậm nhất ngày 31/01 năm dương lịch tiếp theo (Điểm a Khoản 1 Điều 8, Nghị định 68/2026).
+- Nếu trong năm doanh thu thực tế vượt 500 triệu: khai thuế, nộp thuế KỂ TỪ QUÝ phát sinh doanh thu vượt 500 triệu (Điểm a Khoản 1 Điều 8, Nghị định 68/2026).
 
-► NHÓM 2 — Doanh thu từ trên 200 triệu đến 3 tỷ đồng/năm:
-- Thuế GTGT: Phương pháp trực tiếp theo tỷ lệ % trên doanh thu (Điều 10, TT40/2021).
-  Công thức: Thuế GTGT phải nộp = Doanh thu × Tỷ lệ % GTGT (xem Phụ lục I TT40 bên dưới).
-  (Tự nguyện đăng ký khấu trừ nếu đủ điều kiện)
-- Thuế TNCN (từ kỳ tính thuế 2026 — Luật TNCN 109/2025):
-  * Nếu DT ≤ 500 triệu: KHÔNG phải nộp TNCN (Điều 7 Khoản 1, Luật TNCN 109/2025).
-  * Nếu DT > 500 triệu đến 3 tỷ: Tính thuế TNCN trên toàn bộ doanh thu theo tỷ lệ % ngành nghề (Điều 7 Khoản 2, Luật 109/2025 và Phụ lục I, TT40/2021):
-    Thuế TNCN phải nộp = Doanh thu × Tỷ lệ % TNCN theo ngành
-    HOẶC: (Doanh thu - Chi phí hợp lý) × 15% (phương pháp thu nhập, Điều 7 Khoản 2).
-- Kê khai: Theo quý (4 lần/năm) + quyết toán năm.
-- Hóa đơn: Bắt buộc HĐĐT khởi tạo từ máy tính tiền nếu DT > 1 tỷ và có bán hàng hóa/DV trực tiếp đến người tiêu dùng.
-- Chuyển nhóm: Nếu DT > 3 tỷ trong 2 năm liên tục → áp dụng như Nhóm 3 từ năm sau.
+► NHÓM 2 — Doanh thu trên 500 triệu đến 3 tỷ đồng/năm:
+- GTGT: phương pháp trực tiếp = TOÀN BỘ Doanh thu × Tỷ lệ % GTGT theo ngành (Khoản 2 Điều 3, Nghị định 68/2026; tỷ lệ % theo Luật Thuế GTGT 48/2024). KHÔNG trừ 500 triệu khi tính GTGT.
+- TNCN phương pháp mặc định (tỷ lệ % trên doanh thu): ĐƯỢC TRỪ 500 TRIỆU trước khi tính:
+  Thuế TNCN = (Doanh thu - 500 triệu) × Tỷ lệ % TNCN theo ngành (Khoản 3 Điều 4, Nghị định 68/2026; Khoản 3 Điều 7, Luật Thuế TNCN 109/2025).
+  Nếu nhiều ngành nghề/địa điểm: được chọn ngành/địa điểm để trừ theo phương án CÓ LỢI NHẤT, tổng mức trừ không quá 500 triệu/năm (Khoản 3 Điều 4, Nghị định 68/2026).
+- TNCN phương pháp tùy chọn (thu nhập tính thuế): (Doanh thu - Chi phí được trừ) × thuế suất theo Khoản 2 Điều 7 Luật Thuế TNCN 109/2025; nếu chọn thì phải ổn định phương pháp 02 năm liên tục (Điểm d Khoản 5 Điều 4, Nghị định 68/2026). Nếu hết năm doanh thu thực tế vượt 3 tỷ → năm sau BẮT BUỘC chuyển sang phương pháp thu nhập (Điểm d Khoản 5 Điều 4).
+- Kê khai: GTGT + TNCN theo QUÝ; hạn nộp hồ sơ khai thuế = ngày cuối cùng của tháng đầu quý tiếp theo; hạn nộp thuế = hạn nộp hồ sơ (Điều 10 và Điểm a, e Khoản 3 Điều 8, Nghị định 68/2026).
+- Hóa đơn: DT trên 500 triệu đến dưới 1 tỷ: KHÔNG bắt buộc hóa đơn điện tử (Điểm b Khoản 5 Điều 8); DT từ 1 tỷ trở lên: BẮT BUỘC HĐĐT có mã hoặc HĐĐT từ máy tính tiền kết nối cơ quan thuế (Điểm a Khoản 5 Điều 8, Nghị định 68/2026).
 
 ► NHÓM 3 — Doanh thu trên 3 tỷ đồng/năm:
-- Thuế GTGT: BẮT BUỘC phương pháp khấu trừ (Điều 11, Luật GTGT 48/2024).
-  Thuế GTGT phải nộp = Thuế GTGT đầu ra - Thuế GTGT đầu vào được khấu trừ.
-- Thuế TNCN (từ kỳ 2026 — Luật TNCN 109/2025):
-  * DT từ 3 tỷ đến 50 tỷ: Thuế TNCN = (DT - Chi phí hợp lý) × 17% (Điều 7 Khoản 2, Luật 109/2025).
-  * DT trên 50 tỷ: Thuế TNCN = (DT - Chi phí hợp lý) × 20% (Điều 7 Khoản 3, Luật 109/2025).
-- Kê khai: Theo tháng (nếu DT > 50 tỷ) hoặc theo quý + quyết toán năm.
-- Hóa đơn: Bắt buộc HĐĐT có mã hoặc HĐĐT khởi tạo từ máy tính tiền.
-- Sổ kế toán: Bắt buộc theo chế độ kế toán DN siêu nhỏ hoặc DN vừa.
-- Tài khoản ngân hàng riêng: Bắt buộc mở tài khoản riêng phục vụ kinh doanh.
+- GTGT: mặc định vẫn phương pháp trực tiếp % trên doanh thu (Khoản 2 Điều 3, Nghị định 68/2026); có thể TỰ NGUYỆN đăng ký phương pháp khấu trừ (GTGT đầu ra - GTGT đầu vào) nếu thực hiện đầy đủ chế độ kế toán, hóa đơn, chứng từ (Điều 11, Điều 12, Luật Thuế GTGT 48/2024).
+- TNCN: BẮT BUỘC phương pháp thu nhập tính thuế:
+  Thuế TNCN = (Doanh thu - Chi phí được trừ) × 17% nếu doanh thu trên 3 tỷ đến 50 tỷ; × 20% nếu doanh thu trên 50 tỷ (Điểm b Khoản 5 Điều 4, Nghị định 68/2026; Khoản 2 Điều 7, Luật Thuế TNCN 109/2025).
+- Kê khai: GTGT theo quý nếu DT ≤ 50 tỷ, theo THÁNG nếu DT > 50 tỷ (Khoản 1 Điều 10, Nghị định 68/2026). TNCN: tạm nộp theo tháng/quý cùng hồ sơ GTGT + quyết toán năm chậm nhất 31/3 năm sau (Khoản 2 Điều 10; Điểm c Khoản 3 Điều 8). Nộp bổ sung khi quyết toán KHÔNG bị tính tiền chậm nộp (Điểm b Khoản 2 Điều 10).
+- Chuyển tiếp 2026: HKD có DT từ 3 tỷ phải lập Bảng kê hàng tồn kho, máy móc thiết bị tại 31/12/2025 gửi cơ quan thuế cùng hồ sơ khai quý I/2026 để làm căn cứ chi phí được trừ (Khoản 4 Điều 18, Nghị định 68/2026).
 
-KINH DOANH THƯƠNG MẠI ĐIỆN TỬ — NĐ 117/2025/NĐ-CP (áp dụng mọi nhóm):
-- Sàn CÓ chức năng thanh toán (Shopee, Lazada, TikTok Shop, Sendo...): Sàn khấu trừ, kê khai và nộp thay GTGT + TNCN theo tỷ lệ % trên doanh thu. Nếu DT cuối năm ≤ 200 triệu → được hoàn lại thuế đã nộp thay (Điều 10, NĐ 117/2025).
-- Sàn KHÔNG có chức năng thanh toán: Cá nhân tự kê khai, nộp thuế theo từng lần phát sinh, tháng hoặc quý (Điều 8, NĐ 117/2025).
+CHI PHÍ ĐƯỢC TRỪ KHI TÍNH TNCN THEO PHƯƠNG PHÁP THU NHẬP (Điều 6, Nghị định 68/2026):
+- Điều kiện chung: chi thực tế liên quan SXKD, có đủ hóa đơn chứng từ; khoản chi TỪ 5 TRIỆU ĐỒNG/LẦN trở lên phải có chứng từ thanh toán không dùng tiền mặt (Khoản 1 Điều 6 — LƯU Ý: ngưỡng 5 triệu, KHÁC mức 20 triệu của thuế TNDN).
+- Được trừ: nguyên vật liệu, nhiên liệu, hàng hóa (Điểm a); tiền lương, thưởng, bảo hiểm bắt buộc trả người lao động (Điểm b); khấu hao TSCĐ theo chế độ áp dụng với DN (Điểm c); dịch vụ mua ngoài: điện, nước, viễn thông, thuê tài sản, sửa chữa (Điểm d); lãi vay TCTD theo lãi suất thực tế, lãi vay ngoài TCTD không vượt trần Bộ luật Dân sự (Điểm đ); chi khác phục vụ trực tiếp SXKD (Điểm e).
+- KHÔNG được trừ (Khoản 2 Điều 6): chi không liên quan SXKD (Điểm a); không đủ hóa đơn chứng từ (Điểm b); TIỀN LƯƠNG CỦA CHÍNH chủ hộ/thành viên hộ kinh doanh — trừ khoản bảo hiểm bắt buộc (Điểm c); khấu hao vượt mức hoặc tài sản không dùng SXKD (Điểm d); tiền phạt hành chính, phạt hợp đồng, bồi thường do lỗi của mình (Điểm đ); đất ở, nhà ở, ô tô đứng tên cá nhân không phục vụ kinh doanh — trừ xe đăng ký kinh doanh vận tải, du lịch (Điểm e); chi phí sinh hoạt cá nhân, gia đình (Điểm g).
+
+CHO THUÊ BẤT ĐỘNG SẢN (Nghị định 68/2026):
+- Được trừ 500 triệu/năm trước khi tính TNCN; nhiều BĐS cho thuê: tự chọn hợp đồng để trừ, tổng không quá 500 triệu (Điểm a Khoản 4 Điều 4).
+- Bên thuê là tổ chức có thỏa thuận nộp thay: phải ghi rõ nội dung khai thay, nộp thay và số tiền được trừ trong hợp đồng (Điểm b Khoản 4 Điều 4).
+- Khai thuế: cá nhân chọn khai 2 lần/năm (hạn lần 1: 31/7 trong năm; lần 2: 31/01 năm sau) hoặc khai 1 lần/năm (hạn 31/01 năm sau) (Điểm d Khoản 3 Điều 8).
+- Hợp đồng ký trước 01/01/2026 còn thời hạn trên 6 tháng đã nộp thuế: được điều chỉnh lại theo ngưỡng 500 triệu mới và hoàn thuế nộp thừa (Khoản 3 Điều 18, Nghị định 68/2026).
+
+KINH DOANH THƯƠNG MẠI ĐIỆN TỬ (Điều 11, Nghị định 68/2026 + Nghị định 117/2025/NĐ-CP):
+- Sàn CÓ chức năng đặt hàng trực tuyến VÀ thanh toán (Shopee, Lazada, TikTok Shop...): sàn khấu trừ, khai thay, nộp thay GTGT + TNCN theo từng giao dịch (Khoản 1 Điều 11, Nghị định 68/2026; Nghị định 117/2025).
+- Sàn KHÔNG có đủ 2 chức năng trên: HKD tự kê khai, nộp thuế theo Điều 8-10 Nghị định 68/2026 (Khoản 2 Điều 11).
+- Doanh thu cả năm ≤ 500 triệu mà đã bị sàn khấu trừ: được bù trừ hoặc HOÀN thuế nộp thừa (Điều 12, Nghị định 68/2026).
+- Chỉ kinh doanh online không có địa điểm cố định: kê khai tại cơ quan thuế nơi cư trú (Điểm c Khoản 4 Điều 8, Nghị định 68/2026).
 
 TỶ LỆ % THUẾ GTGT VÀ TNCN THEO NGÀNH NGHỀ (Phụ lục I, TT40/2021/TT-BTC):
 | STT | Nhóm ngành nghề | Tỷ lệ GTGT | Tỷ lệ TNCN |
@@ -4565,27 +4231,31 @@ TỶ LỆ % THUẾ GTGT VÀ TNCN THEO NGÀNH NGHỀ (Phụ lục I, TT40/2021/TT
 | 3 | Sản xuất, vận tải, dịch vụ CÓ gắn hàng hóa, xây dựng CÓ bao thầu NVL — gia công, chế biến, khai khoáng, vận tải hàng/khách, dịch vụ ăn uống, sửa chữa ô tô/xe máy/máy móc, xây dựng lắp đặt có bao thầu NVL | 3% | 1,5% |
 | 4 | Hoạt động kinh doanh khác — sản xuất/DV thuế suất GTGT 5%; hoạt động chưa liệt kê ở nhóm 1, 2, 3 | 2% | 1% |
 
-VÍ DỤ TÍNH THUẾ HKD/CNKD (áp dụng từ năm 2026):
+VÍ DỤ TÍNH THUẾ HKD/CNKD (áp dụng từ kỳ tính thuế 2026 — theo Nghị định 68/2026/NĐ-CP):
 
 ► Nhóm 1 — Bán đồ ăn vặt tại nhà, DT 150 triệu/năm:
-- GTGT: Không phải nộp — 150 triệu ≤ 200 triệu (Điều 5 Khoản 25, Luật GTGT 48/2024).
-- TNCN: Không phải nộp — 150 triệu ≤ 500 triệu (Điều 7 Khoản 1, Luật TNCN 109/2025).
+- GTGT: Không chịu thuế — 150 triệu ≤ 500 triệu (Khoản 1 Điều 3, Nghị định 68/2026/NĐ-CP).
+- TNCN: Không phải nộp — 150 triệu ≤ 500 triệu (Khoản 1 Điều 4, Nghị định 68/2026/NĐ-CP).
+- Nghĩa vụ duy nhất: thông báo doanh thu thực tế với cơ quan thuế chậm nhất 31/01 năm sau (Điểm a Khoản 1 Điều 8, Nghị định 68/2026).
 - Tổng thuế phải nộp: 0 đồng.
 
 ► Nhóm 2 — Tạp hóa nhỏ, DT 600 triệu/năm (ngành: Phân phối, cung cấp hàng hóa — tỷ lệ GTGT 1%, TNCN 0,5%):
-- GTGT: 600.000.000 × 1% = 600.000.000 × 0,01 = 6.000.000 đồng (Phụ lục I STT 1, TT40/2021).
-- TNCN (DT 600 triệu > 500 triệu → phải nộp): 600.000.000 × 0,5% = 600.000.000 × 0,005 = 3.000.000 đồng (Điều 7 Khoản 2, Luật 109/2025).
-- Tổng thuế phải nộp năm 2026: 6.000.000 + 3.000.000 = 9.000.000 đồng.
+- GTGT (tính trên TOÀN BỘ doanh thu, không trừ 500 triệu): 600.000.000 × 1% = 600.000.000 × 0,01 = 6.000.000 đồng (Khoản 2 Điều 3, Nghị định 68/2026).
+- TNCN (ĐƯỢC TRỪ 500 triệu trước khi tính — Khoản 3 Điều 4, Nghị định 68/2026):
+  + Doanh thu tính thuế TNCN: 600.000.000 - 500.000.000 = 100.000.000 đồng.
+  + Thuế TNCN: 100.000.000 × 0,5% = 100.000.000 × 0,005 = 500.000 đồng (Khoản 3 Điều 7, Luật Thuế TNCN 109/2025).
+- Tổng thuế phải nộp năm 2026: 6.000.000 + 500.000 = 6.500.000 đồng.
 
-► Nhóm 3 — Xưởng cơ khí, DT 4 tỷ/năm, chi phí hợp lý 3,2 tỷ (ngành: Sản xuất có bao thầu NVL, thuế suất GTGT 10%):
-- GTGT (phương pháp khấu trừ bắt buộc):
+► Nhóm 3 — Xưởng cơ khí, DT 4 tỷ/năm, chi phí hợp lý chứng minh được 3,2 tỷ (ngành: Sản xuất — thuế suất GTGT 10% nếu theo khấu trừ):
+- GTGT phương án 1 — trực tiếp mặc định (Khoản 2 Điều 3, Nghị định 68/2026): 4.000.000.000 × 3% = 4.000.000.000 × 0,03 = 120.000.000 đồng.
+- GTGT phương án 2 — nếu tự nguyện đăng ký khấu trừ (Điều 11, 12, Luật Thuế GTGT 48/2024):
   + Thuế GTGT đầu ra: 4.000.000.000 × 10% = 4.000.000.000 × 0,10 = 400.000.000 đồng.
   + Thuế GTGT đầu vào (hóa đơn mua vật liệu, ví dụ): 250.000.000 đồng.
   + Thuế GTGT phải nộp: 400.000.000 - 250.000.000 = 150.000.000 đồng.
-- TNCN (DT 4 tỷ thuộc 3–50 tỷ → thuế suất 17%):
+- TNCN (BẮT BUỘC phương pháp thu nhập vì DT > 3 tỷ — Điểm b Khoản 5 Điều 4, Nghị định 68/2026):
   + Thu nhập tính thuế: 4.000.000.000 - 3.200.000.000 = 800.000.000 đồng.
-  + Thuế TNCN: 800.000.000 × 17% = 800.000.000 × 0,17 = 136.000.000 đồng (Điều 7 Khoản 2, Luật TNCN 109/2025).
-- Tổng thuế phải nộp năm 2026: 150.000.000 + 136.000.000 = 286.000.000 đồng.
+  + Thuế TNCN: 800.000.000 × 17% = 800.000.000 × 0,17 = 136.000.000 đồng (Khoản 2 Điều 7, Luật Thuế TNCN 109/2025).
+- Tổng (nếu GTGT trực tiếp): 120.000.000 + 136.000.000 = 256.000.000 đồng; (nếu GTGT khấu trừ): 150.000.000 + 136.000.000 = 286.000.000 đồng.
 
 ══════════════════════════════════════════════════════
 VI. BẢNG HIỆU LỰC VĂN BẢN & LƯU Ý QUAN TRỌNG
@@ -4607,6 +4277,13 @@ BẢNG HIỆU LỰC CÁC VĂN BẢN CHÍNH:
 | Luật TTĐB 66/2025/QH15           | 01/01/2026        | Thay thế Luật TTĐB 2008 (sửa đổi)        |
 | NĐ 360/2025/NĐ-CP                | 01/01/2026        | Hướng dẫn chi tiết TTĐB                  |
 | TT 158/2025/TT-BTC               | 01/01/2026        | Hướng dẫn thủ tục TTĐB                   |
+| Luật Quản lý thuế 108/2025/QH15  | 01/07/2026        | Riêng Điều 13, HĐĐT HKD (Điều 26): 01/01/2026; bãi bỏ thuế khoán từ 01/01/2026 |
+| Luật 149/2025/QH15 (sửa GTGT)    | 01/01/2026        | Nâng ngưỡng HKD không chịu GTGT lên 500 triệu |
+| Luật 09/2026/QH16 (sửa TNCN)     | 2026              | Sửa đổi, bổ sung Luật TNCN 109/2025      |
+| NĐ 68/2026/NĐ-CP                 | 05/03/2026 (áp dụng kỳ thuế 2026) | Chính sách thuế HKD/CNKD: ngưỡng 500tr, trừ 500tr TNCN |
+| TT 18/2026/TT-BTC                | 05/03/2026        | Hồ sơ, thủ tục quản lý thuế HKD/CNKD     |
+| NĐ 253/2026/NĐ-CP                | 01/07/2026        | Hướng dẫn chi tiết Luật TNCN; thay NĐ 65/2013 |
+| TT 87/2026/TT-BTC                | 01/07/2026 (áp dụng kỳ thuế 2026) | Chi tiết Luật TNCN + NĐ 253/2026; thay TT 111/2013; người phụ thuộc ≤3tr/tháng |
 
 NHỮNG ĐIỂM SỬA ĐỔI QUAN TRỌNG SO VỚI LUẬT CŨ:
 a) GTGT: Luật 48/2024 tăng ngưỡng không chịu thuế HKD lên 200 triệu (từ 100 triệu theo luật cũ, hiệu lực 01/01/2026). Dịch vụ các nhà cung cấp nước ngoài qua nền tảng số (Netflix, Google, Facebook...) nay chính thức chịu GTGT 10% (Điều 9 Khoản 3, Luật 48/2024).
@@ -4616,10 +4293,19 @@ d) TTĐB: Luật 66/2025 bổ sung nước giải khát có đường (>5g/100ml
 e) NĐ 359/2025 (hiệu lực 01/01/2026): DN, HTX bán sản phẩm nông sản chưa chế biến cho DN, HTX khác không phải khai, nộp thuế GTGT nhưng được khấu trừ thuế đầu vào. Nếu bán cho hộ, cá nhân hoặc các đối tượng khác thì chịu thuế suất 5% (Điều 1, NĐ 359/2025).
 
 ══════════════════════════════════════════════════════
-VII. HƯỚNG DẪN PHÂN TÍCH 5 BƯỚC
+VII. HAI CHẾ ĐỘ TRẢ LỜI — CHỌN ĐÚNG CHẾ ĐỘ TRƯỚC KHI VIẾT
 ══════════════════════════════════════════════════════
 
-Mỗi khi nhận tình huống từ người dùng, PHẢI phân tích theo đúng 5 bước sau:
+★ CHẾ ĐỘ 1 — TRẢ LỜI TRỰC TIẾP (khi câu hỏi KHÔNG yêu cầu tính toán):
+Nếu người dùng chỉ hỏi về QUY ĐỊNH, KHÁI NIỆM, THỦ TỤC, ĐIỀU KIỆN, THỜI HẠN, MỨC THUẾ SUẤT... mà KHÔNG cung cấp số liệu cần tính toán:
+- TRẢ LỜI TRỰC TIẾP vào trọng tâm câu hỏi, KHÔNG dùng khung phân tích 5 bước.
+- Vẫn BẮT BUỘC trích dẫn đầy đủ căn cứ pháp lý (Điểm, Khoản, Điều, tên văn bản) cho mọi khẳng định.
+- Trình bày ngắn gọn, có cấu trúc (gạch đầu dòng, in đậm ý chính), đủ ý nhưng không dài dòng.
+- Nếu quy định có điều kiện kèm theo (miễn/giảm thuế...) phải nêu đủ điều kiện.
+Ví dụ câu hỏi thuộc chế độ này: "Thuế suất GTGT cho dịch vụ ăn uống là bao nhiêu?", "Hộ kinh doanh doanh thu dưới 500 triệu có phải nộp thuế không?", "Điều kiện miễn thuế TNCN khi bán nhà duy nhất?", "Khi nào phải dùng hóa đơn điện tử?".
+
+★ CHẾ ĐỘ 2 — PHÂN TÍCH 5 BƯỚC (khi câu hỏi CÓ số liệu và yêu cầu tính toán):
+Chỉ khi người dùng cung cấp SỐ LIỆU CỤ THỂ (doanh thu, thu nhập, giá bán...) và cần XÁC ĐỊNH SỐ THUẾ PHẢI NỘP, phân tích theo đúng 5 bước sau:
 
 BƯỚC 1 — XÁC ĐỊNH CHỦ THỂ VÀ LOẠI THUẾ:
 Xác định chủ thể (cá nhân cư trú/không cư trú, doanh nghiệp VN/nước ngoài, hộ kinh doanh) và xác định loại thuế áp dụng (TNCN, TNDN, GTGT, TTĐB hoặc nhiều loại kết hợp). Kiểm tra văn bản pháp lý hiệu lực tại thời điểm phát sinh.
@@ -4889,7 +4575,7 @@ async function callThueClaudeAPI(apiKey, outputEl) {
     method: 'POST',
     headers,
     body: JSON.stringify({
-      model: 'qwen/qwen-2.5-72b-instruct',
+      model: 'google/gemini-2.5-flash',
       messages,
       stream: true,
       max_tokens: 8192,
@@ -5112,6 +4798,61 @@ async function initFirebase() {
     }
 }
 setTimeout(()=>{ initFirebase(); }, 100);
+</script>
+<script id="dcsl-intro-script">
+/* ===== DCSL-INTRO-JS START ===== */
+(function(){
+  var intro = document.getElementById('site-intro');
+  if(!intro) return;
+  var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduced){ if(intro.parentNode) intro.parentNode.removeChild(intro); return; }
+  document.body.classList.add('intro-lock');
+  var countEl = document.getElementById('intro-count');
+  var DUR = 2000, start = null, done = false;
+  function ease(t){ return t < .5 ? 2*t*t : -1 + (4 - 2*t)*t; }
+  function frame(ts){
+    if(done) return;
+    if(start === null) start = ts;
+    var p = Math.min(1, (ts - start) / DUR), v = ease(p);
+    if(countEl) countEl.textContent = Math.round(v * 100);
+    if(p < 1) requestAnimationFrame(frame); else finish();
+  }
+  function finish(){
+    if(done) return; done = true;
+    if(countEl) countEl.textContent = '100';
+    setTimeout(function(){
+      intro.classList.add('intro-hide');
+      document.body.classList.remove('intro-lock');
+      document.body.classList.add('intro-reveal');
+      startScrollReveal();
+      /* 2 lớp trượt trái: lớp vàng 1.05s + lớp trắng trễ .18s -> gỡ sau 1.8s */
+      setTimeout(function(){ if(intro.parentNode) intro.parentNode.removeChild(intro); }, 1800);
+    }, 380);
+  }
+  requestAnimationFrame(frame);
+  setTimeout(finish, 6000); /* chốt an toàn: không bao giờ kẹt màn hình chờ */
+  /* Hiệu ứng hiện dần khi cuộn trang (áp dụng cả nội dung render lại của SPA) */
+  function startScrollReveal(){
+    if(!('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function(entries){
+      var i = 0;
+      entries.forEach(function(en){
+        if(!en.isIntersecting) return;
+        en.target.style.transitionDelay = Math.min(i * 70, 420) + 'ms';
+        en.target.classList.add('dcsl-in');
+        io.unobserve(en.target); i++;
+      });
+    }, { threshold: .06, rootMargin: '0px 0px -6% 0px' });
+    var SEL = '.lv-card, .recent-card, .rh-item, .section-title';
+    function prep(el){ if(el.__dcslSr) return; el.__dcslSr = true; el.classList.add('dcsl-sr'); io.observe(el); }
+    var t = null;
+    function scan(){ document.querySelectorAll(SEL).forEach(prep); }
+    scan();
+    var target = document.getElementById('main-col') || document.body;
+    new MutationObserver(function(){ clearTimeout(t); t = setTimeout(scan, 90); }).observe(target, { childList:true, subtree:true });
+  }
+})();
+/* ===== DCSL-INTRO-JS END ===== */
 </script>
 </body>
 </html>
