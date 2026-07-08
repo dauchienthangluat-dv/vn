@@ -421,22 +421,23 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 .thue-user-msg-label { font-weight: 600; color: var(--gold-rich); margin-bottom: 4px; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.5px; }
 .thue-divider { border: none; border-top: 1px dashed var(--gold-border); margin: 16px 0; }
 </style>
+
 <style id="dcsl-intro-style">
 /* ===== DCSL-INTRO-CSS START ===== */
 #site-intro{ position:fixed; inset:0; z-index:99999; overflow:hidden; transition:visibility 0s linear 1.6s; }
 #site-intro .intro-layer{ position:absolute; inset:0; transform:translateX(0); will-change:transform; }
 /* lớp trắng nằm dưới, trượt trái TRỄ hơn -> tạo dải trắng mượt theo sau lớp vàng */
 #site-intro .intro-layer-white{ background:#fff; z-index:1; transition:transform 1.05s cubic-bezier(.77,0,.18,1) .18s; }
-/* nền vàng champagne sáng — cùng gradient với hero banner "Thư viện Bản án" */
+/* nền vàng champagne sáng MỊN (gradient hero banner, KHÔNG vùng sẫm giữa — user chê loang lổ); chữ nổi nhờ bóng 2 lớp */
 #site-intro .intro-layer-main{ background:linear-gradient(135deg,#F3ECD8 0%,#E0D2B4 100%); z-index:2; display:flex; align-items:center; justify-content:center; transition:transform 1.05s cubic-bezier(.77,0,.18,1); }
 #site-intro.intro-hide{ visibility:hidden; }
 #site-intro.intro-hide .intro-layer{ transform:translateX(-100%); }
 #site-intro .intro-center{ text-align:center; padding:0 24px; }
-#site-intro .intro-logo{ width:64px; height:auto; display:block; margin:0 auto 20px; opacity:0; animation:dcslFadeIn 1.3s ease .05s forwards; filter:drop-shadow(0 1px 10px rgba(120,90,45,.28)); }
-/* chữ trắng thuần khiết (theo mẫu L Signature); bóng vàng trầm rất nhẹ để nổi trên nền champagne sáng */
-#site-intro .intro-brand{ font-family:'Playfair Display',serif; font-weight:700; color:#fff; font-size:clamp(1.05rem,2.8vw,1.6rem); letter-spacing:.3em; opacity:0; animation:dcslBrandIn 1.4s cubic-bezier(.22,1,.36,1) .15s forwards; white-space:nowrap; text-shadow:0 1px 18px rgba(120,90,45,.4); }
-#site-intro .intro-brand-sub{ font-family:'Be Vietnam Pro',sans-serif; color:rgba(255,255,255,.85); font-size:.62rem; letter-spacing:.55em; margin-top:10px; opacity:0; animation:dcslBrandIn 1.2s ease .5s forwards; text-shadow:0 1px 12px rgba(120,90,45,.35); }
-#site-intro .intro-loading{ font-family:'Be Vietnam Pro',sans-serif; color:rgba(255,255,255,.75); font-size:.58rem; font-weight:500; letter-spacing:.42em; margin-top:48px; font-variant-numeric:tabular-nums; opacity:0; animation:dcslFadeIn 1s ease .7s forwards; text-shadow:0 1px 10px rgba(120,90,45,.35); }
+#site-intro .intro-logo{ width:66px; height:auto; display:block; margin:0 auto 20px; opacity:0; animation:dcslFadeIn 1.3s ease .05s forwards; filter:drop-shadow(0 1px 2px rgba(110,82,40,.5)) drop-shadow(0 3px 12px rgba(110,82,40,.35)); }
+/* chữ trắng thuần khiết; bóng vàng trầm 2 lớp (nét + tỏa) để nổi rõ trên nền champagne */
+#site-intro .intro-brand{ font-family:'Playfair Display',serif; font-weight:700; color:#fff; font-size:clamp(1.05rem,2.8vw,1.6rem); letter-spacing:.3em; opacity:0; animation:dcslBrandIn 1.4s cubic-bezier(.22,1,.36,1) .15s forwards; white-space:nowrap; text-shadow:0 1px 2px rgba(110,82,40,.55), 0 3px 18px rgba(110,82,40,.4); }
+#site-intro .intro-brand-sub{ font-family:'Be Vietnam Pro',sans-serif; color:rgba(255,255,255,.95); font-size:.62rem; letter-spacing:.55em; margin-top:10px; opacity:0; animation:dcslBrandIn 1.2s ease .5s forwards; text-shadow:0 1px 2px rgba(110,82,40,.5), 0 2px 12px rgba(110,82,40,.35); }
+#site-intro .intro-loading{ font-family:'Be Vietnam Pro',sans-serif; color:rgba(255,255,255,.92); font-size:.58rem; font-weight:600; letter-spacing:.42em; margin-top:48px; font-variant-numeric:tabular-nums; opacity:0; animation:dcslFadeIn 1s ease .7s forwards; text-shadow:0 1px 2px rgba(110,82,40,.5), 0 2px 10px rgba(110,82,40,.35); }
 @keyframes dcslBrandIn{ from{ opacity:0; letter-spacing:.5em; transform:translateY(14px);} to{ opacity:1; letter-spacing:.14em; transform:none;} }
 @keyframes dcslFadeIn{ from{ opacity:0; } to{ opacity:1; } }
 body.intro-lock{ overflow:hidden; }
@@ -447,6 +448,38 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
 @media (prefers-reduced-motion: reduce){ #site-intro{ display:none !important; } .dcsl-sr{ opacity:1 !important; transform:none !important; transition:none !important; } body.intro-reveal #global-header{ animation:none !important; } }
 /* ===== DCSL-INTRO-CSS END ===== */
 </style>
+<style id="dcsl-acct-style">
+/* ===== DCSL-ACCT-CSS START ===== */
+/* --- Nút tài khoản trên header --- */
+#acct-btn{ display:none; align-items:center; gap:6px; background:var(--bg2); color:var(--navy); border:1px solid var(--gold-border); padding:5px 10px; border-radius:20px; cursor:pointer; font-weight:600; font-size:.78rem; font-family:'Be Vietnam Pro',sans-serif; transition:all .2s; white-space:nowrap; }
+#acct-btn.acct-visible{ display:inline-flex; }
+#acct-btn:hover{ border-color:var(--gold-rich); color:var(--gold-rich); }
+#acct-btn i{ font-size:1.05rem; }
+#acct-btn.acct-in .acct-avatar{ display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border-radius:50%; background:var(--gold-rich); color:#fff; font-size:.68rem; font-weight:700; }
+@media(max-width:480px){ #acct-btn .acct-label{ display:none; } }
+/* --- Form tài khoản trong modal --- */
+.acct-form{ display:flex; flex-direction:column; gap:10px; }
+.acct-error{ color:#b3402a; font-size:.82rem; min-height:1em; }
+.acct-note{ color:var(--text-muted); font-size:.8rem; line-height:1.6; }
+.acct-primary{ background:var(--navy); color:#fff; border:none; padding:11px; border-radius:8px; cursor:pointer; font-weight:600; font-size:.88rem; font-family:'Be Vietnam Pro',sans-serif; }
+.acct-primary:hover{ opacity:.92; }
+.acct-link{ background:none; border:none; color:var(--navy); cursor:pointer; font-size:.8rem; text-decoration:underline; font-family:'Be Vietnam Pro',sans-serif; padding:2px; }
+.acct-link:hover{ color:var(--gold-rich); }
+.acct-user-box{ display:flex; align-items:center; gap:12px; padding:12px; background:var(--bg2); border:1px solid var(--gold-border); border-radius:10px; margin-bottom:12px; }
+.acct-user-avatar{ width:38px; height:38px; border-radius:50%; background:var(--gold-rich); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1rem; }
+/* --- Bookmark --- */
+.bm-btn.bm-on{ color:var(--gold-rich); border-color:var(--gold-rich); }
+.bm-detail{ margin-left:auto; width:34px; height:34px; border-radius:8px; border:1px solid var(--gold-border); background:var(--surface); cursor:pointer; display:inline-flex; align-items:center; justify-content:center; font-size:1.05rem; color:var(--navy); transition:all .2s; }
+.bm-detail:hover{ border-color:var(--gold-rich); }
+.bm-detail.bm-on{ color:var(--gold-rich); }
+@media(min-width:1100px){ #sidebar .sidebar-item[onclick*="openFilter"]{ display:none; } }
+.bm-list-item{ background:var(--surface); border:1px solid var(--gold-border); border-radius:10px; padding:14px 16px; margin-bottom:12px; display:flex; align-items:flex-start; gap:12px; }
+.bm-list-main{ flex:1; min-width:0; }
+.bm-list-title{ font-weight:600; color:var(--navy); cursor:pointer; line-height:1.5; }
+.bm-list-title:hover{ color:var(--gold-rich); }
+.bm-list-meta{ font-size:.72rem; color:var(--gold-rich); font-weight:600; text-transform:uppercase; letter-spacing:.5px; margin-bottom:4px; }
+/* ===== DCSL-ACCT-CSS END ===== */
+</style>
 </head>
 <body>
 <!-- ===== DCSL-INTRO-HTML START ===== -->
@@ -454,7 +487,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
   <div class="intro-layer intro-layer-white"></div>
   <div class="intro-layer intro-layer-main">
     <div class="intro-center">
-      <svg class="intro-logo" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <svg class="intro-logo" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="60" cy="14" r="4"/>
         <line x1="60" y1="18" x2="60" y2="84"/>
         <line x1="26" y1="30" x2="94" y2="30"/>
@@ -479,10 +512,13 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
 <!-- ===== DCSL-INTRO-HTML END ===== -->
 
 
+
+
 <header id="global-header">
   <button id="hamburger-btn" onclick="openSidebar()" title="Menu"><i class="ph ph-list"></i></button>
   <div id="site-logo" onclick="goHome()"><em>Đấu Chiến Thắng Luật</em><span>.com</span></div>
   <div id="header-right">
+    <button id="acct-btn" onclick="openAccountModal()" title="Tài khoản"><i class="ph ph-user-circle"></i><span class="acct-label">Đăng nhập</span></button>
     <div class="lang-switch">
         <button class="lang-btn active" id="lang-vi" data-lang="vi" onclick="switchLanguage('vi')">VN</button>
         <button class="lang-btn" id="lang-en" data-lang="en" onclick="switchLanguage('en')">EN</button>
@@ -501,6 +537,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
   <button id="sidebar-close" onclick="closeSidebar()"><i class="ph ph-x"></i></button>
   <div id="sidebar-logo">Đấu Chiến Thắng Luật<small>Kho Tranh Chấp & Bản Án</small></div>
   <div class="sidebar-item" onclick="goHome();closeSidebar()"><i class="ph ph-house si-icon"></i> Trang chủ</div>
+  <div class="sidebar-item" onclick="goBookmarks()"><i class="ph ph-bookmark-simple si-icon"></i> Bản án đã lưu</div>
   <div class="sidebar-item" onclick="closeSidebar();openFilter()"><i class="ph ph-funnel si-icon"></i> Lọc tìm kiếm</div>
   <!-- admin-sidebar-item removed in public build -->
   <div class="sidebar-item" onclick="openHuongDan()"><i class="ph ph-book-open-text si-icon"></i> Hướng dẫn sử dụng</div>
@@ -1221,6 +1258,25 @@ const UI_TEXT = {
     sidebarFilter: 'Lọc tìm kiếm',
     sidebarAdmin: 'Thêm mới (Admin)',
     sidebarGuide: 'Hướng dẫn sử dụng',
+    sidebarBookmarks: 'Bản án đã lưu',
+    bookmarksTitle: 'Bản án đã lưu',
+    bookmarksEmpty: 'Chưa có vụ án nào được lưu. Bấm biểu tượng dấu trang ở danh sách hoặc trang chi tiết để lưu lại đọc sau.',
+    bmAdd: 'Lưu vụ án này',
+    bmRemove: 'Bỏ lưu',
+    acctTitle: 'Tài khoản',
+    acctLogin: 'Đăng nhập',
+    acctRegister: 'Đăng ký',
+    acctLogout: 'Đăng xuất',
+    acctPassword: 'Mật khẩu (tối thiểu 6 ký tự)',
+    acctForgot: 'Quên mật khẩu?',
+    acctNoAcct: 'Chưa có tài khoản? Đăng ký',
+    acctHasAcct: 'Đã có tài khoản? Đăng nhập',
+    acctResetSent: 'Đã gửi email đặt lại mật khẩu — kiểm tra hộp thư.',
+    acctSyncNote: 'Bản án đã lưu tự đồng bộ theo tài khoản trên mọi thiết bị.',
+    acctLocalNote: 'Bạn chưa đăng nhập — bản án đang lưu trên thiết bị này. Đăng nhập để đồng bộ giữa các thiết bị.',
+    acctFillBoth: 'Vui lòng nhập đủ email và mật khẩu.',
+    acctEnterEmail: 'Nhập email của bạn vào ô trên rồi bấm lại.',
+    acctWelcome: 'Đăng nhập thành công! Bản án đã lưu sẽ tự đồng bộ.',
     sidebarAbout: 'Giới thiệu',
     heroTitle: 'Thư viện <em>Bản án</em>',
     heroDesc: 'Tra cứu bản án, án lệ một cách nhanh chóng.',
@@ -1291,6 +1347,25 @@ const UI_TEXT = {
     sidebarFilter: 'Search filter',
     sidebarAdmin: 'Add new (Admin)',
     sidebarGuide: 'User guide',
+    sidebarBookmarks: 'Saved cases',
+    bookmarksTitle: 'Saved cases',
+    bookmarksEmpty: 'No saved cases yet. Tap the bookmark icon on a list item or detail page to save it for later.',
+    bmAdd: 'Save this case',
+    bmRemove: 'Remove bookmark',
+    acctTitle: 'Account',
+    acctLogin: 'Sign in',
+    acctRegister: 'Sign up',
+    acctLogout: 'Sign out',
+    acctPassword: 'Password (min 6 characters)',
+    acctForgot: 'Forgot password?',
+    acctNoAcct: "Don't have an account? Sign up",
+    acctHasAcct: 'Already have an account? Sign in',
+    acctResetSent: 'Password reset email sent — check your inbox.',
+    acctSyncNote: 'Saved cases sync automatically with your account on every device.',
+    acctLocalNote: 'You are not signed in — cases are saved on this device only. Sign in to sync across devices.',
+    acctFillBoth: 'Please enter both email and password.',
+    acctEnterEmail: 'Enter your email above, then tap again.',
+    acctWelcome: 'Signed in! Your saved cases will sync automatically.',
     sidebarAbout: 'About',
     heroTitle: 'Case <em>Library</em>',
     heroDesc: 'Search judgments and precedents quickly.',
@@ -1450,6 +1525,9 @@ function applyStaticTranslations() {
   const sbAdmin = document.getElementById('admin-sidebar-item');
   if(sbHome) sbHome.innerHTML = `<i class="ph ph-house si-icon"></i> ${t('sidebarHome')}`;
   if(sbFilter) sbFilter.innerHTML = `<i class="ph ph-funnel si-icon"></i> ${t('sidebarFilter')}`;
+  const sbBm = sbByClick('goBookmarks');
+  if(sbBm) sbBm.innerHTML = `<i class="ph ph-bookmark-simple si-icon"></i> ${t('sidebarBookmarks')}`;
+  if(typeof updateAcctUI === 'function') updateAcctUI();
   if(sbAdmin) sbAdmin.innerHTML = `<i class="ph ph-plus-circle si-icon"></i> ${t('sidebarAdmin')}`;
   if(sbGuide) sbGuide.innerHTML = `<i class="ph ph-book-open-text si-icon"></i> ${t('sidebarGuide')}`;
   if(sbAbout) sbAbout.innerHTML = `<i class="ph ph-info si-icon"></i> ${t('sidebarAbout')}`;
@@ -2528,6 +2606,7 @@ function deleteSubfield(lvId, sfId, event) {
 }
 
 function renderCasesList(){
+  if(state.viewBookmarks && typeof renderBookmarksList === 'function'){ renderBookmarksList(); return; }
   let cases = [];
   renderCasesAdminToolbar();
   if(state.searchQuery) {
@@ -2595,7 +2674,10 @@ function renderCasesList(){
           <div style="display:flex; gap:6px;">
             ${reorderControls}
             ${isAdminMode ? `<button class="case-expand-btn" onclick="editCase('${c.id}')" title="Chỉnh sửa"><i class="ph ph-pencil-simple"></i></button><button class="case-expand-btn case-delete-btn" onclick="deleteCase('${c.id}')" title="Xóa vụ án"><i class="ph ph-trash"></i></button>` : ''}
-            <button class="case-expand-btn" onclick="toggleCase('${c.id}',this)" title="Xem mô tả"><i class="ph ph-caret-down"></i></button>
+            <div style="display:flex; flex-direction:column; gap:6px; align-items:center;">
+              <button class="case-expand-btn" onclick="toggleCase('${c.id}',this)" title="Xem mô tả"><i class="ph ph-caret-down"></i></button>
+              ${typeof bmBtnHtml === 'function' ? bmBtnHtml(c.id) : ''}
+            </div>
           </div>
         </div>
         <div class="case-desc" id="cd-${c.id}">
@@ -2718,6 +2800,7 @@ function goDetail(lvId, sfId, caseId){
       switchTab('dien-bien');
   }
 
+  if(typeof renderDetailExtras === 'function') renderDetailExtras(cas);
   document.getElementById('pagination-bar').classList.remove('visible');
   showPage('page-detail');
   updateRoute({ view: 'detail', lv: state.curLV ? state.curLV.id : '', sf: actualSfId, caseId: cas.id });
@@ -4833,6 +4916,7 @@ async function initFirebase() {
 }
 setTimeout(()=>{ initFirebase(); }, 100);
 </script>
+
 <script id="dcsl-intro-script">
 /* ===== DCSL-INTRO-JS START ===== */
 (function(){
@@ -4887,6 +4971,209 @@ setTimeout(()=>{ initFirebase(); }, 100);
   }
 })();
 /* ===== DCSL-INTRO-JS END ===== */
+</script>
+<script id="dcsl-acct-script">
+/* ===== DCSL-ACCT-JS START (tài khoản + bookmark đồng bộ) ===== */
+
+/* >>>>>>>>>> CẤU HÌNH FIREBASE — DÁN CỦA BẠN VÀO ĐÂY <<<<<<<<<<
+   Lấy tại: console.firebase.google.com -> Project settings -> General
+   -> Your apps (Web app) -> SDK setup and configuration -> Config.
+   Khi chưa điền (để trống như hiện tại): nút Đăng nhập ẩn, bookmark lưu theo máy. */
+const DCSL_FIREBASE_CONFIG = {
+  /* apiKey: "AIzaSyDU3nJn7RX_LkQhk_yCndGb7qrbDcAiVZg",
+     authDomain: "dau-chien-thang-luat.firebaseapp.com",
+     projectId: "dau-chien-thang-luat",
+     storageBucket: "dau-chien-thang-luat.firebasestorage.app",
+     messagingSenderId: "303147004714",
+     appId: "1:303147004714:web:4f4bb0176e503b7cc92453" */
+};
+
+(function(){
+
+/* ---------- BOOKMARK (localStorage + đồng bộ đám mây khi đăng nhập) ---------- */
+window.BOOKMARKS = new Set(function(){ try { return JSON.parse(localStorage.getItem('dcsl_bookmarks') || '[]'); } catch(e){ return []; } }());
+function bmSaveLocal(){ try { localStorage.setItem('dcsl_bookmarks', JSON.stringify(Array.from(BOOKMARKS))); } catch(e){} }
+window.bmBtnHtml = function(id, extraClass){
+  var on = BOOKMARKS.has(id);
+  return '<button class="' + (extraClass || 'case-expand-btn') + ' bm-btn' + (on ? ' bm-on' : '') + '" data-bm-id="' + id + '" onclick="toggleBookmark(\'' + id + '\', this, event)" title="' + t(on ? 'bmRemove' : 'bmAdd') + '"><i class="ph ' + (on ? 'ph-bookmark-simple-fill' : 'ph-bookmark-simple') + '"></i></button>';
+};
+function updateBmBtn(btn){
+  var on = BOOKMARKS.has(btn.getAttribute('data-bm-id'));
+  btn.classList.toggle('bm-on', on);
+  btn.innerHTML = '<i class="ph ' + (on ? 'ph-bookmark-simple-fill' : 'ph-bookmark-simple') + '"></i>';
+  btn.title = t(on ? 'bmRemove' : 'bmAdd');
+}
+window.toggleBookmark = function(id, btn, ev){
+  if(ev){ ev.stopPropagation(); ev.preventDefault(); }
+  if(BOOKMARKS.has(id)) BOOKMARKS.delete(id); else BOOKMARKS.add(id);
+  bmSaveLocal(); bmCloudSave();
+  document.querySelectorAll('[data-bm-id="' + id + '"]').forEach(updateBmBtn);
+  if(state.viewBookmarks) renderBookmarksList();
+};
+function allCasesFlat(){ var out = []; for(var k in CASES_DATA){ if(Array.isArray(CASES_DATA[k])) out.push.apply(out, CASES_DATA[k]); } return out; }
+window.renderBookmarksList = function(){
+  var tb = document.getElementById('cases-admin-toolbar'); if(tb){ tb.classList.remove('visible'); tb.innerHTML = ''; }
+  ['cases-bc-lv','cases-sep-1','cases-sep-2'].forEach(function(id){ var el = document.getElementById(id); if(el) el.style.display = 'none'; });
+  var label = t('bookmarksTitle');
+  var bcSf = document.getElementById('cases-bc-sf'); if(bcSf) bcSf.textContent = label;
+  var titleEl = document.getElementById('cases-title'); if(titleEl) titleEl.textContent = label;
+  var list = document.getElementById('cases-list');
+  var saved = allCasesFlat().filter(function(c){ return BOOKMARKS.has(c.id); });
+  var syncNote = '<div class="acct-note" style="margin-bottom:14px;">' + t(ACCT.user ? 'acctSyncNote' : 'acctLocalNote') + '</div>';
+  if(!saved.length){
+    list.innerHTML = syncNote + '<div class="empty-history"><i class="ph ph-bookmark-simple" style="font-size:2rem; margin-bottom:10px;"></i><br>' + t('bookmarksEmpty') + '</div>';
+    return;
+  }
+  list.innerHTML = syncNote + saved.map(function(c){
+    var lvName = (getLVById(c.lvId) ? getLVDisplayName(getLVById(c.lvId)) : (c.lvName || ''));
+    var title = getPrimaryTextLine(getCaseFieldText(c, 'ten'));
+    return '<div class="bm-list-item">' +
+      '<div class="bm-list-main"><div class="bm-list-meta">' + escapeHtmlText(lvName) + '</div>' +
+      '<div class="bm-list-title" onclick="goDetail(null,null,\'' + c.id + '\')">' + title + '</div></div>' +
+      bmBtnHtml(c.id, 'bm-detail') + '</div>';
+  }).join('');
+};
+window.goBookmarks = function(){
+  if(typeof closeSidebar === 'function') closeSidebar();
+  state.viewBookmarks = true; state.searchQuery = ''; state.curSF = null; state.curCase = null; state.curPage = 1;
+  renderCasesList(); showPage('page-cases');
+  var pg = document.getElementById('pagination-bar'); if(pg) pg.classList.remove('visible');
+};
+['goCasesList','showSearchResultsPage','goSubfields','goHome','goThue','goSmartSearch'].forEach(function(fn){
+  var orig = window[fn]; if(typeof orig !== 'function') return;
+  window[fn] = function(){ state.viewBookmarks = false; return orig.apply(this, arguments); };
+});
+window.renderDetailExtras = function(cas){
+  var stars = document.getElementById('case-detail-stars');
+  if(stars && !stars.querySelector('.bm-btn')) stars.insertAdjacentHTML('beforeend', bmBtnHtml(cas.id, 'bm-detail'));
+};
+
+/* ---------- TÀI KHOẢN (Firebase Auth + Firestore) ---------- */
+window.ACCT = { auth:null, db:null, user:null, mods:null, enabled:false };
+function acctConfigured(){ return DCSL_FIREBASE_CONFIG && DCSL_FIREBASE_CONFIG.apiKey; }
+window.updateAcctUI = function(){
+  var btn = document.getElementById('acct-btn'); if(!btn) return;
+  if(!acctConfigured()){ btn.classList.remove('acct-visible'); return; }
+  btn.classList.add('acct-visible');
+  if(ACCT.user){
+    var ch = (ACCT.user.email || '?').charAt(0).toUpperCase();
+    btn.classList.add('acct-in');
+    btn.innerHTML = '<span class="acct-avatar">' + ch + '</span><span class="acct-label">' + t('acctTitle') + '</span>';
+  } else {
+    btn.classList.remove('acct-in');
+    btn.innerHTML = '<i class="ph ph-user-circle"></i><span class="acct-label">' + t('acctLogin') + '</span>';
+  }
+};
+async function acctInit(){
+  updateAcctUI();
+  if(!acctConfigured()) return;
+  try {
+    var appMod = await import('https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js');
+    var authMod = await import('https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js');
+    var fsMod = await import('https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js');
+    var app = appMod.initializeApp(DCSL_FIREBASE_CONFIG, 'dcsl-user');
+    ACCT.auth = authMod.getAuth(app); ACCT.db = fsMod.getFirestore(app); ACCT.mods = { auth: authMod, fs: fsMod }; ACCT.enabled = true;
+    authMod.onAuthStateChanged(ACCT.auth, function(u){
+      ACCT.user = u; updateAcctUI();
+      if(u) bmSyncOnLogin();
+    });
+  } catch(e){ if(window.console) console.warn('Firebase init:', e); }
+}
+async function bmSyncOnLogin(){
+  if(!ACCT.user || !ACCT.db) return;
+  try {
+    var fsm = ACCT.mods.fs;
+    var ref = fsm.doc(ACCT.db, 'bookmarks', ACCT.user.uid);
+    var snap = await fsm.getDoc(ref);
+    var cloudIds = (snap.exists() && Array.isArray(snap.data().ids)) ? snap.data().ids : [];
+    cloudIds.forEach(function(id){ BOOKMARKS.add(id); }); /* hợp nhất: máy + đám mây */
+    bmSaveLocal();
+    await fsm.setDoc(ref, { ids: Array.from(BOOKMARKS), updatedAt: new Date().toISOString() });
+    if(state.viewBookmarks) renderBookmarksList();
+    document.querySelectorAll('[data-bm-id]').forEach(updateBmBtn);
+  } catch(e){ if(window.console) console.warn('Bookmark sync:', e); }
+}
+function bmCloudSave(){
+  if(!ACCT.user || !ACCT.db) return;
+  try {
+    var fsm = ACCT.mods.fs;
+    fsm.setDoc(fsm.doc(ACCT.db, 'bookmarks', ACCT.user.uid), { ids: Array.from(BOOKMARKS), updatedAt: new Date().toISOString() });
+  } catch(e){}
+}
+function acctErrMsg(e){
+  var code = (e && e.code) || '';
+  var vi = {
+    'auth/invalid-email': 'Email không hợp lệ.',
+    'auth/user-not-found': 'Email hoặc mật khẩu không đúng.',
+    'auth/wrong-password': 'Email hoặc mật khẩu không đúng.',
+    'auth/invalid-credential': 'Email hoặc mật khẩu không đúng.',
+    'auth/email-already-in-use': 'Email này đã được đăng ký. Hãy đăng nhập.',
+    'auth/weak-password': 'Mật khẩu quá yếu (tối thiểu 6 ký tự).',
+    'auth/too-many-requests': 'Quá nhiều lần thử — đợi vài phút rồi thử lại.',
+    'auth/network-request-failed': 'Lỗi mạng — kiểm tra kết nối.',
+    'auth/operation-not-allowed': 'Chưa bật Email/Password trong Firebase Console (Authentication -> Sign-in method).',
+    'auth/missing-password': 'Vui lòng nhập mật khẩu.'
+  };
+  return vi[code] || ('Lỗi: ' + (code || e && e.message || e));
+}
+function acctFormHtml(mode){
+  var isReg = mode === 'register';
+  return '<div class="acct-form">' +
+    '<input type="email" id="acct-email" class="admin-input" placeholder="Email" autocomplete="email">' +
+    '<input type="password" id="acct-pass" class="admin-input" placeholder="' + t('acctPassword') + '" autocomplete="' + (isReg ? 'new-password' : 'current-password') + '">' +
+    '<div class="acct-error" id="acct-error"></div>' +
+    '<button class="acct-primary" onclick="acctSubmit(\'' + mode + '\')">' + t(isReg ? 'acctRegister' : 'acctLogin') + '</button>' +
+    '<div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px;">' +
+      '<button class="acct-link" onclick="openAccountModal(\'' + (isReg ? 'login' : 'register') + '\')">' + t(isReg ? 'acctHasAcct' : 'acctNoAcct') + '</button>' +
+      (isReg ? '' : '<button class="acct-link" onclick="acctReset()">' + t('acctForgot') + '</button>') +
+    '</div>' +
+    '<div class="acct-note">' + t('acctSyncNote') + '</div>' +
+  '</div>';
+}
+window.openAccountModal = function(mode){
+  if(typeof closeSidebar === 'function') closeSidebar();
+  var title = document.getElementById('modal-title'), body = document.getElementById('modal-body');
+  if(!title || !body) return;
+  if(ACCT.user){
+    var em = ACCT.user.email || '';
+    title.innerHTML = '<i class="ph ph-user-circle"></i> ' + t('acctTitle');
+    body.innerHTML = '<div class="acct-user-box"><div class="acct-user-avatar">' + em.charAt(0).toUpperCase() + '</div>' +
+      '<div style="min-width:0;"><div style="font-weight:600; color:var(--navy); word-break:break-all;">' + escapeHtmlText(em) + '</div>' +
+      '<div class="acct-note">' + t('acctSyncNote') + '</div></div></div>' +
+      '<button class="acct-primary" style="width:100%;" onclick="acctLogout()">' + t('acctLogout') + '</button>';
+  } else {
+    title.innerHTML = '<i class="ph ph-user-circle"></i> ' + t(mode === 'register' ? 'acctRegister' : 'acctLogin');
+    body.innerHTML = acctFormHtml(mode === 'register' ? 'register' : 'login');
+  }
+  document.getElementById('info-modal').classList.add('open');
+};
+window.acctSubmit = async function(mode){
+  var errEl = document.getElementById('acct-error');
+  var email = (document.getElementById('acct-email') || {}).value || '';
+  var pass = (document.getElementById('acct-pass') || {}).value || '';
+  if(!email.trim() || !pass){ if(errEl) errEl.textContent = t('acctFillBoth'); return; }
+  try {
+    if(mode === 'register') await ACCT.mods.auth.createUserWithEmailAndPassword(ACCT.auth, email.trim(), pass);
+    else await ACCT.mods.auth.signInWithEmailAndPassword(ACCT.auth, email.trim(), pass);
+    closeModal();
+    showAlert(t('acctWelcome'));
+  } catch(e){ if(errEl) errEl.textContent = acctErrMsg(e); }
+};
+window.acctReset = async function(){
+  var errEl = document.getElementById('acct-error');
+  var email = (document.getElementById('acct-email') || {}).value || '';
+  if(!email.trim()){ if(errEl) errEl.textContent = t('acctEnterEmail'); return; }
+  try { await ACCT.mods.auth.sendPasswordResetEmail(ACCT.auth, email.trim()); if(errEl){ errEl.style.color = 'var(--navy)'; errEl.textContent = t('acctResetSent'); } }
+  catch(e){ if(errEl) errEl.textContent = acctErrMsg(e); }
+};
+window.acctLogout = async function(){
+  try { await ACCT.mods.auth.signOut(ACCT.auth); } catch(e){}
+  closeModal();
+};
+acctInit();
+
+})();
+/* ===== DCSL-ACCT-JS END ===== */
 </script>
 </body>
 </html>
