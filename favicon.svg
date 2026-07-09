@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <!-- Favicon Đấu Chiến Thắng Luật — cán cân công lý trắng trên nền navy -->
+  <rect width="96" height="96" rx="20" fill="#152238"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" transform="translate(10.8,17) scale(0.62)">
+    <circle cx="60" cy="14" r="4"/>
+    <line x1="60" y1="18" x2="60" y2="84"/>
+    <line x1="26" y1="30" x2="94" y2="30"/>
+    <line x1="26" y1="30" x2="12" y2="56"/>
+    <line x1="26" y1="30" x2="40" y2="56"/>
+    <line x1="12" y1="56" x2="40" y2="56"/>
+    <path d="M12 56 A14 14 0 0 0 40 56"/>
+    <line x1="94" y1="30" x2="80" y2="56"/>
+    <line x1="94" y1="30" x2="108" y2="56"/>
+    <line x1="80" y1="56" x2="108" y2="56"/>
+    <path d="M80 56 A14 14 0 0 0 108 56"/>
+    <line x1="46" y1="84" x2="74" y2="84"/>
+    <line x1="40" y1="92" x2="80" y2="92"/>
+  </g>
+</svg>
