@@ -3,6 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G7967D7CKE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G7967D7CKE');
+</script>
 <meta name="description" content="Đấu Chiến Thắng Luật - Thư viện bản án, án lệ, văn bản pháp luật và giải đáp nghiệp vụ theo 7 lĩnh vực: Hình sự, Dân sự, Kinh doanh - Thương mại, Lao động, Hành chính, Đất đai, Doanh nghiệp. Tra cứu miễn phí, trích dẫn điều luật tự động.">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
 <meta property="og:site_name" content="Đấu Chiến Thắng Luật.com">
@@ -626,6 +635,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
             <li id="smart-guide-1">Nhập <strong>từ khóa</strong> hoặc <strong>tình huống pháp lý</strong> cụ thể (VD: <em>"chia di sản thừa kế không có di chúc"</em>).</li>
             <li id="smart-guide-2">Hệ thống sẽ tự động quét và trả về kết quả chứa chính xác các cụm từ này, đảm bảo độ chính xác cao nhất.</li>
             <li id="smart-guide-3">Có thể kết hợp nhiều tình tiết để hệ thống tự động tìm kiếm các án lệ, bản án tương đồng.</li>
+            <li id="smart-guide-4">Mặc định kết quả chỉ gồm <strong>vụ án</strong> (án lệ, bản án, thông báo rút kinh nghiệm...). Muốn tìm cả <strong>văn bản pháp luật</strong>, hãy nhắc đến "văn bản pháp luật", "nghị định", "thông tư" hoặc "nghị quyết" trong câu tìm kiếm.</li>
           </ul>
         </div>
       </div>
@@ -1480,6 +1490,7 @@ const UI_TEXT = {
     guide1: 'Nhập <strong>từ khóa</strong> hoặc <strong>tình huống pháp lý</strong> cụ thể (VD: <em>"chia di sản thừa kế không có di chúc"</em>).',
     guide2: 'Hệ thống sẽ tự động quét và trả về kết quả chứa chính xác các cụm từ này, đảm bảo độ chính xác cao nhất.',
     guide3: 'Có thể kết hợp nhiều tình tiết để hệ thống tự động tìm kiếm các án lệ, bản án tương đồng.',
+    guide4: 'Mặc định kết quả chỉ gồm <strong>vụ án</strong> (án lệ, bản án, thông báo rút kinh nghiệm...). Muốn tìm cả <strong>văn bản pháp luật</strong>, hãy nhắc đến "văn bản pháp luật", "nghị định", "thông tư" hoặc "nghị quyết" trong câu tìm kiếm.',
     thueTaxCounsel: 'Tư vấn Thuế',
     thueAIBadge: '✦ Tư vấn thông minh',
     thueGuideTitle: 'Hướng dẫn sử dụng',
@@ -1577,6 +1588,7 @@ const UI_TEXT = {
     guide1: 'Enter specific <strong>keywords</strong> or a <strong>legal situation</strong> (for example: <em>"inheritance division without a will"</em>).',
     guide2: 'The system scans the library and returns closely matching results with higher precision.',
     guide3: 'You can combine multiple facts so the system can automatically find similar precedents and judgments.',
+    guide4: 'By default, results only include <strong>cases</strong> (precedents, judgments, experience-review notices...). To also search <strong>legal documents</strong>, mention "legal document", "decree", "circular" or "resolution" in your query.',
     thueTaxCounsel: 'Tax Counsel',
     thueAIBadge: '✦ Smart Counsel',
     thueGuideTitle: 'How to use',
@@ -1684,6 +1696,7 @@ function applyStaticTranslations() {
   const smartGuide1 = document.getElementById('smart-guide-1');
   const smartGuide2 = document.getElementById('smart-guide-2');
   const smartGuide3 = document.getElementById('smart-guide-3');
+  const smartGuide4 = document.getElementById('smart-guide-4');
   if(heroTitle) heroTitle.innerHTML = t('heroTitle');
   if(heroDesc) heroDesc.textContent = t('heroDesc');
   const statLabels = document.querySelectorAll('.hero-stat-lbl');
@@ -1723,6 +1736,7 @@ function applyStaticTranslations() {
   if(smartGuide1) smartGuide1.innerHTML = t('guide1');
   if(smartGuide2) smartGuide2.innerHTML = t('guide2');
   if(smartGuide3) smartGuide3.innerHTML = t('guide3');
+  if(smartGuide4) smartGuide4.innerHTML = t('guide4');
   // Tax page translations
   const thuePageTitle = document.getElementById('thue-page-title');
   const thueBreadcrumb = document.getElementById('thue-breadcrumb-text');
@@ -2490,7 +2504,41 @@ const SEARCH_SYNONYMS = {
   'sa thai': ['don phuong cham dut', 'cham dut hop dong lao dong', 'mat viec', 'cho thoi viec', 'dismiss', 'terminate', 'fired'],
   'giam doc tham': ['tai tham', 'huy ban an', 'xem xet lai ban an', 'cassation', 'retrial', 'review'],
   'phuc tham': ['toa phuc tham', 'khang cao', 'xet xu phuc tham', 'appeal', 'court of appeal'],
-  'quyen su dung dat': ['qsdd', 'so do', 'giay red', 'giay hong', 'land use rights', 'land certificate']
+  'quyen su dung dat': ['qsdd', 'so do', 'giay red', 'giay hong', 'land use rights', 'land certificate'],
+  'dat coc': ['tien dat coc', 'tien coc', 'phat coc', 'boi thuong tien coc', 'mat coc', 'deposit'],
+  'vo hieu': ['hop dong vo hieu', 'giao dich vo hieu', 'tuyen bo vo hieu', 'giao dich gia tao', 'void contract', 'invalid'],
+  'gia tao': ['giao dich gia tao', 'che giau giao dich', 'hop dong gia tao', 'sham transaction'],
+  'lua dao': ['lua dao chiem doat tai san', 'chiem doat tai san', 'gian doi', 'fraud', 'swindle'],
+  'lam dung tin nhiem': ['lam dung tin nhiem chiem doat tai san', 'chiem doat', 'breach of trust'],
+  'trom cap': ['trom cap tai san', 'chiem doat tai san', 'theft', 'stealing'],
+  'giet nguoi': ['tuoc doat tinh mang', 'hanh vi giet', 'murder', 'homicide'],
+  'gay thuong tich': ['co y gay thuong tich', 'ty le thuong tat', 'ton hai suc khoe', 'assault', 'injury'],
+  'ma tuy': ['tang tru trai phep chat ma tuy', 'mua ban trai phep chat ma tuy', 'van chuyen ma tuy', 'heroin', 'drug'],
+  'danh bac': ['to chuc danh bac', 'ca do', 'so de', 'gambling'],
+  'tai nan giao thong': ['vi pham quy dinh ve tham gia giao thong', 'dieu khien phuong tien giao thong', 'traffic accident'],
+  'cho vay lai nang': ['lai nang trong giao dich dan su', 'lai suat cao', 'tin dung den', 'usury', 'loan shark'],
+  'nuoi con': ['quyen nuoi con', 'cap duong', 'truc tiep nuoi duong', 'giao con', 'custody', 'child support'],
+  'cap duong': ['tien cap duong', 'nghia vu cap duong', 'nuoi con', 'child support', 'alimony'],
+  'tang cho': ['hop dong tang cho', 'tang cho quyen su dung dat', 'tang cho co dieu kien', 'gift', 'donation'],
+  'the chap': ['tai san bao dam', 'the chap quyen su dung dat', 'xu ly tai san the chap', 'mortgage', 'collateral'],
+  'bao lanh': ['nghia vu bao lanh', 'nguoi bao lanh', 'guarantee', 'surety'],
+  'ngan hang': ['hop dong tin dung', 'khoan vay', 'no xau', 'bank', 'credit agreement'],
+  'thu hoi dat': ['boi thuong ho tro tai dinh cu', 'giai phong mat bang', 'cuong che thu hoi dat', 'land recovery', 'land acquisition'],
+  'ranh gioi': ['ranh gioi dat', 'lan chiem dat', 'moc gioi', 'boundary', 'encroachment'],
+  'loi di': ['loi di chung', 'quyen ve loi di qua', 'ngo di chung', 'right of way', 'easement'],
+  'xu phat hanh chinh': ['quyet dinh xu phat', 'vi pham hanh chinh', 'administrative sanction', 'administrative fine'],
+  'quyet dinh hanh chinh': ['khieu kien hanh chinh', 'huy quyet dinh hanh chinh', 'hanh vi hanh chinh', 'administrative decision'],
+  'dau gia': ['ban dau gia', 'dau gia tai san', 'huy ket qua dau gia', 'auction'],
+  'thi hanh an': ['cuong che thi hanh an', 'chap hanh vien', 'ke bien tai san', 'judgment enforcement'],
+  'pha san': ['mo thu tuc pha san', 'mat kha nang thanh toan', 'bankruptcy', 'insolvency'],
+  'gop von': ['hop dong gop von', 'co phan', 'co dong', 'phan von gop', 'capital contribution', 'shareholder'],
+  'phat vi pham': ['phat vi pham hop dong', 'tien phat', 'penalty', 'liquidated damages'],
+  'cham tra': ['lai cham tra', 'cham thanh toan', 'no qua han', 'late payment', 'overdue'],
+  'bao hiem': ['hop dong bao hiem', 'tien bao hiem', 'boi thuong bao hiem', 'insurance'],
+  'choi hui': ['giat hui', 'day hui', 'hui ho', 'gop hui', 'tontine'],
+  'nguoi thu ba ngay tinh': ['ngay tinh', 'bao ve nguoi thu ba', 'good faith third party'],
+  'don phuong cham dut': ['don phuong cham dut hop dong', 'cham dut truoc thoi han', 'unilateral termination'],
+  'mua ban hang hoa': ['hop dong mua ban hang hoa', 'giao hang', 'thanh toan tien hang', 'sale of goods']
 };
 
 const SEARCH_CONCEPTS = [
@@ -2506,11 +2554,44 @@ const SEARCH_CONCEPTS = [
   { id: 'employment', weight: 440, aliases: ['hop dong lao dong', 'sa thai', 'tien luong', 'bao hiem xa hoi', 'nghi viec', 'thoi viec', 'dismissal', 'wrongful termination'] },
   { id: 'real-estate', weight: 460, aliases: ['nha dat', 'bat dong san', 'can ho', 'nha o', 'mua ban nha', 'real estate', 'property purchase'] },
   { id: 'debt', weight: 440, aliases: ['cong no', 'vay no', 'hop dong vay', 'doi no', 'tra no', 'chu no', 'debt', 'loan', 'creditor'] },
-  { id: 'cassation', weight: 600, aliases: ['giam doc tham', 'tai tham', 'huy ban an', 'khang nghi giam doc tham', 'cassation', 'retrial', 'review judgment'] }
+  { id: 'cassation', weight: 600, aliases: ['giam doc tham', 'tai tham', 'huy ban an', 'khang nghi giam doc tham', 'cassation', 'retrial', 'review judgment'] },
+  { id: 'deposit', weight: 520, aliases: ['dat coc', 'tien coc', 'phat coc', 'mat coc', 'deposit'] },
+  { id: 'void-contract', weight: 560, aliases: ['vo hieu', 'hop dong vo hieu', 'giao dich vo hieu', 'giao dich gia tao', 'void contract'] },
+  { id: 'fraud', weight: 520, aliases: ['lua dao', 'chiem doat tai san', 'lam dung tin nhiem', 'fraud'] },
+  { id: 'assault', weight: 520, aliases: ['co y gay thuong tich', 'gay thuong tich', 'ty le thuong tat', 'assault'] },
+  { id: 'murder', weight: 540, aliases: ['giet nguoi', 'tuoc doat tinh mang', 'murder'] },
+  { id: 'theft', weight: 500, aliases: ['trom cap', 'cuop tai san', 'cuop giat', 'theft', 'robbery'] },
+  { id: 'drug', weight: 520, aliases: ['ma tuy', 'heroin', 'chat gay nghien', 'drug trafficking'] },
+  { id: 'gambling', weight: 500, aliases: ['danh bac', 'to chuc danh bac', 'ca do', 'so de', 'gambling'] },
+  { id: 'traffic', weight: 500, aliases: ['tai nan giao thong', 'vi pham quy dinh ve tham gia giao thong', 'traffic accident'] },
+  { id: 'usury', weight: 520, aliases: ['cho vay lai nang', 'lai nang', 'tin dung den', 'usury'] },
+  { id: 'custody', weight: 500, aliases: ['nuoi con', 'quyen nuoi con', 'cap duong', 'custody', 'child support'] },
+  { id: 'gift', weight: 480, aliases: ['tang cho', 'hop dong tang cho', 'tang cho co dieu kien', 'gift contract'] },
+  { id: 'mortgage', weight: 480, aliases: ['the chap', 'tai san bao dam', 'bao lanh', 'hop dong tin dung', 'mortgage', 'collateral'] },
+  { id: 'land-recovery', weight: 500, aliases: ['thu hoi dat', 'boi thuong ho tro tai dinh cu', 'giai phong mat bang', 'land recovery'] },
+  { id: 'boundary', weight: 500, aliases: ['ranh gioi dat', 'lan chiem', 'loi di chung', 'moc gioi', 'boundary dispute', 'right of way'] },
+  { id: 'admin-decision', weight: 480, aliases: ['quyet dinh hanh chinh', 'xu phat hanh chinh', 'khieu kien hanh chinh', 'hanh vi hanh chinh', 'administrative decision'] },
+  { id: 'auction', weight: 500, aliases: ['dau gia', 'ban dau gia', 'huy ket qua dau gia', 'auction'] },
+  { id: 'enforcement', weight: 480, aliases: ['thi hanh an', 'cuong che thi hanh an', 'ke bien', 'judgment enforcement'] },
+  { id: 'bankruptcy', weight: 500, aliases: ['pha san', 'mat kha nang thanh toan', 'bankruptcy'] },
+  { id: 'company-dispute', weight: 460, aliases: ['gop von', 'co dong', 'phan von gop', 'hop dong hop tac', 'shareholder dispute', 'capital contribution'] },
+  { id: 'contract-penalty', weight: 460, aliases: ['phat vi pham', 'lai cham tra', 'cham thanh toan', 'penalty', 'late payment'] },
+  { id: 'insurance', weight: 480, aliases: ['bao hiem', 'hop dong bao hiem', 'boi thuong bao hiem', 'insurance'] },
+  { id: 'hui', weight: 520, aliases: ['choi hui', 'giat hui', 'day hui', 'hui ho', 'tontine'] },
+  { id: 'goodfaith-third-party', weight: 560, aliases: ['nguoi thu ba ngay tinh', 'ngay tinh', 'good faith third party'] },
+  { id: 'sale-goods', weight: 440, aliases: ['mua ban hang hoa', 'hop dong mua ban hang hoa', 'sale of goods'] },
+  { id: 'unilateral-termination', weight: 500, aliases: ['don phuong cham dut', 'cham dut truoc thoi han', 'unilateral termination'] }
 ];
 
 function normalizeSearchText(text) {
   return removeAccents(String(text || '').replace(/<[^>]*>?/gm, ' ')).replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+// Chỉ trả về "Văn bản pháp luật" khi người dùng chủ động nhắc đến chúng trong câu tìm kiếm;
+// mặc định kết quả tra cứu tình huống chỉ gồm vụ án (án lệ, bản án, thông báo rút kinh nghiệm, giải đáp).
+const DOC_QUERY_TRIGGERS = ['van ban phap luat', 'van ban quy pham', 'van ban', 'nghi dinh', 'thong tu', 'nghi quyet', 'phap lenh', 'legal document', 'decree', 'circular'];
+function queryWantsLegalDocs(normalizedQuery) {
+  return DOC_QUERY_TRIGGERS.some(trigger => normalizedQuery.includes(trigger));
 }
 
 function buildQueryPhrases(words) {
@@ -2539,10 +2620,10 @@ function getSearchTerms(query) {
   });
   const concepts = SEARCH_CONCEPTS.filter(concept => concept.aliases.some(alias => normalized.includes(normalizeSearchText(alias))));
   concepts.forEach(concept => concept.aliases.forEach(alias => terms.add(normalizeSearchText(alias))));
-  return { normalized, rawWords, words, terms: [...terms].filter(Boolean), queryPhrases: buildQueryPhrases(rawWords), concepts };
+  return { normalized, rawWords, words, terms: [...terms].filter(Boolean), queryPhrases: buildQueryPhrases(rawWords), concepts, wantsDocs: queryWantsLegalDocs(normalized) };
 }
 
-function scoreCaseForQuery(caseObj, queryInfo) {
+function scoreCaseForQuery(caseObj, queryInfo, opts = {}) {
   const en = caseObj.translations && caseObj.translations.en ? caseObj.translations.en : {};
   const titleText = normalizeSearchText([caseObj.ten, en.ten].join(' '));
   const summaryText = normalizeSearchText([caseObj.mo_ta, en.mo_ta].join(' '));
@@ -2597,7 +2678,15 @@ function scoreCaseForQuery(caseObj, queryInfo) {
   } else if(!isValid) {
     isValid = score >= 320 && matched >= 2;
   }
-  return isValid ? { caseObj, score: score + Math.round(matchRatio * 1000) + conceptMatches * 350 + phraseMatches * 120, matched } : null;
+  if(!isValid && opts.relaxed) {
+    isValid = matched >= 2 || phraseMatches > 0 || conceptMatches > 0;
+  }
+  if(!isValid) return null;
+  let finalScore = score + Math.round(matchRatio * 1000) + conceptMatches * 350 + phraseMatches * 120;
+  // Ưu tiên nguồn "vụ án" thực thụ khi xếp hạng kết quả tra cứu tình huống
+  if(caseObj.sfId === 'an-le') finalScore += 150;
+  else if(caseObj.sfId === 'tb-rut-kinh-nghiem') finalScore += 100;
+  return { caseObj, score: finalScore, matched };
 }
 
 function goSmartSearch() {
@@ -2801,14 +2890,21 @@ function renderCasesList(){
   
   if(state.searchQuery) {
     const queryInfo = getSearchTerms(state.searchQuery);
-    let scoredCases = [];
-    for(const bucketKey in CASES_DATA) {
-      CASES_DATA[bucketKey].forEach(c => {
-        const scored = scoreCaseForQuery(c, queryInfo);
-        if (scored) scoredCases.push({ cas: scored.caseObj, score: scored.score });
-      });
-    }
-    
+    const collectScored = (relaxed) => {
+      const results = [];
+      for(const bucketKey in CASES_DATA) {
+        CASES_DATA[bucketKey].forEach(c => {
+          // Chỉ đưa "Văn bản pháp luật" vào kết quả khi câu tìm kiếm nhắc đến văn bản/nghị định/thông tư/nghị quyết
+          if(!queryInfo.wantsDocs && c.sfId === 'van-ban-phap-luat') return;
+          const scored = scoreCaseForQuery(c, queryInfo, { relaxed });
+          if (scored) results.push({ cas: scored.caseObj, score: scored.score });
+        });
+      }
+      return results;
+    };
+    let scoredCases = collectScored(false);
+    if(!scoredCases.length) scoredCases = collectScored(true);
+
     scoredCases.sort((a,b) => b.score - a.score);
     cases = scoredCases.map(item => item.cas);
 
