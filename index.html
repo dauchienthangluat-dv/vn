@@ -46,7 +46,7 @@
   --gold: #FF9900;
   --gold-light: #FFB84D;
   --gold-rich: #F28C00;
-  --gold-dim: rgba(255, 153, 0, 0.10);
+  --gold-dim: rgba(255, 153, 0,0.10);
   --gold-border: #E8E2D6;
   --text: #1C2433;
   --text-sec: #465062;
@@ -379,7 +379,7 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 .timeline-desc { font-size: 0.9rem; color: var(--text-sec); }
 
 .law-link { color: var(--navy); border-bottom: 1px dashed var(--gold-rich); cursor: pointer; font-weight: 500; transition: all 0.2s ease; background: var(--gold-dim); padding: 0 4px; border-radius: 2px;}
-.law-link:hover { color: var(--gold-rich); background: rgba(255, 153, 0, 0.15); border-bottom-style: solid; }
+.law-link:hover { color: var(--gold-rich); background: rgba(255, 153, 0,0.15); border-bottom-style: solid; }
 
 .overlay-modal{ position:fixed;inset:0;z-index:300;background:rgba(27, 47, 82, 0.7); display:none;align-items:center;justify-content:center;padding:20px; backdrop-filter:blur(4px); }
 .overlay-modal.open{display:flex;}
@@ -648,12 +648,12 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
     </div>
     <div class="hero-chips">
       <span class="hero-chip-label" id="hero-chip-label">Tìm nhanh:</span>
-      <button class="hero-chip" onclick="showSearchResultsPage('án lệ', 1)">Án lệ</button>
-      <button class="hero-chip" onclick="showSearchResultsPage('thừa kế', 1)">Thừa kế</button>
-      <button class="hero-chip" onclick="showSearchResultsPage('đất đai', 1)">Đất đai</button>
-      <button class="hero-chip" onclick="showSearchResultsPage('hợp đồng', 1)">Hợp đồng</button>
-      <button class="hero-chip" onclick="showSearchResultsPage('lao động', 1)">Lao động</button>
-      <button class="hero-chip" onclick="showSearchResultsPage('ly hôn', 1)">Ly hôn</button>
+      <button class="hero-chip" id="hero-chip-1" onclick="showSearchResultsPage('án lệ', 1)">Án lệ</button>
+      <button class="hero-chip" id="hero-chip-2" onclick="showSearchResultsPage('thừa kế', 1)">Thừa kế</button>
+      <button class="hero-chip" id="hero-chip-3" onclick="showSearchResultsPage('đất đai', 1)">Đất đai</button>
+      <button class="hero-chip" id="hero-chip-4" onclick="showSearchResultsPage('hợp đồng', 1)">Hợp đồng</button>
+      <button class="hero-chip" id="hero-chip-5" onclick="showSearchResultsPage('lao động', 1)">Lao động</button>
+      <button class="hero-chip" id="hero-chip-6" onclick="showSearchResultsPage('ly hôn', 1)">Ly hôn</button>
     </div>
     <div class="hero-feats">
       <div class="hero-feat"><div class="hero-feat-icon"><i class="ph ph-seal-check"></i></div><div class="hero-feat-name" id="hero-feat-1">Chính xác</div><div class="hero-feat-desc" id="hero-feat-1d">Dữ liệu được kiểm chứng</div></div>
@@ -665,7 +665,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
       <div class="hero-stat"><span class="hero-stat-num" id="stat-fields">0</span><span class="hero-stat-lbl">Lĩnh vực</span></div>
       <div class="hero-stat"><span class="hero-stat-num" id="stat-subfields">0+</span><span class="hero-stat-lbl">Chủ đề</span></div>
     </div>
-    <button class="hero-scroll-down" onclick="document.getElementById('desktop-wrapper').scrollIntoView({behavior:'smooth'})"><span id="hero-scroll-label">Khám phá thư viện</span><i class="ph ph-caret-down"></i></button>
+    <button class="hero-scroll-down" onclick="heroExploreGo()"><span id="hero-scroll-label">Khám phá thư viện</span><i class="ph ph-caret-down"></i></button>
   </div>
 </section>
 
@@ -1471,12 +1471,12 @@ const RECENT_THUMBS = [
   'https://images.unsplash.com/photo-1589578527966-fdac0f44566c?w=600&h=400&fit=crop&q=80',
   'https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?w=600&h=400&fit=crop&q=80',
   'https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=600&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1591291621164-2c6367723315?w=600&h=400&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1423592707957-3b212afa6733?w=600&h=400&fit=crop&q=80',
   'https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=600&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600&h=400&fit=crop&q=80', 
-  'https://images.unsplash.com/photo-1593115057322-e94b77572f20?w=600&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1618044733300-9472054094ee?w=600&h=400&fit=crop&q=80'
+  'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=600&h=400&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1568667256549-094345857637?w=600&h=400&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1453945619913-79ec89a82c51?w=600&h=400&fit=crop&q=80'
 ];
 
 let state = { curLV: null, curSF: null, curCase: null, curPage: 1, readHistory: [], filter: { f1:null, f2:null, f4:'' }, searchQuery: '', subQuery: '', uiLang: 'vi' };
@@ -1538,6 +1538,7 @@ const UI_TEXT = {
     heroFeat3: 'Đáng tin cậy', heroFeat3d: 'Bảo mật tuyệt đối',
     hnavCases: 'Bản án', hnavSearch: 'Tra cứu', hnavSaved: 'Đã lưu', hnavAbout: 'Giới thiệu',
     heroQuick: 'Tìm nhanh:', heroExplore: 'Khám phá thư viện',
+    heroChip1: 'Án lệ', heroChip2: 'Thừa kế', heroChip3: 'Đất đai', heroChip4: 'Hợp đồng', heroChip5: 'Lao động', heroChip6: 'Ly hôn',
     docs: 'Tài liệu',
     fields: 'Lĩnh vực',
     topics: 'Chủ đề',
@@ -1642,6 +1643,7 @@ const UI_TEXT = {
     heroFeat3: 'Reliable', heroFeat3d: 'Absolute security',
     hnavCases: 'Cases', hnavSearch: 'Search', hnavSaved: 'Saved', hnavAbout: 'About',
     heroQuick: 'Quick search:', heroExplore: 'Explore the library',
+    heroChip1: 'Precedents', heroChip2: 'Inheritance', heroChip3: 'Land', heroChip4: 'Contracts', heroChip5: 'Labor', heroChip6: 'Divorce',
     docs: 'Documents',
     fields: 'Fields',
     topics: 'Topics',
@@ -1799,7 +1801,7 @@ function applyStaticTranslations() {
   if(heroDesc) heroDesc.textContent = t('heroDesc');
   const heroSearchInput = document.getElementById('hero-search-input');
   if(heroSearchInput) heroSearchInput.placeholder = t('heroSearchPh');
-  [['hero-feat-1','heroFeat1'],['hero-feat-1d','heroFeat1d'],['hero-feat-2','heroFeat2'],['hero-feat-2d','heroFeat2d'],['hero-feat-3','heroFeat3'],['hero-feat-3d','heroFeat3d'],['hnav-cases','hnavCases'],['hnav-search','hnavSearch'],['hnav-saved','hnavSaved'],['hnav-about','hnavAbout'],['hero-chip-label','heroQuick'],['hero-scroll-label','heroExplore']].forEach(([id,key]) => {
+  [['hero-feat-1','heroFeat1'],['hero-feat-1d','heroFeat1d'],['hero-feat-2','heroFeat2'],['hero-feat-2d','heroFeat2d'],['hero-feat-3','heroFeat3'],['hero-feat-3d','heroFeat3d'],['hnav-cases','hnavCases'],['hnav-search','hnavSearch'],['hnav-saved','hnavSaved'],['hnav-about','hnavAbout'],['hero-chip-label','heroQuick'],['hero-scroll-label','heroExplore'],['hero-chip-1','heroChip1'],['hero-chip-2','heroChip2'],['hero-chip-3','heroChip3'],['hero-chip-4','heroChip4'],['hero-chip-5','heroChip5'],['hero-chip-6','heroChip6']].forEach(([id,key]) => {
     const el = document.getElementById(id);
     if(el) el.textContent = t(key);
   });
@@ -2814,6 +2816,15 @@ function heroSearchGo() {
   const query = el ? el.value.trim() : '';
   if(!query) { goSmartSearch(); return; }
   showSearchResultsPage(query, 1);
+}
+
+// Cuộn xuống đúng đầu vùng nội dung: 3 cột (Lọc tìm kiếm / Bạn đang quan tâm gì / Cập nhật
+// mới nhất) thẳng hàng ngay dưới header, tiêu đề không bị che
+function heroExploreGo() {
+  const wrapper = document.getElementById('desktop-wrapper');
+  if(!wrapper) return;
+  const y = wrapper.getBoundingClientRect().top + window.scrollY - 70;
+  window.scrollTo({ top: y, behavior: 'smooth' });
 }
 
 function canReorderCurrentCases() {
