@@ -95,6 +95,8 @@ body { top: 0 !important; }
   
   /* CĂN BẰNG 3 CỘT TUYỆT ĐỐI */
   #desktop-wrapper { max-width:1300px; display:grid; grid-template-columns: 280px 1fr 280px; column-gap: 30px; margin:0 auto; background:transparent; box-shadow:none; min-height:calc(100vh - 85px); padding-top:85px; padding-bottom: 40px; padding-left:20px; padding-right:20px; align-items:start; }
+  /* Trang chủ có hero full màn hình phía trên nên thu gọn khoảng đệm tới 3 cột (trang khác vẫn cần 85px để né header cố định) */
+  #hero-full.visible + #desktop-wrapper { padding-top:24px; min-height:calc(100vh - 24px); }
   #main-col { background:var(--surface); box-shadow:var(--shadow-sm); min-height:calc(100vh - 105px); max-width:none !important; order:2; border-radius:12px; border: 1px solid var(--gold-border); overflow: hidden; margin: 0;}
   #side-left { position: sticky; top: 85px; max-height: calc(100vh - 85px); background: transparent; backdrop-filter: none; opacity: 1; pointer-events: all; display: block; z-index: 10; order: 1; padding: 0; }
   #filter-panel { width: 100% !important; margin: 0; transform: none !important; border: 1px solid var(--gold-border); border-radius: var(--radius); background: var(--surface); padding: 20px !important; box-shadow: var(--shadow-sm);}
