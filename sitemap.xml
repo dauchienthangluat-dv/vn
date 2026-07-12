@@ -2,16 +2,169 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dauchienthangluat.com.vn/</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://dauchienthangluat.com.vn/?view=smart</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://dauchienthangluat.com.vn/?view=field&amp;lv=dan-su</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=field&amp;lv=hinh-su</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=field&amp;lv=hanh-chinh</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=field&amp;lv=dat-dai</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=field&amp;lv=kinh-doanh-thuong-mai</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=field&amp;lv=lao-dong</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dan-su&amp;sf=an-le</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=hinh-su&amp;sf=giai-dap-nghiep-vu</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dan-su&amp;sf=giai-dap-nghiep-vu</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=hanh-chinh&amp;sf=giai-dap-nghiep-vu</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dat-dai&amp;sf=van-ban-phap-luat</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=hinh-su&amp;sf=an-le</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=kinh-doanh-thuong-mai&amp;sf=an-le</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=hanh-chinh&amp;sf=an-le</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=lao-dong&amp;sf=an-le</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dan-su&amp;sf=tb-rut-kinh-nghiem</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=kinh-doanh-thuong-mai&amp;sf=van-ban-phap-luat</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=kinh-doanh-thuong-mai&amp;sf=tb-rut-kinh-nghiem</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=lao-dong&amp;sf=tb-rut-kinh-nghiem</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=lao-dong&amp;sf=van-ban-phap-luat</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=hanh-chinh&amp;sf=tb-rut-kinh-nghiem</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dat-dai&amp;sf=tb-rut-kinh-nghiem</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dat-dai&amp;sf=an-le</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=kinh-doanh-thuong-mai&amp;sf=hop-dong-thuong-mai</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dan-su&amp;sf=hop-dong-mua-ban-tai-san</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dan-su&amp;sf=giao-dich-dan-su</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -268,16 +421,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dauchienthangluat.com.vn/?view=field&amp;lv=hinh-su</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=hinh-su&amp;sf=giai-dap-nghiep-vu</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=hinh-su&amp;sf=giai-dap-nghiep-vu&amp;case=case-cong-van-250-hinh-su-3</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -308,11 +451,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dan-su&amp;sf=giai-dap-nghiep-vu</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=dan-su&amp;sf=giai-dap-nghiep-vu&amp;case=case-cong-van-1476-vksnd-1</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -326,7 +464,7 @@
   </url>
   <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=dan-su&amp;sf=giai-dap-nghiep-vu&amp;case=case-cong-van-163-tandtc-pc-nam-2024-dan-su-2</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -347,16 +485,6 @@
     <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dauchienthangluat.com.vn/?view=field&amp;lv=hanh-chinh</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=hanh-chinh&amp;sf=giai-dap-nghiep-vu</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=hanh-chinh&amp;sf=giai-dap-nghiep-vu&amp;case=case-cong-van-250-hanh-chinh-2</loc>
@@ -387,16 +515,6 @@
     <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dauchienthangluat.com.vn/?view=field&amp;lv=dat-dai</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dat-dai&amp;sf=van-ban-phap-luat</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=dat-dai&amp;sf=van-ban-phap-luat&amp;case=case-nghi-quyet-06-2025-19</loc>
@@ -505,11 +623,6 @@
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=hinh-su&amp;sf=an-le</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=hinh-su&amp;sf=an-le&amp;case=case-an-le-so-76-3-7</loc>
@@ -632,16 +745,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dauchienthangluat.com.vn/?view=field&amp;lv=kinh-doanh-thuong-mai</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=kinh-doanh-thuong-mai&amp;sf=an-le</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=kinh-doanh-thuong-mai&amp;sf=an-le&amp;case=case-an-le-so-87-2</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -696,11 +799,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=hanh-chinh&amp;sf=an-le</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=hanh-chinh&amp;sf=an-le&amp;case=case-an-le-so-90-1</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -725,16 +823,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dauchienthangluat.com.vn/?view=field&amp;lv=lao-dong</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=lao-dong&amp;sf=an-le</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=lao-dong&amp;sf=an-le&amp;case=case-an-le-so-70-2-6</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -745,11 +833,6 @@
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dan-su&amp;sf=tb-rut-kinh-nghiem</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=dan-su&amp;sf=tb-rut-kinh-nghiem&amp;case=case-tbao-rkn-24-2025-6</loc>
@@ -800,13 +883,20 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=kinh-doanh-thuong-mai&amp;sf=van-ban-phap-luat</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=kinh-doanh-thuong-mai&amp;sf=van-ban-phap-luat&amp;case=case-01-2019-1</loc>
     <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=kinh-doanh-thuong-mai&amp;sf=van-ban-phap-luat&amp;case=case-nghi-dinh-248-2026-1</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=kinh-doanh-thuong-mai&amp;sf=van-ban-phap-luat&amp;case=case-nghi-dinh-137-2026-3</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -831,6 +921,12 @@
   <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=kinh-doanh-thuong-mai&amp;sf=van-ban-phap-luat&amp;case=case-thong-tu-14-2026-25</loc>
     <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=kinh-doanh-thuong-mai&amp;sf=van-ban-phap-luat&amp;case=case-nghi-dinh-168-2025-2</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -985,11 +1081,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=kinh-doanh-thuong-mai&amp;sf=tb-rut-kinh-nghiem</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=kinh-doanh-thuong-mai&amp;sf=tb-rut-kinh-nghiem&amp;case=case-tb-rkn-so-154-2025-4</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -1026,11 +1117,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=lao-dong&amp;sf=tb-rut-kinh-nghiem</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=lao-dong&amp;sf=tb-rut-kinh-nghiem&amp;case=case-rkn-ld-317-8</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -1047,11 +1133,6 @@
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=lao-dong&amp;sf=van-ban-phap-luat</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=lao-dong&amp;sf=van-ban-phap-luat&amp;case=case-lgdnn-6</loc>
@@ -1132,31 +1213,16 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=hanh-chinh&amp;sf=tb-rut-kinh-nghiem</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=hanh-chinh&amp;sf=tb-rut-kinh-nghiem&amp;case=case-tbao-rkn-25-2025-7</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dat-dai&amp;sf=tb-rut-kinh-nghiem</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=dat-dai&amp;sf=tb-rut-kinh-nghiem&amp;case=case-tbao-rkn-25-2025-dat-dai-cai-kia-la-dan-su-5</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dat-dai&amp;sf=an-le</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=dat-dai&amp;sf=an-le&amp;case=case-an-le-so-89-1</loc>
@@ -1219,11 +1285,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=kinh-doanh-thuong-mai&amp;sf=hop-dong-thuong-mai</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=kinh-doanh-thuong-mai&amp;sf=hop-dong-thuong-mai&amp;case=case-trang-73-cot-ben-trai-file-kinh-doanh-thuong-mai-8</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -1260,20 +1321,10 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dan-su&amp;sf=hop-dong-mua-ban-tai-san</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=dan-su&amp;sf=hop-dong-mua-ban-tai-san&amp;case=case-hd-mbts-1-3</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dauchienthangluat.com.vn/?view=list&amp;lv=dan-su&amp;sf=giao-dich-dan-su</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dauchienthangluat.com.vn/?view=detail&amp;lv=dan-su&amp;sf=giao-dich-dan-su&amp;case=case-gdds-1-2</loc>

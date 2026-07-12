@@ -20,8 +20,8 @@
 <meta property="og:description" content="Đấu Chiến Thắng Luật - Thư viện bản án, án lệ, văn bản pháp luật và giải đáp nghiệp vụ theo 7 lĩnh vực: Hình sự, Dân sự, Kinh doanh - Thương mại, Lao động, Hành chính, Đất đai, Doanh nghiệp. Tra cứu miễn phí, trích dẫn điều luật tự động.">
 <meta name="twitter:card" content="summary_large_image">
 <!-- ===== DCSL-SEO START ===== -->
-<link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
-<link rel="apple-touch-icon" href="favicon.svg?v=2">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+<link rel="apple-touch-icon" href="favicon.svg?v=3">
 <meta name="keywords" content="đấu chiến thắng luật, dau chien thang luat, thư viện bản án, án lệ, tra cứu bản án, văn bản pháp luật, giải đáp nghiệp vụ, tra cứu pháp lý, tư vấn thuế">
 <meta property="og:url" content="https://dauchienthangluat.com.vn/">
 <meta property="og:image" content="https://dauchienthangluat.com.vn/favicon.svg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Đấu Chiến Thắng Luật","url":"https://dauchienthangluat.com.vn/","logo":"https://dauchienthangluat.com.vn/favicon.svg"}</script>
@@ -892,7 +892,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
       <div style="padding: 0 16px 4px;">
         <div class="thue-intro">
           <div class="thue-intro-title"><i class="ph ph-info"></i> <span id="thue-guide-title">Hướng dẫn sử dụng</span></div>
-          <p id="thue-guide-text">Nhập tình huống thuế của bạn kèm <strong>dữ liệu, con số cụ thể</strong>. Hệ thống sẽ phân tích <strong>từng bước</strong>: xác định loại thuế → phân loại dữ kiện → kiểm tra miễn thuế → kiểm tra giảm thuế → tính toán đáp số. Mỗi kết luận đều kèm <strong>căn cứ pháp lý chính xác</strong> theo Luật và Nghị định hiện hành 2025–2026.</p>
+          <p id="thue-guide-text">Nhập tình huống thuế của bạn kèm <strong>dữ liệu, con số cụ thể</strong> — hệ thống sẽ phân tích <strong>theo các bước cụ thể</strong> và đưa ra kết luận kèm <strong>căn cứ pháp lý mới nhất</strong>. Không chỉ tính toán, bạn còn có thể dùng để <strong>tra cứu thêm thông tin về pháp luật</strong>. <em>Mọi thông tin trên website mang tính chất tham khảo. Vui lòng liên hệ luật sư để được tư vấn chính xác cho trường hợp của bạn.</em></p>
         </div>
       </div>
 
@@ -1579,7 +1579,7 @@ const UI_TEXT = {
     thueTaxCounsel: 'Tư vấn Thuế',
     thueAIBadge: '✦ Tư vấn thông minh',
     thueGuideTitle: 'Hướng dẫn sử dụng',
-    thueGuideText: 'Nhập tình huống thuế của bạn kèm dữ liệu, con số cụ thể. Hệ thống sẽ phân tích từng bước: xác định loại thuế → phân loại dữ kiện → kiểm tra miễn thuế → kiểm tra giảm thuế → tính toán đáp số. Mỗi kết luận đều kèm căn cứ pháp lý chính xác theo Luật và Nghị định hiện hành 2025–2026.',
+    thueGuideText: 'Nhập tình huống thuế của bạn kèm <strong>dữ liệu, con số cụ thể</strong> — hệ thống sẽ phân tích <strong>theo các bước cụ thể</strong> và đưa ra kết luận kèm <strong>căn cứ pháp lý mới nhất</strong>. Không chỉ tính toán, bạn còn có thể dùng để <strong>tra cứu thêm thông tin về pháp luật</strong>. <em>Mọi thông tin trên website mang tính chất tham khảo. Vui lòng liên hệ luật sư để được tư vấn chính xác cho trường hợp của bạn.</em>',
     thueApiLabel: 'Cài đặt Gemini API Key',
     thueApiNote: '⚠️ API Key được lưu cục bộ trong trình duyệt, không gửi đi đâu ngoài Google Gemini API. Lấy key miễn phí tại aistudio.google.com. Không chia sẻ file này khi đang chứa API Key.',
     thueInputLabel: 'Mô tả tình huống và dữ liệu của bạn',
@@ -1684,7 +1684,7 @@ const UI_TEXT = {
     thueTaxCounsel: 'Tax Counsel',
     thueAIBadge: '✦ Smart Counsel',
     thueGuideTitle: 'How to use',
-    thueGuideText: 'Enter your tax situation with specific data and numbers. The system will analyze step by step: identify tax type → classify data → check exemptions → check reductions → calculate. Every conclusion includes accurate legal references per current Vietnamese Tax Laws 2025–2026.',
+    thueGuideText: 'Enter your tax situation with <strong>specific data and numbers</strong> — the system will analyze it <strong>through concrete steps</strong> and give conclusions with the <strong>latest legal references</strong>. Beyond calculations, you can also use it to <strong>look up further legal information</strong>. <em>All information on this website is for reference only. Please consult a lawyer for accurate advice on your specific case.</em>',
     thueApiLabel: 'Gemini API Key Settings',
     thueApiNote: '⚠️ Your API Key is stored locally in the browser and is only sent to Google Gemini API. Get a free key at aistudio.google.com. Do not share this file while it contains an API Key.',
     thueInputLabel: 'Describe your situation and data',
@@ -1865,7 +1865,7 @@ function applyStaticTranslations() {
   if(thuePageTitle) thuePageTitle.textContent = t('thueTaxCounsel');
   if(thueBreadcrumb) thueBreadcrumb.textContent = t('thueTaxCounsel');
   if(thueGuideTitle) thueGuideTitle.textContent = t('thueGuideTitle');
-  if(thueGuideText) thueGuideText.textContent = t('thueGuideText');
+  if(thueGuideText) thueGuideText.innerHTML = t('thueGuideText');
   if(thueApiLabel) thueApiLabel.textContent = t('thueApiLabel');
   if(thueApiNote) thueApiNote.textContent = t('thueApiNote');
   if(thueInputLabel) thueInputLabel.innerHTML = `<i class="ph ph-note-pencil"></i> ${t('thueInputLabel')}`;
