@@ -1,7 +1,7 @@
 {
   "type": "dcsl-site-data",
   "version": 1,
-  "exportedAt": "2026-07-12T05:54:52.538Z",
+  "exportedAt": "2026-07-14T04:51:43.917Z",
   "data": {
     "casesData": {
       "cases": {
@@ -21849,9 +21849,410 @@
               }
             }
           }
+        ],
+        "hinh-su::tb-rut-kinh-nghiem": [
+          {
+            "id": "case-tb-rkn-16-2025-1",
+            "ten": "Bình luận về thông báo rút kinh nghiệm về tổng hợp hình phạt của nhiều bản án",
+            "mo_ta": "",
+            "lvId": "hinh-su",
+            "lvName": "Hình sự",
+            "sfId": "tb-rut-kinh-nghiem",
+            "sfName": "Thông báo rút kinh nghiệm",
+            "sao": 2,
+            "ngay": "2026-07-14T11:03:29.0701517+07:00",
+            "updatedAt": "2026-07-14T04:25:59.133Z",
+            "tom_luoc": "",
+            "ap_dung": "<p>Nội dung thông báo rút kinh nghiệm này có thể được áp dụng như một tài liệu hướng dẫn nghiệp vụ quan trọng cho các cơ quan tiến hành tố tụng, đặc biệt là Viện kiểm sát và Tòa án các cấp, khi giải quyết các vụ án hình sự có liên quan đến vấn đề tổng hợp hình phạt của nhiều bản án.</p><p>Cụ thể, định hướng từ văn bản này sẽ được vận dụng trực tiếp vào những tình huống mà bị cáo có nhân thân phức tạp, đang mang các bản án cũ hoặc phạm tội mới trong thời gian thử thách của án treo. Trong các trường hợp tương tự, cơ quan tố tụng bắt buộc phải rà soát kỹ lưỡng lý lịch tư pháp cùng các quyết định trước đó để tránh hai sai lầm nghiêm trọng: thứ nhất, tuyệt đối không được tổng hợp lại một hình phạt cũ nếu hình phạt đó đã được đem ra tổng hợp ở một bản án khác nhằm tránh việc phạt chồng chéo lên bị cáo; thứ hai, bắt buộc phải tổng hợp hình phạt của bản án cũ vào bản án mới nếu bị cáo cố ý phạm tội trong thời gian thử thách của án treo.</p><p>Việc áp dụng đúng đắn nguyên tắc này đòi hỏi các Kiểm sát viên phải nâng cao chất lượng công tác thực hành quyền công tố và kiểm sát xét xử, phát hiện kịp thời các vi phạm của Hội đồng xét xử để có đề nghị giải quyết vụ án chính xác, bảo đảm việc áp dụng pháp luật nghiêm minh và đúng quy định.</p>",
+            "chi_tiet": "<div class=\"detail-section-title\">TÓM TẮT NỘI DUNG VÀ QUÁ TRÌNH TỐ TỤNG CỦA CÁC VỤ ÁN</div><p><strong>- Vụ án thứ nhất:</strong></p><p>Ngày 23/7/2020, tại thành phố N, tỉnh K, Trần Ngọc T dùng 01 cây mác chém vào đầu anh Đào Duy P gây thương tích 46%.</p><p>Bản án hình sự sơ thẩm số 75/2024/HS-ST ngày 12/8/2024 của Tòa án nhân dân tỉnh K xử phạt Trần Ngọc T 09 năm 06 tháng tù về tội “Giết người” quy định tại điểm n, p khoản 1 Điều 123 Bộ luật Hình sự; tổng hợp với hình phạt 04 năm 03 tháng tù tại Bản án hình sự sơ thẩm số 76/2021/HS-ST ngày 29/9/2021 của Tòa án nhân dân thành phố T, tỉnh P, buộc Trần Ngọc T phải chấp hành hình phạt chung của 02 bản án là 13 năm 09 tháng tù.</p><p>Ngoài ra, bản án sơ thẩm còn quyết định về xử lý vật chứng, trách nhiệm dân sự, án phí và quyền kháng cáo.</p><p>Trước đó, tại Bản án hình sự sơ thẩm số 34/2023/HS-ST ngày 25/11/2023 của Tòa án nhân dân huyện T2, tỉnh P xử phạt Trần Ngọc T 03 năm 06 tháng tù về tội “Cố ý gây thương tích” quy định tại Điều 134 Bộ luật Hình sự; tổng hợp hình phạt 04 năm 03 tháng tù tại Bản án hình sự sơ thẩm số 76/2021/HS-ST ngày 29/9/2021 của Tòa án nhân dân thành phố T, tỉnh P, buộc Trần Ngọc T phải chấp hành hình phạt chung của 02 bản án là 07 năm 09 tháng tù.</p><p>Ngày 10/02/2025, Chánh án Tòa án nhân dân cấp cao tại Đà Nẵng ban hành Quyết định giám đốc thẩm số 03/2025/KN-HS đối với Bản án hình sự sơ thẩm số 75/2024/HS-ST ngày 12/8/2024 của Tòa án nhân dân tỉnh K do có sai lầm nghiêm trọng trong việc tổng hợp hình phạt.</p><p>Quyết định giám đốc thẩm số 06/2025/HS-GĐT ngày 06/3/2025 của Tòa án nhân dân cấp cao tại Đà Nẵng chấp nhận toàn bộ quyết định kháng nghị giám đốc thẩm nêu trên, sửa Bản án hình sự sơ thẩm số 75/2024/HS-ST ngày 12/8/2024 của Tòa án nhân dân tỉnh K, không áp dụng pháp luật về tổng hợp hình phạt đối với Trần Ngọc T.</p><p><strong>- Vụ án thứ hai:</strong></p><p>Bản án hình sự sơ thẩm số 57/2023/HS-ST ngày 21/9/2023 của Tòa án nhân dân huyện C1, tỉnh L xử phạt Nguyễn Văn T1 (sinh năm 1986) 12 tháng tù nhưng cho hưởng án treo, thời gian thử thách 24 tháng, tính từ ngày tuyên án sơ thẩm (21/9/2023) về tội “Vi phạm quy định về tham gia giao thông đường bộ” quy định tại điểm b khoản 1 Điều 260 Bộ luật Hình sự.</p><p>Ngày 03/10/2023, tại Cửa khẩu quốc tế C, tỉnh Q, cơ quan chức năng bắt quả tang Nguyễn Văn T1 có hành vi vận chuyển 15,7 kg pháo nổ.</p><p>Bản án hình sự sơ thẩm số 05/2024/HS-ST ngày 04/01/2024 của Tòa án nhân dân huyện M, tỉnh Q xử phạt Nguyễn Văn T1 24 tháng tù về tội “Vận chuyển hàng cấm” quy định tại điểm k khoản 2 Điều 191 Bộ luật Hình sự.</p><p>Ngoài ra, bản án sơ thẩm còn quyết định về xử lý vật chứng, án phí và quyền kháng cáo.</p><p>Ngày 20/01/2025, Chánh án Tòa án nhân dân cấp cao tại Đà Nẵng ban hành Quyết định giám đốc thẩm số 02/2025/KN-HS đối với Bản án hình sự sơ thẩm số 05/2024/HS-ST ngày 04/01/2024 của Tòa án nhân dân huyện M, tỉnh Q do có sai lầm nghiêm trọng trong việc không tổng hợp hình phạt.</p><p>Quyết định giám đốc thẩm số 07/2025/HS-GĐT ngày 06/3/2025 của Tòa án nhân dân cấp cao tại Đà Nẵng chấp nhận toàn bộ quyết định kháng nghị giám đốc thẩm nêu trên, hủy Bản án hình sự sơ thẩm số 05/2024/HS-ST ngày 04/01/2024 của Tòa án nhân dân huyện M, tỉnh Q về hình phạt đối với Nguyễn Văn T1, giao hồ sơ vụ án cho Tòa án nhân dân huyện M, tỉnh Q xét xử lại sơ thẩm.</p><div class=\"detail-section-title\">VẤN ĐỀ CẦN RÚT KINH NGHIỆM</div><p>- Đối với vụ án thứ nhất: Bản án hình sự sơ thẩm của Tòa án nhân dân tỉnh K xét xử và tuyên phạt Trần Ngọc T 09 năm 06 tháng tù về tội “Giết người” theo điểm n, p khoản 1 Điều 123 Bộ luật Hình sự là đúng pháp luật. Tuy nhiên, Tòa án nhân dân tỉnh K đã tổng hợp hình phạt của bản án này với hình phạt 04 năm 03 tháng tù tại Bản án hình sự sơ thẩm số 76/2021/HS-ST ngày 29/9/2021 của Tòa án nhân dân thành phố T, tỉnh P, buộc Trần Ngọc T phải chấp hành hình phạt chung của 02 bản án là 13 năm 09 tháng tù là sai lầm nghiêm trọng trong việc áp dụng pháp luật vì hình phạt 04 năm 03 tháng tù tại Bản án hình sự sơ thẩm số 76/2021/HS-ST ngày 29/9/2021 của Tòa án nhân dân thành phố T, tỉnh P đối với Trần Ngọc T đã được tổng hợp tại Bản án hình sự sơ thẩm số 34/2023/HS-ST ngày 25/11/2023 của Tòa án nhân dân huyện T2, tỉnh P.</p><p>- Đối với vụ án thứ hai: Bản án hình sự sơ thẩm số 05/2024/HS-ST ngày 04/01/2024 của Tòa án nhân dân huyện M, tỉnh Q đã xét xử và tuyên phạt Nguyễn Văn T1 24 tháng tù về tội “Vận chuyển hàng cấm” theo điểm k khoản 2 Điều 191 Bộ luật Hình sự là đúng pháp luật. Tuy nhiên, Tòa án nhân dân huyện M, tỉnh Q không tổng hợp hình phạt của bản án này với hình phạt 12 tháng tù tại Bản án hình sự sơ thẩm số 57/2023/HS-ST ngày 21/9/2023 của Tòa án nhân dân huyện C1, tỉnh L để buộc Nguyễn Văn T1 phải chấp hành hình phạt chung của 02 bản án là sai lầm nghiêm trọng trong việc áp dụng pháp luật vì Nguyễn Văn T1 phạm tội mới (Vận chuyển hàng cấm) trong thời gian thử thách của Bản án hình sự sơ thẩm số 57/2023/HS-ST ngày 21/9/2023 của Tòa án nhân dân huyện C1, tỉnh L.</p><p>Viện kiểm sát nhân dân cấp sơ thẩm thực hành quyền công tố và kiểm sát xét xử đối với 02 vụ án nêu trên đã không làm tốt công tác kiểm sát dẫn đến đề nghị với Hội đồng xét xử trong việc giải quyết vụ án không đúng, không phát hiện được vi phạm của Tòa án.</p><p>VKSND cấp cao tại Đà Nẵng thông báo để các Viện kiểm sát trong khu vực cùng nghiên cứu rút kinh nghiệm chung nhằm nâng cao chất lượng trong việc giải quyết các vụ án hình sự./.</p>",
+            "timeline": [],
+            "laws": [
+              {
+                "name": "điểm n khoản 1 Điều 123 Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "điểm p khoản 1 Điều 123 Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Điều 134 Bộ luật H&#236",
+                "content": "6. Người nào chuẩn bị vũ khí, vật liệu nổ, hung khí nguy hiểm, a-xít nguyhiểm, hóa chất nguy hiểm hoặc thành lập hoặc tham gia nhóm tội phạm nhằm gây thương tích hoặc gây tổn hại cho sức khỏe của người khác, thì bị phạt cải tạo không giam giữ đến 02 năm hoặc phạt tù từ 03 tháng đến 02 năm.",
+                "name_en": "Article 134",
+                "translations": {
+                  "en": {
+                    "title": "Article 134",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "điểm b khoản 1 Điều 260 Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "điểm k khoản 2 Điều 191 Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Clause 1, Article 123",
+                "content": "",
+                "name_en": "Clause 1, Article 123",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Clause 1, Article 123",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Point b, Clause 1, Article 260",
+                "content": "",
+                "name_en": "Point b, Clause 1, Article 260",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Point b, Clause 1, Article 260",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Point k, Clause 2, Article 191",
+                "content": "",
+                "name_en": "Point k, Clause 2, Article 191",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Point k, Clause 2, Article 191",
+                    "content": ""
+                  }
+                }
+              }
+            ],
+            "translations": {
+              "en": {
+                "ten": "Commentary on the notice to draw lessons regarding the combination of penalties of multiple judgments.",
+                "ap_dung": "<p>The content of this experience-drawing notice can be applied as an important professional guiding document for judicial bodies, especially Procuracies and Courts at all levels, when resolving criminal cases related to the aggregation of penalties from multiple judgments,,. Specifically, the guidance from this document will be directly utilized in situations where the defendant has a complex criminal background, holds prior judgments, or commits a new crime during the probation period of a suspended sentence,. In similar cases, procedural agencies are strictly required to thoroughly review the criminal record and previous decisions to avoid two serious mistakes: first, absolutely not re-aggregating an old penalty if that penalty has already been aggregated in another judgment, to prevent overlapping punishments on the defendant,; second, strictly aggregating the penalty of the old judgment with the new one if the defendant intentionally commits a crime during the probationary period of a suspended sentence. Correctly applying this principle requires Prosecutors to improve the quality of exercising public prosecution power and trial supervision, promptly detecting violations by the Trial Panel to propose accurate case resolutions, and ensuring the strict and lawful application of the law</p>",
+                "chi_tiet": "<div class=\"detail-section-title\">SUMMARY OF CONTENTS AND PROCEEDINGS OF THE CASES</div><p><strong>- The first case:</strong></p><p>On July 23, 2020, in N City, K Province, Tran Ngoc T used a machete to slash Mr. Dao Duy P&#39;s head, causing a 46% injury.</p><p>The First-instance Criminal Judgment No. 75/2024/HS-ST dated August 12, 2024, of the People&#39;s Court of K Province sentenced Tran Ngoc T to 09 years and 06 months in prison for the crime of “Murder” provided in Points n and p, Clause 1, Article 123 of the Penal Code; combined with the penalty of 04 years and 03 months in prison under the First-instance Criminal Judgment No. 76/2021/HS-ST dated September 29, 2021, of the People&#39;s Court of T City, P Province, compelling Tran Ngoc T to serve a general penalty of the 02 judgments of 13 years and 09 months in prison.</p><p>In addition, the first-instance judgment also decided on the handling of material evidence, civil liability, court fees, and the right to appeal.</p><p>Prior to that, in the First-instance Criminal Judgment No. 34/2023/HS-ST dated November 25, 2023, of the People&#39;s Court of T2 District, P Province, Tran Ngoc T was sentenced to 03 years and 06 months in prison for the crime of “Intentionally inflicting injury” provided in Article 134 of the Penal Code; combining the penalty of 04 years and 03 months in prison under the First-instance Criminal Judgment No. 76/2021/HS-ST dated September 29, 2021, of the People&#39;s Court of T City, P Province, compelling Tran Ngoc T to serve a general penalty of the 02 judgments of 07 years and 09 months in prison.</p><p>On February 10, 2025, the Chief Justice of the High People&#39;s Court in Da Nang issued Cassation Decision to Protest No. 03/2025/KN-HS against the First-instance Criminal Judgment No. 75/2024/HS-ST dated August 12, 2024, of the People&#39;s Court of K Province due to a serious error in the combination of penalties.</p><p>The Cassation Decision No. 06/2025/HS-GĐT dated March 6, 2025, of the High People&#39;s Court in Da Nang accepted the entirety of the aforementioned cassation decision to protest, amended the First-instance Criminal Judgment No. 75/2024/HS-ST dated August 12, 2024, of the People&#39;s Court of K Province, and did not apply the law on combination of penalties with respect to Tran Ngoc T.</p><p><strong>- The second case:</strong></p><p>The First-instance Criminal Judgment No. 57/2023/HS-ST dated September 21, 2023, of the People&#39;s Court of C1 District, L Province sentenced Nguyen Văn T1 (born in 1986) to 12 months in prison but granted a suspended sentence, with a probation period of 24 months calculated from the date of first-instance pronouncement (September 21, 2023) for the crime of “Violating regulations on participation in road traffic” provided in Point b, Clause 1, Article 260 of the Penal Code.</p><p>On October 3, 2023, at C International Border Gate, Q Province, competent authorities caught Nguyen Văn T1 red-handed in the act of transporting 15.7 kg of firecrackers.</p><p>The First-instance Criminal Judgment No. 05/2024/HS-ST dated January 4, 2024, of the People&#39;s Court of M District, Q Province sentenced Nguyen Văn T1 to 24 months in prison for the crime of “Transporting prohibited goods” provided in Point k, Clause 2, Article 191 of the Penal Code.</p><p>In addition, the first-instance judgment also decided on the handling of material evidence, court fees, and the right to appeal.</p><p>On January 20, 2025, the Chief Justice of the High People&#39;s Court in Da Nang issued Cassation Decision to Protest No. 02/2025/KN-HS against the First-instance Criminal Judgment No. 05/2024/HS-ST dated January 4, 2024, of the People&#39;s Court of M District, Q Province due to a serious error in failing to combine the penalties.</p><p>The Cassation Decision No. 07/2025/HS-GĐT dated March 6, 2025, of the High People&#39;s Court in Da Nang accepted the entirety of the aforementioned cassation decision to protest, vacated the First-instance Criminal Judgment No. 05/2024/HS-ST dated January 4, 2024, of the People&#39;s Court of M District, Q Province regarding the penalty against Nguyen Văn T1, and transferred the case file to the People&#39;s Court of M District, Q Province for first-instance retrial.</p><div class=\"detail-section-title\">MATTERS FOR LESSONS LEARNT</div><p>- Regarding the first case: The first-instance criminal judgment of the People&#39;s Court of K Province trying and sentencing Tran Ngoc T to 09 years and 06 months in prison for the crime of “Murder” under Points n and p, Clause 1, Article 123 of the Penal Code is in accordance with the law. However, for the People&#39;s Court of K Province to combine the penalty of this judgment with the penalty of 04 years and 03 months in prison under the First-instance Criminal Judgment No. 76/2021/HS-ST dated September 29, 2021, of the People&#39;s Court of T City, P Province, compelling Tran Ngoc T to serve a general penalty of the 02 judgments of 13 years and 09 months in prison, was a serious error in the application of the law because the penalty of 04 years and 03 months in prison under the First-instance Criminal Judgment No. 76/2021/HS-ST dated September 29, 2021, of the People&#39;s Court of T City, P Province against Tran Ngoc T had already been combined in the First-instance Criminal Judgment No. 34/2023/HS-ST dated November 25, 2023, of the People&#39;s Court of T2 District, P Province.</p><p>- Regarding the second case: The First-instance Criminal Judgment No. 05/2024/HS-ST dated January 4, 2024, of the People&#39;s Court of M District, Q Province trying and sentencing Nguyen Văn T1 to 24 months in prison for the crime of “Transporting prohibited goods” under Point k, Clause 2, Article 191 of the Penal Code is in accordance with the law. However, for the People&#39;s Court of M District, Q Province to not combine the penalty of this judgment with the penalty of 12 months in prison under the First-instance Criminal Judgment No. 57/2023/HS-ST dated September 21, 2023, of the People&#39;s Court of C1 District, L Province to compel Nguyen Văn T1 to serve a general penalty of the 02 judgments was a serious error in the application of the law because Nguyen Văn T1 committed a new crime (Transporting prohibited goods) during the probation period of the First-instance Criminal Judgment No. 57/2023/HS-ST dated September 21, 2023, of the People&#39;s Court of C1 District, L Province.</p><p>The first-instance People&#39;s Procuracies performing the prosecution function and judicial supervision over the 02 aforementioned cases failed to do a good job in supervision, leading to incorrect recommendations to the Trial Panel in the case resolution and a failure to detect the violations committed by the Court.</p><p>The High People&#39;s Procuracy in Da Nang notifies the Procuracies within the region to study and draw general lessons together so as to improve the quality in the resolution of criminal cases./.</p>",
+                "provider": "manual-admin",
+                "translatedAt": "2026-07-14T04:25:59.132Z"
+              }
+            },
+            "translationMeta": {
+              "en": {
+                "status": "ready",
+                "provider": "manual-admin",
+                "translatedAt": "2026-07-14T04:25:59.132Z"
+              }
+            }
+          },
+          {
+            "id": "case-tb-rkn-7857-2024-2",
+            "ten": "Bình luận về thông báo rút kinh nghiệm về việc bỏ lọt tội phạm",
+            "mo_ta": "",
+            "lvId": "hinh-su",
+            "lvName": "Hình sự",
+            "sfId": "tb-rut-kinh-nghiem",
+            "sfName": "Thông báo rút kinh nghiệm",
+            "sao": 2,
+            "ngay": "2026-07-14T10:49:40.6904269+07:00",
+            "importedAt": "2026-07-14T04:24:40.032Z",
+            "updatedAt": "2026-07-14T04:24:40.032Z",
+            "tom_luoc": "",
+            "ap_dung": "<p>Nội dung th&#244;ng b&#225;o r&#250;t kinh nghiệm n&#224;y c&#243; thể được &#225;p dụng như một t&#224;i liệu hướng dẫn nghiệp vụ quan trọng cho c&#225;c cơ quan tiến h&#224;nh tố tụng, đặc biệt l&#224; Viện kiểm s&#225;t c&#225;c cấp, khi giải quyết c&#225;c vụ &#225;n h&#236;nh sự m&#224; bị can thực hiện nhiều h&#224;nh vi chiếm đoạt t&#224;i sản với c&#225;c thủ đoạn kh&#225;c nhau trong c&#249;ng một vụ &#225;n.</p><p>Cụ thể, định hướng từ vụ &#225;n n&#224;y sẽ được vận dụng trực tiếp v&#224;o những t&#236;nh huống m&#224; người c&#243; chức vụ, quyền hạn vừa c&#243; h&#224;nh vi lợi dụng chức vụ để chiếm đoạt t&#224;i sản do m&#236;nh trực tiếp quản l&#253;, lại vừa c&#243; h&#224;nh vi đưa ra th&#244;ng tin gian dối để chiếm đoạt một khoản tiền kh&#225;c từ nạn nh&#226;n. Trong c&#225;c trường hợp tương tự, cơ quan tiến h&#224;nh tố tụng kh&#244;ng được ph&#233;p gộp chung tổng số tiền chiếm đoạt để truy tố v&#224;o một tội danh duy nhất (chẳng hạn như tội &quot;Tham &#244; t&#224;i sản&quot;) m&#224; bắt buộc phải b&#225;m s&#225;t c&#225;c yếu tố cấu th&#224;nh tội phạm để đ&#225;nh gi&#225; v&#224; ph&#226;n t&#225;ch độc lập từng h&#224;nh vi. Việc &#225;p dụng đ&#250;ng đắn nguy&#234;n tắc n&#224;y buộc c&#225;c Kiểm s&#225;t vi&#234;n phải ph&#226;n định r&#245; r&#224;ng khoản tiền n&#224;o bị chiếm đoạt do h&#224;nh vi gian dối cấu th&#224;nh tội &quot;Lừa đảo chiếm đoạt t&#224;i sản&quot;, v&#224; khoản tiền n&#224;o bị chiếm đoạt do lợi dụng quyền hạn cấu th&#224;nh tội &quot;Tham &#244; t&#224;i sản&quot;.</p><p>Từ đ&#243;, cơ quan chức năng sẽ n&#226;ng cao chất lượng c&#244;ng t&#225;c thực h&#224;nh quyền c&#244;ng tố, hạn chế việc định sai tội danh, tr&#225;nh l&#224;m k&#233;o d&#224;i thời gian giải quyết vụ &#225;n v&#224; tuyệt đối kh&#244;ng để xảy ra t&#236;nh trạng bỏ lọt tội phạm.</p>",
+            "chi_tiet": "<div class=\"detail-section-title\">T&#211;M TẮT NỘI DUNG V&#192; QU&#193; TR&#204;NH GIẢI QUYẾT VỤ &#193;N</div><p>C&#244;ng ty TNHH TM-DV Sơn Nam (C&#244;ng ty Sơn Nam) l&#224; doanh nghiệp kinh doanh thuốc l&#225; trong nước; &#244;ng Trịnh Hải Sơn l&#224; Gi&#225;m đốc, đại diện theo ph&#225;p luật; b&#224; Phan Thị Kim Huệ (vợ &#244;ng Sơn) l&#224; người quản l&#253; tiền mặt của c&#244;ng ty.</p><p>Th&#225;ng 9/2021, Đỗ Thị Cương được ph&#226;n c&#244;ng l&#224;m Cửa h&#224;ng trưởng, đứng t&#234;n ph&#225;p l&#253; tại điểm Kinh doanh số 1 của C&#244;ng ty Sơn Nam; c&#243; tr&#225;ch nhiệm quản l&#253; t&#224;i sản, h&#224;ng h&#243;a, thu tiền b&#225;n h&#224;ng, thay mặt c&#244;ng ty thanh to&#225;n tiền cho kh&#225;ch h&#224;ng tại điểm kinh doanh. Việc ứng tiền, thanh to&#225;n tiền của C&#244;ng ty Sơn Nam kh&#244;ng thực hiện theo nguy&#234;n tắc kế to&#225;n m&#224; giao cho Đỗ Thị Cương trực tiếp b&#225;o c&#225;o &#244;ng Trịnh Hải Sơn về c&#225;c khoản tiền cần thanh to&#225;n v&#224; li&#234;n hệ với b&#224; Phan Thị Kim Huệ để nhận tiền, thanh to&#225;n tiền mua h&#224;ng. Ng&#224;y 01/8/2022, Đỗ Thị Cương đưa th&#244;ng tin gian dối với b&#224; Phan Thị Kim Huệ về việc cần tiền thanh to&#225;n cho kh&#225;ch h&#224;ng, b&#224; Huệ tin tưởng giao cho Cương 1.500.000.000 đồng, Cương chiếm đoạt sử dụng c&#225; nh&#226;n; c&#249;ng ng&#224;y 01/8/2022, Đỗ Thị Cương lấy 250.000.000 đồng tiền b&#225;n h&#224;ng tại điểm kinh doanh do Cương trực tiếp quản l&#253; để sử dụng c&#225; nh&#226;n.</p><p>Ng&#224;y 05/02/2023, Cơ quan Cảnh s&#225;t điều tra C&#244;ng an tỉnh B&#236;nh Dương khởi tố vụ &#225;n, khởi tố bị can đối với Đỗ Thị Cương về tội “Lừa đảo chiếm đoạt t&#224;i sản”; ng&#224;y 07/7/2023, c&#243; quyết định thay đổi quyết định khởi tố vụ &#225;n, thay đổi quyết định khởi tố bị can đối với Đỗ Thị Cương về tội “Tham &#244; t&#224;i sản”.</p><p>Ng&#224;y 30/11/2023, VKSND tỉnh B&#236;nh Dương ban h&#224;nh C&#225;o trạng số 210 truy tố Đỗ Thị Cương về tội “Tham &#244; t&#224;i sản” với số tiền chiếm đoạt l&#224; 1.750.000.000 đồng, theo điểm a Khoản 4 Điều 353 Bộ luật H&#236;nh sự.</p><p>Qua c&#244;ng t&#225;c kiểm tra C&#225;o trạng, VKSND tối cao (Vụ 5) thấy c&#243; dấu hiệu bỏ lọt tội phạm, n&#234;n c&#243; văn bản đề nghị VKSND tỉnh B&#236;nh Dương kiểm tra, đ&#225;nh gi&#225; lại t&#224;i liệu, chứng cứ, bảo đảm việc truy tố c&#243; căn cứ. Sau đ&#243;, VKSND tỉnh B&#236;nh Dương đ&#227; r&#250;t hồ sơ vụ &#225;n, trả hồ sơ cho Cơ quan điều tra để điều tra bổ sung. Qu&#225; tr&#236;nh điều tra bổ sung, Cơ quan điều tra đ&#227; ra quyết định bổ sung quyết định khởi tố vụ &#225;n h&#236;nh sự, quyết định bổ sung quyết định khởi tố bị can đối với Đỗ Thị Cương về tội “Lừa đảo chiếm đoạt t&#224;i sản”.</p><p>Ng&#224;y 05/3/2024, Cơ quan Cảnh s&#225;t điều tra C&#244;ng an tỉnh B&#236;nh Dương c&#243; Bản Kết luận điều tra bổ sung, đề nghị truy tố Đỗ Thị Cương về tội “Tham &#244; t&#224;i sản” v&#224; tội “Lừa đảo chiếm đoạt t&#224;i sản”. Ng&#224;y 09/4/2024, VKSND tỉnh B&#236;nh Dương ban h&#224;nh C&#225;o trạng số 82 (thay thế C&#225;o trạng số 210 ng&#224;y 30/11/2023), truy tố Đỗ Thị Cương về tội “Tham &#244; t&#224;i sản” theo điểm d Khoản 2 Điều 353 v&#224; tội “Lừa đảo chiếm đoạt t&#224;i sản” theo điểm a Khoản 4 Điều 174 Bộ luật H&#236;nh sự.</p><p>Tại Bản &#225;n H&#236;nh sự sơ thẩm số 93 ng&#224;y 25/7/2024 của T&#242;a &#225;n nh&#226;n d&#226;n tỉnh B&#236;nh Dương &#225;p dụng điểm a Khoản 4 Điều 174; điểm d Khoản 2 Điều 353 Bộ luật H&#236;nh sự, xử phạt Đỗ Thị Cương 08 năm t&#249; về tội “Lừa đảo chiếm đoạt t&#224;i sản”, 03 năm t&#249; về tội “Tham &#244; t&#224;i sản”, tổng hợp h&#236;nh phạt chung l&#224; 11 năm t&#249;.</p><div class=\"detail-section-title\">NỘI DUNG CẦN R&#218;T KINH NGHIỆM</div><p>Trong vụ &#225;n n&#224;y, bị can Đỗ Thị Cương thực hiện 02 h&#224;nh vi phạm tội:</p><p>(1). Với mục đ&#237;ch chiếm đoạt tiền từ trước, Đỗ Thị Cương đưa th&#244;ng tin gian dối để b&#224; Phan Thị Kim Huệ tin tưởng giao số tiền 1.500.000.000 đồng, sau đ&#243; chiếm đoạt sử dụng c&#225; nh&#226;n, h&#224;nh vi n&#224;y của bị can đ&#227; phạm tội “Lừa đảo chiếm đoạt t&#224;i sản”, kh&#244;ng phải h&#224;nh vi tham &#244; t&#224;i sản.</p><p>(2). Đỗ Thị Cương lợi dụng chức vụ, quyền hạn được giao, chiếm đoạt 250.000.000 đồng tiền b&#225;n h&#224;ng tại điểm kinh doanh do Cương trực tiếp quản l&#253;, n&#234;n phạm tội “Tham &#244; t&#224;i sản” quy định tại điểm d Khoản 2 Điều 353 Bộ luật H&#236;nh sự. C&#225;o trạng số 210 ng&#224;y 30/11/2023 của VKSND tỉnh B&#236;nh Dương truy tố Đỗ Thị Cương về tội “Tham &#244; t&#224;i sản” với số tiền 1.750.000.000 đồng theo quy định tại Khoản 4 Điều 353 Bộ luật H&#236;nh sự l&#224; chưa ch&#237;nh x&#225;c.</p><p>Qu&#225; tr&#236;nh giải quyết vụ &#225;n, Cơ quan điều tra v&#224; VKSND tỉnh B&#236;nh Dương chưa đ&#225;nh gi&#225; đ&#250;ng từng h&#224;nh vi phạm tội của bị can, chưa b&#225;m s&#225;t c&#225;c cấu th&#224;nh tội phạm, dẫn đến việc bỏ lọt tội phạm. Sau khi c&#243; văn bản y&#234;u cầu của VKSND tối cao (Vụ 5), VKSND tỉnh B&#236;nh Dương đ&#227; trả hồ sơ cho Cơ quan điều tra để ra quyết định bổ sung quyết định khởi tố vụ &#225;n h&#236;nh sự, bổ sung quyết định khởi tố bị can, l&#224;m k&#233;o d&#224;i thời gian giải quyết vụ &#225;n.</p><p>VKSND tối cao (Vụ 5) th&#244;ng b&#225;o để VKSND c&#225;c tỉnh, th&#224;nh phố nghi&#234;n cứu, r&#250;t kinh nghiệm chung, nhằm khắc phục v&#224; hạn chế những vi phạm, thiếu s&#243;t tương tự, để n&#226;ng cao chất lượng c&#244;ng t&#225;c thực h&#224;nh quyền c&#244;ng tố v&#224; kiểm s&#225;t việc giải quyết c&#225;c vụ &#225;n h&#236;nh sự, tr&#225;nh oan, sai hoặc bỏ lọt tội phạm./.</p>",
+            "timeline": [],
+            "laws": [
+              {
+                "name": "điểm a Khoản 4 Điều 353 Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "điểm d Khoản 2 Điều 353",
+                "content": ""
+              },
+              {
+                "name": "điểm a Khoản 4 Điều 174 Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Khoản 4 Điều 353 Bộ luật H&#236",
+                "content": ""
+              },
+              {
+                "name": "Point a, Clause 4, Article 353",
+                "content": "",
+                "name_en": "Point a, Clause 4, Article 353",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Point a, Clause 4, Article 353",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Point d, Clause 2, Article 353",
+                "content": "",
+                "name_en": "Point d, Clause 2, Article 353",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Point d, Clause 2, Article 353",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Point a, Clause 4, Article 174",
+                "content": "",
+                "name_en": "Point a, Clause 4, Article 174",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Point a, Clause 4, Article 174",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Clause 4, Article 353",
+                "content": "",
+                "name_en": "Clause 4, Article 353",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Clause 4, Article 353",
+                    "content": ""
+                  }
+                }
+              }
+            ],
+            "translations": {
+              "en": {
+                "ten": "Commentary on the notice to draw lessons regarding the omission of crimes.",
+                "ap_dung": "<p>The content of this experience-drawing notice can be applied as an important professional guiding document for judicial bodies, especially Procuracies at all levels, when resolving criminal cases where the defendant commits multiple property misappropriation acts using different methods within the same case.</p><p>Specifically, the guidance from this case will be directly utilized in situations where a person with a position and authority both abuses their position to appropriate property under their direct management and uses deceptive information to appropriate another sum of money from a victim. In similar cases, procedural agencies must not lump the total appropriated amount together to prosecute under a single criminal charge (such as &quot;Embezzlement&quot;) but are strictly required to adhere closely to the constituent elements of crimes to independently evaluate and separate each act. Correctly applying this principle compels Prosecutors to clearly distinguish which misappropriated amount through deception constitutes the crime of &quot;Fraudulent appropriation of property,&quot; and which amount misappropriated through the abuse of power constitutes the crime of &quot;Embezzlement&quot;.</p><p>Consequently, authorities will improve the quality of exercising public prosecution power, limit incorrect criminal charging, avoid unnecessarily prolonging the case resolution time, and absolutely prevent the omission of crimes.</p>",
+                "chi_tiet": "<div class=\"detail-section-title\">SUMMARY OF CASE CONTENTS AND PROCEEDINGS</div><p>Son Nam Trading - Service Company Limited (Son Nam Company) is a domestic tobacco trading enterprise; Mr. Trinh Hai Son is the Director and lawful representative; Mrs. Phan Thi Kim Hue (Mr. Son&#39;s wife) is the cash manager of the company.</p><p>In September 2021, Do Thi Cuong was assigned as the Store Manager, standing as the legal name holder at Business Location No. 1 of Son Nam Company; having the responsibility to manage assets and goods, collect sales revenue, and pay customers on behalf of the company at the business location. The cash advance and payment of Son Nam Company did not follow accounting principles but were assigned to Do Thi Cuong to directly report to Mr. Trinh Hai Son regarding the amounts needed for payment and contact Mrs. Phan Thi Kim Hue to receive money and pay for the purchase of goods. On August 1, 2022, Do Thi Cuong provided fraudulent information to Mrs. Phan Thi Kim Hue regarding the need for money to pay customers. Believing this, Mrs. Hue handed over 1,500,000,000 VND to Cuong, and Cuong appropriated it for personal use; on the same day of August 1, 2022, Do Thi Cuong took 250,000,000 VND of sales revenue at the business location directly managed by Cuong for personal use.</p><p>On February 5, 2023, the Police Investigation Agency of the Department of Public Security of Binh Duong Province initiated criminal proceedings and initiated charges against the accused Do Thi Cuong for the crime of “Fraudulent appropriation of property”; on July 7, 2023, a decision was issued to amend the decision to initiate criminal proceedings and amend the decision to initiate charges against the accused Do Thi Cuong for the crime of “Embezzlement of property”.</p><p>On November 30, 2023, the People&#39;s Procuracy of Binh Duong Province issued Indictment No. 210 prosecuting Do Thi Cuong for the crime of “Embezzlement of property” with the appropriated amount of 1,750,000,000 VND, under Point a, Clause 4, Article 353 of the Penal Code.</p><p>Through the task of reviewing the Indictment, the Supreme People&#39;s Procuracy (Department 5) found signs of omitting crimes, and thus issued a written request demanding the People&#39;s Procuracy of Binh Duong Province to review and re-evaluate the documents and evidence to ensure that the prosecution was well-founded. Thereafter, the People&#39;s Procuracy of Binh Duong Province recalled the case file and returned it to the Investigation Agency for supplementary investigation. During the supplementary investigation process, the Investigation Agency issued a decision to supplement the decision to initiate criminal proceedings and a decision to supplement the decision to initiate charges against the accused Do Thi Cuong for the crime of “Fraudulent appropriation of property”.</p><p>On March 5, 2024, the Police Investigation Agency of the Department of Public Security of Binh Duong Province issued a Supplementary Investigation Conclusion, requesting the prosecution of Do Thi Cuong for the crime of “Embezzlement of property” and the crime of “Fraudulent appropriation of property”. On April 9, 2024, the People&#39;s Procuracy of Binh Duong Province issued Indictment No. 82 (superseding Indictment No. 210 dated November 30, 2023), prosecuting Do Thi Cuong for the crime of “Embezzlement of property” under Point d, Clause 2, Article 353 and the crime of “Fraudulent appropriation of property” under Point a, Clause 4, Article 174 of the Penal Code.</p><p>In the First-instance Criminal Judgment No. 93 dated July 25, 2024, of the People&#39;s Court of Binh Duong Province, applying Point a, Clause 4, Article 174 and Point d, Clause 2, Article 353 of the Penal Code, Do Thi Cuong was sentenced to 08 years in prison for the crime of “Fraudulent appropriation of property” and 03 years in prison for the crime of “Embezzlement of property”, making the combined general penalty 11 years in prison.</p><div class=\"detail-section-title\">MATTERS FOR LESSONS LEARNT</div><p>In this case, the accused Do Thi Cuong committed 02 criminal acts:</p><p>(1). With the pre-determined purpose of appropriating money, Do Thi Cuong provided fraudulent information so that Mrs. Phan Thi Kim Hue would trust and hand over the amount of 1,500,000,000 VND, and thereafter appropriated it for personal use. This act of the accused constitutes the crime of “Fraudulent appropriation of property”, not an act of embezzlement of property.</p><p>(2). Do Thi Cuong abused her assigned position and powers to appropriate 250,000,000 VND of sales revenue at the business location directly managed by Cuong, thus committing the crime of “Embezzlement of property” provided in Point d, Clause 2, Article 353 of the Penal Code. Indictment No. 210 dated November 30, 2023, of the People&#39;s Procuracy of Binh Duong Province prosecuting Do Thi Cuong for the crime of “Embezzlement of property” with the amount of 1,750,000,000 VND under the provisions in Clause 4, Article 353 of the Penal Code was inaccurate.</p><p>During the case resolution process, the Investigation Agency and the People&#39;s Procuracy of Binh Duong Province failed to correctly evaluate each criminal act of the accused and failed to closely follow the statutory elements of the crimes, leading to the omission of crimes. After receiving the written request from the Supreme People&#39;s Procuracy (Department 5), the People&#39;s Procuracy of Binh Duong Province returned the file to the Investigation Agency to issue a decision to supplement the decision to initiate criminal proceedings and supplement the decision to initiate charges against the accused, which prolonged the case resolution time.</p><p>The Supreme People&#39;s Procuracy (Department 5) notifies the People&#39;s Procuracies of provinces and cities to study and draw general lessons, so as to remedy and limit similar violations and shortcomings, to improve the quality of the performance of the prosecution function and supervision of the resolution of criminal cases, and to avoid injustice, errors, or the omission of crimes./.</p>",
+                "provider": "bulk-import",
+                "translatedAt": "2026-07-14T11:23:36.0599830+07:00"
+              }
+            },
+            "translationMeta": {
+              "en": {
+                "status": "ready",
+                "provider": "bulk-import",
+                "translatedAt": "2026-07-14T11:23:36.0599830+07:00"
+              }
+            }
+          },
+          {
+            "id": "case-tbao-rkn-1070-2025-3",
+            "ten": "Bình luận vụ án về tội “Vi phạm quy định về bồi thường, hỗ trợ, tái định cư khi Nhà nước thu hồi đất”",
+            "mo_ta": "",
+            "lvId": "hinh-su",
+            "lvName": "Hình sự",
+            "sfId": "tb-rut-kinh-nghiem",
+            "sfName": "Thông báo rút kinh nghiệm",
+            "sao": 2,
+            "ngay": "2026-07-14T10:40:20.9899757+07:00",
+            "updatedAt": "2026-07-14T04:31:39.263Z",
+            "tom_luoc": "",
+            "ap_dung": "<p>Nội dung văn bản yêu cầu rút kinh nghiệm này có thể được áp dụng như một định hướng nghiệp vụ quan trọng cho các cơ quan tiến hành tố tụng khi giải quyết các vụ án hình sự liên quan đến vi phạm quy định về bồi thường, hỗ trợ, tái định cư khi Nhà nước thu hồi đất, đặc biệt trong giai đoạn chuyển tiếp áp dụng Luật Đất đai năm 2024.</p><p>Cụ thể, định hướng từ văn bản này sẽ được vận dụng trực tiếp vào những tình huống mà cán bộ Ủy ban nhân dân cấp xã có hành vi ký xác nhận sai sự thật về việc các hộ gia đình &quot;trực tiếp sản xuất nông nghiệp&quot; để được hưởng tiền hỗ trợ đào tạo, chuyển đổi nghề, gây thiệt hại lớn cho ngân sách Nhà nước. Trong các trường hợp tương tự, cơ quan tố tụng (đặc biệt là Viện kiểm sát) không được phép viện dẫn sự thay đổi quy định của luật mới (khi luật thay đổi từ trách nhiệm trực tiếp &quot;xác nhận&quot; sang trách nhiệm &quot;phối hợp điều tra, xác định thu nhập&quot;) để tùy tiện kết luận rằng hành vi vi phạm không còn cấu thành tội phạm và đề nghị miễn trách nhiệm hình sự cho bị can theo điểm a Khoản 1 Điều 29 Bộ luật Hình sự. Thay vào đó, các cơ quan chức năng phải nhận thức rõ rằng pháp luật đất đai hiện hành không hề loại trừ trách nhiệm của chính quyền cấp xã trong việc cung cấp thông tin, xác định cá nhân, hộ gia đình có thu nhập từ sản xuất nông nghiệp trên phần đất bị thu hồi.</p><p>Việc áp dụng đúng đắn nguyên tắc này giúp cơ quan công tố đánh giá chính xác bản chất hành vi phạm tội, thực hiện đúng vai trò thực hành quyền công tố, ngăn chặn tình trạng hiểu sai pháp luật để miễn trách nhiệm hình sự một cách vô căn cứ, đồng thời đảm bảo xử lý nghiêm minh các cá nhân gây thất thoát tài sản của Nhà nước.</p>",
+            "chi_tiet": "<div class=\"detail-section-title\">NỘI DUNG VỤ ÁN</div><p>Ngày 02/10/2017, UBND thành phố Kon Tum, tỉnh Kon Tum ban hành Quyết định số 2456/QĐ-UBND về việc phê duyệt phương án bồi thường, hỗ trợ cho các hộ gia đình khi thu hồi đất xây dựng dự án đầu tư xây dựng công trình trụ sở làm việc các Sở, ban ngành thuộc khối văn hóa xã hội (giai đoạn 1): Bồi thường hỗ trợ cho 73 hộ gia đình, số tiền 33.286.765.411 đồng.</p><p>Để có căn cứ quyết định việc bồi thường hỗ trợ nêu trên, từ tháng 4/2017 đến tháng 8/2017, nhân viên Trung tâm phát triển quỹ đất thành phố Kon Tum tự lập mẫu đơn xin xác nhận hộ gia đình, cá nhân trực tiếp sản xuất nông nghiệp rồi phát cho 73 hộ gia đình bị thu hồi đất ở giai đoạn 1 để họ tự điền thông tin sau đó tự đưa hoặc nhờ người khác đưa cho Trần Thị Khánh Vân, Phó Chủ tịch UBND phường Thống Nhất, thành phố Kon Tum ký xác nhận vào đơn. Trong số 73 hộ gia đình được bồi thường hỗ trợ nêu trên, có 16 hộ gia đình được hỗ trợ đào tạo, chuyển đổi nghề số tiền 1.843.626.940 đồng nhưng các hộ này chỉ cho thuê đất mà không trực tiếp sản xuất nông nghiệp.</p><p>Kết luận giám định của giám định viên Sở Tài nguyên và Môi trường tỉnh Kon Tum xác định: 1. Đối với nội dung hỗ trợ đào tạo chuyển đổi nghề, tìm kiếm việc làm:... trường hợp đã có cơ sở xác định các hộ gia đình không trực tiếp sản xuất nông nghiệp thì không có cơ sở để xem xét hỗ trợ đào tạo chuyển đổi nghề, tìm kiếm việc làm...</p><p>Như vậy, có căn cứ xác định hành vi của Trần Thị Khánh Vân đã vi phạm quy định tại Khoản 2 Điều 2 Nghị định số 01/2017/NĐ-CP ngày 06/01/2017 (hướng dẫn chi tiết thi hành Luật Đất đai năm 2013), gây thiệt hại cho ngân sách Nhà nước số tiền 1.843.626.940 đồng.</p><p>Ngày 16/8/2023, Cơ quan ANĐT Công an tỉnh Kon Tum quyết định khởi tố vụ án, khởi tố bị can và áp dụng biện pháp ngăn chặn đối với Trần Thị Khánh Vân về tội “Vi phạm quy định về bồi thường hỗ trợ, tái định cư khi Nhà nước thu hồi đất”. Quá trình điều tra bị can Vân và đơn vị liên quan đã nộp khắc phục thiệt hại số tiền 1.362.066.940 đồng, còn lại 481.560.000 đồng.</p><p>Ngày 01/8/2024, Luật Đất đai năm 2024 có hiệu lực thi hành. Ngày 30/7/2024, Chính phủ ban hành Nghị định số 102/2024/NĐ-CP quy định chi tiết một số điều luật của Luật Đất đai năm 2024; Nghị định có hiệu lực thi hành từ ngày 01/8/2024 đồng thời Nghị định số 01/2017/NĐ-CP hết hiệu lực thi hành. Do vậy, Liên ngành tố tụng tỉnh Kon Tum có văn bản xin thỉnh thị và được Cơ quan ANĐT (A09) Bộ Công an trả lời tại Văn bản số 209/ANĐT ngày 04/9/2024 như sau:</p><p>“Pháp luật đất đai hiện hành không quy định UBND cấp xã nơi có đất thu hồi phải xác nhận cá nhân trực tiếp sản xuất nông nghiệp, hộ gia đình trực tiếp sản xuất nông nghiệp có nguồn thu nhập từ sản xuất nông nghiệp để thực hiện hỗ trợ đào tạo, chuyển đổi nghề và tìm kiếm việc làm mà chỉ quy định UBND cấp xã nơi có đất thu hồi phối hợp với đơn vị, tổ chức được giao nhiệm vụ chủ trì thực hiện nhiệm vụ bồi thường, hỗ trợ, tái định cư điều tra, xác định thu nhập từ việc sử dụng đất, tài sản gắn liền với đất thu hồi.</p><p>Căn cứ quy định tại khoản 6 Điều 3 và khoản 1 Điều 86, khoản 2 và khoản 3 Điều 87 Luật Đất đai năm 2024; Điều 3 và Điều 28 nghị định số 102/2024/NĐ-CP ngày 30/7/2024; Điều 3, Điều 22 Nghị định số 88/2024/NĐ-CP ngày 15/7/2024 của Chính phủ thì UBND cấp huyện là cơ quan có trách nhiệm chỉ đạo và tổ chức, phân công các đơn vị, tổ chức thực hiện nhiệm vụ bồi thường, hỗ trợ, tái định cư: có trách nhiệm chỉ đạo, phân công các đơn vị, tổ chức thực hiện đối với nội dung trong kế hoạch thu hồi đất, trong đó có việc cung cấp thông tin theo quy định của pháp luật để xác định cá nhân trực tiếp sản xuất nông nghiệp và phục vụ việc lập, thẩm định phương án bồi thường, hỗ trợ, tái định cư trình UBND cấp huyện quyết định phê duyệt”.</p><p>Một số quy định của pháp luật đất đai:</p><p>- Khoản 1 Điều 86 Luật Đất đai 2024: UBND huyện có trách nhiệm chỉ đạo và tổ chức thực hiện nhiệm vụ bồi thường, hỗ trợ, tái định cư.</p><p>- Điểm d Khoản 2 Điều 87 Luật Đất đai 2024 quy định: Ủy ban nhân dân cấp xã nơi có đất thu hồi phối hợp với đơn vị, tổ chức thực hiện nhiệm vụ bồi thường, hỗ trợ, tái định cư điều tra, xác định... thu nhập từ việc sử dụng đất, tài sản gắn liền với đất thu hồi, nguyện vọng tái định cư, chuyển đổi nghề.</p><p>- Điều 22 Nghị định 88/2024/NĐ-CP ngày 15/7/2024 (hướng dẫn thi hành Luật Đất đai năm 2024) quy định:</p><p>Cá nhân trực tiếp sản xuất nông nghiệp được hỗ trợ đào tạo, chuyển đổi nghề và tìm kiếm việc làm quy định tại điểm a Khoản 1 Điều 109 của Luật Đất đai là cá nhân đang sử dụng đất nông nghiệp mà tại thời điểm phê duyệt phương án bồi thường, hỗ trợ, tái định cư có thu nhập từ sản xuất nông nghiệp trên đất đó...</p><p>Hộ gia đình trực tiếp sản xuất nông nghiệp được hỗ trợ đào tạo, chuyển đổi nghề và tìm kiếm việc làm quy định tại điểm a Khoản 1 Điều 109 của Luật Đất đai là hộ đang sử dụng đất nông nghiệp có ít nhất một thành viên có thu nhập từ sản xuất nông nghiệp trên đất đó....</p><p>Căn cứ các quy định viện dẫn trên đây, kết luận: Pháp luật đất đai hiện hành không loại trừ trách nhiệm của UBND cấp xã trong việc xác định cá nhân, hộ gia đình có thu nhập từ sản xuất nông nghiệp trên đất bị thu hồi.</p><p>Tại cuộc liên ngành tố tụng tỉnh Kon Tum ngày 19/12/2024, Cơ quan điều tra và Tòa án nhân dân tỉnh Kon Tum thống nhất quan điểm: Hành vi của Trần Thị Khánh Vân ký xác nhận hộ gia đình trực tiếp sản xuất trên đất nông nghiệp bị thu hồi không đúng gây thất thoát tài sản nhà nước nên vẫn phải chịu trách nhiệm hình sự.</p><p>Tuy nhiên, Viện kiểm sát nhân dân tỉnh Kon Tum vẫn nêu quan điểm như sau:</p><p>Pháp luật đất đai hiện hành không quy định UBND cấp xã phải xác nhận cá nhân, hộ gia đình trực tiếp sản xuất nông nghiệp, mà chỉ quy định UBND cấp xã phối hợp với đơn vị, tổ chức được giao nhiệm vụ chủ trì thực hiện nhiệm vụ bồi thường, hỗ trợ. Trong khi đó, việc quy định UBND cấp xã phối hợp như thế nào thì chưa được hướng dẫn cụ thể, nên bị can Trần Thị Khánh Vân thuộc trường hợp miễn trách nhiệm hình sự theo quy định tại điểm a Khoản 1 Điều 29 BLHS.</p><p>Quan điểm này là không có căn cứ và trái với quy định của Luật Đất đai năm 2024 và hướng dẫn thi hành luật đã viện dẫn ở trên, gây ảnh hưởng đến việc thực hiện vai trò, chức năng thực hành quyền công tố và kiểm sát điều tra vụ án của Viện kiểm sát kiểm sát nhân dân tỉnh Kon Tum.</p><p>Yêu cầu Viện trưởng Viện kiểm sát nhân dân tỉnh Kon Tum tổ chức rút kinh nghiệm, kiểm điểm nghiêm trách nhiệm của tập thể, cá nhân có liên quan và thông báo kết quả đến Vụ 3 để báo cáo lãnh đạo Viện kiểm sát nhân dân tối cao./.</p>",
+            "timeline": [],
+            "laws": [
+              {
+                "name": "Khoản 2 Điều 2",
+                "content": ""
+              },
+              {
+                "name": "khoản 6 Điều 3",
+                "content": ""
+              },
+              {
+                "name": "khoản 1 Điều 86",
+                "content": ""
+              },
+              {
+                "name": "khoản 3 Điều 87 Luật Đất đai năm 2024",
+                "content": ""
+              },
+              {
+                "name": "Điều 3",
+                "content": "14. Ly hôn là việc chấm đứt quan hệ vợ chồng theo bản án, quyết định có hiệu lực pháp luật của Tòa án.",
+                "name_en": "Article 3",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Article 3",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Điều 28",
+                "content": "",
+                "name_en": "Article 28",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Article 28",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Điều 22",
+                "content": "Hội Người cao tuổi cơ sở là nền tảng của Hội. Hội cơ sở có con dấu, tài khoản, trụ sở, được hỗ trợ kinh phí hoạt động theo quy định của pháp luật",
+                "name_en": "Article 22",
+                "translations": {
+                  "en": {
+                    "title": "Article 22",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Khoản 1 Điều 86 Luật Đất đai 2024",
+                "content": ""
+              },
+              {
+                "name": "Điểm d Khoản 2 Điều 87 Luật Đất đai 2024 quy định",
+                "content": ""
+              },
+              {
+                "name": "điểm a Khoản 1 Điều 109 của Luật Đất đai l&#224",
+                "content": ""
+              },
+              {
+                "name": "điểm a Khoản 1 Điều 29",
+                "content": ""
+              },
+              {
+                "name": "Clause 2, Article 2",
+                "content": "",
+                "name_en": "Clause 2, Article 2",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Clause 2, Article 2",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Clause 6, Article 3",
+                "content": "",
+                "name_en": "Clause 6, Article 3",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Clause 6, Article 3",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Clause 1, Article 86",
+                "content": "",
+                "name_en": "Clause 1, Article 86",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Clause 1, Article 86",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Article 87",
+                "content": "",
+                "name_en": "Article 87",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Article 87",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Point d, Clause 2, Article 87",
+                "content": "",
+                "name_en": "Point d, Clause 2, Article 87",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Point d, Clause 2, Article 87",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Point a, Clause 1, Article 109 of the Land Law",
+                "content": "",
+                "name_en": "Point a, Clause 1, Article 109 of the Land Law",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Point a, Clause 1, Article 109 of the Land Law",
+                    "content": ""
+                  }
+                }
+              },
+              {
+                "name": "Point a, Clause 1, Article 29",
+                "content": "",
+                "name_en": "Point a, Clause 1, Article 29",
+                "content_en": "",
+                "translations": {
+                  "en": {
+                    "title": "Point a, Clause 1, Article 29",
+                    "content": ""
+                  }
+                }
+              }
+            ],
+            "translations": {
+              "en": {
+                "ten": "Commentary on the case regarding the crime of \"Violating regulations on compensation, support, and resettlement upon land recovery by the State.\"",
+                "ap_dung": "<p>The content of this experience-drawing document can be applied as an important professional guideline for judicial bodies when resolving criminal cases related to violations of regulations on compensation, support, and resettlement upon land recovery by the State, particularly during the transition period of applying the 2024 Land Law.</p><p>Specifically, the guidance from this document will be directly utilized in situations where commune-level People&#39;s Committee officials falsely certify individuals or households as &quot;directly engaged in agricultural production&quot; to illegally receive career transition training support, causing massive financial losses to the State budget. In similar cases, procedural agencies (especially the Procuracy) must not cite the regulatory wording changes in the new law (when the law shifts from a direct &quot;certification&quot; responsibility to a &quot;coordination in investigation and income determination&quot; responsibility) to arbitrarily conclude that the violation no longer constitutes a crime and propose an exemption from criminal liability for the defendant under Point a, Clause 1, Article 29 of the Penal Code. Instead, competent authorities must clearly understand that the current land law does not exclude the responsibility of the commune-level government in providing information and identifying individuals and households earning income from agricultural production on the recovered land.</p><p>Correctly applying this principle helps prosecution agencies accurately evaluate the nature of the criminal act, properly exercise their public prosecution role, prevent the misinterpretation of the law to baselessly exempt criminal liability, and ensure the strict punishment of individuals who cause losses to State property.</p>",
+                "chi_tiet": "<div class=\"detail-section-title\">CASE FACTS</div><p>On October 2, 2017, the People&#39;s Committee (PC) of Kon Tum City, Kon Tum Province issued Decision No. 2456/QĐ-UBND approving the compensation and support plan for households upon land recovery for the construction of the investment project to build headquarters of Departments and Sectors under the socio-cultural sector (Phase 1): Compensation and support for 73 households, with the amount of 33,286,765,411 VND.</p><p>To serve as a basis for the decision on the aforementioned compensation and support, from April 2017 to August 2017, officers of the Land Fund Development Center of Kon Tum City self-drafted application templates for confirmation of households and individuals directly engaged in agricultural production, then distributed them to the 73 households whose land was recovered in Phase 1 for them to fill in the information on their own, and thereafter deliver directly or through others to Tran Thi Khanh Van, Vice Chairwoman of the PC of Thong Nhat Ward, Kon Tum City for signature and confirmation on the applications. Among the 73 households receiving the compensation and support mentioned above, there were 16 households receiving vocational training, transition, and job search support with an amount of 1,843,626,940 VND, but these households only leased out the land without being directly engaged in agricultural production.</p><p>The Expert Conclusion of the expert from the Department of Natural Resources and Environment of Kon Tum Province determined: 1. Regarding the support for vocational training, transition, and job search:... in cases where there are grounds to determine that the households were not directly engaged in agricultural production, there are no grounds to consider support for vocational training, transition, and job search...</p><p>As such, there are grounds to determine that the acts of Tran Thi Khanh Van violated the provisions in Clause 2, Article 2 of Decree No. 01/2017/NĐ-CP dated January 6, 2017 (detailing the implementation of the 2013 Land Law), causing a loss to the State budget of 1,843,626,940 VND.</p><p>On August 16, 2023, the Security Investigation Agency of the PC of Kon Tum Province decided to initiate criminal proceedings, initiate charges against the accused, and apply preventive measures against Tran Thi Khanh Van for the crime of “Violating regulations on compensation, support, and resettlement upon land recovery by the State”. During the investigation process, the accused Van and the related unit submitted payments to remedy the damages in the amount of 1,362,066,940 VND, leaving an outstanding amount of 481,560,000 VND.</p><p>On August 1, 2024, the 2024 Land Law took legal effect. On July 30, 2024, the Government issued Decree No. 102/2024/NĐ-CP detailing a number of articles of the 2024 Land Law; the Decree took legal effect from August 1, 2024, and simultaneously Decree No. 01/2017/NĐ-CP expired. Therefore, the inter-branch of procedural agencies of Kon Tum Province sent a written request for directives and was replied to by the Security Investigation Agency (A09) of the Ministry of Public Security in Document No. 209/ANĐT dated September 4, 2024, as follows:</p><p>“The current land law does not stipulate that the commune-level PC of the locality where the land is recovered must confirm that the individuals directly engaged in agricultural production or the households directly engaged in agricultural production have income sources from agricultural production to implement support for vocational training, transition, and job search, but only stipulates that the commune-level PC of the locality where the land is recovered shall coordinate with the unit or organization assigned to preside over the compensation, support, and resettlement tasks to investigate and determine income from the use of recovered land and assets attached to the recovered land.</p><p>Based on the provisions in Clause 6, Article 3 and Clause 1, Article 86, and Clauses 2 and 3, Article 87 of the 2024 Land Law; Article 3 and Article 28 of Decree No. 102/2024/NĐ-CP dated July 30, 2024; and Article 3 and Article 22 of Decree No. 88/2024/NĐ-CP dated July 15, 2024, of the Government, the district-level PC is the agency responsible for directing, organizing, and assigning units and organizations to perform compensation, support, and resettlement tasks: having the responsibility to direct and assign units and organizations to perform the contents within the land recovery plan, including the provision of information in accordance with the provisions of law to determine individuals directly engaged in agricultural production and to serve the formulation and appraisal of compensation, support, and resettlement plans to submit to the district-level PC for approval decision”.</p><p>A number of provisions of the land law:</p><p>Clause 1, Article 86 of the 2024 Land Law: The district PC is responsible for directing and organizing the implementation of compensation, support, and resettlement tasks.</p><p>Point d, Clause 2, Article 87 of the 2024 Land Law provides: The commune-level People&#39;s Committee of the locality where land is recovered shall coordinate with the unit or organization performing the compensation, support, and resettlement tasks to investigate, determine... income from the use of recovered land and assets attached to the recovered land, resettlement aspirations, and vocational transition.</p><p>Article 22 of Decree No. 88/2024/NĐ-CP dated July 15, 2024 (guiding the implementation of the 2024 Land Law) provides:</p><p>An individual directly engaged in agricultural production who is supported with vocational training, transition, and job search provided in Point a, Clause 1, Article 109 of the Land Law is an individual currently using agricultural land who, at the time of approval of the compensation, support, and resettlement plan, has income from agricultural production on such land...</p><p>A household directly engaged in agricultural production supported with vocational training, transition, and job search provided in Point a, Clause 1, Article 109 of the Land Law is a household currently using agricultural land that has at least one member with income from agricultural production on such land...</p><p>Based on the provisions cited above, it is concluded: The current land law does not exclude the responsibility of the commune-level PC in determining individuals and households having income from agricultural production on the recovered land.</p><p>At the meeting of the inter-branch of procedural agencies of Kon Tum Province on December 19, 2024, the Investigation Agency and the People&#39;s Court of Kon Tum Province reached consensus on the viewpoint: The act of Tran Thi Khanh Van signing and confirming incorrectly that households were directly engaged in production on the recovered agricultural land, causing loss of State assets, must still bear criminal responsibility.</p><p>However, the People&#39;s Procuracy of Kon Tum Province still expressed the viewpoint as follows:</p><p>The current land law does not stipulate that the commune-level PC must confirm individuals and households directly engaged in agricultural production, but only stipulates that the commune-level PC shall coordinate with the unit or organization assigned to preside over the compensation and support tasks. Meanwhile, regarding how the commune-level PC coordinates, there has been no specific guidance; therefore, the accused Tran Thi Khanh Van falls within the case of exemption from criminal responsibility under the provisions in Point a, Clause 1, Article 29 of the Penal Code.</p><p>This viewpoint is groundless and contrary to the provisions of the 2024 Land Law and the guided implementation of the law cited above, affecting the execution of the role and functions of prosecution performance and investigation supervision of the case of the People&#39;s Procuracy of Kon Tum Province.</p><p>Requesting the Chief Procurator of the People&#39;s Procuracy of Kon Tum Province to organize a meeting to draw lessons, strictly review the responsibilities of the related collective and individuals, and notify the results to Department 3 to report to the leadership of the Supreme People&#39;s Procuracy./.</p>",
+                "provider": "manual-admin",
+                "translatedAt": "2026-07-14T04:31:39.263Z"
+              }
+            },
+            "translationMeta": {
+              "en": {
+                "status": "ready",
+                "provider": "manual-admin",
+                "translatedAt": "2026-07-14T04:31:39.263Z"
+              }
+            }
+          }
         ]
       },
       "recent": [
+        {
+          "id": "case-tbao-rkn-1070-2025-3",
+          "ten": "Bình luận vụ án về tội “Vi phạm quy định về bồi thường, hỗ trợ, tái định cư khi Nhà nước thu hồi đất”",
+          "lvId": "hinh-su",
+          "sfId": "tb-rut-kinh-nghiem"
+        },
+        {
+          "id": "case-tb-rkn-7857-2024-2",
+          "ten": "Bình luận về thông báo rút kinh nghiệm về việc bỏ lọt tội phạm",
+          "lvId": "hinh-su",
+          "sfId": "tb-rut-kinh-nghiem"
+        },
+        {
+          "id": "case-tb-rkn-16-2025-1",
+          "ten": "Bình luận về thông báo rút kinh nghiệm về tổng hợp hình phạt của nhiều bản án",
+          "lvId": "hinh-su",
+          "sfId": "tb-rut-kinh-nghiem"
+        },
         {
           "id": "case-an-le-so-76-4",
           "ten": "Bình luận về Án lệ số 76/2025/AL về việc tịch thu sung vào ngân sách Nhà nước công cụ, phương tiện dùng vào việc phạm tội chưa sang tên",
@@ -23036,7 +23437,7 @@
             {
               "id": "tb-rut-kinh-nghiem",
               "ten": "Thông báo rút kinh nghiệm",
-              "soLuong": 0
+              "soLuong": 3
             },
             {
               "id": "giai-dap-nghiep-vu",
@@ -23044,7 +23445,7 @@
               "soLuong": 5
             }
           ],
-          "totalCases": 25
+          "totalCases": 28
         },
         {
           "id": "dan-su",
@@ -23541,8 +23942,16 @@
         }
       },
       "law-134": {
-        "title": "khoản 6 Điều 134. Tội cố ý gây thương tích hoặc gây tổn hại cho sức khỏe của người khác",
-        "content": "6. Người nào chuẩn bị vũ khí, vật liệu nổ, hung khí nguy hiểm, a-xít nguy<br>hiểm, hóa chất nguy hiểm hoặc thành lập hoặc tham gia nhóm tội phạm nhằm gây thương tích hoặc gây tổn hại cho sức khỏe của người khác, thì bị phạt cải tạo không giam giữ đến 02 năm hoặc phạt tù từ 03 tháng đến 02 năm."
+        "title": "Điều 134 Bộ luật H&#236",
+        "content": "6. Người nào chuẩn bị vũ khí, vật liệu nổ, hung khí nguy hiểm, a-xít nguyhiểm, hóa chất nguy hiểm hoặc thành lập hoặc tham gia nhóm tội phạm nhằm gây thương tích hoặc gây tổn hại cho sức khỏe của người khác, thì bị phạt cải tạo không giam giữ đến 02 năm hoặc phạt tù từ 03 tháng đến 02 năm.",
+        "title_en": "Article 134",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Article 134",
+            "content": ""
+          }
+        }
       },
       "law-36": {
         "title": "Điều 36 Bộ luật Tố tụng d&#226",
@@ -23889,8 +24298,16 @@
         }
       },
       "law-22": {
-        "title": "khoản 1 Điều 22",
-        "content": "Hội Người cao tuổi cơ sở là nền tảng của Hội. Hội cơ sở có con dấu, tài khoản, trụ sở, được hỗ trợ kinh phí hoạt động theo quy định của pháp luật"
+        "title": "Điều 22",
+        "content": "Hội Người cao tuổi cơ sở là nền tảng của Hội. Hội cơ sở có con dấu, tài khoản, trụ sở, được hỗ trợ kinh phí hoạt động theo quy định của pháp luật",
+        "title_en": "Article 22",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Article 22",
+            "content": ""
+          }
+        }
       },
       "law-210": {
         "title": "Khoản 3 Điều 210. Trình tự phiên họp kiểm tra việc giao nộp, tiếp cận, công khai chứng cứ và hòa giải",
@@ -25341,7 +25758,7 @@
         }
       },
       "law-123:clause-1:point-n": {
-        "title": "điểm n khoản 1 Điều 123 của Bộ luật H&#236",
+        "title": "điểm n khoản 1 Điều 123 Bộ luật H&#236",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -28413,7 +28830,7 @@
         }
       },
       "law-2:clause-2": {
-        "title": "khoản 2 Điều 2 Luật Trọng t&#224",
+        "title": "Khoản 2 Điều 2",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -28569,13 +28986,13 @@
         }
       },
       "law-2:clause-2,article": {
-        "title": "Clause 2, Article 2 of the Law on Commercial Arbitration which stipulates",
+        "title": "Clause 2, Article 2",
         "content": "",
-        "title_en": "Clause 2, Article 2 of the Law on Commercial Arbitration which stipulates",
+        "title_en": "Clause 2, Article 2",
         "content_en": "",
         "translations": {
           "en": {
-            "title": "Clause 2, Article 2 of the Law on Commercial Arbitration which stipulates",
+            "title": "Clause 2, Article 2",
             "content": ""
           }
         }
@@ -34509,7 +34926,7 @@
         }
       },
       "law-3:clause-6": {
-        "title": "Khoản 6 Điều 3 Luật Tố tụng h&#224",
+        "title": "khoản 6 Điều 3",
         "content": "",
         "title_en": "",
         "content_en": "",
@@ -35731,6 +36148,306 @@
             "content": ""
           }
         }
+      },
+      "law-86:clause-1": {
+        "title": "khoản 1 Điều 86",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-87:clause-3": {
+        "title": "khoản 3 Điều 87 Luật Đất đai năm 2024",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-86:clause-1": {
+        "title": "Khoản 1 Điều 86 Luật Đất đai 2024",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-87:clause-2:point-d": {
+        "title": "Điểm d Khoản 2 Điều 87 Luật Đất đai 2024 quy định",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "ldd-109:clause-1:point-a": {
+        "title": "điểm a Khoản 1 Điều 109 của Luật Đất đai l&#224",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-29:clause-1:point-a": {
+        "title": "điểm a Khoản 1 Điều 29",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-86:clause-1,article": {
+        "title": "Clause 1, Article 86",
+        "content": "",
+        "title_en": "Clause 1, Article 86",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Clause 1, Article 86",
+            "content": ""
+          }
+        }
+      },
+      "law-87": {
+        "title": "Article 87",
+        "content": "",
+        "title_en": "Article 87",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Article 87",
+            "content": ""
+          }
+        }
+      },
+      "law-87:clause-2,article:point-d": {
+        "title": "Point d, Clause 2, Article 87",
+        "content": "",
+        "title_en": "Point d, Clause 2, Article 87",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Point d, Clause 2, Article 87",
+            "content": ""
+          }
+        }
+      },
+      "ldd-109:clause-1,article:point-a": {
+        "title": "Point a, Clause 1, Article 109 of the Land Law",
+        "content": "",
+        "title_en": "Point a, Clause 1, Article 109 of the Land Law",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Point a, Clause 1, Article 109 of the Land Law",
+            "content": ""
+          }
+        }
+      },
+      "law-29:clause-1,article:point-a": {
+        "title": "Point a, Clause 1, Article 29",
+        "content": "",
+        "title_en": "Point a, Clause 1, Article 29",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Point a, Clause 1, Article 29",
+            "content": ""
+          }
+        }
+      },
+      "law-353:clause-4:point-a": {
+        "title": "điểm a Khoản 4 Điều 353 Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-353:clause-2:point-d": {
+        "title": "điểm d Khoản 2 Điều 353",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-174:clause-4:point-a": {
+        "title": "điểm a Khoản 4 Điều 174 Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-353:clause-4": {
+        "title": "Khoản 4 Điều 353 Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-353:clause-4,article:point-a": {
+        "title": "Point a, Clause 4, Article 353",
+        "content": "",
+        "title_en": "Point a, Clause 4, Article 353",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Point a, Clause 4, Article 353",
+            "content": ""
+          }
+        }
+      },
+      "law-353:clause-2,article:point-d": {
+        "title": "Point d, Clause 2, Article 353",
+        "content": "",
+        "title_en": "Point d, Clause 2, Article 353",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Point d, Clause 2, Article 353",
+            "content": ""
+          }
+        }
+      },
+      "law-174:clause-4,article:point-a": {
+        "title": "Point a, Clause 4, Article 174",
+        "content": "",
+        "title_en": "Point a, Clause 4, Article 174",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Point a, Clause 4, Article 174",
+            "content": ""
+          }
+        }
+      },
+      "law-353:clause-4,article": {
+        "title": "Clause 4, Article 353",
+        "content": "",
+        "title_en": "Clause 4, Article 353",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Clause 4, Article 353",
+            "content": ""
+          }
+        }
+      },
+      "law-123:clause-1:point-p": {
+        "title": "điểm p khoản 1 Điều 123 Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-260:clause-1:point-b": {
+        "title": "điểm b khoản 1 Điều 260 Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-191:clause-2:point-k": {
+        "title": "điểm k khoản 2 Điều 191 Bộ luật H&#236",
+        "content": "",
+        "title_en": "",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "law-123:clause-1,article": {
+        "title": "Clause 1, Article 123",
+        "content": "",
+        "title_en": "Clause 1, Article 123",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Clause 1, Article 123",
+            "content": ""
+          }
+        }
+      },
+      "law-260:clause-1,article:point-b": {
+        "title": "Point b, Clause 1, Article 260",
+        "content": "",
+        "title_en": "Point b, Clause 1, Article 260",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Point b, Clause 1, Article 260",
+            "content": ""
+          }
+        }
+      },
+      "law-191:clause-2,article:point-k": {
+        "title": "Point k, Clause 2, Article 191",
+        "content": "",
+        "title_en": "Point k, Clause 2, Article 191",
+        "content_en": "",
+        "translations": {
+          "en": {
+            "title": "Point k, Clause 2, Article 191",
+            "content": ""
+          }
+        }
       }
     },
     "caseOrder": {
@@ -35826,6 +36543,11 @@
         "case-an-le-so-19-4",
         "case-an-le-18-2",
         "case-an-le-17-1"
+      ],
+      "hinh-su::tb-rut-kinh-nghiem": [
+        "case-tb-rkn-16-2025-1",
+        "case-tb-rkn-7857-2024-2",
+        "case-tbao-rkn-1070-2025-3"
       ]
     },
     "language": "vi"
