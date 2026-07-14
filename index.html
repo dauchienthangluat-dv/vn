@@ -1486,6 +1486,7 @@ const ITEMS_PER_PAGE = 8;
 const LANGUAGE_STORAGE_KEY = 'dcsl_ui_lang';
 const CASE_ORDER_STORAGE_KEY = 'dcsl_case_order';
 const SITE_DATA_URL = 'data/site-data.json';
+const CLOUD_DATA_URL = ''; // Dữ liệu đám mây Cloudflare — điền URL Worker sau khi tạo (xem huong-dan-dam-may.md)
 const SITE_DATA_TYPE = 'dcsl-site-data';
 let SITE_CASE_ORDER = {};
 let isReorderMode = false;
@@ -3741,17 +3742,32 @@ function normalizeSiteDataPayload(payload) {
     return normalizeAdminBackupPayload({ data });
 }
 
+function applySiteDataParsed(parsed) {
+    const siteData = normalizeSiteDataPayload(parsed);
+    SITE_CASE_ORDER = siteData.caseOrder && typeof siteData.caseOrder === 'object' ? siteData.caseOrder : {};
+    applyCasesSnapshot(siteData.casesData);
+    if(siteData.lawDb && typeof siteData.lawDb === 'object') Object.assign(LAW_DB, siteData.lawDb);
+    applyStoredCaseOrder();
+}
+
 async function loadSharedSiteData() {
+    // Ưu tiên dữ liệu đám mây (cập nhật tức thì), lỗi thì dùng file trong repo
+    if (CLOUD_DATA_URL) {
+        try {
+            const cloudResp = await fetch(CLOUD_DATA_URL, { cache: 'no-store' });
+            if (cloudResp.ok) {
+                applySiteDataParsed(await cloudResp.json());
+                return true;
+            }
+        } catch(e) {
+            console.warn('Không tải được dữ liệu đám mây, chuyển sang file cục bộ:', e);
+        }
+    }
     if(window.location.protocol === 'file:') return false;
     try {
         const response = await fetch(SITE_DATA_URL, { cache: 'no-store' });
         if(!response.ok) return false;
-        const parsed = await response.json();
-        const siteData = normalizeSiteDataPayload(parsed);
-        SITE_CASE_ORDER = siteData.caseOrder && typeof siteData.caseOrder === 'object' ? siteData.caseOrder : {};
-        applyCasesSnapshot(siteData.casesData);
-        if(siteData.lawDb && typeof siteData.lawDb === 'object') Object.assign(LAW_DB, siteData.lawDb);
-        applyStoredCaseOrder();
+        applySiteDataParsed(await response.json());
         return true;
     } catch(e) {
         console.warn('Không thể tải dữ liệu web chung:', e);
