@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
@@ -1486,7 +1486,6 @@ const ITEMS_PER_PAGE = 8;
 const LANGUAGE_STORAGE_KEY = 'dcsl_ui_lang';
 const CASE_ORDER_STORAGE_KEY = 'dcsl_case_order';
 const SITE_DATA_URL = 'data/site-data.json';
-const CLOUD_DATA_URL = 'https://webluat-data.ngocduc2006-hp.workers.dev/'; // Dữ liệu đám mây Cloudflare — điền URL Worker sau khi tạo (xem huong-dan-dam-may.md)
 const SITE_DATA_TYPE = 'dcsl-site-data';
 let SITE_CASE_ORDER = {};
 let isReorderMode = false;
@@ -3742,32 +3741,17 @@ function normalizeSiteDataPayload(payload) {
     return normalizeAdminBackupPayload({ data });
 }
 
-function applySiteDataParsed(parsed) {
-    const siteData = normalizeSiteDataPayload(parsed);
-    SITE_CASE_ORDER = siteData.caseOrder && typeof siteData.caseOrder === 'object' ? siteData.caseOrder : {};
-    applyCasesSnapshot(siteData.casesData);
-    if(siteData.lawDb && typeof siteData.lawDb === 'object') Object.assign(LAW_DB, siteData.lawDb);
-    applyStoredCaseOrder();
-}
-
 async function loadSharedSiteData() {
-    // Ưu tiên dữ liệu đám mây (cập nhật tức thì), lỗi thì dùng file trong repo
-    if (CLOUD_DATA_URL) {
-        try {
-            const cloudResp = await fetch(CLOUD_DATA_URL, { cache: 'no-store' });
-            if (cloudResp.ok) {
-                applySiteDataParsed(await cloudResp.json());
-                return true;
-            }
-        } catch(e) {
-            console.warn('Không tải được dữ liệu đám mây, chuyển sang file cục bộ:', e);
-        }
-    }
     if(window.location.protocol === 'file:') return false;
     try {
         const response = await fetch(SITE_DATA_URL, { cache: 'no-store' });
         if(!response.ok) return false;
-        applySiteDataParsed(await response.json());
+        const parsed = await response.json();
+        const siteData = normalizeSiteDataPayload(parsed);
+        SITE_CASE_ORDER = siteData.caseOrder && typeof siteData.caseOrder === 'object' ? siteData.caseOrder : {};
+        applyCasesSnapshot(siteData.casesData);
+        if(siteData.lawDb && typeof siteData.lawDb === 'object') Object.assign(LAW_DB, siteData.lawDb);
+        applyStoredCaseOrder();
         return true;
     } catch(e) {
         console.warn('Không thể tải dữ liệu web chung:', e);
@@ -5094,7 +5078,10 @@ async function callThueClaudeAPI(apiKey, outputEl) {
     method: 'POST',
     headers,
     body: JSON.stringify({
-      model: 'google/gemini-2.5-flash',
+      model: 'qwen/qwen3-235b-a22b-2507',
+      // Fallback tự động của OpenRouter: nếu model chính lỗi (hết hạn mức, chặn khu vực...)
+      // thì thử lần lượt các model dự phòng bên dưới
+      models: ['qwen/qwen3-235b-a22b-2507', 'qwen/qwen-2.5-72b-instruct'],
       messages,
       stream: true,
       max_tokens: 8192,
