@@ -5078,10 +5078,10 @@ async function callThueClaudeAPI(apiKey, outputEl) {
     method: 'POST',
     headers,
     body: JSON.stringify({
-      model: 'qwen/qwen3-235b-a22b-2507',
+      model: 'moonshotai/kimi-k2.5',
       // Fallback tự động của OpenRouter: nếu model chính lỗi (hết hạn mức, chặn khu vực...)
-      // thì thử lần lượt các model dự phòng bên dưới
-      models: ['qwen/qwen3-235b-a22b-2507', 'qwen/qwen-2.5-72b-instruct'],
+      // thì thử model dự phòng. KHÔNG dùng model yếu làm fallback (dễ bịa trích dẫn).
+      models: ['moonshotai/kimi-k2.5', 'qwen/qwen3-235b-a22b-2507'],
       messages,
       stream: true,
       max_tokens: 8192,
