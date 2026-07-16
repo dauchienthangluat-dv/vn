@@ -421,6 +421,10 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 .doc-article-title{ font-family:'Be Vietnam Pro',sans-serif; font-size:1.06rem; font-weight:700; color:var(--navy); margin:22px 0 10px 0; line-height:1.5; }
 .ed-btn{ cursor:pointer; display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:22px; padding:0 6px; border:1px solid var(--gold-border); border-radius:4px; font-size:0.75rem; color:var(--navy); background:#fff; user-select:none; }
 .ed-btn:hover{ background:var(--gold-dim); border-color:var(--navy); }
+/* Link văn bản gốc (nguồn ngoài như Thư viện pháp luật) */
+.case-name .case-ext-ico{ font-size:0.85em; opacity:0.65; vertical-align:middle; margin-left:2px; }
+.case-source-link{ display:inline-flex; align-items:center; gap:4px; margin-left:12px; font-size:0.85rem; font-weight:600; color:var(--gold-rich); text-decoration:none; }
+.case-source-link:hover{ text-decoration:underline; }
 /* ===== VBPL-CSS END ===== */
 
 
@@ -467,6 +471,12 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 @keyframes tDot { 0%,80%,100%{opacity:0.3;transform:scale(0.8);}40%{opacity:1;transform:scale(1);} }
 @keyframes spin { from{transform:rotate(0deg);}to{transform:rotate(360deg);} }
 .thue-legal-cite { background: rgba(255,153,0,0.12); color: var(--gold-rich); border-radius: 3px; padding: 1px 5px; font-size: 0.85em; font-weight: 500; border: 1px solid var(--gold-border); white-space: nowrap; }
+/* Bảng markdown | ... | — dùng chung cho kết quả Thuế AI và nội dung bản án */
+.md-table-wrap { overflow-x: auto; margin: 14px 0; border-radius: 8px; border: 1px solid var(--gold-border); }
+.md-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; background: var(--surface, #fff); }
+.md-table th { background: var(--navy); color: #fff; padding: 9px 12px; text-align: left; font-weight: 600; font-size: 0.84rem; }
+.md-table td { padding: 8px 12px; border-top: 1px solid var(--gold-border); vertical-align: top; line-height: 1.55; white-space: normal; }
+.md-table tbody tr:nth-child(even) { background: var(--bg2); }
 .thue-followup { margin-top: 14px; padding: 16px; background: var(--bg2); border: 1px solid var(--gold-border); border-radius: 8px; }
 .thue-followup-label { font-size: 0.85rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
 .thue-followup-textarea { width: 100%; min-height: 80px; padding: 12px; border: 1px solid var(--gold-border); border-radius: 6px; font-family: 'Be Vietnam Pro', sans-serif; font-size: 0.87rem; resize: vertical; outline: none; transition: border-color 0.2s; background: var(--surface); color: var(--text); }
@@ -1016,6 +1026,10 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
         <span style="cursor:pointer; color:var(--navy); font-size:0.75rem; font-weight:600;" onclick="cleanEditorText('ad-mota')"><i class="ph ph-broom"></i> Nối dòng</span>
       </label>
       <textarea id="ad-mota" class="admin-input" style="height: 60px;"></textarea>
+    </div>
+    <div class="admin-form-group">
+      <label class="admin-label">Link văn bản gốc (tùy chọn — dán link nguồn ngoài như Thư viện pháp luật; bấm tiêu đề ở danh sách sẽ mở link này):</label>
+      <input type="url" id="ad-link" class="admin-input" placeholder="https://thuvienphapluat.vn/van-ban/...">
     </div>
     <div class="admin-form-group" id="admin-part-1-vi">
       <label class="admin-label" style="display:flex; justify-content:space-between;">
@@ -1998,6 +2012,18 @@ function renderGiaiDapNghiepVu(raw) {
   return vbplHeadingize(html, /^(?:\d+[.)]\s|Câu\s+hỏi\b)[\s\S]*\?\s*[”"']?\s*$/i);
 }
 /* ===== VBPL-INTEGRATION END ===== */
+
+/* ===== LINK-NGUON START (Link văn bản gốc trên nguồn ngoài, vd Thư viện pháp luật) ===== */
+// Trả về URL hợp lệ (http/https) của văn bản gốc, hoặc '' nếu không có/không hợp lệ
+function getCaseSourceLink(c) {
+  let raw = String((c && (c.link || c.link_nguon || c.sourceLink || c.url)) || '').trim();
+  if(!raw) return '';
+  raw = raw.split(/\s+/)[0]; // chỉ lấy phần đầu nếu lỡ dán kèm chữ thừa
+  if(/^https?:\/\//i.test(raw)) return raw;
+  if(/^[a-z0-9][a-z0-9.-]*\.[a-z]{2,}(\/|$)/i.test(raw)) return 'https://' + raw;
+  return '';
+}
+/* ===== LINK-NGUON END ===== */
 
 
 function upgradeContentHeadingMarkup(html) {
@@ -3053,10 +3079,14 @@ function renderCasesList(){
           <button class="case-reorder-btn" onclick="moveCaseInCurrentList('${c.id}',1)" title="Đưa xuống" ${fullIndex >= total - 1 ? 'disabled' : ''}><i class="ph ph-arrow-down"></i></button>
         </div>
       ` : '';
+      const srcLink = getCaseSourceLink(c);
+      const titleAnchor = srcLink
+        ? `<a class="case-name" href="${escapeHtmlText(srcLink)}" target="_blank" rel="noopener noreferrer" title="${getActiveLanguage() === 'en' ? 'Open the original document (external site)' : 'Mở văn bản gốc (trang ngoài)'}">${displayTitle} <i class="ph ph-arrow-square-out case-ext-ico"></i></a>`
+        : `<a class="case-name" href="${escapeHtmlText(routeHref({ view: 'detail', lv: c.lvId, sf: c.sfId, caseId: c.id }))}" onclick="event.preventDefault(); goDetail(null,null,'${c.id}')">${displayTitle}</a>`;
       return `
       <div class="case-item ${isReorderMode && canReorderCurrentCases() ? 'reorder-active' : ''}" id="ci-${c.id}">
         <div class="case-item-header">
-          <div class="case-item-left">${starHtml}<a class="case-name" href="${escapeHtmlText(routeHref({ view: 'detail', lv: c.lvId, sf: c.sfId, caseId: c.id }))}" onclick="event.preventDefault(); goDetail(null,null,'${c.id}')">${displayTitle}</a></div>
+          <div class="case-item-left">${starHtml}${titleAnchor}</div>
           <div style="display:flex; gap:6px;">
             ${reorderControls}
             ${isAdminMode ? `<button class="case-expand-btn" onclick="editCase('${c.id}')" title="Chỉnh sửa"><i class="ph ph-pencil-simple"></i></button><button class="case-expand-btn case-delete-btn" onclick="deleteCase('${c.id}')" title="Xóa vụ án"><i class="ph ph-trash"></i></button>` : ''}
@@ -3148,7 +3178,7 @@ function goDetail(lvId, sfId, caseId){
       } else {
         const detailContent = upgradeContentHeadingMarkup(docRaw);
         if(detailContent){
-          chiTietEl.innerHTML = autoLinkLaws(detailContent);
+          chiTietEl.innerHTML = renderPipeTablesInHtml(autoLinkLaws(detailContent));
         } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>${t('detailLater')}</p></div>`; }
       }
 
@@ -3175,15 +3205,21 @@ function goDetail(lvId, sfId, caseId){
       } else { dienBienEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-clock"></i><p>${t('timelineLater')}</p></div>`; }
 
       const displayApply = upgradeContentHeadingMarkup(getCaseFieldText(cas, 'ap_dung'));
-      if(displayApply){ apDungEl.innerHTML = `<div class="detail-section">${autoLinkLaws(displayApply)}</div>`; }
+      if(displayApply){ apDungEl.innerHTML = `<div class="detail-section">${renderPipeTablesInHtml(autoLinkLaws(displayApply))}</div>`; }
       else { apDungEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-lightbulb"></i><p>${t('applyLater')}</p></div>`; }
 
       const detailContent = upgradeContentHeadingMarkup(getCaseFieldText(cas, 'chi_tiet') || getCaseFieldText(cas, 'tom_luoc') || '');
       if(detailContent){
-        chiTietEl.innerHTML = autoLinkLaws(detailContent);
+        chiTietEl.innerHTML = renderPipeTablesInHtml(autoLinkLaws(detailContent));
       } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-file-text"></i><p>${t('detailLater')}</p></div>`; }
 
       switchTab('dien-bien');
+  }
+
+  // Link văn bản gốc (nguồn ngoài): hiện nút mở trang gốc cạnh nhãn loại tài liệu
+  const detailSrcLink = getCaseSourceLink(cas);
+  if(detailSrcLink){
+    document.getElementById('case-detail-stars').innerHTML += ` <a class="case-source-link" href="${escapeHtmlText(detailSrcLink)}" target="_blank" rel="noopener noreferrer"><i class="ph ph-arrow-square-out"></i> ${getActiveLanguage() === 'en' ? 'View original document' : 'Xem văn bản gốc'}</a>`;
   }
 
   if(typeof renderDetailExtras === 'function') renderDetailExtras(cas);
@@ -3419,6 +3455,7 @@ function editCase(caseId) {
   const c = found.cas; editingCaseId = caseId;
   
   document.getElementById('ad-ten').value = c.ten || ''; document.getElementById('ad-mota').value = c.mo_ta || '';
+  document.getElementById('ad-link').value = c.link || '';
   document.getElementById('ad-lv').value = c.lvId || ''; document.getElementById('ad-sf').value = c.sfId || ''; document.getElementById('ad-tinhchat').value = c.sao || '0';
   document.getElementById('ad-tomluoc').innerHTML = (c.tom_luoc || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
   document.getElementById('ad-apdung').innerHTML = (c.ap_dung || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
@@ -3975,6 +4012,7 @@ function normalizeImportedCase(raw, index) {
     const apDung = detailOnly ? '' : formatImportedContent(raw.ap_dung || raw.analogousUse || raw.ap_dung_tuong_tu || '');
     const chiTiet = formatImportedContent(raw.chi_tiet || raw.detail || raw.noi_dung_chi_tiet || '');
     const moTa = cleanInlineText(raw.mo_ta || raw.summary || raw.tom_tat_ngan || '');
+    const importedLink = getCaseSourceLink({ link: raw.link || raw.link_nguon || raw.linkNguon || raw.url || raw.source_link || raw.sourceLink || '' });
     const timeline = detailOnly ? [] : (Array.isArray(raw.timeline) ? raw.timeline : String(raw.timelineText || raw.timeline_text || '').split(/\r?\n/).map(t => t.trim()).filter(Boolean));
     const rawEn = raw.translations && raw.translations.en ? raw.translations.en : {};
     const searchableText = [ten, moTa, tomLuoc, apDung, chiTiet, rawEn.ten, rawEn.mo_ta, rawEn.tom_luoc, rawEn.ap_dung, rawEn.chi_tiet, raw.lawsText || ''].join(' ');
@@ -3998,6 +4036,7 @@ function normalizeImportedCase(raw, index) {
         timeline: timeline,
         laws: laws
     };
+    if(importedLink) caseData.link = importedLink;
     if(normalizedLvNameEn) caseData.lvName_en = normalizedLvNameEn;
     if(normalizedSfNameEn) caseData.sfName_en = normalizedSfNameEn;
 
@@ -4152,8 +4191,11 @@ function syncAdminLawsToLawDB(laws) {
 
 function submitAdmin() {
   const ten = document.getElementById('ad-ten').value; let lvId = document.getElementById('ad-lv').value; let sfId = document.getElementById('ad-sf').value;
-  const mota = document.getElementById('ad-mota').value; 
+  const mota = document.getElementById('ad-mota').value;
   if(!ten || !lvId || !sfId) { showAlert('Vui lòng điền đủ thông tin bắt buộc.'); return; }
+  const linkRawValue = (document.getElementById('ad-link') || {}).value || '';
+  const linkNguon = getCaseSourceLink({ link: linkRawValue });
+  if(linkRawValue.trim() && !linkNguon) { showAlert('Link văn bản gốc không hợp lệ. Vui lòng dán link đầy đủ bắt đầu bằng https://'); return; }
 
   syncAdminLawsToLawDB(adminFormLaws);
 
@@ -4203,6 +4245,7 @@ function submitAdmin() {
       updatedAt: new Date().toISOString(),
       tom_luoc: detailOnly ? '' : formatEditorContent('ad-tomluoc'), ap_dung: detailOnly ? '' : formatEditorContent('ad-apdung'), chi_tiet: formatEditorContent('ad-chitiet'), timeline: detailOnly ? [] : timelineArr, laws: adminFormLaws
   };
+  if(linkNguon) caseData.link = linkNguon;
   if(finalLvNameEn) caseData.lvName_en = finalLvNameEn;
   if(finalSfNameEn) caseData.sfName_en = finalSfNameEn;
 
@@ -4252,7 +4295,7 @@ function submitAdmin() {
 
   saveCasesDataToStorage();
   if(shouldRefreshDetail) state.curCase = caseData;
-  document.getElementById('ad-ten').value = ''; document.getElementById('ad-mota').value = ''; document.getElementById('ad-tomluoc').innerHTML = ''; document.getElementById('ad-apdung').innerHTML = ''; document.getElementById('ad-chitiet').innerHTML = ''; clearEnglishAdminFields();
+  document.getElementById('ad-ten').value = ''; document.getElementById('ad-mota').value = ''; document.getElementById('ad-link').value = ''; document.getElementById('ad-tomluoc').innerHTML = ''; document.getElementById('ad-apdung').innerHTML = ''; document.getElementById('ad-chitiet').innerHTML = ''; clearEnglishAdminFields();
   editingCaseId = null; renderHome(); if(state.curSF) renderCasesList();
   if(shouldRefreshDetail) goDetail(null, null, caseData.id);
   btn.textContent = 'Lưu Dữ Liệu'; btn.disabled = false; hasUnsavedChanges = false; closeAdmin(); showAlert('Đã lưu thành công!');
@@ -5137,6 +5180,55 @@ async function callThueClaudeAPI(apiKey, outputEl) {
   return fullText;
 }
 
+// ── Bảng markdown | ... | → <table> (dùng chung cho Thuế AI và bản án) ────────
+function buildTableFromPipeLines(lines) {
+  if (!lines || lines.length < 2) return '';
+  const isSep = s => /^\|[\s:\-|]+\|$/.test(String(s).replace(/\s/g, ''));
+  const parseRow = s => String(s).replace(/^\s*\|/, '').replace(/\|\s*$/, '').split('|').map(c => c.trim());
+  let header = null, bodyStart = 0;
+  if (isSep(lines[1])) { header = parseRow(lines[0]); bodyStart = 2; }
+  const rows = [];
+  for (let i = bodyStart; i < lines.length; i++) {
+    if (isSep(lines[i])) continue;
+    rows.push(parseRow(lines[i]));
+  }
+  if (!header && rows.length === 0) return '';
+  const colCount = Math.max(header ? header.length : 1, ...rows.map(r => r.length), 1);
+  let out = '<div class="md-table-wrap"><table class="md-table">';
+  if (header) {
+    out += '<thead><tr>';
+    for (let c = 0; c < colCount; c++) out += '<th>' + (header[c] || '') + '</th>';
+    out += '</tr></thead>';
+  }
+  out += '<tbody>';
+  rows.forEach(r => {
+    out += '<tr>';
+    for (let c = 0; c < colCount; c++) out += '<td>' + (r[c] || '') + '</td>';
+    out += '</tr>';
+  });
+  out += '</tbody></table></div>';
+  return out;
+}
+
+function renderPipeTablesInHtml(html) {
+  html = String(html || '');
+  if (html.indexOf('|') === -1) return html;
+  // Dạng A: mỗi dòng bảng nằm trong một <p>...</p> liền kề nhau (nội dung bản án đã lưu)
+  html = html.replace(/(?:<p[^>]*>\s*\|[\s\S]*?\|\s*<\/p>\s*){2,}/g, m => {
+    const lines = [];
+    m.replace(/<p[^>]*>\s*([\s\S]*?)\s*<\/p>/g, (_, inner) => { lines.push(inner.trim()); return ''; });
+    const tbl = buildTableFromPipeLines(lines.filter(s => s.startsWith('|') && s.endsWith('|')));
+    return tbl || m;
+  });
+  // Dạng B: các dòng bảng ngăn cách bằng \n trong cùng một khối văn bản
+  html = html.replace(/(?:^|\n)((?:[ \t]*\|[^\n]*\|[ \t]*(?:\n|$)){2,})/g, (m, block) => {
+    const lines = block.split('\n').map(s => s.trim()).filter(s => s.startsWith('|') && s.endsWith('|'));
+    const tbl = buildTableFromPipeLines(lines);
+    return tbl ? '\n' + tbl + '\n' : m;
+  });
+  return html;
+}
+
 function formatThueResponse(text) {
   if (!text) return '';
 
@@ -5222,6 +5314,9 @@ function formatThueResponse(text) {
   // Kết quả cuối / số tiền thuế - highlight dòng bắt đầu bằng **Tổng thuế / Số thuế
   html = html.replace(/((?:Tổng|Số) thuế[^<\n]*(?:\d[\d,.]+[^<\n]*(?:đồng|VNĐ|triệu)[^<\n]*))/gi,
     '<strong style="color:var(--navy);font-size:1.02em;">$1</strong>');
+
+  // Bảng markdown | ... | → <table> (phải chạy TRƯỚC khi đổi \n thành <br>)
+  html = renderPipeTablesInHtml(html);
 
   // Xuống dòng
   html = html.replace(/\n\n/g, '</p><p style="margin:10px 0;">');
