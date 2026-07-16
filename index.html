@@ -5084,7 +5084,9 @@ async function callThueClaudeAPI(apiKey, outputEl) {
       models: ['moonshotai/kimi-k2.5', 'qwen/qwen3-235b-a22b-2507'],
       messages,
       stream: true,
-      max_tokens: 8192,
+      // Kimi K2.5 là model suy luận: token suy luận tính chung vào completion
+      // nên cần trần cao hơn để câu trả lời không bị cắt giữa chừng
+      max_tokens: 16384,
       temperature: 0.1
     })
   });
@@ -5099,6 +5101,7 @@ async function callThueClaudeAPI(apiKey, outputEl) {
   const decoder = new TextDecoder();
   let fullText = '';
   let buffer = '';
+  let reasoningChars = 0; // Model thinking (Kimi K2.5...) stream suy luận trước khi trả lời
   outputEl.innerHTML = '';
 
   while (true) {
@@ -5114,11 +5117,18 @@ async function callThueClaudeAPI(apiKey, outputEl) {
       if (!data || data === '[DONE]') continue;
       try {
         const parsed = JSON.parse(data);
-        // Groq / OpenAI SSE format: choices[0].delta.content
-        const text = parsed.choices?.[0]?.delta?.content;
+        const delta = parsed.choices?.[0]?.delta;
+        // OpenAI SSE format: delta.content; model thinking: delta.reasoning
+        const text = delta?.content;
         if (text) {
           fullText += text;
           outputEl.innerHTML = formatThueResponse(fullText);
+        } else if (!fullText && delta?.reasoning) {
+          // Đang trong giai đoạn suy luận — hiện trạng thái để người dùng không tưởng bị treo
+          reasoningChars += delta.reasoning.length;
+          outputEl.innerHTML = '<div style="display:flex;align-items:center;gap:10px;padding:14px 16px;color:var(--navy);opacity:0.75;">'
+            + '<span style="display:inline-block;width:16px;height:16px;border:2px solid var(--gold-rich);border-top-color:transparent;border-radius:50%;animation:spin 0.9s linear infinite;"></span>'
+            + '<em>AI đang suy luận sâu để đảm bảo trích dẫn chính xác... (' + reasoningChars.toLocaleString('vi-VN') + ' ký tự suy luận)</em></div>';
         }
       } catch(e) { /* ignore parse errors on partial chunks */ }
     }
