@@ -3778,22 +3778,34 @@ function normalizeSiteDataPayload(payload) {
     return normalizeAdminBackupPayload({ data });
 }
 
+// URL Worker đám mây (Cloudflare KV) — CHỈ điền URL, KHÔNG BAO GIỜ điền mã bảo mật/token vào file public này
+const CLOUD_DATA_URL = 'https://webluat-data.ngocduc2006-hp.workers.dev/';
+
+async function fetchSiteDataFrom(url) {
+    const response = await fetch(url, { cache: 'no-store' });
+    if(!response.ok) throw new Error('HTTP ' + response.status);
+    return normalizeSiteDataPayload(await response.json());
+}
+
 async function loadSharedSiteData() {
-    if(window.location.protocol === 'file:') return false;
-    try {
-        const response = await fetch(SITE_DATA_URL, { cache: 'no-store' });
-        if(!response.ok) return false;
-        const parsed = await response.json();
-        const siteData = normalizeSiteDataPayload(parsed);
-        SITE_CASE_ORDER = siteData.caseOrder && typeof siteData.caseOrder === 'object' ? siteData.caseOrder : {};
-        applyCasesSnapshot(siteData.casesData);
-        if(siteData.lawDb && typeof siteData.lawDb === 'object') Object.assign(LAW_DB, siteData.lawDb);
-        applyStoredCaseOrder();
-        return true;
-    } catch(e) {
-        console.warn('Không thể tải dữ liệu web chung:', e);
-        return false;
+    const useCloud = typeof CLOUD_DATA_URL === 'string' && CLOUD_DATA_URL !== '';
+    let siteData = null;
+    // Ưu tiên dữ liệu đám mây (admin bấm "Đồng bộ lên đám mây" là người xem thấy ngay)
+    if(useCloud) {
+        try { siteData = await fetchSiteDataFrom(CLOUD_DATA_URL); }
+        catch(e) { console.warn('Không tải được dữ liệu đám mây, dùng bản data/site-data.json:', e); }
     }
+    // Dự phòng: file data/site-data.json đi kèm web (không dùng được khi mở file://)
+    if(!siteData) {
+        if(window.location.protocol === 'file:') return false;
+        try { siteData = await fetchSiteDataFrom(SITE_DATA_URL); }
+        catch(e) { console.warn('Không thể tải dữ liệu web chung:', e); return false; }
+    }
+    SITE_CASE_ORDER = siteData.caseOrder && typeof siteData.caseOrder === 'object' ? siteData.caseOrder : {};
+    applyCasesSnapshot(siteData.casesData);
+    if(siteData.lawDb && typeof siteData.lawDb === 'object') Object.assign(LAW_DB, siteData.lawDb);
+    applyStoredCaseOrder();
+    return true;
 }
 
 function exportAdminBackup() {
