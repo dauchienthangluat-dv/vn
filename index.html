@@ -3,6 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ===== DCSL-BAOMAT START — Chính sách bảo mật trình duyệt =====
+     Chỉ cho phép tải mã/dữ liệu từ đúng những nguồn web này thật sự dùng.
+     Khi thêm dịch vụ mới (CDN, API...), phải khai báo host vào đây, nếu không trình duyệt sẽ chặn. -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  base-uri 'self';
+  object-src 'none';
+  frame-ancestors 'none';
+  form-action 'self';
+  script-src 'self' 'unsafe-inline' https://unpkg.com https://www.googletagmanager.com https://www.gstatic.com https://apis.google.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com https://cdn.jsdelivr.net;
+  font-src 'self' data: https://fonts.gstatic.com https://unpkg.com https://cdn.jsdelivr.net;
+  img-src 'self' data: blob: https://images.unsplash.com https://www.googletagmanager.com https://www.google-analytics.com https://lh3.googleusercontent.com;
+  connect-src 'self' https://webluat-data.ngocduc2006-hp.workers.dev https://thue-proxy.ngocduc2006-hp.workers.dev https://api.groq.com https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://firestore.googleapis.com https://www.gstatic.com;
+  frame-src https://dau-chien-thang-luat.firebaseapp.com https://accounts.google.com;
+  worker-src 'self' blob:;
+  upgrade-insecure-requests;
+">
+<!-- Không rò rỉ đường dẫn người dùng đang đọc sang trang ngoài (chỉ gửi tên miền, và không gửi gì khi tụt xuống http) -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<!-- Tắt các quyền thiết bị nhạy cảm mà web này không bao giờ cần -->
+<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()">
+<!-- ===== DCSL-BAOMAT END ===== -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G7967D7CKE"></script>
 <script>
@@ -32,7 +55,7 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 <!-- Phosphor Icons (Bộ icon chuyên nghiệp) -->
-<script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.2" defer crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <style>
 :root {
@@ -425,6 +448,8 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 .case-name .case-ext-ico{ font-size:0.85em; opacity:0.65; vertical-align:middle; margin-left:2px; }
 .case-source-link{ display:inline-flex; align-items:center; gap:4px; margin-left:12px; font-size:0.85rem; font-weight:600; color:var(--gold-rich); text-decoration:none; }
 .case-source-link:hover{ text-decoration:underline; }
+.case-alt-source{ display:inline-flex; align-items:center; gap:4px; margin-left:10px; font-size:0.78rem; font-weight:600; color:var(--text-muted); text-decoration:none; border:1px solid var(--gold-border); border-radius:999px; padding:2px 9px; }
+.case-alt-source:hover{ color:var(--navy); border-color:var(--gold-rich); background:var(--gold-dim); }
 /* ===== VBPL-CSS END ===== */
 
 
@@ -491,6 +516,41 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 
 
 
+
+
+<style id="dcsl-intro-style">
+/* ===== DCSL-INTRO-CSS START ===== */
+#site-intro{ position:fixed; inset:0; z-index:99999; overflow:hidden; transition:visibility 0s linear 1.6s; }
+#site-intro .intro-layer{ position:absolute; inset:0; transform:translateX(0); will-change:transform; }
+/* lớp trắng nằm dưới, trượt trái TRỄ hơn -> tạo dải trắng mượt theo sau lớp vàng */
+#site-intro .intro-layer-white{ background:#fff; z-index:1; transition:transform 1.05s cubic-bezier(.77,0,.18,1) .18s; }
+/* nền vàng champagne sáng MỊN (gradient hero banner, KHÔNG vùng sẫm giữa — user chê loang lổ); chữ nổi nhờ bóng 2 lớp */
+#site-intro .intro-layer-main{ background:linear-gradient(135deg,#FFFEFB 0%,#FBF7F0 45%,#F4ECDE 100%); z-index:2; display:flex; align-items:center; justify-content:center; transition:transform 1.05s cubic-bezier(.77,0,.18,1); }
+#site-intro.intro-hide{ visibility:hidden; }
+#site-intro.intro-hide .intro-layer{ transform:translateX(-100%); }
+#site-intro .intro-center{ text-align:center; padding:0 24px; }
+#site-intro .intro-logo{ width:112px; height:auto; display:block; margin:0 auto 26px; opacity:0; animation:dcslFadeIn 1.3s ease .05s forwards; filter:drop-shadow(0 3px 12px rgba(27,47,82,.2)); }
+/* chữ navy trầm (user chê chữ trắng bị lóa trên nền champagne); bóng sáng mảnh phía dưới tạo nét khắc nổi nhẹ */
+#site-intro .intro-brand{ font-family:'Be Vietnam Pro',sans-serif; font-weight:800; color:#1B2F52; font-size:clamp(1.8rem,4.8vw,3rem); letter-spacing:.3em; opacity:0; animation:dcslBrandIn 1.4s cubic-bezier(.22,1,.36,1) .15s forwards; white-space:nowrap; text-shadow:0 1px 0 rgba(255,255,255,.6), 0 2px 12px rgba(27,47,82,.15); }
+#site-intro .intro-brand-sub{ font-family:'Be Vietnam Pro',sans-serif; color:rgba(27,47,82,.75); font-size:.8rem; letter-spacing:.55em; margin-top:14px; opacity:0; animation:dcslBrandIn 1.2s ease .5s forwards; text-shadow:0 1px 0 rgba(255,255,255,.5); }
+/* Chữ intro "nhảy múa" từng ký tự; "Đấu Chiến Thắng" nhỏ hơn để tôn chữ "Luật" cam nổi bật */
+#site-intro .ib-word{ display:inline-block; font-size:.68em; }
+#site-intro .ib-word.ib-luat{ font-size:1.55em; font-family:'Dancing Script',cursive; font-style:normal; font-weight:700; letter-spacing:0; padding:0 .1em; }
+#site-intro .ib-ch{ display:inline-block; animation:ibDance 1.7s ease-in-out infinite; animation-delay:calc(var(--i) * 0.07s); }
+#site-intro .ib-luat .ib-ch{ color:#FF9900; text-shadow:0 1px 0 rgba(255,255,255,.55), 0 4px 16px rgba(255,153,0,.4); }
+@keyframes ibDance{ 0%,100%{ transform:translateY(0); } 35%{ transform:translateY(-10px); } 65%{ transform:translateY(3px); } }
+#site-intro .intro-loading{ font-family:'Be Vietnam Pro',sans-serif; color:rgba(27,47,82,.65); font-size:.58rem; font-weight:600; letter-spacing:.42em; margin-top:48px; font-variant-numeric:tabular-nums; opacity:0; animation:dcslFadeIn 1s ease .7s forwards; text-shadow:0 1px 0 rgba(255,255,255,.5); }
+@keyframes dcslBrandIn{ from{ opacity:0; letter-spacing:.5em; transform:translateY(14px);} to{ opacity:1; letter-spacing:.14em; transform:none;} }
+@keyframes dcslFadeIn{ from{ opacity:0; } to{ opacity:1; } }
+body.intro-lock{ overflow:hidden; }
+body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,.36,1) .25s both; }
+@keyframes dcslFadeDown{ from{ opacity:0; transform:translate(-50%,-14px);} to{ opacity:1; transform:translate(-50%,0);} }
+.dcsl-sr{ opacity:0; transform:translateY(26px); transition:opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1); }
+.dcsl-sr.dcsl-in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce){ #site-intro{ display:none !important; } .dcsl-sr{ opacity:1 !important; transform:none !important; transition:none !important; } body.intro-reveal #global-header{ animation:none !important; } }
+/* ===== DCSL-INTRO-CSS END ===== */
+</style>
+
 <style id="dcsl-acct-style">
 /* ===== DCSL-ACCT-CSS START ===== */
 #acct-btn{ display:none; align-items:center; gap:6px; background:var(--bg2); color:var(--navy); border:1px solid var(--gold-border); padding:5px 10px; border-radius:20px; cursor:pointer; font-weight:600; font-size:.78rem; font-family:'Be Vietnam Pro',sans-serif; transition:all .2s; white-space:nowrap; }
@@ -535,45 +595,12 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 .policy-toc-item:hover{ color:var(--gold-rich); }
 .policy-toc-sub{ color:var(--text-sec); font-size:.8rem; padding:2px 0 2px 18px; cursor:pointer; line-height:1.5; }
 .policy-toc-sub:hover{ color:var(--gold-rich); }
-.policy-h2{ font-family:'Be Vietnam Pro',sans-serif; font-size:1.15rem; color:var(--navy); margin:26px 0 10px; scroll-margin-top:85px; }
-.policy-h3{ font-family:'Be Vietnam Pro',sans-serif; font-size:.98rem; color:var(--navy); margin:18px 0 8px; scroll-margin-top:85px; }
+.policy-h2{ font-family:'Playfair Display',serif; font-size:1.15rem; color:var(--navy); margin:26px 0 10px; scroll-margin-top:85px; }
+.policy-h3{ font-family:'Playfair Display',serif; font-size:.98rem; color:var(--navy); margin:18px 0 8px; scroll-margin-top:85px; }
 .policy-body p{ line-height:1.8; margin:9px 0; font-size:.9rem; color:var(--text); }
 .policy-list{ padding-left:22px; margin:8px 0; }
 .policy-list li{ line-height:1.75; margin:5px 0; font-size:.9rem; }
 /* ===== DCSL-ACCT-CSS END ===== */
-</style>
-
-<style id="dcsl-intro-style">
-/* ===== DCSL-INTRO-CSS START ===== */
-#site-intro{ position:fixed; inset:0; z-index:99999; overflow:hidden; transition:visibility 0s linear 1.6s; }
-#site-intro .intro-layer{ position:absolute; inset:0; transform:translateX(0); will-change:transform; }
-/* lớp trắng nằm dưới, trượt trái TRỄ hơn -> tạo dải trắng mượt theo sau lớp vàng */
-#site-intro .intro-layer-white{ background:#fff; z-index:1; transition:transform 1.05s cubic-bezier(.77,0,.18,1) .18s; }
-/* nền vàng champagne sáng MỊN (gradient hero banner, KHÔNG vùng sẫm giữa — user chê loang lổ); chữ nổi nhờ bóng 2 lớp */
-#site-intro .intro-layer-main{ background:linear-gradient(135deg,#FFFEFB 0%,#FBF7F0 45%,#F4ECDE 100%); z-index:2; display:flex; align-items:center; justify-content:center; transition:transform 1.05s cubic-bezier(.77,0,.18,1); }
-#site-intro.intro-hide{ visibility:hidden; }
-#site-intro.intro-hide .intro-layer{ transform:translateX(-100%); }
-#site-intro .intro-center{ text-align:center; padding:0 24px; }
-#site-intro .intro-logo{ width:112px; height:auto; display:block; margin:0 auto 26px; opacity:0; animation:dcslFadeIn 1.3s ease .05s forwards; filter:drop-shadow(0 3px 12px rgba(27,47,82,.2)); }
-/* chữ navy trầm (user chê chữ trắng bị lóa trên nền champagne); bóng sáng mảnh phía dưới tạo nét khắc nổi nhẹ */
-#site-intro .intro-brand{ font-family:'Be Vietnam Pro',sans-serif; font-weight:800; color:#1B2F52; font-size:clamp(1.8rem,4.8vw,3rem); letter-spacing:.3em; opacity:0; animation:dcslBrandIn 1.4s cubic-bezier(.22,1,.36,1) .15s forwards; white-space:nowrap; text-shadow:0 1px 0 rgba(255,255,255,.6), 0 2px 12px rgba(27,47,82,.15); }
-#site-intro .intro-brand-sub{ font-family:'Be Vietnam Pro',sans-serif; color:rgba(27,47,82,.75); font-size:.8rem; letter-spacing:.55em; margin-top:14px; opacity:0; animation:dcslBrandIn 1.2s ease .5s forwards; text-shadow:0 1px 0 rgba(255,255,255,.5); }
-/* Chữ intro "nhảy múa" từng ký tự; "Đấu Chiến Thắng" nhỏ hơn để tôn chữ "Luật" cam nổi bật */
-#site-intro .ib-word{ display:inline-block; font-size:.68em; }
-#site-intro .ib-word.ib-luat{ font-size:1.55em; font-family:'Dancing Script',cursive; font-style:normal; font-weight:700; letter-spacing:0; padding:0 .1em; }
-#site-intro .ib-ch{ display:inline-block; animation:ibDance 1.7s ease-in-out infinite; animation-delay:calc(var(--i) * 0.07s); }
-#site-intro .ib-luat .ib-ch{ color:#FF9900; text-shadow:0 1px 0 rgba(255,255,255,.55), 0 4px 16px rgba(255,153,0,.4); }
-@keyframes ibDance{ 0%,100%{ transform:translateY(0); } 35%{ transform:translateY(-10px); } 65%{ transform:translateY(3px); } }
-#site-intro .intro-loading{ font-family:'Be Vietnam Pro',sans-serif; color:rgba(27,47,82,.65); font-size:.58rem; font-weight:600; letter-spacing:.42em; margin-top:48px; font-variant-numeric:tabular-nums; opacity:0; animation:dcslFadeIn 1s ease .7s forwards; text-shadow:0 1px 0 rgba(255,255,255,.5); }
-@keyframes dcslBrandIn{ from{ opacity:0; letter-spacing:.5em; transform:translateY(14px);} to{ opacity:1; letter-spacing:.14em; transform:none;} }
-@keyframes dcslFadeIn{ from{ opacity:0; } to{ opacity:1; } }
-body.intro-lock{ overflow:hidden; }
-body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,.36,1) .25s both; }
-@keyframes dcslFadeDown{ from{ opacity:0; transform:translate(-50%,-14px);} to{ opacity:1; transform:translate(-50%,0);} }
-.dcsl-sr{ opacity:0; transform:translateY(26px); transition:opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1); }
-.dcsl-sr.dcsl-in{ opacity:1; transform:none; }
-@media (prefers-reduced-motion: reduce){ #site-intro{ display:none !important; } .dcsl-sr{ opacity:1 !important; transform:none !important; transition:none !important; } body.intro-reveal #global-header{ animation:none !important; } }
-/* ===== DCSL-INTRO-CSS END ===== */
 </style>
 </head>
 <body>
@@ -757,7 +784,6 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
       <div class="tab-content" id="tc-ap-dung"></div>
       <div class="tab-content" id="tc-chi-tiet"></div>
     </div>
-
     <!-- ===== DCSL-POLICY-HTML START ===== -->
     <div id="page-dieu-khoan" class="page">
       <div class="page-header">
@@ -1151,6 +1177,54 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 </script>
 <script>
+/* ===== DCSL-BAOMAT-JS START =====
+   Các lớp bảo vệ chạy phía trình duyệt. Host tĩnh (GitHub Pages) không gửi được
+   HTTP header nên phần này thay thế bằng kiểm tra lúc chạy. */
+
+// 1) Chống clickjacking: không cho trang khác nhúng web này vào iframe để lừa người dùng bấm.
+(function guardAgainstFraming(){
+  if (window.top === window.self) return;
+  try { if (window.top.location.origin === window.location.origin) return; } catch(e) {}
+  // Dựng thông báo bằng DOM API, KHÔNG ghép chuỗi HTML. Lý do: thẻ đóng body/script
+  // viết thẳng trong mã JS sẽ cắt ngang khối script khi trình duyệt phân tích HTML,
+  // và làm các script cài đặt trong thư mục tools/ chèn code nhầm chỗ.
+  document.body.textContent = '';
+    const note = document.createElement('p');
+    note.textContent = 'Trang này không cho phép hiển thị bên trong web khác.';
+    const link = document.createElement('a');
+    link.href = window.location.href;
+    link.target = '_top';
+    link.textContent = 'Mở Đấu Chiến Thắng Luật';
+    document.body.style.cssText = 'font-family:sans-serif;padding:40px;text-align:center';
+    document.body.append(note, link);
+  try { window.top.location = window.location.href; } catch(e) {}
+})();
+
+// 2) Escape cho chuỗi nằm trong onclick="...('  ở đây  ')" — escapeHtmlText KHÔNG đủ,
+//    vì trình duyệt giải mã &#39; thành ' trước khi JS chạy, kẻ tấn công thoát được dấu nháy.
+function escapeJsAttr(value) {
+  return String(value == null ? '' : value)
+    .replace(/\\/g, '\\\\')
+    .replace(/'/g, "\\'")
+    .replace(/"/g, '\\"')
+    .replace(/</g, '\\x3C')
+    .replace(/&/g, '\\x26')
+    .replace(/[\r\n]/g, ' ');
+}
+window.escapeJsAttr = escapeJsAttr;
+
+// 3) Chỉ chấp nhận link ngoài dùng http/https — chặn javascript:, data:, vbscript:
+function safeExternalUrl(value) {
+  const raw = String(value == null ? '' : value).trim();
+  if (!raw) return '';
+  try {
+    const url = new URL(raw, window.location.href);
+    return (url.protocol === 'http:' || url.protocol === 'https:') ? url.href : '';
+  } catch (e) { return ''; }
+}
+window.safeExternalUrl = safeExternalUrl;
+/* ===== DCSL-BAOMAT-JS END ===== */
+
 const isAdminMode = false; // public version – admin mode disabled
 
 const LAW_DB = {
@@ -2019,9 +2093,51 @@ function getCaseSourceLink(c) {
   let raw = String((c && (c.link || c.link_nguon || c.sourceLink || c.url)) || '').trim();
   if(!raw) return '';
   raw = raw.split(/\s+/)[0]; // chỉ lấy phần đầu nếu lỡ dán kèm chữ thừa
-  if(/^https?:\/\//i.test(raw)) return raw;
-  if(/^[a-z0-9][a-z0-9.-]*\.[a-z]{2,}(\/|$)/i.test(raw)) return 'https://' + raw;
+  if(/^https?:\/\//i.test(raw)) return safeExternalUrl(raw);
+  if(/^[a-z0-9][a-z0-9.-]*\.[a-z]{2,}(\/|$)/i.test(raw)) return safeExternalUrl('https://' + raw);
   return '';
+}
+
+/* --- Nguồn dự phòng khi trang gốc bắt "xác thực robot" (Cloudflare) ---------
+   thuvienphapluat.vn đặt sau Cloudflare Bot Protection. Ta KHÔNG thể tắt lớp
+   kiểm tra đó từ web mình. Cách xử lý: rút số hiệu văn bản ra khỏi tên vụ việc
+   rồi đưa thêm 1 nút mở nguồn khác (CSDL quốc gia vbpl.vn), để người dùng vẫn
+   đọc được văn bản ngay cả khi trang gốc chặn. */
+const CHALLENGED_SOURCE_HOSTS = ['thuvienphapluat.vn', 'luatvietnam.vn'];
+
+function sourceLinkIsChallenged(link) {
+  try {
+    const host = new URL(link).hostname.replace(/^www\./, '');
+    return CHALLENGED_SOURCE_HOSTS.some(h => host === h || host.endsWith('.' + h));
+  } catch(e) { return false; }
+}
+
+// "Nghị định 49/2026/NĐ-CP về ..." -> "49/2026/NĐ-CP"; "Văn bản hợp nhất 31/VBHN-VPQH" -> "31/VBHN-VPQH"
+function extractLegalDocNumber(title) {
+  const text = cleanInlineText(String(title || ''));
+  const match = text.match(/\b\d+(?:[.\-]\d+)*\/(?:\d{4}\/)?[A-ZĐ]{2,}(?:-[A-ZĐ]+)*\b/);
+  return match ? match[0] : '';
+}
+
+// Tìm chính xác số hiệu văn bản. Kết quả đầu thường là vanban.chinhphu.vn hoặc
+// vbpl.vn — nguồn chính thức, không có lớp kiểm tra robot. Cố tình KHÔNG giới hạn
+// site: vì hai cổng đó lập chỉ mục không đầy đủ, giới hạn vào là ra 0 kết quả.
+function buildAltSourceUrl(title) {
+  const docNumber = extractLegalDocNumber(title);
+  const keyword = docNumber ? '"' + docNumber + '" toàn văn' : cleanInlineText(String(title || '')).slice(0, 90);
+  if(!keyword.trim()) return '';
+  return 'https://www.google.com/search?q=' + encodeURIComponent(keyword);
+}
+
+function buildAltSourceLinkHtml(sourceLink, title) {
+  if(!sourceLink || !sourceLinkIsChallenged(sourceLink)) return '';
+  const altUrl = buildAltSourceUrl(title);
+  if(!altUrl) return '';
+  const label = getActiveLanguage() === 'en' ? 'Alternative source' : 'Nguồn dự phòng';
+  const hint = getActiveLanguage() === 'en'
+    ? 'Use this if the original site asks you to verify you are not a robot — finds the same document on official portals'
+    : 'Dùng khi trang gốc bắt xác thực robot — tìm đúng văn bản này trên cổng chính thức (vanban.chinhphu.vn, vbpl.vn)';
+  return ` <a class="case-alt-source" href="${escapeHtmlText(altUrl)}" target="_blank" rel="noopener noreferrer" title="${escapeHtmlText(hint)}"><i class="ph ph-shield-check"></i> ${label}</a>`;
 }
 /* ===== LINK-NGUON END ===== */
 
@@ -3075,30 +3191,30 @@ function renderCasesList(){
       const fullIndex = start + idx;
       const reorderControls = isReorderMode && canReorderCurrentCases() ? `
         <div class="case-reorder-controls">
-          <button class="case-reorder-btn" onclick="moveCaseInCurrentList('${c.id}',-1)" title="Đưa lên" ${fullIndex <= 0 ? 'disabled' : ''}><i class="ph ph-arrow-up"></i></button>
-          <button class="case-reorder-btn" onclick="moveCaseInCurrentList('${c.id}',1)" title="Đưa xuống" ${fullIndex >= total - 1 ? 'disabled' : ''}><i class="ph ph-arrow-down"></i></button>
+          <button class="case-reorder-btn" onclick="moveCaseInCurrentList('${escapeJsAttr(c.id)}',-1)" title="Đưa lên" ${fullIndex <= 0 ? 'disabled' : ''}><i class="ph ph-arrow-up"></i></button>
+          <button class="case-reorder-btn" onclick="moveCaseInCurrentList('${escapeJsAttr(c.id)}',1)" title="Đưa xuống" ${fullIndex >= total - 1 ? 'disabled' : ''}><i class="ph ph-arrow-down"></i></button>
         </div>
       ` : '';
       const srcLink = getCaseSourceLink(c);
       const titleAnchor = srcLink
-        ? `<a class="case-name" href="${escapeHtmlText(srcLink)}" target="_blank" rel="noopener noreferrer" title="${getActiveLanguage() === 'en' ? 'Open the original document (external site)' : 'Mở văn bản gốc (trang ngoài)'}">${displayTitle} <i class="ph ph-arrow-square-out case-ext-ico"></i></a>`
-        : `<a class="case-name" href="${escapeHtmlText(routeHref({ view: 'detail', lv: c.lvId, sf: c.sfId, caseId: c.id }))}" onclick="event.preventDefault(); goDetail(null,null,'${c.id}')">${displayTitle}</a>`;
+        ? `<a class="case-name" href="${escapeHtmlText(srcLink)}" target="_blank" rel="noopener noreferrer" title="${getActiveLanguage() === 'en' ? 'Open the original document (external site)' : 'Mở văn bản gốc (trang ngoài)'}">${displayTitle} <i class="ph ph-arrow-square-out case-ext-ico"></i></a>${buildAltSourceLinkHtml(srcLink, getCaseFieldText(c, 'ten'))}`
+        : `<a class="case-name" href="${escapeHtmlText(routeHref({ view: 'detail', lv: c.lvId, sf: c.sfId, caseId: c.id }))}" onclick="event.preventDefault(); goDetail(null,null,'${escapeJsAttr(c.id)}')">${displayTitle}</a>`;
       return `
       <div class="case-item ${isReorderMode && canReorderCurrentCases() ? 'reorder-active' : ''}" id="ci-${c.id}">
         <div class="case-item-header">
           <div class="case-item-left">${starHtml}${titleAnchor}</div>
           <div style="display:flex; gap:6px;">
             ${reorderControls}
-            ${isAdminMode ? `<button class="case-expand-btn" onclick="editCase('${c.id}')" title="Chỉnh sửa"><i class="ph ph-pencil-simple"></i></button><button class="case-expand-btn case-delete-btn" onclick="deleteCase('${c.id}')" title="Xóa vụ án"><i class="ph ph-trash"></i></button>` : ''}
+            ${isAdminMode ? `<button class="case-expand-btn" onclick="editCase('${escapeJsAttr(c.id)}')" title="Chỉnh sửa"><i class="ph ph-pencil-simple"></i></button><button class="case-expand-btn case-delete-btn" onclick="deleteCase('${escapeJsAttr(c.id)}')" title="Xóa vụ án"><i class="ph ph-trash"></i></button>` : ''}
             <div style="display:flex; flex-direction:column; gap:6px; align-items:center;">
-              <button class="case-expand-btn" onclick="toggleCase('${c.id}',this)" title="Xem mô tả"><i class="ph ph-caret-down"></i></button>
+              <button class="case-expand-btn" onclick="toggleCase('${escapeJsAttr(c.id)}',this)" title="Xem mô tả"><i class="ph ph-caret-down"></i></button>
               ${typeof bmBtnHtml === 'function' ? bmBtnHtml(c.id) : ''}
             </div>
           </div>
         </div>
         <div class="case-desc" id="cd-${c.id}">
           <p style="white-space: pre-wrap; margin:0;">${displayDesc || (getActiveLanguage() === 'en' ? '(No short summary yet)' : '(Chưa có mô tả ngắn)')}</p>
-          <a class="read-more-btn" href="${escapeHtmlText(routeHref({ view: 'detail', lv: c.lvId, sf: c.sfId, caseId: c.id }))}" onclick="event.preventDefault(); goDetail(null,null,'${c.id}')">${t('readMore')} <i class="ph ph-arrow-right"></i></a>
+          <a class="read-more-btn" href="${escapeHtmlText(routeHref({ view: 'detail', lv: c.lvId, sf: c.sfId, caseId: c.id }))}" onclick="event.preventDefault(); goDetail(null,null,'${escapeJsAttr(c.id)}')">${t('readMore')} <i class="ph ph-arrow-right"></i></a>
         </div>
       </div>
     `}).join('');
@@ -3219,7 +3335,8 @@ function goDetail(lvId, sfId, caseId){
   // Link văn bản gốc (nguồn ngoài): hiện nút mở trang gốc cạnh nhãn loại tài liệu
   const detailSrcLink = getCaseSourceLink(cas);
   if(detailSrcLink){
-    document.getElementById('case-detail-stars').innerHTML += ` <a class="case-source-link" href="${escapeHtmlText(detailSrcLink)}" target="_blank" rel="noopener noreferrer"><i class="ph ph-arrow-square-out"></i> ${getActiveLanguage() === 'en' ? 'View original document' : 'Xem văn bản gốc'}</a>`;
+    const detailAltLink = buildAltSourceLinkHtml(detailSrcLink, getCaseFieldText(cas, 'ten'));
+    document.getElementById('case-detail-stars').innerHTML += ` <a class="case-source-link" href="${escapeHtmlText(detailSrcLink)}" target="_blank" rel="noopener noreferrer"><i class="ph ph-arrow-square-out"></i> ${getActiveLanguage() === 'en' ? 'View original document' : 'Xem văn bản gốc'}</a>${detailAltLink}`;
   }
 
   if(typeof renderDetailExtras === 'function') renderDetailExtras(cas);
@@ -4974,17 +5091,21 @@ function renderThueFileList() {
   const list = document.getElementById('thue-file-list');
   if (!list) return;
   if (thueUploadedFiles.length === 0) { list.innerHTML = ''; return; }
-  list.innerHTML = thueUploadedFiles.map((f, i) => `
+  list.innerHTML = thueUploadedFiles.map((f, i) => {
+    // Tên tệp do người dùng đặt → luôn phải escape trước khi chèn vào HTML
+    const safeName = escapeHtmlText(f.name);
+    return `
     <div class="thue-file-item">
       <div class="thue-file-name">
         <i class="ph ph-${f.isImage ? 'image' : 'file-text'}" style="color:var(--gold-rich);flex-shrink:0;"></i>
-        <span title="${f.name}">${f.name}</span>
+        <span title="${safeName}">${safeName}</span>
       </div>
       <button class="thue-file-remove" onclick="removeThueFile(${i})" title="Xóa file">
         <i class="ph ph-x"></i>
       </button>
     </div>
-  `).join('');
+  `;
+  }).join('');
 }
 
 async function submitThuePhanTich() {
@@ -5378,54 +5499,70 @@ async function safeInit() {
 if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', safeInit); } else { safeInit(); }
 window.addEventListener('popstate', applyRouteFromUrl);
 
-// FIREBASE INIT
-let db, auth, user = null; let appId = typeof __app_id !== 'undefined' ? __app_id : 'dau-chien-thang-luat';
-async function initFirebase() {
-    if (typeof __firebase_config === 'undefined') return;
-    try {
-        const { initializeApp } = await import("https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js");
-        const { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } = await import("https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js");
-        const { getFirestore, collection, addDoc, onSnapshot } = await import("https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js");
-        const app = initializeApp(JSON.parse(__firebase_config)); auth = getAuth(app); db = getFirestore(app);
-        
-        if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-            await signInWithCustomToken(auth, __initial_auth_token);
-        } else {
-            await signInAnonymously(auth);
-        }
-        
-        onAuthStateChanged(auth, (u) => { 
-            user = u; 
-            if (user) {
-                onSnapshot(
-                    collection(db, 'artifacts', appId, 'public', 'data', 'cases'), 
-                    (snapshot) => { 
-                        const docs = []; 
-                        snapshot.forEach(d => docs.push({ _dbId: d.id, ...d.data() })); 
-                        if(window.updateCasesFromDB) window.updateCasesFromDB(docs); 
-                    }, 
-                    (error) => {
-                        console.error("Firebase Listen Error:", error);
-                    }
-                ); 
-            }
-        });
-        
-        window.saveCaseToDB = async function(caseData) { 
-            if (!user) return; 
-            await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'cases'), caseData); 
-            closeAdmin(); 
-            showAlert("Đã lưu lên Đám mây!"); 
-        };
-    } catch (e) { 
-        console.error(e); 
-    }
-}
-setTimeout(()=>{ initFirebase(); }, 100);
+// Ghi chú bảo mật: khối "FIREBASE INIT" cũ (đăng nhập ẩn danh + ghi thẳng vào collection Firestore công khai)
+// đã được gỡ ngày 26/07/2026. Nó chưa từng chạy (thiếu biến __firebase_config) nhưng nếu vô tình bật lên thì
+// bất kỳ khách nào cũng ghi được dữ liệu vụ án. Đồng bộ dữ liệu hiện dùng Cloudflare KV có token — xem loadSharedSiteData().
 </script>
 
 
 
+
+
+<script id="dcsl-intro-script">
+/* ===== DCSL-INTRO-JS START ===== */
+(function(){
+  var intro = document.getElementById('site-intro');
+  if(!intro) return;
+  var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduced){ if(intro.parentNode) intro.parentNode.removeChild(intro); return; }
+  document.body.classList.add('intro-lock');
+  var countEl = document.getElementById('intro-count');
+  var DUR = 2000, start = null, done = false;
+  function ease(t){ return t < .5 ? 2*t*t : -1 + (4 - 2*t)*t; }
+  function frame(ts){
+    if(done) return;
+    if(start === null) start = ts;
+    var p = Math.min(1, (ts - start) / DUR), v = ease(p);
+    if(countEl) countEl.textContent = Math.round(v * 100);
+    if(p < 1) requestAnimationFrame(frame); else finish();
+  }
+  function finish(){
+    if(done) return; done = true;
+    if(countEl) countEl.textContent = '100';
+    setTimeout(function(){
+      intro.classList.add('intro-hide');
+      document.body.classList.remove('intro-lock');
+      document.body.classList.add('intro-reveal');
+      startScrollReveal();
+      /* 2 lớp trượt trái: lớp vàng 1.05s + lớp trắng trễ .18s -> gỡ sau 1.8s */
+      setTimeout(function(){ if(intro.parentNode) intro.parentNode.removeChild(intro); }, 1800);
+    }, 380);
+  }
+  requestAnimationFrame(frame);
+  setTimeout(finish, 6000); /* chốt an toàn: không bao giờ kẹt màn hình chờ */
+  /* Hiệu ứng hiện dần khi cuộn trang (áp dụng cả nội dung render lại của SPA) */
+  function startScrollReveal(){
+    if(!('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function(entries){
+      var i = 0;
+      entries.forEach(function(en){
+        if(!en.isIntersecting) return;
+        en.target.style.transitionDelay = Math.min(i * 70, 420) + 'ms';
+        en.target.classList.add('dcsl-in');
+        io.unobserve(en.target); i++;
+      });
+    }, { threshold: .06, rootMargin: '0px 0px -6% 0px' });
+    var SEL = '.lv-card, .recent-card, .rh-item, .section-title';
+    function prep(el){ if(el.__dcslSr) return; el.__dcslSr = true; el.classList.add('dcsl-sr'); io.observe(el); }
+    var t = null;
+    function scan(){ document.querySelectorAll(SEL).forEach(prep); }
+    scan();
+    var target = document.getElementById('main-col') || document.body;
+    new MutationObserver(function(){ clearTimeout(t); t = setTimeout(scan, 90); }).observe(target, { childList:true, subtree:true });
+  }
+})();
+/* ===== DCSL-INTRO-JS END ===== */
+</script>
 <script id="dcsl-acct-script">
 /* ===== DCSL-ACCT-JS START (tài khoản + bookmark đồng bộ) ===== */
 
@@ -5434,12 +5571,12 @@ setTimeout(()=>{ initFirebase(); }, 100);
    -> Your apps (Web app) -> SDK setup and configuration -> Config.
    Khi chưa điền (để trống như hiện tại): nút Đăng nhập ẩn, bookmark lưu theo máy. */
 const DCSL_FIREBASE_CONFIG = {
-  apiKey: "AIzaSyDU3nJn7RX_LkQhk_yCndGb7qrbDcAiVZg",
-  authDomain: "dau-chien-thang-luat.firebaseapp.com",
-  projectId: "dau-chien-thang-luat",
-  storageBucket: "dau-chien-thang-luat.firebasestorage.app",
-  messagingSenderId: "303147004714",
-  appId: "1:303147004714:web:4f4bb0176e503b7cc92453"
+  /* apiKey: "AIza....",
+     authDomain: "ten-du-an.firebaseapp.com",
+     projectId: "ten-du-an",
+     storageBucket: "ten-du-an.appspot.com",
+     messagingSenderId: "1234567890",
+     appId: "1:1234567890:web:abc123" */
 };
 
 (function(){
@@ -5449,7 +5586,7 @@ window.BOOKMARKS = new Set(function(){ try { return JSON.parse(localStorage.getI
 function bmSaveLocal(){ try { localStorage.setItem('dcsl_bookmarks', JSON.stringify(Array.from(BOOKMARKS))); } catch(e){} }
 window.bmBtnHtml = function(id, extraClass){
   var on = BOOKMARKS.has(id);
-  return '<button class="' + (extraClass || 'case-expand-btn') + ' bm-btn' + (on ? ' bm-on' : '') + '" data-bm-id="' + id + '" onclick="toggleBookmark(\'' + id + '\', this, event)" title="' + t(on ? 'bmRemove' : 'bmAdd') + '"><i class="ph ' + (on ? 'ph-bookmark-simple-fill' : 'ph-bookmark-simple') + '"></i></button>';
+  return '<button class="' + (extraClass || 'case-expand-btn') + ' bm-btn' + (on ? ' bm-on' : '') + '" data-bm-id="' + escapeHtmlText(id) + '" onclick="toggleBookmark(\'' + escapeJsAttr(id) + '\', this, event)" title="' + t(on ? 'bmRemove' : 'bmAdd') + '"><i class="ph ' + (on ? 'ph-bookmark-simple-fill' : 'ph-bookmark-simple') + '"></i></button>';
 };
 function updateBmBtn(btn){
   var on = BOOKMARKS.has(btn.getAttribute('data-bm-id'));
@@ -5483,7 +5620,7 @@ window.renderBookmarksList = function(){
     var title = getPrimaryTextLine(getCaseFieldText(c, 'ten'));
     return '<div class="bm-list-item">' +
       '<div class="bm-list-main"><div class="bm-list-meta">' + escapeHtmlText(lvName) + '</div>' +
-      '<div class="bm-list-title" onclick="goDetail(null,null,\'' + c.id + '\')">' + title + '</div></div>' +
+      '<div class="bm-list-title" onclick="goDetail(null,null,\'' + escapeJsAttr(c.id) + '\')">' + title + '</div></div>' +
       bmBtnHtml(c.id, 'bm-detail') + '</div>';
   }).join('');
 };
@@ -5654,62 +5791,6 @@ acctInit();
 
 })();
 /* ===== DCSL-ACCT-JS END ===== */
-</script>
-
-<script id="dcsl-intro-script">
-/* ===== DCSL-INTRO-JS START ===== */
-(function(){
-  var intro = document.getElementById('site-intro');
-  if(!intro) return;
-  var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduced){ if(intro.parentNode) intro.parentNode.removeChild(intro); return; }
-  document.body.classList.add('intro-lock');
-  var countEl = document.getElementById('intro-count');
-  var DUR = 2000, start = null, done = false;
-  function ease(t){ return t < .5 ? 2*t*t : -1 + (4 - 2*t)*t; }
-  function frame(ts){
-    if(done) return;
-    if(start === null) start = ts;
-    var p = Math.min(1, (ts - start) / DUR), v = ease(p);
-    if(countEl) countEl.textContent = Math.round(v * 100);
-    if(p < 1) requestAnimationFrame(frame); else finish();
-  }
-  function finish(){
-    if(done) return; done = true;
-    if(countEl) countEl.textContent = '100';
-    setTimeout(function(){
-      intro.classList.add('intro-hide');
-      document.body.classList.remove('intro-lock');
-      document.body.classList.add('intro-reveal');
-      startScrollReveal();
-      /* 2 lớp trượt trái: lớp vàng 1.05s + lớp trắng trễ .18s -> gỡ sau 1.8s */
-      setTimeout(function(){ if(intro.parentNode) intro.parentNode.removeChild(intro); }, 1800);
-    }, 380);
-  }
-  requestAnimationFrame(frame);
-  setTimeout(finish, 6000); /* chốt an toàn: không bao giờ kẹt màn hình chờ */
-  /* Hiệu ứng hiện dần khi cuộn trang (áp dụng cả nội dung render lại của SPA) */
-  function startScrollReveal(){
-    if(!('IntersectionObserver' in window)) return;
-    var io = new IntersectionObserver(function(entries){
-      var i = 0;
-      entries.forEach(function(en){
-        if(!en.isIntersecting) return;
-        en.target.style.transitionDelay = Math.min(i * 70, 420) + 'ms';
-        en.target.classList.add('dcsl-in');
-        io.unobserve(en.target); i++;
-      });
-    }, { threshold: .06, rootMargin: '0px 0px -6% 0px' });
-    var SEL = '.lv-card, .recent-card, .rh-item, .section-title';
-    function prep(el){ if(el.__dcslSr) return; el.__dcslSr = true; el.classList.add('dcsl-sr'); io.observe(el); }
-    var t = null;
-    function scan(){ document.querySelectorAll(SEL).forEach(prep); }
-    scan();
-    var target = document.getElementById('main-col') || document.body;
-    new MutationObserver(function(){ clearTimeout(t); t = setTimeout(scan, 90); }).observe(target, { childList:true, subtree:true });
-  }
-})();
-/* ===== DCSL-INTRO-JS END ===== */
 </script>
 </body>
 </html>
