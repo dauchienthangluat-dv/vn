@@ -433,6 +433,10 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 @media(max-width:420px){.admin-backup-actions{flex-direction:column;}}
 
 .detail-section-title{ font-family:'Be Vietnam Pro',sans-serif; font-size:1.05rem;font-weight:700;color:var(--navy); margin: 24px 0 12px 0; border-bottom: 1px solid var(--gold-border); padding-bottom: 8px;}
+/* Báo "đang tải" khi trang chi tiết đang dựng nội dung — để người dùng không tưởng web treo */
+.tc-loading{ display:flex; align-items:center; justify-content:center; gap:10px; padding:48px 16px; color:var(--text-muted); font-size:0.9rem; }
+.tc-loading::before{ content:''; width:18px; height:18px; border:2px solid var(--gold-border); border-top-color:var(--gold-rich); border-radius:50%; animation:dcslSpin 0.7s linear infinite; }
+@keyframes dcslSpin{ to{ transform:rotate(360deg); } }
 
 
 
@@ -682,7 +686,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
     <h2>Thư viện<br><em>bản án thông minh</em></h2>
     <p>Tra cứu bản án, án lệ một cách nhanh chóng.</p>
     <div class="hero-search">
-      <input type="text" id="hero-search-input" placeholder="Tìm kiếm bản án, án lệ, vấn đề pháp lý..." onkeypress="if(event.key === 'Enter') heroSearchGo()">
+      <input type="text" id="hero-search-input" placeholder="Tìm kiếm bản án, án lệ, vấn đề pháp lý..." onfocus="heroSearchFocus()" onclick="heroSearchFocus()" onkeypress="if(event.key === 'Enter') heroSearchGo()">
       <button onclick="heroSearchGo()" aria-label="Tìm kiếm" title="Tìm kiếm"><i class="ph ph-magnifying-glass"></i></button>
     </div>
     <div class="hero-chips">
@@ -734,7 +738,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
 
     <div id="page-smart-search" class="page">
       <div class="page-header">
-        <div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHome()">Trang chủ</a><span class="bc-sep">/</span><span>Tra cứu thông minh</span></div>
+        <div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHomeContent()">Trang chủ</a><span class="bc-sep">/</span><span>Tra cứu thông minh</span></div>
         <div class="page-title">Tra cứu theo tình huống</div>
       </div>
       <div style="padding: 0 24px 24px;">
@@ -757,13 +761,13 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
     </div>
 
     <div id="page-subfields" class="page">
-      <div class="page-header"><div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHome()">Trang chủ</a><span class="bc-sep">/</span><span id="sf-breadcrumb-cur"></span></div><div class="page-title" id="sf-title"></div></div>
+      <div class="page-header"><div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHomeContent()">Trang chủ</a><span class="bc-sep">/</span><span id="sf-breadcrumb-cur"></span></div><div class="page-title" id="sf-title"></div></div>
       <div class="subfield-list" id="subfield-list"></div>
     </div>
 
     <div id="page-cases" class="page">
       <div class="page-header">
-        <div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHome()">Trang chủ</a><span class="bc-sep" id="cases-sep-1">/</span><a class="bc-link" id="cases-bc-lv" href="./" onclick="event.preventDefault(); goSubfields()"></a><span class="bc-sep" id="cases-sep-2">/</span><span id="cases-bc-sf"></span></div>
+        <div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHomeContent()">Trang chủ</a><span class="bc-sep" id="cases-sep-1">/</span><a class="bc-link" id="cases-bc-lv" href="./" onclick="event.preventDefault(); goSubfields()"></a><span class="bc-sep" id="cases-sep-2">/</span><span id="cases-bc-sf"></span></div>
         <div class="page-title" id="cases-title"></div>
         <div id="cases-admin-toolbar" class="cases-admin-toolbar"></div>
       </div>
@@ -772,7 +776,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
 
     <div id="page-detail" class="page">
       <div class="page-header" style="border-bottom: none; padding-bottom: 12px; margin-bottom: 0;">
-        <div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHome()">Trang chủ</a><span class="bc-sep">/</span><a class="bc-link" id="det-bc-lv" href="./" onclick="event.preventDefault(); goSubfields()"></a><span class="bc-sep">/</span><a class="bc-link" id="det-bc-sf" href="./" onclick="event.preventDefault(); goCasesList()"></a><span class="bc-sep">/</span><span>Chi tiết</span></div>
+        <div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHomeContent()">Trang chủ</a><span class="bc-sep">/</span><a class="bc-link" id="det-bc-lv" href="./" onclick="event.preventDefault(); goSubfields()"></a><span class="bc-sep">/</span><a class="bc-link" id="det-bc-sf" href="./" onclick="event.preventDefault(); goCasesList()"></a><span class="bc-sep">/</span><span>Chi tiết</span></div>
       </div>
       <div id="case-hero" class="case-hero"></div>
       <div class="case-detail-header-info">
@@ -787,7 +791,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
     <!-- ===== DCSL-POLICY-HTML START ===== -->
     <div id="page-dieu-khoan" class="page">
       <div class="page-header">
-        <div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHome()">Trang chủ</a><span class="bc-sep">/</span><span>Điều khoản sử dụng</span></div>
+        <div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHomeContent()">Trang chủ</a><span class="bc-sep">/</span><span>Điều khoản sử dụng</span></div>
         <div class="page-title">Điều khoản sử dụng</div>
       </div>
       <div class="policy-body">
@@ -825,7 +829,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
     </div>
     <div id="page-bao-mat" class="page">
       <div class="page-header">
-        <div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHome()">Trang chủ</a><span class="bc-sep">/</span><span>Chính sách bảo mật dữ liệu cá nhân</span></div>
+        <div class="page-breadcrumb"><a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHomeContent()">Trang chủ</a><span class="bc-sep">/</span><span>Chính sách bảo mật dữ liệu cá nhân</span></div>
         <div class="page-title">Chính sách bảo mật dữ liệu cá nhân</div>
       </div>
       <div class="policy-body">
@@ -916,7 +920,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
     <div id="page-thue" class="page">
       <div class="page-header">
         <div class="page-breadcrumb">
-          <a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHome()">Trang chủ</a>
+          <a class="bc-link bc-home-link" href="./" onclick="event.preventDefault(); goHomeContent()">Trang chủ</a>
           <span class="bc-sep">/</span>
           <span id="thue-breadcrumb-text">Tư vấn Thuế</span>
         </div>
@@ -1005,7 +1009,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
   </div>
 
   <aside id="side-right">
-    <div class="right-recent-wrapper"><div class="side-panel-title"><i class="ph ph-clock-counter-clockwise"></i> Cập nhật mới nhất</div><div id="desktop-recent-list"></div></div>
+    <div class="right-recent-wrapper"><div class="side-panel-title"><i class="ph ph-trend-up"></i> Được quan tâm nhất</div><div id="desktop-recent-list"></div></div>
   </aside>
 </div>
 
@@ -1439,30 +1443,63 @@ function getActiveLawListForLinking() {
   return [];
 }
 
-function linkManualLawReferences(htmlText, laws) {
-  if(!htmlText || !Array.isArray(laws) || laws.length === 0) return htmlText;
-  let res = htmlText;
+/* ===== TOC-DO START (tăng tốc mở vụ án) =====
+   Bản cũ quét lại TOÀN BỘ nội dung một lượt cho MỖI biến thể tên điều luật.
+   Vụ án có 87 điều luật => hơn 500 lượt tách chuỗi + biên dịch biểu thức trên
+   một trang 85.000 ký tự, nên máy yếu phải chờ rất lâu mới thấy nội dung.
+   Nay gộp mọi biến thể thành MỘT biểu thức, quét đúng 1 lượt và nhớ lại theo
+   danh sách điều luật của vụ án. Kết quả HTML giữ nguyên y hệt bản cũ
+   (đã đối chiếu toàn bộ 231 vụ trong dữ liệu, không sai khác 1 ký tự). */
+const VI_LAW_LINK_REGEX = new RegExp(`(?![^<]*>)${VI_LAW_REF_PATTERN}`, 'gi');
+const EN_LAW_LINK_REGEX = new RegExp(`(?![^<]*>)${EN_LAW_REF_PATTERN}`, 'gi');
+let manualLawRegexCache = { key: null, regex: null };
+
+// Chữ ký rẻ tiền của danh sách điều luật — đổi tên/thêm/bớt điều luật là cache tự hết hạn
+// (cần cho màn hình Admin: adminFormLaws bị sửa tại chỗ nên không thể so sánh bằng tham chiếu)
+function manualLawListKey(laws) {
+  return laws.map(law => `${law.name || ''}${law.title || ''}${law.name_en || ''}${law.title_en || ''}`).join('');
+}
+
+function buildManualLawRegex(laws) {
+  if(!Array.isArray(laws) || laws.length === 0) return null;
+  const key = manualLawListKey(laws);
+  if(manualLawRegexCache.key === key) return manualLawRegexCache.regex;
+  const sources = [];
+  const seen = new Set();
   laws.forEach(law => {
     const manualNames = [law.name, law.title, law.name_en, law.title_en, law.translations && law.translations.en && law.translations.en.title].filter(Boolean);
     manualNames.forEach(manualName => getLawReferenceVariants(manualName).forEach(ref => {
       const source = escapeRegExp(ref).replace(/\s+/g, '\\s+');
-      if(!source) return;
-      const pattern = new RegExp(`(?![^<]*>)${source}(?![0-9A-Za-z.])`, 'gi');
-      res = replaceOutsideLawLinks(res, pattern, wrapLawLink);
+      if(!source || seen.has(source)) return;
+      seen.add(source);
+      sources.push(source);
     }));
   });
-  return res;
+  let regex = null;
+  if(sources.length) {
+    // Biến thể dài xếp trước để mỗi vị trí luôn khớp cụm dài nhất (như thứ tự cũ)
+    sources.sort((a, b) => b.length - a.length);
+    regex = new RegExp(`(?![^<]*>)(?:${sources.join('|')})(?![0-9A-Za-z.])`, 'gi');
+  }
+  manualLawRegexCache = { key: key, regex: regex };
+  return regex;
+}
+
+function linkManualLawReferences(htmlText, laws) {
+  if(!htmlText) return htmlText;
+  const pattern = buildManualLawRegex(laws);
+  if(!pattern) return htmlText;
+  return replaceOutsideLawLinks(htmlText, pattern, wrapLawLink);
 }
 
 function autoLinkLaws(htmlText) {
   if(!htmlText) return '';
   let res = preserveIndentation(htmlText);
-  const regexStr = new RegExp(`(?![^<]*>)${VI_LAW_REF_PATTERN}`, 'gi');
-  res = replaceOutsideLawLinks(res, regexStr, wrapLawLink);
-  const englishRegexStr = new RegExp(`(?![^<]*>)${EN_LAW_REF_PATTERN}`, 'gi');
-  res = replaceOutsideLawLinks(res, englishRegexStr, wrapLawLink);
+  res = replaceOutsideLawLinks(res, VI_LAW_LINK_REGEX, wrapLawLink);
+  res = replaceOutsideLawLinks(res, EN_LAW_LINK_REGEX, wrapLawLink);
   return linkManualLawReferences(res, getActiveLawListForLinking());
 }
+/* ===== TOC-DO END ===== */
 
 function findLawInList(laws, lawName) {
   if(!Array.isArray(laws)) return null;
@@ -1634,6 +1671,7 @@ const UI_TEXT = {
     topics: 'Chủ đề',
     interest: 'Bạn đang quan tâm gì?',
     latest: 'Cập nhật mới nhất',
+    mostRead: 'Được quan tâm nhất',
     viewed: 'Tài liệu bạn đã xem',
     smartSearch: 'Tra cứu tình huống',
     smartSearchShort: 'Tìm kiếm thông minh',
@@ -1739,6 +1777,7 @@ const UI_TEXT = {
     topics: 'Topics',
     interest: 'What are you interested in?',
     latest: 'Latest updates',
+    mostRead: 'Most read',
     viewed: 'Documents you viewed',
     smartSearch: 'Situation Search',
     smartSearchShort: 'Smart search',
@@ -1922,7 +1961,7 @@ function applyStaticTranslations() {
   if(f2Selected) f2Selected.textContent = filterState.f2 ? getSFDisplayName(filterState.f1, filterState.f2) : (filterState.f1 ? t('selectSpecificField') : t('selectAfterStep1'));
   if(filterBox) filterBox.placeholder = t('filterPlaceholder');
   if(filterBtn) filterBtn.textContent = t('applyFilter');
-  if(sidePanelTitle) sidePanelTitle.innerHTML = `<i class="ph ph-clock-counter-clockwise"></i> ${t('latest')}`;
+  if(sidePanelTitle) sidePanelTitle.innerHTML = `<i class="ph ph-trend-up"></i> ${t('mostRead')}`;
   if(detailBreadcrumb) detailBreadcrumb.textContent = t('detail');
   if(smartTitle) smartTitle.textContent = t('smartSearch');
   if(smartBreadcrumb) smartBreadcrumb.textContent = t('smartSearch');
@@ -2142,8 +2181,39 @@ function buildAltSourceLinkHtml(sourceLink, title) {
 /* ===== LINK-NGUON END ===== */
 
 
+/* ===== TIEU-DE START (chỉ tiêu đề mục mới được bôi đậm to + gạch chân) =====
+   Nhiều bản án nhập từ Word có các dòng in đậm bình thường ("- Về tố tụng:",
+   "Tuyên xử:", "1/ Hóa đơn số ...") bị lưu nhầm thành .detail-section-title,
+   nên hiện to đậm kèm gạch chân như tiêu đề mục. Quy tắc đúng: CHỈ dòng VIẾT
+   HOA TOÀN BỘ (NỘI DUNG VỤ ÁN, NHẬN ĐỊNH CỦA TÒA ÁN, QUYẾT ĐỊNH...) mới là
+   tiêu đề mục; các dòng còn lại trả về đoạn văn thường nhưng GIỮ nét in đậm. */
+function stripDiacriticsKeepCase(text) {
+  return String(text || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D');
+}
+
+function isAllUpperHeadingText(text) {
+  // Nội dung nhập từ Word lưu ký tự có dấu dạng &#224; — phải giải mã trước khi so chữ hoa/thường;
+  // các thực thể có tên (&amp;, &nbsp;...) chứa chữ thường nên đổi thành khoảng trắng cho khỏi nhiễu.
+  const trimmed = cleanInlineText(text)
+    .replace(/&#(\d+);/g, (m, code) => String.fromCharCode(parseInt(code, 10)))
+    .replace(/&[a-z]+;/gi, ' ')
+    .trim();
+  if(!trimmed || trimmed.length > 180) return false;
+  const plain = stripDiacriticsKeepCase(trimmed);
+  if(!/[A-Z]/.test(plain)) return false;
+  return plain === plain.toUpperCase();
+}
+
+function downgradeFalseSectionTitles(html) {
+  return String(html || '').replace(/<div class="detail-section-title">([\s\S]*?)<\/div>/gi, (full, inner) => {
+    if(isAllUpperHeadingText(inner)) return full;
+    return `<p>${/<(strong|b)[\s>]/i.test(inner) ? inner : `<strong>${inner}</strong>`}</p>`;
+  });
+}
+/* ===== TIEU-DE END ===== */
+
 function upgradeContentHeadingMarkup(html) {
-  const text = String(html || '');
+  const text = downgradeFalseSectionTitles(html);
   if(!text || !text.includes('<p')) return text;
   return text.replace(/<p>([\s\S]*?)<\/p>/gi, (full, inner) => {
     const headingText = cleanInlineText(inner);
@@ -2326,7 +2396,8 @@ function updateBreadcrumbHrefs() {
 }
 
 function cleanSeoText(value, maxLength = 165) {
-  const text = cleanInlineText(value).replace(/\s+/g, ' ').trim();
+  // Chỉ lấy vài nghìn ký tự đầu rồi mới lọc thẻ — khỏi quét cả bản án dài 200.000 ký tự
+  const text = cleanInlineText(String(value || '').slice(0, 4000)).replace(/\s+/g, ' ').trim();
   if(text.length <= maxLength) return text;
   return `${text.slice(0, maxLength - 3).replace(/\s+\S*$/, '').trim()}...`;
 }
@@ -2644,15 +2715,45 @@ function getRenderableRecentItems(limit = 5){
   }).filter(Boolean).slice(0, limit);
 }
 
+// Văn bản pháp luật và giải đáp nghiệp vụ không phải bản án nên không lên bảng này
+const NON_CASE_SUBFIELDS = ['van-ban-phap-luat', 'giai-dap-nghiep-vu'];
+
+// Bảng bên phải: 4 bản án "được quan tâm nhất".
+// Chưa có số liệu lượt đọc thật — readHistory chỉ nằm trên máy từng người, không gom
+// về đâu cả — nên xếp theo số sao admin chấm, đồng hạng thì lấy bài cập nhật gần đây
+// trước. Nếu danh sách cập nhật chưa đủ 4 bản án thì bù thêm từ toàn bộ thư viện.
+function getPopularCaseItems(limit = 4){
+  const isCase = r => r && r.found && !NON_CASE_SUBFIELDS.includes(r.found.cas.sfId);
+  const bySao = (a, b) => (b.found.cas.sao || 0) - (a.found.cas.sao || 0);
+
+  const picked = getRenderableRecentItems(Math.max(RECENT_UPDATES.length, 15))
+    .filter(isCase).sort(bySao).slice(0, limit);
+  if(picked.length >= limit) return picked;
+
+  const seen = new Set(picked.map(r => r.id));
+  const extras = [];
+  Object.keys(CASES_DATA).forEach(key => {
+    (CASES_DATA[key] || []).forEach(cas => {
+      if(!cas || !cas.id || seen.has(cas.id)) return;
+      if(NON_CASE_SUBFIELDS.includes(cas.sfId)) return;
+      const displayTitle = getCompactDisplayText(getCaseFieldText(cas, 'ten'), 180);
+      if(!displayTitle) return;
+      extras.push({ id: cas.id, lvId: cas.lvId, sfId: cas.sfId, displayTitle,
+                    found: { cas }, lv: getLVById(cas.lvId) });
+    });
+  });
+  extras.sort(bySao);
+  return picked.concat(extras.slice(0, limit - picked.length));
+}
+
 function renderDesktopRecent(){
   const container = document.getElementById('desktop-recent-list'); if(!container) return;
-  container.innerHTML = getRenderableRecentItems(5).map((r,i)=>{
-    const lv = r.lv || getLVById(r.lvId); const isNew = i === 0 || i === 1;
-    const displayTitle = r.displayTitle;
+  container.innerHTML = getPopularCaseItems(4).map(r=>{
+    const lv = r.lv || getLVById(r.lvId);
     return `
       <a class="dt-recent-item" href="${escapeHtmlText(routeHref({ view: 'detail', lv: r.lvId, sf: r.sfId, caseId: r.id }))}" onclick="event.preventDefault(); goDetail('${r.lvId}','${r.sfId}','${r.id}')">
-        <div class="dt-recent-lv">${lv?lv.icon:''} ${lv?getLVDisplayName(lv):''} ${isNew?`<span class="new-badge" style="margin-left:auto">${t('newBadge')}</span>`:''}</div>
-        <div class="dt-recent-name">${displayTitle}</div>
+        <div class="dt-recent-lv">${lv?lv.icon:''} ${lv?getLVDisplayName(lv):''}</div>
+        <div class="dt-recent-name">${r.displayTitle}</div>
       </a>
     `;
   }).join('');
@@ -2961,6 +3062,32 @@ function heroSearchGo() {
   if(!query) { goSmartSearch(); return; }
   showSearchResultsPage(query, 1);
 }
+
+// Bấm vào ô tìm kiếm ở hero => chuyển thẳng sang trang "Tra cứu theo tình huống"
+// để người dùng đọc được phần hướng dẫn, mang theo chữ đã gõ (nếu có) và focus sẵn ô nhập.
+function heroSearchFocus() {
+  const el = document.getElementById('hero-search-input');
+  const query = el ? el.value.trim() : '';
+  if(el) el.value = '';
+  goSmartSearch();
+  const smartInput = document.getElementById('smart-search-input-page');
+  if(smartInput) {
+    if(query) smartInput.value = query;
+    try { smartInput.focus({ preventScroll: true }); } catch(e) { smartInput.focus(); }
+  }
+}
+
+// Breadcrumb "Trang chủ": về trang chủ nhưng KHÔNG hiện lại màn hero toàn màn hình.
+// Người đang tra cứu bấm vào đây là muốn quay lại vùng nội dung (Lọc tìm kiếm / Bạn đang
+// quan tâm gì / Cập nhật mới nhất), không phải xem lại trang giới thiệu.
+// Logo và mục "Trang chủ" ở menu vẫn giữ nguyên hành vi cũ — vẫn hiện hero.
+function goHomeContent() {
+  goHome();
+  const hero = document.getElementById('hero-full');
+  if(hero) hero.classList.remove('visible');
+  window.scrollTo(0, 0);
+}
+window.goHomeContent = goHomeContent;
 
 // Cuộn xuống đúng đầu vùng nội dung: 3 cột (Lọc tìm kiếm / Bạn đang quan tâm gì / Cập nhật
 // mới nhất) thẳng hàng ngay dưới header, tiêu đề không bị che
@@ -3275,29 +3402,16 @@ function goDetail(lvId, sfId, caseId){
   const apDungEl = document.getElementById('tc-ap-dung');
   const chiTietEl = document.getElementById('tc-chi-tiet');
 
+  // --- Phần nhẹ: nhãn loại, hàng tab, khung "đang tải" — vẽ NGAY trong lượt bấm ---
   if (isDoc) {
       document.getElementById('case-detail-stars').innerHTML = `<span class="case-detail-type"><i class="ph ph-file-text"></i> ${typeLabel}</span>`;
       document.getElementById('tab-row-container').innerHTML = `
         <button class="tab-btn active" id="tab-chi-tiet" onclick="switchTab('chi-tiet')"><i class="ph ph-text-align-left"></i> ${t('detailedContent')}</button>
       `;
-      document.getElementById('tab-row-container').className = 'tab-row one-tab'; 
-      
-      dienBienEl.innerHTML = ''; apDungEl.innerHTML = '';
-      
-      const docRaw = getCaseFieldText(cas, 'chi_tiet') || getCaseFieldText(cas, 'tom_luoc') || getCaseFieldText(cas, 'ap_dung') || '';
-      if(cas.sfId === 'van-ban-phap-luat'){
-        const rendered = renderVanBanPhapLuat(docRaw, cas);
-        chiTietEl.innerHTML = rendered || `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>${t('detailLater')}</p></div>`;
-      } else if(cas.sfId === 'giai-dap-nghiep-vu'){
-        const rendered = renderGiaiDapNghiepVu(docRaw);
-        chiTietEl.innerHTML = rendered ? autoLinkLaws(rendered) : `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>${t('detailLater')}</p></div>`;
-      } else {
-        const detailContent = upgradeContentHeadingMarkup(docRaw);
-        if(detailContent){
-          chiTietEl.innerHTML = renderPipeTablesInHtml(autoLinkLaws(detailContent));
-        } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>${t('detailLater')}</p></div>`; }
-      }
+      document.getElementById('tab-row-container').className = 'tab-row one-tab';
 
+      dienBienEl.innerHTML = ''; apDungEl.innerHTML = '';
+      chiTietEl.innerHTML = detailLoadingHtml();
       switchTab('chi-tiet');
   } else {
       document.getElementById('case-detail-stars').innerHTML = cas.sao > 0 ? `<span>${'⭐'.repeat(cas.sao)}</span><span class="case-detail-type">${typeLabel}</span>` : `<span class="case-detail-type">${typeLabel}</span>`;
@@ -3308,27 +3422,9 @@ function goDetail(lvId, sfId, caseId){
       `;
       document.getElementById('tab-row-container').className = 'tab-row';
 
-      const displayTimeline = getCaseTimeline(cas);
-      if(displayTimeline && displayTimeline.length > 0){
-        let tlHtml = `<div class="timeline-container">`;
-        displayTimeline.forEach(t => {
-          let dateText = "●"; let descText = t;
-          if (typeof t === 'object') { dateText = t.date; descText = t.desc; }
-          tlHtml += `<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">${dateText}</div><div class="timeline-desc">${autoLinkLaws(descText)}</div></div>`;
-        });
-        tlHtml += `</div>`;
-        dienBienEl.innerHTML = tlHtml;
-      } else { dienBienEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-clock"></i><p>${t('timelineLater')}</p></div>`; }
-
-      const displayApply = upgradeContentHeadingMarkup(getCaseFieldText(cas, 'ap_dung'));
-      if(displayApply){ apDungEl.innerHTML = `<div class="detail-section">${renderPipeTablesInHtml(autoLinkLaws(displayApply))}</div>`; }
-      else { apDungEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-lightbulb"></i><p>${t('applyLater')}</p></div>`; }
-
-      const detailContent = upgradeContentHeadingMarkup(getCaseFieldText(cas, 'chi_tiet') || getCaseFieldText(cas, 'tom_luoc') || '');
-      if(detailContent){
-        chiTietEl.innerHTML = renderPipeTablesInHtml(autoLinkLaws(detailContent));
-      } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-file-text"></i><p>${t('detailLater')}</p></div>`; }
-
+      dienBienEl.innerHTML = detailLoadingHtml();
+      apDungEl.innerHTML = detailLoadingHtml();
+      chiTietEl.innerHTML = detailLoadingHtml();
       switchTab('dien-bien');
   }
 
@@ -3343,6 +3439,66 @@ function goDetail(lvId, sfId, caseId){
   document.getElementById('pagination-bar').classList.remove('visible');
   showPage('page-detail');
   updateRoute({ view: 'detail', lv: state.curLV ? state.curLV.id : '', sf: actualSfId, caseId: cas.id });
+
+  // --- Phần nặng: dựng nội dung SAU KHI trình duyệt đã vẽ xong trang ---
+  // Một bản án có thể dài 200.000 ký tự; dựng thẳng trong lượt bấm làm trình duyệt
+  // đứng hình vài giây, người dùng mới tưởng web treo rồi thoát ra.
+  const renderToken = ++detailRenderToken;
+  const paintBody = () => { if(renderToken === detailRenderToken) fillDetailContent(cas, isDoc); };
+  if(typeof requestAnimationFrame === 'function') requestAnimationFrame(() => requestAnimationFrame(paintBody));
+  else setTimeout(paintBody, 0);
+}
+
+/* ===== TOC-DO: dựng nội dung nặng của trang chi tiết ===== */
+let detailRenderToken = 0;
+
+function detailLoadingHtml(){
+  return `<div class="tc-loading">${getActiveLanguage() === 'en' ? 'Loading content…' : 'Đang tải nội dung…'}</div>`;
+}
+
+function fillDetailContent(cas, isDoc){
+  const dienBienEl = document.getElementById('tc-dien-bien');
+  const apDungEl = document.getElementById('tc-ap-dung');
+  const chiTietEl = document.getElementById('tc-chi-tiet');
+  if(!chiTietEl) return;
+
+  if(isDoc){
+    const docRaw = getCaseFieldText(cas, 'chi_tiet') || getCaseFieldText(cas, 'tom_luoc') || getCaseFieldText(cas, 'ap_dung') || '';
+    if(cas.sfId === 'van-ban-phap-luat'){
+      const rendered = renderVanBanPhapLuat(docRaw, cas);
+      chiTietEl.innerHTML = rendered || `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>${t('detailLater')}</p></div>`;
+    } else if(cas.sfId === 'giai-dap-nghiep-vu'){
+      const rendered = renderGiaiDapNghiepVu(docRaw);
+      chiTietEl.innerHTML = rendered ? autoLinkLaws(rendered) : `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>${t('detailLater')}</p></div>`;
+    } else {
+      const detailContent = upgradeContentHeadingMarkup(docRaw);
+      if(detailContent){
+        chiTietEl.innerHTML = renderPipeTablesInHtml(autoLinkLaws(detailContent));
+      } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-file-dashed"></i><p>${t('detailLater')}</p></div>`; }
+    }
+    return;
+  }
+
+  const displayTimeline = getCaseTimeline(cas);
+  if(displayTimeline && displayTimeline.length > 0){
+    let tlHtml = `<div class="timeline-container">`;
+    displayTimeline.forEach(t => {
+      let dateText = "●"; let descText = t;
+      if (typeof t === 'object') { dateText = t.date; descText = t.desc; }
+      tlHtml += `<div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">${dateText}</div><div class="timeline-desc">${autoLinkLaws(descText)}</div></div>`;
+    });
+    tlHtml += `</div>`;
+    dienBienEl.innerHTML = tlHtml;
+  } else { dienBienEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-clock"></i><p>${t('timelineLater')}</p></div>`; }
+
+  const displayApply = upgradeContentHeadingMarkup(getCaseFieldText(cas, 'ap_dung'));
+  if(displayApply){ apDungEl.innerHTML = `<div class="detail-section">${renderPipeTablesInHtml(autoLinkLaws(displayApply))}</div>`; }
+  else { apDungEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-lightbulb"></i><p>${t('applyLater')}</p></div>`; }
+
+  const detailContent = upgradeContentHeadingMarkup(getCaseFieldText(cas, 'chi_tiet') || getCaseFieldText(cas, 'tom_luoc') || '');
+  if(detailContent){
+    chiTietEl.innerHTML = renderPipeTablesInHtml(autoLinkLaws(detailContent));
+  } else { chiTietEl.innerHTML = `<div class="tc-placeholder"><i class="ph ph-file-text"></i><p>${t('detailLater')}</p></div>`; }
 }
 
 function switchTab(tabId){
@@ -3893,16 +4049,69 @@ function normalizeAdminBackupPayload(backup) {
 function normalizeSiteDataPayload(payload) {
     const data = payload && payload.data ? payload.data : payload;
     if(!data || typeof data !== 'object') throw new Error('Invalid site data');
-    return normalizeAdminBackupPayload({ data });
+    const normalized = normalizeAdminBackupPayload({ data });
+    // Giữ lại mốc thời gian admin đồng bộ — dùng để biết bản đám mây có mới hơn bản lưu tạm không
+    normalized.exportedAt = (payload && payload.exportedAt) || '';
+    return normalized;
 }
 
 // URL Worker đám mây (Cloudflare KV) — CHỈ điền URL, KHÔNG BAO GIỜ điền mã bảo mật/token vào file public này
 const CLOUD_DATA_URL = 'https://webluat-data.ngocduc2006-hp.workers.dev/';
 
+/* ===== TOC-DO-TAI-TRANG START =====
+   Mỗi lần vào web đều phải tải lại toàn bộ kho dữ liệu (6 MB, nén còn ~1,2 MB)
+   TRƯỚC KHI vẽ được gì lên màn hình — mạng chậm là ngồi nhìn trang trắng cả chục giây.
+   Nay giữ một bản sao trong Cache Storage của trình duyệt: mở web là dựng ngay từ
+   bản sao, đồng thời tải bản mới ở nền; nếu đám mây có dữ liệu mới hơn thì vẽ lại.
+   Lần đầu vào web vẫn phải chờ tải như cũ (chưa có bản sao nào). */
+const SITE_DATA_CACHE_NAME = 'dcsl-site-data-v1';
+let lastSiteDataStamp = '';
+
+function siteDataCacheAvailable() {
+    return typeof caches !== 'undefined' && window.isSecureContext !== false;
+}
+
+async function readSiteDataCache(url) {
+    if(!siteDataCacheAvailable()) return null;
+    try {
+        const cache = await caches.open(SITE_DATA_CACHE_NAME);
+        const hit = await cache.match(url);
+        if(!hit) return null;
+        return normalizeSiteDataPayload(await hit.json());
+    } catch(e) { return null; }
+}
+
+async function writeSiteDataCache(url, text) {
+    if(!siteDataCacheAvailable()) return;
+    try {
+        const cache = await caches.open(SITE_DATA_CACHE_NAME);
+        await cache.put(url, new Response(text, { headers: { 'Content-Type': 'application/json' } }));
+    } catch(e) {}
+}
+
+function applySiteData(siteData) {
+    SITE_CASE_ORDER = siteData.caseOrder && typeof siteData.caseOrder === 'object' ? siteData.caseOrder : {};
+    applyCasesSnapshot(siteData.casesData);
+    if(siteData.lawDb && typeof siteData.lawDb === 'object') Object.assign(LAW_DB, siteData.lawDb);
+    applyStoredCaseOrder();
+}
+
 async function fetchSiteDataFrom(url) {
     const response = await fetch(url, { cache: 'no-store' });
     if(!response.ok) throw new Error('HTTP ' + response.status);
-    return normalizeSiteDataPayload(await response.json());
+    const text = await response.text();
+    writeSiteDataCache(url, text); // ghi ở nền, không chờ
+    return normalizeSiteDataPayload(JSON.parse(text));
+}
+
+// Dựng trang ngay từ bản sao trong máy (nếu có). Trả về true khi dùng được.
+async function loadCachedSiteData() {
+    const useCloud = typeof CLOUD_DATA_URL === 'string' && CLOUD_DATA_URL !== '';
+    const siteData = (useCloud ? await readSiteDataCache(CLOUD_DATA_URL) : null) || await readSiteDataCache(SITE_DATA_URL);
+    if(!siteData) return false;
+    lastSiteDataStamp = siteData.exportedAt || '';
+    applySiteData(siteData);
+    return true;
 }
 
 async function loadSharedSiteData() {
@@ -3919,12 +4128,13 @@ async function loadSharedSiteData() {
         try { siteData = await fetchSiteDataFrom(SITE_DATA_URL); }
         catch(e) { console.warn('Không thể tải dữ liệu web chung:', e); return false; }
     }
-    SITE_CASE_ORDER = siteData.caseOrder && typeof siteData.caseOrder === 'object' ? siteData.caseOrder : {};
-    applyCasesSnapshot(siteData.casesData);
-    if(siteData.lawDb && typeof siteData.lawDb === 'object') Object.assign(LAW_DB, siteData.lawDb);
-    applyStoredCaseOrder();
+    // Bản đám mây trùng đúng bản đã dựng từ bộ nhớ tạm -> khỏi dựng lại kho dữ liệu
+    if(siteData.exportedAt && siteData.exportedAt === lastSiteDataStamp) return true;
+    lastSiteDataStamp = siteData.exportedAt || '';
+    applySiteData(siteData);
     return true;
 }
+/* ===== TOC-DO-TAI-TRANG END ===== */
 
 function exportAdminBackup() {
     saveCasesDataToStorage();
@@ -5488,13 +5698,38 @@ window.addEventListener('beforeunload', function(e) {
 
 window.addEventListener('scroll',()=>{ document.getElementById('global-header').classList.toggle('scrolled', window.scrollY>10); });
 
-async function safeInit() { 
-    const hasSharedSiteData = await loadSharedSiteData();
-    restoreCasesDataFromStorage({ merge: hasSharedSiteData }); 
+// Vẽ lại đúng trang người dùng đang xem (không kéo họ về trang chủ) sau khi có dữ liệu mới
+function refreshCurrentView() {
+    try {
+        renderHome();
+        buildFilterF1();
+        const active = document.querySelector('.page.active');
+        const canRenderList = state.viewBookmarks || state.searchQuery || (state.curLV && state.curSF);
+        if(active && active.id === 'page-cases' && canRenderList) renderCasesList();
+    } catch(e) { console.warn('Không vẽ lại được trang sau khi cập nhật dữ liệu:', e); }
+}
+
+async function safeInit() {
     const savedLang = localStorage.getItem(LANGUAGE_STORAGE_KEY);
     if(savedLang === 'en' || savedLang === 'vi') state.uiLang = savedLang;
     try { Object.assign(LAW_DB, JSON.parse(localStorage.getItem('dcsl_law_db'))); } catch(e){}
-    renderHome(); buildFilterF1(); syncLanguageButtons(); applyRouteFromUrl();
+
+    // Bước 1 — dựng trang NGAY từ bản sao lần trước (nếu có), không phải chờ tải 6 MB
+    const usedCache = await loadCachedSiteData();
+    const cachedStamp = lastSiteDataStamp;
+    if(usedCache) {
+        restoreCasesDataFromStorage({ merge: true });
+        renderHome(); buildFilterF1(); syncLanguageButtons(); applyRouteFromUrl();
+    }
+
+    // Bước 2 — tải bản mới nhất từ đám mây; chỉ vẽ lại khi thật sự có dữ liệu mới
+    const hasSharedSiteData = await loadSharedSiteData();
+    restoreCasesDataFromStorage({ merge: hasSharedSiteData });
+    if(!usedCache) {
+        renderHome(); buildFilterF1(); syncLanguageButtons(); applyRouteFromUrl();
+    } else if(lastSiteDataStamp !== cachedStamp) {
+        syncLanguageButtons(); refreshCurrentView();
+    }
 }
 if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', safeInit); } else { safeInit(); }
 window.addEventListener('popstate', applyRouteFromUrl);
@@ -5571,12 +5806,12 @@ window.addEventListener('popstate', applyRouteFromUrl);
    -> Your apps (Web app) -> SDK setup and configuration -> Config.
    Khi chưa điền (để trống như hiện tại): nút Đăng nhập ẩn, bookmark lưu theo máy. */
 const DCSL_FIREBASE_CONFIG = {
-  /* apiKey: "AIza....",
-     authDomain: "ten-du-an.firebaseapp.com",
-     projectId: "ten-du-an",
-     storageBucket: "ten-du-an.appspot.com",
-     messagingSenderId: "1234567890",
-     appId: "1:1234567890:web:abc123" */
+  apiKey: "AIzaSyDU3nJn7RX_LkQhk_yCndGb7qrbDcAiVZg",
+  authDomain: "dau-chien-thang-luat.firebaseapp.com",
+  projectId: "dau-chien-thang-luat",
+  storageBucket: "dau-chien-thang-luat.firebasestorage.app",
+  messagingSenderId: "303147004714",
+  appId: "1:303147004714:web:4f4bb0176e503b7cc92453"
 };
 
 (function(){
@@ -5584,18 +5819,32 @@ const DCSL_FIREBASE_CONFIG = {
 /* ---------- BOOKMARK (localStorage + đồng bộ đám mây khi đăng nhập) ---------- */
 window.BOOKMARKS = new Set(function(){ try { return JSON.parse(localStorage.getItem('dcsl_bookmarks') || '[]'); } catch(e){ return []; } }());
 function bmSaveLocal(){ try { localStorage.setItem('dcsl_bookmarks', JSON.stringify(Array.from(BOOKMARKS))); } catch(e){} }
+// Phosphor đặt ĐỘ ĐẬM ở lớp GỐC: nét thường là "ph", nét đặc là "ph-fill".
+// Bản cũ ghi "ph ph-bookmark-simple-fill" — không có lớp nào tên như vậy nên
+// khi đã lưu thì nút hiện TRỐNG TRƠN (mất hẳn biểu tượng bỏ lưu).
+function bmIconHtml(on){
+  return '<i class="' + (on ? 'ph-fill' : 'ph') + ' ph-bookmark-simple"></i>';
+}
 window.bmBtnHtml = function(id, extraClass){
   var on = BOOKMARKS.has(id);
-  return '<button class="' + (extraClass || 'case-expand-btn') + ' bm-btn' + (on ? ' bm-on' : '') + '" data-bm-id="' + escapeHtmlText(id) + '" onclick="toggleBookmark(\'' + escapeJsAttr(id) + '\', this, event)" title="' + t(on ? 'bmRemove' : 'bmAdd') + '"><i class="ph ' + (on ? 'ph-bookmark-simple-fill' : 'ph-bookmark-simple') + '"></i></button>';
+  return '<button class="' + (extraClass || 'case-expand-btn') + ' bm-btn' + (on ? ' bm-on' : '') + '" data-bm-id="' + escapeHtmlText(id) + '" onclick="toggleBookmark(\'' + escapeJsAttr(id) + '\', this, event)" title="' + t(on ? 'bmRemove' : 'bmAdd') + '">' + bmIconHtml(on) + '</button>';
 };
 function updateBmBtn(btn){
   var on = BOOKMARKS.has(btn.getAttribute('data-bm-id'));
   btn.classList.toggle('bm-on', on);
-  btn.innerHTML = '<i class="ph ' + (on ? 'ph-bookmark-simple-fill' : 'ph-bookmark-simple') + '"></i>';
+  btn.innerHTML = bmIconHtml(on);
   btn.title = t(on ? 'bmRemove' : 'bmAdd');
 }
+// Vụ án cần lưu khi người dùng bấm lúc chưa đăng nhập — lưu hộ ngay sau khi đăng nhập xong
+var pendingBookmarkId = null;
 window.toggleBookmark = function(id, btn, ev){
   if(ev){ ev.stopPropagation(); ev.preventDefault(); }
+  // Bản án đã lưu được đồng bộ theo tài khoản, nên phải đăng nhập trước
+  if(acctConfigured() && !ACCT.user){
+    pendingBookmarkId = id;
+    openAccountModal('login');
+    return;
+  }
   if(BOOKMARKS.has(id)) BOOKMARKS.delete(id); else BOOKMARKS.add(id);
   bmSaveLocal(); bmCloudSave();
   document.querySelectorAll('[data-bm-id="' + id + '"]').forEach(updateBmBtn);
@@ -5683,6 +5932,8 @@ async function bmSyncOnLogin(){
     var snap = await fsm.getDoc(ref);
     var cloudIds = (snap.exists() && Array.isArray(snap.data().ids)) ? snap.data().ids : [];
     cloudIds.forEach(function(id){ BOOKMARKS.add(id); }); /* hợp nhất: máy + đám mây */
+    // Người dùng đã bấm "Lưu" trước khi đăng nhập -> lưu nốt vụ án đó
+    if(pendingBookmarkId){ BOOKMARKS.add(pendingBookmarkId); pendingBookmarkId = null; }
     bmSaveLocal();
     await fsm.setDoc(ref, { ids: Array.from(BOOKMARKS), updatedAt: new Date().toISOString() });
     if(state.viewBookmarks) renderBookmarksList();
@@ -5792,5 +6043,214 @@ acctInit();
 })();
 /* ===== DCSL-ACCT-JS END ===== */
 </script>
+
+<!-- ===== DCSL-AUDIO START — khối "Nghe" theo từng tab ở trang chi tiết ===== -->
+<style id="dcsl-audio-style">
+.case-audio{
+  margin:14px 24px 4px; padding:16px 18px 14px;
+  background:var(--bg2, #FAF7EF); border:1px solid var(--gold-border, #E7DFCE);
+  border-radius:12px;
+}
+.case-audio[hidden]{ display:none; }
+.case-audio-head{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:12px; }
+.case-audio-title{ font-weight:700; font-size:.98rem; color:var(--navy, #1B2F52); }
+.case-audio-badge{
+  background:var(--gold, #FF9900); color:#fff;
+  font-size:.66rem; font-weight:700; letter-spacing:.06em;
+  padding:3px 9px; border-radius:4px; text-transform:uppercase; white-space:nowrap;
+}
+.case-audio-info{
+  width:17px; height:17px; border-radius:50%;
+  background:var(--navy, #1B2F52); color:#fff;
+  font-size:.66rem; font-weight:700; line-height:17px; text-align:center;
+  cursor:help; user-select:none; flex:none;
+}
+.case-audio audio{ width:100%; height:40px; display:block; }
+.case-audio-note{ margin-top:9px; font-size:.74rem; color:var(--text-muted, #6B7280); }
+@media (max-width:640px){
+  .case-audio{ margin-left:14px; margin-right:14px; padding:13px 14px 11px; }
+  .case-audio-title{ font-size:.9rem; }
+}
+</style>
+<script id="dcsl-audio-script">
+/* ===== DCSL-AUDIO-JS START =====
+   Player đọc THEO TAB đang mở:
+     tab "Dòng thời gian"     -> audio/en/<id>-timeline.mp3
+     tab "Áp dụng tương tự"   -> audio/en/<id>-apply.mp3
+     tab "Nội dung chi tiết"  -> không có audio, khối tự ẩn
+   Danh sách file lấy từ audio/manifest.json, sinh bằng tools/tts_kokoro.py.
+
+   Ghi chú 05/08/2026:
+   - Không đọc tên bản án nữa (người dùng đã đọc tiêu đề ngay trên màn hình).
+   - Bỏ chế độ dự phòng đọc bằng giọng cài sẵn trong trình duyệt: giọng tiếng Việt
+     duy nhất trên Windows là Microsoft An, nghe quá máy móc.
+   - Bài không có phần nội dung chi tiết thì không thu âm.
+   ============================================================================= */
+(function(){
+
+  var MANIFEST_URL = 'audio/manifest.json';
+  var manifest = null;
+  var manifestPromise = null;
+
+  // Tab nào ứng với phần thu âm nào
+  var TAB_PART = { 'dien-bien': 'timeline', 'ap-dung': 'apply' };
+
+  var TEXT = {
+    vi: {
+      timeline: 'Nghe dòng thời gian', apply: 'Nghe phần áp dụng tương tự',
+      badge: 'AI đọc',
+      info: 'Giọng đọc do AI tạo tự động. Có thể sai sót — nội dung chính thức vẫn là bản văn bên dưới.',
+      note: 'Giọng đọc AI, không thay thế bản án gốc.'
+    },
+    en: {
+      timeline: 'Listen to the case timeline', apply: 'Listen to the analogous application',
+      badge: 'AI narrated',
+      info: 'This narration is generated automatically by AI. It may contain errors — the written text below is authoritative.',
+      note: 'AI voice, not a substitute for the original judgment.'
+    }
+  };
+
+  function lang(){
+    return (typeof getActiveLanguage === 'function' && getActiveLanguage() === 'en') ? 'en' : 'vi';
+  }
+
+  function activePart(){
+    var btn = document.querySelector('#tab-row-container .tab-btn.active');
+    if(!btn || !btn.id) return null;
+    return TAB_PART[btn.id.replace(/^tab-/, '')] || null;
+  }
+
+  function loadManifest(){
+    if(manifestPromise) return manifestPromise;
+    manifestPromise = fetch(MANIFEST_URL, { cache: 'no-cache' })
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(j){ manifest = j || {}; return manifest; })
+      .catch(function(){ manifest = {}; return manifest; });   // chưa có file thì coi như chưa bài nào có audio
+    return manifestPromise;
+  }
+
+  // Khối được chèn bằng JS để không phải sửa phần thân trang chi tiết
+  function ensureNode(){
+    var node = document.getElementById('case-audio');
+    if(node) return node;
+    var page = document.getElementById('page-detail');
+    if(!page) return null;
+    node = document.createElement('div');
+    node.id = 'case-audio';
+    node.className = 'case-audio';
+    node.hidden = true;
+    var tabRow = document.getElementById('tab-row-container');
+    if(tabRow && tabRow.parentNode === page) page.insertBefore(node, tabRow);
+    else page.appendChild(node);
+    return node;
+  }
+
+  function hide(node){ if(node){ node.hidden = true; node.innerHTML = ''; } }
+
+  function render(cas){
+    var node = ensureNode();
+    if(!node) return;
+    if(!cas || !cas.id){ hide(node); return; }
+
+    var part = activePart();
+    if(!part){ hide(node); return; }          // đang ở tab Nội dung chi tiết
+
+    loadManifest().then(function(m){
+      // Người dùng có thể đã đổi bài hoặc đổi tab trong lúc chờ tải manifest
+      if(!state || !state.curCase || state.curCase.id !== cas.id) return;
+      if(activePart() !== part) return;
+
+      var lg = lang();
+      var entry = m && m[lg] && m[lg][cas.id] && m[lg][cas.id][part];
+      if(!entry || !entry.f){ hide(node); return; }
+
+      var txt = TEXT[lg];
+      var src = 'audio/' + String(entry.f).replace(/^\/+/, '');
+
+      // Đang phát đúng file này rồi thì để yên, đừng dựng lại kẻo nhạc bị ngắt
+      var cur = node.querySelector('audio');
+      if(cur && cur.getAttribute('src') === src){ node.hidden = false; return; }
+
+      node.innerHTML =
+        '<div class="case-audio-head">' +
+          '<span class="case-audio-title"></span>' +
+          '<span class="case-audio-badge"></span>' +
+          '<span class="case-audio-info" tabindex="0" role="img"></span>' +
+        '</div>' +
+        '<audio controls preload="none"></audio>' +
+        '<div class="case-audio-note"></div>';
+
+      node.querySelector('.case-audio-title').textContent = txt[part];
+      node.querySelector('.case-audio-badge').textContent = txt.badge;
+      var info = node.querySelector('.case-audio-info');
+      info.textContent = 'i';
+      info.title = txt.info;
+      info.setAttribute('aria-label', txt.info);
+      node.querySelector('.case-audio-note').textContent = txt.note;
+      var audio = node.querySelector('audio');
+      audio.src = src;
+      audio.setAttribute('aria-label', txt[part]);
+      node.hidden = false;
+    });
+  }
+
+  function stopAudio(){
+    try {
+      var a = document.querySelector('#case-audio audio');
+      if(a && !a.paused) a.pause();
+    } catch(e){}
+  }
+
+  // Vào trang chi tiết thì dựng player
+  var origGoDetail = window.goDetail;
+  if(typeof origGoDetail === 'function'){
+    window.goDetail = function(){
+      stopAudio();
+      var result = origGoDetail.apply(this, arguments);
+      try { render(state && state.curCase); } catch(e){}
+      return result;
+    };
+  }
+
+  // Đổi tab thì đổi file đang nghe
+  var origSwitchTab = window.switchTab;
+  if(typeof origSwitchTab === 'function'){
+    window.switchTab = function(){
+      var result = origSwitchTab.apply(this, arguments);
+      try {
+        stopAudio();
+        render(state && state.curCase);
+      } catch(e){}
+      return result;
+    };
+  }
+
+  // Đổi VN/EN thì đổi luôn file audio (mỗi ngôn ngữ một file riêng)
+  var origLang = window.updateCaseLanguageState;
+  if(typeof origLang === 'function'){
+    window.updateCaseLanguageState = function(){
+      var result = origLang.apply(this, arguments);
+      try {
+        var page = document.getElementById('page-detail');
+        if(page && page.classList.contains('active')) render(state && state.curCase);
+      } catch(e){}
+      return result;
+    };
+  }
+
+  // Rời trang chi tiết thì dừng nhạc, tránh audio chạy nền khi đã sang trang khác
+  ['goHome','goHomeContent','goCasesList','goSubfields','goSmartSearch','showSearchResultsPage','goBookmarks'].forEach(function(fn){
+    var orig = window[fn];
+    if(typeof orig !== 'function') return;
+    window[fn] = function(){
+      stopAudio();
+      return orig.apply(this, arguments);
+    };
+  });
+
+})();
+/* ===== DCSL-AUDIO-JS END ===== */
+</script>
+<!-- ===== DCSL-AUDIO END ===== -->
 </body>
 </html>
