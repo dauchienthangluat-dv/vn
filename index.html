@@ -1039,7 +1039,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
     </div>
     <div class="admin-form-group">
       <label class="admin-label">Tính chất (Phân loại):</label>
-      <select id="ad-tinhchat" class="admin-input"><option value="0">Sơ thẩm (không sao)</option><option value="1">⭐ Phúc thẩm</option><option value="3">⭐⭐⭐ Giám đốc thẩm / Tái thẩm</option></select>
+      <select id="ad-tinhchat" class="admin-input"><option value="1">⭐ Sơ thẩm</option><option value="2">⭐⭐ Phúc thẩm</option><option value="3">⭐⭐⭐ Giám đốc thẩm / Tái thẩm</option></select>
     </div>
     <div class="admin-form-group">
       <label class="admin-label" style="display:flex; justify-content:space-between;">
@@ -2057,16 +2057,19 @@ function getCaseTimeline(caseObj, lang) {
 }
 
 function getDisplayTypeLabel(caseObj) {
-  const isDoc = caseObj && (caseObj.sfId === 'van-ban-phap-luat' || caseObj.sfId === 'giai-dap-nghiep-vu');
-  const star = parseInt(caseObj && caseObj.sao, 10) || 0;
-  if(getActiveLanguage() === 'en') {
-    if(isDoc) return caseObj.sfId === 'van-ban-phap-luat' ? 'Legal document' : 'Judicial professional guidance';
-    if(star === 1) return 'Appellate judgment';
-    if(star === 2) return 'Experience notice';
-    if(star === 3) return 'Precedent / cassation / reopening';
+  const sfId = caseObj && caseObj.sfId;
+  const star = getCaseSao(caseObj);
+  const en = getActiveLanguage() === 'en';
+  // 4 mục cố định có nhãn riêng theo lĩnh vực, không suy ra từ số sao
+  if(sfId === 'van-ban-phap-luat') return en ? 'Legal document' : 'Văn bản pháp luật';
+  if(sfId === 'giai-dap-nghiep-vu') return en ? 'Judicial professional guidance' : 'Giải đáp nghiệp vụ';
+  if(sfId === 'an-le') return en ? 'Precedent' : 'Án lệ';
+  if(sfId === 'tb-rut-kinh-nghiem') return en ? 'Experience notice' : 'Thông báo rút kinh nghiệm';
+  if(en) {
+    if(star === SAO_GIAM_DOC_THAM) return 'Cassation / reopening decision';
+    if(star === SAO_PHUC_THAM) return 'Appellate judgment';
     return 'First-instance judgment';
   }
-  if(isDoc) return caseObj.sfId === 'van-ban-phap-luat' ? 'Văn bản pháp luật' : 'Giải đáp nghiệp vụ';
   return getTypeLabel(star);
 }
 
@@ -2544,19 +2547,82 @@ function applyStoredCaseOrder() {
   });
 }
 
+/* ===== MOC-SAO START (mốc sao mới — đổi ngày 10/08/2026) =====
+   1 sao  = bản án sơ thẩm
+   2 sao  = bản án phúc thẩm
+   3 sao  = quyết định giám đốc thẩm / tái thẩm
+   4 sao  = 3 loại: Án lệ, Thông báo rút kinh nghiệm, Giải đáp nghiệp vụ
+   0 sao  = "Văn bản pháp luật" (là văn bản, không phải vụ án nên không xếp sao)
+
+   Mốc CŨ (0=sơ thẩm, 1=phúc thẩm, 2=TB rút kinh nghiệm, 3=án lệ/GĐT) vẫn còn trong
+   dữ liệu đã lưu trên đám mây. migrateCaseSao() nâng cấp lúc nạp và đóng dấu saoV
+   để KHÔNG bao giờ quy đổi hai lần. */
+const SAO_SCHEME_VERSION = 2;
+const SAO_SO_THAM = 1;
+const SAO_PHUC_THAM = 2;
+const SAO_GIAM_DOC_THAM = 3;
+const SAO_CAO_NHAT = 4;
+const FOUR_STAR_SUBFIELDS = ['an-le', 'tb-rut-kinh-nghiem', 'giai-dap-nghiep-vu'];
+
+function isFourStarSubfield(sfId){ return FOUR_STAR_SUBFIELDS.indexOf(sfId) >= 0; }
+function subfieldHasNoStars(sfId){ return sfId === 'van-ban-phap-luat'; }
+
+// Số sao đúng cho 1 vụ án. saoCu chỉ dùng cho bản án thường (không thuộc 4 mục cố định).
+function resolveCaseSao(sfId, saoCu){
+  if(subfieldHasNoStars(sfId)) return 0;
+  if(isFourStarSubfield(sfId)) return SAO_CAO_NHAT;
+  if(saoCu === SAO_GIAM_DOC_THAM) return SAO_GIAM_DOC_THAM;
+  if(saoCu === 1) return SAO_PHUC_THAM;   // mốc cũ: 1 = phúc thẩm -> nay 2 sao
+  return SAO_SO_THAM;
+}
+
+function migrateCaseSao(caseObj){
+  if(!caseObj || typeof caseObj !== 'object') return caseObj;
+  if((parseInt(caseObj.saoV, 10) || 0) >= SAO_SCHEME_VERSION) return caseObj;
+  caseObj.sao = resolveCaseSao(caseObj.sfId, parseInt(caseObj.sao, 10) || 0);
+  caseObj.saoV = SAO_SCHEME_VERSION;
+  return caseObj;
+}
+
+function migrateAllCasesSao(casesMap){
+  if(!casesMap || typeof casesMap !== 'object') return;
+  Object.keys(casesMap).forEach(key => {
+    if(Array.isArray(casesMap[key])) casesMap[key].forEach(migrateCaseSao);
+  });
+}
+
+// Luôn đọc sao qua hàm này để dù dữ liệu chưa kịp quy đổi vẫn hiển thị đúng
+function getCaseSao(caseObj){
+  if(!caseObj) return 0;
+  migrateCaseSao(caseObj);
+  return parseInt(caseObj.sao, 10) || 0;
+}
+
+// Dòng sao + nhãn loại ở đầu trang chi tiết (Giải đáp nghiệp vụ nay CÓ sao, Văn bản pháp luật thì không)
+function caseDetailStarsHtml(caseObj, typeLabel){
+  const sao = getCaseSao(caseObj);
+  const icon = isDetailOnlySubfield(caseObj && caseObj.sfId) ? '<i class="ph ph-file-text"></i> ' : '';
+  const stars = sao > 0 ? '<span>' + '⭐'.repeat(sao) + '</span>' : '';
+  return stars + '<span class="case-detail-type">' + icon + typeLabel + '</span>';
+}
+/* ===== MOC-SAO END ===== */
+
 function getTypeLabel(sao){
-  if(sao===1) return 'Phúc thẩm';
-  if(sao===2) return 'Thông báo Rút kinh nghiệm';
-  if(sao===3) return 'Án lệ / Giám đốc thẩm / Tái thẩm'; return 'Sơ thẩm';
+  if(sao >= SAO_CAO_NHAT) return 'Án lệ / Thông báo rút kinh nghiệm / Giải đáp nghiệp vụ';
+  if(sao === SAO_GIAM_DOC_THAM) return 'Giám đốc thẩm / Tái thẩm';
+  if(sao === SAO_PHUC_THAM) return 'Phúc thẩm';
+  return 'Sơ thẩm';
 }
 
 // Tự nhận diện số sao theo tính chất trong TIÊU ĐỀ vụ án:
-// "giám đốc thẩm"/"tái thẩm" -> 3 sao; "phúc thẩm" -> 1 sao; không rõ -> null (dùng giá trị chọn tay).
-// Ưu tiên GĐT/tái thẩm trước vì quyết định GĐT thường nhắc tới "bản án phúc thẩm" bị hủy.
+// "giám đốc thẩm"/"tái thẩm" -> 3 sao; "phúc thẩm" -> 2 sao; không rõ -> null (giữ lựa chọn tay, mặc định 1 sao = sơ thẩm).
+// Thứ tự kiểm tra rất quan trọng: quyết định GĐT hay nhắc "bản án phúc thẩm" bị hủy,
+// và bản án phúc thẩm hay nhắc "bản án sơ thẩm" — nên phải xét từ cấp cao xuống thấp.
 function detectSaoFromTitle(ten){
   const t = removeAccents(String(ten || ''));
-  if(/giam doc tham|tai tham/.test(t)) return 3;
-  if(/phuc tham/.test(t)) return 1;
+  if(/giam doc tham|tai tham/.test(t)) return SAO_GIAM_DOC_THAM;
+  if(/phuc tham/.test(t)) return SAO_PHUC_THAM;
+  // KHÔNG dò "sơ thẩm": 1 sao vốn đã là mặc định, dò thêm chỉ khiến lựa chọn tay của admin bị đè.
   return null;
 }
 function formatDate(str){
@@ -2661,7 +2727,7 @@ const NON_CASE_SUBFIELDS = ['van-ban-phap-luat', 'giai-dap-nghiep-vu'];
 // trước. Nếu danh sách cập nhật chưa đủ 4 bản án thì bù thêm từ toàn bộ thư viện.
 function getPopularCaseItems(limit = 4){
   const isCase = r => r && r.found && !NON_CASE_SUBFIELDS.includes(r.found.cas.sfId);
-  const bySao = (a, b) => (b.found.cas.sao || 0) - (a.found.cas.sao || 0);
+  const bySao = (a, b) => getCaseSao(b.found.cas) - getCaseSao(a.found.cas);
 
   const picked = getRenderableRecentItems(Math.max(RECENT_UPDATES.length, 15))
     .filter(isCase).sort(bySao).slice(0, limit);
@@ -3249,7 +3315,7 @@ function renderCasesList(){
   } else {
     list.innerHTML = pageCases.map((c, idx)=>{
       const isDoc = c.sfId === 'van-ban-phap-luat' || c.sfId === 'giai-dap-nghiep-vu';
-      const starHtml = isDoc ? '' : `<div class="case-stars">${'⭐'.repeat(c.sao || 0)}</div>`;
+      const starHtml = subfieldHasNoStars(c.sfId) ? '' : `<div class="case-stars">${'⭐'.repeat(getCaseSao(c))}</div>`;
       const displayTitle = getPrimaryTextLine(getCaseFieldText(c, 'ten'));
       const displayDesc = getCaseFieldText(c, 'mo_ta');
       const fullIndex = start + idx;
@@ -3318,7 +3384,7 @@ function goDetail(lvId, sfId, caseId){
   if(!cas) return; state.curCase = cas;
 
   const existing = state.readHistory.find(h=>h.id===cas.id);
-  if(!existing){ state.readHistory.push({ id:cas.id, ten:cas.ten, sao:cas.sao||0, lvId:state.curLV?state.curLV.id:'', sfId:actualSfId }); }
+  if(!existing){ state.readHistory.push({ id:cas.id, ten:cas.ten, sao:getCaseSao(cas), lvId:state.curLV?state.curLV.id:'', sfId:actualSfId }); }
 
   document.getElementById('det-bc-lv').textContent = state.curLV ? getLVDisplayName(state.curLV) : '';
   document.getElementById('det-bc-sf').textContent = state.curSF ? getSFDisplayName(state.curLV ? state.curLV.id : '', state.curSF) : '';
@@ -3341,7 +3407,7 @@ function goDetail(lvId, sfId, caseId){
 
   // --- Phần nhẹ: nhãn loại, hàng tab, khung "đang tải" — vẽ NGAY trong lượt bấm ---
   if (isDoc) {
-      document.getElementById('case-detail-stars').innerHTML = `<span class="case-detail-type"><i class="ph ph-file-text"></i> ${typeLabel}</span>`;
+      document.getElementById('case-detail-stars').innerHTML = caseDetailStarsHtml(cas, typeLabel);
       document.getElementById('tab-row-container').innerHTML = `
         <button class="tab-btn active" id="tab-chi-tiet" onclick="switchTab('chi-tiet')"><i class="ph ph-text-align-left"></i> ${t('detailedContent')}</button>
       `;
@@ -3351,7 +3417,7 @@ function goDetail(lvId, sfId, caseId){
       chiTietEl.innerHTML = detailLoadingHtml();
       switchTab('chi-tiet');
   } else {
-      document.getElementById('case-detail-stars').innerHTML = cas.sao > 0 ? `<span>${'⭐'.repeat(cas.sao)}</span><span class="case-detail-type">${typeLabel}</span>` : `<span class="case-detail-type">${typeLabel}</span>`;
+      document.getElementById('case-detail-stars').innerHTML = caseDetailStarsHtml(cas, typeLabel);
       document.getElementById('tab-row-container').innerHTML = `
         <button class="tab-btn active" id="tab-dien-bien" onclick="switchTab('dien-bien')"><i class="ph ph-clock"></i> ${t('timeline')}</button>
         <button class="tab-btn" id="tab-ap-dung" onclick="switchTab('ap-dung')"><i class="ph ph-lightbulb"></i> ${t('analogousUse')}</button>
@@ -3506,7 +3572,7 @@ function openHuongDan(){
     document.getElementById('modal-body').innerHTML = `
       <div style="margin-bottom: 16px;"><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">🔍 Search</h4><p style="margin-bottom: 8px;">Type keywords or describe your legal situation in the search box on the home page. You can also open <strong>Search filters</strong> to narrow down by field of law and topic first.</p></div>
       <div style="margin-bottom: 16px;"><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">📚 Document library</h4><p style="margin-bottom: 8px;">Each field of law contains four sections: <strong>Legal documents</strong>, <strong>Precedents</strong>, <strong>Experience notices</strong> and <strong>Judicial professional guidance</strong>. Open any item to read its summary and full text.</p></div>
-      <div style="margin-bottom: 16px;"><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">⭐ Case classification</h4><p style="line-height: 1.8;">• <strong>No star</strong>: First-instance judgment<br>• <strong>⭐</strong>: Appellate judgment<br>• <strong>⭐⭐</strong>: Experience notice<br>• <strong>⭐⭐⭐</strong>: Precedent, cassation / reopening decision</p></div>
+      <div style="margin-bottom: 16px;"><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">⭐ Case classification</h4><p style="line-height: 1.8;">• <strong>⭐</strong>: First-instance judgment<br>• <strong>⭐⭐</strong>: Appellate judgment<br>• <strong>⭐⭐⭐</strong>: Cassation / reopening decision<br>• <strong>⭐⭐⭐⭐</strong>: Precedent, experience notice, judicial professional guidance</p></div>
       <div style="margin-bottom: 16px;"><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">🧮 Tax AI assistant</h4><p style="margin-bottom: 8px;">Open the <strong>Tax advisory</strong> card on the home page and describe your situation to get an analysis based on current Vietnamese tax law.</p></div>
       <div><h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">🌐 Language</h4><p style="margin-bottom: 8px;">Use <strong>VN | EN</strong> in the top-right corner. The English view uses the provided English content where available.</p></div>
     `;
@@ -3525,7 +3591,7 @@ function openHuongDan(){
     </div>
     <div style="margin-bottom: 16px;">
       <h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">⭐ Phân loại bản án</h4>
-      <p style="line-height: 1.8;">• <strong>Không sao</strong>: Bản án sơ thẩm<br>• <strong>⭐</strong>: Bản án phúc thẩm<br>• <strong>⭐⭐</strong>: Thông báo rút kinh nghiệm<br>• <strong>⭐⭐⭐</strong>: Án lệ, Quyết định giám đốc thẩm / tái thẩm</p>
+      <p style="line-height: 1.8;">• <strong>⭐</strong>: Bản án sơ thẩm<br>• <strong>⭐⭐</strong>: Bản án phúc thẩm<br>• <strong>⭐⭐⭐</strong>: Quyết định giám đốc thẩm / tái thẩm<br>• <strong>⭐⭐⭐⭐</strong>: Án lệ, Thông báo rút kinh nghiệm, Giải đáp nghiệp vụ</p>
     </div>
     <div style="margin-bottom: 16px;">
       <h4 style="color: var(--navy); margin-bottom: 6px; font-size: 0.95rem;">🧮 Tư vấn Thuế AI</h4>
@@ -3673,7 +3739,7 @@ function editCase(caseId) {
   
   document.getElementById('ad-ten').value = c.ten || ''; document.getElementById('ad-mota').value = c.mo_ta || '';
   document.getElementById('ad-link').value = c.link || '';
-  document.getElementById('ad-lv').value = c.lvId || ''; document.getElementById('ad-sf').value = c.sfId || ''; document.getElementById('ad-tinhchat').value = c.sao || '0';
+  document.getElementById('ad-lv').value = c.lvId || ''; document.getElementById('ad-sf').value = c.sfId || ''; document.getElementById('ad-tinhchat').value = String((getCaseSao(c) >= SAO_SO_THAM && getCaseSao(c) <= SAO_GIAM_DOC_THAM) ? getCaseSao(c) : SAO_SO_THAM);
   document.getElementById('ad-tomluoc').innerHTML = (c.tom_luoc || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
   document.getElementById('ad-apdung').innerHTML = (c.ap_dung || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
   document.getElementById('ad-chitiet').innerHTML = (c.chi_tiet || '').replace(/<div class="detail-section-title">/g, '').replace(/<\/div>/g, '\n').replace(/<p>/g, '').replace(/<\/p>/g, '\n').trim();
@@ -3832,6 +3898,7 @@ function applyCasesSnapshot(casesData) {
         LINH_VUC_LUAT.length = 0;
         casesData.linhvuc.forEach(lv => LINH_VUC_LUAT.push(restoreFieldIcon(lv)));
     }
+    migrateAllCasesSao(CASES_DATA); // dữ liệu cũ còn theo mốc sao đời trước
     applyStoredCaseOrder();
 }
 
@@ -3881,6 +3948,7 @@ function mergeCasesSnapshot(casesData) {
         RECENT_UPDATES.length = 0;
         RECENT_UPDATES.push(...mergedRecent.slice(0, 50));
     }
+    migrateAllCasesSao(CASES_DATA); // dữ liệu cũ còn theo mốc sao đời trước
     applyStoredCaseOrder();
 }
 
@@ -4287,10 +4355,14 @@ function normalizeImportedCase(raw, index) {
     const importedAt = new Date(Date.now() - index).toISOString();
 
     let sao = parseInt(raw.sao || raw.stars || raw.tinh_chat || 0, 10) || 0;
-    if(sfId === 'an-le') sao = 3;
-    else if(sfId === 'tb-rut-kinh-nghiem') sao = 2;
-    // Tự nhận diện theo tiêu đề khi nhập từ Word/JSON: phúc thẩm -> 1 sao, GĐT/tái thẩm -> 3 sao
-    else if(!detailOnly){ const autoSao = detectSaoFromTitle(ten); if(autoSao !== null) sao = autoSao; }
+    if(subfieldHasNoStars(sfId)) sao = 0;
+    else if(isFourStarSubfield(sfId)) sao = SAO_CAO_NHAT;
+    else {
+      // Tự nhận diện theo tiêu đề: GĐT/tái thẩm -> 3 sao, phúc thẩm -> 2 sao, sơ thẩm -> 1 sao
+      const autoSao = detectSaoFromTitle(ten);
+      if(autoSao !== null) sao = autoSao;
+      else if(sao < SAO_SO_THAM || sao > SAO_GIAM_DOC_THAM) sao = SAO_SO_THAM;
+    }
 
     const tomLuoc = detailOnly ? '' : formatImportedContent(raw.tom_luoc || raw.timelineText || raw.timeline_text || '');
     const apDung = detailOnly ? '' : formatImportedContent(raw.ap_dung || raw.analogousUse || raw.ap_dung_tuong_tu || '');
@@ -4311,6 +4383,7 @@ function normalizeImportedCase(raw, index) {
         sfId: sfId,
         sfName: normalizedSfName,
         sao: sao,
+        saoV: SAO_SCHEME_VERSION,
         ngay: raw.ngay || raw.date || importedAt,
         importedAt: importedAt,
         updatedAt: importedAt,
@@ -4499,10 +4572,13 @@ function submitAdmin() {
 
   let englishPayload = getEnglishAdminPayload(formatContent);
   const timelineArr = tomluocText.split(/\r?\n/).map(t => t.trim()).filter(t => t.length > 0);
-  let sao = 0; if (sfId === 'an-le') sao = 3; else if (sfId === 'tb-rut-kinh-nghiem') sao = 2; else {
-    sao = parseInt(document.getElementById('ad-tinhchat').value) || 0;
-    // Tự nhận diện theo tiêu đề: phúc thẩm -> 1 sao, GĐT/tái thẩm -> 3 sao (không áp dụng cho văn bản/giải đáp)
-    if(!isDetailOnlySubfield(sfId)){ const autoSao = detectSaoFromTitle(ten); if(autoSao !== null) sao = autoSao; }
+  let sao;
+  if (subfieldHasNoStars(sfId)) sao = 0;                 // Văn bản pháp luật: không xếp sao
+  else if (isFourStarSubfield(sfId)) sao = SAO_CAO_NHAT; // Án lệ / TB rút kinh nghiệm / Giải đáp nghiệp vụ
+  else {
+    sao = parseInt(document.getElementById('ad-tinhchat').value, 10) || SAO_SO_THAM;
+    // Tự nhận diện theo tiêu đề: GĐT/tái thẩm -> 3 sao, phúc thẩm -> 2 sao, sơ thẩm -> 1 sao
+    const autoSao = detectSaoFromTitle(ten); if(autoSao !== null) sao = autoSao;
   }
 
   const selectedLvBeforeSave = getLVById(lvId);
@@ -4525,7 +4601,7 @@ function submitAdmin() {
 
   const caseData = {
       id: editingCaseId || 'case_' + Date.now(), ten: ten, mo_ta: mota, lvId: lvId, lvName: finalLvName, sfId: sfId, sfName: finalSfName,
-      sao: sao, ngay: editingCaseId ? findCaseById(editingCaseId).cas.ngay : new Date().toISOString(),
+      sao: sao, saoV: SAO_SCHEME_VERSION, ngay: editingCaseId ? findCaseById(editingCaseId).cas.ngay : new Date().toISOString(),
       updatedAt: new Date().toISOString(),
       tom_luoc: detailOnly ? '' : formatEditorContent('ad-tomluoc'), ap_dung: detailOnly ? '' : formatEditorContent('ad-apdung'), chi_tiet: formatEditorContent('ad-chitiet'), timeline: detailOnly ? [] : timelineArr, laws: adminFormLaws
   };
