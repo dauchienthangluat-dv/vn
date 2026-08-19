@@ -508,6 +508,37 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 .thue-user-msg { background: var(--gold-dim); border: 1px solid var(--gold-border); border-radius: 8px; padding: 12px 14px; margin: 16px 0; font-size: 0.87rem; }
 .thue-user-msg-label { font-weight: 600; color: var(--gold-rich); margin-bottom: 4px; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.5px; }
 .thue-divider { border: none; border-top: 1px dashed var(--gold-border); margin: 16px 0; }
+/* ── Khối "AI phân tích tình huống" trên trang kết quả tra cứu ───────────── */
+.ai-box { margin: 0 0 18px; border: 1px solid var(--gold-border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow-sm); overflow: hidden; }
+.ai-box-head { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: var(--navy); color: #fff; font-weight: 600; font-size: 0.86rem; }
+.ai-box-body { padding: 16px; font-size: 0.88rem; line-height: 1.7; color: var(--text); }
+.ai-box-loading { display: flex; align-items: center; gap: 10px; color: var(--text-muted); font-style: italic; }
+.ai-box-spin { flex-shrink: 0; width: 14px; height: 14px; border: 2px solid var(--gold-rich); border-top-color: transparent; border-radius: 50%; animation: spin 0.9s linear infinite; }
+.ai-box-issue { margin-bottom: 14px; padding: 10px 14px; background: var(--gold-dim); border-left: 3px solid var(--gold-rich); border-radius: 0 6px 6px 0; }
+.ai-box-label { margin-bottom: 10px; font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--gold-rich); }
+.ai-hit { display: flex; gap: 10px; padding: 10px 0; border-top: 1px dashed var(--gold-border); }
+.ai-hit:first-of-type { padding-top: 0; border-top: none; }
+.ai-hit-num { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; margin-top: 2px; border-radius: 50%; background: var(--gold-rich); color: #fff; font-size: 0.74rem; font-weight: 700; }
+.ai-hit-body { min-width: 0; }
+.ai-hit-name { font-weight: 600; color: var(--navy); text-decoration: none; }
+.ai-hit-name:hover { color: var(--gold-rich); text-decoration: underline; }
+.ai-hit-why { margin-top: 3px; font-size: 0.84rem; color: var(--text-sec); }
+.ai-hit-meta { margin-top: 3px; font-size: 0.74rem; color: var(--text-muted); }
+.ai-box-note { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--gold-border); font-size: 0.78rem; font-style: italic; color: var(--text-muted); }
+/* ── Trạng thái suy luận của model (Thuế AI) ─────────────────────────────── */
+.thue-think-live { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; margin-bottom: 14px; background: var(--gold-dim); border: 1px solid var(--gold-border); border-radius: 8px; }
+.thue-think-spin { flex-shrink: 0; width: 15px; height: 15px; margin-top: 2px; border: 2px solid var(--gold-rich); border-top-color: transparent; border-radius: 50%; animation: spin 0.9s linear infinite; }
+.thue-think-body { flex: 1; min-width: 0; }
+.thue-think-title { font-size: 0.85rem; font-weight: 600; color: var(--navy); }
+.thue-think-preview { margin-top: 4px; font-size: 0.8rem; line-height: 1.5; color: var(--text-muted); font-style: italic; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; }
+.thue-think-chip { margin-bottom: 14px; font-size: 0.8rem; }
+.thue-think-chip > summary { cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; background: var(--bg2); border: 1px solid var(--gold-border); color: var(--text-muted); list-style: none; user-select: none; transition: color 0.2s, border-color 0.2s; }
+.thue-think-chip > summary::-webkit-details-marker { display: none; }
+.thue-think-chip > summary:hover { color: var(--navy); border-color: var(--gold-rich); }
+.thue-think-full { margin-top: 8px; padding: 12px 14px; max-height: 320px; overflow-y: auto; background: var(--surface2); border: 1px solid var(--gold-border); border-radius: 8px; font-size: 0.8rem; line-height: 1.65; color: var(--text-sec); white-space: pre-wrap; }
+.thue-stall-pill { display: inline-flex; align-items: center; gap: 7px; margin-left: 4px; padding: 3px 11px; border-radius: 999px; background: var(--gold-dim); border: 1px solid var(--gold-border); font-size: 0.78rem; font-style: italic; color: var(--text-muted); vertical-align: middle; animation: thuePulse 1.6s ease-in-out infinite; }
+.thue-stall-pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold-rich); flex-shrink: 0; }
+@keyframes thuePulse { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
 </style>
 
 
@@ -762,6 +793,7 @@ body.intro-reveal #global-header{ animation:dcslFadeDown .9s cubic-bezier(.22,1,
         <div class="page-title" id="cases-title"></div>
         <div id="cases-admin-toolbar" class="cases-admin-toolbar"></div>
       </div>
+      <div id="ai-search-box" class="ai-box" style="display:none;"></div>
       <div class="cases-list" id="cases-list"></div>
     </div>
 
@@ -1665,6 +1697,13 @@ const UI_TEXT = {
     mostRead: 'Được quan tâm nhất',
     viewed: 'Tài liệu bạn đã xem',
     smartSearch: 'Tra cứu tình huống',
+    aiSearchTitle: 'AI phân tích tình huống',
+    aiSearchLoading: 'AI đang đối chiếu tình huống của bạn với kho bản án…',
+    aiSearchIssue: 'Vấn đề pháp lý',
+    aiSearchHits: 'Tài liệu liên quan nhất',
+    aiSearchDirection: 'Định hướng',
+    aiSearchNone: 'Kho tài liệu hiện chưa có bản án nào thật sự sát với tình huống này. Bạn vẫn có thể tham khảo danh sách kết quả bên dưới.',
+    aiSearchNote: 'Phần này do AI tổng hợp từ chính kho tài liệu của thư viện, chỉ mang tính tham khảo. Vui lòng đọc bản án gốc và hỏi ý kiến luật sư trước khi quyết định.',
     smartSearchShort: 'Tìm kiếm thông minh',
     documents: 'tài liệu',
     noHistory: 'Bạn chưa xem tài liệu nào.<br><span style="font-size:0.8rem;margin-top:6px;display:block;">Hãy khám phá các lĩnh vực luật phía trên!</span>',
@@ -1771,6 +1810,13 @@ const UI_TEXT = {
     mostRead: 'Most read',
     viewed: 'Documents you viewed',
     smartSearch: 'Situation Search',
+    aiSearchTitle: 'AI situation analysis',
+    aiSearchLoading: 'Matching your situation against the case library…',
+    aiSearchIssue: 'Legal issue',
+    aiSearchHits: 'Most relevant documents',
+    aiSearchDirection: 'Orientation',
+    aiSearchNone: 'The library does not yet hold a case that closely matches this situation. You can still review the results listed below.',
+    aiSearchNote: 'This section is generated by AI from the library’s own documents and is for reference only. Please read the original judgment and consult a lawyer before deciding.',
     smartSearchShort: 'Smart search',
     documents: 'documents',
     noHistory: 'You have not viewed any documents yet.<br><span style="font-size:0.8rem;margin-top:6px;display:block;">Explore the legal fields above.</span>',
@@ -3034,6 +3080,193 @@ function scoreCaseForQuery(caseObj, queryInfo, opts = {}) {
   return { caseObj, score: finalScore, matched };
 }
 
+// ══ TRA CỨU TÌNH HUỐNG BẰNG AI ═══════════════════════════════════════════════
+// Search offline vẫn chạy trước và hiện kết quả ngay (0ms, API hỏng vẫn dùng
+// được); khối AI này chỉ bổ sung phía trên. Model KHÔNG được tự nghĩ ra tài
+// liệu: nó chỉ được chọn id trong danh mục gửi kèm, và client còn lọc lại lần
+// nữa trước khi vẽ. Danh mục dựng ngay lúc chạy từ CASES_DATA nên nhập thêm bản
+// án rồi đồng bộ là lần tra cứu kế tiếp đã thấy — không có index nào phải dựng lại.
+// THUE_WORKER_URL được khai báo ở phần Thuế PHÍA DƯỚI file, nên phải đọc lúc
+// gọi chứ không đọc lúc khai báo — const/let có vùng chết tạm thời, đọc sớm là
+// ném ReferenceError và giết luôn cả khối script.
+function aiSearchUrl() {
+  return (typeof THUE_WORKER_URL === 'string' && THUE_WORKER_URL) ? THUE_WORKER_URL + '?mode=search' : '';
+}
+const AI_SEARCH_MIN_WORDS = 4;   // câu ngắn hơn là tra từ khoá, gọi AI chỉ tổ chậm
+const AI_SEARCH_MAX_ITEMS = 6;
+const AI_CATALOG_SUMMARY_CHARS = 220;  // tình tiết vụ việc lấy từ tom_luoc
+const AI_CATALOG_APPLY_CHARS = 180;    // nguyên tắc pháp lý rút ra, lấy từ ap_dung
+let aiSearchToken = 0;           // chống kết quả của câu tìm cũ về sau đè lên câu mới
+let aiCatalogCache = { stamp: null, wantsDocs: null, items: [], text: '' };
+
+// Gỡ thẻ HTML rồi để trình duyệt tự giải mã thực thể. Nội dung nhập từ Word bị
+// mã hoá kiểu Latin-1 rất nhiều ("ch&#237;" thay vì "chí"); không giải mã thì
+// model phải đọc một mớ ký tự vô nghĩa.
+function aiPlainText(html) {
+  const box = document.createElement('textarea');
+  box.innerHTML = String(html || '').replace(/<[^>]*>/g, ' ');
+  return String(box.value || '').replace(/\s+/g, ' ').trim();
+}
+
+function buildAiCatalog(wantsDocs) {
+  if (aiCatalogCache.text && aiCatalogCache.stamp === lastSiteDataStamp && aiCatalogCache.wantsDocs === wantsDocs) {
+    return aiCatalogCache;
+  }
+  const items = [];
+  for (const bucketKey in CASES_DATA) {
+    CASES_DATA[bucketKey].forEach(c => {
+      // Giữ đúng quy tắc của trang: mặc định chỉ vụ án; "Văn bản pháp luật" chỉ
+      // vào danh mục khi người dùng chủ động nhắc tới trong câu tìm kiếm.
+      if (!wantsDocs && c.sfId === 'van-ban-phap-luat') return;
+      items.push(c);
+    });
+  }
+  const text = items.map(c => {
+    // Dữ liệu thật gần như luôn TRỐNG mo_ta; nội dung nằm ở tom_luoc (tình tiết
+    // vụ việc) và ap_dung (nguyên tắc pháp lý rút ra) — cả hai đều hữu ích cho
+    // việc khớp tình huống, và ap_dung thường là tín hiệu mạnh nhất.
+    const tomLuoc = aiPlainText(c.tom_luoc) || aiPlainText(c.mo_ta);
+    const apDung = aiPlainText(c.ap_dung);
+    return [
+      c.id,
+      aiPlainText(c.sfName || c.sfId),
+      aiPlainText(c.lvName || c.lvId),
+      aiPlainText(c.ten),
+      tomLuoc.slice(0, AI_CATALOG_SUMMARY_CHARS),
+      apDung.slice(0, AI_CATALOG_APPLY_CHARS)
+    ].join(' | ');
+  }).join('\n');
+  aiCatalogCache = { stamp: lastSiteDataStamp, wantsDocs, items, text };
+  return aiCatalogCache;
+}
+
+function aiSearchSystemPrompt(catalogText, count, lang) {
+  const vi = lang !== 'en';
+  return '[DANH MỤC TÀI LIỆU PHÁP LÝ CỦA THƯ VIỆN — ' + count + ' mục]\n'
+    + 'Mỗi dòng theo thứ tự: id | loại | lĩnh vực | tên | tóm lược tình tiết | nguyên tắc áp dụng\n'
+    + catalogText + '\n\n'
+    + '[NHIỆM VỤ]\n'
+    + 'Bạn là trợ lý tra cứu của thư viện bản án "Đấu Chiến Thắng Luật". Người dùng mô tả một tình huống pháp lý bằng lời thường. Việc của bạn:\n'
+    + '1. Nhận diện quan hệ pháp luật và vấn đề pháp lý cốt lõi của tình huống.\n'
+    + '2. Chọn trong DANH MỤC TRÊN những tài liệu thực sự liên quan (tối đa ' + AI_SEARCH_MAX_ITEMS + ', xếp từ liên quan nhất xuống).\n'
+    + '3. Nói ngắn gọn vì sao mỗi tài liệu liên quan đến chính tình huống này.\n\n'
+    + '[RÀNG BUỘC BẮT BUỘC]\n'
+    + '- CHỈ được dùng id xuất hiện nguyên văn trong DANH MỤC. Tuyệt đối KHÔNG bịa id, KHÔNG bịa tên tài liệu, KHÔNG bịa số án lệ hay số bản án.\n'
+    + '- Nếu không có tài liệu nào thật sự sát tình huống: để "ket_qua" là mảng RỖNG và nêu hướng xử lý trong "dinh_huong". Thà nói thẳng là kho chưa có, còn hơn gán ép một tài liệu lệch.\n'
+    + '- Không kết luận thay toà, không hứa hẹn kết quả vụ việc.\n'
+    + '- Viết bằng ' + (vi ? 'tiếng Việt' : 'tiếng Anh') + '.\n\n'
+    + '[ĐỊNH DẠNG] Trả về DUY NHẤT một object JSON, không kèm chữ nào khác, không bọc trong dấu nháy ba:\n'
+    + '{"van_de":"một câu nêu đúng vấn đề pháp lý của tình huống","ket_qua":[{"id":"...","ly_do":"1-2 câu vì sao tài liệu này liên quan"}],"dinh_huong":"2-4 câu: nguyên tắc hoặc điều luật nào chi phối, cần lưu ý gì"}';
+}
+
+function parseAiSearchJson(raw) {
+  let txt = String(raw || '').trim();
+  // Model hay bọc JSON trong dấu nháy ba — gỡ ra trước khi parse
+  txt = txt.replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/, '');
+  const a = txt.indexOf('{'), b = txt.lastIndexOf('}');
+  if (a < 0 || b <= a) return null;
+  try { return JSON.parse(txt.slice(a, b + 1)); } catch (e) { return null; }
+}
+
+function hideAiSearchBox() {
+  const box = document.getElementById('ai-search-box');
+  if (box) { box.style.display = 'none'; box.innerHTML = ''; }
+}
+
+function renderAiSearchResult(parsed, catalog) {
+  const box = document.getElementById('ai-search-box');
+  if (!box) return;
+  if (!parsed) { hideAiSearchBox(); return; }
+
+  // Lớp chặn thứ hai: id nào không có thật trong kho thì loại thẳng. Prompt đã
+  // ràng buộc rồi, nhưng trên một trang pháp lý thì không tin lời hứa của model.
+  const byId = new Map(catalog.items.map(c => [c.id, c]));
+  const rows = [];
+  (Array.isArray(parsed.ket_qua) ? parsed.ket_qua : []).forEach(item => {
+    const id = String((item && item.id) || '').trim();
+    const cas = byId.get(id);
+    if (cas && !rows.some(r => r.cas.id === cas.id)) {
+      rows.push({ cas, why: String((item && item.ly_do) || '') });
+    }
+  });
+
+  const vanDe = String(parsed.van_de || '').trim();
+  const dinhHuong = String(parsed.dinh_huong || '').trim();
+  if (!vanDe && !dinhHuong && !rows.length) { hideAiSearchBox(); return; }
+
+  const hitsHtml = rows.slice(0, AI_SEARCH_MAX_ITEMS).map((r, i) => {
+    const href = routeHref({ view: 'detail', lv: r.cas.lvId, sf: r.cas.sfId, caseId: r.cas.id });
+    const ten = getPrimaryTextLine(getCaseFieldText(r.cas, 'ten'));
+    return '<div class="ai-hit"><span class="ai-hit-num">' + (i + 1) + '</span><div class="ai-hit-body">'
+      + '<a class="ai-hit-name" href="' + escapeHtmlText(href) + '" onclick="event.preventDefault(); goDetail(null,null,\'' + escapeJsAttr(r.cas.id) + '\')">' + escapeHtmlText(ten) + '</a>'
+      + '<div class="ai-hit-meta">' + escapeHtmlText(r.cas.sfName || '') + (r.cas.lvName ? ' · ' + escapeHtmlText(r.cas.lvName) : '') + '</div>'
+      + (r.why ? '<div class="ai-hit-why">' + escapeHtmlText(r.why) + '</div>' : '')
+      + '</div></div>';
+  }).join('');
+
+  box.style.display = 'block';
+  box.innerHTML = '<div class="ai-box-head"><i class="ph ph-sparkle"></i> ' + escapeHtmlText(t('aiSearchTitle')) + '</div>'
+    + '<div class="ai-box-body">'
+    + (vanDe ? '<div class="ai-box-issue"><strong>' + escapeHtmlText(t('aiSearchIssue')) + ':</strong> ' + escapeHtmlText(vanDe) + '</div>' : '')
+    + (rows.length
+        ? '<div class="ai-box-label">' + escapeHtmlText(t('aiSearchHits')) + '</div>' + hitsHtml
+        : '<div>' + escapeHtmlText(t('aiSearchNone')) + '</div>')
+    + (dinhHuong ? '<div style="margin-top:14px;"><div class="ai-box-label">' + escapeHtmlText(t('aiSearchDirection')) + '</div>' + escapeHtmlText(dinhHuong) + '</div>' : '')
+    + '<div class="ai-box-note">' + escapeHtmlText(t('aiSearchNote')) + '</div>'
+    + '</div>';
+}
+
+async function runAiSituationSearch(query) {
+  const box = document.getElementById('ai-search-box');
+  if (!box) return;
+  const myToken = ++aiSearchToken;
+
+  const endpoint = aiSearchUrl();
+  if (!endpoint) { hideAiSearchBox(); return; }
+  const normalized = normalizeSearchText(query);
+  const words = normalized.split(/\s+/).filter(Boolean);
+  if (words.length < AI_SEARCH_MIN_WORDS) { hideAiSearchBox(); return; }
+
+  const catalog = buildAiCatalog(queryWantsLegalDocs(normalized));
+  if (!catalog.items.length) { hideAiSearchBox(); return; }
+
+  const lang = getActiveLanguage();
+  box.style.display = 'block';
+  box.innerHTML = '<div class="ai-box-head"><i class="ph ph-sparkle"></i> ' + escapeHtmlText(t('aiSearchTitle')) + '</div>'
+    + '<div class="ai-box-body"><div class="ai-box-loading"><span class="ai-box-spin"></span>'
+    + escapeHtmlText(t('aiSearchLoading')) + '</div></div>';
+
+  try {
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        query: query,
+        stamp: lastSiteDataStamp || '',   // đổi dữ liệu là cache phía Worker tự vô hiệu
+        lang: lang,
+        model: 'qwen/qwen3-235b-a22b-2507',
+        stream: false,
+        max_tokens: 1200,
+        temperature: 0.1,
+        messages: [
+          { role: 'system', content: aiSearchSystemPrompt(catalog.text, catalog.items.length, lang) },
+          { role: 'user', content: query }
+        ]
+      })
+    });
+    if (myToken !== aiSearchToken) return;  // người dùng đã tìm câu khác, bỏ kết quả này
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    if (myToken !== aiSearchToken) return;
+    renderAiSearchResult(parseAiSearchJson(data && data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content), catalog);
+  } catch (e) {
+    if (myToken !== aiSearchToken) return;
+    // Hỏng thì lặng lẽ rút lui: kết quả offline bên dưới vẫn dùng bình thường,
+    // không việc gì phải doạ người dùng bằng một thông báo lỗi kỹ thuật.
+    hideAiSearchBox();
+  }
+}
+
 function goSmartSearch() {
   state.curCase = null; state.searchQuery = '';
   const searchInput = document.getElementById('smart-search-input-page');
@@ -3052,6 +3285,8 @@ function showSearchResultsPage(query, page = 1) {
   document.getElementById('cases-bc-sf').textContent = `${t('searchResult')}: "${query}"`; document.getElementById('cases-title').textContent = `${t('searchTitle')}: "${query}"`;
   renderCasesList(); showPage('page-cases'); document.getElementById('pagination-bar').classList.add('visible');
   updateRoute({ view: 'search', q: query, page: state.curPage });
+  // Chạy sau khi kết quả offline đã hiện — AI chỉ bổ sung, không chặn đường
+  runAiSituationSearch(query);
 }
 
 function executeSmartSearchPage() {
@@ -3260,6 +3495,8 @@ function renderCasesList(){
   if(state.viewBookmarks && typeof renderBookmarksList === 'function'){ renderBookmarksList(); return; }
   let cases = [];
   renderCasesAdminToolbar();
+  // Khối AI chỉ thuộc về trang tra cứu tình huống; xem danh sách lĩnh vực thì ẩn đi
+  if(!state.searchQuery && typeof hideAiSearchBox === 'function') hideAiSearchBox();
   if(state.searchQuery) {
     const queryLabel = state.searchQuery;
     const bcSf = document.getElementById('cases-bc-sf');
@@ -5570,43 +5807,168 @@ async function callThueClaudeAPI(apiKey, outputEl) {
     throw new Error(errMsg);
   }
 
+  // ── Kết cấu vùng hiển thị ────────────────────────────────────────────────
+  // Chia ra 3 phần để KHÔNG phải format lại cả câu trả lời sau mỗi token:
+  //   thinkSlot : trạng thái suy luận (khối lớn lúc chờ → chip nhỏ khi có chữ)
+  //   doneEl    : những đoạn đã chốt (ngăn cách bởi dòng trống) — chỉ append
+  //   tailEl    : đoạn đang gõ dở — chỉ riêng đoạn này bị render lại
+  // Trước đây formatThueResponse() chạy lại trên toàn chuỗi ở mỗi delta (O(n²)):
+  // với câu trả lời dài, main thread nghẽn nên trình duyệt không kịp vẽ và người
+  // dùng chỉ nhìn thấy kết quả khi stream đã kết thúc.
+  outputEl.innerHTML = '';
+  const thinkSlot = document.createElement('div');
+  const doneEl = document.createElement('div');
+  const tailEl = document.createElement('div');
+  outputEl.append(thinkSlot, doneEl, tailEl);
+  thinkSlot.innerHTML = '<div class="thue-loading"><div class="thue-loading-dots"><span></span><span></span><span></span></div>&nbsp; <span>'
+    + escapeHtmlText(t('thueLoadingMsg') || 'Hệ thống đang phân tích tình huống thuế của bạn...') + '</span></div>';
+
   const reader = response.body.getReader();
   const decoder = new TextDecoder();
   let fullText = '';
   let buffer = '';
-  let reasoningChars = 0; // Model thinking (Kimi K2.5...) stream suy luận trước khi trả lời
-  outputEl.innerHTML = '';
+  let reasoningText = '';   // toàn bộ mạch suy luận, giữ lại để người dùng xem lại
+  let renderedUpTo = 0;     // đã đẩy sang doneEl tới ký tự thứ mấy của fullText
+  let lastContentAt = 0;    // mốc thời gian của delta nội dung gần nhất
+  let collapsed = false;    // đã thu khối suy luận thành chip chưa
 
-  while (true) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    buffer += decoder.decode(value, { stream: true });
-    const lines = buffer.split('\n');
-    buffer = lines.pop();
+  const fmtNum = n => n.toLocaleString('vi-VN');
 
-    for (const line of lines) {
-      if (!line.startsWith('data: ')) continue;
-      const data = line.slice(6).trim();
-      if (!data || data === '[DONE]') continue;
-      try {
-        const parsed = JSON.parse(data);
-        const delta = parsed.choices?.[0]?.delta;
-        // OpenAI SSE format: delta.content; model thinking: delta.reasoning
-        const text = delta?.content;
-        if (text) {
-          fullText += text;
-          outputEl.innerHTML = formatThueResponse(fullText);
-        } else if (!fullText && delta?.reasoning) {
-          // Đang trong giai đoạn suy luận — hiện trạng thái để người dùng không tưởng bị treo
-          reasoningChars += delta.reasoning.length;
-          outputEl.innerHTML = '<div style="display:flex;align-items:center;gap:10px;padding:14px 16px;color:var(--navy);opacity:0.75;">'
-            + '<span style="display:inline-block;width:16px;height:16px;border:2px solid var(--gold-rich);border-top-color:transparent;border-radius:50%;animation:spin 0.9s linear infinite;"></span>'
-            + '<em>AI đang suy luận sâu để đảm bảo trích dẫn chính xác... (' + reasoningChars.toLocaleString('vi-VN') + ' ký tự suy luận)</em></div>';
-        }
-      } catch(e) { /* ignore parse errors on partial chunks */ }
+  // ── (1) Khối "đang suy nghĩ" hiện trước khi có chữ đầu tiên ──────────────
+  let liveTitle = null, livePreview = null, lastThinkAt = 0;
+  function paintThinking() {
+    if (!liveTitle) {
+      thinkSlot.innerHTML = '<div class="thue-think-live"><div class="thue-think-spin"></div>'
+        + '<div class="thue-think-body"><div class="thue-think-title"></div>'
+        + '<div class="thue-think-preview"></div></div></div>';
+      liveTitle = thinkSlot.querySelector('.thue-think-title');
+      livePreview = thinkSlot.querySelector('.thue-think-preview');
     }
+    liveTitle.textContent = 'AI đang suy nghĩ… (' + fmtNum(reasoningText.length) + ' ký tự)';
+    // Hé lộ vài dòng cuối của mạch suy luận — dễ chờ hơn hẳn một con số trơ trọi
+    livePreview.textContent = reasoningText.slice(-260).replace(/\s+/g, ' ').trim();
   }
-  outputEl.innerHTML = formatThueResponse(fullText);
+
+  // ── (2) Có chữ rồi thì thu khối suy luận lại thành một chip nhỏ ──────────
+  let chipSummary = null;
+  function chipLabel() { return 'Đã suy luận ' + fmtNum(reasoningText.length) + ' ký tự · Xem quá trình'; }
+  function collapseThinking() {
+    collapsed = true;
+    liveTitle = livePreview = null;
+    thinkSlot.innerHTML = '';
+    if (!reasoningText) return;
+    const box = document.createElement('details');
+    box.className = 'thue-think-chip';
+    chipSummary = document.createElement('summary');
+    chipSummary.textContent = chipLabel();
+    const full = document.createElement('div');
+    full.className = 'thue-think-full';
+    box.append(chipSummary, full);
+    // Chỉ đổ nội dung suy luận vào DOM khi người dùng thật sự mở ra xem
+    box.addEventListener('toggle', () => { if (box.open) full.textContent = reasoningText; });
+    thinkSlot.appendChild(box);
+  }
+
+  // ── (3) Model khựng giữa chừng → pill nhỏ ngay cuối dòng chữ ─────────────
+  let stallEl = null, stallVisible = false;
+  const STALL_MS = 1500;
+  function showStall() {
+    if (!stallEl) { stallEl = document.createElement('span'); stallEl.className = 'thue-stall-pill'; }
+    stallEl.textContent = reasoningText.length
+      ? 'Đang suy nghĩ… (' + fmtNum(reasoningText.length) + ' ký tự)'
+      : 'Đang tra cứu căn cứ pháp lý…';
+    if (stallEl.parentNode !== tailEl) tailEl.appendChild(stallEl);
+  }
+  function hideStall() {
+    stallVisible = false;
+    if (stallEl && stallEl.parentNode) stallEl.parentNode.removeChild(stallEl);
+  }
+  const stallTimer = setInterval(() => {
+    if (!fullText) return; // chưa có chữ nào thì đã có khối suy luận lớn lo phần này
+    if (performance.now() - lastContentAt > STALL_MS) { stallVisible = true; showStall(); }
+  }, 400);
+
+  // ── Vẽ có tiết chế: gom delta lại, tối đa ~11 lần vẽ mỗi giây ────────────
+  // Cố tình KHÔNG dùng requestAnimationFrame: trình duyệt ngưng gọi rAF khi tab
+  // bị ẩn, nên người dùng chuyển sang tab khác rồi quay lại sẽ thấy chữ đứng
+  // hình rồi nhảy một phát. setTimeout vẫn chạy (bị hãm còn ~1 lần/giây) nên
+  // câu trả lời tiếp tục dựng dần ở nền.
+  let paintQueued = false, lastPaintAt = 0, paintTimer = null;
+  const PAINT_MS = 90;
+  function paint() {
+    // Đoạn nào đã kết thúc bằng dòng trống thì coi như chốt: format đúng một
+    // lần rồi append vào doneEl và không bao giờ đụng tới nữa.
+    const cut = fullText.lastIndexOf('\n\n');
+    if (cut >= 0 && cut + 2 > renderedUpTo) {
+      const chunk = fullText.slice(renderedUpTo, cut + 2).replace(/\s+$/, '');
+      renderedUpTo = cut + 2;
+      if (chunk) doneEl.insertAdjacentHTML('beforeend', formatThueResponse(chunk));
+    }
+    tailEl.innerHTML = formatThueResponse(fullText.slice(renderedUpTo));
+    if (stallVisible) showStall();
+  }
+  function schedulePaint() {
+    if (paintQueued) return;
+    paintQueued = true;
+    const wait = Math.max(0, PAINT_MS - (performance.now() - lastPaintAt));
+    paintTimer = setTimeout(() => {
+      paintQueued = false; lastPaintAt = performance.now(); paint();
+    }, wait);
+  }
+
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop();
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        const data = line.slice(6).trim();
+        if (!data || data === '[DONE]') continue;
+        try {
+          const parsed = JSON.parse(data);
+          const delta = parsed.choices?.[0]?.delta;
+          // OpenAI SSE: delta.content. OpenRouter chuẩn hoá suy luận thành
+          // delta.reasoning, vài nhà cung cấp lại dùng delta.reasoning_content.
+          const text = delta?.content;
+          const think = delta?.reasoning || delta?.reasoning_content;
+          if (text) {
+            fullText += text;
+            lastContentAt = performance.now();
+            if (!collapsed) collapseThinking();
+            if (stallVisible) hideStall();
+            schedulePaint();
+          }
+          if (think) {
+            reasoningText += think;
+            // Suy luận vẫn có thể chảy tiếp giữa lúc đang trả lời → cập nhật cả hai trạng thái
+            if (collapsed) {
+              if (chipSummary) chipSummary.textContent = chipLabel();
+              if (stallVisible) showStall();
+            } else if (performance.now() - lastThinkAt > 120) {
+              lastThinkAt = performance.now();
+              paintThinking();
+            }
+          }
+        } catch(e) { /* ignore parse errors on partial chunks */ }
+      }
+    }
+  } finally {
+    // Phải huỷ cả lượt vẽ còn treo: nếu để nó chạy sau khi đã chốt,
+    // nó sẽ dựng lại đoạn đuôi và câu cuối bị hiện thành hai lần.
+    clearInterval(stallTimer);
+    clearTimeout(paintTimer);
+  }
+
+  hideStall();
+  if (!collapsed) collapseThinking();
+  // Chốt hạ bằng một lần format toàn bộ, để kết quả cuối cùng khớp đúng định
+  // dạng như trước — phần dựng dần ở trên chỉ phục vụ lúc đang chảy chữ.
+  doneEl.innerHTML = formatThueResponse(fullText);
+  tailEl.innerHTML = '';
   return fullText;
 }
 
