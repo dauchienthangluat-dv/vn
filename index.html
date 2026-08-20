@@ -525,6 +525,10 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 .ai-hit-why { margin-top: 3px; font-size: 0.84rem; color: var(--text-sec); }
 .ai-hit-meta { margin-top: 3px; font-size: 0.74rem; color: var(--text-muted); }
 .ai-box-note { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--gold-border); font-size: 0.78rem; font-style: italic; color: var(--text-muted); }
+.ai-ul { margin: 8px 0; padding-left: 22px; }
+.ai-ul li { margin: 5px 0; line-height: 1.65; }
+#ai-stream p { margin: 0 0 10px; }
+#ai-stream p:last-child { margin-bottom: 0; }
 /* ── Trạng thái suy luận của model (Thuế AI) ─────────────────────────────── */
 .thue-think-live { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; margin-bottom: 14px; background: var(--gold-dim); border: 1px solid var(--gold-border); border-radius: 8px; }
 .thue-think-spin { flex-shrink: 0; width: 15px; height: 15px; margin-top: 2px; border: 2px solid var(--gold-rich); border-top-color: transparent; border-radius: 50%; animation: spin 0.9s linear infinite; }
@@ -1699,6 +1703,7 @@ const UI_TEXT = {
     smartSearch: 'Tra cứu tình huống',
     aiSearchTitle: 'AI phân tích tình huống',
     aiSearchLoading: 'AI đang đối chiếu tình huống của bạn với kho bản án…',
+    aiSearchThinking: 'Đang đọc các tài liệu tìm được và viết phân tích…',
     aiSearchIssue: 'Vấn đề pháp lý',
     aiSearchHits: 'Tài liệu liên quan nhất',
     aiSearchDirection: 'Định hướng',
@@ -1812,6 +1817,7 @@ const UI_TEXT = {
     smartSearch: 'Situation Search',
     aiSearchTitle: 'AI situation analysis',
     aiSearchLoading: 'Matching your situation against the case library…',
+    aiSearchThinking: 'Reading the documents found and writing the analysis…',
     aiSearchIssue: 'Legal issue',
     aiSearchHits: 'Most relevant documents',
     aiSearchDirection: 'Orientation',
@@ -3080,24 +3086,36 @@ function scoreCaseForQuery(caseObj, queryInfo, opts = {}) {
   return { caseObj, score: finalScore, matched };
 }
 
-// ══ TRA CỨU TÌNH HUỐNG BẰNG AI ═══════════════════════════════════════════════
-// Search offline vẫn chạy trước và hiện kết quả ngay (0ms, API hỏng vẫn dùng
-// được); khối AI này chỉ bổ sung phía trên. Model KHÔNG được tự nghĩ ra tài
-// liệu: nó chỉ được chọn id trong danh mục gửi kèm, và client còn lọc lại lần
-// nữa trước khi vẽ. Danh mục dựng ngay lúc chạy từ CASES_DATA nên nhập thêm bản
-// án rồi đồng bộ là lần tra cứu kế tiếp đã thấy — không có index nào phải dựng lại.
+// ══ TRA CỨU TÌNH HUỐNG BẰNG AI — HAI VÒNG ═══════════════════════════════════
+// Vòng 1 (JSON ngắn, Worker có cache): AI đọc DANH MỤC toàn kho rồi chọn ứng
+//   viên. Danh mục có kèm CẤP XÉT XỬ và năm, nên trả lời được cả câu hỏi kiểu
+//   "tìm bản án sơ thẩm" — trước đây thiếu chỗ này nên AI tưởng kho không có.
+//   AI còn được nêu từ khoá cần quét toàn văn và loại tài liệu cần lọc.
+// Máy quét toàn văn TẠI CHỖ: trình duyệt đã giữ sẵn toàn bộ chi_tiet, quét
+//   miễn phí, tức thì và chính xác tuyệt đối. Đây là thứ một mình danh mục
+//   không làm được — thuộc tính nằm sâu trong bản án (vd "có phần tranh luận
+//   của luật sư") thì 400 ký tự tóm lược không thể lộ ra.
+// Vòng 2 (stream): AI nhận ứng viên thật + trích đoạn thật + thống kê kho rồi
+//   viết phân tích, chữ chảy dần như tab Thuế.
+// Tất cả dựng lúc chạy từ CASES_DATA → nhập thêm bản án là lần sau AI thấy ngay.
+
 // THUE_WORKER_URL được khai báo ở phần Thuế PHÍA DƯỚI file, nên phải đọc lúc
 // gọi chứ không đọc lúc khai báo — const/let có vùng chết tạm thời, đọc sớm là
 // ném ReferenceError và giết luôn cả khối script.
 function aiSearchUrl() {
   return (typeof THUE_WORKER_URL === 'string' && THUE_WORKER_URL) ? THUE_WORKER_URL + '?mode=search' : '';
 }
+
 const AI_SEARCH_MIN_WORDS = 4;   // câu ngắn hơn là tra từ khoá, gọi AI chỉ tổ chậm
 const AI_SEARCH_MAX_ITEMS = 6;
 const AI_CATALOG_SUMMARY_CHARS = 220;  // tình tiết vụ việc lấy từ tom_luoc
 const AI_CATALOG_APPLY_CHARS = 180;    // nguyên tắc pháp lý rút ra, lấy từ ap_dung
+const AI_DEEP_MAX_DOCS = 5;            // số tài liệu đưa vào vòng 2
+const AI_EXCERPT_CHARS = 700;          // độ dài trích đoạn quanh chỗ khớp từ khoá
+
 let aiSearchToken = 0;           // chống kết quả của câu tìm cũ về sau đè lên câu mới
 let aiCatalogCache = { stamp: null, wantsDocs: null, items: [], text: '' };
+let aiTextIndex = { stamp: null, rows: null };
 
 // Gỡ thẻ HTML rồi để trình duyệt tự giải mã thực thể. Nội dung nhập từ Word bị
 // mã hoá kiểu Latin-1 rất nhiều ("ch&#237;" thay vì "chí"); không giải mã thì
@@ -3106,6 +3124,38 @@ function aiPlainText(html) {
   const box = document.createElement('textarea');
   box.innerHTML = String(html || '').replace(/<[^>]*>/g, ' ');
   return String(box.value || '').replace(/\s+/g, ' ').trim();
+}
+
+// Bộ lọc theo loại tài liệu / cấp xét xử — AI nêu tên khoá, máy áp dụng.
+// Bản án thường suy cấp từ số sao; 4 mục cố định thì nhận theo sfId.
+const AI_CAP_FILTERS = {
+  'so-tham':            c => getCaseSao(c) === 1 && !subfieldHasNoStars(c.sfId) && c.sfId !== 'an-le' && c.sfId !== 'tb-rut-kinh-nghiem' && c.sfId !== 'giai-dap-nghiep-vu',
+  'phuc-tham':          c => getCaseSao(c) === 2,
+  'giam-doc-tham':      c => getCaseSao(c) === 3,
+  'an-le':              c => c.sfId === 'an-le',
+  'tb-rut-kinh-nghiem': c => c.sfId === 'tb-rut-kinh-nghiem',
+  'giai-dap':           c => c.sfId === 'giai-dap-nghiep-vu',
+  'van-ban':            c => c.sfId === 'van-ban-phap-luat'
+};
+
+// Chỉ mục toàn văn, dựng một lần rồi giữ lại. Bóc HTML của ~275 vụ (vài MB) mà
+// làm lại mỗi lượt tìm thì rất chậm, nên cache theo dấu thời gian dữ liệu.
+function aiFullTextIndex() {
+  if (aiTextIndex.rows && aiTextIndex.stamp === lastSiteDataStamp) return aiTextIndex.rows;
+  const rows = [];
+  for (const bucketKey in CASES_DATA) {
+    CASES_DATA[bucketKey].forEach(c => {
+      const text = [c.ten, c.tom_luoc, c.ap_dung, c.chi_tiet].map(aiPlainText).filter(Boolean).join('\n');
+      rows.push({ cas: c, text: text, low: removeAccents(text.toLowerCase()) });
+    });
+  }
+  aiTextIndex = { stamp: lastSiteDataStamp, rows: rows };
+  return rows;
+}
+
+function aiCaseYear(c) {
+  const m = String((c && c.ngay) || '').match(/\d{4}/);
+  return m ? m[0] : '';
 }
 
 function buildAiCatalog(wantsDocs) {
@@ -3129,8 +3179,9 @@ function buildAiCatalog(wantsDocs) {
     const apDung = aiPlainText(c.ap_dung);
     return [
       c.id,
-      aiPlainText(c.sfName || c.sfId),
+      getDisplayTypeLabel(c),          // Bản án sơ thẩm / Phúc thẩm / Án lệ...
       aiPlainText(c.lvName || c.lvId),
+      aiCaseYear(c),
       aiPlainText(c.ten),
       tomLuoc.slice(0, AI_CATALOG_SUMMARY_CHARS),
       apDung.slice(0, AI_CATALOG_APPLY_CHARS)
@@ -3140,23 +3191,114 @@ function buildAiCatalog(wantsDocs) {
   return aiCatalogCache;
 }
 
-function aiSearchSystemPrompt(catalogText, count, lang) {
+// Thống kê kho theo loại — để vòng 2 trả lời được chính xác kiểu "kho có 5 bản
+// án sơ thẩm nhưng không bản nào có phần tranh luận", thay vì đoán mò.
+function aiKhoThongKe() {
+  const rows = aiFullTextIndex();
+  const dem = {};
+  Object.keys(AI_CAP_FILTERS).forEach(k => { dem[k] = 0; });
+  rows.forEach(r => {
+    Object.keys(AI_CAP_FILTERS).forEach(k => { if (AI_CAP_FILTERS[k](r.cas)) dem[k]++; });
+  });
+  return dem;
+}
+
+function aiLocalFullTextSearch(keywords, capKeys) {
+  const rows = aiFullTextIndex();
+  // Giữ cặp (từ gốc để hiển thị, từ đã bỏ dấu để so khớp). Nếu chỉ giữ mảng đã
+  // lọc rồi tra ngược bằng chỉ số thì nhãn sẽ lệch khi có từ bị loại.
+  const keys = (keywords || [])
+    .map(k => ({ raw: String(k || '').trim(), norm: removeAccents(String(k || '').toLowerCase()).replace(/\s+/g, ' ').trim() }))
+    .filter(k => k.norm.length >= 3);
+  const filters = (capKeys || []).map(k => AI_CAP_FILTERS[k]).filter(Boolean);
+  const hits = [];
+  rows.forEach(r => {
+    if (filters.length && !filters.some(f => f(r.cas))) return;
+    if (!keys.length) return;
+    let firstAt = -1;
+    const khop = [], truot = [];
+    keys.forEach(k => {
+      const at = r.low.indexOf(k.norm);
+      if (at >= 0) { khop.push(k.raw); if (firstAt < 0 || at < firstAt) firstAt = at; }
+      else truot.push(k.raw);
+    });
+    // Ghi rõ khớp từ nào, TRƯỢT từ nào. Quan trọng: hỏi "bản án có phần tranh
+    // luận của luật sư" mà một vụ chỉ khớp mỗi chữ "luật sư" thì KHÔNG phải đáp
+    // án. Không nói rõ ra thì vòng 2 tưởng đã khớp đủ và trả lời sai.
+    if (khop.length) hits.push({ cas: r.cas, matched: khop.length, khop: khop, truot: truot, at: firstAt, text: r.text });
+  });
+  hits.sort((a, b) => (b.matched - a.matched) || (a.at - b.at));
+  return hits;
+}
+
+function aiExcerpt(text, at) {
+  const s = String(text || '');
+  if (at == null || at < 0) return s.slice(0, AI_EXCERPT_CHARS);
+  const from = Math.max(0, at - Math.floor(AI_EXCERPT_CHARS / 3));
+  return (from > 0 ? '…' : '') + s.slice(from, from + AI_EXCERPT_CHARS) + (s.length > from + AI_EXCERPT_CHARS ? '…' : '');
+}
+
+function aiRound1Prompt(catalogText, count, lang) {
   const vi = lang !== 'en';
   return '[DANH MỤC TÀI LIỆU PHÁP LÝ CỦA THƯ VIỆN — ' + count + ' mục]\n'
-    + 'Mỗi dòng theo thứ tự: id | loại | lĩnh vực | tên | tóm lược tình tiết | nguyên tắc áp dụng\n'
+    + 'Mỗi dòng theo thứ tự: id | loại và cấp xét xử | lĩnh vực | năm | tên | tóm lược tình tiết | nguyên tắc áp dụng\n'
     + catalogText + '\n\n'
-    + '[NHIỆM VỤ]\n'
-    + 'Bạn là trợ lý tra cứu của thư viện bản án "Đấu Chiến Thắng Luật". Người dùng mô tả một tình huống pháp lý bằng lời thường. Việc của bạn:\n'
-    + '1. Nhận diện quan hệ pháp luật và vấn đề pháp lý cốt lõi của tình huống.\n'
-    + '2. Chọn trong DANH MỤC TRÊN những tài liệu thực sự liên quan (tối đa ' + AI_SEARCH_MAX_ITEMS + ', xếp từ liên quan nhất xuống).\n'
-    + '3. Nói ngắn gọn vì sao mỗi tài liệu liên quan đến chính tình huống này.\n\n'
+    + '[NHIỆM VỤ — ĐÂY LÀ VÒNG 1: CHỌN ỨNG VIÊN]\n'
+    + 'Người dùng mô tả một tình huống pháp lý hoặc yêu cầu tìm tài liệu. Việc của bạn ở vòng này KHÔNG phải viết câu trả lời, mà là chọn tài liệu để hệ thống đọc kỹ ở vòng sau.\n\n'
+    + '[BẠN CÓ MỘT CÔNG CỤ]\n'
+    + 'Máy có thể quét TOÀN VĂN mọi tài liệu tại chỗ, miễn phí và chính xác tuyệt đối. Danh mục trên chỉ là phần tóm lược đầu tài liệu; toàn văn mỗi vụ dài hàng chục nghìn chữ.\n'
+    + 'Nếu câu hỏi nhắm tới thứ nằm SÂU trong tài liệu mà tóm lược không thể hiện — ví dụ "có phần tranh luận của luật sư", "có nhắc tới Điều 468", "có giám định thương tật" — hãy đưa từ khoá vào "tim_toan_van" để máy quét giúp. Chọn từ khoá NGẮN, đúng chữ thường xuất hiện trong văn bản.\n'
+    + 'Nếu người dùng yêu cầu một LOẠI tài liệu cụ thể, hãy điền "loc_cap" bằng các khoá sau (chỉ dùng đúng các khoá này):\n'
+    + 'so-tham, phuc-tham, giam-doc-tham, an-le, tb-rut-kinh-nghiem, giai-dap, van-ban\n\n'
+    + '[RÀNG BUỘC]\n'
+    + '- "ung_vien" CHỈ được chứa id xuất hiện nguyên văn trong DANH MỤC. Tuyệt đối không bịa id.\n'
+    + '- Không chắc thì cứ để "ung_vien" ít, và dựa vào "tim_toan_van" để máy tìm giúp.\n'
+    + '- Viết "van_de" bằng ' + (vi ? 'tiếng Việt' : 'tiếng Anh') + '.\n\n'
+    + '[ĐỊNH DẠNG] Trả về DUY NHẤT một object JSON, không kèm chữ nào khác:\n'
+    + '{"van_de":"một câu nêu đúng người dùng đang cần gì","ung_vien":["id, tối đa 8"],"tim_toan_van":["từ khoá ngắn, tối đa 4, để rỗng nếu không cần"],"loc_cap":["để rỗng nếu người dùng không yêu cầu loại cụ thể"]}';
+}
+
+function aiRound2Prompt(query, vanDe, docs, thongKe, keywords, lang) {
+  const vi = lang !== 'en';
+  const nhan = {
+    'so-tham': 'Bản án sơ thẩm', 'phuc-tham': 'Bản án phúc thẩm',
+    'giam-doc-tham': 'Quyết định giám đốc thẩm/tái thẩm', 'an-le': 'Án lệ',
+    'tb-rut-kinh-nghiem': 'Thông báo rút kinh nghiệm', 'giai-dap': 'Giải đáp nghiệp vụ',
+    'van-ban': 'Văn bản pháp luật'
+  };
+  const dongThongKe = Object.keys(thongKe).map(k => (nhan[k] || k) + ': ' + thongKe[k]).join(' | ');
+
+  const dongDoc = docs.map((d, i) => {
+    const c = d.cas;
+    return '### ' + (i + 1) + '. ' + aiPlainText(c.ten) + '\n'
+      + '(id: ' + c.id + ' | loại: ' + getDisplayTypeLabel(c) + ' | lĩnh vực: ' + aiPlainText(c.lvName || '') + ' | năm: ' + (aiCaseYear(c) || 'không rõ') + ')\n'
+      + (d.matched
+          ? 'ĐÃ QUÉT TOÀN VĂN. Khớp từ khoá: ' + (d.khop || []).join(', ')
+            + ((d.truot && d.truot.length) ? '. KHÔNG tìm thấy trong toàn văn: ' + d.truot.join(', ') : '')
+            + '\nTrích đoạn quanh chỗ khớp:\n'
+          : 'Chưa quét từ khoá cho tài liệu này. Trích đoạn đầu tài liệu:\n')
+      + aiExcerpt(d.text, d.at) + '\n';
+  }).join('\n');
+
+  return '[CÂU HỎI CỦA NGƯỜI DÙNG]\n' + query + '\n\n'
+    + '[VẤN ĐỀ ĐÃ NHẬN DIỆN]\n' + (vanDe || '(chưa xác định)') + '\n\n'
+    + '[THỐNG KÊ TOÀN KHO — SỐ LIỆU THẬT, ĐÁNG TIN]\n' + dongThongKe + '\n'
+    + (keywords && keywords.length
+        ? 'Đã quét toàn văn với từ khoá: ' + keywords.join(', ') + '\n'
+        : '')
+    + '\n[TÀI LIỆU ỨNG VIÊN — TRÍCH TỪ DỮ LIỆU THẬT CỦA THƯ VIỆN]\n'
+    + (dongDoc || '(không có tài liệu nào lọt vào vòng này)') + '\n'
+    + '[NHIỆM VỤ — VÒNG 2: VIẾT CÂU TRẢ LỜI]\n'
+    + 'Bạn là trợ lý tra cứu của thư viện bản án "Đấu Chiến Thắng Luật". Hãy trả lời người dùng, theo thứ tự:\n'
+    + '1. TRẢ LỜI THẲNG câu hỏi ngay câu đầu tiên (có hay không, bao nhiêu tài liệu). Nếu người dùng hỏi có tài liệu loại nào không, hãy dùng THỐNG KÊ ở trên để nói con số chính xác.\n'
+    + '2. Giới thiệu từng tài liệu phù hợp: tên tài liệu in đậm, kèm 1-2 câu vì sao nó đáp ứng đúng thứ người dùng cần.\n'
+    + '3. Nếu không tài liệu nào khớp hoàn toàn, nói rõ điều đó và chỉ ra thứ gần nhất, kèm gợi ý người dùng nên tìm theo hướng nào.\n\n'
     + '[RÀNG BUỘC BẮT BUỘC]\n'
-    + '- CHỈ được dùng id xuất hiện nguyên văn trong DANH MỤC. Tuyệt đối KHÔNG bịa id, KHÔNG bịa tên tài liệu, KHÔNG bịa số án lệ hay số bản án.\n'
-    + '- Nếu không có tài liệu nào thật sự sát tình huống: để "ket_qua" là mảng RỖNG và nêu hướng xử lý trong "dinh_huong". Thà nói thẳng là kho chưa có, còn hơn gán ép một tài liệu lệch.\n'
+    + '- CHỈ dùng thông tin trong phần THỐNG KÊ và TÀI LIỆU ỨNG VIÊN ở trên. Tuyệt đối KHÔNG bịa tên tài liệu, số án lệ, số bản án nào khác.\n'
+    + '- Đọc kỹ dòng "Khớp từ khoá" của từng tài liệu. Nếu tài liệu chỉ khớp MỘT PHẦN từ khoá thì nó KHÔNG đáp ứng đủ yêu cầu: phải nói rõ nó thiếu gì, tuyệt đối không được coi như đã khớp đủ.\n'
     + '- Không kết luận thay toà, không hứa hẹn kết quả vụ việc.\n'
-    + '- Viết bằng ' + (vi ? 'tiếng Việt' : 'tiếng Anh') + '.\n\n'
-    + '[ĐỊNH DẠNG] Trả về DUY NHẤT một object JSON, không kèm chữ nào khác, không bọc trong dấu nháy ba:\n'
-    + '{"van_de":"một câu nêu đúng vấn đề pháp lý của tình huống","ket_qua":[{"id":"...","ly_do":"1-2 câu vì sao tài liệu này liên quan"}],"dinh_huong":"2-4 câu: nguyên tắc hoặc điều luật nào chi phối, cần lưu ý gì"}';
+    + '- Viết gọn, tối đa khoảng 250 từ. Dùng **in đậm** cho tên tài liệu và gạch đầu dòng khi liệt kê. KHÔNG dùng tiêu đề markdown (#).\n'
+    + '- Viết bằng ' + (vi ? 'tiếng Việt' : 'tiếng Anh') + '.';
 }
 
 function parseAiSearchJson(raw) {
@@ -3168,52 +3310,95 @@ function parseAiSearchJson(raw) {
   try { return JSON.parse(txt.slice(a, b + 1)); } catch (e) { return null; }
 }
 
+// Markdown tối giản cho câu trả lời vòng 2 (đậm, gạch đầu dòng, đoạn văn).
+// Escape trước tiên — nội dung do model sinh ra, không bao giờ tin thẳng.
+function formatAiText(text) {
+  let html = String(text || '')
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/^\s*[-•*]\s+(.+)$/gm, '<li>$1</li>');
+  html = html.replace(/(<li>[\s\S]*?<\/li>(?:\n<li>[\s\S]*?<\/li>)*)/g, '<ul class="ai-ul">$1</ul>');
+  html = html.replace(/\n{2,}/g, '</p><p>');
+  html = html.replace(/\n/g, '<br>');
+  return '<p>' + html + '</p>';
+}
+
 function hideAiSearchBox() {
   const box = document.getElementById('ai-search-box');
   if (box) { box.style.display = 'none'; box.innerHTML = ''; }
 }
 
-function renderAiSearchResult(parsed, catalog) {
-  const box = document.getElementById('ai-search-box');
-  if (!box) return;
-  if (!parsed) { hideAiSearchBox(); return; }
-
-  // Lớp chặn thứ hai: id nào không có thật trong kho thì loại thẳng. Prompt đã
-  // ràng buộc rồi, nhưng trên một trang pháp lý thì không tin lời hứa của model.
-  const byId = new Map(catalog.items.map(c => [c.id, c]));
-  const rows = [];
-  (Array.isArray(parsed.ket_qua) ? parsed.ket_qua : []).forEach(item => {
-    const id = String((item && item.id) || '').trim();
-    const cas = byId.get(id);
-    if (cas && !rows.some(r => r.cas.id === cas.id)) {
-      rows.push({ cas, why: String((item && item.ly_do) || '') });
-    }
-  });
-
-  const vanDe = String(parsed.van_de || '').trim();
-  const dinhHuong = String(parsed.dinh_huong || '').trim();
-  if (!vanDe && !dinhHuong && !rows.length) { hideAiSearchBox(); return; }
-
-  const hitsHtml = rows.slice(0, AI_SEARCH_MAX_ITEMS).map((r, i) => {
-    const href = routeHref({ view: 'detail', lv: r.cas.lvId, sf: r.cas.sfId, caseId: r.cas.id });
-    const ten = getPrimaryTextLine(getCaseFieldText(r.cas, 'ten'));
-    return '<div class="ai-hit"><span class="ai-hit-num">' + (i + 1) + '</span><div class="ai-hit-body">'
-      + '<a class="ai-hit-name" href="' + escapeHtmlText(href) + '" onclick="event.preventDefault(); goDetail(null,null,\'' + escapeJsAttr(r.cas.id) + '\')">' + escapeHtmlText(ten) + '</a>'
-      + '<div class="ai-hit-meta">' + escapeHtmlText(r.cas.sfName || '') + (r.cas.lvName ? ' · ' + escapeHtmlText(r.cas.lvName) : '') + '</div>'
-      + (r.why ? '<div class="ai-hit-why">' + escapeHtmlText(r.why) + '</div>' : '')
-      + '</div></div>';
-  }).join('');
-
-  box.style.display = 'block';
-  box.innerHTML = '<div class="ai-box-head"><i class="ph ph-sparkle"></i> ' + escapeHtmlText(t('aiSearchTitle')) + '</div>'
+function aiBoxShell(vanDe) {
+  return '<div class="ai-box-head"><i class="ph ph-sparkle"></i> ' + escapeHtmlText(t('aiSearchTitle')) + '</div>'
     + '<div class="ai-box-body">'
     + (vanDe ? '<div class="ai-box-issue"><strong>' + escapeHtmlText(t('aiSearchIssue')) + ':</strong> ' + escapeHtmlText(vanDe) + '</div>' : '')
-    + (rows.length
-        ? '<div class="ai-box-label">' + escapeHtmlText(t('aiSearchHits')) + '</div>' + hitsHtml
-        : '<div>' + escapeHtmlText(t('aiSearchNone')) + '</div>')
-    + (dinhHuong ? '<div style="margin-top:14px;"><div class="ai-box-label">' + escapeHtmlText(t('aiSearchDirection')) + '</div>' + escapeHtmlText(dinhHuong) + '</div>' : '')
+    + '<div id="ai-stream"></div>'
+    + '<div id="ai-hits"></div>'
     + '<div class="ai-box-note">' + escapeHtmlText(t('aiSearchNote')) + '</div>'
     + '</div>';
+}
+
+function aiRenderHits(docs) {
+  const wrap = document.getElementById('ai-hits');
+  if (!wrap) return;
+  if (!docs.length) { wrap.innerHTML = ''; return; }
+  wrap.innerHTML = '<div class="ai-box-label" style="margin-top:14px;">' + escapeHtmlText(t('aiSearchHits')) + '</div>'
+    + docs.map((d, i) => {
+      const c = d.cas;
+      const href = routeHref({ view: 'detail', lv: c.lvId, sf: c.sfId, caseId: c.id });
+      const ten = getPrimaryTextLine(getCaseFieldText(c, 'ten'));
+      return '<div class="ai-hit"><span class="ai-hit-num">' + (i + 1) + '</span><div class="ai-hit-body">'
+        + '<a class="ai-hit-name" href="' + escapeHtmlText(href) + '" onclick="event.preventDefault(); goDetail(null,null,\'' + escapeJsAttr(c.id) + '\')">' + escapeHtmlText(ten) + '</a>'
+        + '<div class="ai-hit-meta">' + escapeHtmlText(getDisplayTypeLabel(c)) + (c.lvName ? ' · ' + escapeHtmlText(c.lvName) : '') + (aiCaseYear(c) ? ' · ' + aiCaseYear(c) : '') + '</div>'
+        + '</div></div>';
+    }).join('');
+}
+
+// Đọc SSE của vòng 2 và đổ chữ dần ra màn hình. Tiết chế 90ms; KHÔNG dùng
+// requestAnimationFrame vì rAF ngừng chạy khi tab bị ẩn (bài học từ tab Thuế).
+async function aiStreamRound2(body, target, myToken) {
+  const res = await fetch(aiSearchUrl(), {
+    method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body)
+  });
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let full = '', buffer = '', queued = false, lastPaint = 0, timer = null;
+
+  const paint = () => { target.innerHTML = formatAiText(full); };
+  const schedule = () => {
+    if (queued) return;
+    queued = true;
+    timer = setTimeout(() => {
+      queued = false; lastPaint = performance.now();
+      if (myToken === aiSearchToken) paint();
+    }, Math.max(0, 90 - (performance.now() - lastPaint)));
+  };
+
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      if (myToken !== aiSearchToken) { try { reader.cancel(); } catch (e) {} return full; }
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop();
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        const data = line.slice(6).trim();
+        if (!data || data === '[DONE]') continue;
+        try {
+          const piece = JSON.parse(data).choices?.[0]?.delta?.content;
+          if (piece) { full += piece; schedule(); }
+        } catch (e) { /* mảnh JSON chưa trọn, bỏ qua */ }
+      }
+    }
+  } finally {
+    // Huỷ lượt vẽ còn treo, nếu không nó chạy sau khi đã chốt và vẽ lại thừa
+    clearTimeout(timer);
+  }
+  if (myToken === aiSearchToken) paint();
+  return full;
 }
 
 async function runAiSituationSearch(query) {
@@ -3224,8 +3409,7 @@ async function runAiSituationSearch(query) {
   const endpoint = aiSearchUrl();
   if (!endpoint) { hideAiSearchBox(); return; }
   const normalized = normalizeSearchText(query);
-  const words = normalized.split(/\s+/).filter(Boolean);
-  if (words.length < AI_SEARCH_MIN_WORDS) { hideAiSearchBox(); return; }
+  if (normalized.split(/\s+/).filter(Boolean).length < AI_SEARCH_MIN_WORDS) { hideAiSearchBox(); return; }
 
   const catalog = buildAiCatalog(queryWantsLegalDocs(normalized));
   if (!catalog.items.length) { hideAiSearchBox(); return; }
@@ -3237,7 +3421,8 @@ async function runAiSituationSearch(query) {
     + escapeHtmlText(t('aiSearchLoading')) + '</div></div>';
 
   try {
-    const res = await fetch(endpoint, {
+    // ── VÒNG 1: chọn ứng viên + nêu từ khoá cần quét toàn văn ──────────────
+    const r1 = await fetch(endpoint, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({
@@ -3245,20 +3430,69 @@ async function runAiSituationSearch(query) {
         stamp: lastSiteDataStamp || '',   // đổi dữ liệu là cache phía Worker tự vô hiệu
         lang: lang,
         model: 'qwen/qwen3-235b-a22b-2507',
-        stream: false,
-        max_tokens: 1200,
-        temperature: 0.1,
+        stream: false, max_tokens: 700, temperature: 0.1,
         messages: [
-          { role: 'system', content: aiSearchSystemPrompt(catalog.text, catalog.items.length, lang) },
+          { role: 'system', content: aiRound1Prompt(catalog.text, catalog.items.length, lang) },
           { role: 'user', content: query }
         ]
       })
     });
-    if (myToken !== aiSearchToken) return;  // người dùng đã tìm câu khác, bỏ kết quả này
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
     if (myToken !== aiSearchToken) return;
-    renderAiSearchResult(parseAiSearchJson(data && data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content), catalog);
+    if (!r1.ok) throw new Error('HTTP ' + r1.status);
+    const d1 = await r1.json();
+    if (myToken !== aiSearchToken) return;
+    const plan = parseAiSearchJson(d1?.choices?.[0]?.message?.content);
+    if (!plan) { hideAiSearchBox(); return; }
+
+    const capKeys = (Array.isArray(plan.loc_cap) ? plan.loc_cap : []).filter(k => AI_CAP_FILTERS[k]);
+    const keywords = (Array.isArray(plan.tim_toan_van) ? plan.tim_toan_van : []).slice(0, 4);
+
+    // ── MÁY QUÉT TOÀN VĂN — miễn phí, tức thì, chính xác ───────────────────
+    const byId = new Map(catalog.items.map(c => [c.id, c]));
+    const capOk = c => !capKeys.length || capKeys.some(k => AI_CAP_FILTERS[k](c));
+    const docs = [];
+    const daCo = new Set();
+    const push = (cas, matched, at, text, khop, truot) => {
+      if (!cas || daCo.has(cas.id) || docs.length >= AI_DEEP_MAX_DOCS) return;
+      daCo.add(cas.id);
+      docs.push({
+        cas, matched, at,
+        khop: khop || [], truot: truot || [],
+        text: text || aiPlainText(cas.tom_luoc) || aiPlainText(cas.ap_dung)
+      });
+    };
+    // Ưu tiên vụ vừa khớp từ khoá toàn văn vừa đúng loại người dùng yêu cầu
+    aiLocalFullTextSearch(keywords, capKeys).forEach(h => push(h.cas, h.matched, h.at, h.text, h.khop, h.truot));
+    // Rồi tới ứng viên AI chọn từ danh mục (vẫn phải qua bộ lọc loại)
+    (Array.isArray(plan.ung_vien) ? plan.ung_vien : []).forEach(id => {
+      const cas = byId.get(String(id || '').trim());
+      if (cas && capOk(cas)) push(cas, 0, -1, null);
+    });
+    // Nếu vẫn trống mà người dùng có yêu cầu loại cụ thể: đưa ra thứ gần nhất
+    // cùng loại, để AI nói thật "kho có N cái loại này nhưng không cái nào khớp"
+    if (!docs.length && capKeys.length) {
+      aiFullTextIndex().filter(r => capOk(r.cas)).slice(0, AI_DEEP_MAX_DOCS)
+        .forEach(r => push(r.cas, 0, -1, r.text));
+    }
+
+    if (myToken !== aiSearchToken) return;
+
+    // ── VÒNG 2: phân tích sâu, chữ chảy dần ────────────────────────────────
+    box.innerHTML = aiBoxShell(String(plan.van_de || '').trim());
+    const streamEl = document.getElementById('ai-stream');
+    streamEl.innerHTML = '<div class="ai-box-loading"><span class="ai-box-spin"></span>'
+      + escapeHtmlText(t('aiSearchThinking')) + '</div>';
+    aiRenderHits(docs);
+
+    await aiStreamRound2({
+      query: query, stamp: lastSiteDataStamp || '', lang: lang,
+      model: 'qwen/qwen3-235b-a22b-2507',
+      stream: true, max_tokens: 900, temperature: 0.2,
+      messages: [
+        { role: 'system', content: aiRound2Prompt(query, plan.van_de, docs, aiKhoThongKe(), keywords, lang) },
+        { role: 'user', content: query }
+      ]
+    }, streamEl, myToken);
   } catch (e) {
     if (myToken !== aiSearchToken) return;
     // Hỏng thì lặng lẽ rút lui: kết quả offline bên dưới vẫn dùng bình thường,
