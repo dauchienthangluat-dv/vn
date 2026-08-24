@@ -109,6 +109,11 @@ body { top: 0 !important; }
 
 /* ===== DCSL-ZOOM START: phóng to toàn trang trên desktop — 100% mới = 110% cũ (media query tính theo px thật nên layout không đổi) ===== */
 @media(min-width:1210px){ html{ zoom: 1.1; } }
+/* Màn càng rộng thì phóng càng nhiều: MacBook (1440-1728px CSS) và màn 2K/4K
+   trước đây hiển thị bé hơn hẳn máy Windows có thu phóng hệ thống 125-150%.
+   Ngưỡng tính theo px THẬT nên không đụng tới điểm ngắt layout (1100px). */
+@media(min-width:1400px){ html{ zoom: 1.25; } }
+@media(min-width:1700px){ html{ zoom: 1.4; } }
 /* ===== DCSL-ZOOM END ===== */
 
 @media(min-width:1100px){
@@ -525,6 +530,9 @@ a.lv-card, a.recent-card, a.subfield-item, a.dt-recent-item, a.rh-item, a.case-n
 .ai-hit-why { margin-top: 3px; font-size: 0.84rem; color: var(--text-sec); }
 .ai-hit-meta { margin-top: 3px; font-size: 0.74rem; color: var(--text-muted); }
 .ai-box-note { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--gold-border); font-size: 0.78rem; font-style: italic; color: var(--text-muted); }
+.ai-inline-link { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--gold-rich); }
+.ai-inline-link:hover { color: var(--gold-rich); }
+.ai-inline-ico { font-size: 0.78em; opacity: 0.7; }
 .ai-ul { margin: 8px 0; padding-left: 22px; }
 .ai-ul li { margin: 5px 0; line-height: 1.65; }
 #ai-stream p { margin: 0 0 10px; }
@@ -3106,7 +3114,8 @@ function aiSearchUrl() {
   return (typeof THUE_WORKER_URL === 'string' && THUE_WORKER_URL) ? THUE_WORKER_URL + '?mode=search' : '';
 }
 
-const AI_SEARCH_MIN_WORDS = 4;   // câu ngắn hơn là tra từ khoá, gọi AI chỉ tổ chậm
+const AI_SEARCH_MIN_WORDS = 3;   // dưới mức này coi là tra từ khoá, gọi AI chỉ tổ chậm
+                                 // (hạ từ 4 xuống 3 vì người dùng điện thoại gõ ngắn hơn)
 const AI_SEARCH_MAX_ITEMS = 6;
 const AI_CATALOG_SUMMARY_CHARS = 220;  // tình tiết vụ việc lấy từ tom_luoc
 const AI_CATALOG_APPLY_CHARS = 180;    // nguyên tắc pháp lý rút ra, lấy từ ap_dung
@@ -3114,6 +3123,7 @@ const AI_DEEP_MAX_DOCS = 5;            // số tài liệu đưa vào vòng 2
 const AI_EXCERPT_CHARS = 700;          // độ dài trích đoạn quanh chỗ khớp từ khoá
 
 let aiSearchToken = 0;           // chống kết quả của câu tìm cũ về sau đè lên câu mới
+let aiDocsHienTai = [];          // tài liệu của lượt tra cứu đang hiển thị
 let aiCatalogCache = { stamp: null, wantsDocs: null, items: [], text: '' };
 let aiTextIndex = { stamp: null, rows: null };
 
@@ -3315,12 +3325,40 @@ function parseAiSearchJson(raw) {
 function formatAiText(text) {
   let html = String(text || '')
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  // Model đôi khi vẫn chèn tiêu đề markdown dù đã dặn không — bỏ dấu # đầu dòng
+  html = html.replace(/^#{1,6}\s+/gm, '');
   html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  // *nghiêng* — phải chạy SAU **đậm**, và không được ăn vào dấu sao của đậm
+  html = html.replace(/(^|[^*])\*([^*\n]+?)\*(?!\*)/g, '$1<em>$2</em>');
   html = html.replace(/^\s*[-•*]\s+(.+)$/gm, '<li>$1</li>');
   html = html.replace(/(<li>[\s\S]*?<\/li>(?:\n<li>[\s\S]*?<\/li>)*)/g, '<ul class="ai-ul">$1</ul>');
   html = html.replace(/\n{2,}/g, '</p><p>');
   html = html.replace(/\n/g, '<br>');
   return '<p>' + html + '</p>';
+}
+
+// Tên tài liệu AI nhắc trong bài (thường để **đậm**) thì biến luôn thành liên
+// kết bấm được, để người đọc không phải dò xuống danh sách bên dưới.
+// So khớp bỏ dấu + bỏ ký tự lạ, và chấp nhận tên bị cắt ngắn (model hay rút gọn).
+function aiLinkifyTitles(container, docs) {
+  if (!container || !docs || !docs.length) return;
+  const chuan = v => removeAccents(String(v || '').toLowerCase()).replace(/[^a-z0-9]+/g, ' ').trim();
+  const bang = docs.map(d => ({ cas: d.cas, key: chuan(getPrimaryTextLine(getCaseFieldText(d.cas, 'ten'))) }))
+                   .filter(x => x.key.length > 8);
+  container.querySelectorAll('strong, em').forEach(el => {
+    if (el.querySelector('a')) return;
+    const key = chuan(el.textContent);
+    if (key.length < 8) return;
+    const hit = bang.find(x => x.key === key || x.key.indexOf(key) === 0 || key.indexOf(x.key) === 0);
+    if (!hit) return;
+    const a = document.createElement('a');
+    a.className = 'ai-inline-link';
+    a.href = routeHref({ view: 'detail', lv: hit.cas.lvId, sf: hit.cas.sfId, caseId: hit.cas.id });
+    a.addEventListener('click', function (ev) { ev.preventDefault(); goDetail(null, null, hit.cas.id); });
+    a.innerHTML = el.innerHTML + ' <i class="ph ph-arrow-up-right ai-inline-ico"></i>';
+    el.innerHTML = '';
+    el.appendChild(a);
+  });
 }
 
 function hideAiSearchBox() {
@@ -3365,7 +3403,10 @@ async function aiStreamRound2(body, target, myToken) {
   const decoder = new TextDecoder();
   let full = '', buffer = '', queued = false, lastPaint = 0, timer = null;
 
-  const paint = () => { target.innerHTML = formatAiText(full); };
+  const paint = () => {
+    target.innerHTML = formatAiText(full);
+    aiLinkifyTitles(target, aiDocsHienTai);
+  };
   const schedule = () => {
     if (queued) return;
     queued = true;
@@ -3478,6 +3519,7 @@ async function runAiSituationSearch(query) {
     if (myToken !== aiSearchToken) return;
 
     // ── VÒNG 2: phân tích sâu, chữ chảy dần ────────────────────────────────
+    aiDocsHienTai = docs;
     box.innerHTML = aiBoxShell(String(plan.van_de || '').trim());
     const streamEl = document.getElementById('ai-stream');
     streamEl.innerHTML = '<div class="ai-box-loading"><span class="ai-box-spin"></span>'
@@ -3729,8 +3771,9 @@ function renderCasesList(){
   if(state.viewBookmarks && typeof renderBookmarksList === 'function'){ renderBookmarksList(); return; }
   let cases = [];
   renderCasesAdminToolbar();
-  // Khối AI chỉ thuộc về trang tra cứu tình huống; xem danh sách lĩnh vực thì ẩn đi
-  if(!state.searchQuery && typeof hideAiSearchBox === 'function') hideAiSearchBox();
+  // Khối AI thuộc về cả tra cứu tình huống LẪN lọc có nhập nội dung; chỉ khi
+  // duyệt danh sách suông (không có chữ nào để phân tích) thì mới ẩn đi.
+  if(!state.searchQuery && !state.subQuery && typeof hideAiSearchBox === 'function') hideAiSearchBox();
   if(state.searchQuery) {
     const queryLabel = state.searchQuery;
     const bcSf = document.getElementById('cases-bc-sf');
@@ -4035,6 +4078,7 @@ function applyFilter(){
   document.getElementById('cases-bc-lv').textContent = getLVDisplayName(state.curLV); document.getElementById('cases-bc-sf').textContent = getSFDisplayName(state.curLV.id, state.curSF); document.getElementById('cases-title').textContent = getSFDisplayName(state.curLV.id, state.curSF);
   renderCasesList(); showPage('page-cases'); document.getElementById('pagination-bar').classList.add('visible');
   updateRoute({ view: 'list', lv: state.curLV.id, sf: state.curSF.id, page: state.curPage });
+  if(f4Text) runAiSituationSearch(f4Text);
 }
 
 function openHuongDan(){
