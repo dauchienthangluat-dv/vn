@@ -25,6 +25,22 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <!-- Tắt các quyền thiết bị nhạy cảm mà web này không bao giờ cần -->
 <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()">
+<!-- Ép về https NGAY, trước khi bất kỳ đoạn mã nào kịp chạy.
+     Vì sao cần: trang vẫn tải bình thường qua http://, nhưng Cloudflare Worker
+     chỉ nhận Origin https:// nên MỌI lệnh gọi AI (Thuế, Lao động, Tra cứu) bị
+     trả 403 -> người dùng thấy "Lỗi khi gọi API" dù trang trông vẫn chạy tốt.
+     Máy tính hiếm khi dính vì Chrome/Edge tự nâng cấp; điện thoại mở từ Zalo,
+     Facebook, link cũ hay gõ tay tên miền thì rơi thẳng vào http://.
+     upgrade-insecure-requests trong CSP KHÔNG cứu được: nó nâng cấp các request
+     con, còn Origin của trang thì vẫn là http://. -->
+<script>
+(function () {
+  var h = location.hostname;
+  if (location.protocol === 'http:' && h !== 'localhost' && h !== '127.0.0.1' && h !== '[::1]') {
+    location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+  }
+})();
+</script>
 <!-- ===== DCSL-BAOMAT END ===== -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G7967D7CKE"></script>
@@ -7402,6 +7418,23 @@ async function thueSendFollowUp() {
   btn.innerHTML = '<i class="ph ph-paper-plane-right"></i> Tiếp tục phân tích';
 }
 
+// Bóc một chuỗi SSE đã nhận trọn vẹn (dùng cho nhánh dự phòng không stream)
+function parseSseText(txt) {
+  let content = '', reasoning = '';
+  String(txt || '').split('\n').forEach(line => {
+    if (!line.startsWith('data: ')) return;
+    const d = line.slice(6).trim();
+    if (!d || d === '[DONE]') return;
+    try {
+      const delta = JSON.parse(d).choices?.[0]?.delta;
+      if (delta?.content) content += delta.content;
+      const th = delta?.reasoning || delta?.reasoning_content;
+      if (th) reasoning += th;
+    } catch (e) { /* mảnh vỡ dở dang thì bỏ qua */ }
+  });
+  return { content, reasoning };
+}
+
 // ctx cho phép dùng lại nguyên bộ máy stream này cho tab khác (Lao động) mà không
 // phải nhân đôi ~250 dòng code. Bỏ trống ctx thì mặc định là tab Thuế như cũ.
 async function callThueClaudeAPI(apiKey, outputEl, ctx) {
@@ -7447,27 +7480,47 @@ async function callThueClaudeAPI(apiKey, outputEl, ctx) {
   const headers = { 'content-type': 'application/json' };
   if (!cfg.endpoint && apiKey) headers['Authorization'] = `Bearer ${apiKey}`;
 
-  const response = await fetch(endpoint, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({
-      model: 'moonshotai/kimi-k2.5',
-      // Fallback tự động của OpenRouter: nếu model chính lỗi (hết hạn mức, chặn khu vực...)
-      // thì thử model dự phòng. KHÔNG dùng model yếu làm fallback (dễ bịa trích dẫn).
-      models: ['moonshotai/kimi-k2.5', 'qwen/qwen3-235b-a22b-2507'],
-      messages,
-      stream: true,
-      // Kimi K2.5 là model suy luận: token suy luận tính chung vào completion
-      // nên cần trần cao hơn để câu trả lời không bị cắt giữa chừng
-      max_tokens: 16384,
-      temperature: 0.1
-    })
-  });
+  let response;
+  try {
+    response = await fetch(endpoint, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({
+        model: 'moonshotai/kimi-k2.5',
+        // Fallback tự động của OpenRouter: nếu model chính lỗi (hết hạn mức, chặn khu vực...)
+        // thì thử model dự phòng. KHÔNG dùng model yếu làm fallback (dễ bịa trích dẫn).
+        models: ['moonshotai/kimi-k2.5', 'qwen/qwen3-235b-a22b-2507'],
+        messages,
+        stream: true,
+        // Kimi K2.5 là model suy luận: token suy luận tính chung vào completion
+        // nên cần trần cao hơn để câu trả lời không bị cắt giữa chừng
+        max_tokens: 16384,
+        temperature: 0.1
+      })
+    });
+  } catch (netErr) {
+    // fetch chỉ ném lỗi khi CHƯA nhận được phản hồi nào: mất sóng, chuyển
+    // 4G <-> wifi giữa chừng, hoặc trình duyệt điện thoại huỷ request vì người
+    // dùng khoá màn hình / chuyển sang ứng dụng khác. Thông báo mặc định của
+    // trình duyệt ("Failed to fetch", "Load failed") không nói lên điều gì.
+    throw new Error('Không gửi được yêu cầu lên máy chủ — mạng bị gián đoạn ('
+      + (netErr && netErr.message ? netErr.message : 'mất kết nối')
+      + '). Bạn kiểm tra kết nối rồi bấm phân tích lại.');
+  }
 
   if (!response.ok) {
-    let errMsg = `HTTP ${response.status}`;
-    try { const err = await response.json(); errMsg = err.error?.message || errMsg; } catch(e2) {}
-    throw new Error(errMsg);
+    let errMsg = '';
+    try { const err = await response.json(); errMsg = err.error?.message || ''; } catch(e2) {}
+    // Diễn giải những mã hay gặp, thay vì ném ra một con số trần trụi
+    if (response.status === 403) {
+      errMsg = 'Máy chủ từ chối vì trang đang chạy ở địa chỉ "' + location.origin
+        + '". Bạn hãy mở lại trang bằng https://dauchienthangluat.com.vn rồi hỏi lại.';
+    } else if (response.status === 429) {
+      errMsg = errMsg || 'Bạn đã dùng hết lượt hỏi trong giờ này. Vui lòng thử lại sau ít phút.';
+    } else if (response.status === 413) {
+      errMsg = errMsg || 'Nội dung gửi lên quá dài. Bạn hãy tóm tắt tình huống ngắn gọn hơn.';
+    }
+    throw new Error((errMsg || 'Máy chủ trả lỗi') + ' (mã ' + response.status + ')');
   }
 
   // ── Kết cấu vùng hiển thị ────────────────────────────────────────────────
@@ -7485,6 +7538,18 @@ async function callThueClaudeAPI(apiKey, outputEl, ctx) {
   outputEl.append(thinkSlot, doneEl, tailEl);
   thinkSlot.innerHTML = '<div class="thue-loading"><div class="thue-loading-dots"><span></span><span></span><span></span></div>&nbsp; <span>'
     + escapeHtmlText(t(cfg.loadingKey) || cfg.loadingFallback) + '</span></div>';
+
+  // Safari trên iOS cũ (< 14.5) và vài trình duyệt rút gọn trên điện thoại không
+  // cho đọc dần response.body. Không có nhánh này thì cả câu trả lời hỏng kèm
+  // thông báo vô nghĩa "undefined is not an object". Chờ trọn rồi vẽ một lần:
+  // mất hiệu ứng chảy chữ nhưng vẫn ra đúng kết quả.
+  if (!response.body || typeof response.body.getReader !== 'function') {
+    const whole = parseSseText(await response.text());
+    thinkSlot.innerHTML = '';
+    doneEl.innerHTML = formatThueResponse(whole.content);
+    tailEl.innerHTML = '';
+    return whole.content;
+  }
 
   const reader = response.body.getReader();
   const decoder = new TextDecoder();
